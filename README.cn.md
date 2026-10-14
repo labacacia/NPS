@@ -49,34 +49,33 @@ NPS 是面向 AI Agent 和模型的完整 Web 基础协议族，由五个子协�
 
 ### 本地 Dev Stack
 
-启动 `npsd` + 开发用 NIP CA 的 loopback 环境：
+从独立分发仓库启动四个活跃的开源 daemon：
 
 ```bash
-docker compose -f deploy/dev-stack/docker-compose.yml up --build -d npsd nip-ca
+git clone https://github.com/labacacia/NPS-Daemons.git
+cd NPS-Daemons
+docker compose up --build -d
 ```
 
-跑一次 MCP/A2A/gRPC 到 NWP echo action 的烟测：
-
-```bash
-docker compose -f deploy/dev-stack/docker-compose.yml --profile smoke run --rm ingress-echo
-```
-
-详见 [`docs/dev-stack.cn.md`](docs/dev-stack.cn.md)。
+自托管身份颁发机构需要单独部署
+[`labacacia/NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server)。
+调整网络暴露前，请先阅读两个仓库各自的安全说明。
 
 ### 参考 daemon 部署
 
-NPS 在生产环境跑作 **三层、六个常驻服务** —— 完整设计见
-[`docs/daemons/architecture.cn.md`](docs/daemons/architecture.cn.md)，
-二进制在 [`tools/daemons/`](tools/daemons/)。
+当前参考部署由 **四个 daemon 进程和独立部署的 NIP CA** 组成。四个 daemon
+由 [`NPS-Daemons`](https://github.com/labacacia/NPS-Daemons) 分发，CA 由
+[`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server) 分发。
 
 | 层 | Daemon | 端口 | 状态（已发布 alpha.18 基线）|
 |----|--------|------|-----------------|
-| 1（本机基础设施）| [`npsd`](tools/daemons/npsd/)             | 17433 | L1 最小集 + loopback dev-stack 支持 |
-| 1（本机基础设施）| [`nps-runner`](tools/daemons/nps-runner/) | —     | CR-0007 租约续期、portable OCI SpawnSpec/引用解析与生命周期强制 |
-| 2（接入网关）| [`nps-ingress`](tools/daemons/nps-ingress/)   | 8080  | native-mode TLS/mTLS ingress 边界对齐 RFC-0006 |
-| 2（接入网关）| [`nps-registry`](tools/daemons/nps-registry/) | 17436 | NDP registry + liveness / staleness 语义 |
-| 3（信任锚点）| [`nps-cloud-ca`](tools/daemons/nps-cloud-ca/)  | 17435 | Deferral 骨架（指向 [`tools/nip-ca-server`](tools/nip-ca-server/)）|
-| 3（信任锚点）| [`nps-ledger`](tools/daemons/nps-ledger/)      | 17440 | NPS-RFC-0004 内存声誉日志 |
+| 1（本机基础设施）| [`npsd`](https://github.com/labacacia/NPS-Daemons/tree/main/npsd) | 17433 | 主机身份、本地协议状态和 inbox |
+| 1（本机基础设施）| [`nps-runner`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-runner) | — | 有界任务执行和持久租约 |
+| 2（接入网关）| [`nps-ingress`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-ingress) | 8080 / 17443 | TLS/mTLS 准入和本地 NCP 代理 |
+| 2（发现）| [`nps-registry`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-registry) | 17436 | NDP 注册与图解析 |
+| 3（信任锚点）| [`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server) | 17435 / 17436 | 证书签发、吊销与管理健康检查 |
+
+原 NPS Cloud CA 与 Ledger 原型仓库已经归档，只保留为设计历史，不再属于活跃发布列车。
 
 ---
 
@@ -276,7 +275,7 @@ byte[] wire = codec.Encode(query); // 自动处理 4-byte/8-byte 帧头
 - [x] **MCP Ingress** v1.0.0-alpha.16（`LabAcacia.McpIngress`，MCP 2024-11-05，JSON-RPC 2.0；NPS-CR-0001 重命名）
 - [x] **A2A Ingress** v1.0.0-alpha.16（`LabAcacia.A2aIngress`，Google A2A v0.2；NPS-CR-0001 重命名）
 - [x] **gRPC Ingress** v1.0.0-alpha.16（`LabAcacia.GrpcIngress`，4 个 unary RPC；NPS-CR-0001 重命名）
-- [x] **6 个 daemon 二进制** 在 `tools/daemons/`（`npsd` / `nps-runner` / `nps-ingress` / `nps-registry` / `nps-cloud-ca` / `nps-ledger`）—— 详见 [`docs/daemons/architecture.cn.md`](docs/daemons/architecture.cn.md)
+- [x] [`NPS-Daemons`](https://github.com/labacacia/NPS-Daemons) 中的 **4 个活跃 daemon 二进制**，加独立 [`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server)；Cloud CA 与 Ledger 原型已归档
 - [x] **NPS-RFC-0001** Accepted（NCP 连接前导）—— Phase 1 .NET helper
 - [x] **NPS-RFC-0003** Accepted（Agent 身份保证等级）—— Phase 1 .NET 参考类型
 - [x] **NPS-RFC-0004** Accepted（NID 声誉日志）—— Phase 1 .NET 条目类型 + 签名/验签
