@@ -2,6 +2,8 @@ English | [中文版](./README.cn.md)
 
 # NPS — Neural Protocol Suite
 
+> First time here? Start with [START-HERE.md](START-HERE.md) for architecture, security, and review guidance.
+
 > **A complete internet infrastructure protocol suite for the AI era**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
@@ -50,34 +52,36 @@ NPS is a complete web infrastructure protocol suite designed for AI Agents and m
 
 ### Local dev stack
 
-Run a loopback stack with `npsd` + a development NIP CA:
+Run the four active open-source daemons from their distribution repository:
 
 ```bash
-docker compose -f deploy/dev-stack/docker-compose.yml up --build -d npsd nip-ca
+git clone https://github.com/labacacia/NPS-Daemons.git
+cd NPS-Daemons
+docker compose up --build -d
 ```
 
-For a one-shot MCP/A2A/gRPC smoke test against an NWP echo action:
-
-```bash
-docker compose -f deploy/dev-stack/docker-compose.yml --profile smoke run --rm ingress-echo
-```
-
-See [`docs/dev-stack.md`](docs/dev-stack.md).
+For a self-hosted identity authority, deploy
+[`labacacia/NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server)
+separately. Both repositories bind development services conservatively by
+default; read their security guidance before changing network exposure.
 
 ### Reference daemon deployment
 
-NPS in production runs as **six resident services across three layers** —
-see [`docs/daemons/architecture.md`](docs/daemons/architecture.md) for
-the full design, [`tools/daemons/`](tools/daemons/) for the binaries.
+The active reference deployment consists of **four daemon processes plus the
+separately deployed NIP CA**. The four daemon binaries are distributed by
+[`NPS-Daemons`](https://github.com/labacacia/NPS-Daemons); the CA is
+distributed by [`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server).
 
 | Layer | Daemon | Port | Status (published alpha.18 baseline) |
 |-------|--------|------|------------------|
-| 1 (host-local) | [`npsd`](tools/daemons/npsd/)             | 17433 | L1 minimum plus loopback dev-stack support |
-| 1 (host-local) | [`nps-runner`](tools/daemons/nps-runner/) | —     | CR-0007 lease renewal, portable OCI SpawnSpec/reference resolution, and lifecycle enforcement |
-| 2 (network entry) | [`nps-ingress`](tools/daemons/nps-ingress/)   | 8080  | Native-mode TLS/mTLS ingress boundary aligned to RFC-0006 |
-| 2 (network entry) | [`nps-registry`](tools/daemons/nps-registry/) | 17436 | NDP registry with liveness / staleness semantics |
-| 3 (trust anchor) | [`nps-cloud-ca`](tools/daemons/nps-cloud-ca/)  | 17435 | Deferral skeleton (points at [`tools/nip-ca-server`](tools/nip-ca-server/)) |
-| 3 (trust anchor) | [`nps-ledger`](tools/daemons/nps-ledger/)      | 17440 | In-memory NPS-RFC-0004 reputation log |
+| 1 (host-local) | [`npsd`](https://github.com/labacacia/NPS-Daemons/tree/main/npsd) | 17433 | Host identity, local protocol state, and inbox |
+| 1 (host-local) | [`nps-runner`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-runner) | — | Bounded task execution and durable leases |
+| 2 (network entry) | [`nps-ingress`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-ingress) | 8080 / 17443 | TLS/mTLS admission and local NCP proxy |
+| 2 (discovery) | [`nps-registry`](https://github.com/labacacia/NPS-Daemons/tree/main/nps-registry) | 17436 | NDP registry and graph resolution |
+| 3 (trust anchor) | [`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server) | 17435 / 17436 | Certificate issuance, revocation, and management health |
+
+The former NPS Cloud CA and Ledger prototype repositories are archived; they
+remain design history, not deployable members of the active release train.
 
 ---
 
@@ -280,7 +284,7 @@ byte[] wire = codec.Encode(query); // auto-handles 4-byte / 8-byte frame headers
 - [x] **MCP Ingress** v1.0.0-alpha.16 (`LabAcacia.McpIngress`, MCP 2024-11-05, JSON-RPC 2.0; renamed by NPS-CR-0001)
 - [x] **A2A Ingress** v1.0.0-alpha.16 (`LabAcacia.A2aIngress`, Google A2A v0.2; renamed by NPS-CR-0001)
 - [x] **gRPC Ingress** v1.0.0-alpha.16 (`LabAcacia.GrpcIngress`, 4 unary RPCs; renamed by NPS-CR-0001)
-- [x] **Six daemon binaries** under `tools/daemons/` (`npsd` / `nps-runner` / `nps-ingress` / `nps-registry` / `nps-cloud-ca` / `nps-ledger`) — see [`docs/daemons/architecture.md`](docs/daemons/architecture.md)
+- [x] **Four active daemon binaries** in [`NPS-Daemons`](https://github.com/labacacia/NPS-Daemons), plus the standalone [`NIP-CA-Server`](https://github.com/labacacia/NIP-CA-Server); retired Cloud CA and Ledger prototypes are archived
 - [x] **NPS-RFC-0001** Accepted (NCP connection preamble) — Phase 1 .NET helper
 - [x] **NPS-RFC-0003** Accepted (Agent identity assurance levels) — Phase 1 .NET reference types
 - [x] **NPS-RFC-0004** Accepted (NID reputation log) — Phase 1 .NET entry types + sign/verify

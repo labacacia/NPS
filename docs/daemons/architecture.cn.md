@@ -2,8 +2,9 @@
 
 # NPS Daemon 架构
 
-> NPS 在生产环境的参考部署拓扑。六个常驻服务分布在三层；每一层独立水平扩展，
-> 各层有不同的信任边界和故障边界。
+> 三层六个概念角色的参考部署模型。当前活跃分发中，四个角色位于
+> NPS-Daemons，信任锚角色位于 NIP-CA-Server。原 Cloud CA 与 Ledger 原型已
+> 归档；下文相应章节只保留设计历史，不代表可部署的发布列车组件。
 >
 > 状态 —— alpha.18 源码 / alpha.19 债务收口边界：`npsd` 已在配置的
 > loopback 端口复用 HTTP 与 local-dev 原生 NCP，具备有界 preamble/Hello
@@ -55,7 +56,7 @@
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-## 六个 daemon
+## 六个概念角色
 
 ### 第一层 —— 本机基础设施（每台机器各一个）
 
@@ -105,13 +106,13 @@
 
 ### 第三层 —— 信任锚点 *(NPS Cloud 阶段，2027 Q1+)*
 
-#### ⑤ `nps-cloud-ca` —— 证书签发服务
+#### ⑤ `nps-cloud-ca` —— 证书签发服务（已归档设计角色）
 
 - **NIP 信任根**，签发跨组织的 NID 证书，提供 CRL / OCSP。LabAcacia 自己跑开源 CA；商业用户也可以跑私有 CA。
 - **为什么必须常驻**：撤销查询必须实时响应；签发请求随机到达。
 - **为什么独立于 `nps-registry`**：CA 是信任的*来源*；Registry 是信息的*索引*。CA 失败影响新 NID 接入和撤销响应；Registry 失败只影响发现。信任级别、运维流程、审计要求都不同。CA 私钥 MUST 做物理或 HSM 级保护；registry 没这要求。
 
-#### ⑥ `nps-ledger` —— 审计与合规日志收集器
+#### ⑥ `nps-ledger` —— 审计与合规日志收集器（已归档设计角色）
 
 - **append-only 收集点**，K-of-N 审计共识所需 —— NeuronHub 的 CGN 结算正确性最终靠这一层提供证据。实现 [NPS-RFC-0004](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.cn.md) 定义的 Certificate-Transparency 风格日志：提交、查询、signed tree head、inclusion proof。
 - **为什么必须常驻**：审计日志是连续 append 流；接收端不能 down，否则有 gap。
@@ -123,12 +124,12 @@
 
 | Daemon | 文件夹 | 项目 | 二进制 | NuGet 包 |
 |--------|--------|---------|--------|----------------|
-| ① | `tools/daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
-| ② | `tools/daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
-| ③ | `tools/daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
-| ④ | `tools/daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
-| ⑤ | `tools/daemons/nps-cloud-ca/` | `NpsCloudCa.csproj` | `nps-cloud-ca` | `LabAcacia.NPS.Daemon.CloudCa` |
-| ⑥ | `tools/daemons/nps-ledger/` | `NpsLedger.csproj` | `nps-ledger` | `LabAcacia.NPS.Daemon.Ledger` |
+| ① | `NPS-Daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
+| ② | `NPS-Daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
+| ③ | `NPS-Daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
+| ④ | `NPS-Daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
+| ⑤ | `NIP-CA-Server/` | `NPS.NipCaServer.csproj` | `NPS.NipCaServer` | NIP CA 包 |
+| ⑥ | 已归档 | — | — | 仅保留设计历史 |
 
 ## 历史 alpha-to-beta 阶段规划
 

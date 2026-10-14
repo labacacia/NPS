@@ -2,9 +2,11 @@ English | [中文版](./architecture.cn.md)
 
 # NPS Daemon Architecture
 
-> Reference deployment topology for NPS in production. Six resident services
-> spread across three layers; each layer is independently scalable and has
-> distinct trust / failure boundaries.
+> Reference deployment model with six conceptual roles across three layers.
+> The active distribution currently ships four roles in NPS-Daemons and the
+> trust-anchor role in NIP-CA-Server. The former Cloud CA and Ledger prototypes
+> are archived; their sections below preserve design history, not deployable
+> release-train components.
 >
 > Status — alpha.18 source / alpha.19 debt-closure boundary: `npsd` multiplexes
 > HTTP and local-dev native NCP on its configured loopback port, with bounded
@@ -59,7 +61,7 @@ English | [中文版](./architecture.cn.md)
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-## The six daemons
+## Six conceptual roles
 
 ### Layer 1 — Host-local (one of each per machine)
 
@@ -112,13 +114,13 @@ English | [中文版](./architecture.cn.md)
 
 ### Layer 3 — Trust anchor *(NPS Cloud, 2027 Q1+)*
 
-#### ⑤ `nps-cloud-ca` — Certificate authority
+#### ⑤ `nps-cloud-ca` — Certificate authority (archived design role)
 
 - **NIP trust root** that issues cross-organisation NID certificates and serves CRL / OCSP. LabAcacia operates an open-source instance; commercial users may operate private CAs.
 - **Why always-on**: revocation queries must respond in real time; issuance requests arrive arbitrarily.
 - **Why independent of `nps-registry`**: CA is the *source* of trust; registry is an *index* of information. CA failure prevents new NID onboarding and revocation responses; registry failure prevents discovery only. Trust level, operations process, audit requirements all differ. CA private keys MUST be HSM- or physical-security-protected; registry has no equivalent constraint.
 
-#### ⑥ `nps-ledger` — Audit / compliance log collector
+#### ⑥ `nps-ledger` — Audit / compliance log collector (archived design role)
 
 - **Append-only collection point** for the K-of-N audit consensus that NeuronHub CGN settlement ultimately depends on. Implements the Certificate-Transparency-style log defined by [NPS-RFC-0004](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.md): submission, query, signed tree head, inclusion proofs.
 - **Why always-on**: audit logs are a continuous append stream; the receiver cannot be down or there will be gaps.
@@ -130,12 +132,12 @@ English | [中文版](./architecture.cn.md)
 
 | Daemon | Folder | Project | Binary | NuGet package |
 |--------|--------|---------|--------|----------------|
-| ① | `tools/daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
-| ② | `tools/daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
-| ③ | `tools/daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
-| ④ | `tools/daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
-| ⑤ | `tools/daemons/nps-cloud-ca/` | `NpsCloudCa.csproj` | `nps-cloud-ca` | `LabAcacia.NPS.Daemon.CloudCa` |
-| ⑥ | `tools/daemons/nps-ledger/` | `NpsLedger.csproj` | `nps-ledger` | `LabAcacia.NPS.Daemon.Ledger` |
+| ① | `NPS-Daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
+| ② | `NPS-Daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
+| ③ | `NPS-Daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
+| ④ | `NPS-Daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
+| ⑤ | `NIP-CA-Server/` | `NPS.NipCaServer.csproj` | `NPS.NipCaServer` | NIP CA packages |
+| ⑥ | archived | — | — | design history only |
 
 ## Historical alpha-to-beta phasing record
 
