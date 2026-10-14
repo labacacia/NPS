@@ -22,8 +22,8 @@ uses NPS is not automatically a release target.
   incubating NPS-aware model runtime; private.
 - [`NPS-Console`](https://github.com/labacacia/NPS-Console) — incubating operator
   console; private and not production-ready.
-- [`NPS-Paper`](https://github.com/labacacia/NPS-Paper) — research paper and
-  supporting material.
+- [`NPS-Paper`](https://github.com/labacacia/NPS-Paper) — private research paper
+  and supporting material.
 
 These projects consume published NPS interfaces and follow their own versioning.
 The external `orilynn-studio/nps-orchestrator` repository is also a consumer and
