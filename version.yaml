@@ -17,19 +17,19 @@
 # Fields per repo entry:
 #   name          - GitHub repo slug (owner/repo)
 #   kind          - extraction strategy (see check-version-sync.py)
-#   expected      - "required" | "stub" | "skip"
+#   expected      - "required" for every coordinated release target
 #   manifest_file - path to the version-bearing file inside the repo
 #   version_regex - optional override regex (group 1 must capture the version string)
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Final oracle confirmation follows required-train head
-# orilynn-studio/nps-orchestrator@25447d0; see EPIC-004 T28/T30 audits.
+# Only organization-owned release projections belong in this manifest.
+# Independent products and external consumers follow their own lifecycle.
 suite_version: "1.0.0-alpha.19"
 released_at: "2026-09-05"
 
 repos:
   # ── Spec & dev ────────────────────────────────────────────────────────────
-  - name: labacacia/NPS-Release
+  - name: labacacia/NPS
     kind: changelog
     expected: required
     manifest_file: CHANGELOG.md
@@ -71,22 +71,6 @@ repos:
     expected: required
     manifest_file: CHANGELOG.md
 
-  # ── Compatibility ingresses ───────────────────────────────────────────────
-  - name: labacacia/NPS-MCP-Ingress
-    kind: dotnet-csproj
-    expected: skip
-    manifest_file: src/LabAcacia.McpIngress/LabAcacia.McpIngress.csproj
-
-  - name: labacacia/NPS-A2A-Ingress
-    kind: dotnet-csproj
-    expected: skip
-    manifest_file: src/LabAcacia.A2aIngress/LabAcacia.A2aIngress.csproj
-
-  - name: labacacia/NPS-gRPC-Ingress
-    kind: dotnet-csproj
-    expected: skip
-    manifest_file: src/LabAcacia.GrpcIngress/LabAcacia.GrpcIngress.csproj
-
   # ── Standalone tools ──────────────────────────────────────────────────────
   - name: labacacia/NIP-CA-Server
     kind: dotnet-csproj
@@ -97,30 +81,3 @@ repos:
     kind: changelog
     expected: required
     manifest_file: CHANGELOG.md
-
-  # ── Services (orchestrator) ───────────────────────────────────────────────
-  - name: orilynn-studio/nps-orchestrator
-    kind: dotnet-csproj
-    expected: required
-    manifest_file: nps-hub/NpsHub.csproj
-
-  # ── Stubs — placeholder repos (README must declare tracking line) ─────────
-  - name: labacacia/NPS-Studio
-    kind: stub
-    expected: stub
-    manifest_file: README.md
-
-  - name: labacacia/NPS-NWP-Manager
-    kind: stub
-    expected: stub
-    manifest_file: README.md
-
-  - name: labacacia/NPS-SDK-CPP
-    kind: stub
-    expected: stub
-    manifest_file: README.md
-
-  - name: labacacia/NPS-SDK-PHP
-    kind: stub
-    expected: stub
-    manifest_file: README.md

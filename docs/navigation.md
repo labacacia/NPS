@@ -5,6 +5,7 @@
 [Overview](overview.md)
 [Protocols](protocols.md)
 [SDKs](sdks.md)
+[Handbook](handbook/Home.md)
 [Roadmap](roadmap.md)
 [Who Uses NPS](who-uses-nps.md)
 
@@ -15,4 +16,4 @@
  - [English](index.md)
  - [中文](index.cn.md)
 
-[GitHub](https://github.com/labacacia/NPS-Release)
+[GitHub](https://github.com/labacacia/NPS)

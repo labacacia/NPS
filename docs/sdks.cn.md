@@ -16,14 +16,14 @@
 
 | 语言 | 包名 | 最低版本 | 仓库 | Wiki 深度文档 |
 |------|------|----------|------|--------------|
-| .NET       | `LabAcacia.NPS.Core` (+ `.NWP` / `.NIP` / `.NDP` / `.NOP`) | .NET 10     | [NPS-sdk-dotnet](https://github.com/labacacia/NPS-sdk-dotnet) | [Wiki: SDK-dotnet](https://github.com/labacacia/NPS-Release/wiki/SDK-dotnet) |
-| Python     | `nps-lib`                                                    | 3.11        | [NPS-sdk-py](https://github.com/labacacia/NPS-SDK-Python)         | [Wiki: SDK-Python](https://github.com/labacacia/NPS-Release/wiki/SDK-Python) |
-| TypeScript | `@labacacia/nps-sdk`                                         | Node 22     | [NPS-sdk-ts](https://github.com/labacacia/NPS-SDK-TypeScript)         | [Wiki: SDK-TypeScript](https://github.com/labacacia/NPS-Release/wiki/SDK-TypeScript) |
-| Java       | `com.labacacia.nps:nps-java`                                 | Java 21     | [NPS-sdk-java](https://github.com/labacacia/NPS-sdk-java)     | [Wiki: SDK-Java](https://github.com/labacacia/NPS-Release/wiki/SDK-Java) |
-| Rust       | `nps-sdk`                                                    | Rust stable | [NPS-sdk-rust](https://github.com/labacacia/NPS-sdk-rust)     | [Wiki: SDK-Rust](https://github.com/labacacia/NPS-Release/wiki/SDK-Rust) |
-| Go         | `github.com/labacacia/NPS-sdk-go`                            | Go 1.23     | [NPS-sdk-go](https://github.com/labacacia/NPS-sdk-go)         | [Wiki: SDK-Go](https://github.com/labacacia/NPS-Release/wiki/SDK-Go) |
+| .NET       | `LabAcacia.NPS.Core` (+ `.NWP` / `.NIP` / `.NDP` / `.NOP`) | .NET 10     | [NPS-sdk-dotnet](https://github.com/labacacia/NPS-sdk-dotnet) | [Wiki: SDK-dotnet](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-dotnet.md) |
+| Python     | `nps-lib`                                                    | 3.11        | [NPS-sdk-py](https://github.com/labacacia/NPS-SDK-Python)         | [Wiki: SDK-Python](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Python.md) |
+| TypeScript | `@labacacia/nps-sdk`                                         | Node 22     | [NPS-sdk-ts](https://github.com/labacacia/NPS-SDK-TypeScript)         | [Wiki: SDK-TypeScript](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-TypeScript.md) |
+| Java       | `com.labacacia.nps:nps-java`                                 | Java 21     | [NPS-sdk-java](https://github.com/labacacia/NPS-sdk-java)     | [Wiki: SDK-Java](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Java.md) |
+| Rust       | `nps-sdk`                                                    | Rust stable | [NPS-sdk-rust](https://github.com/labacacia/NPS-sdk-rust)     | [Wiki: SDK-Rust](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Rust.md) |
+| Go         | `github.com/labacacia/NPS-sdk-go`                            | Go 1.23     | [NPS-sdk-go](https://github.com/labacacia/NPS-sdk-go)         | [Wiki: SDK-Go](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Go.md) |
 
-安装命令、极简示例、功能覆盖对照表等深度内容，请访问上方各语言 Wiki 页面，或查阅 [SDK-Quickstart](https://github.com/labacacia/NPS-Release/wiki/SDK-Quickstart) 获取语言无关的入门教程。
+安装命令、极简示例、功能覆盖对照表等深度内容，请访问上方各语言 Wiki 页面，或查阅 [SDK-Quickstart](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Quickstart.md) 获取语言无关的入门教程。
 
 ---
 
@@ -35,7 +35,7 @@
 |------|--------|----------|
 | [labacacia/nip-ca-server](https://github.com/labacacia/nip-ca-server) | C# / ASP.NET Core 10，PostgreSQL 或 SQLite，单 Docker | `docker compose up -d` |
 
-运维指南及嵌入选项（SQLite vs PostgreSQL）请参阅 [Wiki: NIP-CA-Server-Ops](https://github.com/labacacia/NPS-Release/wiki/NIP-CA-Server-Ops)。
+运维指南及嵌入选项（SQLite vs PostgreSQL）请参阅 [Wiki: NIP-CA-Server-Ops](https://github.com/labacacia/NPS/blob/main/docs/handbook/NIP-CA-Server-Ops.md)。
 
 ---
 
@@ -51,7 +51,7 @@
 **Gateway Node** 逻辑角色。CR-0001 已将该逻辑角色替换为 **Anchor Node**
 和 **Bridge Node**。
 
-Layer-3 信任锚 daemon（`nps-cloud-ca` 和 `nps-ledger`）在 `innolotus` 组织私有仓库，随 NPS Cloud GA 公开发布（2027 Q1+）。运维和架构详情请参阅 [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS-Release/wiki/Operators-QuickStart)。
+Layer-3 信任锚 daemon（`nps-cloud-ca` 和 `nps-ledger`）在 `innolotus` 组织私有仓库，随 NPS Cloud GA 公开发布（2027 Q1+）。运维和架构详情请参阅 [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS/blob/main/docs/handbook/Operators-QuickStart.md)。
 
 ---
 
@@ -78,4 +78,4 @@ Layer-3 信任锚 daemon（`nps-cloud-ca` 和 `nps-ledger`）在 `innolotus` 组
 
 ---
 
-📖 教程、参考资料和运维指南，请访问 [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki)。
+📖 教程、参考资料和运维指南，请访问 [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md)。

@@ -64,6 +64,7 @@ dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18
 - [**Overview**](overview.md) — what NPS is, why it exists, who it's for
 - [**Protocols**](protocols.md) — the five layers (NCP / NWP / NIP / NDP / NOP) at a glance
 - [**SDKs**](sdks.md) — install and quick-start for all six languages
+- [**Handbook**](handbook/Home.md) — tutorials, operations, examples, and contributor guides
 - [**Roadmap**](roadmap.md) — Phase 0 → Phase 4
 
 ---
@@ -76,12 +77,12 @@ dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18
 
 ## Links
 
-- [GitHub — NPS-Release](https://github.com/labacacia/NPS-Release) · the protocol specifications (authoritative)
-- [CONTRIBUTING](https://github.com/labacacia/NPS-Release/blob/main/CONTRIBUTING.md) · how to propose changes
-- [LICENSE](https://github.com/labacacia/NPS-Release/blob/main/LICENSE) · Apache 2.0
+- [GitHub — NPS](https://github.com/labacacia/NPS) · the protocol specifications (authoritative)
+- [CONTRIBUTING](https://github.com/labacacia/NPS/blob/main/CONTRIBUTING.md) · how to propose changes
+- [LICENSE](https://github.com/labacacia/NPS/blob/main/LICENSE) · Apache 2.0
 
 Copyright 2026 INNO LOTUS PTY LTD — LabAcacia Open Source Lab.
 
 ---
 
-📖 For tutorials, references, and operator guides, see the [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki).
+📖 For tutorials, references, and operator guides, see the [NPS handbook](handbook/Home.md).

@@ -17,12 +17,12 @@ You need an **SDK**. Pick your language and follow the quickstart on the Wiki.
 
 | Language | Install | Wiki quickstart |
 |----------|---------|-----------------|
-| Python     | `pip install nps-lib==1.0.0a18`                          | [SDK-Python](https://github.com/labacacia/NPS-Release/wiki/SDK-Python) |
-| TypeScript | `npm install @labacacia/nps-sdk@1.0.0-alpha.18`          | [SDK-TypeScript](https://github.com/labacacia/NPS-Release/wiki/SDK-TypeScript) |
-| Rust       | `cargo add nps-sdk@=1.0.0-alpha.18`                       | [SDK-Rust](https://github.com/labacacia/NPS-Release/wiki/SDK-Rust) |
-| Go         | `go get github.com/labacacia/NPS-sdk-go@v1.0.0-alpha.18`  | [SDK-Go](https://github.com/labacacia/NPS-Release/wiki/SDK-Go) |
-| Java       | `implementation("com.labacacia.nps:nps-java:1.0.0-alpha.18")` | [SDK-Java](https://github.com/labacacia/NPS-Release/wiki/SDK-Java) |
-| .NET       | `dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18` | [SDK-dotnet](https://github.com/labacacia/NPS-Release/wiki/SDK-dotnet) |
+| Python     | `pip install nps-lib==1.0.0a18`                          | [SDK-Python](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Python.md) |
+| TypeScript | `npm install @labacacia/nps-sdk@1.0.0-alpha.18`          | [SDK-TypeScript](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-TypeScript.md) |
+| Rust       | `cargo add nps-sdk@=1.0.0-alpha.18`                       | [SDK-Rust](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Rust.md) |
+| Go         | `go get github.com/labacacia/NPS-sdk-go@v1.0.0-alpha.18`  | [SDK-Go](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Go.md) |
+| Java       | `implementation("com.labacacia.nps:nps-java:1.0.0-alpha.18")` | [SDK-Java](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Java.md) |
+| .NET       | `dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18` | [SDK-dotnet](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-dotnet.md) |
 
 > Python note: PyPI normalizes the pre-release suffix, so the suite's `1.0.0-alpha.18` is published as `1.0.0a18`.
 >
@@ -38,7 +38,7 @@ You need the **NPS Daemons** bundle (`npsd` + `nps-runner` + `nps-ingress` + `np
 NWP **Gateway Node** logical role. CR-0001 replaced that logical role with
 **Anchor Node** and **Bridge Node**.
 
-→ [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS-Release/wiki/Operators-QuickStart)
+→ [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS/blob/main/docs/handbook/Operators-QuickStart.md)
 
 ---
 
@@ -50,7 +50,7 @@ Read the protocol specs (linked from [Protocols](protocols.md)), then pick a com
 - `compat/a2a-ingress` — A2A → NPS translation
 - `compat/grpc-ingress` — gRPC → NPS translation
 
-→ [Wiki: Protocol-Designer-Guide](https://github.com/labacacia/NPS-Release/wiki/Protocol-Designer-Guide)
+→ [Wiki: Protocol-Designer-Guide](https://github.com/labacacia/NPS/blob/main/docs/handbook/Protocol-Designer-Guide.md)
 
 ---
 
@@ -62,8 +62,8 @@ Start with [Overview](overview.md) (5 min read), then [Protocols](protocols.md) 
 
 ## I want to contribute to NPS
 
-See [CONTRIBUTING](https://github.com/labacacia/NPS-Release/blob/main/CONTRIBUTING.md) for the process, and [Wiki: Contributors-Guide](https://github.com/labacacia/NPS-Release/wiki/Contributors-Guide) for conventions.
+See [CONTRIBUTING](https://github.com/labacacia/NPS/blob/main/CONTRIBUTING.md) for the process, and [Wiki: Contributors-Guide](https://github.com/labacacia/NPS/blob/main/docs/handbook/Contributors-Guide.md) for conventions.
 
 ---
 
-📖 For tutorials, references, and operator guides, see the [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki).
+📖 For tutorials, references, and operator guides, see the [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md).

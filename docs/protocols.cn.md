@@ -33,7 +33,7 @@ NCP 定义 4 字节（或 8 字节 EXT）帧头、1 字节 flags、两个编码 
 - 编码：生产环境默认 MsgPack（比 JSON 小 ~60%）；JSON 用于调试和互通
 - `AnchorFrame` TTL 默认 3600 秒
 
-完整规范：[NPS-1 NCP](https://github.com/labacacia/NPS-Release/blob/main/spec/NPS-1-NCP.cn.md)。
+完整规范：[NPS-1 NCP](https://github.com/labacacia/NPS/blob/main/spec/NPS-1-NCP.cn.md)。
 
 ---
 
@@ -55,7 +55,7 @@ NWP 定义 Agent 如何向节点发起查询或动作，并通过 `anchor_ref` �
 - **Anchor Node** — 无状态路由到 NOP DAG（NPS-CR-0001 由 Gateway Node 重命名）和 **Bridge Node** — NPS↔非-NPS 协议翻译
 - **Agent Node** — 同时说 NWP + NOP，通常是 LLM 驱动的执行体
 
-完整规范：[NPS-2 NWP](https://github.com/labacacia/NPS-Release/blob/main/spec/NPS-2-NWP.cn.md)。
+完整规范：[NPS-2 NWP](https://github.com/labacacia/NPS/blob/main/spec/NPS-2-NWP.cn.md)。
 
 ---
 
@@ -75,7 +75,7 @@ NWP 定义 Agent 如何向节点发起查询或动作，并通过 `anchor_ref` �
 
 **密钥存储**：参考实现使用 AES-256-GCM + PBKDF2-SHA256（600,000 次迭代）持久化密钥。独立的 **NIP CA Server** 提供六种语言（C# / Python / TypeScript / Java / Rust / Go）。
 
-完整规范：[NPS-3 NIP](https://github.com/labacacia/NPS-Release/blob/main/spec/NPS-3-NIP.cn.md)。
+完整规范：[NPS-3 NIP](https://github.com/labacacia/NPS/blob/main/spec/NPS-3-NIP.cn.md)。
 
 ---
 
@@ -93,7 +93,7 @@ Agent 需要把 `nwp://api.example.com/products` 解析为具体的 (host, port,
 
 **Announce 必须签名** — 解析器用已知公钥校验签名后才接受记录。TTL = 0 表示"正在下线，请驱逐"。
 
-完整规范：[NPS-4 NDP](https://github.com/labacacia/NPS-Release/blob/main/spec/NPS-4-NDP.cn.md)。
+完整规范：[NPS-4 NDP](https://github.com/labacacia/NPS/blob/main/spec/NPS-4-NDP.cn.md)。
 
 ---
 
@@ -117,7 +117,7 @@ NOP 接受一个 DAG — 节点执行动作，边传输输出 — 并提供委�
 - 超时上限 3,600,000 ms（1 小时）
 - `callback_url` 由编排器做 SSRF 校验
 
-完整规范：[NPS-5 NOP](https://github.com/labacacia/NPS-Release/blob/main/spec/NPS-5-NOP.cn.md)。
+完整规范：[NPS-5 NOP](https://github.com/labacacia/NPS/blob/main/spec/NPS-5-NOP.cn.md)。
 
 ---
 
@@ -132,17 +132,17 @@ NOP 接受一个 DAG — 节点执行动作，边传输输出 — 并提供委�
 | `0x40–0x4F` | NOP | Task、Delegate、Sync、AlignStream |
 | `0xFE`      | System | ErrorFrame — 全协议族共用 |
 
-机器可读注册表：[frame-registry.yaml](https://github.com/labacacia/NPS-Release/blob/main/spec/frame-registry.yaml)。
+机器可读注册表：[frame-registry.yaml](https://github.com/labacacia/NPS/blob/main/spec/frame-registry.yaml)。
 
 ---
 
 ## 相关文档
 
-- [错误码](https://github.com/labacacia/NPS-Release/blob/main/spec/error-codes.cn.md) — `{PROTOCOL}-{CATEGORY}-{DETAIL}` 命名空间
-- [状态码](https://github.com/labacacia/NPS-Release/blob/main/spec/status-codes.cn.md) — NPS 原生状态码 + HTTP 映射
-- [Token Budget](https://github.com/labacacia/NPS-Release/blob/main/spec/token-budget.cn.md) — CGN 计量规范
-- [AaaS Profile](https://github.com/labacacia/NPS-Release/blob/main/spec/services/NPS-AaaS-Profile.cn.md) — Agent-as-a-Service 合规级别（L1 / L2 / L3）
+- [错误码](https://github.com/labacacia/NPS/blob/main/spec/error-codes.cn.md) — `{PROTOCOL}-{CATEGORY}-{DETAIL}` 命名空间
+- [状态码](https://github.com/labacacia/NPS/blob/main/spec/status-codes.cn.md) — NPS 原生状态码 + HTTP 映射
+- [Token Budget](https://github.com/labacacia/NPS/blob/main/spec/token-budget.cn.md) — CGN 计量规范
+- [AaaS Profile](https://github.com/labacacia/NPS/blob/main/spec/services/NPS-AaaS-Profile.cn.md) — Agent-as-a-Service 合规级别（L1 / L2 / L3）
 
 ---
 
-📖 教程、参考资料和运维指南，请访问 [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki)。
+📖 教程、参考资料和运维指南，请访问 [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md)。

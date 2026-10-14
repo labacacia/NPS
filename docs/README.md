@@ -14,7 +14,7 @@ No build step. Markdown in, HTML in the browser.
 2. Repository → **Settings** → **Pages**.
 3. **Source**: *Deploy from a branch*.
 4. **Branch**: `main` / **Folder**: `/docs`.
-5. Save. Site publishes at `https://labacacia.github.io/NPS-Release/`.
+5. Save. Site publishes at `https://nps.labacacia.com/`.
 
 `.nojekyll` in this folder disables Jekyll processing — MDWiki is a pure client-side SPA, so nothing needs to be built.
 
