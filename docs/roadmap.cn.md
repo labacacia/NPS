@@ -80,4 +80,4 @@ W3C / IETF 正式标准化与 NPS 1.0 规范冻结。
 
 ---
 
-📖 教程、参考资料和运维指南，请访问 [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki)。
+📖 教程、参考资料和运维指南，请访问 [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md)。

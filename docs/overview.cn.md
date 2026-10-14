@@ -79,4 +79,4 @@ NPS **不是** LLM API（OpenAI、Anthropic）的替代。它是这些 LLM 驱�
 
 ---
 
-📖 教程、参考资料和运维指南，请访问 [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki)。
+📖 教程、参考资料和运维指南，请访问 [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md)。

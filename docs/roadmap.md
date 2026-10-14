@@ -80,4 +80,4 @@ Formal W3C / IETF standardization and NPS 1.0 spec freeze.
 
 ---
 
-📖 For tutorials, references, and operator guides, see the [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki).
+📖 For tutorials, references, and operator guides, see the [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md).

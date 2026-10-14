@@ -63,6 +63,7 @@ dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18
 - [**总览**](overview.cn.md) — NPS 是什么、为何存在、面向谁
 - [**协议族**](protocols.cn.md) — 五层协议（NCP / NWP / NIP / NDP / NOP）一览
 - [**SDK**](sdks.cn.md) — 六种语言的安装与快速开始
+- [**手册**](handbook/Home.md) — 教程、运维、示例与贡献者指南
 - [**路线图**](roadmap.cn.md) — Phase 0 → Phase 4
 
 ---
@@ -75,12 +76,12 @@ dotnet add package LabAcacia.NPS.Core --version 1.0.0-alpha.18
 
 ## 链接
 
-- [GitHub — NPS-Release](https://github.com/labacacia/NPS-Release) · 权威协议规范
-- [CONTRIBUTING](https://github.com/labacacia/NPS-Release/blob/main/CONTRIBUTING.md) · 如何提案
-- [LICENSE](https://github.com/labacacia/NPS-Release/blob/main/LICENSE) · Apache 2.0
+- [GitHub — NPS](https://github.com/labacacia/NPS) · 权威协议规范
+- [CONTRIBUTING](https://github.com/labacacia/NPS/blob/main/CONTRIBUTING.md) · 如何提案
+- [LICENSE](https://github.com/labacacia/NPS/blob/main/LICENSE) · Apache 2.0
 
 版权所有 © 2026 INNO LOTUS PTY LTD — LabAcacia 开源实验室。
 
 ---
 
-📖 教程、参考资料和运维指南，请访问 [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki)。
+📖 教程、参考资料和运维指南，请访问 [NPS 手册](handbook/Home.md)。

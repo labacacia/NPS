@@ -14,7 +14,7 @@
 2. 仓库 → **Settings** → **Pages**。
 3. **Source**：*Deploy from a branch*。
 4. **Branch**：`main` / **Folder**：`/docs`。
-5. Save。站点发布在 `https://labacacia.github.io/NPS-Release/`。
+5. Save。站点发布在 `https://nps.labacacia.com/`。
 
 本目录里的 `.nojekyll` 用于关闭 Jekyll 处理 — MDWiki 是纯客户端 SPA，不需要任何构建流程。
 

@@ -79,4 +79,4 @@ NPS is **not** a replacement for LLM APIs (OpenAI, Anthropic). It is the **netwo
 
 ---
 
-📖 For tutorials, references, and operator guides, see the [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki).
+📖 For tutorials, references, and operator guides, see the [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md).

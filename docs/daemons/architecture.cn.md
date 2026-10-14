@@ -62,12 +62,12 @@
 #### ① `npsd` —— 协议接入与状态宿主
 
 - **监听**：默认 `127.0.0.1:17433`，在统一端口无损复用 HTTP 控制流量与 local-dev 原生 NCP。
-- **已实现原生边界**：有界 [NPS-RFC-0001](https://github.com/labacacia/NPS-Release/blob/main/spec/rfcs/NPS-RFC-0001-ncp-connection-preamble.cn.md) preamble 与 Hello/Caps 协商、协商后的编码/payload 约束、canonical AnchorFrame ACK/缓存，以及确定性的静默/错误关闭。公网 TLS 1.3/mTLS 终止属于 `nps-ingress`。
+- **已实现原生边界**：有界 [NPS-RFC-0001](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0001-ncp-connection-preamble.cn.md) preamble 与 Hello/Caps 协商、协商后的编码/payload 约束、canonical AnchorFrame ACK/缓存，以及确定性的静默/错误关闭。公网 TLS 1.3/mTLS 终止属于 `nps-ingress`。
 - **已实现状态边界**：root Ed25519 密钥对管理、为本机 agent 签发 sub-NID，以及用于 `ephemeral` HTTP pull + 显式 ack 的持久 per-NID SQLite inbox。未投递帧、绝对 TTL、优先级顺序和 ack 均跨 daemon 重启保留。
 - **明确限制**：不宣称完整 Node L1。全部 20 个 L1 用例、当前证据状态、可运行门禁和剩余缺口见 [`NPS-NODE-L1-MANIFEST.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/npsd/conformance/NPS-NODE-L1-MANIFEST.json)。resident/hybrid push 在 L1 可选，本 profile 明确拒绝；BYO-key agent 不会自动广播，因为 npsd 不持有其私钥，也不得冒充 publisher 签名。
 - **为什么必须常驻**：身份和 inbox 不能跟着 session 走 —— 持久状态需要宿主进程。本机所有 NPS 客户端（MCP shim、resident agent、worker、ingress shim）都通过它接入。
 - **为什么不能合并**：协议层是业务无关的，所有上层共享；合并到任何业务进程都会污染信任域。
-- **参考合规**：目标是 `NPS-Node Profile L1`（见 [`spec/services/NPS-Node-Profile.cn.md`](https://github.com/labacacia/NPS-Release/blob/main/spec/services/NPS-Node-Profile.cn.md) 与 [`spec/services/conformance/NPS-Node-L1.cn.md`](https://github.com/labacacia/NPS-Release/blob/main/spec/services/conformance/NPS-Node-L1.cn.md)）。
+- **参考合规**：目标是 `NPS-Node Profile L1`（见 [`spec/services/NPS-Node-Profile.cn.md`](https://github.com/labacacia/NPS/blob/main/spec/services/NPS-Node-Profile.cn.md) 与 [`spec/services/conformance/NPS-Node-L1.cn.md`](https://github.com/labacacia/NPS/blob/main/spec/services/conformance/NPS-Node-L1.cn.md)）。
 
 #### ② `nps-runner` —— 任务调度器 / FaaS runtime *(L3 阶段)*
 
@@ -94,7 +94,7 @@
 - **边界处置**：拓扑、Bridge、HA 与 Registry family 适用于其他 IUT 角色。限速、NeuronHub 用户鉴权、CGN 扣款、声誉、Anchor 中间件及广义 DDoS 控制不作为 transport capability 宣传；其产品/AaaS/可选组合/部署归属记录在 [`NPS-INGRESS-ADMISSION-DISPOSITION.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/conformance/NPS-INGRESS-ADMISSION-DISPOSITION.json)。
 - **为什么必须常驻**：对外暴露的端口必须始终在听。
 - **为什么与 `npsd` 分离**：`npsd` 默认只 bind 127.0.0.1；网关 bind 公网。攻击面、安全策略、运维边界完全不同。`npsd` 失败影响本机所有 NPS 流量；网关失败只影响外部入站 —— 二者必须能独立重启。
-- **说明**：这是**进程级**名字；规范层"集群控制平面"角色现在叫 **Anchor Node**（NWP），见 [NPS-CR-0001](https://github.com/labacacia/NPS-Release/blob/main/spec/cr/NPS-CR-0001-anchor-bridge-split.md)。`nps-ingress` 进程 MAY 承载 Anchor Node 中间件，但不是必须。
+- **说明**：这是**进程级**名字；规范层"集群控制平面"角色现在叫 **Anchor Node**（NWP），见 [NPS-CR-0001](https://github.com/labacacia/NPS/blob/main/spec/cr/NPS-CR-0001-anchor-bridge-split.md)。`nps-ingress` 进程 MAY 承载 Anchor Node 中间件，但不是必须。
 
 #### ④ `nps-registry` —— Discovery 注册中心 *(L2 阶段，可选托管)*
 
@@ -113,7 +113,7 @@
 
 #### ⑥ `nps-ledger` —— 审计与合规日志收集器
 
-- **append-only 收集点**，K-of-N 审计共识所需 —— NeuronHub 的 CGN 结算正确性最终靠这一层提供证据。实现 [NPS-RFC-0004](https://github.com/labacacia/NPS-Release/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.cn.md) 定义的 Certificate-Transparency 风格日志：提交、查询、signed tree head、inclusion proof。
+- **append-only 收集点**，K-of-N 审计共识所需 —— NeuronHub 的 CGN 结算正确性最终靠这一层提供证据。实现 [NPS-RFC-0004](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.cn.md) 定义的 Certificate-Transparency 风格日志：提交、查询、signed tree head、inclusion proof。
 - **为什么必须常驻**：审计日志是连续 append 流；接收端不能 down，否则有 gap。
 - **为什么独立**：审计的隔离要求最强 —— `nps-ledger` MUST NOT 信任被审计方的进程，所以必须跑在独立 trust domain。即便 `npsd` 被攻陷，`nps-ledger` 还能提供独立证据。
 

@@ -16,14 +16,14 @@ Six official SDKs — each implementing all five protocols (NCP + NWP + NIP + ND
 
 | Language | Package | Min version | Repo | Wiki deep-dive |
 |----------|---------|-------------|------|----------------|
-| .NET       | `LabAcacia.NPS.Core` (+ `.NWP` / `.NIP` / `.NDP` / `.NOP`) | .NET 10     | [NPS-sdk-dotnet](https://github.com/labacacia/NPS-sdk-dotnet) | [Wiki: SDK-dotnet](https://github.com/labacacia/NPS-Release/wiki/SDK-dotnet) |
-| Python     | `nps-lib`                                                    | 3.11        | [NPS-sdk-py](https://github.com/labacacia/NPS-SDK-Python)         | [Wiki: SDK-Python](https://github.com/labacacia/NPS-Release/wiki/SDK-Python) |
-| TypeScript | `@labacacia/nps-sdk`                                         | Node 22     | [NPS-sdk-ts](https://github.com/labacacia/NPS-SDK-TypeScript)         | [Wiki: SDK-TypeScript](https://github.com/labacacia/NPS-Release/wiki/SDK-TypeScript) |
-| Java       | `com.labacacia.nps:nps-java`                                 | Java 21     | [NPS-sdk-java](https://github.com/labacacia/NPS-sdk-java)     | [Wiki: SDK-Java](https://github.com/labacacia/NPS-Release/wiki/SDK-Java) |
-| Rust       | `nps-sdk`                                                    | Rust stable | [NPS-sdk-rust](https://github.com/labacacia/NPS-sdk-rust)     | [Wiki: SDK-Rust](https://github.com/labacacia/NPS-Release/wiki/SDK-Rust) |
-| Go         | `github.com/labacacia/NPS-sdk-go`                            | Go 1.23     | [NPS-sdk-go](https://github.com/labacacia/NPS-sdk-go)         | [Wiki: SDK-Go](https://github.com/labacacia/NPS-Release/wiki/SDK-Go) |
+| .NET       | `LabAcacia.NPS.Core` (+ `.NWP` / `.NIP` / `.NDP` / `.NOP`) | .NET 10     | [NPS-sdk-dotnet](https://github.com/labacacia/NPS-sdk-dotnet) | [Wiki: SDK-dotnet](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-dotnet.md) |
+| Python     | `nps-lib`                                                    | 3.11        | [NPS-sdk-py](https://github.com/labacacia/NPS-SDK-Python)         | [Wiki: SDK-Python](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Python.md) |
+| TypeScript | `@labacacia/nps-sdk`                                         | Node 22     | [NPS-sdk-ts](https://github.com/labacacia/NPS-SDK-TypeScript)         | [Wiki: SDK-TypeScript](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-TypeScript.md) |
+| Java       | `com.labacacia.nps:nps-java`                                 | Java 21     | [NPS-sdk-java](https://github.com/labacacia/NPS-sdk-java)     | [Wiki: SDK-Java](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Java.md) |
+| Rust       | `nps-sdk`                                                    | Rust stable | [NPS-sdk-rust](https://github.com/labacacia/NPS-sdk-rust)     | [Wiki: SDK-Rust](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Rust.md) |
+| Go         | `github.com/labacacia/NPS-sdk-go`                            | Go 1.23     | [NPS-sdk-go](https://github.com/labacacia/NPS-sdk-go)         | [Wiki: SDK-Go](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Go.md) |
 
-For install commands, minimal examples, and per-feature coverage tables, see the per-language Wiki pages above or [SDK-Quickstart](https://github.com/labacacia/NPS-Release/wiki/SDK-Quickstart) for a language-agnostic walkthrough.
+For install commands, minimal examples, and per-feature coverage tables, see the per-language Wiki pages above or [SDK-Quickstart](https://github.com/labacacia/NPS/blob/main/docs/handbook/SDK-Quickstart.md) for a language-agnostic walkthrough.
 
 ---
 
@@ -35,7 +35,7 @@ Standalone deployable Certificate Authority for the Neural Identity Protocol (NP
 |------|-------|------------|
 | [labacacia/nip-ca-server](https://github.com/labacacia/nip-ca-server) | C# / ASP.NET Core 10, PostgreSQL or SQLite, single-Docker | `docker compose up -d` |
 
-For operator guides and embedding options (SQLite vs PostgreSQL) see [Wiki: NIP-CA-Server-Ops](https://github.com/labacacia/NPS-Release/wiki/NIP-CA-Server-Ops).
+For operator guides and embedding options (SQLite vs PostgreSQL) see [Wiki: NIP-CA-Server-Ops](https://github.com/labacacia/NPS/blob/main/docs/handbook/NIP-CA-Server-Ops.md).
 
 ---
 
@@ -51,7 +51,7 @@ Reference deployment binaries for the standard three-layer NPS topology, current
 NWP **Gateway Node** logical role. CR-0001 replaced that logical role with
 **Anchor Node** and **Bridge Node**.
 
-The Layer-3 trust-anchor daemons (`nps-cloud-ca` and `nps-ledger`) are private under the `innolotus` org and ship publicly with NPS Cloud GA (2027 Q1+). For operator and architecture detail see [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS-Release/wiki/Operators-QuickStart).
+The Layer-3 trust-anchor daemons (`nps-cloud-ca` and `nps-ledger`) are private under the `innolotus` org and ship publicly with NPS Cloud GA (2027 Q1+). For operator and architecture detail see [Wiki: Operators-QuickStart](https://github.com/labacacia/NPS/blob/main/docs/handbook/Operators-QuickStart.md).
 
 ---
 
@@ -78,4 +78,4 @@ All SDKs produce wire-identical frames — mix languages freely (e.g. a Python a
 
 ---
 
-📖 For tutorials, references, and operator guides, see the [NPS Wiki](https://github.com/labacacia/NPS-Release/wiki).
+📖 For tutorials, references, and operator guides, see the [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md).
