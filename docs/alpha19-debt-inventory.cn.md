@@ -54,16 +54,16 @@ P19-0 冻结的是清单。P19-0 完成**不代表**表内债务已经实现，�
 | ID | 优先级 | 债务与来源证据 | 处置／owner | 关闭证据 | 下游 |
 |---|---|---|---|---|---|
 | **P19-S01** | P0 | alpha.19 铁律要求 .NET、Python、TypeScript、Go、Java、Rust 行为一致；DTO/catalog 存在不能证明 timer、持久化、过期、replay、取消、准入或恢复。 | 实现／验证 · 六 SDK owner | 一张以 P19-P01..P05 为键的行为矩阵；每个必需 cell 链接可执行测试和 package surface | 六 standalone SDK 仓 |
-| **P19-S02** | P1 | NPS handbook 记录 Go 没有导出的 runtime `Version` 常量并称为 known gap，而 Go 分发已有 `VERSION` 文件。 | 实现或纠正声明 · Go owner | `core.Version`（或明确的 package metadata API）及测试；NPS handbook 完成对账 | NPS-SDK-Go、NPS-Wiki |
+| **P19-S02** | P1 | NPS handbook 记录 Go 没有导出的 runtime `Version` 常量并称为 known gap，而 Go 分发已有 `VERSION` 文件。 | 实现或纠正声明 · Go owner | `core.Version`（或明确的 package metadata API）及测试；NPS handbook 完成对账 | NPS-SDK-Go、NPS/docs/handbook |
 | **P19-S03** | P1 | 历史路线图称所有 SDK 都缺 NDP DNS TXT 解析，但当前 .NET/Python/TS/Go/Java/Rust 源码与测试已有 lookup/parse/fallback。 | 纠正声明并验证 · NDP/docs owner | 记录六 SDK DNS TXT 测试清单；历史行标为已被取代；不再存在当前 gap 声明 | NPS、Wiki、六 SDK 文档 |
 
 ## 5. Daemon 清单
 
 | ID | 优先级 | 债务与来源证据 | 处置／owner | 关闭证据 | 下游 |
 |---|---|---|---|---|---|
-| **P19-D01** | P0 | `nps-ingress` 源码已有 TLS 1.3、ALPN `nps/1.0`、mTLS、inline session-NID 绑定与代理，但 [`tools/daemons/nps-ingress/README.cn.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/README.cn.md)、health `todo` 和架构文本仍把部分行为写为 skeleton／future。 | 纠正声明 · ingress/docs owner | 源码/health/README/architecture/changelog 一致；当前文档引用 inline binding 与 half-close 测试 | NPS-Daemons、NPS-Wiki |
+| **P19-D01** | P0 | `nps-ingress` 源码已有 TLS 1.3、ALPN `nps/1.0`、mTLS、inline session-NID 绑定与代理，但 [`tools/daemons/nps-ingress/README.cn.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/README.cn.md)、health `todo` 和架构文本仍把部分行为写为 skeleton／future。 | 纠正声明 · ingress/docs owner | 源码/health/README/architecture/changelog 一致；当前文档引用 inline binding 与 half-close 测试 | NPS-Daemons、NPS/docs/handbook |
 | **P19-D02** | P0 | ingress 尚未完成适用的 `TC-N2-Tls-*`、`TC-N2-*`、`TC-N2-HA-*` 证据，以及当前契约的 rate limit/auth/CGN/reputation/Anchor 准入。 | 实现 · ingress + conformance owner | 可执行 family manifest；准入负路径；不得 advertise 未支持 capability | NPS-Daemons、Node L2 认证 |
-| **P19-D03** | P1 | `nps-runner` 已实现 portable OCI SpawnSpec 与周期性 lease renewal，但历史路线图／状态仍列为剩余工作。 | 纠正声明并验证 · runner/docs owner | 当前文档引用 OCI/renewal 测试；移除或标明历史的过期 remaining-work 声明 | NPS-Daemons、NPS-Wiki |
+| **P19-D03** | P1 | `nps-runner` 已实现 portable OCI SpawnSpec 与周期性 lease renewal，但历史路线图／状态仍列为剩余工作。 | 纠正声明并验证 · runner/docs owner | 当前文档引用 OCI/renewal 测试；移除或标明历史的过期 remaining-work 声明 | NPS-Daemons、NPS/docs/handbook |
 | **P19-D04** | P0 | Runner lease/dedup 是进程内状态，但当前措辞声称 exactly-one-runner；deployment L3 认证、崩溃/重启/reclaim、lease-loss cancel 与 terminal ownership 需要共享／持久证明。 | 实现 · runner owner | 多 runner 持久 store 测试；crash/reclaim 与 lease-loss 故障测试；L3 manifest | NPS-Daemons、NOP runtime 文档 |
 | **P19-D05** | P0 | [`tools/daemons/npsd/README.cn.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/npsd/README.cn.md) 与 changelog 把 native NCP transport 标为未完成，而 Node profile 存在当前 NCP 要求。 | 实现 · npsd/NCP owner | native preamble/handshake/close 行为和适用 Node 测试通过；文档／状态一致 | NPS-Daemons、ingress integration |
 | **P19-D06** | P0 | `npsd` inbox 仍在内存中，而 `TC-N1-NWP-02` 要求重启后保持 inbox；resident push 仍记录为 future。 | 实现 · npsd/NWP owner | 持久队列 migration/restart/TTL/priority/ack 测试、resident delivery 处置和 L1 manifest | NPS-Daemons、runner |
@@ -122,7 +122,7 @@ P19-0 冻结的是清单。P19-0 完成**不代表**表内债务已经实现，�
 | 公共 daemon bundle | `labacacia/NPS-Dev/tools/daemons` | `labacacia/NPS-Daemons` |
 | CA 分发 | `labacacia/NPS-Dev/tools/nip-ca-server` | `labacacia/NIP-CA-Server` |
 | Ledger/Cloud CA 分发 | NPS-Dev daemon source | 按需同步 `labacacia/NPS-Ledger`、`labacacia/NPS-Cloud-CA` |
-| 公共发布文档 | NPS-Dev/NPS | `labacacia/NPS-Wiki` |
+| 公共发布文档 | NPS-Dev/NPS | `NPS/docs/handbook` |
 | 跨仓治理 | ChangeControl EPIC-004 | 产品 issue/PR 链接该 Epic |
 
 ## 11. 产品 Issue 映射

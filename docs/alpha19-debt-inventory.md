@@ -58,16 +58,16 @@ Relabeling unresolved current behavior as “future” is not a valid closure.
 | ID | Priority | Debt and source evidence | Disposition / owner | Closure evidence | Downstream |
 |---|---|---|---|---|---|
 | **P19-S01** | P0 | Alpha.19’s standing rule requires behavior in .NET, Python, TypeScript, Go, Java, and Rust; DTO/catalog presence does not prove timers, persistence, expiry, replay, cancellation, admission, or recovery. | Implement/verify · six SDK owners | One behavior matrix keyed to P19-P01..P05; every required cell links an executable test and package surface | Six standalone SDK repos |
-| **P19-S02** | P1 | The release wiki records no exported Go runtime `Version` constant and calls it a known gap, while Go already has a distribution `VERSION` file. | Implement or correct claim · Go owner | `core.Version` (or documented deliberate package-metadata API) with test; release wiki reconciled | NPS-SDK-Go, NPS-Wiki |
+| **P19-S02** | P1 | The release wiki records no exported Go runtime `Version` constant and calls it a known gap, while Go already has a distribution `VERSION` file. | Implement or correct claim · Go owner | `core.Version` (or documented deliberate package-metadata API) with test; release wiki reconciled | NPS-SDK-Go, NPS/docs/handbook |
 | **P19-S03** | P1 | Historical roadmap text says all SDKs lack NDP DNS TXT resolution, but current .NET/Python/TS/Go/Java/Rust source and tests contain DNS TXT lookup/parse/fallback paths. | Correct claim and verify · NDP/docs owners | Six-SDK DNS TXT test inventory recorded; historical row marked superseded; no current gap claim remains | NPS, wiki, six SDK docs |
 
 ## 5. Daemon register
 
 | ID | Priority | Debt and source evidence | Disposition / owner | Closure evidence | Downstream |
 |---|---|---|---|---|---|
-| **P19-D01** | P0 | `nps-ingress` source contains TLS 1.3, ALPN `nps/1.0`, mTLS, inline session-NID binding, and proxying, while [`tools/daemons/nps-ingress/README.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/README.md), health `todo`, and architecture text still describe parts as skeleton/future. | Correct claim · ingress/docs owner | Source/health/README/architecture/changelog agree; inline binding and half-close tests cited | NPS-Daemons, NPS-Wiki |
+| **P19-D01** | P0 | `nps-ingress` source contains TLS 1.3, ALPN `nps/1.0`, mTLS, inline session-NID binding, and proxying, while [`tools/daemons/nps-ingress/README.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/README.md), health `todo`, and architecture text still describe parts as skeleton/future. | Correct claim · ingress/docs owner | Source/health/README/architecture/changelog agree; inline binding and half-close tests cited | NPS-Daemons, NPS/docs/handbook |
 | **P19-D02** | P0 | Full applicable `TC-N2-Tls-*`, `TC-N2-*`, and `TC-N2-HA-*` evidence plus current-contract rate limit/auth/CGN/reputation/Anchor admission is not complete for ingress. | Implement · ingress + conformance owners | Executable family manifests; admission negative paths; no advertised unsupported capability | NPS-Daemons, Node L2 certification |
-| **P19-D03** | P1 | `nps-runner` already implements portable OCI SpawnSpec execution and periodic lease renewal, but historical roadmap/status text still lists them as remaining. | Correct claim and verify · runner/docs owner | OCI/renewal tests cited in current docs; obsolete remaining-work claims removed or labeled historical | NPS-Daemons, NPS-Wiki |
+| **P19-D03** | P1 | `nps-runner` already implements portable OCI SpawnSpec execution and periodic lease renewal, but historical roadmap/status text still lists them as remaining. | Correct claim and verify · runner/docs owner | OCI/renewal tests cited in current docs; obsolete remaining-work claims removed or labeled historical | NPS-Daemons, NPS/docs/handbook |
 | **P19-D04** | P0 | Runner lease/dedup state is in-process while current wording claims exactly-one-runner behavior; deployment L3 certification, crash/restart/reclaim, lease-loss cancellation, and terminal ownership need shared/durable proof. | Implement · runner owner | Multi-runner durable-store tests; crash/reclaim and lease-loss fault tests; L3 manifest | NPS-Daemons, NOP runtime docs |
 | **P19-D05** | P0 | [`tools/daemons/npsd/README.md`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/npsd/README.md) and changelog identify native NCP transport as unfinished while the Node profile contains current NCP requirements. | Implement · npsd/NCP owner | Native preamble/handshake/close behavior and applicable Node tests pass; docs/status agree | NPS-Daemons, ingress integration |
 | **P19-D06** | P0 | `npsd` inbox is in-memory, while `TC-N1-NWP-02` requires inbox persistence across restart; resident push remains documented future work. | Implement · npsd/NWP owner | Durable queue migration/restart/TTL/priority/ack tests and resident-delivery disposition; L1 manifest | NPS-Daemons, runner |
@@ -127,7 +127,7 @@ current/pre-alpha.20 contract claim.
 | Public daemon bundle | `labacacia/NPS-Dev/tools/daemons` | `labacacia/NPS-Daemons` |
 | CA distribution | `labacacia/NPS-Dev/tools/nip-ca-server` | `labacacia/NIP-CA-Server` |
 | Ledger/Cloud CA distributions | NPS-Dev daemon source | `labacacia/NPS-Ledger`, `labacacia/NPS-Cloud-CA` as required |
-| Public release documentation | NPS-Dev/NPS | `labacacia/NPS-Wiki` |
+| Public release documentation | NPS-Dev/NPS | `NPS/docs/handbook` |
 | Cross-repository governance | ChangeControl EPIC-004 | Product issues/PRs link the Epic |
 
 ## 11. Product issue map
