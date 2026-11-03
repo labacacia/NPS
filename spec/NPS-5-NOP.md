@@ -4,11 +4,11 @@ English | [中文版](./NPS-5-NOP.cn.md)
 
 **Spec Number**: NPS-5
 **Status**: Proposed
-**Version**: 0.10
-**Date**: 2026-08-31
+**Version**: 0.11
+**Date**: 2026-09-09
 **Port**: 17433 (default, shared) / 17437 (optional dedicated)
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12), NPS-2 (NWP v0.22), NPS-3 (NIP v0.15), NPS-4 (NDP v0.13)
+**Depends-On**: NPS-1 (NCP v0.13), NPS-2 (NWP v0.23), NPS-3 (NIP v0.16), NPS-4 (NDP v0.14)
 **Supersedes**: NCP AlignFrame (0x05)
 
 > This document is the NOP detailed specification. For a suite overview see [NPS-0-Overview.md](NPS-0-Overview.md).
@@ -534,6 +534,49 @@ Shared transcripts live in
 
 ---
 
+### 3.6 Production runtime outcome binding (NOP v0.11)
+
+When nps.production_runtime revision 1 is selected, this section refines retry,
+cancellation and terminal evidence; the base profile remains unchanged when unselected.
+
+1. **NOP-P20-01 — independent budgets.** Existing max_retries counts additional
+   orchestration attempts. NCP runtime attempts include the initial attempt.
+   Both budgets and the original remaining task deadline apply; nested retry layers
+   MUST NOT multiply retries invisibly. A worker retryable flag or timeout is not
+   proof of non-dispatch. NCP §7.8 certainty/idempotency rules also gate every retry.
+2. **NOP-P20-02 — cancellation certainty.** Disconnect/cancel requests cooperative
+   cessation; it cannot roll back committed or external effects. The §5.2 stop rule
+   requires stopping further work where possible, not a false rollback promise.
+   If no authoritative terminal evidence exists, expose indeterminate rather than
+   claiming an unexecuted mutation. Cancellation/timeout/late result still commits
+   exactly one local terminal outcome under §3.5.6.
+3. **NOP-P20-03 — terminal wire evidence.** A final AlignStream in this negotiated
+   profile MUST include top-level execution_outcome, exactly not_dispatched,
+   known_terminal or indeterminate. It is forbidden on non-final frames.
+   An indeterminate terminal MUST have error.code=NOP-EXECUTION-INDETERMINATE and
+   error.retryable=false. Absence, invalid value or contradictory terminal evidence
+   is a protocol fault, not proof that work is safe to replay. Without a remote
+   terminal frame, the local runtime records indeterminate itself.
+4. **NOP-P20-04 — parent and callback.** Existing parent FAILED/CANCELLED/COMPLETED
+   enums are retained. Result/callback objects in this profile additionally carry
+   execution_outcome; any unresolved started mutation makes it indeterminate.
+   All-not-dispatched tasks use not_dispatched; otherwise a fully known terminal
+   task uses known_terminal. Commit one terminal record and one callback intent;
+   delivery retries cannot start workers, compensations or a new terminal decision.
+   A late result is audit evidence only, not a second callback decision.
+5. **NOP-P20-05 — durable replay claims.** Existing replay cache/tombstone presence
+   does not prove durable operation deduplication. Advertising such a contract
+   requires atomic principal/key/digest records across restart/replicas, explicit
+   retention and owner scope, and no eviction before promised retention. Admission
+   fails when capacity cannot preserve that promise. Without this proof, unknown
+   mutations MUST NOT be replayed, including after Anchor failover.
+6. **NOP-P20-06 — compensation.** Unknown predecessor effects MUST NOT trigger blind
+   compensation or be counted as completed inputs. Compensation is itself an
+   operation governed by certainty, identity, deadline and idempotency rules.
+   A failed or cancelled task does not imply that all external effects were reversed.
+
+---
+
 ## 4. Resource Pre-flight
 
 When TaskFrame has `preflight: true`, the Orchestrator sends lightweight probes to all Worker Agents before formally executing the DAG to confirm resource availability.
@@ -685,6 +728,7 @@ Orchestrator                              Worker B (Data)    Worker C (Inference
 
 | Error Code | NPS Status Code | Description |
 |-----------|----------------|-------------|
+| `NOP-EXECUTION-INDETERMINATE` | `NPS-SERVER-INTERNAL` | Execution outcome uncertain; not automatically retryable |
 | `NOP-TASK-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | task_id does not exist |
 | `NOP-TASK-TIMEOUT` | `NPS-SERVER-TIMEOUT` | Overall task timeout |
 | `NOP-TASK-DAG-INVALID` | `NPS-CLIENT-BAD-FRAME` | DAG format invalid (missing root/terminal node, field errors, etc.) |
@@ -821,6 +865,7 @@ Every delegation level must pass NIP CA verification that `delegated_scope` does
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.11 | 2026-09-09 | Alpha.20 runtime outcome binding: independent retry budgets, cancellation certainty, AlignStream/callback execution_outcome, durable replay claims and conservative compensation; adds NOP-EXECUTION-INDETERMINATE. |
 | 0.10 | 2026-08-31 | Alpha.19 bounded replay/retention profile: caller-bound replay keys and digests, duplicate/conflict behavior, monotonic result TTL, bounded replay tombstones and safe eviction, single-winner terminal races, and deterministic `weighted_first_k` / `merge_all` / partial-input semantics. Adds three errors and shared transcripts. Depends-On advances to the alpha.19 NCP/NWP/NIP/NDP baselines. |
 | 0.9 | 2026-07-29 | **Alpha.17 portable orchestrator profile**: deterministic DAG preflight and conformance scheduling; single-evaluation condition/input mapping rules; retry, timeout, cancellation, K-of-N, and aggregation ordering; reverse-topological saga reporting; fail-closed callback DNS/SSRF and HMAC validation; per-attempt Anchor re-resolution; strict live-owner lease renewal and canonical dedup key. Adds shared orchestration and runtime/security transcripts; promotes NPS-CR-0007 to Implemented after the six-SDK and runner gates passed. |
 | 0.8 | 2026-07-05 | Multi-Anchor HA interaction (NPS-CR-0009): `DelegateFrame.target_cluster_anchor` MUST resolve to the target cluster's current active Anchor (highest `cluster_epoch`, NDP §9), and in-flight delegations MUST re-resolve to the `successor_nid` on `anchor_failover` before retry. Lease-renewal semantics formalised (§8): a renewal extends `lease_expiry`, MUST match `runner_nid`, and is rejected with `NOP-CLAIM-CONFLICT` if the lease already expired and was reclaimed. No new codes. |

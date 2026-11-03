@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "task": "D20-07",
+  "kind": "executed-functional-suite-summary",
+  "source_revision": "02443a3a4e6e096309b9c562de8ec1bc658b84b9",
+  "source_note": "Local compiled worktree source was subsequently committed without changing these recipes. Remote CI supplies clean-commit verification separately.",
+  "dotnet_sdk": "10.0.114",
+  "environment": {
+    "DOTNET_USE_POLLING_FILE_WATCHER": "1",
+    "DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE": "false"
+  },
+  "command": "dotnet test impl/dotnet/tests/NPS.Tests/NPS.Tests.csproj -c Release --no-restore --logger trx --results-directory <external-artifact-directory>",
+  "source_sha256": {
+    "impl/dotnet/src/NPS.NDP/Discovery/NdpResultDiscovery.cs": "a1dbca6d48dae9fcd8752b1a4a11c13444548d656ede0b8b20ff0174cc446e44",
+    "impl/dotnet/src/NPS.NDP/Discovery/NdpRouteAuthority.cs": "3a2981295b10eaedb337b2c96d46061f5fd27c9d81a715bd94939d885df30c19",
+    "impl/dotnet/src/NPS.NWP/Results/ResultHttpClient.cs": "7749e4e86f43136857a2269d53c36e4c89b2980971582de7e8f34567e6b07f1d",
+    "impl/dotnet/tests/NPS.Tests/Ndp/NdpResultDiscoveryTests.cs": "bcad4dbbebedd4cae10c9550f8ed9e89e6fdb8d27985432d239935356b430fdb",
+    "impl/dotnet/tests/NPS.Tests/Ndp/NdpRouteTestPublisher.cs": "55ad41e09f5f895b12818e5886abd1b669866e3b567edf97d80a2910f7725776",
+    "impl/dotnet/tests/NPS.Tests/Nwp/NdpResultRoutingTests.cs": "22be0505c8c4a4943b64e098aff08554153cdeb5899561a6b396f5bfa7629088",
+    "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationTlsTests.cs": "beadf7aaaa12120b9eaba121f4e2a9626240d0de2695f0efb7321dcc3ac28e57",
+    "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationGatewayTests.cs": "4d909b8f1f8c2fbf67f702e0b38c61c183f47e156330f8131934da907637d6a1"
+  },
+  "assembly_sha256": {
+    "NPS.Tests.dll": "423ef6d17a1bbd55a7138da3c732a66384d791e96f6ccbd66d705c4d32d81c07",
+    "NPS.NDP.dll": "c2bafd3dfe3c528dc2cb95d1f546f946f3a402b4593cbcb0f3c4621fa27fbbf8",
+    "NPS.NWP.dll": "5614c64beb58d1154fd2dd2ac6ed7d39c540af6f60b9ce667e7ab71e99e025ce"
+  },
+  "passing_full_suite": {
+    "trx_sha256": "dbc443858c46ae97c967fc6cdce384874ebf5814bfe0b93d682fe08aefead004",
+    "counters": {
+      "total": "1666",
+      "executed": "1666",
+      "passed": "1666",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "failed": []
+  },
+  "preserved_initial_failed_full_suite": {
+    "trx_sha256": "1ab2653588818f31b15042b87f67bdeecd4920786fff1020231cef38b02bf18b",
+    "counters": {
+      "total": "1666",
+      "executed": "1666",
+      "passed": "1579",
+      "failed": "87",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "failed": [
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-json-identity\", warm: True, churn: False, label: \"100-http-json-identity-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.OwnerCaRevocationDeniesRetainedRecipientGrantAtActualReceiver",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: False)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PairedRuntimeEvidenceHasEqualOracleAndModelBoundary(scale: 1000)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 100, nullable: True, percent: 1)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientBoundsAndRejectsMalformedOperationBodiesWithoutRetry(body: \"{\\\"count\\\":\\\"1\\\",\\\"data\\\":[]}\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 1000, nullable: False, percent: 10)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-msgpack-gzip\", warm: True, churn: False, label: \"100-http-msgpack-gzip-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-json-identity\", warm: False, churn: False, label: \"100-http-json-identity-cold-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 100000, nullable: True, percent: 1)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PairedRuntimeEvidenceHasEqualOracleAndModelBoundary(scale: 100000)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-msgpack-identity\", warm: True, churn: True, label: \"1000-http-msgpack-identity-warm-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicCopiedProjectionAndAgentHintCannotSelectSubjectOrBeForwarded",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-json-gzip\", warm: False, churn: True, label: \"100-http-json-gzip-cold-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-worker\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100000, arm: \"http-json-identity\", warm: False, churn: False, label: \"100000-http-json-identity-cold-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.UnavailableOwnerCaFailsBeforeReplayOrHandlerAndDoesNotDisableHealthySource",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RecipientCaRevocationRejectsPreviouslySignedProofBeforeDispatch",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.FilteredSourceResultsRecheckSourceAndOwnerRevocationForReadsAndAggregates(revokeOwner: True)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.FilteredSourceResultsRecheckSourceAndOwnerRevocationForReadsAndAggregates(revokeOwner: False)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PairedRuntimeEvidenceHasEqualOracleAndModelBoundary(scale: 100)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SupportedClientExecutesRealTlsLifecycleAndStructuredErrors",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientDiscoversWithdrawalBeforeSigningOrPosting",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-msgpack-gzip\", warm: False, churn: True, label: \"100-http-msgpack-gzip-cold-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.WrongTransportDiscriminantCannotHideBehindAnActionDigest(marker: \"\\\"frame\\\":\\\"0x10\\\",\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RecipientGrantAndSourceRevocationApplyAcrossTheVerifiedHttpHop",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ResourceDeniedProjectionDoesNotConsumeReplayBeforeAValidRecipientGrant",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.FrozenRefundWorkflowMatchesExactOracleThroughSupportedPublicClient(scale: 1000)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 100000, nullable: False, percent: 10)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientConvertsUntrustedFeatureFormatErrorsToDiscoveryFailure",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RealTlsProjectionLifecycleAndSameKeyRecoveryUseBoundedCapsules",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-json-gzip\", warm: False, churn: False, label: \"1000-http-json-gzip-cold-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unmapped\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 1000, nullable: False, percent: 0)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RecipientAggregateGrantCannotExposeAnotherFieldOrSurviveRevocation",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"create-audit-loss\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 100000, nullable: True, percent: 0)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100000, arm: \"http-msgpack-gzip\", warm: False, churn: False, label: \"100000-http-msgpack-gzip-cold-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-msgpack-identity\", warm: True, churn: False, label: \"1000-http-msgpack-identity-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Daemons.Npsd.NativeNcpTests.AnchorFrame_IsAcknowledgedAndCached",
+        "error_first_line": "Hello + Anchor round trip took 539 ms"
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ResourceDenialAndSnapshotMismatchHaveZeroResultHandlerDispatch",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"missing-grant\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100000, arm: \"http-json-identity\", warm: False, churn: True, label: \"100000-http-json-identity-cold-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientBoundsAndRejectsMalformedOperationBodiesWithoutRetry(body: \"oversize\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100000, arm: \"http-msgpack-identity\", warm: True, churn: False, label: \"100000-http-msgpack-identity-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientBoundsAndRejectsMalformedOperationBodiesWithoutRetry(body: \"null\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"expired-input\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.FrozenRefundWorkflowMatchesExactOracleThroughSupportedPublicClient(scale: 100000)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.IndependentlyAuthenticatedOtherTenantCannotUseARecipientGrantOrHeaderHint",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-msgpack-gzip\", warm: True, churn: True, label: \"1000-http-msgpack-gzip-warm-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unavailable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-grant\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 100, nullable: True, percent: 10)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ResourceAuditFailureDoesNotFalselyClaimAllocationWasRolledBack",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-json-gzip\", warm: True, churn: True, label: \"1000-http-json-gzip-warm-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.WrongTransportDiscriminantCannotHideBehindAnActionDigest(marker: \"\\\"frame\\\":true,\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.CopiedValidSignatureOnAnotherAuthenticatedChannelHasZeroDispatch",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ReplayedProjectionAndTamperedBodyHaveZeroAdditionalDispatch",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientRejectsManifestRollbackAcrossServerRestarts",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"key\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100000, arm: \"http-msgpack-gzip\", warm: False, churn: True, label: \"100000-http-msgpack-gzip-cold-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientBoundsAndRejectsMalformedOperationBodiesWithoutRetry(body: \"{\\\"count\\\":1,\\\"count\\\":1,\\\"data\\\":[{}]}\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 100, arm: \"http-msgpack-gzip\", warm: False, churn: False, label: \"100-http-msgpack-gzip-cold-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.EgressIsServerOwnedAndAuditsContainOnlyVerifiedMinimizedFacts",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientBoundsAndRejectsMalformedOperationBodiesWithoutRetry(body: \"{\\\"count\\\":1,\\\"data\\\":[null]}\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-json-gzip\", warm: True, churn: False, label: \"1000-http-json-gzip-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-json-identity\", warm: True, churn: False, label: \"1000-http-json-identity-warm-stable\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.AdmissionAuditFailureClosesAccessAndRequiresFreshProjection",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.SchemaUpdateRuntimePreservesOldSnapshotsAndMatchesChangedOracle(scale: 1000, nullable: True, percent: 10)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: True)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RuntimeDiagnosticLogRetainsBoundedTypesWithoutRenderingProtectedState",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.VersionedManifestSupportsConditionalReadAndRejectsUnversionedChange",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ComparableTransferResourceEvidence(scale: 1000, arm: \"http-msgpack-gzip\", warm: False, churn: True, label: \"1000-http-msgpack-gzip-cold-churn\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RuntimeFixtureHashMatchesNormalizedUtf8IncludingEscapes",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.WithdrawnRouteHasZeroDispatchAndDoesNotConsumeProjection",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"hidden-field\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NativeBodyCarrierCannotBeSmuggledIntoProjectedHttp",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ClientDoesNotRetryMissingSuccessEchoAndRecoversOriginalKey",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RealGatewayUsesTwoAuthenticatedLegsAndFreshProjectionForEveryOperation",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"revoked\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.LostReplayFileFailsClosedOnTheActualHttpRoute",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientInFlightCancellationDoesNotUndoAllocationAndSameKeyRecovers",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.FrozenRefundWorkflowMatchesExactOracleThroughSupportedPublicClient(scale: 100)",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.ReceiverTargetCapabilityAndLiveKeyPolicyRejectBeforeHandler",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      },
+      {
+        "name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"lost-query-response\")",
+        "error_first_line": "System.IO.IOException : The configured user limit (128) on the number of inotify instances has been reached, or the per-process limit on the number of open file descriptors has been reached."
+      }
+    ]
+  },
+  "new_executed_test_names": [
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.CapacityRetainsExpiredTombstonesAndRejectsNewPublisher",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"endpoint\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"expiry\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"key\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"pin\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"policy\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.ColdRestartAndRegistryIdentityCannotReuseSavedBinding",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.EqualEpochSplitRequiresHigherAuthorizedEpochEvenAfterExpiry",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"caps\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"draining\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"expired\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"identity\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"offline\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.InvalidHighEpochSignatureCannotBurnFloor",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"[]\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"null\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{\\\"frame\\\":\\\"0x30\\\",\\\"frame\\\":\\\"0x30\\\"}\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{}\")",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.OversizedAndDuplicateSignedMembersAreRejected",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.SameIssuerAndEpochAtNewEndpointInvalidatesOldResultBinding",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.SequenceRollbackAndSameSequenceDigestChangeCannotReplaceRoute",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.StrictSignatureAndHostAuthorityPrecedeAnyFenceMutation",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedDrainingIsStickyUntilHigherSignedSequence",
+    "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedHeartbeatAndWallClockRollbackCannotExtendLease",
+    "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+    "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+    "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: False)",
+    "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: True)"
+  ],
+  "paid_provider_calls": 0,
+  "performance_resource_claim": false,
+  "scope": "Volatile host-selected reference admission; independently provisioned publisher policy, actual HTTPS/mTLS/NIP result nodes. No production PKI enrollment/durability/native/six-SDK claim.",
+  "clean_commit_ci": {
+    "run_id": 41591866781,
+    "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "name": "Build & Test (Go)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770198806"
+      },
+      {
+        "conclusion": "success",
+        "name": "Bounded data workflow (no model calls)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199123"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build & Test (Python)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199145"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build NIP CA Server",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199155"
+      },
+      {
+        "conclusion": "success",
+        "name": "Alpha20 feature fixture oracle",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199157"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build & Test (TypeScript)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199198"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build & Test (Rust)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199243"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build & Test (Java)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199489"
+      },
+      {
+        "conclusion": "success",
+        "name": "Build & Test (.NET)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770199640"
+      },
+      {
+        "conclusion": "success",
+        "name": "Docker Build (NIP CA Server)",
+        "status": "completed",
+        "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41591866781/job/125770473623"
+      }
+    ],
+    "status": "completed"
+  }
+}

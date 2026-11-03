@@ -1,0 +1,5270 @@
+{
+  "kind": "deterministic-runtime-observed",
+  "status": "FAILED_RSS_BUDGET",
+  "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+  "methodology": "D20-00-methodology-v1",
+  "provider_calls": 0,
+  "measured_workflows": 720,
+  "warmup_workflows": 72,
+  "scope": "default-GC co-host HTTP experiment; all answers exact; 100000-row RSS fails; no qualified transport/provider claim",
+  "runtime_log_sha256": "053092b52e578bf0bb570ac55e8c51e82de426426c29634b159010dd09bdd175",
+  "runtime_trx_sha256": "d5ce38cd7904d732a4c69c508c707c93c4be8eb3d2bb1a29f53a19b6a1b1b816",
+  "observations": [
+    {
+      "arm": "C-http-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "0a2ea63d-72ae-4bfa-a88d-f3d55e9a09f3",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 405717,
+      "wire_bytes_per_workflow": [
+        13524,
+        13524,
+        13523,
+        13523,
+        13526,
+        13524,
+        13522,
+        13524,
+        13525,
+        13526,
+        13525,
+        13525,
+        13524,
+        13523,
+        13524,
+        13523,
+        13524,
+        13524,
+        13523,
+        13524,
+        13523,
+        13522,
+        13522,
+        13523,
+        13526,
+        13525,
+        13523,
+        13525,
+        13523,
+        13525
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        20.1795,
+        20.5351,
+        20.1307,
+        19.765,
+        34.2375,
+        19.9655,
+        19.8703,
+        23.589,
+        19.8513,
+        22.4666,
+        24.8093,
+        20.3656,
+        25.2125,
+        21.1553,
+        18.6876,
+        18.6371,
+        20.0743,
+        18.6758,
+        18.2502,
+        20.706,
+        18.0132,
+        18.1506,
+        20.4216,
+        18.3985,
+        30.4452,
+        19.9654,
+        22.7063,
+        17.2561,
+        17.0894,
+        16.6386
+      ],
+      "rss_bytes_after_workflow": [
+        152883200,
+        152993792,
+        153128960,
+        153149440,
+        155389952,
+        155414528,
+        155418624,
+        153931776,
+        153931776,
+        153931776,
+        154034176,
+        154058752,
+        154066944,
+        154083328,
+        154087424,
+        154087424,
+        154087424,
+        154095616,
+        154099712,
+        154169344,
+        154181632,
+        154181632,
+        154202112,
+        154206208,
+        155725824,
+        155934720,
+        156139520,
+        156278784,
+        156278784,
+        156282880
+      ],
+      "process_peak_rss_bytes": 156282880,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "c8ef6257-6094-4f23-9d94-254c56470054",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2788831,
+      "wire_bytes_per_workflow": [
+        92963,
+        92968,
+        92961,
+        92964,
+        92963,
+        92960,
+        92957,
+        92967,
+        92958,
+        92960,
+        92960,
+        92963,
+        92960,
+        92958,
+        92962,
+        92955,
+        92959,
+        92962,
+        92961,
+        92961,
+        92964,
+        92962,
+        92959,
+        92962,
+        92965,
+        92964,
+        92954,
+        92961,
+        92961,
+        92957
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        110.3819,
+        106.275,
+        107.3967,
+        109.006,
+        109.7862,
+        111.9686,
+        118.9888,
+        116.4321,
+        139.3466,
+        114.7497,
+        119.8347,
+        117.7953,
+        116.1253,
+        111.1506,
+        114.8887,
+        119.8417,
+        111.7017,
+        117.236,
+        111.795,
+        118.9025,
+        114.5068,
+        110.7681,
+        114.215,
+        109.6161,
+        116.6797,
+        117.8258,
+        120.203,
+        113.2204,
+        108.8036,
+        115.2908
+      ],
+      "rss_bytes_after_workflow": [
+        158507008,
+        158621696,
+        158715904,
+        159121408,
+        159309824,
+        159571968,
+        160182272,
+        160231424,
+        158318592,
+        158445568,
+        158818304,
+        158855168,
+        158916608,
+        158932992,
+        158969856,
+        159207424,
+        159199232,
+        159264768,
+        159268864,
+        159899648,
+        160198656,
+        160198656,
+        160481280,
+        160604160,
+        160849920,
+        161419264,
+        161615872,
+        162107392,
+        162123776,
+        162680832
+      ],
+      "process_peak_rss_bytes": 162680832,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "636b9385-31ff-460c-8f13-b14c8bf88397",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2632529,
+      "wire_bytes_per_workflow": [
+        87751,
+        87752,
+        87749,
+        87749,
+        87753,
+        87756,
+        87751,
+        87749,
+        87752,
+        87751,
+        87749,
+        87754,
+        87748,
+        87750,
+        87750,
+        87755,
+        87752,
+        87750,
+        87755,
+        87753,
+        87755,
+        87749,
+        87747,
+        87748,
+        87748,
+        87748,
+        87755,
+        87751,
+        87749,
+        87750
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        108.9397,
+        104.9184,
+        104.8483,
+        106.7938,
+        110.5491,
+        106.9987,
+        105.5883,
+        108.4921,
+        101.54,
+        105.5785,
+        101.5478,
+        102.3113,
+        103.2296,
+        105.2907,
+        99.413,
+        101.8951,
+        106.7689,
+        98.3761,
+        104.2734,
+        105.7081,
+        137.124,
+        120.8297,
+        109.0197,
+        105.1362,
+        110.7395,
+        105.531,
+        101.3175,
+        105.4302,
+        105.2284,
+        103.8432
+      ],
+      "rss_bytes_after_workflow": [
+        163336192,
+        163430400,
+        163450880,
+        164098048,
+        164532224,
+        164536320,
+        164769792,
+        165081088,
+        165130240,
+        165482496,
+        165482496,
+        165580800,
+        165601280,
+        165744640,
+        165744640,
+        165752832,
+        166625280,
+        166694912,
+        168800256,
+        169205760,
+        169357312,
+        169447424,
+        169672704,
+        169701376,
+        169742336,
+        169992192,
+        170242048,
+        170541056,
+        174243840,
+        174346240
+      ],
+      "process_peak_rss_bytes": 174346240,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "8b73bd12-b550-4343-bca2-d238c75b4f50",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 249420,
+      "wire_bytes_per_workflow": [
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314,
+        8314
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        11.5102,
+        11.4654,
+        12.4781,
+        10.967,
+        10.7717,
+        13.7269,
+        12.2321,
+        12.1919,
+        14.1434,
+        12.5916,
+        15.9659,
+        15.7156,
+        12.8576,
+        16.7305,
+        14.9123,
+        16.9985,
+        15.9622,
+        17.5478,
+        13.5419,
+        12.7388,
+        15.5987,
+        12.8955,
+        13.3069,
+        15.4447,
+        12.7009,
+        12.9318,
+        13.8828,
+        13.3003,
+        12.9531,
+        13.8026
+      ],
+      "rss_bytes_after_workflow": [
+        174354432,
+        174354432,
+        174358528,
+        174358528,
+        174358528,
+        174383104,
+        174403584,
+        174428160,
+        174518272,
+        174555136,
+        174592000,
+        174641152,
+        174657536,
+        174702592,
+        174743552,
+        174768128,
+        174796800,
+        174837760,
+        174858240,
+        174862336,
+        174891008,
+        174907392,
+        174936064,
+        174997504,
+        175038464,
+        175038464,
+        175099904,
+        175116288,
+        175140864,
+        175177728
+      ],
+      "process_peak_rss_bytes": 175185920,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "2818ac2a-5e14-421b-9bf0-2312bd6ea08c",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 358182,
+      "wire_bytes_per_workflow": [
+        11942,
+        11939,
+        11939,
+        11938,
+        11939,
+        11938,
+        11944,
+        11935,
+        11941,
+        11934,
+        11939,
+        11939,
+        11935,
+        11938,
+        11941,
+        11944,
+        11939,
+        11940,
+        11935,
+        11937,
+        11942,
+        11942,
+        11942,
+        11946,
+        11939,
+        11937,
+        11939,
+        11937,
+        11938,
+        11944
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        16.8994,
+        16.3553,
+        17.4813,
+        16.8152,
+        16.4345,
+        17.3785,
+        17.0054,
+        16.7139,
+        19.1399,
+        18.558,
+        18.0591,
+        19.6521,
+        17.7882,
+        17.6718,
+        19.5409,
+        17.7357,
+        17.8863,
+        19.4519,
+        17.7525,
+        17.6759,
+        19.5064,
+        17.6655,
+        17.4896,
+        19.7104,
+        18.563,
+        19.249,
+        19.1143,
+        16.7192,
+        17.7128,
+        17.0622
+      ],
+      "rss_bytes_after_workflow": [
+        175964160,
+        175992832,
+        175992832,
+        175996928,
+        176005120,
+        176021504,
+        176021504,
+        176033792,
+        176070656,
+        176152576,
+        176230400,
+        176279552,
+        176340992,
+        176402432,
+        176476160,
+        176545792,
+        176578560,
+        176955392,
+        176988160,
+        177025024,
+        177053696,
+        177090560,
+        177106944,
+        177139712,
+        177168384,
+        177205248,
+        177328128,
+        177332224,
+        177332224,
+        177332224
+      ],
+      "process_peak_rss_bytes": 177332224,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "01079de2-3b01-49ed-b2f1-a8cb667e4ab6",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2435393,
+      "wire_bytes_per_workflow": [
+        81176,
+        81185,
+        81185,
+        81179,
+        81179,
+        81179,
+        81174,
+        81175,
+        81191,
+        81187,
+        81197,
+        81188,
+        81190,
+        81177,
+        81178,
+        81181,
+        81165,
+        81172,
+        81181,
+        81182,
+        81177,
+        81169,
+        81179,
+        81177,
+        81180,
+        81173,
+        81180,
+        81182,
+        81183,
+        81172
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        105.6064,
+        101.2168,
+        105.7914,
+        108.4086,
+        104.4483,
+        100.3501,
+        101.6352,
+        99.1622,
+        107.1175,
+        101.7577,
+        103.1996,
+        101.8825,
+        103.1468,
+        103.7573,
+        96.3079,
+        101.5547,
+        101.9117,
+        97.2718,
+        92.2554,
+        95.7466,
+        97.2597,
+        94.3652,
+        93.0345,
+        93.5502,
+        93.4804,
+        107.2047,
+        95.8096,
+        88.3494,
+        90.5143,
+        92.8822
+      ],
+      "rss_bytes_after_workflow": [
+        178552832,
+        178565120,
+        178720768,
+        178958336,
+        179036160,
+        179036160,
+        179134464,
+        179163136,
+        179183616,
+        179265536,
+        179359744,
+        179376128,
+        179449856,
+        179539968,
+        179568640,
+        179683328,
+        179761152,
+        179789824,
+        179875840,
+        179957760,
+        180027392,
+        182255616,
+        182325248,
+        182415360,
+        182501376,
+        182571008,
+        182681600,
+        182730752,
+        182792192,
+        182857728
+      ],
+      "process_peak_rss_bytes": 182857728,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "a34fde6a-157d-44fd-86c4-07f5665c17ae",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2279022,
+      "wire_bytes_per_workflow": [
+        75968,
+        75970,
+        75980,
+        75972,
+        75964,
+        75966,
+        75959,
+        75963,
+        75961,
+        75968,
+        75968,
+        75971,
+        75963,
+        75963,
+        75970,
+        75968,
+        75963,
+        75971,
+        75960,
+        75959,
+        75971,
+        75967,
+        75972,
+        75968,
+        75974,
+        75968,
+        75966,
+        75973,
+        75968,
+        75968
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        86.327,
+        86.1173,
+        81.5877,
+        85.3862,
+        88.7309,
+        85.5091,
+        85.9423,
+        84.949,
+        86.1706,
+        85.36,
+        81.8429,
+        83.7385,
+        82.0775,
+        81.9297,
+        86.383,
+        94.2613,
+        95.4698,
+        81.9331,
+        83.6249,
+        79.0578,
+        79.395,
+        80.0523,
+        81.791,
+        82.2179,
+        79.884,
+        81.8794,
+        81.4868,
+        80.824,
+        79.6623,
+        90.3843
+      ],
+      "rss_bytes_after_workflow": [
+        183246848,
+        183283712,
+        183300096,
+        183300096,
+        183349248,
+        183414784,
+        183484416,
+        183554048,
+        183603200,
+        183672832,
+        183746560,
+        183816192,
+        184492032,
+        183967744,
+        184008704,
+        184057856,
+        184061952,
+        184115200,
+        184152064,
+        184156160,
+        184156160,
+        184205312,
+        184262656,
+        184438784,
+        184811520,
+        184528896,
+        184557568,
+        184623104,
+        184684544,
+        184745984
+      ],
+      "process_peak_rss_bytes": 184745984,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100,
+      "fixture_sha256": "461ed92b97e70e4965b91cb6f1cde18ee4d65da733ec7fc7b423f8af5f5fcd96",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3444
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 7,
+              "refund_amount_minor": 23576
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13,
+              "refunds": 3,
+              "refund_amount_minor": 3555
+            },
+            "current": {
+              "orders": 12,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2296
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12,
+              "refunds": 2,
+              "refund_amount_minor": 2370
+            },
+            "current": {
+              "orders": 13,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3444},\"current\":{\"orders\":12,\"refunds\":7,\"refund_amount_minor\":23576},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13,\"refunds\":3,\"refund_amount_minor\":3555},\"current\":{\"orders\":12,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2296},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12,\"refunds\":2,\"refund_amount_minor\":2370},\"current\":{\"orders\":13,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000052\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000056\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000060\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000064\"},{\"result_ref\":\"a9e175c46df7577be0cf9ad744eb89953c6f2d913a0ee151d7c59c943492ace1\",\"snapshot_id\":\"9e189a496ab08ab51dec34e9d6f84659ae264a932ec3e6b1f1b98bf01cf27eff\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "c0bb2b9f-d799-4e8e-805e-43041087ae7b",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 201852,
+      "wire_bytes_per_workflow": [
+        6724,
+        6724,
+        6728,
+        6732,
+        6725,
+        6728,
+        6724,
+        6729,
+        6729,
+        6734,
+        6731,
+        6730,
+        6728,
+        6728,
+        6729,
+        6734,
+        6730,
+        6728,
+        6726,
+        6734,
+        6727,
+        6723,
+        6728,
+        6729,
+        6722,
+        6730,
+        6731,
+        6727,
+        6730,
+        6730
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        8.0123,
+        9.5816,
+        7.7949,
+        8.2261,
+        10.1547,
+        8.3446,
+        8.4427,
+        10.4518,
+        11.3931,
+        7.6193,
+        8.7187,
+        7.0722,
+        9.4878,
+        10.1659,
+        7.27,
+        7.3493,
+        8.8116,
+        7.3139,
+        7.3055,
+        8.6682,
+        7.3891,
+        7.2364,
+        9.0454,
+        7.5073,
+        8.537,
+        8.6969,
+        7.1978,
+        7.2528,
+        8.2947,
+        7.6695
+      ],
+      "rss_bytes_after_workflow": [
+        184782848,
+        184782848,
+        184803328,
+        184811520,
+        184823808,
+        184823808,
+        184832000,
+        184836096,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480,
+        184852480
+      ],
+      "process_peak_rss_bytes": 184852480,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "6a33557e-8dc1-4e19-8300-863edf96d6df",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 667626,
+      "wire_bytes_per_workflow": [
+        22253,
+        22254,
+        22254,
+        22254,
+        22253,
+        22253,
+        22255,
+        22254,
+        22256,
+        22254,
+        22254,
+        22254,
+        22255,
+        22254,
+        22254,
+        22253,
+        22254,
+        22253,
+        22255,
+        22254,
+        22253,
+        22254,
+        22255,
+        22255,
+        22256,
+        22254,
+        22253,
+        22256,
+        22255,
+        22255
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        21.7918,
+        21.5294,
+        22.1076,
+        21.299,
+        22.9908,
+        21.9524,
+        89.9539,
+        21.4042,
+        22.1856,
+        22.7854,
+        21.4141,
+        22.8718,
+        22.0706,
+        26.3662,
+        21.4201,
+        21.2636,
+        21.7701,
+        20.8391,
+        20.5309,
+        21.3895,
+        20.4802,
+        20.9075,
+        21.5335,
+        21.5694,
+        22.419,
+        21.3672,
+        21.4928,
+        22.2447,
+        21.788,
+        22.1091
+      ],
+      "rss_bytes_after_workflow": [
+        189702144,
+        190251008,
+        190590976,
+        190959616,
+        191307776,
+        191664128,
+        196022272,
+        196378624,
+        196853760,
+        197218304,
+        197599232,
+        197996544,
+        198348800,
+        197394432,
+        197394432,
+        197394432,
+        197394432,
+        197623808,
+        197623808,
+        197627904,
+        197627904,
+        197627904,
+        197627904,
+        197648384,
+        197664768,
+        197677056,
+        197681152,
+        197701632,
+        197722112,
+        197763072
+      ],
+      "process_peak_rss_bytes": 198258688,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "48d7f7d1-b855-4eb2-958e-cb530c127743",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 3312307,
+      "wire_bytes_per_workflow": [
+        110411,
+        110410,
+        110415,
+        110411,
+        110410,
+        110408,
+        110411,
+        110416,
+        110412,
+        110410,
+        110409,
+        110413,
+        110415,
+        110407,
+        110408,
+        110410,
+        110409,
+        110408,
+        110407,
+        110409,
+        110414,
+        110410,
+        110410,
+        110414,
+        110412,
+        110411,
+        110409,
+        110408,
+        110407,
+        110403
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        104.1706,
+        91.7682,
+        93.8937,
+        91.6661,
+        87.8845,
+        94.8544,
+        93.3425,
+        90.0548,
+        84.924,
+        84.3569,
+        95.2415,
+        84.8531,
+        84.0782,
+        83.7322,
+        92.3855,
+        91.0597,
+        86.7161,
+        90.8133,
+        89.7252,
+        87.6365,
+        86.8857,
+        86.2347,
+        86.7094,
+        91.1727,
+        89.6789,
+        86.3817,
+        87.5496,
+        85.977,
+        82.697,
+        80.8046
+      ],
+      "rss_bytes_after_workflow": [
+        198840320,
+        199319552,
+        200032256,
+        200507392,
+        200945664,
+        201428992,
+        201510912,
+        201547776,
+        201572352,
+        201572352,
+        201650176,
+        201650176,
+        201654272,
+        201670656,
+        201719808,
+        201822208,
+        201895936,
+        201965568,
+        202014720,
+        202100736,
+        202682368,
+        202760192,
+        202813440,
+        202870784,
+        202936320,
+        203005952,
+        203079680,
+        203157504,
+        203259904,
+        203259904
+      ],
+      "process_peak_rss_bytes": 203259904,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "2b83f5e7-7339-46dd-b7da-865049e879cb",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 3156009,
+      "wire_bytes_per_workflow": [
+        105199,
+        105200,
+        105199,
+        105205,
+        105199,
+        105202,
+        105198,
+        105199,
+        105198,
+        105199,
+        105196,
+        105201,
+        105199,
+        105202,
+        105198,
+        105196,
+        105206,
+        105200,
+        105204,
+        105199,
+        105201,
+        105203,
+        105199,
+        105201,
+        105200,
+        105200,
+        105200,
+        105200,
+        105204,
+        105202
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        78.3312,
+        79.3308,
+        78.1338,
+        78.0932,
+        78.6692,
+        79.8657,
+        83.4121,
+        77.5753,
+        76.9898,
+        78.0626,
+        77.909,
+        77.5204,
+        76.2116,
+        77.3887,
+        74.1191,
+        73.9573,
+        75.1254,
+        77.8892,
+        77.3528,
+        77.3659,
+        77.267,
+        76.0852,
+        77.38,
+        78.9104,
+        76.738,
+        75.2894,
+        75.9356,
+        83.0911,
+        77.7962,
+        75.0531
+      ],
+      "rss_bytes_after_workflow": [
+        203845632,
+        203149312,
+        203202560,
+        203268096,
+        203300864,
+        203399168,
+        203563008,
+        203624448,
+        203632640,
+        207982592,
+        208048128,
+        208109568,
+        208187392,
+        208220160,
+        208224256,
+        208879616,
+        208891904,
+        208941056,
+        209027072,
+        209195008,
+        209272832,
+        209412096,
+        208769024,
+        209633280,
+        209723392,
+        209797120,
+        209838080,
+        210178048,
+        210186240,
+        210186240
+      ],
+      "process_peak_rss_bytes": 210186240,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "8b9d9e69-ccae-4d1a-8cf6-1559007411fd",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 511380,
+      "wire_bytes_per_workflow": [
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046,
+        17046
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        14.6844,
+        15.8552,
+        15.2287,
+        15.4928,
+        15.7414,
+        16.3989,
+        16.6318,
+        14.6978,
+        14.9091,
+        15.4118,
+        15.4225,
+        15.7318,
+        14.3992,
+        14.6356,
+        15.6115,
+        15.0283,
+        18.3729,
+        18.7874,
+        16.2344,
+        16.4508,
+        15.6599,
+        16.8427,
+        19.2002,
+        15.7526,
+        14.5038,
+        14.7712,
+        15.4384,
+        14.7007,
+        15.0993,
+        14.8646
+      ],
+      "rss_bytes_after_workflow": [
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        210194432,
+        209477632,
+        209485824,
+        209485824,
+        209485824,
+        209485824,
+        209485824,
+        209485824,
+        209485824,
+        209494016,
+        209494016,
+        209494016,
+        209494016,
+        209494016,
+        209735680,
+        209743872,
+        209743872,
+        209743872,
+        209743872,
+        209743872,
+        209743872,
+        209743872
+      ],
+      "process_peak_rss_bytes": 209743872,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "d6fe5f72-8bd9-4b34-b2a5-de6c2a7c9589",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 383047,
+      "wire_bytes_per_workflow": [
+        12765,
+        12776,
+        12762,
+        12773,
+        12770,
+        12762,
+        12781,
+        12755,
+        12770,
+        12765,
+        12767,
+        12769,
+        12768,
+        12759,
+        12763,
+        12770,
+        12762,
+        12774,
+        12774,
+        12759,
+        12771,
+        12785,
+        12765,
+        12787,
+        12757,
+        12772,
+        12765,
+        12777,
+        12766,
+        12758
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        19.1926,
+        19.6005,
+        20.6683,
+        20.4595,
+        21.2789,
+        20.0181,
+        22.4916,
+        22.1068,
+        23.2672,
+        21.6615,
+        22.7567,
+        22.4894,
+        20.0694,
+        20.9675,
+        19.2351,
+        19.7877,
+        20.1878,
+        23.8677,
+        20.5633,
+        18.8734,
+        20.7786,
+        19.4498,
+        20.2499,
+        19.5317,
+        19.3197,
+        20.3745,
+        19.3137,
+        20.3744,
+        18.9507,
+        18.6154
+      ],
+      "rss_bytes_after_workflow": [
+        210116608,
+        210116608,
+        210132992,
+        210169856,
+        210186240,
+        210202624,
+        210227200,
+        210247680,
+        210264064,
+        210276352,
+        210305024,
+        210317312,
+        210333696,
+        210345984,
+        210345984,
+        209977344,
+        209977344,
+        207826944,
+        207826944,
+        207826944,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040,
+        207831040
+      ],
+      "process_peak_rss_bytes": 209629184,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "c3636a86-b885-4ac7-86e3-566ed40d5109",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2485181,
+      "wire_bytes_per_workflow": [
+        82831,
+        82844,
+        82846,
+        82821,
+        82823,
+        82874,
+        82856,
+        82832,
+        82839,
+        82836,
+        82903,
+        82841,
+        82865,
+        82817,
+        82820,
+        82853,
+        82842,
+        82825,
+        82881,
+        82822,
+        82803,
+        82815,
+        82863,
+        82849,
+        82853,
+        82842,
+        82820,
+        82814,
+        82834,
+        82817
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        84.8091,
+        80.8764,
+        82.1708,
+        80.9767,
+        80.5802,
+        81.0199,
+        79.396,
+        81.9162,
+        81.722,
+        82.4317,
+        81.5371,
+        81.5319,
+        84.3384,
+        81.4754,
+        79.6585,
+        80.6013,
+        80.1894,
+        80.7666,
+        80.1508,
+        78.9499,
+        87.2855,
+        81.8996,
+        79.0316,
+        79.8429,
+        80.4827,
+        81.3122,
+        83.7388,
+        81.2331,
+        80.6634,
+        79.0982
+      ],
+      "rss_bytes_after_workflow": [
+        208056320,
+        208056320,
+        208056320,
+        208056320,
+        208068608,
+        208068608,
+        208281600,
+        208420864,
+        208760832,
+        209104896,
+        209526784,
+        209870848,
+        210210816,
+        210219008,
+        210239488,
+        210239488,
+        210247680,
+        210272256,
+        210276352,
+        210292736,
+        210296832,
+        210935808,
+        210935808,
+        210935808,
+        210935808,
+        210931712,
+        213450752,
+        213475328,
+        213479424,
+        213487616
+      ],
+      "process_peak_rss_bytes": 213487616,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "ac3de296-b6cc-44cb-b1fd-81cf6da98fdc",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2328646,
+      "wire_bytes_per_workflow": [
+        77602,
+        77610,
+        77596,
+        77632,
+        77638,
+        77607,
+        77611,
+        77621,
+        77607,
+        77628,
+        77628,
+        77602,
+        77602,
+        77634,
+        77604,
+        77639,
+        77624,
+        77627,
+        77625,
+        77613,
+        77635,
+        77644,
+        77624,
+        77646,
+        77606,
+        77635,
+        77623,
+        77642,
+        77608,
+        77633
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        76.4237,
+        77.1149,
+        76.5872,
+        77.8014,
+        77.1382,
+        77.207,
+        80.1468,
+        91.379,
+        81.9058,
+        80.1229,
+        79.7596,
+        76.9785,
+        75.7803,
+        77.546,
+        77.6168,
+        77.4968,
+        78.9106,
+        78.1811,
+        78.0175,
+        79.3588,
+        76.6221,
+        78.3428,
+        78.5977,
+        77.6941,
+        78.5069,
+        76.9403,
+        77.3203,
+        77.4869,
+        77.1278,
+        77.9449
+      ],
+      "rss_bytes_after_workflow": [
+        213491712,
+        210223104,
+        210227200,
+        210227200,
+        210235392,
+        210235392,
+        210894848,
+        208646144,
+        208646144,
+        208646144,
+        208650240,
+        208650240,
+        208650240,
+        208650240,
+        208650240,
+        208650240,
+        208650240,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208662528,
+        208216064
+      ],
+      "process_peak_rss_bytes": 212869120,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 1000,
+      "fixture_sha256": "e88c0dc0f351fae8c7b22b258b8e9373c68f8cc2d9867bb78a805799bdda167b",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 34440
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 70,
+              "refund_amount_minor": 235760
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 130,
+              "refunds": 30,
+              "refund_amount_minor": 35550
+            },
+            "current": {
+              "orders": 120,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 22960
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 120,
+              "refunds": 20,
+              "refund_amount_minor": 23700
+            },
+            "current": {
+              "orders": 130,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":34440},\"current\":{\"orders\":120,\"refunds\":70,\"refund_amount_minor\":235760},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":130,\"refunds\":30,\"refund_amount_minor\":35550},\"current\":{\"orders\":120,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":22960},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":120,\"refunds\":20,\"refund_amount_minor\":23700},\"current\":{\"orders\":130,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000052\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000056\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000060\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000064\"},{\"result_ref\":\"f024dc22e434bfe320b02e2670b8dd466e342df34dd69cae848ee0e10d492f09\",\"snapshot_id\":\"289d31a781a359c53dff4e3eb34b1f01fab0fc6b010808f87319c074dfc61d85\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "214142a6-d49c-4cf7-ab8a-5d4be1b94d8f",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 226823,
+      "wire_bytes_per_workflow": [
+        7562,
+        7551,
+        7565,
+        7561,
+        7568,
+        7555,
+        7565,
+        7560,
+        7565,
+        7551,
+        7560,
+        7562,
+        7559,
+        7551,
+        7543,
+        7568,
+        7572,
+        7556,
+        7559,
+        7567,
+        7555,
+        7555,
+        7557,
+        7574,
+        7558,
+        7579,
+        7558,
+        7554,
+        7561,
+        7572
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        17.8354,
+        17.5384,
+        16.0727,
+        20.1274,
+        15.6942,
+        15.8616,
+        15.9035,
+        15.9887,
+        16.2345,
+        15.3269,
+        16.7574,
+        15.3874,
+        15.5276,
+        15.7329,
+        15.502,
+        16.7426,
+        15.2372,
+        15.9068,
+        16.3437,
+        15.8092,
+        16.2752,
+        15.8334,
+        16.5629,
+        14.7647,
+        15.447,
+        15.8746,
+        14.7845,
+        16.4418,
+        15.5556,
+        15.7434
+      ],
+      "rss_bytes_after_workflow": [
+        209580032,
+        209920000,
+        210259968,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936,
+        210599936
+      ],
+      "process_peak_rss_bytes": 212869120,
+      "rss_budget_passed": true,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "c3c93ab8-fdae-4240-8463-3a5b62d775be",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 669058,
+      "wire_bytes_per_workflow": [
+        22301,
+        22303,
+        22302,
+        22302,
+        22301,
+        22302,
+        22304,
+        22302,
+        22301,
+        22303,
+        22303,
+        22302,
+        22301,
+        22303,
+        22303,
+        22301,
+        22302,
+        22303,
+        22301,
+        22300,
+        22303,
+        22300,
+        22301,
+        22301,
+        22302,
+        22303,
+        22302,
+        22303,
+        22301,
+        22302
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        528.6033,
+        514.5653,
+        519.4839,
+        525.5932,
+        538.9987,
+        485.9801,
+        488.9405,
+        523.1667,
+        517.5056,
+        505.1528,
+        521.5091,
+        533.5822,
+        529.5863,
+        494.1719,
+        520.3749,
+        499.775,
+        510.9921,
+        510.7777,
+        509.8556,
+        517.0226,
+        512.5498,
+        509.2158,
+        521.1174,
+        522.9651,
+        524.0304,
+        525.5396,
+        513.5486,
+        528.4241,
+        501.1934,
+        530.4757
+      ],
+      "rss_bytes_after_workflow": [
+        382513152,
+        413421568,
+        419008512,
+        458686464,
+        485691392,
+        485806080,
+        443375616,
+        473534464,
+        505942016,
+        516820992,
+        532340736,
+        572018688,
+        517500928,
+        521338880,
+        541564928,
+        551305216,
+        577482752,
+        511512576,
+        535408640,
+        570454016,
+        575926272,
+        586670080,
+        606818304,
+        646492160,
+        686039040,
+        628711424,
+        638337024,
+        638386176,
+        648011776,
+        686895104
+      ],
+      "process_peak_rss_bytes": 709685248,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "973aab45-d85d-4684-a611-8991693d199f",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 3315301,
+      "wire_bytes_per_workflow": [
+        110509,
+        110509,
+        110509,
+        110509,
+        110511,
+        110512,
+        110516,
+        110516,
+        110513,
+        110512,
+        110512,
+        110506,
+        110510,
+        110510,
+        110505,
+        110507,
+        110510,
+        110507,
+        110508,
+        110511,
+        110508,
+        110513,
+        110507,
+        110512,
+        110512,
+        110508,
+        110509,
+        110510,
+        110507,
+        110513
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        591.0913,
+        557.8179,
+        604.1151,
+        586.1454,
+        572.1231,
+        599.0968,
+        567.7189,
+        585.1831,
+        565.2262,
+        573.9601,
+        593.3946,
+        562.7246,
+        575.8323,
+        589.0755,
+        587.5648,
+        593.8347,
+        579.649,
+        569.2237,
+        548.7113,
+        569.6169,
+        572.6897,
+        568.9721,
+        591.6954,
+        604.5547,
+        613.7442,
+        576.0118,
+        595.4061,
+        557.2925,
+        580.1742,
+        592.0892
+      ],
+      "rss_bytes_after_workflow": [
+        614514688,
+        624152576,
+        663040000,
+        638435328,
+        652705792,
+        687755264,
+        693243904,
+        698867712,
+        704622592,
+        710377472,
+        630812672,
+        630820864,
+        645091328,
+        647204864,
+        661471232,
+        694992896,
+        709980160,
+        715599872,
+        721362944,
+        727117824,
+        731217920,
+        762146816,
+        797720576,
+        836374528,
+        752734208,
+        767004672,
+        766701568,
+        780967936,
+        806387712,
+        845524992
+      ],
+      "process_peak_rss_bytes": 860192768,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "a42fdeaa-0cb2-4bb3-a6bc-f48c14e165a4",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 3159005,
+      "wire_bytes_per_workflow": [
+        105301,
+        105301,
+        105300,
+        105297,
+        105298,
+        105303,
+        105298,
+        105301,
+        105299,
+        105304,
+        105304,
+        105299,
+        105303,
+        105300,
+        105303,
+        105297,
+        105300,
+        105301,
+        105304,
+        105294,
+        105301,
+        105299,
+        105301,
+        105303,
+        105297,
+        105302,
+        105300,
+        105296,
+        105299,
+        105300
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        573.8166,
+        559.3316,
+        570.0054,
+        559.6654,
+        580.6679,
+        585.7439,
+        562.1971,
+        620.5471,
+        633.5411,
+        588.3857,
+        604.0739,
+        591.2843,
+        566.6886,
+        573.4322,
+        594.7535,
+        574.5796,
+        604.3581,
+        660.0381,
+        574.4982,
+        622.4151,
+        598.1895,
+        596.8097,
+        591.1319,
+        611.1748,
+        611.4126,
+        610.563,
+        623.4274,
+        592.2704,
+        597.5022,
+        580.5398
+      ],
+      "rss_bytes_after_workflow": [
+        860340224,
+        860340224,
+        743628800,
+        743628800,
+        767524864,
+        753258496,
+        767524864,
+        795258880,
+        834400256,
+        849780736,
+        855531520,
+        861286400,
+        865386496,
+        865386496,
+        729518080,
+        743788544,
+        771522560,
+        720486400,
+        734752768,
+        758665216,
+        802353152,
+        816369664,
+        822124544,
+        826224640,
+        715776000,
+        730042368,
+        763568128,
+        693309440,
+        707575808,
+        731471872
+      ],
+      "process_peak_rss_bytes": 864923648,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "identity",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "5f79e377-b45d-4156-a2e3-6863e3c2278b",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 512760,
+      "wire_bytes_per_workflow": [
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092,
+        17092
+      ],
+      "observed_gzip_responses_per_workflow": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latency_ms": [
+        560.2953,
+        543.6366,
+        551.6345,
+        539.4137,
+        559.7988,
+        520.0004,
+        527.3648,
+        560.286,
+        549.2928,
+        539.639,
+        541.9461,
+        543.3007,
+        545.7689,
+        566.1025,
+        543.5492,
+        544.9894,
+        544.729,
+        534.3687,
+        535.1769,
+        522.883,
+        511.4168,
+        503.5057,
+        493.809,
+        494.2662,
+        499.6042,
+        502.1158,
+        502.9067,
+        500.2789,
+        495.4139,
+        526.0133
+      ],
+      "rss_bytes_after_workflow": [
+        785829888,
+        796094464,
+        830992384,
+        866562048,
+        903565312,
+        939134976,
+        977793024,
+        1017462784,
+        1057144832,
+        1096810496,
+        1024536576,
+        1038802944,
+        1062699008,
+        1048453120,
+        1062719488,
+        1086615552,
+        1100079104,
+        1105829888,
+        1111588864,
+        1117077504,
+        1121177600,
+        1121177600,
+        1121165312,
+        1121165312,
+        1126285312,
+        1126285312,
+        1126285312,
+        1132261376,
+        1132261376,
+        1051566080
+      ],
+      "process_peak_rss_bytes": 1131622400,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "9658e462-c114-4286-bf3c-2a2b3d5f0049",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 383616,
+      "wire_bytes_per_workflow": [
+        12789,
+        12788,
+        12783,
+        12786,
+        12776,
+        12780,
+        12788,
+        12803,
+        12782,
+        12802,
+        12780,
+        12799,
+        12782,
+        12784,
+        12777,
+        12779,
+        12814,
+        12780,
+        12798,
+        12784,
+        12792,
+        12775,
+        12787,
+        12784,
+        12779,
+        12800,
+        12790,
+        12785,
+        12789,
+        12781
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        502.3424,
+        510.049,
+        517.0301,
+        496.3134,
+        507.1293,
+        508.7569,
+        516.0246,
+        506.4277,
+        511.6251,
+        512.8252,
+        489.7957,
+        499.7153,
+        500.4983,
+        500.4487,
+        503.6344,
+        503.8495,
+        519.4686,
+        501.5247,
+        507.3228,
+        501.3566,
+        503.15,
+        502.6761,
+        508.8538,
+        504.6085,
+        503.8291,
+        503.4299,
+        508.5027,
+        505.443,
+        524.9457,
+        518.9807
+      ],
+      "rss_bytes_after_workflow": [
+        1056817152,
+        1080672256,
+        1104568320,
+        1104568320,
+        1106087936,
+        1111711744,
+        1117462528,
+        1122930688,
+        1128681472,
+        1132785664,
+        1076969472,
+        1091248128,
+        1091248128,
+        1100877824,
+        1100877824,
+        1103253504,
+        1103253504,
+        1103253504,
+        1104773120,
+        1110392832,
+        1116139520,
+        1121763328,
+        1127383040,
+        1133002752,
+        1138122752,
+        1138122752,
+        1138122752,
+        1143787520,
+        1167953920,
+        1202257920
+      ],
+      "process_peak_rss_bytes": 1202257920,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "bc627995-681a-4ffa-9bec-fb9612e042f4",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2486628,
+      "wire_bytes_per_workflow": [
+        82896,
+        82871,
+        82864,
+        82933,
+        82895,
+        82883,
+        82854,
+        82909,
+        82897,
+        82877,
+        82885,
+        82908,
+        82923,
+        82883,
+        82898,
+        82876,
+        82899,
+        82883,
+        82877,
+        82871,
+        82880,
+        82895,
+        82917,
+        82871,
+        82862,
+        82875,
+        82914,
+        82873,
+        82859,
+        82900
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        574.9869,
+        572.6505,
+        631.6917,
+        575.2331,
+        577.3802,
+        583.1266,
+        566.9548,
+        580.4308,
+        571.9754,
+        581.1677,
+        602.1356,
+        611.1751,
+        567.5475,
+        570.0388,
+        606.3333,
+        610.6636,
+        628.5991,
+        617.7615,
+        606.6713,
+        617.9189,
+        618.1817,
+        606.7467,
+        590.1289,
+        546.0452,
+        577.5345,
+        578.4409,
+        571.5441,
+        600.4545,
+        605.481,
+        576.3291
+      ],
+      "rss_bytes_after_workflow": [
+        1197305856,
+        1197842432,
+        1230962688,
+        1230962688,
+        1230962688,
+        1230962688,
+        1232482304,
+        1238114304,
+        1243860992,
+        1249484800,
+        1263497216,
+        1269121024,
+        1269284864,
+        1269288960,
+        1269288960,
+        1274982400,
+        1204228096,
+        1204228096,
+        1204228096,
+        1204228096,
+        1204236288,
+        1204236288,
+        1237762048,
+        1237762048,
+        1237762048,
+        1237762048,
+        1243250688,
+        1249001472,
+        1254752256,
+        1260240896
+      ],
+      "process_peak_rss_bytes": 1274556416,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "D-nps-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "HTTPS NWP Action/CapsFrame + fresh NIP gateway projection",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "361d1671-7c92-4048-8de2-35e613260475",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 2330381,
+      "wire_bytes_per_workflow": [
+        77674,
+        77692,
+        77670,
+        77689,
+        77656,
+        77676,
+        77680,
+        77661,
+        77701,
+        77676,
+        77679,
+        77706,
+        77687,
+        77652,
+        77695,
+        77716,
+        77699,
+        77660,
+        77668,
+        77706,
+        77680,
+        77671,
+        77681,
+        77686,
+        77679,
+        77659,
+        77668,
+        77658,
+        77686,
+        77670
+      ],
+      "observed_gzip_responses_per_workflow": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "latency_ms": [
+        563.5099,
+        566.9595,
+        569.1543,
+        580.5079,
+        578.0379,
+        587.6825,
+        559.6329,
+        540.9578,
+        559.2606,
+        563.1023,
+        552.9776,
+        561.5088,
+        593.3268,
+        564.4493,
+        553.5078,
+        555.3306,
+        562.0068,
+        562.6653,
+        570.4962,
+        579.0061,
+        562.451,
+        574.0165,
+        572.5951,
+        566.4249,
+        576.048,
+        547.1628,
+        565.1085,
+        579.2796,
+        588.7896,
+        577.1895
+      ],
+      "rss_bytes_after_workflow": [
+        1277620224,
+        1277616128,
+        1282736128,
+        1283375104,
+        1283375104,
+        1202225152,
+        1202225152,
+        1202225152,
+        1202225152,
+        1202225152,
+        1202225152,
+        1211854848,
+        1245507584,
+        1255186432,
+        1256706048,
+        1266745344,
+        1274130432,
+        1279750144,
+        1285505024,
+        1287155712,
+        1287155712,
+        1287155712,
+        1287626752,
+        1290076160,
+        1292361728,
+        1294016512,
+        1302220800,
+        1314263040,
+        1353940992,
+        1388494848
+      ],
+      "process_peak_rss_bytes": 1388494848,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "public gateway and receiver; downstream client currently per request",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    },
+    {
+      "arm": "C-http-runtime",
+      "rows": 100000,
+      "fixture_sha256": "934291a490f2df764354ecfc3ca292e4a0573e35fcf7c74f462f19b8773e12dd",
+      "answer": {
+        "groups": {
+          "delivery": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3444000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 7000,
+              "refund_amount_minor": 23576000
+            },
+            "sample_current_refund_ids": [
+              "order:000052",
+              "order:000056",
+              "order:000060",
+              "order:000064",
+              "order:000068"
+            ]
+          },
+          "quality": {
+            "baseline": {
+              "orders": 13000,
+              "refunds": 3000,
+              "refund_amount_minor": 3555000
+            },
+            "current": {
+              "orders": 12000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "duplicate": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2296000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          },
+          "other": {
+            "baseline": {
+              "orders": 12000,
+              "refunds": 2000,
+              "refund_amount_minor": 2370000
+            },
+            "current": {
+              "orders": 13000,
+              "refunds": 0,
+              "refund_amount_minor": 0
+            },
+            "sample_current_refund_ids": []
+          }
+        },
+        "anomaly_reasons": [
+          "delivery"
+        ]
+      },
+      "model_visible_utf8": "{\"computed\":{\"groups\":{\"delivery\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3444000},\"current\":{\"orders\":12000,\"refunds\":7000,\"refund_amount_minor\":23576000},\"sample_current_refund_ids\":[\"order:000052\",\"order:000056\",\"order:000060\",\"order:000064\",\"order:000068\"]},\"quality\":{\"baseline\":{\"orders\":13000,\"refunds\":3000,\"refund_amount_minor\":3555000},\"current\":{\"orders\":12000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"duplicate\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2296000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]},\"other\":{\"baseline\":{\"orders\":12000,\"refunds\":2000,\"refund_amount_minor\":2370000},\"current\":{\"orders\":13000,\"refunds\":0,\"refund_amount_minor\":0},\"sample_current_refund_ids\":[]}},\"anomaly_reasons\":[\"delivery\"]},\"source_records\":[{\"id\":\"order:000052\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":2924},{\"id\":\"order:000056\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3072},{\"id\":\"order:000060\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3220},{\"id\":\"order:000064\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3368},{\"id\":\"order:000068\",\"period\":\"current\",\"reason\":\"delivery\",\"refunded\":true,\"amount_minor\":3516}],\"citations\":[{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000052\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000056\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000060\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000064\"},{\"result_ref\":\"524ca9bb0f6677990f07a73fcca99440118b61a66571e7e53689bfe77c0e101a\",\"snapshot_id\":\"88577186750d1c28bf4a8eb9666fc8e337b7131e54d26fa47305d873dd6e9871\",\"record_id\":\"order:000068\"}]}",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "source": {
+        "revision": "ca55bf2a797732fd3f3eff84693fed32a35d8020",
+        "binding": "ordinary HTTPS JSON tools",
+        "boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+        "request_id": "f6365c2a-bb00-4188-937e-6048da3e3c94",
+        "environment": ".NET 10.0.14; Ubuntu 26.04.1 LTS; X64; cpus=4; server_gc=False; loopback provisioned mTLS"
+      },
+      "wire_bytes": 227450,
+      "wire_bytes_per_workflow": [
+        7569,
+        7594,
+        7573,
+        7587,
+        7582,
+        7589,
+        7586,
+        7584,
+        7583,
+        7582,
+        7568,
+        7575,
+        7569,
+        7573,
+        7596,
+        7590,
+        7581,
+        7572,
+        7568,
+        7580,
+        7603,
+        7575,
+        7595,
+        7599,
+        7575,
+        7578,
+        7600,
+        7588,
+        7566,
+        7570
+      ],
+      "observed_gzip_responses_per_workflow": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "latency_ms": [
+        508.1365,
+        483.3206,
+        484.9458,
+        502.2044,
+        481.0137,
+        482.1204,
+        488.0183,
+        528.7848,
+        503.6715,
+        487.5663,
+        499.5641,
+        484.7149,
+        486.6823,
+        489.4687,
+        502.4638,
+        489.4407,
+        488.6812,
+        506.5916,
+        513.6427,
+        486.8421,
+        496.8236,
+        500.6797,
+        486.1058,
+        478.7186,
+        488.7157,
+        484.7142,
+        490.9784,
+        499.5382,
+        502.0591,
+        496.2543
+      ],
+      "rss_bytes_after_workflow": [
+        1427980288,
+        1427980288,
+        1427980288,
+        1428021248,
+        1428021248,
+        1428021248,
+        1428021248,
+        1461547008,
+        1485438976,
+        1485438976,
+        1485438976,
+        1485438976,
+        1489408000,
+        1495158784,
+        1500647424,
+        1506267136,
+        1512022016,
+        1517772800,
+        1523499008,
+        1523499008,
+        1523499008,
+        1528619008,
+        1528619008,
+        1528619008,
+        1533898752,
+        1533898752,
+        1432084480,
+        1432084480,
+        1432088576,
+        1432088576
+      ],
+      "process_peak_rss_bytes": 1533087744,
+      "rss_budget_passed": false,
+      "provider_usage": null,
+      "warmups": 3,
+      "repeats": 30,
+      "build_configuration": "Release",
+      "cache_definition": "frontend connection new/reused; TLS resumption disabled; source immutable; no schema/provider cache claim",
+      "topology": "direct ordinary endpoint; same source/store/policy operators",
+      "setup": "shared live provenance result + first source page prepared before measurement; separate cleanup after arms",
+      "claim": "HTTP reference workflow only; no native NCP/Arrow/Flight/Protobuf efficiency claim"
+    }
+  ]
+}

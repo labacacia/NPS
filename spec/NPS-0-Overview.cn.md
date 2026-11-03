@@ -13,7 +13,7 @@
 
 ## Abstract
 
-NPS（Neural Protocol Suite）是面向 AI Agent 和模型的完整互联网基础协议族，由五个子协议组成，覆盖 AI 通信、Web 访问、身份认证、节点发现与多 Agent 编排。NPS 从零开始为 AI 时代设计，消除现有 Web 协议对 AI 访问场景的根本性低效，通过 Schema 锚定机制降低 30–60% token 消耗，并在协议层建立统一的 Agent 身份体系。
+NPS（Neural Protocol Suite）由五个协议组成，覆盖 AI 通信、Web 访问、身份认证、节点发现与多 Agent 编排。Schema 锚定支持传输/运行时边界上的结构复用。网络字节、模型可见 token 和供应商费用是不同指标，不能仅凭锚定承诺固定 token 节省百分比。
 
 ---
 
@@ -49,7 +49,7 @@ NPS（Neural Protocol Suite）是面向 AI Agent 和模型的完整互联网基�
 ### 1.2 目标
 
 - AI 访问神经节点时，无需语义解析层，响应内容直接可被模型理解
-- 通过 AnchorFrame Schema 锚定机制，消除重复 Schema 传输，显著降低 token 消耗
+- AnchorFrame 复用可减少传输中的重复结构；模型 token 收益取决于最终输入表达及运行时实际送入模型的数据
 - 统一的 Agent NID（神经身份），将"AI 访问"与"人类访问"在协议层明确区分
 - 分层可选：最小部署仅需 NCP + NWP，NIP / NDP / NOP 按需引入
 
@@ -77,7 +77,7 @@ NPS（Neural Protocol Suite）是面向 AI Agent 和模型的完整互联网基�
 非改造现有协议，响应结构直接对应 LLM 注意力机制，字段携带语义类型标注，模型可直接推理。
 
 ### P2 — Token Economy 第一
-帧级 Schema 锚定（AnchorFrame）、增量传输（DiffFrame）、Cognon 标准化计量三重机制将无效 token 消耗降至最低。
+帧级 Schema 锚定（AnchorFrame）、增量传输（DiffFrame）和 Cognon 估算帮助控制数据交换；模型 token、网络字节和费用分别验证。
 
 ### P3 — 分层可选
 各协议层独立可部署。最小配置为 NCP + NWP；NIP / NDP / NOP 视场景需求引入。
@@ -164,7 +164,7 @@ NPS 所有协议通信以**帧**为基本单元。默认帧含 4 字节固定头
 
 ### 4.2 AnchorFrame 与 Schema 去重
 
-Node 发布 AnchorFrame，包含完整 Schema 定义和 SHA-256 `anchor_id`。Agent 本地缓存 AnchorFrame 后，后续所有请求和响应只携带 `anchor_id` 引用，消除重复 Schema 传输。单一会话中典型 token 节约 30–60%。
+Node 发布 AnchorFrame，包含完整 Schema 定义和 SHA-256 `anchor_id`。Agent 缓存后可在后续交换中引用，减少原本会重复发送的结构。若运行时仍把相同数据展开成相同模型消息，仅压缩传输不会减少模型输入 token。紧凑的模型可见表达和运行时筛选需要分别验证正确率及供应商 usage。
 
 ### 4.3 Cognon（CGN）与 Token Budget
 

@@ -1,0 +1,4 @@
+{"command": ["cargo", "audit", "--json"], "cwd": "impl/rust"}
+{"database":{"advisory-count":1403,"last-commit":"6c5fedf8ff03c485ed674d8f941e0180f3f72d70","last-updated":"2026-11-03T10:44:19+01:00"},"lockfile":{"dependency-count":247},"settings":{"target_arch":[],"target_os":[],"severity":null,"ignore":[],"informational_warnings":["unmaintained","unsound","notice"]},"vulnerabilities":{"found":false,"count":0,"list":[]},"warnings":{}}
+{"command": ["cargo", "audit", "--json"], "cwd": "tools/nip-ca-server/example/rust"}
+{"database":{"advisory-count":1403,"last-commit":"6c5fedf8ff03c485ed674d8f941e0180f3f72d70","last-updated":"2026-11-03T10:44:19+01:00"},"lockfile":{"dependency-count":167},"settings":{"target_arch":[],"target_os":[],"severity":null,"ignore":[],"informational_warnings":["unmaintained","unsound","notice"]},"vulnerabilities":{"found":false,"count":0,"list":[]},"warnings":{}}

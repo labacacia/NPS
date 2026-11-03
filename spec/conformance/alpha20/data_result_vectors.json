@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "kind": "design-oracle-not-runtime-evidence",
+  "cases": [
+    {
+      "id": "DR-F01",
+      "name": "feature_missing",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2273656c65637465645f7265766973696f6e223a6e756c6c7d",
+      "input": {
+        "operation": "result.read",
+        "selected_revision": null
+      },
+      "expected": {
+        "outcome": "FEATURE_UNSUPPORTED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F02",
+      "name": "feature_revision_mismatch",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2273656c65637465645f7265766973696f6e223a327d",
+      "input": {
+        "operation": "result.read",
+        "selected_revision": 2
+      },
+      "expected": {
+        "outcome": "FEATURE_UNSUPPORTED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F03",
+      "name": "experimental_disabled",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22656e61626c6564223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "enabled": false
+      },
+      "expected": {
+        "outcome": "FEATURE_UNSUPPORTED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F04",
+      "name": "legacy_peer",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22726f7574655f61646d697373696f6e223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "route_admission": false
+      },
+      "expected": {
+        "outcome": "FEATURE_UNSUPPORTED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F05",
+      "name": "projection_without_context_revision",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2270726f6a656374696f6e223a747275652c22636f6e746578745f73656c6563746564223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "projection": true,
+        "context_selected": false
+      },
+      "expected": {
+        "outcome": "FEATURE_UNSUPPORTED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F06",
+      "name": "unsigned_agent_header",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2276657269666965645f7072696e636970616c223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "verified_principal": false
+      },
+      "expected": {
+        "outcome": "UNAUTHENTICATED",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F07",
+      "name": "policy_unavailable",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22706f6c6963795f617661696c61626c65223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "policy_available": false
+      },
+      "expected": {
+        "outcome": "POLICY_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F08",
+      "name": "owner_read",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164227d",
+      "input": {
+        "operation": "result.read"
+      },
+      "expected": {
+        "outcome": "PAGE",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F09",
+      "name": "wrong_tenant",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2274656e616e745f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "tenant_matches": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F10",
+      "name": "copied_handle",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227072696e636970616c5f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "principal_matches": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F11",
+      "name": "revoked_owner",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22736f757263655f617574686f72697a6564223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "source_authorized": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F12",
+      "name": "expired_at_boundary",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226e6f77223a313030307d",
+      "input": {
+        "operation": "result.read",
+        "now": 1000
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F13",
+      "name": "before_expiry",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226e6f77223a3939397d",
+      "input": {
+        "operation": "result.read",
+        "now": 999
+      },
+      "expected": {
+        "outcome": "PAGE",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F14",
+      "name": "released_result",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c2272656c6561736564223a747275657d",
+      "input": {
+        "operation": "result.read",
+        "released": true
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F15",
+      "name": "issuer_restarted",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226973737565725f616c697665223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "issuer_alive": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F16",
+      "name": "unproven_successor",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226973737565725f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "issuer_matches": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F17",
+      "name": "wrong_snapshot",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22736e617073686f745f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "snapshot_matches": false
+      },
+      "expected": {
+        "outcome": "SNAPSHOT_MISMATCH",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F18",
+      "name": "wrong_schema",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22736368656d615f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "schema_matches": false
+      },
+      "expected": {
+        "outcome": "SNAPSHOT_MISMATCH",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F19",
+      "name": "cursor_rebound",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22637572736f725f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "cursor_matches": false
+      },
+      "expected": {
+        "outcome": "SNAPSHOT_MISMATCH",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F20",
+      "name": "limit_zero",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226c696d6974223a307d",
+      "input": {
+        "operation": "result.read",
+        "limit": 0
+      },
+      "expected": {
+        "outcome": "INVALID_PARAMS",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F21",
+      "name": "limit_above_cap",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226c696d6974223a313030317d",
+      "input": {
+        "operation": "result.read",
+        "limit": 1001
+      },
+      "expected": {
+        "outcome": "INVALID_PARAMS",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F22",
+      "name": "limit_boolean",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226c696d6974223a747275657d",
+      "input": {
+        "operation": "result.read",
+        "limit": true
+      },
+      "expected": {
+        "outcome": "INVALID_PARAMS",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F23",
+      "name": "oversized_row",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22706167655f6279746573223a36353533377d",
+      "input": {
+        "operation": "result.read",
+        "page_bytes": 65537
+      },
+      "expected": {
+        "outcome": "INVALID_PARAMS",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F24",
+      "name": "unauthorized_field",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c226669656c64735f617574686f72697a6564223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "fields_authorized": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F25",
+      "name": "unauthorized_model_egress",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22746f5f6d6f64656c223a747275652c226567726573735f616c6c6f776564223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "to_model": true,
+        "egress_allowed": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F26",
+      "name": "authorized_model_egress",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c22746f5f6d6f64656c223a747275652c226567726573735f616c6c6f776564223a747275657d",
+      "input": {
+        "operation": "result.read",
+        "to_model": true,
+        "egress_allowed": true
+      },
+      "expected": {
+        "outcome": "PAGE",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F27",
+      "name": "recipient_granted",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227072696e636970616c5f6d617463686573223a66616c73652c22726563697069656e745f6772616e74223a747275657d",
+      "input": {
+        "operation": "result.read",
+        "principal_matches": false,
+        "recipient_grant": true
+      },
+      "expected": {
+        "outcome": "PAGE",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F28",
+      "name": "recipient_revoked",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227072696e636970616c5f6d617463686573223a66616c73652c22726563697069656e745f6772616e74223a747275652c226772616e745f616374697665223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "principal_matches": false,
+        "recipient_grant": true,
+        "grant_active": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F29",
+      "name": "recursive_delegation",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227265637572736976655f6772616e74223a747275657d",
+      "input": {
+        "operation": "result.read",
+        "recursive_grant": true
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F30",
+      "name": "metadata_unauthorized",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e6465736372696265222c227072696e636970616c5f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.describe",
+        "principal_matches": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F31",
+      "name": "unsupported_operation",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e657865637574655f73716c227d",
+      "input": {
+        "operation": "result.execute_sql"
+      },
+      "expected": {
+        "outcome": "INVALID_PARAMS",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F32",
+      "name": "create_capacity_full",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e637265617465222c226361706163697479223a66616c73657d",
+      "input": {
+        "operation": "result.create",
+        "capacity": false
+      },
+      "expected": {
+        "outcome": "CAPACITY",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F33",
+      "name": "create_success",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e637265617465227d",
+      "input": {
+        "operation": "result.create"
+      },
+      "expected": {
+        "outcome": "CREATED",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F34",
+      "name": "same_key_changed_digest",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e637265617465222c226b65795f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.create",
+        "key_matches": false
+      },
+      "expected": {
+        "outcome": "KEY_CONFLICT",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F35",
+      "name": "aggregate_success",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e616767726567617465227d",
+      "input": {
+        "operation": "result.aggregate"
+      },
+      "expected": {
+        "outcome": "AGGREGATE",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F36",
+      "name": "release_success",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656c65617365227d",
+      "input": {
+        "operation": "result.release"
+      },
+      "expected": {
+        "outcome": "RELEASED",
+        "expected_handler_calls": 1
+      }
+    },
+    {
+      "id": "DR-F37",
+      "name": "unauthorized_before_snapshot_disclosure",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227072696e636970616c5f6d617463686573223a66616c73652c22736e617073686f745f6d617463686573223a66616c73657d",
+      "input": {
+        "operation": "result.read",
+        "principal_matches": false,
+        "snapshot_matches": false
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F38",
+      "name": "unauthorized_before_expiry_disclosure",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656164222c227072696e636970616c5f6d617463686573223a66616c73652c226e6f77223a313030307d",
+      "input": {
+        "operation": "result.read",
+        "principal_matches": false,
+        "now": 1000
+      },
+      "expected": {
+        "outcome": "RESULT_UNAVAILABLE",
+        "expected_handler_calls": 0
+      }
+    },
+    {
+      "id": "DR-F39",
+      "name": "repeated_authorized_release",
+      "input_utf8_hex": "7b226f7065726174696f6e223a22726573756c742e72656c65617365222c2272656c6561736564223a747275657d",
+      "input": {
+        "operation": "result.release",
+        "released": true
+      },
+      "expected": {
+        "outcome": "RELEASED",
+        "expected_handler_calls": 1
+      }
+    }
+  ]
+}

@@ -2,8 +2,8 @@
 
 # NPS 统一错误码命名空间
 
-**Version**: 1.10
-**Date**: 2026-08-31
+**Version**: 1.12
+**Date**: 2026-11-02
 
 错误码格式：`{PROTOCOL}-{CATEGORY}-{DETAIL}`
 
@@ -17,6 +17,8 @@ NPS 采用两级错误体系：
 
 | 错误码 | NPS 状态码 | 描述 |
 |--------|-----------|------|
+| `NCP-FEATURE-NEGOTIATION-INVALID` | `NPS-CLIENT-BAD-FRAME` | 特性协商元数据或选择无效 |
+| `NCP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | 必需原生特性没有合格共同 revision |
 | `NCP-ANCHOR-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | anchor_ref 引用的 Schema 不存在，Agent 须重新获取 AnchorFrame |
 | `NCP-ANCHOR-SCHEMA-INVALID` | `NPS-CLIENT-BAD-FRAME` | AnchorFrame 中 Schema 格式不合法 |
 | `NCP-ANCHOR-ID-MISMATCH` | `NPS-CLIENT-CONFLICT` | 相同 anchor_id 收到不同 Schema（锚点污染攻击防御）|
@@ -49,6 +51,20 @@ NPS 采用两级错误体系：
 
 | 错误码 | NPS 状态码 | 描述 |
 |--------|-----------|------|
+| `NWP-RESULT-IDENTITY-REQUIRED` | `NPS-AUTH-UNAUTHENTICATED` | 结果操作必须有已验证主体 |
+| `NWP-RESULT-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | 结果不存在、未授权、过期、释放或不可用；统一披露 |
+| `NWP-RESULT-SNAPSHOT-MISMATCH` | `NPS-CLIENT-CONFLICT` | 授权快照/schema/cursor 绑定不匹配 |
+| `NWP-RESULT-CAPACITY` | `NPS-LIMIT-RESOURCE` | 有界结果存储无法保留请求结果 |
+| `NWP-RESULT-POLICY-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | 必需策略/验证服务不可用；fail closed |
+| `NWP-RESULT-REPLAY-CONFLICT` | `NPS-CLIENT-CONFLICT` | owner 绑定键被用于不同冻结请求内容 |
+| `NWP-CHALLENGE-INVALID` | `NPS-CLIENT-BAD-FRAME` | Challenge 输入无效 |
+| `NWP-CHALLENGE-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | 未知或无权访问的 challenge handle |
+| `NWP-CHALLENGE-BINDING-CONFLICT` | `NPS-CLIENT-CONFLICT` | 同操作 key 对应不同摘要 |
+| `NWP-CHALLENGE-NOT-APPROVED` | `NPS-CLIENT-CONFLICT` | Challenge 未批准执行 |
+| `NWP-CHALLENGE-EXPIRED` | `NPS-CLIENT-CONFLICT` | Challenge 在执行 claim 前过期 |
+| `NWP-CHALLENGE-STATE-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | 持久 challenge 状态不可用 |
+| `NWP-FEATURE-REQUIREMENTS-INVALID` | `NPS-CLIENT-BAD-FRAME` | HTTP 必需特性头无效或重复 |
+| `NWP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | 派发前无法满足精确必需特性 |
 | `NWP-AUTH-NID-SCOPE-VIOLATION` | `NPS-AUTH-FORBIDDEN` | Agent scope 不覆盖目标节点路径 |
 | `NWP-AUTH-NID-EXPIRED` | `NPS-AUTH-UNAUTHENTICATED` | NID 证书已过期 |
 | `NWP-AUTH-NID-REVOKED` | `NPS-AUTH-UNAUTHENTICATED` | NID 已被吊销 |
@@ -126,6 +142,12 @@ NPS 采用两级错误体系：
 
 | 错误码 | NPS 状态码 | 描述 |
 |--------|-----------|------|
+| `NIP-CONTEXT-INVALID` | `NPS-CLIENT-BAD-FRAME` | 投影格式、边界或生命周期无效 |
+| `NIP-CONTEXT-UNTRUSTED` | `NPS-AUTH-FORBIDDEN` | 不可信 issuer/key 或无效签名 |
+| `NIP-CONTEXT-BINDING-MISMATCH` | `NPS-AUTH-FORBIDDEN` | 投影请求、主体、audience 或策略不匹配 |
+| `NIP-CONTEXT-EXPIRED` | `NPS-AUTH-FORBIDDEN` | 投影有效窗口已过期 |
+| `NIP-CONTEXT-REPLAY` | `NPS-CLIENT-CONFLICT` | 有效投影已被准入 |
+| `NIP-CONTEXT-VERIFIER-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | 验证或持久化重放基础设施不可用 |
 | `NIP-CERT-EXPIRED` | `NPS-AUTH-UNAUTHENTICATED` | 证书已过期（expires_at < now）|
 | `NIP-CERT-NODE-ROLES-MISMATCH` | `NPS-CLIENT-BAD-FRAME` | `IdentFrame.node_roles` 与 `id-nps-node-roles` X.509 扩展不一致；Phase 3 强制（NIP v0.10） |
 | `NIP-CERT-CAPABILITIES-EXCEEDED` | `NPS-AUTH-FORBIDDEN` | `IdentFrame.capabilities` 声称了 CA 见证扩展 `id-nps-capabilities` 中不存在的能力；Phase-3 强制（NIP v0.12）|
@@ -205,6 +227,7 @@ NPS 采用两级错误体系：
 
 | 错误码 | NPS 状态码 | 描述 |
 |--------|-----------|------|
+| `NOP-EXECUTION-INDETERMINATE` | `NPS-SERVER-INTERNAL` | 执行结果不确定，不可自动重试 |
 | `NOP-TASK-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | task_id 不存在 |
 | `NOP-TASK-TIMEOUT` | `NPS-SERVER-TIMEOUT` | 整体任务执行超时 |
 | `NOP-TASK-DAG-INVALID` | `NPS-CLIENT-BAD-FRAME` | DAG 格式不合法（缺少起点/终点节点、字段错误等）|

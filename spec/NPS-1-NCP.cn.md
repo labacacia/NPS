@@ -4,8 +4,8 @@
 
 **Spec Number**: NPS-1  
 **Status**: Proposed  
-**Version**: 0.12
-**Date**: 2026-08-31
+**Version**: 0.13
+**Date**: 2026-09-09
 **Port**: 17433（默认，全协议族共用）  
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD  
 
@@ -196,6 +196,8 @@ Client (Agent)                        Server (Node)
 
 | 错误码 | 触发条件 |
 |--------|---------|
+| `NCP-FEATURE-NEGOTIATION-INVALID` | `NPS-CLIENT-BAD-FRAME` | 特性协商元数据或选择无效 |
+| `NCP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | 必需原生特性没有合格共同 revision |
 | `NCP-PREAMBLE-INVALID`（`NPS-PROTO-PREAMBLE-INVALID`）| 首 8 字节不匹配常量；500 ms 内静默关闭。|
 | （超时）| 10 秒内字节不足 8；静默关闭。线上不发任何编码。|
 
@@ -264,6 +266,58 @@ Client (Agent)                        Server (Node)
 | `payload` | object | 可选 | 实现自定义的元数据 |
 
 本 Profile 不新增任何帧类型或错误码。
+
+---
+
+### 2.6.3 Feature revision 协商（NCP v0.13）
+
+此可选 alpha.20 profile 复用 Hello 和握手 Caps，不分配新帧类型。
+未使用时保留原有基础行为及兼容下限。设计记录见
+[CR-0012](cr/NPS-CR-0012-feature-negotiation.cn.md)。
+
+**NCP-FTR-01 — 有界类型。** Hello 可携带 `feature_negotiation: 1`、
+`feature_offer` 和 `required_features`。没有 version 1 的 offer 无效。
+Offer 最多 32 项，形如
+`{"id":"example.echo","revisions":[{"revision":1,"lifecycle":"stable"}]}`。
+ID 必须匹配 ASCII `^[a-z][a-z0-9]*([.][a-z][a-z0-9_-]*)+$`，最多 96 字节；
+`nps.` 保留给公开 NPS profile。每个 ID 有 1..16 个唯一、升序的 uint16
+revision（1..65535），每个 revision 的 lifecycle 为 experimental、stable 或
+deprecated。必需 ID 数组最多 32 个唯一的已提出 ID。缺失可选数组视为空。
+特性结构中的未知成员、重复 JSON key/ID/revision、布尔或小数 revision、
+不支持的版本，必须以 `NCP-FEATURE-NEGOTIATION-INVALID` 拒绝。
+
+JSON 整数字段必须使用十进制数字语法，不含小数或指数。
+
+[特性注册表](feature-registry.json) 定义保留 ID/revision 及依赖。
+必需依赖 revision 必须显式提出并选中，不得添加未提出 revision。
+所选依赖冲突为 NCP-FEATURE-NEGOTIATION-INVALID。注册存在不证明 SDK 已支持。
+
+**NCP-FTR-02 — Payload 上限。** 携带特性的 Hello 或握手 Caps，其完整编码
+payload 必须不超过 16384 字节，同时受现有帧/准入上限约束，取较小者。
+该上限包含基础字段，而非仅特性值，从而避免依赖重新序列化计算字节数。
+特性解析前可优先返回现有帧尺寸错误。纯基础握手保留原上限。
+独立 JSON 块向量测试解析边界；完整帧向量还须计入基础字段。
+
+**NCP-FTR-03 — 选择。** Version-1 服务端必须先校验，再对每个共有 ID 选择
+本地策略允许的最高共同 revision；省略未知可选 ID。Experimental 要求双方显式
+启用，deprecated 要求本地策略允许。远端 lifecycle 标签不得放宽本地策略。
+必需 ID 未提出时无效；无合格共同 revision 时以
+`NCP-FEATURE-REQUIRED-UNSUPPORTED` 拒绝。必须验证所选组合的跨特性约束；
+非法组合直接拒绝，不静默改变确定性选择。
+
+**NCP-FTR-04 — 确认。** 握手 Caps 必须返回 `feature_negotiation: 1` 及
+显式 `selected_features` 数组，可为空，最多 32 项，形如
+`{"id":"example.echo","revision":1}`。客户端必须在业务写入前拒绝重复、
+未提出、策略不允许或无效的选择。缺失必需 ID 时返回
+`NCP-FEATURE-REQUIRED-UNSUPPORTED`。旧 Caps 无确认视为空选择：
+有必需项则关闭且不派发，否则可继续纯基础行为。
+
+**NCP-FTR-05 — 生命周期与权限。** 选择仅属于当前已准入 session。
+重连/故障转移必须重新选择和身份准入。业务 Caps 不得重新协商活动会话。
+撤销特性须停止准入、排空/关闭并重新协商。每次操作必须在写入前检查精确
+必需 revision。支持特性不授予 subject、能力、scope 或 assurance。
+扩展握手拒绝后，仅在本地策略允许、不携带必需特性或业务请求时，才可建立
+新的基础连接；不得以握手降级为由重放已派发操作。
 
 ---
 
@@ -363,7 +417,7 @@ Schema 锚点帧，由 **Node 发布**，用于建立全局 Schema 引用，消�
 **anchor_id 计算规则**
 
 1. 将 `schema` 字段按 **RFC 8785（JSON Canonicalization Scheme, JCS）** 序列化为规范化 JSON  
-   — JCS 保证：所有 Unicode 字符规范化、对象 key 按 UTF-16 排序、无多余空白  
+   — JCS 保留 Unicode 字符串原样，不做归一化；对象 key 按 UTF-16 排序，不输出多余空白（[RFC 8785 §3.1](https://www.rfc-editor.org/rfc/rfc8785.html#section-3.1)）。
    — 实现 MUST 使用 JCS 标准库（不得自行实现），以确保跨语言 SDK（.NET/Python/TS）一致
 2. 计算 JCS 输出的 UTF-8 字节流的 SHA-256 摘要
 3. 格式化为 `sha256:{lowercase hex}`
@@ -514,24 +568,29 @@ NCP 提供应用层语义背压，补充 TCP/QUIC 传输层流量控制：
 
 **连接协商 CapsFrame**
 
-在原生模式连接建立时，Node 通过 CapsFrame 返回协商后的能力声明：
+原生握手使用 §2.6.2 的专用顶层 payload，类型由二进制头的 0x04 标识，
+不是下方应用响应的 anchor_ref/count/data schema。特性协商字段不得嵌入 data。
+仅协商该扩展的握手使用以下示例；纯基础握手不携带 feature 字段。
 
 ```json
 {
-  "frame": "0x04",
-  "anchor_ref": "nps:system:caps",
-  "count": 1,
-  "data": [{
-    "nps_version": "0.4",
-    "session_version": "0.4",
-    "max_frame_payload": 65535,
-    "negotiated_encoding": "msgpack",
-    "enabled_encodings": ["msgpack", "binary_vector.v1"],
-    "supported_protocols": ["ncp", "nwp", "nip"],
-    "ext_support": true,
-    "max_concurrent_streams": 32,
-    "e2e_enc_algorithms": ["aes-256-gcm", "chacha20-poly1305"]
-  }]
+  "node_id": "urn:nps:agent:example.test:server",
+  "caps": [
+    "ncp"
+  ],
+  "session_version": "0.13",
+  "negotiated_encoding": "json",
+  "enabled_encodings": [
+    "json"
+  ],
+  "supported_protocols": [
+    "ncp"
+  ],
+  "max_frame_payload": 65535,
+  "ext_support": false,
+  "max_concurrent_streams": 32,
+  "feature_negotiation": 1,
+  "selected_features": []
 }
 ```
 
@@ -911,6 +970,95 @@ Node SHOULD 限制单连接最大并发流数（推荐默认值：32，通过 Ca
 
 ---
 
+### 7.8 生产运行时 Profile（NCP v0.13）
+
+选择 experimental 的 `nps.production_runtime` revision 1 后，以下要求必须执行。
+未选择时保持基础行为；不新增帧类型或心跳机制。
+
+#### 7.8.1 公共职责
+
+六 SDK 以各自语言类型提供 SessionFactory（连接/协商/准入）、SessionPool（完整安全
+key 和有界等待）、InvocationDispatcher（先注册关联再写入、单次本地终态）、
+RetryDecision（依据派发确定性/操作契约/期限的纯决策）和 DrainController。
+准入权限不能任意修改。保留底层 stream API，但绕过托管 dispatcher 时必须明确不具有
+本 profile 保证。
+
+#### 7.8.2 状态与结果
+
+Session：connecting -> negotiating -> admitting -> active -> draining -> closed。
+建立失败释放资源；closed 不能回池。重连新建 session 并重新 NIP 准入。
+
+Invocation：queued -> writing -> awaiting -> completed；
+另有 rejected-before-dispatch、cancelled-before-dispatch、expired-before-dispatch、
+indeterminate 终态。首次写入尝试中/之后的传输失败默认不确定，除非认证服务端明确证明
+未派发；本地/TCP 已写入不能证明业务执行。有效关联远程终态才形成已知结果。
+相同重复终态忽略，冲突终态关闭 session，不能再次调用应用完成回调。
+
+Session 内禁止复用关联 ID。终态 tombstone 保留到 session 关闭；达到容量则 drain/
+重连，不能驱逐后复用。未知关联 ID 关闭。取消后的迟到终态只能补诊断证据，不能改写
+已返回的本地结果。
+
+#### 7.8.3 资源上限
+
+默认连接/握手/准入各 5 秒，请求总期限 30 秒（含排队、写入、等待、重试），drain
+30 秒。每完整 pool key 最多 8 个 session，全局 64 个、待 acquire 最多 256。
+每 session 最多 32 个排队帧或 1 MiB payload，任一先到即限制；tombstone 默认 4096。
+可配置其他有限正值，但不能超过协商的 payload/concurrency 上限。所有等待服从剩余
+期限。心跳/idle 仍用 NCP §7.6/7.7，不新增矛盾协商。队列满在派发前拒绝。
+流消费缓慢时使用现有 flow control；超协商窗口的 peer 使 session 失败。
+
+Pool key 包含 endpoint 身份、subject、credential generation、assurance/scope 策略
+指纹、features、encoding/security profile。不同租户/委托范围不能因 host/port 相同
+而复用。撤销/轮换使相应池失效；全局限制同时约束 key 数。
+
+#### 7.8.4 重试
+
+写入前确认未派发可在期限和预算内重试；服务端明确未派发的临时拒绝还需操作允许。
+未知结果的只读操作仅在声明 replay-safe 且符合 freshness/cost 语义时重试。
+未知 mutation 没有持久化去重证明则绝不自动重试；有证明时必须相同 principal/key/
+digest、在保留期和许可目标范围内。已知远程终态不自动重放。
+
+默认总共 2 次尝试。第 retry_index 次重试延迟均匀取
+0..min(1000 ms,100 ms * 2^(retry_index-1))；注入时钟/随机源以测试。
+延迟和服务端 hint 都消耗原总期限，超过剩余预算则终止。
+重连成功不能证明前次未执行。跨 owner 重试必须共享持久化去重范围，否则 indeterminate。
+
+#### 7.8.5 取消与 drain
+
+首次写入前取消阻止派发；之后只停止本地等待，并传播已协商的操作/NOP 取消机制，
+不发明新 frame。无远程回滚/终态证据则结果仍不确定，不承诺副作用撤销。
+Drain 拒绝新 acquire/操作，有界等待并请求受支持取消，最后关闭，
+未决 mutation 报 indeterminate。取消、超时、close 竞争仍只交付一次本地完成。
+
+#### 7.8.6 故障转移与观测
+
+断线重新解析 active Anchor，执行单调 cluster_epoch fencing，再协商和身份准入。
+清理旧节点 route/capability 缓存；旧 owner 或 resumption ticket 不构成授权。
+记录连接、协商、排队、尝试、重试、重连、取消、drain、failover 的计数/耗时、
+结果确定性和有界关联 ID。禁止凭据/投影/body 日志，以及 subject/scope/key 的高基数标签。
+
+#### 7.8.7 错误
+
+queue-full、deadline-before-dispatch、cancelled-before-dispatch、indeterminate、
+correlation-conflict、session-closed 为 typed API 结果，不自动分配新 wire 错误。
+保留原协议错误；操作确需新 wire 错误时另做 registry 变更。
+
+操作取消绑定见 NWP §7.3 和 NOP §3.6/§5.2。没有持久化去重的明确保留期、
+主体/key/digest 绑定和跨 owner 范围保证时，不得将操作标为可安全自动重放。
+产品状态名或成功连接不构成这些保证。
+
+---
+
+### 7.9 实验schema批次候选契约
+
+可选[schema批次修订1](profiles/schema-batches.cn.md)及
+[CR-0017](cr/NPS-CR-0017-schema-batches.md)在既有帧上明确有序行、完整流基线和绑定
+epoch/schema/基线版本的差量。须精确选择`nps.schema_batches=1`且本地显式启用实验修订；
+整套版本、锚点或registry条目均不是准入或来源权限。未选择操作保留基础行为。当前.NET
+参考仅限明确验收的mTLS子集；候选注册不证明六SDK、NWP实时结果流或效率/计费合格。
+
+---
+
 ## 8. 编码层级
 
 所有帧类型支持以下编码层级，通过帧头 Flags T0/T1 位标识：
@@ -978,6 +1126,7 @@ NCP v0.9 的标准绑定是 NWP `QueryFrame.vector_search.vector`。marker index
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| 0.13 | 2026-09-09 | Alpha.20 可选 feature revision 协商：有界类型、完整握手 payload 上限、确定性选择、必需特性派发前拒绝和会话范围；不新增帧，不改变基础兼容下限。 另定义生产运行时职责、有界重试/排空及结果确定性，纠正 JCS Unicode 与握手 Caps 示例。 |
 | 0.12 | 2026-08-31 | alpha.19 连接加固 Profile：确定性的有效 keepalive 间隔与收发时钟、单次 timeout-close 迁移、无 payload Nop 强制、拒绝 QUIC/TLS 0-RTT NPS 帧、保持身份绑定的 QUIC migration，以及 carrier/application 双层背压组合。新增共享 runtime hardening 向量与 `NCP-EARLY-DATA-REJECTED`。|
 | 0.11 | 2026-07-29 | 新增 §2.6.2 原生服务端互操作 Profile：认证先于前导的顺序要求、前导与 Hello 分别有界读取、分配安全的 Hello 上限、准入前失败的静默行为、确定性的版本/编码/协议/上限协商、可移植的握手 Caps 字段，以及共享的 `native_server_handshake_vectors.json`。属增量变更；无新增帧类型与错误码。 |
 | 0.10 | 2026-07-05 | 原生模式传输正式成为规范性内容（NPS-RFC-0006 **Accepted**）。新增原生模式下**跨 Anchor 故障转移的会话连续性**（NPS-CR-0009）：多 Anchor 所有权转移后，若连接丢失或恢复尝试返回 `NCP-NID-MISMATCH`，客户端经 NDP §9（取最高 `cluster_epoch`）重新解析，或使用 NWP `anchor_failover` 的 `successor_nid`，并重新建立会话。无新增帧与错误码（复用 `NCP-NID-MISMATCH`）。 |

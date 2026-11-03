@@ -2,11 +2,9 @@ English | [中文版](./architecture.cn.md)
 
 # NPS Daemon Architecture
 
-> Reference deployment model with six conceptual roles across three layers.
-> The active distribution currently ships four roles in NPS-Daemons and the
-> trust-anchor role in NIP-CA-Server. The former Cloud CA and Ledger prototypes
-> are archived; their sections below preserve design history, not deployable
-> release-train components.
+> Reference deployment topology for NPS in production. Six resident services
+> spread across three layers; each layer is independently scalable and has
+> distinct trust / failure boundaries.
 >
 > Status — alpha.18 source / alpha.19 debt-closure boundary: `npsd` multiplexes
 > HTTP and local-dev native NCP on its configured loopback port, with bounded
@@ -61,7 +59,7 @@ English | [中文版](./architecture.cn.md)
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-## Six conceptual roles
+## The six daemons
 
 ### Layer 1 — Host-local (one of each per machine)
 
@@ -70,7 +68,7 @@ English | [中文版](./architecture.cn.md)
 - **Listens on** `127.0.0.1:17433` by default and losslessly multiplexes HTTP control traffic with local-dev native NCP on that unified port.
 - **Implemented native boundary**: bounded [NPS-RFC-0001](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0001-ncp-connection-preamble.md) preamble and Hello/Caps negotiation, negotiated encoding/payload enforcement, canonical AnchorFrame ACK/cache, and deterministic silent/error close behavior. Public TLS 1.3/mTLS termination belongs to `nps-ingress`.
 - **Implemented state boundary**: root Ed25519 keypair management; sub-NID issuance and bounded pre-expiry renewal; publisher-signed ephemeral NDP announcements with persistent monotonic sequence; and a durable per-NID SQLite inbox used for `ephemeral` HTTP pull with explicit acknowledgement. Managed agent keys are encrypted at rest. Identity/announcement sequence, undelivered frames, absolute TTL, priority order and acknowledgements survive daemon restart.
-- **Explicit limit**: full Node L1 is not claimed. All 20 L1 cases, their current evidence states, runnable gates and remaining gaps are recorded in [`NPS-NODE-L1-MANIFEST.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/npsd/conformance/NPS-NODE-L1-MANIFEST.json). Resident/hybrid push is optional at L1 and explicitly declined by this profile. BYO-key agents are not auto-announced because npsd does not possess their private key and must not sign as the publisher.
+- **Explicit limit**: full Node L1 is not claimed. All 20 L1 cases, their current evidence states, runnable gates and remaining gaps are recorded in [`NPS-NODE-L1-MANIFEST.json`](../../tools/daemons/npsd/conformance/NPS-NODE-L1-MANIFEST.json). Resident/hybrid push is optional at L1 and explicitly declined by this profile. BYO-key agents are not auto-announced because npsd does not possess their private key and must not sign as the publisher.
 - **Why always-on**: identity and inbox cannot follow a session — persistent state needs a host. Every NPS client on the machine (MCP shim, resident agent, worker, ingress shim) connects through this daemon.
 - **Why not merged into anything else**: protocol layer is business-agnostic and shared by all upper layers; folding it into a business process pollutes the trust domain.
 - **Reference compliance**: target is `NPS-Node Profile L1` (see [`spec/services/NPS-Node-Profile.md`](https://github.com/labacacia/NPS/blob/main/spec/services/NPS-Node-Profile.md) and the L1 conformance suite at [`spec/services/conformance/NPS-Node-L1.md`](https://github.com/labacacia/NPS/blob/main/spec/services/conformance/NPS-Node-L1.md)).
@@ -89,9 +87,9 @@ English | [中文版](./architecture.cn.md)
 - **Explicit limit**: full Node L3 certification is not claimed because the
   current inbox contract executes individual SpawnSpecs rather than multi-node
   TaskFrames. The exact verified/partial/unexecuted cases are in
-  [`NPS-NODE-L3-MANIFEST.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-runner/conformance/NPS-NODE-L3-MANIFEST.json),
+  [`NPS-NODE-L3-MANIFEST.json`](../../tools/daemons/nps-runner/conformance/NPS-NODE-L3-MANIFEST.json),
   with the broader capability boundary in
-  [`NPS-RUNNER-CAPABILITIES.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-runner/conformance/NPS-RUNNER-CAPABILITIES.json).
+  [`NPS-RUNNER-CAPABILITIES.json`](../../tools/daemons/nps-runner/conformance/NPS-RUNNER-CAPABILITIES.json).
 - **Why always-on**: messages arrive any time; the scheduler must be there to spawn. Workers are ephemeral but the scheduler is not.
 - **Why separated from `npsd`**: resource profile is radically different — `npsd` is steady-state, `nps-runner` produces process-spawn bursts; failure isolation is critical (a worker crash must not take the NCP layer down); trust boundary differs (`nps-runner` runs user-supplied Agent SDK code, the protocol layer must not have that permission surface).
 
@@ -100,7 +98,7 @@ English | [中文版](./architecture.cn.md)
 #### ③ `nps-ingress` — Internet ingress
 
 - **Implemented transport boundary**: terminates native NCP over TLS 1.3 with ALPN `nps/1.0`; default-on mTLS validates NIP client certificates to configured trust anchors; the post-Caps `IdentFrame` NID is bound to the certificate NID before that Ident is forwarded; handshake time/frame size and pre-admission framing are bounded; accepted streams are proxied to the local NCP backend and responses are drained after client half-close. `TC-N2-Tls-01..04` execute over real sockets.
-- **Boundary disposition**: topology, Bridge, HA and Registry families apply to other IUT roles. Rate limiting, NeuronHub customer auth, CGN debit, reputation, Anchor middleware and broad DDoS controls are not advertised as transport capabilities; their product/AaaS/optional-composition/deployment ownership is recorded in [`NPS-INGRESS-ADMISSION-DISPOSITION.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/conformance/NPS-INGRESS-ADMISSION-DISPOSITION.json).
+- **Boundary disposition**: topology, Bridge, HA and Registry families apply to other IUT roles. Rate limiting, NeuronHub customer auth, CGN debit, reputation, Anchor middleware and broad DDoS controls are not advertised as transport capabilities; their product/AaaS/optional-composition/deployment ownership is recorded in [`NPS-INGRESS-ADMISSION-DISPOSITION.json`](../../tools/daemons/nps-ingress/conformance/NPS-INGRESS-ADMISSION-DISPOSITION.json).
 - **Why always-on**: the publicly bound port must always be listening.
 - **Why separated from `npsd`**: `npsd` is bound to loopback by default; the ingress daemon binds public addresses. Attack surface, security posture, and operational scope differ. `npsd` failure affects all local NPS traffic; ingress failure only affects external inbound — the two MUST be independently restartable.
 - **Note**: This is a **process-level** name; the *spec*-level role of cluster control plane is now called **Anchor Node** in NWP, see [NPS-CR-0001](https://github.com/labacacia/NPS/blob/main/spec/cr/NPS-CR-0001-anchor-bridge-split.md). The `nps-ingress` process MAY host an Anchor Node middleware but is not constrained to.
@@ -114,13 +112,13 @@ English | [中文版](./architecture.cn.md)
 
 ### Layer 3 — Trust anchor *(NPS Cloud, 2027 Q1+)*
 
-#### ⑤ `nps-cloud-ca` — Certificate authority (archived design role)
+#### ⑤ `nps-cloud-ca` — Certificate authority
 
 - **NIP trust root** that issues cross-organisation NID certificates and serves CRL / OCSP. LabAcacia operates an open-source instance; commercial users may operate private CAs.
 - **Why always-on**: revocation queries must respond in real time; issuance requests arrive arbitrarily.
 - **Why independent of `nps-registry`**: CA is the *source* of trust; registry is an *index* of information. CA failure prevents new NID onboarding and revocation responses; registry failure prevents discovery only. Trust level, operations process, audit requirements all differ. CA private keys MUST be HSM- or physical-security-protected; registry has no equivalent constraint.
 
-#### ⑥ `nps-ledger` — Audit / compliance log collector (archived design role)
+#### ⑥ `nps-ledger` — Audit / compliance log collector
 
 - **Append-only collection point** for the K-of-N audit consensus that NeuronHub CGN settlement ultimately depends on. Implements the Certificate-Transparency-style log defined by [NPS-RFC-0004](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.md): submission, query, signed tree head, inclusion proofs.
 - **Why always-on**: audit logs are a continuous append stream; the receiver cannot be down or there will be gaps.
@@ -132,12 +130,12 @@ English | [中文版](./architecture.cn.md)
 
 | Daemon | Folder | Project | Binary | NuGet package |
 |--------|--------|---------|--------|----------------|
-| ① | `NPS-Daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
-| ② | `NPS-Daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
-| ③ | `NPS-Daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
-| ④ | `NPS-Daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
-| ⑤ | `NIP-CA-Server/` | `NPS.NipCaServer.csproj` | `NPS.NipCaServer` | NIP CA packages |
-| ⑥ | archived | — | — | design history only |
+| ① | `tools/daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
+| ② | `tools/daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
+| ③ | `tools/daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
+| ④ | `tools/daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
+| ⑤ | `tools/daemons/nps-cloud-ca/` | `NpsCloudCa.csproj` | `nps-cloud-ca` | `LabAcacia.NPS.Daemon.CloudCa` |
+| ⑥ | `tools/daemons/nps-ledger/` | `NpsLedger.csproj` | `nps-ledger` | `LabAcacia.NPS.Daemon.Ledger` |
 
 ## Historical alpha-to-beta phasing record
 

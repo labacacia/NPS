@@ -1,0 +1,14 @@
+ok  	github.com/labacacia/NPS-sdk-go/alpha19	0.024s
+ok  	github.com/labacacia/NPS-sdk-go/alpha20	0.123s
+ok  	github.com/labacacia/NPS-sdk-go/conformance	0.051s
+ok  	github.com/labacacia/NPS-sdk-go/core	0.048s
+ok  	github.com/labacacia/NPS-sdk-go/daemon/observability	0.059s
+?   	github.com/labacacia/NPS-sdk-go/internal/testfixture	[no test files]
+ok  	github.com/labacacia/NPS-sdk-go/ncp	0.101s
+ok  	github.com/labacacia/NPS-sdk-go/ndp	0.109s
+ok  	github.com/labacacia/NPS-sdk-go/nip	11.369s
+?   	github.com/labacacia/NPS-sdk-go/nip/acme	[no test files]
+?   	github.com/labacacia/NPS-sdk-go/nip/x509	[no test files]
+ok  	github.com/labacacia/NPS-sdk-go/nop	0.109s
+ok  	github.com/labacacia/NPS-sdk-go/nwp	0.315s
+ok  	github.com/labacacia/NPS-sdk-go/telemetry	0.017s

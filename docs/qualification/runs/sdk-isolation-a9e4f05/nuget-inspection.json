@@ -1,0 +1,157 @@
+{
+  "source_revision": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+  "packages": [
+    {
+      "id": "LabAcacia.NPS.Core",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "c9a45bba49a8a2fc1cab754257aeefb168d9b644e09118549cbb595706afe50a",
+      "symbols_sha256": "1235a65fc0637848c431ffab3c9d027d0fd1214a1aec2c4fa0b22eeec7899461",
+      "internal_dependencies": [],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NWP",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "bd358835ca6702380e5527dfd3d0e51c0c9bfca1d7a48215e1b92a4e1c3e3ab6",
+      "symbols_sha256": "20d1adb7c80f47d3d5819f0b09285d2704a9393a21c4ff4f17c9e626ef1983c8",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NWP.Anchor",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "24c83fb0023bf71d2e132b28c797f18baeb1cbda6daf46058dc05cb56f63fe87",
+      "symbols_sha256": "3cbb3b0da6ccf5ab870fcdfeae517bea39e947127d7c7835ab6f3887f4b254cf",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        },
+        {
+          "id": "LabAcacia.NPS.NIP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        },
+        {
+          "id": "LabAcacia.NPS.NOP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        },
+        {
+          "id": "LabAcacia.NPS.NWP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NWP.Bridge",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "b1380c1ece5483966e8e2ed4d88e573692d74d7c87e4e1efb39e0d5278816d30",
+      "symbols_sha256": "377fbf5dd1fc4e5ed894ebaa773964caf2081135fb70f82f9474fbc9f59cfa00",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        },
+        {
+          "id": "LabAcacia.NPS.NWP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NIP",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "971c7a4f6f24d8213d4ff3516be839044424d265922797ebb3f8c56274c5502d",
+      "symbols_sha256": "13f23f1365eae3579dbd1ea972f9a14e3b494c019627ae50f7652f5ab367050f",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NIP.Storage.Sqlite",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "aebb1639945d1cbe156420746437b2c311a85d4017571453bdaa4990e99333f9",
+      "symbols_sha256": "dee5398a8df210dcd2935934b5b7969a087cc0951878b3f5f335462a1c5c7527",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.NIP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NIP.Storage.Postgres",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "ffd6fc4796960418438ab002a2cc6f4ef8d7a6163d846622ec254a22fe3db82c",
+      "symbols_sha256": "ce9021a09e8390ffc6af30ad8607fea1ae016fcb06dabf6e68c4937a54d52b9b",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.NIP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NDP",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "e1b8ef3d39f241dcff0e61443e0c90c490ea4485fac1ac759938c36bb04bd784",
+      "symbols_sha256": "ffddf5e4d3f711a133ebb4b7a8effeb0583b58e18fe00ff773e5cc94b7742fa5",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        },
+        {
+          "id": "LabAcacia.NPS.NIP",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.NOP",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "11a8e7662519296b5ad5b62c58221c2202251e492ade492a55c051a90bd3c170",
+      "symbols_sha256": "89827425f6e886acbd668997461eafa8494e1524c7c1b7fed3f540152ef2b59c",
+      "internal_dependencies": [
+        {
+          "id": "LabAcacia.NPS.Core",
+          "version": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+        }
+      ],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.Conformance",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "ffb08a07c41f80a8b874f3f15e5d5cdec087bed61dc4c464adccb81c17ca0938",
+      "symbols_sha256": "1227169f126689028f2ef1c50d44f1a3cc527ce3b9ccee13ec1f33a3ebeaef2a",
+      "internal_dependencies": [],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    },
+    {
+      "id": "LabAcacia.NPS.Daemon.Observability",
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "sha256": "52bdaba293df16dd74a78398fba56b9955023218566ee01fb0064d7683d4d811",
+      "symbols_sha256": "bec4698b39a2fb4418f96800a50c2780327014f79bb837ae79a437053b0636d5",
+      "internal_dependencies": [],
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d"
+    }
+  ],
+  "package_count": 11,
+  "symbol_count": 11,
+  "sourcelink": "empty-source-link warnings: no Git metadata in isolated copy; release gate unresolved",
+  "publication": false
+}

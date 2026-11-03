@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "id": "nps.data_results",
+  "revision": 1,
+  "lifecycle": "experimental",
+  "status": "candidate-contract-not-runtime-evidence",
+  "default_enabled": false,
+  "frame_changes": false,
+  "capability": "nwp:action",
+  "operations": [
+    {
+      "id": "result.create",
+      "purpose": "Capture an authorized immutable source snapshot without returning its full rows.",
+      "response": "CREATED"
+    },
+    {
+      "id": "result.read",
+      "purpose": "Read a bounded page from exactly one snapshot.",
+      "response": "PAGE"
+    },
+    {
+      "id": "result.aggregate",
+      "purpose": "Compute an authorized aggregate over the captured snapshot.",
+      "response": "AGGREGATE"
+    },
+    {
+      "id": "result.release",
+      "purpose": "Release the owner-bound result; repeated authorized release is idempotent.",
+      "response": "RELEASED"
+    }
+  ],
+  "bindings": [
+    "native",
+    "canonical-http"
+  ],
+  "identity": {
+    "source": "verified-native-session-or-http-verifier",
+    "tenant_source": "trusted-service-policy",
+    "result_handle_is_authority": false,
+    "trust_frame_is_resource_grant": false
+  },
+  "descriptor": {
+    "required": [
+      "result_ref",
+      "issuer_nid",
+      "snapshot_id",
+      "schema_ref",
+      "row_count",
+      "created_at",
+      "expires_at",
+      "retention"
+    ],
+    "forbidden": [
+      "rows",
+      "credentials",
+      "bearer_token"
+    ],
+    "retention": "process"
+  },
+  "reference_limits": {
+    "max_rows_per_read": 1000,
+    "max_page_bytes": 65536,
+    "default_preview_rows": 0,
+    "default_ttl_seconds": 300,
+    "max_ttl_seconds": 900,
+    "max_results_per_owner": 16,
+    "max_rows_per_result": 100000,
+    "max_result_bytes": 33554432,
+    "max_store_bytes": 134217728
+  },
+  "snapshot": {
+    "immutable": true,
+    "schema_bound": true,
+    "cursor_bound_to": [
+      "issuer_nid",
+      "result_ref",
+      "snapshot_id",
+      "schema_ref",
+      "principal",
+      "policy_version",
+      "offset"
+    ],
+    "wrong_base": "REBASE_REQUIRED",
+    "restart": "RESULT_UNAVAILABLE",
+    "failover": "RESULT_UNAVAILABLE_UNLESS_SAME_SNAPSHOT_PROVEN",
+    "clock": "nonincreasing-remaining-TTL-no-extension"
+  },
+  "authorization": {
+    "every_operation": true,
+    "metadata_is_protected": true,
+    "unknown_and_unauthorized": "NPS-CLIENT-NOT-FOUND",
+    "delegation": "server-owned-recipient-grant-intersected-with-live-source-policy",
+    "derived_expiry": "no-later-than-earliest-source",
+    "source_revocation": "deny-existing-and-derived-reads",
+    "external_model_egress": "explicit-server-policy-per-inspection",
+    "recursive_delegation": false
+  },
+  "retries": {
+    "create": "stable-owner-key-and-request-digest-until-result-expiry-within-process",
+    "key_conflict": "NPS-CLIENT-CONFLICT",
+    "release": "owner-bound-idempotent-within-process",
+    "durable_deduplication": false,
+    "external_mutations": false
+  },
+  "errors": {
+    "INVALID_PARAMS": {
+      "code": "NWP-ACTION-PARAMS-INVALID",
+      "status": "NPS-CLIENT-UNPROCESSABLE",
+      "http": 422
+    },
+    "UNAUTHENTICATED": {
+      "code": "NWP-RESULT-IDENTITY-REQUIRED",
+      "status": "NPS-AUTH-UNAUTHENTICATED",
+      "http": 401
+    },
+    "RESULT_UNAVAILABLE": {
+      "code": "NWP-RESULT-NOT-FOUND",
+      "status": "NPS-CLIENT-NOT-FOUND",
+      "http": 404
+    },
+    "SNAPSHOT_MISMATCH": {
+      "code": "NWP-RESULT-SNAPSHOT-MISMATCH",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    "CAPACITY": {
+      "code": "NWP-RESULT-CAPACITY",
+      "status": "NPS-LIMIT-RESOURCE",
+      "http": 429
+    },
+    "POLICY_UNAVAILABLE": {
+      "code": "NWP-RESULT-POLICY-UNAVAILABLE",
+      "status": "NPS-SERVER-UNAVAILABLE",
+      "http": 503
+    },
+    "KEY_CONFLICT": {
+      "code": "NWP-RESULT-REPLAY-CONFLICT",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    "FEATURE_UNSUPPORTED": {
+      "code": "NWP-FEATURE-REQUIRED-UNSUPPORTED",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    }
+  },
+  "model_boundary": {
+    "bulk_data_default": "runtime-only",
+    "default_preview_rows": 0,
+    "egress_check_required": true
+  },
+  "qualification": {
+    "sdk_runtime_results": [],
+    "feature_vectors": "data_result_vectors.json",
+    "gate_ledger": "data_workflow_gates.json"
+  }
+}

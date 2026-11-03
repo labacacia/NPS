@@ -1,0 +1,18 @@
+{
+  "kind": "unpublished local D20-05 development artifacts; not alpha.19 release or registry publication",
+  "source_revision": "109ea55e11609645aa8524b36e0c33f55e5733fa",
+  "nuget_version": "1.0.0-alpha.20.dev.1",
+  "python_version": "1.0.0a20.dev1",
+  "python_source_drift_checked": true,
+  "artifacts": {
+    "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.1.snupkg": "a824583ba5d60eec6f4fba76bbd9fa8e7ce6ec34acbe08c4e6996abf389faee0",
+    "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.1.nupkg": "9cb0b3a1f87510fa6b4a67596ed09cce0c757180af9b21e9af9a570848044a3c",
+    "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.1.snupkg": "b5fd99d4ff5b8f2f7ab1275da897972a0bbc714122db5924022e3ea720ec3a2d",
+    "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.1.snupkg": "f4e7cb9499d5f75bac431c6751ee05d469215dc9aebfdf1a1647e43f12e1265c",
+    "nps_lib-1.0.0a20.dev1-py3-none-any.whl": "e01996f63469d276ae781b64cb0b8a2d006ae101f621e201f4613f499ee53193",
+    "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.1.nupkg": "950a0c3c7a2b6bb78c677ab2d7f98ad8e2ff2ecb713e949319bb1ff8c5877663",
+    "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.1.snupkg": "7b0266615931af680a20ff994f034de310bea195f72067d5e2d54028a57d23cf",
+    "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.1.nupkg": "e49f1fecbb6b0ef938de5009d4e6844dd52fe3b2808488b93cffc1ac01b8f5af",
+    "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.1.nupkg": "46a73d15280b929d00742ac682972b4cb0246e0f807eb29d80f29f051ab839b3"
+  }
+}

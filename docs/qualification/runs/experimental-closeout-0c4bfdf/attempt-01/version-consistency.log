@@ -1,0 +1,19 @@
+{"command": ["bash", "tools/check-version-consistency.sh"], "cwd": "."}
+
+[spec/NPS-*.md Version: headers]
+
+[spec/NPS-*.md Depends-On: headers]
+
+[spec/frame-registry.yaml]
+
+[spec/feature-registry.json]
+
+[README.{md,cn.md}]
+
+[CLAUDE.md]
+
+[Go SDK runtime version]
+
+[Summary]
+  ✓ all version references agree with spec/version-matrix.yaml
+    (NCP=0.13, NWP=0.23, NIP=0.16, NDP=0.14, NOP=0.11)

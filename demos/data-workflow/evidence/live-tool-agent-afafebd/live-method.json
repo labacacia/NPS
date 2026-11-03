@@ -1,0 +1,80 @@
+{
+  "id": "D20-05-real-tool-agent-v1",
+  "status": "preregistered before any live tool-Agent call",
+  "date": "2026-11-03",
+  "source_demo_revision": "46a9c0b111bd8d642340458d209484dd1019e18e",
+  "row_counts": [
+    100,
+    100000
+  ],
+  "repeats": 5,
+  "arms": [
+    "ordinary",
+    "nps"
+  ],
+  "source_revisions": [
+    1,
+    2
+  ],
+  "cache_conditions": [
+    "cold-requested",
+    "warm-requested"
+  ],
+  "workflow_count": 80,
+  "priming_requests": 40,
+  "maximum_agent_model_turns": 12,
+  "maximum_tool_proposals": 16,
+  "system_sha256": "ace516034b95d5f46cb814c0e39d20a3051fdd2811584be16f11adc8c08bede2",
+  "tools_sha256": "298dd6c77459aaaec609582a24fe681e436996b87c4b30e02595f5f0917ab440",
+  "model": {
+    "provider": "DeepSeek",
+    "model": "deepseek-flash",
+    "documented_underlying_model": "DeepSeek-V4.1-Flash-1017",
+    "temperature": 0,
+    "max_output_tokens": 2048,
+    "thinking": "disabled",
+    "automatic_retries": 0,
+    "request_json_limit": 131072,
+    "response_json_limit": 2097152,
+    "usage": "actual every-turn prompt/completion/cache hit/miss; missing remains unknown"
+  },
+  "cache": {
+    "cold": "new fixed-length nonce at start of system prompt; no priming; shared schema/prefix hits remain possible",
+    "warm": "one paid identical initial-request prime with unexecuted tool proposals,then5seconds then identical first request",
+    "classification": "requested condition is not observed state; inspect actual first-turn and cumulative provider counters",
+    "source": "https://api-docs.deepseek.com/guides/kv_cache/"
+  },
+  "source_update": {
+    "once_per_scale": true,
+    "amount_delta_per_changed_row_minor": 100,
+    "updated_row_fraction": "0.01",
+    "added_nullable_field": "note",
+    "policy_version_unchanged": true,
+    "old_snapshots": "unchanged while live; expiry explicitly recorded"
+  },
+  "outcome": {
+    "success": "actual selected tools + exact independent oracle +5distinct fully inspected current refund citations",
+    "failures": "retain every invalid answer/tool denial/limit/context/provider failure; no selective reruns",
+    "context": "all source rows remain outside model context; each model request includes actual prior tool responses",
+    "fairness": "same tool schemas/prompt/operators/source/policy/budgets; only transport adapter differs",
+    "historical_AB": "D20-01 observed A/B20wrong+10context failures retained; not rerun/truncated/reclassified or treated as live Agents",
+    "prior_CD": "30exact evidence reproductions are historical and are not live tool-Agent results"
+  },
+  "accounting": {
+    "existing_shared_ledger_required": true,
+    "budget_usd": "10",
+    "prior_conservative_bound_usd": "3.3017384",
+    "per_request_reservation_usd": "0.32",
+    "peak_input_usd_per_million": "0.30",
+    "peak_output_usd_per_million": "1.20",
+    "unknown_reservations": "remain fully charged; never reset/reclassify without observed usage",
+    "pricing_verified_at": "2026-11-03",
+    "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "caveat": "conservative upper bound,not invoice; count priming,failed/unknown requests,all model turns/corrective turns"
+  },
+  "metrics": {
+    "local_http": "actual public request/response body bytes; excludes TLS/headers and internal gateway leg",
+    "local_process": "sampled actual Agent+server RSS and measured process CPU; excludes provider compute",
+    "provider": "actual usage all requests; no billing/token saving inferred from tool response byte size"
+  }
+}

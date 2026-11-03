@@ -1,0 +1,270 @@
+{
+  "dependency_names": [
+    "Azure.Core/1.38.0",
+    "Azure.Identity/1.11.4",
+    "Dapper/2.1.66",
+    "DnsClient/1.8.0",
+    "Google.Protobuf/3.28.3",
+    "Grpc.AspNetCore.Server.ClientFactory/2.67.0",
+    "Grpc.AspNetCore.Server/2.67.0",
+    "Grpc.AspNetCore/2.67.0",
+    "Grpc.Core.Api/2.67.0",
+    "Grpc.Net.Client/2.67.0",
+    "Grpc.Net.ClientFactory/2.67.0",
+    "Grpc.Net.Common/2.67.0",
+    "LabAcacia.NPS.Conformance/1.0.0-alpha.19",
+    "LabAcacia.NPS.Core/1.0.0-alpha.19",
+    "LabAcacia.NPS.Daemon.Observability/1.0.0-alpha.19",
+    "LabAcacia.NPS.NDP/1.0.0-alpha.19",
+    "LabAcacia.NPS.NIP.Storage.Sqlite/1.0.0-alpha.19",
+    "LabAcacia.NPS.NIP/1.0.0-alpha.19",
+    "LabAcacia.NPS.NOP/1.0.0-alpha.19",
+    "LabAcacia.NPS.NWP.Anchor/1.0.0-alpha.19",
+    "LabAcacia.NPS.NWP.Bridge/1.0.0-alpha.19",
+    "LabAcacia.NPS.NWP/1.0.0-alpha.19",
+    "MessagePack.Annotations/3.1.7",
+    "MessagePack/3.1.7",
+    "Microsoft.AspNetCore.TestHost/10.0.0",
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1",
+    "Microsoft.CodeCoverage/17.14.1",
+    "Microsoft.Data.SqlClient.SNI.runtime/5.2.0",
+    "Microsoft.Data.SqlClient/5.2.2",
+    "Microsoft.Data.Sqlite.Core/10.0.10",
+    "Microsoft.Data.Sqlite/10.0.10",
+    "Microsoft.Identity.Client.Extensions.Msal/4.61.3",
+    "Microsoft.Identity.Client/4.61.3",
+    "Microsoft.IdentityModel.Abstractions/6.35.0",
+    "Microsoft.IdentityModel.JsonWebTokens/6.35.0",
+    "Microsoft.IdentityModel.Logging/6.35.0",
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.35.0",
+    "Microsoft.IdentityModel.Protocols/6.35.0",
+    "Microsoft.IdentityModel.Tokens/6.35.0",
+    "Microsoft.NET.StringTools/17.11.4",
+    "Microsoft.NET.Test.Sdk/17.14.1",
+    "Microsoft.SqlServer.Server/1.0.0",
+    "Microsoft.TestPlatform.ObjectModel/17.14.1",
+    "Microsoft.TestPlatform.TestHost/17.14.1",
+    "NPS.Benchmarks.TokenSavings/1.0.0-alpha.19",
+    "NPS.Benchmarks.WireSize/1.0.0-alpha.19",
+    "NPS.Conformance/1.0.0.0",
+    "NPS.Core/1.0.0.0",
+    "NPS.Daemon.Observability/1.0.0.0",
+    "NPS.NDP/1.0.0.0",
+    "NPS.NIP.Storage.Sqlite/1.0.0.0",
+    "NPS.NIP/1.0.0.0",
+    "NPS.NOP/1.0.0.0",
+    "NPS.NWP.Anchor/1.0.0.0",
+    "NPS.NWP.Bridge/1.0.0.0",
+    "NPS.NWP/1.0.0.0",
+    "NPS.Samples.NopDag/1.0.0-alpha.19",
+    "NPS.Tests/1.0.0-alpha.19",
+    "NSec.Cryptography/25.4.0",
+    "Newtonsoft.Json/13.0.3",
+    "Npgsql/8.0.7",
+    "SQLite/3.53.4",
+    "SQLitePCLRaw.bundle_e_sqlite3/3.0.5",
+    "SQLitePCLRaw.config.e_sqlite3/3.0.5",
+    "SQLitePCLRaw.core/3.0.5",
+    "SQLitePCLRaw.provider.e_sqlite3/3.0.5",
+    "System.ClientModel/1.0.0",
+    "System.Configuration.ConfigurationManager/8.0.0",
+    "System.IdentityModel.Tokens.Jwt/6.35.0",
+    "System.Memory.Data/1.0.2",
+    "System.Runtime.Caching/8.0.0",
+    "System.Security.Cryptography.ProtectedData/8.0.0",
+    "libsodium/1.0.20.1",
+    "nps-ledger.Reference/1.0.0.0",
+    "nps-ledger/1.0.0-alpha.19",
+    "nps-registry.Reference/1.0.0.0",
+    "nps-registry/1.0.0-alpha.19",
+    "npsd/1.0.0-alpha.19",
+    "xunit.abstractions/2.0.3",
+    "xunit.assert/2.9.3",
+    "xunit.core/2.9.3",
+    "xunit.extensibility.core/2.9.3",
+    "xunit.extensibility.execution/2.9.3",
+    "xunit/2.9.3"
+  ],
+  "source_revision": "d4fbf5e181afde6d9c43d3997c63a2f4e43918d9",
+  "method": {
+    "method_id": "D20-06-reference-handoff-v1",
+    "kind": "functional and resource qualification; no efficiency comparison or provider billing",
+    "positive_rows": [
+      100,
+      1000,
+      100000
+    ],
+    "positive_repeats": 3,
+    "fault_rows": 100,
+    "fault_repeats": 1,
+    "faults": [
+      "missing-grant",
+      "revoked-grant",
+      "hidden-field",
+      "revoked-worker",
+      "expired-input",
+      "lost-query-response",
+      "create-audit-loss"
+    ],
+    "condition_count": 16,
+    "processor_count": 4,
+    "gc_available_memory_bytes": 335544320,
+    "rss_limit_bytes": 536870912,
+    "max_case_seconds": 120,
+    "rss_sample_interval_seconds": 0.01,
+    "resource_scope": "actual controller and all live descendants; concurrent RSS and conservative live VmHWM sum",
+    "execution_mode": "direct_asserted_fixture; fresh process per condition; no VSTest parent",
+    "wire_scope": "both public-client/gateway and gateway/receiver TCP stream bytes including HTTP/TLS, excluding TCP/IP packet overhead",
+    "nop_payload_scope": "actual serialized Delegate/AlignStream JSON, locally dispatched; not remote NOP wire qualification",
+    "model_visible_bytes": 0,
+    "model_scope": "deterministic plan; no model requests or new provider usage/cost observations",
+    "success": "exact frozen source-oracle groups, five actual rows, authenticated grants, two owner releases; duplicate has zero new dispatch",
+    "failures": "seven asserted negative scenarios; lost query terminal and actual post-create audit503 remain indeterminate with no downstream retry; unresolved allocation keys are retained for a separate owner decision and never automatically replayed during cleanup",
+    "claims": "bounded reference semantics and measured transfer costs only; no NPS superiority, production-runtime/native/six-SDK or release qualification"
+  },
+  "resource_profile": {
+    "processor_count": 4,
+    "gc_heap_hard_limit": "0x14000000",
+    "rss_limit_bytes": 536870912,
+    "max_workflow_seconds": 120,
+    "rss_sample_interval_seconds": 0.01,
+    "rss_scope": "actual controller and all live descendants; concurrent RSS and conservative live VmHWM sum",
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "source_files": [
+    {
+      "path": "tools/benchmarks/nop-result-handoff.py",
+      "archive_path": "recipes/recipe-00.py",
+      "sha256": "813c2e6882249940ef035fd395ac7e6477753af2dd7eac5065aa044f6669d81a"
+    },
+    {
+      "path": "docs/benchmarks/nop-result-handoff-method.json",
+      "archive_path": "recipes/recipe-01.json",
+      "sha256": "c0b7ab4ebc30d87ba9696680cf2da1dd9ff033cbff5a0320c426f7e037b23568"
+    },
+    {
+      "path": "demos/data-workflow/resource_profile.py",
+      "archive_path": "recipes/recipe-02.py",
+      "sha256": "82fd75f2326a2af5fa03a739aeb44562e4d3cc0fdf482a445f028f59a65527fb"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/NopHandoffCapture.cs",
+      "archive_path": "recipes/recipe-03.cs",
+      "sha256": "d96d144e47d6158000b47fc3b0dbefd8ef1afc372e5d71d55e18c7b70dde41a4"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/NopResultHandoffTests.cs",
+      "archive_path": "recipes/recipe-04.cs",
+      "sha256": "3c916081261cd028ef1ccb0574998a44cc73fcfb1c8f9fc7114b489a4a6266f1"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchCaptureProgram.cs",
+      "archive_path": "recipes/recipe-05.cs",
+      "sha256": "8ac46a78e302eb6472f9b9c328a18324642609bb621af9a1ad9697b16ea4a72c"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultOracleWorkflowTests.cs",
+      "archive_path": "recipes/recipe-06.cs",
+      "sha256": "fcfe25d9d29309b6a21fea1b388217d784f97538a8cb1d5a44a07bef518b7d08"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationTlsTests.cs",
+      "archive_path": "recipes/recipe-07.cs",
+      "sha256": "b8fb0d594521fd052abef305bad4c49c38f9b45fcce96e9afd28c11275090fb7"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationGatewayTests.cs",
+      "archive_path": "recipes/recipe-08.cs",
+      "sha256": "60433bf0a71fa9fc36b75fd12eae0d0672e6190d8f18d0a7ee59811ebde6bfdf"
+    },
+    {
+      "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultRuntimeComparisonTransport.cs",
+      "archive_path": "recipes/recipe-09.cs",
+      "sha256": "faf9e825ced312fcbf23bb3044d14aca85bcb2d9f68b0abfdbc24398a1d3cb4e"
+    },
+    {
+      "path": "spec/conformance/alpha20/data_workflow_methodology.json",
+      "archive_path": "recipes/recipe-10.json",
+      "sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Models/TaskState.cs",
+      "archive_path": "recipes/recipe-11.cs",
+      "sha256": "55efbf94f710b955319736bc0a0ee873b4fb2acccd0d72353488ee5d17f84dc7"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopInputMapper.cs",
+      "archive_path": "recipes/recipe-12.cs",
+      "sha256": "069aeaad097de3af2b40ad1bf4e38359adc72e54608ecf49376bae41c1c0b927"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopOrchestratorOptions.cs",
+      "archive_path": "recipes/recipe-13.cs",
+      "sha256": "1824a534172b87b95f1ffbaaa9ab0811b16fe953c2685e99fd2fbad23115e18a"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Validation/DagValidator.cs",
+      "archive_path": "recipes/recipe-14.cs",
+      "sha256": "b65daca007afcfa67f2c2478bc778d8c09f5c4ba073373346209ccd62e09670a"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Runtime/NopRuntimeBinding.cs",
+      "archive_path": "recipes/recipe-15.cs",
+      "sha256": "23d628b805fecc0a0471b5c69278196a41c8433fa7d3a43d0894e405bf7e3881"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Runtime/NopRuntimeExecutor.cs",
+      "archive_path": "recipes/recipe-16.cs",
+      "sha256": "a7be78b333e5114c266891c18b00583cf445bf107e254c83d4b2cde54857a26a"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Runtime/NopTaskIdentity.cs",
+      "archive_path": "recipes/recipe-17.cs",
+      "sha256": "4111ae7aad72f0145ddbbb76ab05fe9d2f272d572d6ae599b8d71546e1fda6f2"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopOrchestrator.cs",
+      "archive_path": "recipes/recipe-18.cs",
+      "sha256": "716d9420cc125725b0e0f4f0abc4c1c83c90c79dd1e4d6997b22a67255d024b1"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Frames/NopFrames.cs",
+      "archive_path": "recipes/recipe-19.cs",
+      "sha256": "b425802fb82ea987df46a805242bb13ee8082607afd5d69faae29a2095522df4"
+    },
+    {
+      "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopTaskResult.cs",
+      "archive_path": "recipes/recipe-20.cs",
+      "sha256": "689c930d2858a8be121c680ab9a272b89557b947ba4956a42a3fae1f346c7302"
+    },
+    {
+      "path": "impl/dotnet/samples/NPS.Samples.NopDag/Orchestration/SqliteNopRuntimeJournal.cs",
+      "archive_path": "recipes/recipe-21.cs",
+      "sha256": "1a4a85cdc75c029a1c2b5b5bcfeae819a249ef5fcbec19d92e941769cfed7874"
+    },
+    {
+      "path": "impl/dotnet/samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj",
+      "archive_path": "recipes/recipe-22.csproj",
+      "sha256": "c3270ea0dcaeab24f3003d1f389a14f0daf9a32b2fbb893a0f97d65613e8ddb3"
+    }
+  ],
+  "test_assembly_sha256": "e831160964ac01295bafaaa03b7f5d605d4d89db22cdcd39a0c90e9acea84732",
+  "assemblies": {
+    "NPS.Tests.dll": "e831160964ac01295bafaaa03b7f5d605d4d89db22cdcd39a0c90e9acea84732",
+    "NPS.NOP.dll": "aceb2ed21cdb34fa35dcb9772b33d937c50cfb2ba4c08768ea2ecebe4b13bce4",
+    "NPS.NWP.dll": "cf3787a28ed68b8a9d1cd9731e07f43b033f4200cb36ae12358608267d7de58c",
+    "NPS.NIP.dll": "612174c30676da9d90e12afde4faf9be5414549054f7380cb08c955909bb2be3",
+    "NPS.NIP.Storage.Sqlite.dll": "40b066231a046d4ea634a496500f3740b9a38c838524752262a9da8078485b68",
+    "NPS.Core.dll": "8d0be3408cfb757a26b65ee817a44988404eff9f0ce0f24dd0b7028ed872ca08",
+    "NPS.Samples.NopDag.dll": "7c65c01d8352c94d249076b5510c7b6764659338dae2aac65f46f62f2f07afb6",
+    "NPS.Tests.deps.json": "1ff55247cfb09a9af4c00582352e088de87989a7afb695b2bc82eb33755bcabe"
+  },
+  "dotnet_sdk": "10.0.114",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "controller_pid": 3278224
+}

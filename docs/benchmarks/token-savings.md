@@ -1,12 +1,19 @@
-# Cognon Savings Benchmark
+# Historical Cognon Estimate Benchmark
+
+This is a historical fixture comparison, not an observed model-token or provider-billing
+benchmark. Inputs include HTTP headers and hand-written envelope/row representations;
+the model normally does not receive those headers. Repeated keys may also compress on
+ordinary HTTP. The retained numbers below do not establish an advantage over equally
+optimized HTTP tools or provider prompt caching.
 
 Measures Cognon (CGN) consumption for representative Agent↔Node
 interactions, comparing an idiomatic REST implementation against the
 equivalent NWP traffic.
 
 **Counter**: `ceil(UTF-8 bytes / 4)` per `spec/token-budget.md §2.2` —
-the tokenizer-agnostic baseline. Both protocols are measured with the
-same ruler, so the ratio is an apples-to-apples comparison.
+the tokenizer-agnostic estimate. Using the same byte formula does not make different
+wire fixtures equivalent model inputs. Actual tokenizers, all message turns and
+provider-reported cache/output/reasoning usage need separate measurement.
 
 **Target** (Phase 1 exit criterion): ≥ 30% CGN savings across scenarios.
 

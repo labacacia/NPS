@@ -8,6 +8,11 @@ Licensed under the Apache License, Version 2.0
 
 # NPS-RFC-0006: NCP Native Mode Transport Binding
 
+> 2026-09-09 clarification: historical acceptance is retained. Conflicting older
+> framing, early-data, rekey and admission prose does not override current NCP.
+> See the [transport reconciliation](../transport-reconciliation.md), TRN-01..13,
+> before implementing this RFC. This notice does not claim SDK qualification.
+
 **RFC ID**: NPS-RFC-0006
 **Status**: Accepted
 **Version**: 0.2

@@ -1,5 +1,9 @@
 # Stateful LLM Context Savings Benchmark
 
+Evidence class: deterministic runtime and decoder observations, not real-provider
+usage or billing. The simulated reuse/evaluation ratio below must not be presented
+as a provider's achieved token or cost reduction.
+
 CR-0011 second-turn comparison using the official `LlmCompleteActionRequest`,
 `ActionFrame`, and native NCP Tier-2 MessagePack codec. The stateful request
 contains only the new tool result and user message; the committed prefix is

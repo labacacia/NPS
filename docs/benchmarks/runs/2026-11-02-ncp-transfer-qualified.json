@@ -1,0 +1,4409 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "complete observed .NET reference TLS transfer; no provider/model execution",
+  "original_source_manifest_sha256": "ee6e8a38eaf0d748cf7828019e1f1e2aa353191d7b22b7acdfc5d2c9f695b13d",
+  "source": {
+    "revision": "42a0b05865d4206b612cc55f2e80f2505cb6ea67",
+    "files": [
+      {
+        "path": "docs/benchmarks/ncp-transfer-method-2026-11-02.cn.md",
+        "sha256": "09ddd765888279b07ffe156b436f0af21977e80f28292519c4b28480368ed5c3"
+      },
+      {
+        "path": "docs/benchmarks/ncp-transfer-method-2026-11-02.md",
+        "sha256": "d4e9bfcd11654fe6c1e845e7274c8393c7c361f5be2e7d2edef62b3f035749b7"
+      },
+      {
+        "path": "impl/dotnet/.gitkeep",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "impl/dotnet/CHANGELOG.cn.md",
+        "sha256": "39a176b160be6ab0209055211ede2a3a00e39ce05020ab4ac0329f7150e59415"
+      },
+      {
+        "path": "impl/dotnet/CHANGELOG.md",
+        "sha256": "2caf309d34f42bbad7b9c9da6667aa989da40629c1d7202f054666df441133d7"
+      },
+      {
+        "path": "impl/dotnet/Directory.Build.props",
+        "sha256": "80b07c151923fb6292b427632f251f998813fc7f9f0089a027413034a07da878"
+      },
+      {
+        "path": "impl/dotnet/NPS.sln",
+        "sha256": "19a4517a1ce49235ae31fb8b259ec5b7c41fc083abac87b00a2d23cb5b71f3c6"
+      },
+      {
+        "path": "impl/dotnet/README.cn.md",
+        "sha256": "bf569a61f58c915e57ed3859fed15e8b00dfcb9bde27d697178ba6c7d0c0902f"
+      },
+      {
+        "path": "impl/dotnet/README.md",
+        "sha256": "db16bf639e018ae08aa80b3f2eb44227fed46a9e80000ba047cb295ce8cc1e19"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.NipCert/NPS.Benchmarks.NipCert.csproj",
+        "sha256": "c15076c9eb471aa749d60663a22400525ca4da0a994fcc77c70a56a28ffbc64b"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.NipCert/Program.cs",
+        "sha256": "2c7ca858f5df6f2d5f72a220e200a08ed7dc4bf15036a2baf6b5b9356a1f64c4"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/Benchmark.cs",
+        "sha256": "89bc7c780d8fef03f6a68a5d86f5af9e3ebd1dac94568e83ce78c80c5a154a6c"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/CognCounter.cs",
+        "sha256": "cd2e3bb262c5866b9e78fb2a7f37b95172159b2ec057137daa1369b9608617e5"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/LlmContextBenchmark.cs",
+        "sha256": "4137704e2d4957740336bf57cc345a913f5ee34b0d96fa47ebd98374c5a475ef"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/NPS.Benchmarks.TokenSavings.csproj",
+        "sha256": "b4e955d1e12f8b1bd1e3a118e8fb4bdee8ed5a96fe91372593a569e98e8bcaf1"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/Program.cs",
+        "sha256": "0f6926cf9eadb3fa69e6e8ec9beba94e17b60f0fae0f6389aa728460d256cf18"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/Scenarios.cs",
+        "sha256": "bb5a1c5e1ebacabfc511a01bea06afb2f40ac34dad627b3c32904594bde035be"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/Benchmark.cs",
+        "sha256": "f63639048cf2284618258feeb107ec37f291f688e199b661b4a89203dae7a03e"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/NPS.Benchmarks.WireSize.csproj",
+        "sha256": "aa634f7fa385a3d37f79a7aeea1396e636aa4ae8c843c0f12e0952be71702921"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/Program.cs",
+        "sha256": "a4be8a42ac0ef7e67f6b7f7d7bf24c71419f944f5f185f19341602b2395b0969"
+      },
+      {
+        "path": "impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/Scenarios.cs",
+        "sha256": "74f1205a8d907bc32d9baefd03f869d5ede79b097dcb3be1287b0b7204dc31a6"
+      },
+      {
+        "path": "impl/dotnet/nuget.config",
+        "sha256": "c705081732edd1468d157aa2fbe23a68df935f24f335e41ecb917166b35c937e"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj",
+        "sha256": "3dc4d82f05eeb5b20cd01ad2e13330e7923ede34e8d148e82a12f10923e6959e"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/NodeHostBuilder.cs",
+        "sha256": "8c6e88b9b67e57f2e273e6dd31c5b17bddb249115459bcf28a9f690625536a98"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/Orchestration/HttpNopWorkerClient.cs",
+        "sha256": "b858eea9ae28687f6032463b8a6ad57bd69979cb4448fb73c300e1b668523bac"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/Program.cs",
+        "sha256": "0a3ce16f1d937d5d68ba7d252f2044532780db41540adca6183710d9a44fcd06"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/Providers/FetchArticlesProvider.cs",
+        "sha256": "c0d94de7180ee8795ef06667e4e3575e2f7fe382bdb1225f04cc8052d4c03688"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/Providers/PublishDigestProvider.cs",
+        "sha256": "d606a59ccb09af39a0c5bbf2a70f241d7978f4b5cfb7c1864c2421952669b8b7"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/Providers/SummarizeProvider.cs",
+        "sha256": "35a0af209ad191cee74acc87fc0fa9b241bf8bb05a2ae9e8585b7d724a219242"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/README.cn.md",
+        "sha256": "574b50f0fd90a0a1955cc61e0d5be5339e111064160b5a58e40110626237df92"
+      },
+      {
+        "path": "impl/dotnet/samples/NPS.Samples.NopDag/README.md",
+        "sha256": "56c1af92b99a248b6ac93cf1740317a258b9df4213caea309758a597850eafe5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj",
+        "sha256": "aa2ae6682d1be2c8b365133aee937003744b745590787ace1cf7e49eb4bd6974"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Conformance/NpsConformance.cs",
+        "sha256": "b3aef9b89b33f9739ae0789f6529f40210b1c3129f34987eb211c10b69246d52"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Conformance/README.md",
+        "sha256": "d0fd7304fe9de5b267474da4058c143a70b6477e216ab938e5838d1d39d62530"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Alpha19/Alpha19Policies.cs",
+        "sha256": "382252780e27d1f60170efc1cb95b23c092e31465c8e78add2f81dec4c7411a5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Alpha20/Alpha20ErrorStatus.cs",
+        "sha256": "50ba8d2a0e52101e571baf6d27db8b258d6ebc876beae8e0dfeb1e9c4c3e6fde"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Alpha20/FeatureWireParser.cs",
+        "sha256": "62130800b3cc29ecdf5e207d058750c56a689ba63e62a6806de43a204330ad65"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Anchoring/AnchorIdComputer.cs",
+        "sha256": "b59d4baa9ecbcd2f4788dd22fec0673a8cd3b21b5207c37590f287bf7aef5170"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Caching/AnchorFrameCache.cs",
+        "sha256": "54958ec479565fecb70f6bc80eb099f7d7e8c4bad25a8f61d6109433a2b060b1"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Codecs/NpsFrameCodec.cs",
+        "sha256": "4502e1f86649348c7aacc4a9ddf269aeede9e7a55667d1547df2b6d733e19d37"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Codecs/Tier1JsonCodec.cs",
+        "sha256": "e2fc31d595bc850d9bc3532eb4e6578ebd18afe074b490aed840de057527da7a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Codecs/Tier2MsgPackCodec.cs",
+        "sha256": "d996cf26b38f0485f6320102194ff140c1e50db7be921e1d62660fdfd9ac87d3"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Codecs/Tier3BinaryVectorCodec.cs",
+        "sha256": "b4e36253bec86938dd7822c1d31f10bd8bddfba4c6f4065d1838a08cb3dbc770"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Exceptions/NpsExceptions.cs",
+        "sha256": "4b1702d4c3ce20aba77e4d16e120d0fbd956143b4a23ee5b6990e30d70d2884e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Extensions/NpsCoreServiceExtensions.cs",
+        "sha256": "4ab6f4840b3ad8b75176ce00fc626934c89bf020793d304d1610a715ca4f5c43"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/FrameFlags.cs",
+        "sha256": "0adee50fac97a71970d9c2c29806c6bbcfcaba0857f8bd5b6f208b35db0246cd"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/FrameHeader.cs",
+        "sha256": "e7da3dd51a812939112b2076f09d0a3f0840d3e3016eb30d30ad4906b5f4ad52"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/FrameSchema.cs",
+        "sha256": "d06618d2f93b26b3f19ae4f53b9f5c044b61d384b681c04797b369b5986eafeb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/FrameType.cs",
+        "sha256": "d6a3fbbf1a052acb0d3df7723f88600476974536d0d5de929785bb3570f18349"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/IFrame.cs",
+        "sha256": "f235b1f990b9b09ed89ed4c201c68f4d2590f81b345219d55aeb05255b79cf77"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Frames/Ncp/NcpFrames.cs",
+        "sha256": "a1b67d3b481afc567d9614353ea10eb9a84ef06175dd32b59d58e9aec3872882"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/NPS.Core.csproj",
+        "sha256": "6b6df1dcce32a87af087ba42d51979cb30b229414789607bc2dc803d25259842"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpCanonicalWire.cs",
+        "sha256": "387c21ca85247e1f83a9f11a40e472441adaed0166585e5a3890112b444c74c7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpEncodingPolicy.cs",
+        "sha256": "b3c194d033495369de8102f55b5eb0ab2bb5762781b42d3a91513a230371fdd0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpFailoverConnector.cs",
+        "sha256": "6fb7dbf68fde85459dca9a66ade833810c030a1cb148ee14525da2989996d105"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpHandshakeProfile.cs",
+        "sha256": "778648ad46140bb304a9635cafdcaeef4e6560b3861d61505814cc8705dd2b07"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpNativeClient.cs",
+        "sha256": "ba2e0db1ba5236c327b0eeed648fb8ea3db21a0502f7631004b8ec6a94b79ced"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpNativeClientOptions.cs",
+        "sha256": "b89be84a60e85a8975ef14a61e6498102474dcdabc5ecdb0a07639650b703a18"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpPreamble.cs",
+        "sha256": "c1621ae200f6cd509332d440b7cc5999024552495fc66236c0d9ca758745c4d2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpSchemaBatchNegotiation.cs",
+        "sha256": "1d17251100831a0faafd04fb41d00fda2ba799d55c8e024cb19479a438f3ef8e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpServer.cs",
+        "sha256": "8603762583c8841045681aa798b7d49114d62e47cfc69ac420bbdc1c260b3860"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpServerConnection.cs",
+        "sha256": "adea443c42c3a1c384694c278886d358efbc2808975c37bb1ce7f4a5236f83ac"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpServerOptions.cs",
+        "sha256": "0a78dcec666ca6680a9e3e5f2a7840752df6ef76afe01253ef1dfe514e107b40"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/NcpSession.cs",
+        "sha256": "7e87e7cffa74a2ba60f417f4af7d953f37a73e64c5f22da1ad6a5729e0dc39f0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/README.cn.md",
+        "sha256": "e12d37e19112aa08ff8365c4a7811e0ce4a8f3c766264282307a70f751c05773"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/README.md",
+        "sha256": "e2aaca0561ada3e69b471e323a6098d0a75cd2804214f0dc047191ee2d0c2831"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchDiffWireFields.cs",
+        "sha256": "42c93e39ae6773811468382aae14c9045d7d7b34fbe9347227a457e41fe72c47"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchFrameCodec.cs",
+        "sha256": "9a462eb1db7a016b2b07cd7db35b690c6a553d1d7ee78e284d8576e0537618cd"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchReceiver.cs",
+        "sha256": "e0d9270e20956c19d11468ed5b1988591957320a7e283893c592284dc0f14fe8"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchStreamPublisher.cs",
+        "sha256": "5577c0b0e35b6c17453d081a3100740e6fba460703a4c8acdab848d682d72b98"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchStreamReader.cs",
+        "sha256": "4524112c88756264f36d0bd5fcaa0824be82dcd4da6af5be811922eec36105f5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchStreamTransport.cs",
+        "sha256": "e852d1598c5d45393bfd0fa458a4de3cb8e96bb1391a87d6c9a859dd06795b75"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchValues.cs",
+        "sha256": "deee17a4621963f05d42fecb20e1dc1d1b45b63a3f39c4f9be68a96204e76d7f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Ncp/SchemaBatchWireGuard.cs",
+        "sha256": "7be1bea974fcff9296b0bdf3bd4ae1155979eeacecfe93335982d4332714224a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/NcpErrorCodes.cs",
+        "sha256": "b92d8b9ac4b13beb0a65830f0140bb60e48e8db0eb5f9fa8fb1da5e51518b286"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/NcpPatchFormat.cs",
+        "sha256": "7c69549a58ae9c71e84609653eb1706d676d292f652986d93048609167ea9b8d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/NpsStatusCodes.cs",
+        "sha256": "4c00a9140e140b8a64aced7de01c742f232f6c39a87a2c9e70ff6ee06f45319e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Registry/FrameRegistry.cs",
+        "sha256": "5a03bac1940d9a4fa7a45bd2897f7803e87b645136704469eb72400cd054bbb0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Serialization/JcsString.cs",
+        "sha256": "88e60884e86d391b8c09217a3c8096cb6e7a889657cdc1fe2fe89ba9b6857fb5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Serialization/NpsCoreJsonContext.cs",
+        "sha256": "99cb67efc28730fac903d3148a2ab15ad83d47d9c13b4faaf002ab704a7fffce"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Core/Serialization/NpsCoreMessagePackResolver.cs",
+        "sha256": "01331abc69ea21132704cb382006996ce5ecc375201211dba2060603024ff368"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/HealthChecks/HealthEndpoints.cs",
+        "sha256": "d04f060af6b7eeb240b862dc5633db4e2424a2242d11158baf02d7ae30b098bc"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/HealthChecks/HealthProbeRenderer.cs",
+        "sha256": "075dc9f5f6d6e84b6fc959dd3c197dd53d70bad1f1d7bec49672344a57b54a7d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/Logging/JsonStructuredLogging.cs",
+        "sha256": "d04d7fae3b934c9091b314ad7f97e5407ff25ca6f0657d0d3c50a78d5c9ddff8"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/Metrics/MetricsEndpoint.cs",
+        "sha256": "03663d14546543c16ad3a55c709e1d8953771a8a05dbfbb1b3f4e1057e3d18c5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/Metrics/MetricsRegistry.cs",
+        "sha256": "e12a375faed6c8fdfbc4eaeaf3d454e125a76d770de92fd85a9ac3e2bd5eeac6"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj",
+        "sha256": "c70dff9c229064130d2f22a8e07c5c98913445d24c843dedd3e64bcc3b356e2e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/ObservabilityServiceExtensions.cs",
+        "sha256": "b23e4cde692693cb1573228e893d62338880a5f43c1d816f05085c7a56e208fa"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.Daemon.Observability/Shutdown/GracefulShutdown.cs",
+        "sha256": "8114d10f50c5da5c9d06ef95dc8d5fff97d2425c41c3304f233425969de0b6d5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Extensions/NdpServiceExtensions.cs",
+        "sha256": "014852032462738c82e5c565bf494396d1506556f144fe8292ac8674d93992d6"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Federation/NdpFederation.cs",
+        "sha256": "330e0b08486e83c6f1e08ca5cb6cc4d88eedc1bf89a7fa4c1845cff0822d6399"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Frames/NdpFrames.cs",
+        "sha256": "6574edb7492c229d599a1f1e2d04b130811e69bc1b30ba3c101cef7535354e89"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Models/ActivationMode.cs",
+        "sha256": "59d95dc252bd696c7a08d1e4555e0cf5eccb75e86f940a39f56fba58d6ca9bf9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Models/SecurityProfile.cs",
+        "sha256": "91993687e6cb28092cf49f46906650199df876f3489e7420766aa713be544e46"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/NPS.NDP.csproj",
+        "sha256": "1b8291505dd858f00be016172dac3654539917ec5c912bc99cc73692c28d6a06"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/NdpConstants.cs",
+        "sha256": "8fad61e7a457c12456a880563d33f472c0ffe807706f9e7e83d98fb436a525ec"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/NdpErrorCodes.cs",
+        "sha256": "395c8beb1bce325881af9b951f0daf48566ed336ecc03f3e977512ff7058f497"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/IDnsTxtLookup.cs",
+        "sha256": "cf491e350d7f3ca6bf372c0b373f3b4ed7aa4f3228a9479462ae2f939a2f71ff"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/INdpRegistry.cs",
+        "sha256": "5103548ba1ec78f0690642c584f378bbf4dad17e13facb43e327156129b0bbe7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/InMemoryNdpRegistry.cs",
+        "sha256": "34474b86f411e70ae591594c7fff8256c7596e58abeeaefad4bba021fff65cf2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/NdpAnnounceRejectedException.cs",
+        "sha256": "40e739050dccbef728a921e09ed5d79640756986ef02faa4295642b4b2f75b4d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/NdpRegistryExtensions.cs",
+        "sha256": "4f36bd7b0f3e1529ea8e7d536b82a1beee8003c2e902c5f1b3e23f41345a30e5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/NdpRegistryOptions.cs",
+        "sha256": "0cc5a2baeb097d30a248cdc7c85999fc4fc880954e26b6fbe48b19a5a143e2e5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/NdpRegistryProfile.cs",
+        "sha256": "52cb1549bf6a8a979d7a132c3c0709171f20a69364f28e7f2e340a6311e8fc7d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Registry/SystemDnsTxtLookup.cs",
+        "sha256": "746f523922a150787c5113916bc51c3aec84ee1ead5b4f5a9b5de73d70111c16"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Serialization/NdpSerialization.cs",
+        "sha256": "ba6a29f014012c0ca75d2a007de753427c1a4f8aa8f19a6d429bcf31e9dd4209"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NDP/Validation/NdpAnnounceValidator.cs",
+        "sha256": "863c198656703721f79c3585ecf054853143080516599d68abb28e17adf0e4eb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Postgres/Extensions/NipPostgresExtensions.cs",
+        "sha256": "61b97bb01c5ed24131e8c0fc660a915e1d45ab24c7d932b1c99cf102f30a42af"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj",
+        "sha256": "91d1a88645226679b610539ae67f2ec6eba0e93f4a7517a9284743255268ed7d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Postgres/Storage/PostgreSqlNipCaStore.cs",
+        "sha256": "c6181907c55ff30012c52f010fe6794c52ebd6882f20f81b4321724245574c2c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Postgres/Storage/PostgreSqlNipRaStore.cs",
+        "sha256": "1b27e69ef330cf1321b021c6bf06617ddf9175f5327dddef516a0b08ac69c9eb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Sqlite/Extensions/NipSqliteExtensions.cs",
+        "sha256": "7addd670dc2622414ddea8e9faba5e2e79353548f42c4cf6fdaa522171f7e2a2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj",
+        "sha256": "1ce63a9cb44284d4dfbba6f0d93968adda539a350a4ed6f5c25170a4c741b68f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Sqlite/Storage/SqliteNipCaStore.cs",
+        "sha256": "a07cb975d82aa7eb0f00a3b93414ce19186a1454da3ed762bc1ef86e7926225a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Sqlite/Storage/SqliteNipProjectionReplayStore.cs",
+        "sha256": "55a181b9190c2860c038a29afc0aa0f8a43da76e5f4940a4c5c67ba795a2c9f5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP.Storage.Sqlite/Storage/SqliteNipRaStore.cs",
+        "sha256": "8e38cb8d3879c20b4bdc610dabc7c9b0af445cfb02b3c2e71fadebd5861ff1ea"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Acme/AcmeClient.cs",
+        "sha256": "549bbbca3426d2e9e708e9f4c69455606749339bdb41b58ab3813bd0609fe5a5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Acme/AcmeJws.cs",
+        "sha256": "4e05c4d546878d37cf22852fa437f2a0da64648673f39a6e23e2ff197bafd0be"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Acme/AcmeMessages.cs",
+        "sha256": "3e22adcc03ce3160682f28659f2e093e44d0413e61fe60e89c146158ad3a6aaa"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Acme/AcmeServer.cs",
+        "sha256": "54b9c85c5805ba64a9ae40e1bdcd3e45c7ec491ca062e7ea3e5b262bbf600723"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/AssuranceLevel.cs",
+        "sha256": "c64d58c55aa3d90c67d23a994ab4188671bcc0c37361fe586f247e6b698b3e68"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/EnrollmentTier.cs",
+        "sha256": "e587c427c58c6bafac6693befe2624bede3fa46e4a340b4b80761316c6a73f85"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/INipCaStore.cs",
+        "sha256": "9774838135f234691c562e5f01a0c207e156838dfebdfca779ded7993991f03e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/InMemoryNipCaStore.cs",
+        "sha256": "bfb03855730c1d7c30e22108bc28782c973f0b9e59ec9b1d6940f4e1d2d4f3b7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/NipCaOptions.cs",
+        "sha256": "dba961dcc37f36a964f7caeada3cb80667133ed16935dbcd1d85f6ac4719ae30"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/NipCaService.cs",
+        "sha256": "3ce417faabfcf3771f652e418c0cb44e1c41d0c90b0e6418fcbe4583a746477f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/AllowlistPolicy.cs",
+        "sha256": "d1c50584ae1c05b6f6f92d4b354b0c0f8464adfffe73946aafca6a6231b54656"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/BootstrapTokenPolicy.cs",
+        "sha256": "1c27aee8d5d0195267bed6d1bf2efb28b6b11c6b56eac978cd4841a40b4db3cd"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/IBootstrapTokenStore.cs",
+        "sha256": "f604626b3e05358cec17fe0f067ca8cdfe96257d15e96db7f12b70cc9dc69c37"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/IEnrollmentPolicy.cs",
+        "sha256": "fd69fd2fcdf2279e0735287bea3ac92e5275b75c584068c0888fda1fb24d456d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/IPendingStore.cs",
+        "sha256": "695a5b701c0c2995ee06359d9250c0e54e12a48511dd636b380917b47691dbb2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/InMemoryBootstrapTokenStore.cs",
+        "sha256": "b18601e4f43462706bf01dd206ad75105f9abc10c1b223cb3a1656d2368cef10"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/InMemoryPendingStore.cs",
+        "sha256": "40beb3ce4dad55460abc2232d7adaf24605630d016cea2bbfcbf12bb4b616e3f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Ca/Ra/PendingQueuePolicy.cs",
+        "sha256": "66d0894c950768bd4c70a978a24c5aee37c796200e920c93c156777d530a0ff7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Client/NipCaClient.cs",
+        "sha256": "dfa9d8212feb055fcbf4b1c04269a476eee78a0bafb426fa2a127815026de164"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Crypto/NipGroupJws.cs",
+        "sha256": "72137be104213f65e82b34d38a0c9de2221db12c568b6537445361aae6c7b5c2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Crypto/NipKeyManager.cs",
+        "sha256": "71a65cdcee324ad17ffbc66f3fc4b8b74919f4a65bfebe11a9ac5d799e3dd4ad"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Crypto/NipSigner.cs",
+        "sha256": "54a63cfe162e826194a243a64e98f42f4a3d35b1267ed6b47d8f579b182433ab"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Extensions/NipServiceExtensions.cs",
+        "sha256": "381e599d8eee766002c61a66e565fcb4beddbb3583e43215be6d71b55633921e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Frames/NipFrames.cs",
+        "sha256": "89658b90936bb30e8865cf7b0b1d9acef7e7e1587e74cf98dca55f8536551ab0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Http/NipCaRouter.cs",
+        "sha256": "5152e9f423f7bf06e1cb2307c87e31ad69053b3d51f829d03c17d34bccf232e4"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/NipInvocationJson.cs",
+        "sha256": "4b4296e1128e0da278223792579f35fb562d251a78d66185f0c9ee2dc10995e0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/NipInvocationVerifier.cs",
+        "sha256": "2e9cedb11b171e07a2f150e39f2ece88229696bdd17f2a665312b4741ecc302c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/NipResultHttpBinding.cs",
+        "sha256": "bd142168c14b8e81a6c004e94be0b9d3c1eb98fe8f5b8adb8c0d93e17c0613ca"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/NipResultHttpProjector.cs",
+        "sha256": "34c22fa145b2598a97b9c31611a5e4769a3f9c7aaac9e09e709c336b9c55b1a9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/README.cn.md",
+        "sha256": "0dbc28de49737f146de899a987c3eab04cfb6b0948769cf516ff1d007e193147"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Invocation/README.md",
+        "sha256": "eef7c3f9294b34e809c1f4e62b716d9ec96268e539908bd741fb1e9e7eeea4f0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/NPS.NIP.csproj",
+        "sha256": "c354eeaa2451e0ffea62862cb8b42ca762d2c1eec6c740b821e667aabfdb1141"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Registry/NipRegistryExtensions.cs",
+        "sha256": "67608978c5867931565ac2790b2b631d4eeef4fd97a443565d62ca28c9664e3e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/IncidentType.cs",
+        "sha256": "b2b16d3332e561f4de858af2347544e66b51b25023774b8823e212cd1fed9327"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/InclusionProof.cs",
+        "sha256": "49eea34fee9f5003739aa9cb14dee6bccc3108454c4be64a89f4180fb4f61de0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/ReputationLogClient.cs",
+        "sha256": "665f4fef8e4d7361311eec2993fcdf284df7b4a7589b18cb2813d4be673a47c4"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/ReputationLogEntry.cs",
+        "sha256": "085576c644d2a714549f4c62f4dbac4cd93eca3d59c9e8a7681e46906d87ecf5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/ReputationLogEntrySigner.cs",
+        "sha256": "f558cdb5cc403e01e4b59c488ebb47d7ad701af1d32b60be062d6108ed69bf32"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/Severity.cs",
+        "sha256": "a6ff2027ccc079734ba668599914ab9cbb09e7800c932316dc8fa1767faa9aa6"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Reputation/SignedTreeHead.cs",
+        "sha256": "3c60a9494b327f590b9b80d4100a528908fae22a038bde8eade2ff9f8db8b6c2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Serialization/NipSerialization.cs",
+        "sha256": "42eb01eda9eae321b90c2f530607b6c72e0becd2043abacd828972b4567e03b7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipIdentVerifier.cs",
+        "sha256": "6b1959fa36265d9d8c3a204e3ec5f9230cf7fafca1bbeec1f783f004864f918f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipIdentVerifyResult.cs",
+        "sha256": "5d8f89e856f903abb9dd15faa17d2ae42ee8f910a3f04a16129ccd74d3a3c1db"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipPhase3Enforcer.cs",
+        "sha256": "c59c2b27d8e0a21b448945f65cd5a22786bc5d7a8623e422def4dc81e8f0116c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipRevocationCheck.cs",
+        "sha256": "25deecb1d8cfe4e9782a7734060a0b556139d6b22e7e5dd43c3a532f46449e8b"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipRevocationPolicy.cs",
+        "sha256": "d3df514bb07c20c2cb72c0f606da80beb0741560c6286b82784c4f26280d59e1"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipVerifierOptions.cs",
+        "sha256": "9bdfa9738d1536e654c89f2b2d971d48629d0260799cfe3ee0495394ef3aec07"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/NipVerifyContext.cs",
+        "sha256": "fcbd7d0821f7fa77c04a98b744092af8e457ef2a97b67ad127369ac3c91cc9bb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/Verification/TrustFrameValidator.cs",
+        "sha256": "d0f43074f69f37b66453a5a86b808f5f2912a7b5aec702eb159a6f76885f2f23"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/X509/Ed25519X509SignatureGenerator.cs",
+        "sha256": "4d2ff818cdb7c0eee9500725781aad0d57214f150d6366298120e3ef2e0a5b46"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/X509/NipX509Builder.cs",
+        "sha256": "ebe6a3fdeb077a2017d19ddf881dfb0220d71af49b7d8284d426a78fd83971fe"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/X509/NipX509Verifier.cs",
+        "sha256": "5ff143e1e2e6aac4eb141d8bdec854f0b5ded878cea57e5ec9da5a5923ddf7e0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NIP/X509/NpsX509Oids.cs",
+        "sha256": "2979826452847df969106baa7c161e3cf894554013455614701bffea4c578583"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Extensions/NopServiceExtensions.cs",
+        "sha256": "44a24d69e41bfac41a3cec13aec369968ba3d511681cf0ea00ccfdd3ff8d71fb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Frames/NopFrames.cs",
+        "sha256": "6a0ba464a77ff677edc160df6f007753dd3cdb829f824c9ef1e6366bf894f9b1"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/AggregateStrategy.cs",
+        "sha256": "3fb230042f06cc8889f8c034a3aaee2b5010a81ab7bd4756d4e28cdf2919446c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/CompensationPolicy.cs",
+        "sha256": "9059909581462cbe629e36882980179d30a92dad6d8d53504495c958b792c05f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/RetryPolicy.cs",
+        "sha256": "c15736d7c380b8aa55e5d80c9d8bd73574e1d05900f1cda55359ce39a769374f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/StreamError.cs",
+        "sha256": "0fabbe2bbe98e18c5a460d8e4c81b888e49a953e12d7da37f3f19092390e840c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/TaskContext.cs",
+        "sha256": "54c397b66a04f68cfbc72d52a956cf15f6a261fd6a61475ef1491e03b2e281cf"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/TaskDag.cs",
+        "sha256": "5b9463113cbeeb6d0c374fbb895fd604cab77de0304af99cdb46b428f8fb69ba"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/TaskPriority.cs",
+        "sha256": "ca96e274b3edf144638479a8474f9b49e68a6ceb6d3e29ec4fbad2644808de98"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Models/TaskState.cs",
+        "sha256": "55efbf94f710b955319736bc0a0ee873b4fb2acccd0d72353488ee5d17f84dc7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/NPS.NOP.csproj",
+        "sha256": "37b6ce189b665a9785a842df02a3c90db15ea76f7f8e53d8e39c3cc1d723b312"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/NopConstants.cs",
+        "sha256": "fb987b007d972a36245aaa3156cee9356ddb2ab14d864880d54cca35bbdbbc36"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/NopErrorCodes.cs",
+        "sha256": "1687054745dd4d08eead6323905541de85b91027e6021b9fc5e0f73ae3059758"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/NopInstrumentation.cs",
+        "sha256": "b6312d140fb894a261cc19f46263d9a736d0e0c6e499aed581600c62b0ce2022"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/NopTelemetry.cs",
+        "sha256": "1aab1cab96666488268bf57ce1fd7e6d86c1660684642d7f42ec52017e576050"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/ClusterDelegationResolver.cs",
+        "sha256": "af65b6d5e3a50e8bfd0177044c0e4abd83003cb0eb87c352f5af85741ac10ea0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/INopOrchestrator.cs",
+        "sha256": "d1ef4ff2e5469a5e7f669aafb4b5c42471de7c21cb1df7da979b9084cb53de93"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/INopTaskStore.cs",
+        "sha256": "c3a4fef22fc96dfd2ac7a30671b7f7433ef69cff6f4558fdb1086e78beb95ebf"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/INopWorkerClient.cs",
+        "sha256": "7bb38e40e4d91a4f3164a9b1078d7454bc58705042b17f5029fd05fee2543fb7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopConditionEvaluator.cs",
+        "sha256": "5d5affea9b0a9cdf4ddc553a7b25965183796f59f0e13a8caa682a1d4f99eccb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopInputMapper.cs",
+        "sha256": "069aeaad097de3af2b40ad1bf4e38359adc72e54608ecf49376bae41c1c0b927"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopOrchestrator.cs",
+        "sha256": "2df7aebe4b9983e43464b9ab3a64d3e5cb2a7843e444d055f7d324be5054433e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopOrchestratorOptions.cs",
+        "sha256": "edd48ec559aed7bd6d18144eaa40d9e256299c26e428b49969d2213adc14e855"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopPortableProfile.cs",
+        "sha256": "a97601dcb4f4c84b076bb1fe9949a9d6e7a6b480a826c5477feaf81230e78334"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopResultAggregator.cs",
+        "sha256": "d9d47b4be500116c2ea0cd24caa1bb7c2d34e5b6e9b0f066ce3b2d9f077541d1"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopResultRetention.cs",
+        "sha256": "9539120306f911fdfc2f4012e82a8d17c8be49bb56cf084917cda43c09ddcee2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopTaskRecord.cs",
+        "sha256": "cffdd594c0ee9d64866d73cd09e7c603e60ddcbfa9dfa8198dc7be3649b177b2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/NopTaskResult.cs",
+        "sha256": "e2ab251e777ee0225ef986d494ce88ff85808ddaa2fb5d5c1dd0a81bb1e4bb99"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/PreflightResult.cs",
+        "sha256": "8c18435d6923f119f856b72bfbd0d1f48a0ccfc8f0b354c8af9af45181bc8afe"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Orchestration/SagaCompensationResult.cs",
+        "sha256": "1c8dcdcc7589f337135ce9cbb2df02f815f16d2eec8244f8dafeb2b30bee9bed"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Storage/InMemoryNopTaskStore.cs",
+        "sha256": "1de403f3852cb0790ec373669327f0f346f140a8419e37f00b5b589c07a4c43f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Validation/DagValidationResult.cs",
+        "sha256": "59c42e1780b13a2f5746254bd817745e48cecfe338162ea471e286de80420562"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Validation/DagValidator.cs",
+        "sha256": "b65daca007afcfa67f2c2478bc778d8c09f5c4ba073373346209ccd62e09670a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NOP/Validation/NopCallbackValidator.cs",
+        "sha256": "d0e9fea31c26f88cc000d49cb60df685d1587364971c80ade3a103170f50f483"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/AnchorActionSpec.cs",
+        "sha256": "22f50da09de4a66e05617dbf9b11a62d989bf99bc94346465c4e94e47e34b981"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/AnchorNodeMiddleware.cs",
+        "sha256": "5c6835c2314d93b6323971e17dbce5d9e00df44ca3b66918e58727183aea1782"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/AnchorNodeOptions.cs",
+        "sha256": "09dd13c4c999eea48554b25838de1a88fcfaa5f1cbb18cd399a5a868d823cb27"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/AnchorRateLimits.cs",
+        "sha256": "eacfa106d0505d61039bf01f258e6c78650b144e8cfcd5689c9ebe389c497952"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/AnchorServiceExtensions.cs",
+        "sha256": "d3c8aa08c7fae027eadd98a467132e2e8cc954d2f1b7c8fbb80755485d764a6b"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Client/AnchorNodeClient.cs",
+        "sha256": "2afc5b9750aa3dd3ca7061554f0839a181756b1fba80f7f9f132a09dacba42e5"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/IAnchorRateLimiter.cs",
+        "sha256": "2d2473c7b7d6e0c1785c3c0e56a4242ad9e7337edaa4b38f97fc7bf4950a27c9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/IAnchorRouter.cs",
+        "sha256": "cb372ece502000ecd5112889b77549c53f78577771bb1f78b0e268fe42688770"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/InMemoryAnchorRateLimiter.cs",
+        "sha256": "a1fc4e95fe31b14f914be9477a476b90ae56a4161716e9a617e2d9153ae5dfa9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/LegacyGatewayShim.cs",
+        "sha256": "b97e89d7a3d12d706714db872b557d774bbfb3c395b87119b8fa2927a06c868b"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj",
+        "sha256": "ff7dd7334b460c253b5371e6554f7a2fca2848f1ca09163b3924703b2e7f2e2c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Reputation/DefaultReputationPolicyEvaluator.cs",
+        "sha256": "34da82950b875040539401bb60f41ae1f6854ac21f4805fda824c8beb3ce1e23"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Reputation/IReputationPolicyEvaluator.cs",
+        "sha256": "bc1f795516f602a45e893b6a9bcd8cb6f53e2def22eeff1083e785a110c4f822"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Reputation/ReputationPolicy.cs",
+        "sha256": "c4a50a9cb4a9224294c630246490740777953b7da6952aa32e1c1f168eef6909"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Topology/IAnchorTopologyService.cs",
+        "sha256": "0a32c98589adf9eb4c979103840758ceb9ef15bff2fe181dc8d81ab05466dd61"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Topology/InMemoryAnchorTopologyService.cs",
+        "sha256": "1f6ed11ef9609fa9dd3e44d05b048ca878acd01e972868f969a4a0127512bebd"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Topology/NwpTopologyErrorCodes.cs",
+        "sha256": "283039f471184d29a2987b22018f95599af1aa4f3b4ffed998a64d319556acb8"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Anchor/Topology/TopologyTypes.cs",
+        "sha256": "e355c05e0234eb26242fe79afb42adaa94c367da2c6f6135436c507797a90320"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/A2aBridgeDispatcher.cs",
+        "sha256": "3b21a963f1c81fc014f76ed57d0defa60225a84bab756d77f41402e00737015a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/A2aServerTypes.cs",
+        "sha256": "3caa78a6553e95fd1a04bce6f74689b0fc42bd7c8eb9580fcc02d55ec2e9307e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeDispatchException.cs",
+        "sha256": "319485860d1a149c298f18c3193cd02eae598a3d67013396c9d338d46a43eb56"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeDispatcher.cs",
+        "sha256": "f1e9f8615613c61ad903cf266a36c4ce06d296ebed98519f4f99e20b8bc912c0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeEndpointValidator.cs",
+        "sha256": "e3f801ab772d97a456f215b0ed291490f31f3e43bd0ebdea7d4a4bde55b4fbf9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeErrorMap.cs",
+        "sha256": "1c740fb13f0ad8c10fee02511f060e6ac03b049e531da84f2a2666980a2656e3"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeFrameJson.cs",
+        "sha256": "70b642eaf603bb89f7390f9360b7e2110dfb733d0e32baf4fce37596d3fddfbc"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeJsonRpc.cs",
+        "sha256": "f23bf0d6eaa863aa2ae35e16f7597d40e8bad837851a16ad30633908e5ccd902"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeLifecyclePolicy.cs",
+        "sha256": "684a4cb936cb911964d08de27bbe67dce27e47fc3b6c592fb3ed472193366c52"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeNode.cs",
+        "sha256": "f29e6951aa0113eb07ad0b49c15074e88e11223613f99337f2bafaf70212b3eb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeNodeMiddleware.cs",
+        "sha256": "28399c3841cedecd4cd355df7dc87c4967554d1fcf8a9bc6c1463ee80b2ae9aa"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeNodeOptions.cs",
+        "sha256": "c1e87fe022f10a08fba2e424862c3c07610a4b79f80cf76a7aaf77c880c7e3fe"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeServerMiddleware.cs",
+        "sha256": "d98b1d6fe8777a576db503a7b78616f3f1606474fbbea49a5ec80fd1a7d29448"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeServerOptions.cs",
+        "sha256": "83a4747c1ea46c10a9649348a41e050a022aedcae0c22403ed67e6baac3ea74b"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeServiceExtensions.cs",
+        "sha256": "6b7cfd4215c8f96c8d65151ce997eedd2107f993247da837e805e47c796ebcb0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/BridgeTargetParser.cs",
+        "sha256": "505194b712a0e9e7d8a15c40447e91722421ceb2dfd8ef40b69fd96e07d470e3"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/GrpcBridgeDispatcher.cs",
+        "sha256": "6efea6452dfda503076e99bdb27c91ec191faea72cef53455688fe938aa948f4"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/GrpcInboundService.cs",
+        "sha256": "413cf4a6abadfed05fad5a3153ff6a1d01b2752747bab3f4e20d089afbe46b91"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/HttpBridgeDispatcher.cs",
+        "sha256": "46cff4c0d926203459d3b5c2ffa96824175238dca57e1ac52e328464cf1622ec"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/A2aInboundServer.cs",
+        "sha256": "9ae77ba784c21a672e4b4338c27f90d3f40aad19a3d4f2469dca491d69fc5366"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/BridgeInboundOptions.cs",
+        "sha256": "dc8c3ee4ce3e66210353a11af523d6ad686b5a16d8c6294bdd9bef89acd778c9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/HttpNwpBackend.cs",
+        "sha256": "3ce6de378fc7250d6762b6f9bb8a7ac758ea42df24c5b65cbdcd1628f7670237"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/INwpBackend.cs",
+        "sha256": "7dbe466363eb513216a34e98b193549269fff764b40eadf1aaf0700d33ce08b4"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/InProcessNwpBackend.cs",
+        "sha256": "6b7d98fc4427a760219e7675bf09df8c766168ae3a62ab8c719b7cdad9670e74"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Inbound/McpInboundServer.cs",
+        "sha256": "3b8b4d326c27817c088e1c83f9fb5f570f3273e9632963a284359ddd636be8d1"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/JsonRpcBridgeDispatcher.cs",
+        "sha256": "0f2161fed6721541cd0ade842e42d1f2582774bdad4776772b0a8907ffc15b72"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/McpBridgeDispatcher.cs",
+        "sha256": "28db0fb31cd613b2010840de2ec79775946e1ed694e8bcd0014da9d4e8c04593"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/McpServerTypes.cs",
+        "sha256": "469693d98e784daf6a223009685f3e67ac4d144108ef927eb7947640f16c6ff0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj",
+        "sha256": "6358b402b09b860e55cf0c6c09be53e774f62a35c32d2f256a4a74642055f0fc"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP.Bridge/Protos/nwp_ingress.proto",
+        "sha256": "a4fa8e58c24b0c18980510538e43c9cd4b8f14eac8e5f17a5be32849fba4fb08"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/ActionCallbackValidator.cs",
+        "sha256": "ac18c4a7eeaf0d1b76b1bdac2197faa8350daff5703b040ecb368e4ed1720fa2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/ActionNodeManifestSource.cs",
+        "sha256": "3da627fb0326e3a5a4016330dd9b1a862528a14d9e7cbbe9e62c32f70e38e475"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/ActionNodeMiddleware.cs",
+        "sha256": "96150425dd012a8082530f08a9eddfcf15ff7f5ae5869700409a13317a616a27"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/ActionNodeOptions.cs",
+        "sha256": "20d3a4cf1bebb331f5c6b79faf6749bb862277dc4a3f3db2f20bb1299447c386"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/ActionSpec.cs",
+        "sha256": "c0ae1e938ef3d062ab2b57d8be10b7b597a9a4486c0d5f6bfa0aed9d1ba1027e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/IActionNodeProvider.cs",
+        "sha256": "2f9ba9996f0ee0072ae80738eb4f89cd099667e8dfaba5e1797a2040864c5601"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/IActionTaskCancellationRegistry.cs",
+        "sha256": "af92b7ef3a7ca798735848eeb6669b3ad01ce812c6622ef91e03e8c8b5ba5823"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/IActionTaskStore.cs",
+        "sha256": "4847e1c8da81b0c3ab06dfce0b9ca1ec9a4cd413fafe211a8c1b96515862e947"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/IIdempotencyCache.cs",
+        "sha256": "1ece7be61a1b9d7c7eb437a9ed285eacac0486ceb8e51bd466f5b41f34f25f70"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/InMemoryActionTaskStore.cs",
+        "sha256": "efdfb184f458cd8fded53ca2156b5a95b77cfc9e96cfcb05fa04542521285713"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ActionNode/InMemoryIdempotencyCache.cs",
+        "sha256": "714b9d55bfe7a20bd6b773645c2088652b1748c596e5701c041df6299d5c63a6"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Actions/NwpActionContracts.cs",
+        "sha256": "bffcb9d8e64af4fe2896670a759f77b63444235b4eedc450fcc6b3c22ed93194"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ComplexNode/ComplexChildUrlValidator.cs",
+        "sha256": "970d334771f5655d4fbf84ebbe55b28edce2c58226c0a44faeb1ee75eccb6caf"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ComplexNode/ComplexNodeMiddleware.cs",
+        "sha256": "a1daa461ebf0ebfb0f817de4acc2809b49e2b345bf1ae1087fbeac411ee5558e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ComplexNode/ComplexNodeOptions.cs",
+        "sha256": "1e2c70a434685f488f731ae0434c9a11554e58788415fd64d8536a9b377cc481"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/ComplexNode/IComplexNodeProvider.cs",
+        "sha256": "53c61c3ef02b707a376cc476c8f56004915903fa41f313b1b8f877d0f629167d"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Extensions/NwpServiceExtensions.cs",
+        "sha256": "21e7356cf15cac4d798ee994f31a22ed29b4f5811eb4e4247bd28f240d9b5910"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Frames/NwpFrames.cs",
+        "sha256": "58b9af52843dd5e5b7ac7e403e9ed846cfca393e16a1857c2fa1ceb3dad7fbce"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Http/NwpHttpHeaders.cs",
+        "sha256": "d87f680407f3ae14a3f9d9495d91b02d08691578d2f62ac210d06a0a71e6067f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Llm/LlmCompleteAction.cs",
+        "sha256": "406747540744473d5bc780b7d5e5f76a2161ec732952c65e9f70cad526f225dc"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Llm/LlmContextStore.cs",
+        "sha256": "51aad752242475ca9a0a2064bfaea5375b1afb51d618065b60a4f4a695975601"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Llm/StatefulLlmActionProvider.cs",
+        "sha256": "ab7ac1074c07190f51e753c9c3c7e6ec596d3c63c2c5eb8104a98ed7dd791b99"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/CognMeter.cs",
+        "sha256": "00e17121705c4ebdfb7b63041e1b7100b7c4996f5ead9f308fb4db4028930cf3"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/IMemoryNodeProvider.cs",
+        "sha256": "a13a455c399a0ea27712f051857fc8f886c8c7b91c5b40909af29a26edfffe77"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/MemoryNodeMiddleware.cs",
+        "sha256": "7109da61707c661fa103525c0160aacd0d93bd2e34a3ce86d5c7c29398f77dd9"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/MemoryNodeOptions.cs",
+        "sha256": "f1b854594020072c89abb1c782824388d55bb269ef26d7eb887eab356392d5aa"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/MemoryNodeSchema.cs",
+        "sha256": "cddc5880594cdb89edb5d738e804a6633cbc93f50578fff1ad167f82ebce8112"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/Providers/PostgreSqlMemoryNodeProvider.cs",
+        "sha256": "e9fdb4d1343f411b08c194c5da31d17fb90c07b0f1fdc3434b3665a2c4a699f2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/Providers/SqlServerMemoryNodeProvider.cs",
+        "sha256": "c80c276788b3bec18dc251c41c8e18a929536627703f15ea7bccb90d337615f2"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/Query/NwpFilterTranslator.cs",
+        "sha256": "097cec92b169375f83a461ec13bdf1912623346335e6a18ee38e98c64fd1b3b4"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/MemoryNode/Query/SqlQueryBuilder.cs",
+        "sha256": "b2e110f080117e67a2a32c5a6434f5f655112f31f0b694b4ceedd370b078fc5e"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/NPS.NWP.csproj",
+        "sha256": "e127700de1a512edc2634cbb4b0746a5d7c48b355591d86c43beb58110175600"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Native/NwpNativeNodeServer.cs",
+        "sha256": "7c65278b326f001ebf8ddba7bd84f7e4911f92256cffd0ef8aa780a73bd7f3c0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Native/README.cn.md",
+        "sha256": "8418be5d2e1dd4bc0d3dade3559657002d2ce20af366a5a47d6dc49f132b2dc0"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Native/README.md",
+        "sha256": "888eff1458993a29ea4d183048e534f12fe2803675a96a118c6e7eb7b378475f"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Nwm/NeuralWebManifest.cs",
+        "sha256": "1154eb07dceb1b6a2541c0fe1b75d953473992f925e562aee52f8d617eccbb36"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/NwpInstrumentation.cs",
+        "sha256": "2f7b9b1cf0504067f7b48b6d19328afcd1140ebf407a68ac31a47de15d684922"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/NwpTelemetry.cs",
+        "sha256": "730874f65825ad816770cbd8f28a965a301138ad53c1704e7dcd82139c4fa0ff"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Portable/NwpPortableNodePolicy.cs",
+        "sha256": "ffcfa128453d929e0f11d497e11b5cbc34a12029bc47fc155c297ae8e3b0f51c"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Registry/NwpRegistryExtensions.cs",
+        "sha256": "3b80e340afc32de6f544aac21e3b50ba87998c08be678174233b9ca0401e6632"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/README.cn.md",
+        "sha256": "58f542f5e7b033e557e1e1a89eae00ef3daa7c67d415b52b077dbae3621ce8b6"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/README.md",
+        "sha256": "c3f3f1d65f9ef556f5178beac81910672bdb49743fe1ecf9531778f5e3fbd899"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/ResultActionProvider.cs",
+        "sha256": "9a1ffe50c4e0244edeb90078f6aef98f8fb5221f3f610f0a6adc2c4463280506"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/ResultHttpClient.cs",
+        "sha256": "0478b70d7235981e33aced0f6b36dec1c6f0c97fc09e0514692cbad320ec91bb"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/ResultResourceModels.cs",
+        "sha256": "ef74028c26323786cda83c208d11c65da7bcfa9faa3bebc54a578f57d9b4307a"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/ResultResourcePolicy.cs",
+        "sha256": "3f2602a55217b865f3c7e34b17ea807402fb1360eee67941ccbf1f269ae4aa17"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Results/ResultResourceStore.cs",
+        "sha256": "b92e79ff5e4cb5b4d983e69cba0094e3054abb2186a1996ee24cf70727efc3a7"
+      },
+      {
+        "path": "impl/dotnet/src/NPS.NWP/Serialization/NwpSerialization.cs",
+        "sha256": "485dc84b422b1da143eb884644297b1ea57a4077faa107cb79eb01e9fdcb275d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.AotSmoke/NPS.AotSmoke.csproj",
+        "sha256": "b8bd70d35d6d26ad46391d027cf99f041827804ef30ed2413e3e4233f68f5c64"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.AotSmoke/Program.cs",
+        "sha256": "e4c3177b831eb792102d42842692ac6662f9ecc59a5c8afc8c886c407c7b5a19"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha19/Alpha19HardeningTests.cs",
+        "sha256": "dc91323450bf88e099ce579edcd361bfaa9919180ce372522ba2af5d86363125"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/Alpha20ErrorStatusTests.cs",
+        "sha256": "21fb5fb3c91eab0026d02200a0bd81fde34a6293764e5974d471ee17a9315590"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/FeatureWireParserTests.cs",
+        "sha256": "6cbf81dd5ebb0882acb98c1436bae0103a7a6cf16d1b9bb121680b113d33c28f"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/NipInvocationJsonTests.cs",
+        "sha256": "cf7e2c6b1809b193358251051d89fa2fe92423b527c41c56ac902288f0f15c57"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/NipInvocationVerifierTests.cs",
+        "sha256": "7adfd78ae86e8b486381acb85aee9c84a78387d2aac0c8819be6a525cfb51146"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/NipProjectionReplayStoreTests.cs",
+        "sha256": "a0936c434d4196515ebb34be92c801aa1b5ab931bcce4c22e9c1a075f2dacdf1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Alpha20/NipResultHttpProjectorTests.cs",
+        "sha256": "269f8679068d6bd06e73ded0d4f4f0c4b48a07cfd913438ac70d6ad252f8ec71"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Benchmarks/TokenSavingsRegressionTests.cs",
+        "sha256": "73266d963f1e71b6bf54e9305a29244f6f6f565e578a67958c21567d77bc3d69"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Benchmarks/WireSizeRegressionTests.cs",
+        "sha256": "4b3e2e832f57a8c9b646d2546b1bf922916ad40b65f2115b2e30f0cf6241652a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Conformance/AaaSL2RequirementDispositionTests.cs",
+        "sha256": "2ba2153634c28c1eaf1696fb2c72e5f14e3749f64a7b4239ccb814a09e51d0ce"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Conformance/AdvertisedImplementationManifestTests.cs",
+        "sha256": "496d0cef1b878aa82147513a808b674eb20e334ee4137c1b0444aabc034234d6"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Conformance/NodeProfileCaseInventoryTests.cs",
+        "sha256": "79c4700ab987675f539a9766a26340c14f374ac6af7c4e82bd25121ebfde842e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Conformance/NpsConformanceTests.cs",
+        "sha256": "72710e766adcec1fd169db6200f6d11d48c5755f0a512396ed0779c9f7f3a6d4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Conformance/NpsdNodeL1ManifestTests.cs",
+        "sha256": "95f10f3da8a96de4561e4ebec6371906369e140f3a1c9ec981ba0c39719247c4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Ledger/GossipStateTests.cs",
+        "sha256": "10a910fcd3a554dd1a7d694f776fbff8f07f18d7b3c20ea66a97f46a4084fcc7"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Ledger/LedgerStoreTests.cs",
+        "sha256": "d9ca0dd3c2963b645855b00f3ef307e012e018421380b635f256aaf299e2e61e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Ledger/MerkleTreeTests.cs",
+        "sha256": "5b9f8b143aa7abc5f7aa9d9de95d386e5cae33bf28d579343a6e34e739d12064"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Ledger/SignedTreeHeadTests.cs",
+        "sha256": "e6990e8d7bd49eea41b10989645ae6c08565281d6ba8ea66b1105d1ea8c4b701"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Npsd/InboxTests.cs",
+        "sha256": "11cdc6e22d63af538c1241c1b4eb5cafe5a62bd07ebb4598650ed98bc9ae3fc2"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Npsd/NativeNcpTests.cs",
+        "sha256": "50219413539155344a3c156333854107c58724ec8e2f91c30f69af3b62f583bc"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Npsd/NdpAnnouncementTests.cs",
+        "sha256": "a422d746af0df2d80b1aeda7cfb5585ecb7fbab149abb97bd8e54ebc7551693d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Npsd/NpsdTestServerFixture.cs",
+        "sha256": "e347ae4eb0b9fb30895f07f0ae3486510b597cd2154ae787007d5f39d12ee880"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Npsd/SubNidIssuanceTests.cs",
+        "sha256": "4039eaaac754f605def6c7ab4eda4e458b37cfa82a580b80d18b0a361dc07318"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Registry/RegistryClusterEndpointTests.cs",
+        "sha256": "3f5e5c0f911a7dc9400ffcbac6d1e530d749d9d77579402770742e5276dc8ea5"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Registry/SqliteNdpRegistryClusterTests.cs",
+        "sha256": "b3acba2ffeca880764973826af4c243e6296f45407480b8e8a5668957450c505"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Daemons/Registry/SqliteNdpRegistryTests.cs",
+        "sha256": "0e7d2d39d135f57e5f86972fbd998d3d0add4a44347cdeeb9020434f417ef82c"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/NPS.Tests.csproj",
+        "sha256": "a29a7fdd29892af8346a671630617b9df0637fc962bf0c2dba48aced14213e09"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/AnchorFrameCacheTests.cs",
+        "sha256": "ed0b8bbc373fe384a5fcf234f74c86bdfb2b8cec0c175a10d732a6223c99269e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/AnchorIdComputerTests.cs",
+        "sha256": "3130bf113e55a2d86eca270f723da6f2b12d3d93af498d4d7346a23ff7b0c3cf"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/FrameCodecTests.cs",
+        "sha256": "b8334282bc5498ba58b2a63eaa4fe1c91266aed927bdb90ddb1bb0ec16da6860"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/FrameHeaderTests.cs",
+        "sha256": "fbb0fba8138c5ffbd9620bc0bd6c0fe780a08316d53ef9cb0a798c72d7b518c1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/FrameRegistryTests.cs",
+        "sha256": "98ed7a7848390a8e5d4aa4d0b4789fccf78bc044d36098a58f0deefca17d920d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/HelloFrameTests.cs",
+        "sha256": "b4c7ca531e627aa397e26db4686fbf8528f1a8185126c0d8ea4a8cf70e1ac4c2"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpEncodingPolicyConformanceTests.cs",
+        "sha256": "5e0f5a037612fbce05f9c9c6b91419a41ed65a0fdf131c1a350d08ef1965dde3"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpFailoverConnectorTests.cs",
+        "sha256": "340ccd2bb32ba0d13d57d23ed6901ad275b61841aef1b43e235f39de094a68c7"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpHandshakeHeaderBoundsTests.cs",
+        "sha256": "ad910b988c8aa4c08e13b38e72aed56c56cb3d519f2ca96ca7da4e98a318f343"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpNativeModeTests.cs",
+        "sha256": "e81f6276bb5b66120e62958cdfc198b8767275509cf3215e450c0dab371e98af"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpNativeServerConformanceTests.cs",
+        "sha256": "3e587b09e7488ce793375c702395075bd026810d3c92580731519ec33c560c8f"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpPreambleTests.cs",
+        "sha256": "5d9e8aeb6601d082bde899126b989001a747bf9b9eeb7552857ad0293c00c70b"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpSchemaBatchSessionTests.cs",
+        "sha256": "db65da5a3bf8a1de516dd558c1ace2dcb9807b5a57ce6773a9be28c3fe0178fe"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/NcpV04FrameTests.cs",
+        "sha256": "a9961a64b1fcfe52e1add42401ef6a4528633456efbe2a4c3674301be73e93ea"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchCaptureProgram.cs",
+        "sha256": "43fc00a23e15188ca9e9a1453de33b7f57fd7ac1613a6e87682f3af7ba8d57a6"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchPortableVectorTests.cs",
+        "sha256": "3ef063e79fedc5df6c7aa1e01e5500ed24e812c8bd4ee962b76d930681065906"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchReceiverTests.cs",
+        "sha256": "ac4a1c933c2b974eb99f80d3cc569fb9192b7919f35417741a95af61c2f6689e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchRepresentationTests.cs",
+        "sha256": "5891e4e1cce2abc4e2a612d504bfc4a703d0f1e6b12a0879105ce6d7fd53953d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchSchemaHashTests.cs",
+        "sha256": "b58010f6cc4f7af4531597eaf6afd621bf317f310d293bbc2342db5eb62311e1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchStreamTransferTests.cs",
+        "sha256": "cc554ade72c7622238632ebf779d4849f892756c896f7f01db0e39f29c31fa0e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchTransferExchange.cs",
+        "sha256": "2080da6111a43c99e1922abc00187e0ada76a349dcb434112f189a4142476950"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchTransferMeasurementTests.cs",
+        "sha256": "aa71e679dc4cf9b9e6433473ba991322a9ba4b7d1c38d26a0c336bc803a853f9"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchTransferSource.cs",
+        "sha256": "d8ecebdfce69178837a7b08144e50ea23fae8ec73d9ba80417ca64ef1f0ab85a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ncp/SchemaBatchTransferTraffic.cs",
+        "sha256": "a9e4a639f6ca9477a1dd8424c012656941173e204cc78250ebf3d8e6a98f6006"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/AnnounceBridgeInboundProtocolsTests.cs",
+        "sha256": "63e6dc941d6ae550ec9919956f9626a2fadb154e943d74131b712628807776d1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/NdpAnnounceValidatorTests.cs",
+        "sha256": "dbfe7bd4fc54ee1d732a41a85300d7cefe4ef40a056af7848158284470c1c35f"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/NdpClusterResolutionTests.cs",
+        "sha256": "ccd041431281769ff0ad320c73c095217a8063a76e78813278dbac7e8412e86d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/NdpFrameTests.cs",
+        "sha256": "14cea62754db3d64e6574072f1273072afec53f83e2ff13737c9c82a6776da7e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/NdpRegistryConformanceTests.cs",
+        "sha256": "5c9b86a37953f616aa8baa3eddc33c2a715e802b024e6156f588ad394fde5962"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Ndp/NdpRegistryTests.cs",
+        "sha256": "5f1528d2e2fe9c4cdd244e8e52627bb0f43e76e5c5448bdaad12909dd662c844"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/Acme/AcmeAgent01Tests.cs",
+        "sha256": "80e2e1b553190d670194226e8b9cab777b3f5e72d472c93e6c5cc08643abfd72"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/AssuranceLevelTests.cs",
+        "sha256": "b9a34db407bcf33acc6f16c70f5eeb6b82367fa8a516a90d14058f0f0cf25ace"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/InMemoryNipCaStoreTests.cs",
+        "sha256": "9687e9dd7fe37dd19ccbe59fe4bb5639e0af6ebb99a0fc9bb9dcd8ea09bba044"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipCaClientTests.cs",
+        "sha256": "f559816878bca22199438119c9b99bfc757c4f3291b03d06e9e5cd5cc67ec697"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipCaServiceTests.cs",
+        "sha256": "09f9ed3425566c633a70c38f498d4fa1ba87bc233b9c228cb02853e9488f2acf"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipFrameValidationTests.cs",
+        "sha256": "6305edc3cd413c2f29f68df68751bf810c1ef0433fb21874239b5d91a11ae453"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipIdentVerifierTests.cs",
+        "sha256": "534333dff6ce1a0630dc45591a4ffcec0059ccc45c113db52008d0e6b7f892ae"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipKeyManagerTests.cs",
+        "sha256": "115d44b61d38e97a4f7e7abb1deb117cb2aa15fe1d73e758d0740203d6686983"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipPhase3EnforcerTests.cs",
+        "sha256": "472e7268a2a11ca6c7707ce10cdcacaac8eb75c40b341bb308159e502ae157d4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipPortableProfileConformanceTests.cs",
+        "sha256": "c2a154d307509a62f61a17d865149f6122f3e9fded10e9ee54b2e1f3ae3a8750"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/NipSignerTests.cs",
+        "sha256": "74bfdd75a0c2dba3ec065d700af0a30aa4a39b9ba40fdd982cecc8107b284efd"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/OrchestratorGroupSessionTests.cs",
+        "sha256": "1882eb5089ca46677f561902b7e62903a18e0fb3428a50d9a5b9d91409ab0cbd"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/ReputationLogClientTests.cs",
+        "sha256": "b852fe00d144db82cf4f0dd1687e0862f4c64ede557a7ddd40cc2105485be362"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/ReputationLogEntryTests.cs",
+        "sha256": "e6a40f1a45f9bddf48d3697a44ba46043538e0d824c88719e509a17f0f2bb2c9"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/SqliteNipCaStoreTests.cs",
+        "sha256": "402dfd6d5478a4554fe18b05f485974fa34e8f32ec0d21d3aba5010a10a0e6b1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/TrustFrameValidatorTests.cs",
+        "sha256": "50f0770b35e16c0c7e8ebfc90dc2f818bdd79a1da07ff3585b6ad564f620b2be"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nip/X509/NipX509Tests.cs",
+        "sha256": "ef6a7330905dbe8b4cde348ec47bdbe024ab405c9a4c6361f12aac36bfb103ba"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/ClusterDelegationResolverTests.cs",
+        "sha256": "75a3d606a6720bdecf92c3eaea3f5074997fca3c79da78b53a4456a6bd7eb260"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/DagValidatorTests.cs",
+        "sha256": "382f14612c626966bf950a325839817b14ff9024687b40fd5657967670154b8a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopConditionEvaluatorTests.cs",
+        "sha256": "bc2205abbea5c16a1161746a44bf8c9b0a3c01bee5a4e816791fda31d5c8a5ca"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopErrorCodesTests.cs",
+        "sha256": "9e9fd4ee083788166c162e47e9fd40c909fb1b7c95c9f222b50aafbd3823eba9"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopFrameTests.cs",
+        "sha256": "486d64cc33cb586b1e50fd08e3a6dc6731ea18d90446ff0f1ca1f70de1885f71"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopHardeningTests.cs",
+        "sha256": "53f1e39cff318c19366c58794981827219c2767166cc32d9443f89beed87701a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopInputMapperTests.cs",
+        "sha256": "e094508971a82b709321f30702facfa07f51e4542973a56f7af447616ba56da6"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopOrchestratorTests.cs",
+        "sha256": "0844fa097283825c2fb5a429897a09c0dd64d94e594735c43c2e220ac1b9777c"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopPortableProfileConformanceTests.cs",
+        "sha256": "6cfc1711916e66428d19846b2258c22733cdd7ac80278764ec96cc625ef28bf4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopPreflightAndKofNTests.cs",
+        "sha256": "f55546a8b4c2066c679cde421a4ece3a1e46cb5180c73a5b0cdd23e7768d7206"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopResultAggregatorTests.cs",
+        "sha256": "034dfb7c1a4330cd8de4487ba322014a8e6a4888b4cb0a1feb658070413aa705"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/NopResultRetentionTests.cs",
+        "sha256": "929a53868afa7c8c31137baa48c0f5b59bc292aebee6dd443f395c5cc49f8450"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nop/RetryPolicyTests.cs",
+        "sha256": "5f335f4bcf07ba15dcbba1af2ba2aabc9b4e246a562cabd39e0279bfc351d76a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ActionNodeMiddlewareTests.cs",
+        "sha256": "62dba2c3f4860c915f2c4a2dd4bf94e363ec0a80a201f2ec7c874dfe1d8fca12"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/Anchor/AnchorTopologyTests.cs",
+        "sha256": "5495c8b8f48be0b8b1b2004eaef8bb28e3efff800a6f5b956fb55d996433b93d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/AnchorNodeMiddlewareTests.cs",
+        "sha256": "f7e3c63a3a256e70890737c24ca2daaebe391eea6f869b90acf17a78bf732da1"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/BridgeErrorMapTests.cs",
+        "sha256": "17b7746362bf2c8e249b604d1cbf092464852dee6c3afb868e80bf5014935be8"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/BridgeNodeTests.cs",
+        "sha256": "fb03742d0f40160211477f4e0e4a9f77576471576eae2837e1341d1d0a31c7c7"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/CognMeterTests.cs",
+        "sha256": "d0f64891decebf3d59756b5177442944b7ad450f3f3445cbd2eb5d2d2f0c8076"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ComplexNodeMiddlewareTests.cs",
+        "sha256": "50aed399334e0413668b46d58e8c2449a5f7a171df4b88c6dc3f5defa2654438"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/LlmActionContractTests.cs",
+        "sha256": "71a0bb704551afe3f3a4aa3bda9dbb6fa652bfdb4bdebeffdae082deeb35d340"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/LlmContextContractTests.cs",
+        "sha256": "7730c84c37b83107f61b92dd3bb331c2f7b8d897db3d98ee4076c1273a29481a"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/LlmContextStoreConformanceTests.cs",
+        "sha256": "6eade6b0241641467d046d168fbde8d50adf7a38ed6903f8db938bdffda43553"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/MemoryNodeMiddlewareTests.cs",
+        "sha256": "a2ac78dad83f1a6ecd38b06a847087c5e50c7ec016af9810c3e4be439041f841"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NeuralWebManifestTests.cs",
+        "sha256": "6af7bea69ca652f368062128891a240c489145179ac94fa65d086933abfddcdc"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpAnchorFailoverTests.cs",
+        "sha256": "21070d3699f71d6d13126ce0b60ce224d5b8961ee33cd8b5fc8a3605c95d8223"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpErrorCodesTests.cs",
+        "sha256": "af99d3fb96bdb42b1ee2bbb78a7bcee574d6b5c7457a0f90c89cbce37a120492"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpFilterTranslatorTests.cs",
+        "sha256": "6492832f3216dbac2f9f76617de724b26e549e1b2a752359113a1b70a113a9e4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpFrameCodecTests.cs",
+        "sha256": "724a7ad6d8c56597a7570cf46b4ed5d225de0666ef473d34c1ea69afef28683d"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpNativeNodeServerTests.cs",
+        "sha256": "d925990b1bb5a3739820f4b497b3a8b01b6f02504aa0d18c3ef794b89121866e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/NwpPortableProfileConformanceTests.cs",
+        "sha256": "cfefa8b0030aa380021acfb0fc974fefee2a5677d1da506278b9b94d3ba995a3"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultActionHttpTests.cs",
+        "sha256": "b8abacd47a5de7f0c3a7e5d5f158cdfeb785919d7d094e332cc44960ea9f60c4"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultClientCancellationTests.cs",
+        "sha256": "88789e2754403ee183517dff1d69d36b99c59ece615bc21b93dfc3cf8b977e5b"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultDelegationRevocationTests.cs",
+        "sha256": "44c6aba27c5710587d5db57d2fba5fb65eac496722503f130eb78e6eaa8c6596"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultFrozenInvariantHttpTests.cs",
+        "sha256": "2fff8865ce46816dc830b4982aefd42b50b4e7480b141430cf145383f8f2c252"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationGatewayTests.cs",
+        "sha256": "60433bf0a71fa9fc36b75fd12eae0d0672e6190d8f18d0a7ee59811ebde6bfdf"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultInvocationTlsTests.cs",
+        "sha256": "b8fb0d594521fd052abef305bad4c49c38f9b45fcce96e9afd28c11275090fb7"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultNativeAdmissionTests.cs",
+        "sha256": "e1a7c1be943c6cbaff2c2c69782ff8ce3f6b15d43301252b4e53c73258953510"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultOracleWorkflowTests.cs",
+        "sha256": "fcfe25d9d29309b6a21fea1b388217d784f97538a8cb1d5a44a07bef518b7d08"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultResourcePolicyTests.cs",
+        "sha256": "9ed043b392b22fa54d331e937d5769a216411825f3011f40a81c123d3e8e7656"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultResourceStoreTests.cs",
+        "sha256": "55f0197c7da7c49a9f7f704a5b10c81708eeb504183bf1bbd03bf337bf733e42"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultRuntimeComparisonTests.cs",
+        "sha256": "4ea4724c81bd77ab59b4da02741d5b90400418b8692c38282234e48c6d165fe6"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultRuntimeComparisonTransport.cs",
+        "sha256": "faf9e825ced312fcbf23bb3044d14aca85bcb2d9f68b0abfdbc24398a1d3cb4e"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultRuntimeDiagnostics.cs",
+        "sha256": "c3bd17ac73432e2823ab8b7b95b154b2265ee1b8fdb76beb454a5a46c8eef23c"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultRuntimeFixtureHash.cs",
+        "sha256": "d375f45106bf5724a9155d92e6d37df134197aaa58fd17ff34e8093223f4bdab"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultSchemaUpdateComparisonTests.cs",
+        "sha256": "2b4313e85a3ea36cfa2f899ed5cf549d4f18c1b9a10d953358b962eba8909564"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/ResultTenantBoundaryTests.cs",
+        "sha256": "e96a7a799d7fbc1bb7f52082c0870b9f4ed34ff6d928f1015ddeb451a2bb0f27"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/SqlQueryBuilderTests.cs",
+        "sha256": "c3bcf3b98f069bece7aabbaecf4cb180ea0bb22336359f8e556e1b739304fc0c"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Nwp/StatefulLlmActionProviderTests.cs",
+        "sha256": "89034ea57a451e1d9223fd64e399c8c020ad57ff99dfddb636cefbb3e11281db"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Observability/HealthProbeRendererTests.cs",
+        "sha256": "9cda77ea4e3ea32ecd8b323da054c261bae641b4bfb9489f6012fd4b5a07acb3"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Samples/NopDagDemoTests.cs",
+        "sha256": "377db5553a9bc3fe72b2410ec66057bf245c174bee7a0a491fe071b19ef90438"
+      },
+      {
+        "path": "impl/dotnet/tests/NPS.Tests/Serialization/AotFrameCodecTests.cs",
+        "sha256": "d586ab6766fad5f2adaab011ee2a6330213d94646ed5e68760e8a4bb932b63e7"
+      },
+      {
+        "path": "spec/conformance/alpha20/README.md",
+        "sha256": "7edbd75998624441fc4d6de20d7486323ec2d10590ef41146f01aa2953bb0deb"
+      },
+      {
+        "path": "spec/conformance/alpha20/challenge-schemas.json",
+        "sha256": "bce183b6c6086224a0a73289cbff81e22e8864ea8fcfd9ac02276e626d203b1d"
+      },
+      {
+        "path": "spec/conformance/alpha20/compatibility-matrix.json",
+        "sha256": "fa7dd12f3766e62de47e160d3bc68fe67f27f909752f788776d56f8ecfe32f1d"
+      },
+      {
+        "path": "spec/conformance/alpha20/context_crypto_vectors.json",
+        "sha256": "91bd0e3a86a66aa922ef39050d2d9c8f30264ece2c47b133f7e142d007d28a56"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_result_contract.json",
+        "sha256": "e9483dce3c551ee693d6dcd18ec1cbaa130a84e95a022d4629bbefe6f4b65197"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_result_vectors.json",
+        "sha256": "21a146914584b4c4b9d5ae62dbb234091279512a434bcb6cd9e9f4956355bd37"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+        "sha256": "be598bf69354df16f8f18c90ec9fbb1946263ec31430d8b6859d08537596be0d"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+        "sha256": "1dd4f3f71b5f7fd5d8ce9a381e35be2abc3eaeed06b993b74b358765a73c7864"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_gates.json",
+        "sha256": "d8fab0eaa6a7242c422d3e94e15c8298422ed67f3784003622afeceb3ae88d63"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_manifest.json",
+        "sha256": "24ee510e3dd951b415d54ec0ea26e730d1ea2a2573ab2278110d06b0897ca3e7"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_methodology.json",
+        "sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c"
+      },
+      {
+        "path": "spec/conformance/alpha20/data_workflow_successor.json",
+        "sha256": "6f320b33748ccead631f9b03f1761c400aa6d9bfa11aa40fdb48cf5d95e10281"
+      },
+      {
+        "path": "spec/conformance/alpha20/error_status_vectors.json",
+        "sha256": "2429bff23e59f78296589990db0929b39521fd2e2ff738689edb66faea2649be"
+      },
+      {
+        "path": "spec/conformance/alpha20/feature_handshake_boundary_vectors.json",
+        "sha256": "091b72a427f6d16c052807a723a44ffd6984830b62cd6b7c862e368719da109b"
+      },
+      {
+        "path": "spec/conformance/alpha20/feature_negotiation_vectors.json",
+        "sha256": "54a6912b0a3c2e850864176dc2e4c9b001f4d90f7a5a440bf7837606fb0c709e"
+      },
+      {
+        "path": "spec/conformance/alpha20/schema_batch_contract.json",
+        "sha256": "13001bfa948ba9e370315a43e79ad02a0d625b749b0cc4e1d173411c16ea5561"
+      },
+      {
+        "path": "spec/conformance/alpha20/schema_batch_hash_manifest.json",
+        "sha256": "4605ca1ec762717d88bfbfba08a6b71f60147a4f8b6d4fca1a68e92badaaca3d"
+      },
+      {
+        "path": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+        "sha256": "98dd09e5c538e7c179f21bb715d934af6b302621b667f86382488d03abd46db6"
+      },
+      {
+        "path": "spec/conformance/alpha20/schema_batch_manifest.json",
+        "sha256": "caff52e1430d8b58314cb2a11ea0f9eaecd0f03c96e69b57552665ef854a09ba"
+      },
+      {
+        "path": "spec/conformance/alpha20/schema_batch_vectors.json",
+        "sha256": "6653d0a101b92537244b2f3e48ff8d7ea9fa14861413d638575213a63b06877b"
+      },
+      {
+        "path": "spec/profiles/schema-batches.cn.md",
+        "sha256": "6fc0d11c5010b901cd597d20c03a54058956806bf8d1bf4e7941698eb26f5ee5"
+      },
+      {
+        "path": "spec/profiles/schema-batches.md",
+        "sha256": "c329790ca91ba65dd6fab4c7f9592eec01274dbc5f0ac60dbfc5accab8d5a12a"
+      },
+      {
+        "path": "tools/benchmarks/data-workflow-changes.py",
+        "sha256": "680517af85555f857f0b804439ee7b61104d27f14434e95b38d0612964dedffc"
+      },
+      {
+        "path": "tools/benchmarks/data-workflow-deepseek-runtime.py",
+        "sha256": "84dd759fffb40e619b633da3bedceb653ba6ce2144ea6d691516753f2ec14a63"
+      },
+      {
+        "path": "tools/benchmarks/data-workflow-deepseek.py",
+        "sha256": "26a8580009e95cfb217f3e40d285276d11d2e1196dcf68c8f4afbbf108932e86"
+      },
+      {
+        "path": "tools/benchmarks/data-workflow-evidence.py",
+        "sha256": "3604bbe5ade88385fbfbef4cf974719cb43682f85aa4961fb4794516f1cf6931"
+      },
+      {
+        "path": "tools/benchmarks/data-workflow-runtime.py",
+        "sha256": "6c8980745ce080909e7edadaf149a9e6c91042aeeb15d1e3c9d16d78100298ec"
+      },
+      {
+        "path": "tools/benchmarks/ncp-transfer-runtime.py",
+        "sha256": "3ab57ef75ab309969f593714dbed6e0e9da106754a14822242280239fecd7131"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_data_workflow_changes.py",
+        "sha256": "5ada561a0cfb6769010159c1f8a21cbbd80c384ef1e9baace56747e23cf67163"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_data_workflow_deepseek.py",
+        "sha256": "1b926386f51ca6b63a9f19bbb9a7dbbf7b99c2bb24b268512eb02397f846ebbe"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_data_workflow_deepseek_runtime.py",
+        "sha256": "9b5b631a600312b0df2c37982f6341f761d6a920fd114709621d8f62a5a29b4b"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_data_workflow_evidence.py",
+        "sha256": "c14b6ec89850d422b8dee172df4f7b4e48881191ab5fb5f8cb0ca9f4e78f46e2"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_data_workflow_runtime.py",
+        "sha256": "ac77806fd7585f6b9c9bcfc0110e98fab84a67a6cc1b2fa36b8b1c67e2958c85"
+      },
+      {
+        "path": "tools/benchmarks/tests/test_ncp_transfer_runtime.py",
+        "sha256": "978d1ad52eef5c71b52465d31ed46e8cd8bf540ea5c242aa20330cc50dd751c7"
+      }
+    ],
+    "configuration": "Release",
+    "rss_limit_bytes": 536870912,
+    "rss_sample_interval_seconds": 0.01,
+    "rss_scope": "isolated direct asserted fixture executable plus all actual descendants; no test platform launched; observed concurrent RSS and conservative live VmHWM sum",
+    "execution_mode": "direct_fixture",
+    "processor_count": 4,
+    "gc_heap_hard_limit": "0x14000000",
+    "repeats": 30,
+    "warmups": 3,
+    "paid_calls": 0,
+    "provider_usage": null,
+    "test_assembly_sha256": "04045b765914280fad9c70f63b3d8db1a5ac23dfb2a80e7e3b6adf7dfc969b3a",
+    "test_runner": {
+      "mode": "direct_fixture",
+      "assembly": "NPS.Tests.dll",
+      "sdk": "10.0.114",
+      "sha256": "04045b765914280fad9c70f63b3d8db1a5ac23dfb2a80e7e3b6adf7dfc969b3a"
+    }
+  },
+  "source_index_storage": "Reversible explicit path/sha256 entries preserve every source entry.",
+  "execution": {
+    "source_revision": "42a0b05865d4206b612cc55f2e80f2505cb6ea67",
+    "complete": true,
+    "passed": true,
+    "conditions": [
+      {
+        "case_id": "100-http-json-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.2791641420335509,
+        "process_tree_peak_rss_observed_bytes": 100319232,
+        "live_process_high_water_sum_guard_bytes": 100319232,
+        "poll_count": 115,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 5.80435,
+            "p95": 7.6001
+          },
+          "cpu_ms": {
+            "median": 8.7665,
+            "p95": 11.453
+          },
+          "allocated_bytes": {
+            "median": 84884.0,
+            "p95": 117424
+          },
+          "wire_bytes": {
+            "median": 14630.0,
+            "p95": 14632
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3340794239775278,
+        "process_tree_peak_rss_observed_bytes": 100126720,
+        "live_process_high_water_sum_guard_bytes": 100126720,
+        "poll_count": 121,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 6.4999,
+            "p95": 6.9448
+          },
+          "cpu_ms": {
+            "median": 9.9435,
+            "p95": 12.933
+          },
+          "allocated_bytes": {
+            "median": 129436.0,
+            "p95": 133856
+          },
+          "wire_bytes": {
+            "median": 26449.0,
+            "p95": 26451
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.265437630994711,
+        "process_tree_peak_rss_observed_bytes": 96821248,
+        "live_process_high_water_sum_guard_bytes": 96821248,
+        "poll_count": 112,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1.17185,
+            "p95": 1.3634
+          },
+          "cpu_ms": {
+            "median": 1.627,
+            "p95": 2.002
+          },
+          "allocated_bytes": {
+            "median": 44072.0,
+            "p95": 94760
+          },
+          "wire_bytes": {
+            "median": 10573.0,
+            "p95": 10573
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.230422185966745,
+        "process_tree_peak_rss_observed_bytes": 99090432,
+        "live_process_high_water_sum_guard_bytes": 99090432,
+        "poll_count": 112,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 2.3457,
+            "p95": 2.6279
+          },
+          "cpu_ms": {
+            "median": 3.36,
+            "p95": 3.76
+          },
+          "allocated_bytes": {
+            "median": 88664.0,
+            "p95": 90736
+          },
+          "wire_bytes": {
+            "median": 22394.0,
+            "p95": 22394
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3418364559765905,
+        "process_tree_peak_rss_observed_bytes": 100741120,
+        "live_process_high_water_sum_guard_bytes": 100741120,
+        "poll_count": 122,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 5.8579,
+            "p95": 7.7893
+          },
+          "cpu_ms": {
+            "median": 9.004999999999999,
+            "p95": 12.376
+          },
+          "allocated_bytes": {
+            "median": 85808.0,
+            "p95": 120720
+          },
+          "wire_bytes": {
+            "median": 5678.0,
+            "p95": 5680
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.4299265859881416,
+        "process_tree_peak_rss_observed_bytes": 101031936,
+        "live_process_high_water_sum_guard_bytes": 101031936,
+        "poll_count": 130,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 7.57775,
+            "p95": 11.9179
+          },
+          "cpu_ms": {
+            "median": 10.590499999999999,
+            "p95": 12.483
+          },
+          "allocated_bytes": {
+            "median": 131848.0,
+            "p95": 141808
+          },
+          "wire_bytes": {
+            "median": 7323.0,
+            "p95": 7324
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.1908255469752476,
+        "process_tree_peak_rss_observed_bytes": 97648640,
+        "live_process_high_water_sum_guard_bytes": 97648640,
+        "poll_count": 107,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1.36685,
+            "p95": 1.6732
+          },
+          "cpu_ms": {
+            "median": 1.7955,
+            "p95": 2.281
+          },
+          "allocated_bytes": {
+            "median": 45416.0,
+            "p95": 46680
+          },
+          "wire_bytes": {
+            "median": 1621.0,
+            "p95": 1621
+          }
+        }
+      },
+      {
+        "case_id": "100-http-json-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.201072085998021,
+        "process_tree_peak_rss_observed_bytes": 99393536,
+        "live_process_high_water_sum_guard_bytes": 99393536,
+        "poll_count": 108,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 2.4568000000000003,
+            "p95": 2.8106
+          },
+          "cpu_ms": {
+            "median": 3.7975,
+            "p95": 4.333
+          },
+          "allocated_bytes": {
+            "median": 91352.0,
+            "p95": 91680
+          },
+          "wire_bytes": {
+            "median": 3264.0,
+            "p95": 3264
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3384293320123106,
+        "process_tree_peak_rss_observed_bytes": 101584896,
+        "live_process_high_water_sum_guard_bytes": 101584896,
+        "poll_count": 120,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 5.23985,
+            "p95": 5.6083
+          },
+          "cpu_ms": {
+            "median": 8.214500000000001,
+            "p95": 9.403
+          },
+          "allocated_bytes": {
+            "median": 70220.0,
+            "p95": 103256
+          },
+          "wire_bytes": {
+            "median": 12169.0,
+            "p95": 12170
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3908803740050644,
+        "process_tree_peak_rss_observed_bytes": 103399424,
+        "live_process_high_water_sum_guard_bytes": 103399424,
+        "poll_count": 125,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 6.56525,
+            "p95": 8.913
+          },
+          "cpu_ms": {
+            "median": 9.8965,
+            "p95": 11.234
+          },
+          "allocated_bytes": {
+            "median": 100448.0,
+            "p95": 122744
+          },
+          "wire_bytes": {
+            "median": 20935.0,
+            "p95": 20936
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.1830331209930591,
+        "process_tree_peak_rss_observed_bytes": 98852864,
+        "live_process_high_water_sum_guard_bytes": 98852864,
+        "poll_count": 107,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 0.9679,
+            "p95": 1.1562
+          },
+          "cpu_ms": {
+            "median": 1.5705,
+            "p95": 1.746
+          },
+          "allocated_bytes": {
+            "median": 29696.0,
+            "p95": 29856
+          },
+          "wire_bytes": {
+            "median": 8112.0,
+            "p95": 8112
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.2166438160347752,
+        "process_tree_peak_rss_observed_bytes": 102084608,
+        "live_process_high_water_sum_guard_bytes": 102084608,
+        "poll_count": 110,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 2.05185,
+            "p95": 2.2325
+          },
+          "cpu_ms": {
+            "median": 3.2190000000000003,
+            "p95": 3.426
+          },
+          "allocated_bytes": {
+            "median": 59872.0,
+            "p95": 63992
+          },
+          "wire_bytes": {
+            "median": 16880.0,
+            "p95": 16880
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3618440420250408,
+        "process_tree_peak_rss_observed_bytes": 102252544,
+        "live_process_high_water_sum_guard_bytes": 102252544,
+        "poll_count": 122,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 5.5296,
+            "p95": 8.249
+          },
+          "cpu_ms": {
+            "median": 9.042000000000002,
+            "p95": 10.113
+          },
+          "allocated_bytes": {
+            "median": 71420.0,
+            "p95": 104864
+          },
+          "wire_bytes": {
+            "median": 5589.0,
+            "p95": 5591
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.392620934988372,
+        "process_tree_peak_rss_observed_bytes": 103972864,
+        "live_process_high_water_sum_guard_bytes": 103972864,
+        "poll_count": 125,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 6.746,
+            "p95": 10.6504
+          },
+          "cpu_ms": {
+            "median": 10.774000000000001,
+            "p95": 14.895
+          },
+          "allocated_bytes": {
+            "median": 102936.0,
+            "p95": 119416
+          },
+          "wire_bytes": {
+            "median": 7158.0,
+            "p95": 7160
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.2024665150092915,
+        "process_tree_peak_rss_observed_bytes": 99979264,
+        "live_process_high_water_sum_guard_bytes": 99979264,
+        "poll_count": 109,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1.1792500000000001,
+            "p95": 1.4458
+          },
+          "cpu_ms": {
+            "median": 2.1955,
+            "p95": 2.575
+          },
+          "allocated_bytes": {
+            "median": 31040.0,
+            "p95": 65112
+          },
+          "wire_bytes": {
+            "median": 1534.0,
+            "p95": 1534
+          }
+        }
+      },
+      {
+        "case_id": "100-http-msgpack-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.2832077670027502,
+        "process_tree_peak_rss_observed_bytes": 102887424,
+        "live_process_high_water_sum_guard_bytes": 102887424,
+        "poll_count": 116,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 2.48325,
+            "p95": 6.3661
+          },
+          "cpu_ms": {
+            "median": 4.145,
+            "p95": 8.439
+          },
+          "allocated_bytes": {
+            "median": 62560.0,
+            "p95": 79840
+          },
+          "wire_bytes": {
+            "median": 3104.0,
+            "p95": 3104
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-json-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 0.999443391978275,
+        "process_tree_peak_rss_observed_bytes": 88637440,
+        "live_process_high_water_sum_guard_bytes": 88637440,
+        "poll_count": 92,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 7.341950000000001,
+            "p95": 9.0152
+          },
+          "cpu_ms": {
+            "median": 11.089500000000001,
+            "p95": 13.368
+          },
+          "allocated_bytes": {
+            "median": 318712.0,
+            "p95": 358288
+          },
+          "wire_bytes": {
+            "median": 10461.0,
+            "p95": 10462
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-json-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.0994361080229282,
+        "process_tree_peak_rss_observed_bytes": 88457216,
+        "live_process_high_water_sum_guard_bytes": 88457216,
+        "poll_count": 101,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 10.03105,
+            "p95": 11.1068
+          },
+          "cpu_ms": {
+            "median": 14.8025,
+            "p95": 15.953
+          },
+          "allocated_bytes": {
+            "median": 573472.0,
+            "p95": 584376
+          },
+          "wire_bytes": {
+            "median": 16598.0,
+            "p95": 16599
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-json-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 0.8584984529879875,
+        "process_tree_peak_rss_observed_bytes": 87298048,
+        "live_process_high_water_sum_guard_bytes": 87298048,
+        "poll_count": 79,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 2.5567,
+            "p95": 3.0237
+          },
+          "cpu_ms": {
+            "median": 3.7824999999999998,
+            "p95": 4.258
+          },
+          "allocated_bytes": {
+            "median": 241656.0,
+            "p95": 266840
+          },
+          "wire_bytes": {
+            "median": 5589.0,
+            "p95": 5589
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-json-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 0.9600151499616913,
+        "process_tree_peak_rss_observed_bytes": 87293952,
+        "live_process_high_water_sum_guard_bytes": 87293952,
+        "poll_count": 88,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 5.1766000000000005,
+            "p95": 5.9391
+          },
+          "cpu_ms": {
+            "median": 7.266,
+            "p95": 8.272
+          },
+          "allocated_bytes": {
+            "median": 496416.0,
+            "p95": 498792
+          },
+          "wire_bytes": {
+            "median": 11726.0,
+            "p95": 11726
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-msgpack-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.1829129370162264,
+        "process_tree_peak_rss_observed_bytes": 89309184,
+        "live_process_high_water_sum_guard_bytes": 89309184,
+        "poll_count": 107,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 9.25245,
+            "p95": 12.2121
+          },
+          "cpu_ms": {
+            "median": 11.926,
+            "p95": 13.802
+          },
+          "allocated_bytes": {
+            "median": 393464.0,
+            "p95": 472720
+          },
+          "wire_bytes": {
+            "median": 8942.0,
+            "p95": 8943
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-msgpack-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.2088056409847923,
+        "process_tree_peak_rss_observed_bytes": 89849856,
+        "live_process_high_water_sum_guard_bytes": 89849856,
+        "poll_count": 111,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 11.5379,
+            "p95": 15.4393
+          },
+          "cpu_ms": {
+            "median": 16.344,
+            "p95": 20.668
+          },
+          "allocated_bytes": {
+            "median": 715896.0,
+            "p95": 748824
+          },
+          "wire_bytes": {
+            "median": 13195.0,
+            "p95": 13197
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-msgpack-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 0.9224763400270604,
+        "process_tree_peak_rss_observed_bytes": 87674880,
+        "live_process_high_water_sum_guard_bytes": 87674880,
+        "poll_count": 85,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 3.0774999999999997,
+            "p95": 3.6526
+          },
+          "cpu_ms": {
+            "median": 4.3215,
+            "p95": 4.945
+          },
+          "allocated_bytes": {
+            "median": 307944.0,
+            "p95": 377656
+          },
+          "wire_bytes": {
+            "median": 4122.0,
+            "p95": 4122
+          }
+        }
+      },
+      {
+        "case_id": "100-ncp-msgpack-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.0543764930334873,
+        "process_tree_peak_rss_observed_bytes": 89300992,
+        "live_process_high_water_sum_guard_bytes": 89300992,
+        "poll_count": 97,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 6.8279,
+            "p95": 9.89
+          },
+          "cpu_ms": {
+            "median": 9.1055,
+            "p95": 20.236
+          },
+          "allocated_bytes": {
+            "median": 630208.0,
+            "p95": 699920
+          },
+          "wire_bytes": {
+            "median": 8377.0,
+            "p95": 8377
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.5681298749987036,
+        "process_tree_peak_rss_observed_bytes": 106086400,
+        "live_process_high_water_sum_guard_bytes": 106086400,
+        "poll_count": 139,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 9.11655,
+            "p95": 10.9104
+          },
+          "cpu_ms": {
+            "median": 15.659,
+            "p95": 25.326
+          },
+          "allocated_bytes": {
+            "median": 365360.0,
+            "p95": 410456
+          },
+          "wire_bytes": {
+            "median": 103027.0,
+            "p95": 103028
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.71824481501244,
+        "process_tree_peak_rss_observed_bytes": 112324608,
+        "live_process_high_water_sum_guard_bytes": 112324608,
+        "poll_count": 154,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 13.7559,
+            "p95": 19.5067
+          },
+          "cpu_ms": {
+            "median": 24.2985,
+            "p95": 33.544
+          },
+          "allocated_bytes": {
+            "median": 691264.0,
+            "p95": 718456
+          },
+          "wire_bytes": {
+            "median": 214122.0,
+            "p95": 214124
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3178840710315853,
+        "process_tree_peak_rss_observed_bytes": 103391232,
+        "live_process_high_water_sum_guard_bytes": 103391232,
+        "poll_count": 119,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 4.578749999999999,
+            "p95": 5.3549
+          },
+          "cpu_ms": {
+            "median": 8.838999999999999,
+            "p95": 9.408
+          },
+          "allocated_bytes": {
+            "median": 324128.0,
+            "p95": 340352
+          },
+          "wire_bytes": {
+            "median": 98971.0,
+            "p95": 98971
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.6151795639889315,
+        "process_tree_peak_rss_observed_bytes": 111570944,
+        "live_process_high_water_sum_guard_bytes": 111570944,
+        "poll_count": 145,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 9.561699999999998,
+            "p95": 12.455
+          },
+          "cpu_ms": {
+            "median": 17.3185,
+            "p95": 23.951
+          },
+          "allocated_bytes": {
+            "median": 648776.0,
+            "p95": 671128
+          },
+          "wire_bytes": {
+            "median": 210064.0,
+            "p95": 210064
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.4899329919717275,
+        "process_tree_peak_rss_observed_bytes": 105340928,
+        "live_process_high_water_sum_guard_bytes": 105340928,
+        "poll_count": 135,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 9.604,
+            "p95": 10.8334
+          },
+          "cpu_ms": {
+            "median": 13.1775,
+            "p95": 14.621
+          },
+          "allocated_bytes": {
+            "median": 366212.0,
+            "p95": 385680
+          },
+          "wire_bytes": {
+            "median": 9322.0,
+            "p95": 9323
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.7856088359840214,
+        "process_tree_peak_rss_observed_bytes": 113913856,
+        "live_process_high_water_sum_guard_bytes": 113913856,
+        "poll_count": 161,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 16.174500000000002,
+            "p95": 18.2395
+          },
+          "cpu_ms": {
+            "median": 21.3415,
+            "p95": 36.463
+          },
+          "allocated_bytes": {
+            "median": 693708.0,
+            "p95": 732752
+          },
+          "wire_bytes": {
+            "median": 14523.0,
+            "p95": 14525
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.4639388869982213,
+        "process_tree_peak_rss_observed_bytes": 105164800,
+        "live_process_high_water_sum_guard_bytes": 105164800,
+        "poll_count": 131,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 6.07405,
+            "p95": 9.3688
+          },
+          "cpu_ms": {
+            "median": 7.069000000000001,
+            "p95": 7.852
+          },
+          "allocated_bytes": {
+            "median": 325616.0,
+            "p95": 327008
+          },
+          "wire_bytes": {
+            "median": 5264.0,
+            "p95": 5264
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-json-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.816423913987819,
+        "process_tree_peak_rss_observed_bytes": 112390144,
+        "live_process_high_water_sum_guard_bytes": 112390144,
+        "poll_count": 161,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 12.04415,
+            "p95": 16.6995
+          },
+          "cpu_ms": {
+            "median": 14.413,
+            "p95": 27.947
+          },
+          "allocated_bytes": {
+            "median": 651752.0,
+            "p95": 652360
+          },
+          "wire_bytes": {
+            "median": 10467.0,
+            "p95": 10467
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.5547498800442554,
+        "process_tree_peak_rss_observed_bytes": 108081152,
+        "live_process_high_water_sum_guard_bytes": 108081152,
+        "poll_count": 140,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 8.39025,
+            "p95": 12.4546
+          },
+          "cpu_ms": {
+            "median": 12.1305,
+            "p95": 16.995
+          },
+          "allocated_bytes": {
+            "median": 245024.0,
+            "p95": 262184
+          },
+          "wire_bytes": {
+            "median": 78934.0,
+            "p95": 78935
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.7439088580431417,
+        "process_tree_peak_rss_observed_bytes": 116322304,
+        "live_process_high_water_sum_guard_bytes": 116322304,
+        "poll_count": 157,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 13.37875,
+            "p95": 18.9592
+          },
+          "cpu_ms": {
+            "median": 17.9085,
+            "p95": 32.666
+          },
+          "allocated_bytes": {
+            "median": 447744.0,
+            "p95": 456104
+          },
+          "wire_bytes": {
+            "median": 159896.0,
+            "p95": 159897
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.3864852710394189,
+        "process_tree_peak_rss_observed_bytes": 106397696,
+        "live_process_high_water_sum_guard_bytes": 106397696,
+        "poll_count": 125,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 4.16885,
+            "p95": 5.6821
+          },
+          "cpu_ms": {
+            "median": 5.1235,
+            "p95": 6.782
+          },
+          "allocated_bytes": {
+            "median": 201560.0,
+            "p95": 218568
+          },
+          "wire_bytes": {
+            "median": 74878.0,
+            "p95": 74878
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.6315895689767785,
+        "process_tree_peak_rss_observed_bytes": 111210496,
+        "live_process_high_water_sum_guard_bytes": 111210496,
+        "poll_count": 147,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 8.9237,
+            "p95": 11.3524
+          },
+          "cpu_ms": {
+            "median": 12.4335,
+            "p95": 21.19
+          },
+          "allocated_bytes": {
+            "median": 403400.0,
+            "p95": 407280
+          },
+          "wire_bytes": {
+            "median": 155840.0,
+            "p95": 155840
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.5959744330029935,
+        "process_tree_peak_rss_observed_bytes": 110329856,
+        "live_process_high_water_sum_guard_bytes": 110329856,
+        "poll_count": 143,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 8.892800000000001,
+            "p95": 13.7386
+          },
+          "cpu_ms": {
+            "median": 12.409500000000001,
+            "p95": 21.923
+          },
+          "allocated_bytes": {
+            "median": 244244.0,
+            "p95": 277824
+          },
+          "wire_bytes": {
+            "median": 8804.0,
+            "p95": 8806
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.8686245169956237,
+        "process_tree_peak_rss_observed_bytes": 115396608,
+        "live_process_high_water_sum_guard_bytes": 115396608,
+        "poll_count": 167,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 13.61085,
+            "p95": 15.4545
+          },
+          "cpu_ms": {
+            "median": 18.277,
+            "p95": 19.618
+          },
+          "allocated_bytes": {
+            "median": 448104.0,
+            "p95": 468200
+          },
+          "wire_bytes": {
+            "median": 13611.0,
+            "p95": 13612
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.4688016530126333,
+        "process_tree_peak_rss_observed_bytes": 108453888,
+        "live_process_high_water_sum_guard_bytes": 108453888,
+        "poll_count": 132,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 4.465299999999999,
+            "p95": 9.2597
+          },
+          "cpu_ms": {
+            "median": 5.5815,
+            "p95": 13.129
+          },
+          "allocated_bytes": {
+            "median": 203352.0,
+            "p95": 220328
+          },
+          "wire_bytes": {
+            "median": 4747.0,
+            "p95": 4747
+          }
+        }
+      },
+      {
+        "case_id": "1000-http-msgpack-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 1.6260578790097497,
+        "process_tree_peak_rss_observed_bytes": 114925568,
+        "live_process_high_water_sum_guard_bytes": 114925568,
+        "poll_count": 147,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 8.9548,
+            "p95": 17.0612
+          },
+          "cpu_ms": {
+            "median": 11.256,
+            "p95": 22.343
+          },
+          "allocated_bytes": {
+            "median": 407008.0,
+            "p95": 407304
+          },
+          "wire_bytes": {
+            "median": 9555.0,
+            "p95": 9555
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-json-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.8615528009831905,
+        "process_tree_peak_rss_observed_bytes": 104595456,
+        "live_process_high_water_sum_guard_bytes": 104607744,
+        "poll_count": 170,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 28.656750000000002,
+            "p95": 38.2561
+          },
+          "cpu_ms": {
+            "median": 32.25,
+            "p95": 71.748
+          },
+          "allocated_bytes": {
+            "median": 2083140.0,
+            "p95": 2163304
+          },
+          "wire_bytes": {
+            "median": 54464.0,
+            "p95": 54465
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-json-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 2.7143398110056296,
+        "process_tree_peak_rss_observed_bytes": 102035456,
+        "live_process_high_water_sum_guard_bytes": 102035456,
+        "poll_count": 248,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 51.122749999999996,
+            "p95": 56.2674
+          },
+          "cpu_ms": {
+            "median": 60.658500000000004,
+            "p95": 112.422
+          },
+          "allocated_bytes": {
+            "median": 4200968.0,
+            "p95": 4283440
+          },
+          "wire_bytes": {
+            "median": 109104.0,
+            "p95": 109106
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-json-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.6707787800114602,
+        "process_tree_peak_rss_observed_bytes": 100655104,
+        "live_process_high_water_sum_guard_bytes": 100655104,
+        "poll_count": 153,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 22.9173,
+            "p95": 27.8673
+          },
+          "cpu_ms": {
+            "median": 24.582500000000003,
+            "p95": 55.894
+          },
+          "allocated_bytes": {
+            "median": 2003848.0,
+            "p95": 2039480
+          },
+          "wire_bytes": {
+            "median": 49594.0,
+            "p95": 49594
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-json-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 2.550269436032977,
+        "process_tree_peak_rss_observed_bytes": 101257216,
+        "live_process_high_water_sum_guard_bytes": 101257216,
+        "poll_count": 232,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 43.13845,
+            "p95": 60.1536
+          },
+          "cpu_ms": {
+            "median": 61.7285,
+            "p95": 100.167
+          },
+          "allocated_bytes": {
+            "median": 4121592.0,
+            "p95": 4157128
+          },
+          "wire_bytes": {
+            "median": 104236.0,
+            "p95": 104236
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-msgpack-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 2.084445043001324,
+        "process_tree_peak_rss_observed_bytes": 104124416,
+        "live_process_high_water_sum_guard_bytes": 104280064,
+        "poll_count": 190,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 33.54465,
+            "p95": 43.9666
+          },
+          "cpu_ms": {
+            "median": 38.433,
+            "p95": 79.408
+          },
+          "allocated_bytes": {
+            "median": 2649928.0,
+            "p95": 2681016
+          },
+          "wire_bytes": {
+            "median": 40468.0,
+            "p95": 40469
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-msgpack-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 3.236279765027575,
+        "process_tree_peak_rss_observed_bytes": 104583168,
+        "live_process_high_water_sum_guard_bytes": 104583168,
+        "poll_count": 295,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 65.50525,
+            "p95": 80.8988
+          },
+          "cpu_ms": {
+            "median": 85.848,
+            "p95": 129.789
+          },
+          "allocated_bytes": {
+            "median": 5333568.0,
+            "p95": 5481488
+          },
+          "wire_bytes": {
+            "median": 77142.0,
+            "p95": 77144
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-msgpack-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 1.8654157859855331,
+        "process_tree_peak_rss_observed_bytes": 100610048,
+        "live_process_high_water_sum_guard_bytes": 100610048,
+        "poll_count": 171,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 27.02485,
+            "p95": 37.0744
+          },
+          "cpu_ms": {
+            "median": 32.5265,
+            "p95": 63.182
+          },
+          "allocated_bytes": {
+            "median": 2562088.0,
+            "p95": 2564392
+          },
+          "wire_bytes": {
+            "median": 35646.0,
+            "p95": 35646
+          }
+        }
+      },
+      {
+        "case_id": "1000-ncp-msgpack-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 2.9309998319949955,
+        "process_tree_peak_rss_observed_bytes": 103145472,
+        "live_process_high_water_sum_guard_bytes": 103145472,
+        "poll_count": 267,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 54.09245,
+            "p95": 62.8631
+          },
+          "cpu_ms": {
+            "median": 61.900499999999994,
+            "p95": 110.085
+          },
+          "allocated_bytes": {
+            "median": 5245584.0,
+            "p95": 5247888
+          },
+          "wire_bytes": {
+            "median": 72325.0,
+            "p95": 72325
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 12.880762643995695,
+        "process_tree_peak_rss_observed_bytes": 211128320,
+        "live_process_high_water_sum_guard_bytes": 211128320,
+        "poll_count": 1129,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 189.556,
+            "p95": 489.5809
+          },
+          "cpu_ms": {
+            "median": 377.6965,
+            "p95": 960.871
+          },
+          "allocated_bytes": {
+            "median": 31606664.0,
+            "p95": 31737328
+          },
+          "wire_bytes": {
+            "median": 9826306.0,
+            "p95": 9826308
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 27.954383295960724,
+        "process_tree_peak_rss_observed_bytes": 268705792,
+        "live_process_high_water_sum_guard_bytes": 268705792,
+        "poll_count": 2228,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 609.5939,
+            "p95": 888.6143
+          },
+          "cpu_ms": {
+            "median": 710.7170000000001,
+            "p95": 998.999
+          },
+          "allocated_bytes": {
+            "median": 63452180.0,
+            "p95": 63504648
+          },
+          "wire_bytes": {
+            "median": 20856399.0,
+            "p95": 20856400
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 17.721746722992975,
+        "process_tree_peak_rss_observed_bytes": 212819968,
+        "live_process_high_water_sum_guard_bytes": 212819968,
+        "poll_count": 1388,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 223.62099999999998,
+            "p95": 544.8761
+          },
+          "cpu_ms": {
+            "median": 286.7615,
+            "p95": 370.73
+          },
+          "allocated_bytes": {
+            "median": 31686908.0,
+            "p95": 31794352
+          },
+          "wire_bytes": {
+            "median": 9822249.0,
+            "p95": 9822249
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 22.046425077016465,
+        "process_tree_peak_rss_observed_bytes": 267911168,
+        "live_process_high_water_sum_guard_bytes": 267911168,
+        "poll_count": 1846,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 428.91880000000003,
+            "p95": 508.2653
+          },
+          "cpu_ms": {
+            "median": 673.6485,
+            "p95": 805.724
+          },
+          "allocated_bytes": {
+            "median": 63173028.0,
+            "p95": 63317624
+          },
+          "wire_bytes": {
+            "median": 20852344.0,
+            "p95": 20852344
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 11.543423059978522,
+        "process_tree_peak_rss_observed_bytes": 213213184,
+        "live_process_high_water_sum_guard_bytes": 213213184,
+        "poll_count": 1023,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 181.89015,
+            "p95": 350.2369
+          },
+          "cpu_ms": {
+            "median": 338.469,
+            "p95": 677.141
+          },
+          "allocated_bytes": {
+            "median": 31556076.0,
+            "p95": 31629096
+          },
+          "wire_bytes": {
+            "median": 423648.0,
+            "p95": 423650
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 19.7332586980192,
+        "process_tree_peak_rss_observed_bytes": 269766656,
+        "live_process_high_water_sum_guard_bytes": 269766656,
+        "poll_count": 1753,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 387.46265,
+            "p95": 439.3982
+          },
+          "cpu_ms": {
+            "median": 640.5060000000001,
+            "p95": 839.149
+          },
+          "allocated_bytes": {
+            "median": 63070904.0,
+            "p95": 63114168
+          },
+          "wire_bytes": {
+            "median": 835287.0,
+            "p95": 835289
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 16.431246652035043,
+        "process_tree_peak_rss_observed_bytes": 208613376,
+        "live_process_high_water_sum_guard_bytes": 208613376,
+        "poll_count": 1300,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 274.0653,
+            "p95": 567.1813
+          },
+          "cpu_ms": {
+            "median": 292.5985,
+            "p95": 529.424
+          },
+          "allocated_bytes": {
+            "median": 31513040.0,
+            "p95": 31552512
+          },
+          "wire_bytes": {
+            "median": 419593.0,
+            "p95": 419593
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-json-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 27.442919980967417,
+        "process_tree_peak_rss_observed_bytes": 268894208,
+        "live_process_high_water_sum_guard_bytes": 268894208,
+        "poll_count": 2237,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 545.4920500000001,
+            "p95": 697.62
+          },
+          "cpu_ms": {
+            "median": 653.8175,
+            "p95": 804.292
+          },
+          "allocated_bytes": {
+            "median": 63029228.0,
+            "p95": 63055232
+          },
+          "wire_bytes": {
+            "median": 831232.0,
+            "p95": 831232
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-identity-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 11.91748970001936,
+        "process_tree_peak_rss_observed_bytes": 242130944,
+        "live_process_high_water_sum_guard_bytes": 242130944,
+        "poll_count": 968,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 125.4044,
+            "p95": 396.0489
+          },
+          "cpu_ms": {
+            "median": 182.01999999999998,
+            "p95": 525.911
+          },
+          "allocated_bytes": {
+            "median": 25414164.0,
+            "p95": 25481416
+          },
+          "wire_bytes": {
+            "median": 7421198.0,
+            "p95": 7421200
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-identity-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 17.72300344199175,
+        "process_tree_peak_rss_observed_bytes": 290140160,
+        "live_process_high_water_sum_guard_bytes": 291688448,
+        "poll_count": 1446,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 281.00415,
+            "p95": 371.7927
+          },
+          "cpu_ms": {
+            "median": 388.421,
+            "p95": 496.36
+          },
+          "allocated_bytes": {
+            "median": 51417776.0,
+            "p95": 51552200
+          },
+          "wire_bytes": {
+            "median": 15443641.0,
+            "p95": 15443643
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-identity-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 10.211296993016731,
+        "process_tree_peak_rss_observed_bytes": 246095872,
+        "live_process_high_water_sum_guard_bytes": 246095872,
+        "poll_count": 817,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 124.5487,
+            "p95": 169.1775
+          },
+          "cpu_ms": {
+            "median": 157.4615,
+            "p95": 242.745
+          },
+          "allocated_bytes": {
+            "median": 25359784.0,
+            "p95": 25432968
+          },
+          "wire_bytes": {
+            "median": 7417142.0,
+            "p95": 7417142
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-identity-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 14.577123859024141,
+        "process_tree_peak_rss_observed_bytes": 299569152,
+        "live_process_high_water_sum_guard_bytes": 300228608,
+        "poll_count": 1254,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 237.72655,
+            "p95": 265.19
+          },
+          "cpu_ms": {
+            "median": 354.744,
+            "p95": 494.677
+          },
+          "allocated_bytes": {
+            "median": 51174052.0,
+            "p95": 51347576
+          },
+          "wire_bytes": {
+            "median": 15439586.0,
+            "p95": 15439586
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-gzip-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 9.961311987019144,
+        "process_tree_peak_rss_observed_bytes": 239980544,
+        "live_process_high_water_sum_guard_bytes": 239980544,
+        "poll_count": 886,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 118.487,
+            "p95": 386.6818
+          },
+          "cpu_ms": {
+            "median": 207.912,
+            "p95": 507.777
+          },
+          "allocated_bytes": {
+            "median": 25303444.0,
+            "p95": 25336472
+          },
+          "wire_bytes": {
+            "median": 385652.0,
+            "p95": 385654
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-gzip-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 15.461174575029872,
+        "process_tree_peak_rss_observed_bytes": 290410496,
+        "live_process_high_water_sum_guard_bytes": 290549760,
+        "poll_count": 1366,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 272.5589,
+            "p95": 329.5715
+          },
+          "cpu_ms": {
+            "median": 425.678,
+            "p95": 543.269
+          },
+          "allocated_bytes": {
+            "median": 51174340.0,
+            "p95": 51229160
+          },
+          "wire_bytes": {
+            "median": 770882.0,
+            "p95": 770883
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-gzip-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 8.963514142029453,
+        "process_tree_peak_rss_observed_bytes": 241385472,
+        "live_process_high_water_sum_guard_bytes": 241385472,
+        "poll_count": 799,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 107.40915000000001,
+            "p95": 123.0379
+          },
+          "cpu_ms": {
+            "median": 151.406,
+            "p95": 224.406
+          },
+          "allocated_bytes": {
+            "median": 25259600.0,
+            "p95": 25280416
+          },
+          "wire_bytes": {
+            "median": 381595.0,
+            "p95": 381595
+          }
+        }
+      },
+      {
+        "case_id": "100000-http-msgpack-gzip-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 14.919589609024115,
+        "process_tree_peak_rss_observed_bytes": 296955904,
+        "live_process_high_water_sum_guard_bytes": 297308160,
+        "poll_count": 1329,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 260.45575,
+            "p95": 281.2844
+          },
+          "cpu_ms": {
+            "median": 378.7895,
+            "p95": 499.452
+          },
+          "allocated_bytes": {
+            "median": 51129416.0,
+            "p95": 51149384
+          },
+          "wire_bytes": {
+            "median": 766828.0,
+            "p95": 766828
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-json-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 23.083092052023858,
+        "process_tree_peak_rss_observed_bytes": 279519232,
+        "live_process_high_water_sum_guard_bytes": 279519232,
+        "poll_count": 2063,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 544.0425,
+            "p95": 620.744
+          },
+          "cpu_ms": {
+            "median": 774.2675,
+            "p95": 1094.813
+          },
+          "allocated_bytes": {
+            "median": 196490148.0,
+            "p95": 196527392
+          },
+          "wire_bytes": {
+            "median": 4893055.0,
+            "p95": 4893056
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-json-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 43.950932267005555,
+        "process_tree_peak_rss_observed_bytes": 316522496,
+        "live_process_high_water_sum_guard_bytes": 316522496,
+        "poll_count": 3937,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1100.5313999999998,
+            "p95": 1211.1972
+          },
+          "cpu_ms": {
+            "median": 1528.82,
+            "p95": 1741.304
+          },
+          "allocated_bytes": {
+            "median": 404098372.0,
+            "p95": 404205840
+          },
+          "wire_bytes": {
+            "median": 10281286.0,
+            "p95": 10281288
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-json-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 23.496332065027673,
+        "process_tree_peak_rss_observed_bytes": 258142208,
+        "live_process_high_water_sum_guard_bytes": 258142208,
+        "poll_count": 2102,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 540.64865,
+            "p95": 586.5504
+          },
+          "cpu_ms": {
+            "median": 745.304,
+            "p95": 823.827
+          },
+          "allocated_bytes": {
+            "median": 196412016.0,
+            "p95": 196420824
+          },
+          "wire_bytes": {
+            "median": 4888183.0,
+            "p95": 4888183
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-json-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 43.87512042099843,
+        "process_tree_peak_rss_observed_bytes": 315834368,
+        "live_process_high_water_sum_guard_bytes": 315834368,
+        "poll_count": 3950,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1076.0854,
+            "p95": 1142.9702
+          },
+          "cpu_ms": {
+            "median": 1487.8365,
+            "p95": 1593.91
+          },
+          "allocated_bytes": {
+            "median": 404015288.0,
+            "p95": 404032104
+          },
+          "wire_bytes": {
+            "median": 10276414.0,
+            "p95": 10276414
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-msgpack-cold-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 25.50768129795324,
+        "process_tree_peak_rss_observed_bytes": 278745088,
+        "live_process_high_water_sum_guard_bytes": 278745088,
+        "poll_count": 2291,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 596.36265,
+            "p95": 671.5445
+          },
+          "cpu_ms": {
+            "median": 884.8705,
+            "p95": 1196.322
+          },
+          "allocated_bytes": {
+            "median": 250846544.0,
+            "p95": 250863776
+          },
+          "wire_bytes": {
+            "median": 3506447.0,
+            "p95": 3506449
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-msgpack-cold-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 48.30265415500617,
+        "process_tree_peak_rss_observed_bytes": 322072576,
+        "live_process_high_water_sum_guard_bytes": 322072576,
+        "poll_count": 4328,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1209.3109,
+            "p95": 1310.1322
+          },
+          "cpu_ms": {
+            "median": 1747.484,
+            "p95": 1927.527
+          },
+          "allocated_bytes": {
+            "median": 513496748.0,
+            "p95": 513643880
+          },
+          "wire_bytes": {
+            "median": 7108111.0,
+            "p95": 7108112
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-msgpack-warm-stable",
+        "exit_code": 0,
+        "elapsed_seconds": 26.083012162998784,
+        "process_tree_peak_rss_observed_bytes": 278425600,
+        "live_process_high_water_sum_guard_bytes": 278425600,
+        "poll_count": 2346,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 594.3859,
+            "p95": 622.0041
+          },
+          "cpu_ms": {
+            "median": 849.483,
+            "p95": 929.672
+          },
+          "allocated_bytes": {
+            "median": 250758064.0,
+            "p95": 250778912
+          },
+          "wire_bytes": {
+            "median": 3501629.0,
+            "p95": 3501629
+          }
+        }
+      },
+      {
+        "case_id": "100000-ncp-msgpack-warm-churn",
+        "exit_code": 0,
+        "elapsed_seconds": 48.639146470988635,
+        "process_tree_peak_rss_observed_bytes": 335671296,
+        "live_process_high_water_sum_guard_bytes": 335671296,
+        "poll_count": 4370,
+        "rss_budget_passed": true,
+        "passed": true,
+        "metrics": {
+          "wall_ms": {
+            "median": 1206.0448999999999,
+            "p95": 1295.8775
+          },
+          "cpu_ms": {
+            "median": 1735.464,
+            "p95": 1883.101
+          },
+          "allocated_bytes": {
+            "median": 513409520.0,
+            "p95": 513427528
+          },
+          "wire_bytes": {
+            "median": 7103291.0,
+            "p95": 7103291
+          }
+        }
+      }
+    ]
+  },
+  "record_index": [
+    {
+      "case_id": "100-http-json-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-identity-cold-stable.json",
+      "raw_sha256": "1d2d68a3a85fc2ddb01706cea071b5a6370f2b518789a899d9e8b8cd94215a66",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-identity-cold-stable.receipt.json",
+      "receipt_sha256": "ec06f14f87ad47c4b813351d66220321275224c9f2bb52ed27b846c2ffde2b6d"
+    },
+    {
+      "case_id": "100-http-json-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-identity-cold-churn.json",
+      "raw_sha256": "8724349fa53f82439167306068b5fd6b532c80b81197ac1c2aefdc5d5a37b48b",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-identity-cold-churn.receipt.json",
+      "receipt_sha256": "93697837c557fec272c9044ea11522a1fdfb129ba77c2392b1b8732efcae6e72"
+    },
+    {
+      "case_id": "100-http-json-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-identity-warm-stable.json",
+      "raw_sha256": "2555b5ffe08625b14597a0d30ba8fd4c86ffc6bf6780862c40428dd737bad131",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-identity-warm-stable.receipt.json",
+      "receipt_sha256": "f64fbbc26f289b99ba144e1b790b8225b44726aef6bb555c23c9a396aabe1dc0"
+    },
+    {
+      "case_id": "100-http-json-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-identity-warm-churn.json",
+      "raw_sha256": "adb66e5cadb68ef8bdb4727e3cb3941d1c0d78ab2bcac7428299f90c904f88b9",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-identity-warm-churn.receipt.json",
+      "receipt_sha256": "7a257f741c1c90baa3cf9a6af922c28ba39b6f51c81d6e5aa1e6f1e9a2e7ffa7"
+    },
+    {
+      "case_id": "100-http-json-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-gzip-cold-stable.json",
+      "raw_sha256": "85fe429df4aba409c2818734af1e7da772c2c2f2128cba0e3f41249e91022f7c",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "7da414bb9611901a7df393812cd28b6e332e79f94b91e71f6e57e70eb015e2b4"
+    },
+    {
+      "case_id": "100-http-json-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-gzip-cold-churn.json",
+      "raw_sha256": "0c5067a938c128f573b788ffe0f8aea1a33b1e1237b44d77a7174e75d65544b2",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "8e640835f0ccc549cb976406ad0e7c8d5a907ac6c82fdaff39b755fc314b501c"
+    },
+    {
+      "case_id": "100-http-json-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-gzip-warm-stable.json",
+      "raw_sha256": "fbb486baa5261d22eca2bcaaaafca70d7ca6dbb6a251850d034b7ff826410b04",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "252b8f7770249919829add59878dc13a8e3bb7ec6e9528d0fec41e352a30c720"
+    },
+    {
+      "case_id": "100-http-json-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-json-gzip-warm-churn.json",
+      "raw_sha256": "9e4c9369240755a3f66d79cde73467f3bd4753e4f91ed64f993c8119349bdb3e",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-json-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "9b773ca1796ea15ad0bd60b7508985b419ea8586a8aa2b55ef11bb485dae4cb3"
+    },
+    {
+      "case_id": "100-http-msgpack-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-cold-stable.json",
+      "raw_sha256": "21f20a2b081bce45aadf25d46d72f19ea814cadb98e55de4690546616b2d6a9f",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-cold-stable.receipt.json",
+      "receipt_sha256": "7edb020e24a5f93942d50c0c715fb860d30bf8b797e7b4a62e178ba723be633a"
+    },
+    {
+      "case_id": "100-http-msgpack-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-cold-churn.json",
+      "raw_sha256": "8cd101bd6ae4246b4be27de447efe65677d242b6702aae80e15ca106fffdd112",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-cold-churn.receipt.json",
+      "receipt_sha256": "049a27e5fe1d48dd5ade8bc7629bd9ea4ab86f2e18e15b1b19ba95838c2d059f"
+    },
+    {
+      "case_id": "100-http-msgpack-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-warm-stable.json",
+      "raw_sha256": "8422b4de26259d7122fcfbe2a65852de3ded3dd1f35c515a65806673ca68ed01",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-warm-stable.receipt.json",
+      "receipt_sha256": "cdf9f63850fc51f220ee4849d44f29c79e51a2d7f98f25b84c5ca142c950a3e8"
+    },
+    {
+      "case_id": "100-http-msgpack-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-warm-churn.json",
+      "raw_sha256": "91d162f78267881417943dee28af8d33d8dfb5f95065728095de19dc364f6796",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-identity-warm-churn.receipt.json",
+      "receipt_sha256": "873fc822979cc7cf5bfcc584aed9dad045a39a93e81094f36ece87badcc03787"
+    },
+    {
+      "case_id": "100-http-msgpack-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-cold-stable.json",
+      "raw_sha256": "c5076a842084fbe3654d9334cc35b1ea3fce76586aa644bbc05e64edcb8a2083",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "431861d74db45d919f7263deec9731385fcb66db24379e461ecb89891a036b28"
+    },
+    {
+      "case_id": "100-http-msgpack-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-cold-churn.json",
+      "raw_sha256": "cf0910c39ed214f82918b8d3e9628dd68ee3b4e55d0fd1cea2fae76556b41df0",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "2d12f96824f4650e53be5885f2233b447451802a7e7908138451fb142c2d394c"
+    },
+    {
+      "case_id": "100-http-msgpack-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-warm-stable.json",
+      "raw_sha256": "54c9a5553a3a4bca3169381aa4d391441ce1e12c5643d6089d3cf9d118fdf231",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "27d8549a688543145a26a6238d1bf194e923f3e569ddc4a4445947d41f314f87"
+    },
+    {
+      "case_id": "100-http-msgpack-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-warm-churn.json",
+      "raw_sha256": "275cea809f589f5966036be24989e6c0e5dff83e9ef930729901c2ada0753124",
+      "receipt_file": "ncp-transfer-42a0b05/100-http-msgpack-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "aacb01f3c8ebcf973462cc90aea611db816050065af62cf6b0f6305da6f84a9c"
+    },
+    {
+      "case_id": "100-ncp-json-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-json-cold-stable.json",
+      "raw_sha256": "ec526de2d0b0fadd2810f08b8f7a97af37e57baaa7e6c6e40798f3a193f3306c",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-json-cold-stable.receipt.json",
+      "receipt_sha256": "9efd63fa096ee8e1b2339c726470b6f517fa1f0b83a1ac9c4d7662352db5c9b6"
+    },
+    {
+      "case_id": "100-ncp-json-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-json-cold-churn.json",
+      "raw_sha256": "c01db71a17c94da78759ad3735086ced059110b74b044e5cec7b08f8f2705447",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-json-cold-churn.receipt.json",
+      "receipt_sha256": "780e559d5143e9015e787d4a891bc1b603924cc29b1d08a14096c2140da28dfa"
+    },
+    {
+      "case_id": "100-ncp-json-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-json-warm-stable.json",
+      "raw_sha256": "b9a5d8640a267eb4f2dfd9c4828c7444b11ddade577519948aca360d474f616a",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-json-warm-stable.receipt.json",
+      "receipt_sha256": "68ec556d992173206a2151ed4fdd0f93b1779e8fc9eedc2be49dd4b62e6d3223"
+    },
+    {
+      "case_id": "100-ncp-json-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-json-warm-churn.json",
+      "raw_sha256": "a56c4c6cd803f77af694f3bb142b82f86e4ecb28c43f8813c0b71817e4cf6445",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-json-warm-churn.receipt.json",
+      "receipt_sha256": "4e7d164e995ecad0b70613d01a32027ce039ff8ca18aa0d33abc6f74a51ba00a"
+    },
+    {
+      "case_id": "100-ncp-msgpack-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-msgpack-cold-stable.json",
+      "raw_sha256": "2de434a5b54a3986128f9c41d98e90fa206f6a04882b4a4173a677610ed1cc3d",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-msgpack-cold-stable.receipt.json",
+      "receipt_sha256": "6191c472c7cc5417475a4411bde6b52374121d31cf5c51c8cdd369a09847dd19"
+    },
+    {
+      "case_id": "100-ncp-msgpack-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-msgpack-cold-churn.json",
+      "raw_sha256": "946e2994a098ccde4812e0dcd1efdc60080a6d79c791c005aef3c3b9b87757b8",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-msgpack-cold-churn.receipt.json",
+      "receipt_sha256": "e1dfdcf270bf2167df4d7d6ed38b11fa01b7396923344871e8f05b77db5f6b7e"
+    },
+    {
+      "case_id": "100-ncp-msgpack-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-msgpack-warm-stable.json",
+      "raw_sha256": "8f870d79c1e55128eb3ab0c7caa74a899c539ace20a31c789b90fc848654d8c4",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-msgpack-warm-stable.receipt.json",
+      "receipt_sha256": "58eec7346a7049bb2941bcb30f816cc1cb2cdf7ca2464c579e8b683aa28bfb80"
+    },
+    {
+      "case_id": "100-ncp-msgpack-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100-ncp-msgpack-warm-churn.json",
+      "raw_sha256": "ebdcd19636f8d22f5ac1f8e58fd5d04e8fd9cc7280c2cfd3a92f768222bcc09f",
+      "receipt_file": "ncp-transfer-42a0b05/100-ncp-msgpack-warm-churn.receipt.json",
+      "receipt_sha256": "a754195fc7b5d7a35f49582ead1a07932339a4d2537d54cf1b35cbbfd37648da"
+    },
+    {
+      "case_id": "1000-http-json-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-identity-cold-stable.json",
+      "raw_sha256": "9a5f9877b332fd603ddfd787a16723bd9ff0db609c4ede8ed899cbf3ad32b973",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-identity-cold-stable.receipt.json",
+      "receipt_sha256": "223d2f2e6cceaa19288de606d64d12ecce987e94b420bb5ba628dfc5f118c84c"
+    },
+    {
+      "case_id": "1000-http-json-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-identity-cold-churn.json",
+      "raw_sha256": "77f2fe209e20025a96e940506ff1b2ddfa52a0ce54d918e4125a33e0fe3dbb9c",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-identity-cold-churn.receipt.json",
+      "receipt_sha256": "72f18aa854fcde9c18d2b8f78aa96bb8cf3e2066abca76e448a497018e64867f"
+    },
+    {
+      "case_id": "1000-http-json-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-identity-warm-stable.json",
+      "raw_sha256": "3869dc224036e1050fbf5525cb7d32cb76885a466d902d8f924845af24e69a94",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-identity-warm-stable.receipt.json",
+      "receipt_sha256": "28806117c24a9a86afa79e2cb633d3f10a9c6911d222083e55b263a407eee3c6"
+    },
+    {
+      "case_id": "1000-http-json-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-identity-warm-churn.json",
+      "raw_sha256": "215a18f61eb7f15b6dd4747d34c19dc939d8679bbd2cca969fad6dc876dfd960",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-identity-warm-churn.receipt.json",
+      "receipt_sha256": "cf685c4c5a8c8167f8c4f14d9e73061431b67af270a2ddffe9d3bb104d7f61ba"
+    },
+    {
+      "case_id": "1000-http-json-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-gzip-cold-stable.json",
+      "raw_sha256": "f3de552eb993404a90cea149fddd4c63831713e1a1ce63717e97800340b6172a",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "d76473b723d527ea59d38ac736243a7ce660f791a180dc88682830c28eb4f13f"
+    },
+    {
+      "case_id": "1000-http-json-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-gzip-cold-churn.json",
+      "raw_sha256": "2e868951f00979c49c1fba1088b3933b0f1421f3f78d6a4580907da293c817ce",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "936272569e876453578f6ff0f4960360b05fe89b6e20ab1816d6d3fedd97b1ec"
+    },
+    {
+      "case_id": "1000-http-json-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-gzip-warm-stable.json",
+      "raw_sha256": "93211e6ee694558d8d7482248dd379c7ebfd1051783fa26930050a85b2593600",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "94c819656004926ae28f2a8e621c95757fe58cff7e13b705a5a9bcb963e83cdc"
+    },
+    {
+      "case_id": "1000-http-json-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-json-gzip-warm-churn.json",
+      "raw_sha256": "fcafa51c952f8a4eb69da4ee53bdd93e8f6a8b5493e89fa7412233fe5c69c7db",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-json-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "ff36daf85b94d6bfa8a2c6bfff27d5a275e79734d5e9e530872cc865ea9410f7"
+    },
+    {
+      "case_id": "1000-http-msgpack-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-cold-stable.json",
+      "raw_sha256": "701d8eca5df9b07e28a1ba17f7f6a1a589333b44a0b3ecc048507cad195eb1b9",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-cold-stable.receipt.json",
+      "receipt_sha256": "e223023a3013b9781efe48d5c8f389ae2c63e0fef489e0c96b4fb0fdee97e87e"
+    },
+    {
+      "case_id": "1000-http-msgpack-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-cold-churn.json",
+      "raw_sha256": "3c38f57004143f297086ee3b7b40e2d80d677320a4d31022447adb3b1fcb2e19",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-cold-churn.receipt.json",
+      "receipt_sha256": "e8b4d8173367bf789b9c08d28b84aeab391b97e6410150f7144e9d6d35f498ab"
+    },
+    {
+      "case_id": "1000-http-msgpack-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-warm-stable.json",
+      "raw_sha256": "a7293349aa0e84ed8bd6f746fd0831452c82b326050133c00cd868096060d871",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-warm-stable.receipt.json",
+      "receipt_sha256": "25a38f3c4c3a383ddad02fd59b4ff3abc729e59f111fb5a4c6e4db0c4fda901a"
+    },
+    {
+      "case_id": "1000-http-msgpack-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-warm-churn.json",
+      "raw_sha256": "5246640107856f4c7bb7c8c8ffb6908bf544717ca0ad136558050a27367b447e",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-identity-warm-churn.receipt.json",
+      "receipt_sha256": "3a9727e1df186f01609cfe097a6d37460e524070cab54ad5fc85ee541e18cde0"
+    },
+    {
+      "case_id": "1000-http-msgpack-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-cold-stable.json",
+      "raw_sha256": "e1482a39da309aa618e829e8ac51e47dad9dbd544f4049d1f3da69a67291069d",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "62027efc624e4a922ff3916377eea939d35ecdd0733c316552f8d74e5c02f069"
+    },
+    {
+      "case_id": "1000-http-msgpack-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-cold-churn.json",
+      "raw_sha256": "bc4f47d1f643c1f48cf17aa1c09d68f69d85059914929745d1ae6c7f2d589ef1",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "19a1f9ff0d7aa2eb4b2e879eb341d3ac9ac0635ddaef90eb6263304ebe8111c4"
+    },
+    {
+      "case_id": "1000-http-msgpack-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-warm-stable.json",
+      "raw_sha256": "4802640d03f2c5baa374839d6c3322b67c163357d17708e1b9b56fe3a0a079b2",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "1f5bb13a66dda3e1102889b304bbdaead0d0585139970f9754c6d7a13fc59dba"
+    },
+    {
+      "case_id": "1000-http-msgpack-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-warm-churn.json",
+      "raw_sha256": "702f96ead13c13c57dd1d33f0e1ec59c19e66aa1b03132776f6571670c20975c",
+      "receipt_file": "ncp-transfer-42a0b05/1000-http-msgpack-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "155e22d513680273f5ca2441ce8ee1896de05930a155b85b99383f0f34f354da"
+    },
+    {
+      "case_id": "1000-ncp-json-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-json-cold-stable.json",
+      "raw_sha256": "ed79ce2483ce87b76754c61c9770dd1fcf709bbd1e9eb075be223b04a6d2c98e",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-json-cold-stable.receipt.json",
+      "receipt_sha256": "6e6d9eaf07d29d2ba79c5d1f496aefc7cc0a7f71c3a20f265f7633650070e7c2"
+    },
+    {
+      "case_id": "1000-ncp-json-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-json-cold-churn.json",
+      "raw_sha256": "b35b10e6e98263b3d4a3f4f2b84308473649cf543eec25b01701a21dbfebfd3e",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-json-cold-churn.receipt.json",
+      "receipt_sha256": "96a17a382338e4dc6b400b3f51a00cf79349e79a8de38e0e255fc03e07613e23"
+    },
+    {
+      "case_id": "1000-ncp-json-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-json-warm-stable.json",
+      "raw_sha256": "46ffb762b143d79274d2b12bebeedef2ccd1c8e4147976cacd1b43ac5dd6bffa",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-json-warm-stable.receipt.json",
+      "receipt_sha256": "9fd9943c6b0c686c98e2364e257bf3c7d6ba1af667b06a8000aea7ca03ac3da6"
+    },
+    {
+      "case_id": "1000-ncp-json-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-json-warm-churn.json",
+      "raw_sha256": "c4161b7286b0cf788338da77e5de04593c9c7fe0f9f3a5df05e8b098a3cd133d",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-json-warm-churn.receipt.json",
+      "receipt_sha256": "ec00045778982547e3b82a0e949d8c5308a850db7932c314d99316c515ab3aa3"
+    },
+    {
+      "case_id": "1000-ncp-msgpack-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-cold-stable.json",
+      "raw_sha256": "1c0b96ef62e1b95defff4d19eeb07df9fbd743111f6055e8903e8504dc34bde5",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-cold-stable.receipt.json",
+      "receipt_sha256": "29f7fceb23b3312ed7ffc0b1948710328166ffdf883646128273748bea140faf"
+    },
+    {
+      "case_id": "1000-ncp-msgpack-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-cold-churn.json",
+      "raw_sha256": "2bd84ff18f04792fce1ff36d2768d347ec50942f1254c7681d71a6ec14e022a1",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-cold-churn.receipt.json",
+      "receipt_sha256": "e29b06ed51b9256cd4fdb7aa2085f2f435a58366f06ebaa5f430296952753a6d"
+    },
+    {
+      "case_id": "1000-ncp-msgpack-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-warm-stable.json",
+      "raw_sha256": "02acf6d606dc4f8e70f38f8446e9583f99958255c4dc140506f50ef2a33ae788",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-warm-stable.receipt.json",
+      "receipt_sha256": "999de8e1869c8a6f3ce92dd4763b869789b583e1924e28fff1bf2c13a77ed3eb"
+    },
+    {
+      "case_id": "1000-ncp-msgpack-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-warm-churn.json",
+      "raw_sha256": "816f0c3c88a1badc1200337f88a9c678cb1712775c5b12a6e96a0a23b8c81e3d",
+      "receipt_file": "ncp-transfer-42a0b05/1000-ncp-msgpack-warm-churn.receipt.json",
+      "receipt_sha256": "7e2c4cf53cd925bad36fbec494bf06efd26ae0a9636ca83774c318b91aacb402"
+    },
+    {
+      "case_id": "100000-http-json-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-identity-cold-stable.json",
+      "raw_sha256": "9bcc597d4067a7b437f5712ff51ab93cd58a6eccd0f0f2cfcb59a549bd628610",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-identity-cold-stable.receipt.json",
+      "receipt_sha256": "e529e732c65fb9df864726858de28ee166a65de13ba92db702e81f4fa8c8d564"
+    },
+    {
+      "case_id": "100000-http-json-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-identity-cold-churn.json",
+      "raw_sha256": "7a7d34f23dc83c8ebd2887a5f01f1e49b156fe63475a7340d30a4bc03f276976",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-identity-cold-churn.receipt.json",
+      "receipt_sha256": "14310fc708246769f89205369bcde3266dbb2cf51ea65a74a518c7c9a8b0fa83"
+    },
+    {
+      "case_id": "100000-http-json-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-identity-warm-stable.json",
+      "raw_sha256": "83e8d3d721e7d9c408ea2c82ec48d18eaf170635d6cdd376c6adbc8dc2a9789b",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-identity-warm-stable.receipt.json",
+      "receipt_sha256": "e2eb1877cbca7486aba56049a8911c2486f96eecfd2107044d129bee5b272c1b"
+    },
+    {
+      "case_id": "100000-http-json-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-identity-warm-churn.json",
+      "raw_sha256": "176db185f2c197fb21541f6905f9eee1e7a06fda67985d15b5278a024e9df351",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-identity-warm-churn.receipt.json",
+      "receipt_sha256": "0a20a0873e3e40f0122acdc38e7ca999ec0190a27debfed7cf77a12bd4cacabb"
+    },
+    {
+      "case_id": "100000-http-json-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-gzip-cold-stable.json",
+      "raw_sha256": "86a1a79d17b80735c950cef425993885b4a5e6916d3d619e2abc42a4afd530db",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "12d79e365af00ca1c1458de578dd7227c78936d6c3ff2289ce3e4a388c5f4dbd"
+    },
+    {
+      "case_id": "100000-http-json-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-gzip-cold-churn.json",
+      "raw_sha256": "2bec55061c7ad5464f2e6fc2617db10274eacdd3ad4008f4134e75fe2be1faae",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "43ff339312c5f3877dc6d9ad59bbe6525efe8854922c540fc12e3038cbf010d8"
+    },
+    {
+      "case_id": "100000-http-json-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-gzip-warm-stable.json",
+      "raw_sha256": "ac849488fb5b8c2bdfc387a02802ddc10b3e50e2dca7ab9186e535897c39382f",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "cbc406897078a9cdd85ab4a2501de44691a6c517f7a823596726a868f7dbf936"
+    },
+    {
+      "case_id": "100000-http-json-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-json-gzip-warm-churn.json",
+      "raw_sha256": "3f752727d9b5072e7eabd0cd7d6760ad6b71d757aebf5bc28cc43f47660a9f7b",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-json-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "39a4210f1e57b47475d3c8320ed0be2b1b80b0e985af3fcfbc6367cccc15bb42"
+    },
+    {
+      "case_id": "100000-http-msgpack-identity-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-cold-stable.json",
+      "raw_sha256": "c3cddfec83544095aed1a133396802b8910a9eb2bfe6d0995b470ae64be3d5d4",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-cold-stable.receipt.json",
+      "receipt_sha256": "af55e862191e1b11c281361d86f8ee0196a691162db4b81347d2022ab4cea396"
+    },
+    {
+      "case_id": "100000-http-msgpack-identity-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-cold-churn.json",
+      "raw_sha256": "e0754eef05683b7b7cf47071f98a55cb5f0fdb82d60bcfceb5fbca912f38480c",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-cold-churn.receipt.json",
+      "receipt_sha256": "a3291ce7c461b3b71f5aba6074ff4f14bf7ffd9e3569a5c617a803cf5b733614"
+    },
+    {
+      "case_id": "100000-http-msgpack-identity-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-warm-stable.json",
+      "raw_sha256": "f2271a9234f81d8376bc733415fcd7149222e35344d1b1a6f7da87456543e496",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-warm-stable.receipt.json",
+      "receipt_sha256": "a898a1da04778f51f70ed5dcefc9cac7b7ac95a0f5387f2d366c9e1a9b232346"
+    },
+    {
+      "case_id": "100000-http-msgpack-identity-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-warm-churn.json",
+      "raw_sha256": "32b3612a36e5ba7d2a6e1c427f476255867feb5dc4895fceda4752e0affb36ad",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-identity-warm-churn.receipt.json",
+      "receipt_sha256": "ed76c18aafeebc2d3576af6207a7e438030a1b5fd414957161c3cd59b0f7b4ae"
+    },
+    {
+      "case_id": "100000-http-msgpack-gzip-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-cold-stable.json",
+      "raw_sha256": "484f6959ca47a4823dc346dc2cf6ba9a3a0f6d0a165b4c2c178656a0972caed8",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-cold-stable.receipt.json",
+      "receipt_sha256": "0e39aee9fb3e9304b9476770aa56d18d829d12e3ad32723a6ad85db83a61c358"
+    },
+    {
+      "case_id": "100000-http-msgpack-gzip-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-cold-churn.json",
+      "raw_sha256": "1e83b74885aae4c0e59432f92c58f26568d05275c383ca32c5e14972f8555f81",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-cold-churn.receipt.json",
+      "receipt_sha256": "9b5cbd493ceb84313b6d76b1392c3ae9b677b19d0c636e76f20b09ddeee503ca"
+    },
+    {
+      "case_id": "100000-http-msgpack-gzip-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-warm-stable.json",
+      "raw_sha256": "23a4755cb39af8c8704191261b706496c7801fa66a63307e4711842bd3457059",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-warm-stable.receipt.json",
+      "receipt_sha256": "a5ec4b80e599ce4aec0b484fd5aa02ff55ba597fadedf275f70c91c0ba32ff11"
+    },
+    {
+      "case_id": "100000-http-msgpack-gzip-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-warm-churn.json",
+      "raw_sha256": "39ed3efa20d9741a8344ad381a871b5cf01041f9cb0b9f63fa0e4930df76091e",
+      "receipt_file": "ncp-transfer-42a0b05/100000-http-msgpack-gzip-warm-churn.receipt.json",
+      "receipt_sha256": "b76728ad2d8f31d2bbe76d2ddc5d7a65f3945175d48964606f91c0e596b890a1"
+    },
+    {
+      "case_id": "100000-ncp-json-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-json-cold-stable.json",
+      "raw_sha256": "6aec12261ddb247f56a0b4f572ac315050011007fb73a848fedfab0828608578",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-json-cold-stable.receipt.json",
+      "receipt_sha256": "bd5e04bd4be3644a5a8a6bc94fd0b0c6deb0461ba6d3e99a3a035ee2f34aceb0"
+    },
+    {
+      "case_id": "100000-ncp-json-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-json-cold-churn.json",
+      "raw_sha256": "adebc7531deb2d075fcb2facb480a0e44e9959a7612923cb4244d12c56f36c69",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-json-cold-churn.receipt.json",
+      "receipt_sha256": "5744eba4b6b00b3bb5436951a86dc2fb293af6fce32e98e8d5435c19b26aad7b"
+    },
+    {
+      "case_id": "100000-ncp-json-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-json-warm-stable.json",
+      "raw_sha256": "4c4a6c59e67815ff91bcff04f68c1ea7491c1e0a3a5bfd119d3853c10f373c61",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-json-warm-stable.receipt.json",
+      "receipt_sha256": "a3614427d7922e6b2036e4bccf8fa76e15c02f7b43b5301a9efd864579508bcc"
+    },
+    {
+      "case_id": "100000-ncp-json-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-json-warm-churn.json",
+      "raw_sha256": "cde7a36bf8cffb57e83ca4a0d6cf3958f73cc6f168e63c176018a26f73185c80",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-json-warm-churn.receipt.json",
+      "receipt_sha256": "b701fe75759fba82ce98fcd971c7a4aec24ef61bb5f2104dd00f819843f88b78"
+    },
+    {
+      "case_id": "100000-ncp-msgpack-cold-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-cold-stable.json",
+      "raw_sha256": "4332152231dd126ab05c8921ba756c85f5672a30c669a9237adbc2766f92699a",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-cold-stable.receipt.json",
+      "receipt_sha256": "d0016296d5b2e2e907e395503bfb6d87dc028ea20b51751e2b4e8371876c424d"
+    },
+    {
+      "case_id": "100000-ncp-msgpack-cold-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-cold-churn.json",
+      "raw_sha256": "d20276a246720e4bc02692f267431d048c8a38246a17108e59dabf5e0c83a01c",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-cold-churn.receipt.json",
+      "receipt_sha256": "9d3e0962edf38aa5edfaee5a792f517cbc1707d1eb6d362a1093cd88ed267757"
+    },
+    {
+      "case_id": "100000-ncp-msgpack-warm-stable",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-warm-stable.json",
+      "raw_sha256": "3080b1c6553b89d26a6b2a8b18f23e84f3ab4fe130548a1365a0c79e3fff00a9",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-warm-stable.receipt.json",
+      "receipt_sha256": "3f450cc454bf99faa3b2321140fe6add102ae99f653d906807651cd8e83773e0"
+    },
+    {
+      "case_id": "100000-ncp-msgpack-warm-churn",
+      "raw_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-warm-churn.json",
+      "raw_sha256": "8272ecd415894281c4f046d2233865953bc6e5a90d233450f72580a318d1bec6",
+      "receipt_file": "ncp-transfer-42a0b05/100000-ncp-msgpack-warm-churn.receipt.json",
+      "receipt_sha256": "9d499a7b038381034fe2498d8380f193c8b5926c4cda9a771e908ab54d12f742"
+    }
+  ],
+  "provider_usage": null,
+  "model_visible_bytes": null,
+  "historical_failed_attempts": [
+    "2026-11-02-ncp-transfer-first-attempt.json",
+    "2026-11-02-ncp-transfer-second-attempt.json",
+    "2026-11-02-ncp-transfer-third-attempt.json"
+  ]
+}

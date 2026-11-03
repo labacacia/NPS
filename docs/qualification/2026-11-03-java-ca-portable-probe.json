@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "task": "D20-08",
+  "kind": "portable-packaged-jar-probe-correction",
+  "base_source_revision": "535d0f72fea1392507b0674c8f9337d24a135943",
+  "preserved_failed_ci": {
+    "run_id": 41597571436,
+    "url": "https://github.com/labacacia/NPS-Dev/actions/runs/41597571436",
+    "normal_jobs_passed": 9,
+    "failed_job": "Build & Test (Java)",
+    "failed_step": "Test Java CA framework and signing migration",
+    "cause": "rg: command not found after Java SDK, CA test and bootJar succeeded"
+  },
+  "correction": "Select exactly one non-plain jar in Python standard library; CI invokes python3 and requires no rg/mapfile. Existing explicit-jar input remains supported.",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "abfff607a08259dfb41fd393a3c4dfb354e27d878a19a61aa193320bc6f67b8c",
+    "tools/security/check-java-ca-jar.py": "ab2af470826ed951dc2f108699bebec5344da1d2d4215aaad1e35f1787f6d6aa"
+  },
+  "positive_directory_probe": {
+    "kind": "actual-packaged-boot-jar-smoke",
+    "jar_sha256": "bb065e02a45e4c634214a9a47351d0e2a561a47012f46339530f9830ca597e0e",
+    "jdk": "openjdk version \"21.0.13\" 2026-10-20 LTS",
+    "health": 200,
+    "unauthenticated_registration": 401,
+    "discovery_issuer": "urn:nps:org:fixture:ca",
+    "embedded_schema_in_jar": true,
+    "key_mode_octal": "0o600",
+    "fixture_stopped": true,
+    "paid_provider_calls": 0,
+    "passed": true
+  },
+  "negative_selection_cases": [
+    {
+      "case": "empty",
+      "exit_code": 2,
+      "state_created": false,
+      "passed": true
+    },
+    {
+      "case": "ambiguous",
+      "exit_code": 2,
+      "state_created": false,
+      "passed": true
+    }
+  ],
+  "workflow_lint": "actionlint1.7.12 PASS",
+  "paid_provider_calls": 0,
+  "remote_ci": {
+    "source_revision": "92bf98e1e77283e91a8758bb04a6ed7c7d84a0e4",
+    "normal_ci_run": 41599401714,
+    "normal_jobs_passed": 10,
+    "security_run": 41599410395,
+    "scanner_jobs_passed": 7,
+    "registry_authority": "skipped on PR; manual source535d0f7 run41597917110 failed missing5 secrets; unwaived"
+  }
+}

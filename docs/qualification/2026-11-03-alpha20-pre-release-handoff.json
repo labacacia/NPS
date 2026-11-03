@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "task": "D20-08",
+  "status": "COMPLETE",
+  "release_engineering_verdict": "experimental-qualified; ready-for134release-preparation; not-ready-to-tag",
+  "target_suite": "1.0.0-alpha.20",
+  "published_baseline": "1.0.0-alpha.19",
+  "selected_source": "074eeb59015ca5489d1262988844afb12bfa5969",
+  "security_source": "92bf98e1e77283e91a8758bb04a6ed7c7d84a0e4",
+  "package_sources": [
+    "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+    "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7"
+  ],
+  "package_evidence": "docs/qualification/runs/sdk-isolation-a9e4f05/results.json",
+  "support_ledger": "docs/qualification/2026-11-03-alpha20-support-ledger.json",
+  "gate_reconciliation": "docs/qualification/2026-11-03-alpha20-gate-reconciliation.json",
+  "scope_decision_proposal": "docs/plans/2026-11-03-alpha20-scope-decision-proposal.md",
+  "decision_proposal_accepted": true,
+  "coherence": "docs/qualification/2026-11-03-repository-coherence.json",
+  "version_checks": {
+    "remote_suite19": "10requiredrepositories match1.0.0-alpha.19; not an alpha20 pass",
+    "protocol_versions": "check-version-consistency PASS NCP.13 NWP.23 NIP.16 NDP.14 NOP.11",
+    "tree_drift": {
+      "I_spec": 60,
+      "J_sdk": 292,
+      "general_script_exit": 0,
+      "release_blocker": true,
+      "note": "J now covers rootbuild/lockinputs; previous omitted files cannot count as parity"
+    }
+  },
+  "required_decisions": [],
+  "registry_secret_values_stored": false,
+  "candidate_receipt": null,
+  "candidate_receipt_reason": "pre-release receipt must wait for accepted scope, coherent version/source/upstream and clean required checks; no alpha19 receipt is relabeled alpha20",
+  "candidate_tool": "/home/olynn/.codex/skills/labacacia-nps-pre-release/scripts/nps_candidate.py",
+  "publication_issue": 134,
+  "publication_authorized": false,
+  "published": false,
+  "registry_uploads": 0,
+  "gitee_writes": 0,
+  "tags_created": 0,
+  "release_clones_modified": false,
+  "paid_model_calls": 0,
+  "beta": "separate12gates and21-day interval; not promoted",
+  "next_agent_action": "No remaining experimentalD00..08 work. Existing134 must resolve actual release source/version/projections/signing/authority and candidate receipt before separate publication approval; original fullproduction123/129..133 and beta remain later.",
+  "current_correction_checks": {
+    "source_revision": "074eeb59015ca5489d1262988844afb12bfa5969",
+    "local_actual_mtls_rows": [
+      100,
+      1000,
+      100000
+    ],
+    "local_actual_mtls_result": "passed",
+    "normal_ci": 41607553047,
+    "normal_ci_status": "passed-all10jobs",
+    "security_ci": 41607560304,
+    "scanners": "passed",
+    "registry_authority": "skipped;manualinventory failure unwaived"
+  },
+  "selected_source_qualified_by_ci": "074eeb59015ca5489d1262988844afb12bfa5969",
+  "additional_independent_investigation": {
+    "issue": 156,
+    "sdk_source": "074eeb59015ca5489d1262988844afb12bfa5969",
+    "receipt": "docs/qualification/2026-11-03-python-nwp-http-reproduction.json",
+    "result": "existinggeneralclient failure reproduced;SDKunchanged;originalcontract/realnetwork AC unresolved;no runtimecell promoted"
+  },
+  "accepted_scope_decision": "docs/adr/2026-11-03-alpha20-experimental-closeout.md",
+  "historical_pre_decision_conditions": [
+    "execute the accepted required runtime matrix after scope freeze; current576cells unexecuted",
+    "current daemon/profile/fault/general HTTP error obligations remain unqualified under129..133",
+    "source/distribution/version20 coherence and candidate materialization via release ownership tools",
+    "valid SourceLink in actual release-source packages; isolated non-Git copy warnings are unresolved",
+    "sign Maven candidate and verify namespace ownership; unsigned jar build is not signing proof",
+    "registry authority:5DevGitHubsecrets missing; localCargo absent; PyPI/namespace rights unverified"
+  ],
+  "remaining_experimental_conditions": [],
+  "release_only_conditions": [
+    "actualregistrypublishauthority including Cargo/PyPI/Sonatype namespace rights",
+    "Maven signatures and SourceLink from actualreleaseGit inputs",
+    "finalversion20/publicprojections/sourceandupstream coherence; no unexplained drift",
+    "freshcandidate receipt and explicit134publicationdecision; beta21daygatesseparate"
+  ],
+  "ci_execution": {
+    "authority": "local",
+    "github_actions_required": false,
+    "github_secret_inventory_required": false,
+    "historical_remote_inventory_failure": "preserved; not a local qualification prerequisite"
+  },
+  "cargo_token_recheck": {
+    "credential_file_recursively_checked": true,
+    "identified_cargo_fields_or_values": 0,
+    "environment_tokens_present": false,
+    "secret_values_recorded": false,
+    "phase": "134beforeactualpublication"
+  },
+  "completion_scope": "bounded experimentalD08 qualification/handoff only",
+  "experimental_evidence": "docs/qualification/runs/experimental-closeout-0c4bfdf/local-ci.json",
+  "current_local_checks": {
+    "kind": "amendedlocalCI; originalfailedrunpreserved",
+    "tests_audits_runtime_source": "0c4bfdf694e07ca0b60a9eb67cfd4a1e8a15e804",
+    "offline_fix_source": "847087332a7872aaf22e6449cf38ee1298187e56",
+    "passed": true,
+    "reference_configurations": 7,
+    "security_categories_passed": 7,
+    "github_actions_invoked": false,
+    "model_calls": 0
+  }
+}

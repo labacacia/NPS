@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "schema-batch-wire-design-freeze",
+  "artifacts": [
+    {
+      "path": "spec/conformance/alpha20/schema_batch_contract.json",
+      "sha256": "13001bfa948ba9e370315a43e79ad02a0d625b749b0cc4e1d173411c16ea5561"
+    },
+    {
+      "path": "spec/conformance/alpha20/schema_batch_vectors.json",
+      "sha256": "6653d0a101b92537244b2f3e48ff8d7ea9fa14861413d638575213a63b06877b"
+    },
+    {
+      "path": "spec/profiles/schema-batches.md",
+      "sha256": "c329790ca91ba65dd6fab4c7f9592eec01274dbc5f0ac60dbfc5accab8d5a12a"
+    },
+    {
+      "path": "spec/profiles/schema-batches.cn.md",
+      "sha256": "6fc0d11c5010b901cd597d20c03a54058956806bf8d1bf4e7941698eb26f5ee5"
+    }
+  ]
+}

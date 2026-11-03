@@ -1,0 +1,17 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/benchmarks/ncp-transfer-runtime.py", "--verify-packet", "docs/benchmarks/runs/ncp-transfer-42a0b05"], "cwd": "."}
+Traceback (most recent call last):
+  File "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/benchmarks/ncp-transfer-runtime.py", line 324, in <module>
+    main()
+    ~~~~^^
+  File "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/benchmarks/ncp-transfer-runtime.py", line 316, in main
+    passed = verify_packet(args.verify_packet.resolve())
+  File "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/benchmarks/ncp-transfer-runtime.py", line 247, in verify_packet
+    packet = json.loads(path.read_text())
+                        ~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 788, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 772, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/docs/benchmarks/runs/ncp-transfer-42a0b05'

@@ -1,0 +1,35 @@
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 pretest
+> npm run build
+
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 build
+> tsc
+
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 test
+> vitest run
+
+
+ RUN  v4.1.12 /tmp/nps-alpha20-sdk-isolation-20261103-02/NPS-SDK-TypeScript
+
+(node:15308) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18220) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18591) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18593) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18740) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18929) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19109) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  66 passed (66)
+      Tests  1324 passed (1324)
+   Start at  08:40:58
+   Duration  32.68s (transform 8.33s, setup 0ms, import 20.14s, tests 19.96s, environment 52ms)
+

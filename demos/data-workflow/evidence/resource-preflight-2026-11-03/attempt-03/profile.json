@@ -1,0 +1,1 @@
+{"cpu_affinity":[0,1,2,3],"gc_heap_hard_limit":"0x14000000","max_workflow_seconds":120,"processor_count":4,"rss_limit_bytes":536870912,"rss_sample_interval_seconds":0.01,"rss_scope":"actual Agent process plus all live descendants; concurrent RSS and conservative live VmHWM sum"}

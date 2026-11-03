@@ -13,7 +13,7 @@ English | [中文版](./NPS-0-Overview.cn.md)
 
 ## Abstract
 
-NPS (Neural Protocol Suite) is a complete set of internet base protocols designed for AI agents and models. It comprises five sub-protocols covering AI communication, Web access, identity, node discovery, and multi-agent orchestration. NPS is designed from scratch for the AI era, eliminating the fundamental inefficiencies of existing Web protocols when accessed by AI. Through the Schema anchoring mechanism, it cuts token consumption by 30–60% and establishes a unified agent identity system at the protocol layer.
+NPS (Neural Protocol Suite) comprises five protocols covering AI communication, Web access, identity, node discovery, and multi-agent orchestration. Schema anchoring supports reusable structure at the transport/runtime boundary. Wire bytes, model-visible tokens and provider cost are separate metrics; no universal token-saving percentage follows from anchoring alone.
 
 ---
 
@@ -49,7 +49,7 @@ Existing Web protocols (HTTP, REST, GraphQL) were designed for human browsers. W
 ### 1.2 Goals
 
 - When an AI accesses a Neural Node, no semantic-parsing layer is required; the response is directly consumable by the model.
-- The AnchorFrame Schema anchoring mechanism eliminates redundant Schema transmission and significantly reduces token consumption.
+- AnchorFrame schema reuse can remove repeated structure on the wire. Model-token effects depend on the final input representation and which data the runtime sends to the model.
 - A unified Agent NID (Neural Identity) makes "AI access" vs. "human access" an explicit distinction at the protocol layer.
 - Layered and optional: the minimal deployment needs only NCP + NWP; NIP / NDP / NOP are opt-in.
 
@@ -77,7 +77,7 @@ Existing Web protocols (HTTP, REST, GraphQL) were designed for human browsers. W
 Not a retrofit of existing protocols. Response structure directly matches LLM attention mechanisms; fields carry semantic type annotations so that models can reason directly.
 
 ### P2 — Token Economy First
-Three mechanisms minimize wasted tokens: frame-level Schema anchoring (AnchorFrame), incremental transmission (DiffFrame), and standardized Cognon accounting.
+Schema anchoring (AnchorFrame), incremental transmission (DiffFrame), and Cognon estimates help control data exchange. Model tokens, network bytes and provider cost require separate validation.
 
 ### P3 — Layered and Optional
 Each protocol layer is independently deployable. The minimum configuration is NCP + NWP; NIP / NDP / NOP are introduced only when needed.
@@ -164,7 +164,7 @@ All NPS protocol communication is carried in **frames**. The default frame has a
 
 ### 4.2 AnchorFrame and Schema Deduplication
 
-A Node publishes an AnchorFrame containing the full Schema definition and a SHA-256 `anchor_id`. Once an Agent caches the AnchorFrame locally, all subsequent requests and responses carry only the `anchor_id` reference, eliminating repeated Schema transmission. Typical savings within a single session are 30–60% of tokens.
+A Node publishes an AnchorFrame containing the full Schema definition and a SHA-256 `anchor_id`. An Agent can cache it and reference the schema in later exchanges. This reduces repeated schema transmission where that structure would otherwise be resent. If the runtime expands the same data into the same model messages, transport compression alone does not reduce model-input tokens. Compact model-visible representations and runtime-side filtering require separate correctness and provider-usage measurements.
 
 ### 4.3 Cognon (CGN) and Token Budget
 

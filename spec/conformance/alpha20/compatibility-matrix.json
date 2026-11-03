@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "design-baseline-not-executed",
+  "sdks": [
+    "dotnet",
+    "python",
+    "typescript",
+    "go",
+    "java",
+    "rust"
+  ],
+  "bindings": [
+    "native",
+    "canonical-http"
+  ],
+  "cases": [
+    {
+      "id": "CMP-01",
+      "client_version": "alpha.19",
+      "server_version": "alpha.19",
+      "precondition": "baseline",
+      "expected": "preserve-baseline"
+    },
+    {
+      "id": "CMP-02",
+      "client_version": "alpha.19",
+      "server_version": "alpha.20",
+      "precondition": "legacy-request",
+      "expected": "preserve-baseline-no-authority-expansion"
+    },
+    {
+      "id": "CMP-03",
+      "client_version": "alpha.20",
+      "server_version": "alpha.19",
+      "precondition": "optional-safe-fallback",
+      "expected": "omit-new-semantics"
+    },
+    {
+      "id": "CMP-04",
+      "client_version": "alpha.20",
+      "server_version": "alpha.19",
+      "precondition": "required-new-feature",
+      "expected": "reject-before-dispatch"
+    },
+    {
+      "id": "CMP-05",
+      "client_version": "alpha.20",
+      "server_version": "alpha.20",
+      "precondition": "exact-common-enabled-revision",
+      "expected": "execute-selected-revision"
+    },
+    {
+      "id": "CMP-06",
+      "client_version": "alpha.20",
+      "server_version": "alpha.20",
+      "precondition": "required-revision-mismatch",
+      "expected": "reject-before-dispatch"
+    },
+    {
+      "id": "CMP-07",
+      "client_version": "alpha.20",
+      "server_version": "alpha.20",
+      "precondition": "experimental-disabled",
+      "expected": "not-selected-reject-if-required"
+    },
+    {
+      "id": "CMP-08",
+      "client_version": "alpha.20",
+      "server_version": "alpha.20",
+      "precondition": "spoofed-context-or-support",
+      "expected": "reject-no-authority-expansion"
+    }
+  ],
+  "required_cells": 576,
+  "results": []
+}

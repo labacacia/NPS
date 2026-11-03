@@ -1,0 +1,7 @@
+{
+  "source_revision": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+  "override": {
+    "pyproject.toml": "version 1.0.0a20.dev0+2d16f7d7f87e"
+  },
+  "publication": false
+}

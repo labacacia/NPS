@@ -1,0 +1,10 @@
+{
+  "source_revision": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+  "version": "v1.0.0-alpha.20.dev.2d16f7d7f87e",
+  "source_projection_sha256": "e4818bce6532cfa6fee027527605ce90e733ff333635cf04d68cbc5ec44273ff",
+  "zip_sha256": "cdf5482bf0fbe9e11ffb33f6bfdb622211f32434b2ae669ddc7ad74f715e5178",
+  "local_overrides": {
+    "VERSION": "1.0.0-alpha.20.dev.2d16f7d7f87e"
+  },
+  "publication": false
+}

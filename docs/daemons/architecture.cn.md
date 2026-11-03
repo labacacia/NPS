@@ -2,9 +2,8 @@
 
 # NPS Daemon 架构
 
-> 三层六个概念角色的参考部署模型。当前活跃分发中，四个角色位于
-> NPS-Daemons，信任锚角色位于 NIP-CA-Server。原 Cloud CA 与 Ledger 原型已
-> 归档；下文相应章节只保留设计历史，不代表可部署的发布列车组件。
+> NPS 在生产环境的参考部署拓扑。六个常驻服务分布在三层；每一层独立水平扩展，
+> 各层有不同的信任边界和故障边界。
 >
 > 状态 —— alpha.18 源码 / alpha.19 债务收口边界：`npsd` 已在配置的
 > loopback 端口复用 HTTP 与 local-dev 原生 NCP，具备有界 preamble/Hello
@@ -56,7 +55,7 @@
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-## 六个概念角色
+## 六个 daemon
 
 ### 第一层 —— 本机基础设施（每台机器各一个）
 
@@ -65,7 +64,7 @@
 - **监听**：默认 `127.0.0.1:17433`，在统一端口无损复用 HTTP 控制流量与 local-dev 原生 NCP。
 - **已实现原生边界**：有界 [NPS-RFC-0001](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0001-ncp-connection-preamble.cn.md) preamble 与 Hello/Caps 协商、协商后的编码/payload 约束、canonical AnchorFrame ACK/缓存，以及确定性的静默/错误关闭。公网 TLS 1.3/mTLS 终止属于 `nps-ingress`。
 - **已实现状态边界**：root Ed25519 密钥对管理、为本机 agent 签发 sub-NID，以及用于 `ephemeral` HTTP pull + 显式 ack 的持久 per-NID SQLite inbox。未投递帧、绝对 TTL、优先级顺序和 ack 均跨 daemon 重启保留。
-- **明确限制**：不宣称完整 Node L1。全部 20 个 L1 用例、当前证据状态、可运行门禁和剩余缺口见 [`NPS-NODE-L1-MANIFEST.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/npsd/conformance/NPS-NODE-L1-MANIFEST.json)。resident/hybrid push 在 L1 可选，本 profile 明确拒绝；BYO-key agent 不会自动广播，因为 npsd 不持有其私钥，也不得冒充 publisher 签名。
+- **明确限制**：不宣称完整 Node L1。全部 20 个 L1 用例、当前证据状态、可运行门禁和剩余缺口见 [`NPS-NODE-L1-MANIFEST.json`](../../tools/daemons/npsd/conformance/NPS-NODE-L1-MANIFEST.json)。resident/hybrid push 在 L1 可选，本 profile 明确拒绝；BYO-key agent 不会自动广播，因为 npsd 不持有其私钥，也不得冒充 publisher 签名。
 - **为什么必须常驻**：身份和 inbox 不能跟着 session 走 —— 持久状态需要宿主进程。本机所有 NPS 客户端（MCP shim、resident agent、worker、ingress shim）都通过它接入。
 - **为什么不能合并**：协议层是业务无关的，所有上层共享；合并到任何业务进程都会污染信任域。
 - **参考合规**：目标是 `NPS-Node Profile L1`（见 [`spec/services/NPS-Node-Profile.cn.md`](https://github.com/labacacia/NPS/blob/main/spec/services/NPS-Node-Profile.cn.md) 与 [`spec/services/conformance/NPS-Node-L1.cn.md`](https://github.com/labacacia/NPS/blob/main/spec/services/conformance/NPS-Node-L1.cn.md)）。
@@ -81,9 +80,9 @@
   inbox、不发送通知。
 - **明确限制**：当前 inbox 契约执行单个 SpawnSpec，而不是多节点 TaskFrame，
   因此不声明完整 Node L3 认证。已验证/部分验证/未执行的逐 case 边界见
-  [`NPS-NODE-L3-MANIFEST.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-runner/conformance/NPS-NODE-L3-MANIFEST.json)，
+  [`NPS-NODE-L3-MANIFEST.json`](../../tools/daemons/nps-runner/conformance/NPS-NODE-L3-MANIFEST.json)，
   更完整能力边界见
-  [`NPS-RUNNER-CAPABILITIES.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-runner/conformance/NPS-RUNNER-CAPABILITIES.json)。
+  [`NPS-RUNNER-CAPABILITIES.json`](../../tools/daemons/nps-runner/conformance/NPS-RUNNER-CAPABILITIES.json)。
 - **为什么必须常驻**：消息随时到达；调度器必须在那才能 spawn。worker 是临时的，但调度器不是。
 - **为什么与 `npsd` 分离**：资源画像差异巨大 —— `npsd` 静态、内存可预测；`nps-runner` 在 spawn 高峰时 burst；故障隔离很关键（worker crash 不该把 NCP 层带下去）；信任边界不同（`nps-runner` 跑用户提供的 Agent SDK 代码，协议层不该有这个权限面）。
 
@@ -92,7 +91,7 @@
 #### ③ `nps-ingress` —— Internet 入站网关
 
 - **已实现的 transport 边界**：以 TLS 1.3 + ALPN `nps/1.0` 终止 native NCP；默认开启的 mTLS 把 NIP 客户端证书验证到配置信任锚；Caps 后的 `IdentFrame` NID 在转发前绑定到证书 NID；握手时间/frame 大小和后端准入前 framing 均有硬边界；通过的字节流代理到本机 NCP 后端，并在客户端 half-close 后排空响应。`TC-N2-Tls-01..04` 已通过真实 socket 执行。
-- **边界处置**：拓扑、Bridge、HA 与 Registry family 适用于其他 IUT 角色。限速、NeuronHub 用户鉴权、CGN 扣款、声誉、Anchor 中间件及广义 DDoS 控制不作为 transport capability 宣传；其产品/AaaS/可选组合/部署归属记录在 [`NPS-INGRESS-ADMISSION-DISPOSITION.json`](https://github.com/labacacia/NPS-Dev/blob/main/tools/daemons/nps-ingress/conformance/NPS-INGRESS-ADMISSION-DISPOSITION.json)。
+- **边界处置**：拓扑、Bridge、HA 与 Registry family 适用于其他 IUT 角色。限速、NeuronHub 用户鉴权、CGN 扣款、声誉、Anchor 中间件及广义 DDoS 控制不作为 transport capability 宣传；其产品/AaaS/可选组合/部署归属记录在 [`NPS-INGRESS-ADMISSION-DISPOSITION.json`](../../tools/daemons/nps-ingress/conformance/NPS-INGRESS-ADMISSION-DISPOSITION.json)。
 - **为什么必须常驻**：对外暴露的端口必须始终在听。
 - **为什么与 `npsd` 分离**：`npsd` 默认只 bind 127.0.0.1；网关 bind 公网。攻击面、安全策略、运维边界完全不同。`npsd` 失败影响本机所有 NPS 流量；网关失败只影响外部入站 —— 二者必须能独立重启。
 - **说明**：这是**进程级**名字；规范层"集群控制平面"角色现在叫 **Anchor Node**（NWP），见 [NPS-CR-0001](https://github.com/labacacia/NPS/blob/main/spec/cr/NPS-CR-0001-anchor-bridge-split.md)。`nps-ingress` 进程 MAY 承载 Anchor Node 中间件，但不是必须。
@@ -106,13 +105,13 @@
 
 ### 第三层 —— 信任锚点 *(NPS Cloud 阶段，2027 Q1+)*
 
-#### ⑤ `nps-cloud-ca` —— 证书签发服务（已归档设计角色）
+#### ⑤ `nps-cloud-ca` —— 证书签发服务
 
 - **NIP 信任根**，签发跨组织的 NID 证书，提供 CRL / OCSP。LabAcacia 自己跑开源 CA；商业用户也可以跑私有 CA。
 - **为什么必须常驻**：撤销查询必须实时响应；签发请求随机到达。
 - **为什么独立于 `nps-registry`**：CA 是信任的*来源*；Registry 是信息的*索引*。CA 失败影响新 NID 接入和撤销响应；Registry 失败只影响发现。信任级别、运维流程、审计要求都不同。CA 私钥 MUST 做物理或 HSM 级保护；registry 没这要求。
 
-#### ⑥ `nps-ledger` —— 审计与合规日志收集器（已归档设计角色）
+#### ⑥ `nps-ledger` —— 审计与合规日志收集器
 
 - **append-only 收集点**，K-of-N 审计共识所需 —— NeuronHub 的 CGN 结算正确性最终靠这一层提供证据。实现 [NPS-RFC-0004](https://github.com/labacacia/NPS/blob/main/spec/rfcs/NPS-RFC-0004-nid-reputation-log.cn.md) 定义的 Certificate-Transparency 风格日志：提交、查询、signed tree head、inclusion proof。
 - **为什么必须常驻**：审计日志是连续 append 流；接收端不能 down，否则有 gap。
@@ -124,12 +123,12 @@
 
 | Daemon | 文件夹 | 项目 | 二进制 | NuGet 包 |
 |--------|--------|---------|--------|----------------|
-| ① | `NPS-Daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
-| ② | `NPS-Daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
-| ③ | `NPS-Daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
-| ④ | `NPS-Daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
-| ⑤ | `NIP-CA-Server/` | `NPS.NipCaServer.csproj` | `NPS.NipCaServer` | NIP CA 包 |
-| ⑥ | 已归档 | — | — | 仅保留设计历史 |
+| ① | `tools/daemons/npsd/` | `Npsd.csproj` | `npsd` | `LabAcacia.NPS.Daemon.Npsd` |
+| ② | `tools/daemons/nps-runner/` | `NpsRunner.csproj` | `nps-runner` | `LabAcacia.NPS.Daemon.Runner` |
+| ③ | `tools/daemons/nps-ingress/` | `NpsIngress.csproj` | `nps-ingress` | `LabAcacia.NPS.Daemon.Ingress` |
+| ④ | `tools/daemons/nps-registry/` | `NpsRegistry.csproj` | `nps-registry` | `LabAcacia.NPS.Daemon.Registry` |
+| ⑤ | `tools/daemons/nps-cloud-ca/` | `NpsCloudCa.csproj` | `nps-cloud-ca` | `LabAcacia.NPS.Daemon.CloudCa` |
+| ⑥ | `tools/daemons/nps-ledger/` | `NpsLedger.csproj` | `nps-ledger` | `LabAcacia.NPS.Daemon.Ledger` |
 
 ## 历史 alpha-to-beta 阶段规划
 

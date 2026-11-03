@@ -2,6 +2,10 @@ English | [中文版](./transport-profile.cn.md)
 
 # NPS Transport Profile
 
+> Historical draft — not a current conformance target. See the
+> [transport reconciliation](./transport-reconciliation.md) for the conflict ledger
+> and current NCP authority. The original text below is retained as history only.
+
 **Title**: NPS Transport Profile  
 **Version**: 0.1  
 **Status**: Draft  

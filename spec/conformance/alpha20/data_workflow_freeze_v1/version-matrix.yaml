@@ -1,0 +1,144 @@
+# NPS Spec Version Matrix
+#
+# ── AUTHORITATIVE SPEC ORACLE ────────────────────────────────────────────────
+# Single source of truth for the version of every NPS protocol document and
+# machine-readable artifact under spec/. CI tooling reads from HERE and ONLY
+# HERE; README badges, README protocol-status tables, spec/NPS-*.md
+# `Depends-On:` headers, frame-registry.yaml, and CLAUDE.md spec tables MUST
+# match this file (see tools/check-version-consistency.sh).
+#
+# Distinct from NPS/version.yaml, which tracks the *suite release*
+# version (1.0.0-alpha.x) — that lives in the release repo and is the oracle
+# for SDK package versions, not protocol-document versions.
+#
+# Rules:
+#   1. When any protocol spec under spec/NPS-*.md is bumped, update the
+#      corresponding entry below in the same commit.
+#   2. EN/CN spec pairs MUST share the same version. If the CN translation is
+#      lagging, raise the CN file's Version: header (after merging the
+#      translated content) at the same time as the EN bump.
+#   3. spec/NPS-X.md `Depends-On:` headers MUST reference the exact versions
+#      pinned for each dependency below.
+#   4. README badges and protocol-status tables MUST match `version` here.
+#
+# Issue tracker: NPS-Dev#37 (P0 — version drift consistency gate).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Suite release version (mirror of NPS/version.yaml `suite_version`).
+# Kept here only so that README's `release-vX` badge can be validated by the
+# same gate; the authoritative oracle is still NPS/version.yaml.
+suite_version: "1.0.0-alpha.19"
+
+# Per-protocol document versions. Each entry pins:
+#   version       — current Version: header in spec/<file>.md
+#   en_path       — EN spec markdown path (relative to repo root)
+#   cn_path       — CN spec markdown path
+#   depends_on    — what the spec's Depends-On: header MUST reference
+protocols:
+  NPS-0:
+    name: "Overview"
+    version: "0.4"
+    en_path: "spec/NPS-0-Overview.md"
+    cn_path: "spec/NPS-0-Overview.cn.md"
+    depends_on: []
+
+  NPS-1:
+    name: "NCP — Neural Communication Protocol"
+    short: "NCP"
+    version: "0.13"
+    en_path: "spec/NPS-1-NCP.md"
+    cn_path: "spec/NPS-1-NCP.cn.md"
+    depends_on: []
+
+  NPS-2:
+    name: "NWP — Neural Web Protocol"
+    short: "NWP"
+    version: "0.23"
+    en_path: "spec/NPS-2-NWP.md"
+    cn_path: "spec/NPS-2-NWP.cn.md"
+    depends_on:
+      - { spec: "NPS-1", version: "0.13" }  # NCP
+      - { spec: "NPS-3", version: "0.16" }  # NIP
+      - { spec: "NPS-4", version: "0.14" }  # NDP
+
+  NPS-3:
+    name: "NIP — Neural Identity Protocol"
+    short: "NIP"
+    version: "0.16"
+    en_path: "spec/NPS-3-NIP.md"
+    cn_path: "spec/NPS-3-NIP.cn.md"
+    depends_on:
+      - { spec: "NPS-1", version: "0.13" }   # NCP
+
+  NPS-4:
+    name: "NDP — Neural Discovery Protocol"
+    short: "NDP"
+    version: "0.14"
+    en_path: "spec/NPS-4-NDP.md"
+    cn_path: "spec/NPS-4-NDP.cn.md"
+    depends_on:
+      - { spec: "NPS-1", version: "0.13" }  # NCP
+      - { spec: "NPS-3", version: "0.16" }  # NIP
+
+  NPS-5:
+    name: "NOP — Neural Orchestration Protocol"
+    short: "NOP"
+    version: "0.11"
+    en_path: "spec/NPS-5-NOP.md"
+    cn_path: "spec/NPS-5-NOP.cn.md"
+    depends_on:
+      - { spec: "NPS-1", version: "0.13" }  # NCP
+      - { spec: "NPS-2", version: "0.23" }  # NWP
+      - { spec: "NPS-3", version: "0.16" }  # NIP
+      - { spec: "NPS-4", version: "0.14" }  # NDP
+
+# Cross-protocol shared documents.
+shared:
+  feature-registry:
+    version: "0.2"
+    path: "spec/feature-registry.json"
+
+  frame-registry:
+    version: "0.15"
+    path: "spec/frame-registry.yaml"
+
+  token-budget:
+    version: "0.7"
+    en_path: "spec/token-budget.md"
+    cn_path: "spec/token-budget.cn.md"
+
+  error-codes:
+    version: "1.12"
+    en_path: "spec/error-codes.md"
+    cn_path: "spec/error-codes.cn.md"
+
+  status-codes:
+    version: "0.9"
+    en_path: "spec/status-codes.md"
+    cn_path: "spec/status-codes.cn.md"
+
+  roadmap:
+    version: "0.10"
+    en_path: "spec/NPS-Roadmap.md"
+    cn_path: "spec/NPS-Roadmap.cn.md"
+
+# Minimum-compatibility floors. A peer announcing the listed protocol MUST
+# implement at least the version below to be considered conformant. Floors MAY
+# lag the current document version when newer versions remain backward
+# compatible; on the first breaking change they MUST be re-evaluated.
+min_compatible:
+  NCP: "0.6"
+  NWP: "0.13"
+  NIP: "0.9"
+  NDP: "0.8"
+  NOP: "0.6"
+
+# Known EN/CN translation drift (informational only — CI surfaces these as
+# warnings until the CN translation catches up). When a CN file matches its
+# EN counterpart, remove its entry from this list.
+#
+# Empty as of 2026-08-07: the NPS-1..NPS-5 CN specs were brought to parity with
+# their EN counterparts (section trees, field tables, error-code tables and
+# changelog rows all verified identical). Re-add an entry the moment an EN spec
+# lands a change its CN counterpart does not carry.
+translation_lag: []

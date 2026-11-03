@@ -4,11 +4,11 @@ English | [中文版](./NPS-2-NWP.cn.md)
 
 **Spec Number**: NPS-2
 **Status**: Proposed
-**Version**: 0.22
-**Date**: 2026-08-31
+**Version**: 0.23
+**Date**: 2026-09-09
 **Port**: 17433 (default, shared) / 17434 (optional dedicated)
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12), NPS-3 (NIP v0.15), NPS-4 (NDP v0.13)
+**Depends-On**: NPS-1 (NCP v0.13), NPS-3 (NIP v0.16), NPS-4 (NDP v0.14)
 
 > This document is the NWP detailed specification. For a suite overview see [NPS-0-Overview.md](NPS-0-Overview.md).
 
@@ -1084,6 +1084,14 @@ Released/expired tombstones SHOULD remain visible to their owner for at least
 
 | Error | NPS status | Meaning |
 |-------|------------|---------|
+| `NWP-CHALLENGE-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid challenge input |
+| `NWP-CHALLENGE-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | Unknown or unauthorized challenge handle |
+| `NWP-CHALLENGE-BINDING-CONFLICT` | `NPS-CLIENT-CONFLICT` | Same operation key with a different digest |
+| `NWP-CHALLENGE-NOT-APPROVED` | `NPS-CLIENT-CONFLICT` | Challenge is not approved for execution |
+| `NWP-CHALLENGE-EXPIRED` | `NPS-CLIENT-CONFLICT` | Challenge expired before execution claim |
+| `NWP-CHALLENGE-STATE-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | Durable challenge state unavailable |
+| `NWP-FEATURE-REQUIREMENTS-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid or repeated required-feature HTTP header |
+| `NWP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | Required exact feature unavailable before dispatch |
 | `NWP-LLM-CONTEXT-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | Unknown/released context or expired idempotency lookup. |
 | `NWP-LLM-CONTEXT-EXPIRED` | `NPS-CLIENT-GONE` | Idle-expiry tombstone is still present. |
 | `NWP-LLM-CONTEXT-VERSION-CONFLICT` | `NPS-CLIENT-CONFLICT` | Stale version or concurrent mutation reservation. |
@@ -1103,6 +1111,156 @@ claiming stateful savings MUST compare the same multi-turn role/tool semantics
 in stateless and strict-native stateful modes. On the second turn, stateful mode
 MUST send only the delta and demonstrate both lower `wire_input_bytes` and lower
 observed `evaluated_tokens`. Protocol fallback MUST be disabled.
+
+---
+
+### 7.7 Governed action challenge (NWP v0.23)
+
+The following rules define experimental `nps.governed_challenge` revision 1,
+requiring `nps.production_runtime` revision 1 and additionally context revision 1
+when a projection is carried. These profiles do not replace product approval policy
+or allocate new frames.
+
+#### 7.7.1 Binding and initial action
+
+A governed operation requires authenticated subject, logical audience/target, action ID and a
+nonempty idempotency key (1..128 UTF-8 bytes). Existing ActionFrame carries the operation.
+An opted-in server validates parameters and authorization before creating state. Missing key
+rejects before creating challenge or effect.
+
+Bind issuer authority, subject, action, audience, frozen accepted parameters, operation key, expiry
+and selected feature revisions. The operation digest uses NIP §7.8 / NWP §9.7 logical request digest rules,
+even when the context is native and no projection header exists. Challenge metadata and proof
+handle are excluded from the original operation digest; original business parameters are immutable.
+
+Durable operation key is (authority,subject,audience,action,idempotency_key). Same key and same
+digest returns the existing pending/terminal operation. Same key and different digest conflicts
+without creating a second challenge. Authorization is rechecked on every call, including results.
+Store the initial operation and challenge atomically before returning a handle.
+
+#### 7.7.2 Challenge response
+
+The standard Caps response carries a profile-defined JSON record in data with its registered
+Anchor schema; it is not arbitrary JSON substituted for a Caps payload. HTTP may use 202 for pending;
+native uses the same Caps record. Fields:
+
+| Field | Type / rule |
+|---|---|
+| challenge_id | opaque unpadded base64url of 32 random bytes |
+| state | pending / approved / executing / completed / denied / expired / superseded / indeterminate |
+| action_id | original registered action |
+| audience | original logical target |
+| request_digest | sha256: plus 64 lowercase hex digits |
+| expires_at | integer Unix seconds; before execution admission |
+| methods | unique product method identifiers, at most 8; each at most 64 ASCII bytes |
+| operation_id | opaque server operation identifier, at most 128 bytes |
+| result | only for completed; original action's complete typed Caps value |
+| error | bounded original/action error or profile error; never approval credentials |
+
+Subject/authority binding remains server-side; do not expose private policy/account details.
+TTL defaults to 300 seconds, maximum 900, server clock authoritative. Persist result/deduplication
+records for at least 86400 seconds after terminal transition and publish the exact retention period.
+A client MUST NOT automatically retry after the advertised retention window.
+
+#### 7.7.3 Protocol actions
+
+Register nwp.challenge.status, nwp.challenge.resume and nwp.challenge.cancel using existing NWP
+action discovery, ActionFrame and Caps responses. Params contain only challenge_id; original frozen
+operation is loaded from state. No reusable OTP, approval token or user password travels in these
+actions. Each action requires the same authenticated subject/audience and product permission.
+
+status returns current state without effects. resume requires approved state, rechecks current
+grant/revocation/scope, original digest and expiry, then atomically claims approved -> executing.
+Repeated resume returns the same operation state/result; it never creates another execution.
+cancel transitions pending/approved -> denied atomically. Cancel after executing reports current
+state and cannot claim rollback. Unknown or wrong-subject handles return the same bounded not-found
+error. Handle knowledge does not let another subject view, approve, resume or cancel.
+
+Human/step-up systems update pending -> approved or denied via product-owned authenticated flows.
+They cannot modify frozen parameters or rebind the operation. Supersession ends the old challenge;
+a new logical operation/key is required for different parameters. Direct execute bypass is not
+allowed merely because a client omitted this profile on a policy-governed action.
+
+#### 7.7.4 State transitions and execution ownership
+
+Allowed transitions:
+
+- pending -> approved / denied / expired / superseded;
+- approved -> executing / denied / expired / superseded;
+- executing -> completed / indeterminate.
+
+Completed includes a durable terminal action result or known terminal action failure. A pending
+approval does not itself start execution. Expiry applies before executing; it does not undo an
+already executing side effect. Terminal state is immutable except an explicit trusted reconciliation
+process may resolve indeterminate -> completed with durable execution evidence. Reconciliation
+never automatically repeats the mutation.
+
+Claim ownership and durable operation record must commit atomically. If the effect shares the same
+transactional store, commit effect and result together. Otherwise use an idempotent external sink
+with the same durable operation identity, or retain indeterminate after an ambiguous crash.
+At-most-one claim is not proof of at-most-one external effect. Concurrent callers, restart and
+Anchor failover share the operation store/fencing scope; unavailable state fails closed.
+
+#### 7.7.5 Errors and limits
+
+| Error | Status | HTTP |
+|---|---|---|
+| NWP-CHALLENGE-INVALID | NPS-CLIENT-BAD-FRAME | 400 |
+| NWP-CHALLENGE-NOT-FOUND | NPS-CLIENT-NOT-FOUND | 404 |
+| NWP-CHALLENGE-BINDING-CONFLICT | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-NOT-APPROVED | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-EXPIRED | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-STATE-UNAVAILABLE | NPS-SERVER-UNAVAILABLE | 503 |
+
+Bound active pending challenges per subject and global storage; defaults 16 per subject and 4096
+total pending/approved challenges. Capacity rejection occurs before mutation/state allocation.
+Rate-limit status/resume/cancel with existing node policy. Logs contain bounded operation/state
+identifiers, not approval proofs, projection headers or business parameters.
+
+#### 7.7.6 Schema, retention and response boundaries
+
+Here authority is a receiver-configured logical operation-owner namespace, stable
+across its replicas and gateway routes; it is not the immediate projection issuer/key.
+Changing ingress gateways MUST NOT create a second deduplication namespace.
+Only profile-generated challenge metadata is excluded from the original digest;
+business params named challenge_id or similar remain part of the signed body.
+
+Management actions MUST reject callback_url and async=true. Their timeout/priority
+only govern the management request and MUST NOT replace frozen operation fields;
+their idempotency key cannot replace the stored original operation key.
+Execution claim MUST reject when server now >= expires_at. Initial expiry is strictly
+after creation and at most 900 seconds later.
+
+The existing ActionFrame UUID-v4 idempotency-key rule still applies; the 1..128-byte
+limit does not relax it. NWM advertises the durable retention through
+`profiles.governed_challenge = {"revision":1,"retention_seconds":86400}`.
+Retention is uint32, at least 86400; changing it changes manifest version.
+Finite local storage MUST reject new operations rather than evict records before
+their promised retention ends.
+
+Fixed Anchors are defined in [challenge-schemas.json](conformance/alpha20/challenge-schemas.json).
+The three management actions have params containing only challenge_id. Responses are
+standard Caps with count=1 and a complete challenge record in data[0]. Unused result
+and error are explicitly null. Non-null result is the original operation's standard
+Caps object, not an arbitrary replacement envelope. A known completed success requires
+result and null error; a known completed failure requires error and null result.
+All other states require null result. Existing frame/response limits still apply.
+
+The record additionally carries `retained_until` (nullable uint64 Unix seconds):
+terminal records MUST set it to at least terminal commit time plus the promised
+retention; other states set null. Trusted reconciliation MUST NOT shorten a promised
+deadline. All time values are at most 9007199254740991. Method IDs match
+`[a-z][a-z0-9_.:-]{0,63}`; operation_id is 1..128 UTF-8 bytes.
+Action/audience/digest follow §9.7 and NIP §7.8 bounds.
+
+Initial governed invocation only creates/returns pending or approved state; it does
+not execute the original mutation. Status returns the current record. Resume in
+pending/denied/superseded returns NOT-APPROVED; expired returns EXPIRED;
+executing/completed/indeterminate returns the same state/result. These rejections
+use the corresponding NWP-CHALLENGE-* errors above. Unknown/wrong-subject remains
+uniform NOT-FOUND. HTTP pending/approved/executing records use 202; other records use
+200; errors use the error table. Outcome certainty comes from state/result/error,
+never merely an HTTP success status.
 
 ---
 
@@ -1213,6 +1371,116 @@ HTTP overlay implementations MUST use canonical NWP error codes for transport-bi
 | Advertised but unimplemented | NWM advertises a capability or profile that this node accepts in discovery but cannot currently serve | `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED` | `NPS-SERVER-UNSUPPORTED` |
 
 `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED` is distinct from capability-specific unsupported codes such as `NWP-QUERY-VECTOR-UNSUPPORTED`: use the specific code when the manifest truthfully declares the feature unsupported, and use `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED` only for rollout windows, disabled backends, or inconsistent discovery state where the feature was advertised but cannot be served.
+
+---
+
+### 9.6 Feature-dependent HTTP admission (NWP v0.23)
+
+Feature IDs, revision descriptors and lifecycle policy follow NCP §2.6.3.
+Every required dependency in feature-registry.json must also be explicitly listed
+in the request's exact pair set; a missing/incompatible dependency fails with
+NWP-FEATURE-REQUIRED-UNSUPPORTED before dispatch.
+The following requirements are opt-in, but malformed feature headers MUST be
+rejected by a profile-aware endpoint even on a base operation.
+
+**NWP-FTR-01 — advertisement.** NWM MAY expose
+`profiles.feature_negotiation = {"version":1,"feature_offer":[...]}`.
+Its raw JSON profile value MUST NOT exceed 16384 UTF-8 bytes; existing manifest
+limits also apply. The manifest version MUST change when the offer changes.
+The advertisement covers the service endpoint; narrower action support MUST be
+revalidated before side effects. Discovery is not admission or authorization.
+
+**NWP-FTR-02 — exact header.** Feature-dependent requests MUST carry one ASCII
+`X-NPS-Required-Features` header: comma-separated `id=revision` pairs, sorted by
+ascending ID, without whitespace, duplicates or leading zeroes; at most 32 pairs
+and 4096 bytes. Repeated header instances MUST be rejected before framework joining.
+All listed revisions are exact and required for that operation. Invalid syntax
+maps to `NWP-FEATURE-REQUIREMENTS-INVALID` / HTTP 400.
+
+**NWP-FTR-03 — dispatch gate.** Before invoking a handler, the endpoint MUST check
+current enabled revisions, dependencies, operation support and authenticated
+admission policy. Unsupported/withdrawn support fails with
+`NWP-FEATURE-REQUIRED-UNSUPPORTED` / HTTP 409 and zero handler invocations.
+Feature claims MUST NOT expand admitted authority. Gateways revalidate each leg;
+native and HTTP selections are independent. Context projection request digests
+MUST bind the exact required feature set.
+
+**NWP-FTR-04 — route guarantee.** Before sending a feature-dependent operation,
+clients MUST obtain affirmative version-1 advertisement on the authenticated route
+serving that operation. That route MUST enforce admission for every possible backend,
+or reject before forwarding; mixed old/new routes MUST NOT advertise until this is
+guaranteed. Clients MUST fail locally if the guarantee is unavailable, and MUST NOT
+redirect/fall back to an unverified route. An old server ignoring the header is not
+a safe fallback; post-response detection is too late to prevent side effects.
+
+**NWP-FTR-05 — response.** Successful responses MUST echo the exact accepted pairs
+in `X-NPS-Selected-Features`; failed responses MUST NOT assert selection success.
+A missing/malformed/mismatched success echo is a client protocol error with uncertain
+operation outcome, never permission to retry a mutation. Calls not using the profile
+omit the required header and retain base behavior.
+
+---
+
+### 9.7 Invocation-context carrier and request binding
+
+**NWP-CTX-01 — native carrier.** QueryFrame, ActionFrame and SubscribeFrame MAY
+carry `invocation_context`, an unpadded base64url string containing the NIP §7.8
+JSON envelope, plus `required_features`, an array of exact
+`{"id":"nps.invocation_context","revision":1}`-shaped pairs. These request pairs
+are distinct from Hello's required-ID array. They MUST be unique, sorted by ID and
+at most 32; every exact pair MUST already belong to the admitted session selection.
+A projection requires the context revision-1 pair. Feature-aware receivers MUST
+reject unnegotiated requirements before dispatch; clients MUST NOT send them to
+legacy sessions. No other frame receives a context carrier through this binding.
+
+**NWP-CTX-02 — HTTP carrier.** Use the single `X-NPS-Invocation-Context` header
+and exact `X-NPS-Required-Features` set of §9.6, including context revision 1.
+The native-only `invocation_context` and `required_features` body fields MUST NOT
+also appear on a projected HTTP request; multiple carriers are invalid. A gateway
+translates carriers explicitly, not by preserving both. The encoded context string
+is at most 21846 ASCII bytes, and the decoded envelope at most 16384 bytes;
+non-canonical base64url and duplicate instances are invalid.
+
+**NWP-CTX-03 — logical request.** For this binding, digest `protocol` is `nwp`;
+ActionFrame uses its exact `action_id` as `operation`, QueryFrame uses
+`nwp.query`, and SubscribeFrame uses `nwp.subscribe`. `target` is the exact
+logical service/resource ID established by the authenticated route, checked against
+receiver configuration, never copied from an unverified caller authority header.
+`idempotency_key` is the actual request field or null, preserving its schema rules.
+`required_features` is exactly the request pair set from the applicable carrier.
+
+**NWP-CTX-04 — complete semantic body.** For JSON-compatible requests,
+`body.value` is the parsed NWP request object with `frame`, `request_id`,
+`invocation_context` and `required_features` removed. For ActionFrame only,
+also remove `action_id` and `idempotency_key`, which are bound in the outer object.
+All remaining fields are retained, including params, filters, query type,
+callback_url, priority, async, timeout and subscription options when present.
+Preserve field presence; do not insert defaults or normalize values before digest
+verification. HTTP path/query/header semantics must first be mapped into this logical
+request using the registered binding. Headers not represented in that binding MUST
+NOT affect authority or side effects. Non-I-JSON values require a registered byte-body
+profile; otherwise reject rather than invent a cross-language conversion.
+Transport trace correlation and the projection are excluded, not business inputs.
+The verified I-JSON value MUST be the value delivered to the handler, not a second
+higher-precision parse of original numeric lexemes. Numeric semantics are finite
+IEEE-754 binary64; integers outside ±9007199254740991 or schema requirements for
+higher-precision decimals must use declared string/byte representations. A verifier
+MUST NOT sign a rounded value while the handler executes a different precise value.
+Excluded correlation fields MUST NOT drive authorization, operation selection,
+business deduplication or business decisions; protocol correlation echo is still allowed.
+
+**NWP-CTX-05 — authority and dispatch.** NIP §7.8 verification and atomic replay
+admission follow pure operation-schema/binding validation. Invalid operation inputs
+MUST NOT consume a projection ID; that validation cannot produce business effects.
+Verification and replay
+admission MUST finish before any operation handler or operation-driven callback,
+external probe or business side effect. Verification/replay-store operations themselves
+are admission work, not operation dispatch. Public/untrusted projection carriers are stripped at the ingress boundary;
+fresh projection uses locally admitted authority. The immediate gateway identity and
+original subject remain distinct. A caller cannot choose trusted issuer policy,
+local-dev mode, capabilities or scope by filling fields. Projection/feature support
+MUST NOT be advertised until enforcement exists on all serving routes. Re-projection
+after a changed hop/request does not authorize retry of an uncertain mutation.
 
 ---
 
@@ -1858,6 +2126,7 @@ correlation behavior are required across HTTP and native hosts.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.23 | 2026-09-09 | Alpha.20 feature-dependent HTTP admission: NWM advertisement, exact required header, all-backend route guarantee, zero-dispatch rejection and success echo; base behavior preserved when unused. Also defines context carriers/full request binding and governed challenge states, fixed Anchors, management actions and durable retention. |
 | 0.22 | 2026-08-31 | Alpha.19 NWM/subscription hardening: deterministic stability/SLA/billing normalization and action fallback; advertised renewable subscription policy; open/renew/close operations with principal binding, clamped leases, explicit deadlines, non-resurrectable expiry, and shared conformance vectors. Adds two subscription errors. Depends-On advances to NCP 0.12, NIP 0.15, and NDP 0.13. |
 | 0.21 | 2026-08-12 | **NPS-CR-0011 stateful LLM context/delta completion**: NWM LLM profile 0.2 advertises explicit context operations/persistence/limits; `llm.complete` gains optional owner-bound opaque context requests and terminal receipts; adds status/release lifecycle actions, CAS versions, binding checks, atomic cancellation/stream commit, restart/idempotency semantics, measured `wire_input_bytes`, seven deterministic errors, and shared conformance vectors. Stateless completion remains compatible and stateful requests never silently fall back. Depends-On NIP advanced to v0.14 for `llm:context`. No new frame type. |
 | 0.20 | 2026-07-29 | Added §16.5 portable Node/Bridge server profile and shared cross-language vectors. Standardized HTTP/native admission, role dispatch, canonical/legacy MIME handling for the alpha.17 compatibility window, finite body limits, cancellation, correlation propagation, Bridge dispatcher/SSRF/deadline preflight, async task mode, and terminal telemetry outcomes. Added `NWP-HTTP-BODY-TOO-LARGE` → `NPS-LIMIT-PAYLOAD`; no new frame type. Depends-On advanced to NCP v0.11 and NIP v0.13. |

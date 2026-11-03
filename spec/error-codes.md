@@ -2,8 +2,8 @@ English | [中文版](./error-codes.cn.md)
 
 # NPS Unified Error Code Namespace
 
-**Version**: 1.10
-**Date**: 2026-08-31
+**Version**: 1.12
+**Date**: 2026-11-02
 
 Error code format: `{PROTOCOL}-{CATEGORY}-{DETAIL}`
 
@@ -17,6 +17,8 @@ NPS uses a two-level error system:
 
 | Error Code | NPS Status Code | Description |
 |------------|-----------------|-------------|
+| `NCP-FEATURE-NEGOTIATION-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid feature negotiation metadata or selection |
+| `NCP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | Required native feature has no eligible common revision |
 | `NCP-ANCHOR-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | Schema referenced by `anchor_ref` does not exist; agent must re-fetch the AnchorFrame |
 | `NCP-ANCHOR-SCHEMA-INVALID` | `NPS-CLIENT-BAD-FRAME` | Schema in AnchorFrame is malformed |
 | `NCP-ANCHOR-ID-MISMATCH` | `NPS-CLIENT-CONFLICT` | Different Schemas received for the same `anchor_id` (anchor-pollution defense) |
@@ -49,6 +51,20 @@ NPS uses a two-level error system:
 
 | Error Code | NPS Status Code | Description |
 |------------|-----------------|-------------|
+| `NWP-RESULT-IDENTITY-REQUIRED` | `NPS-AUTH-UNAUTHENTICATED` | A verified principal is required for result operations |
+| `NWP-RESULT-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | Absent, unauthorized, expired, released or unavailable result; identical disclosure |
+| `NWP-RESULT-SNAPSHOT-MISMATCH` | `NPS-CLIENT-CONFLICT` | Authorized snapshot/schema/cursor binding mismatch |
+| `NWP-RESULT-CAPACITY` | `NPS-LIMIT-RESOURCE` | Bounded result-store capacity cannot preserve the requested result |
+| `NWP-RESULT-POLICY-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | Required policy/verification service unavailable; fail closed |
+| `NWP-RESULT-REPLAY-CONFLICT` | `NPS-CLIENT-CONFLICT` | Owner-bound key reused with different frozen request content |
+| `NWP-CHALLENGE-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid challenge input |
+| `NWP-CHALLENGE-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | Unknown or unauthorized challenge handle |
+| `NWP-CHALLENGE-BINDING-CONFLICT` | `NPS-CLIENT-CONFLICT` | Same operation key with a different digest |
+| `NWP-CHALLENGE-NOT-APPROVED` | `NPS-CLIENT-CONFLICT` | Challenge is not approved for execution |
+| `NWP-CHALLENGE-EXPIRED` | `NPS-CLIENT-CONFLICT` | Challenge expired before execution claim |
+| `NWP-CHALLENGE-STATE-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | Durable challenge state unavailable |
+| `NWP-FEATURE-REQUIREMENTS-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid or repeated required-feature HTTP header |
+| `NWP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | Required exact feature unavailable before dispatch |
 | `NWP-AUTH-NID-SCOPE-VIOLATION` | `NPS-AUTH-FORBIDDEN` | Agent scope does not cover the target node path |
 | `NWP-AUTH-NID-EXPIRED` | `NPS-AUTH-UNAUTHENTICATED` | NID certificate has expired |
 | `NWP-AUTH-NID-REVOKED` | `NPS-AUTH-UNAUTHENTICATED` | NID has been revoked |
@@ -126,6 +142,12 @@ NPS uses a two-level error system:
 
 | Error Code | NPS Status Code | Description |
 |------------|-----------------|-------------|
+| `NIP-CONTEXT-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid projection format, bounds or lifetime |
+| `NIP-CONTEXT-UNTRUSTED` | `NPS-AUTH-FORBIDDEN` | Untrusted issuer/key or invalid signature |
+| `NIP-CONTEXT-BINDING-MISMATCH` | `NPS-AUTH-FORBIDDEN` | Projection request/subject/audience or policy mismatch |
+| `NIP-CONTEXT-EXPIRED` | `NPS-AUTH-FORBIDDEN` | Projection validity window expired |
+| `NIP-CONTEXT-REPLAY` | `NPS-CLIENT-CONFLICT` | Valid projection was already admitted |
+| `NIP-CONTEXT-VERIFIER-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | Verification or durable replay infrastructure unavailable |
 | `NIP-CERT-EXPIRED` | `NPS-AUTH-UNAUTHENTICATED` | Certificate has expired (`expires_at < now`) |
 | `NIP-CERT-NODE-ROLES-MISMATCH` | `NPS-CLIENT-BAD-FRAME` | `IdentFrame.node_roles` does not match the `id-nps-node-roles` X.509 extension; Phase 3 enforcement (NIP v0.10) |
 | `NIP-CERT-CAPABILITIES-EXCEEDED` | `NPS-AUTH-FORBIDDEN` | `IdentFrame.capabilities` claims a capability absent from the CA-attested `id-nps-capabilities` extension; Phase-3 enforcement (NIP v0.12) |
@@ -205,6 +227,7 @@ NPS uses a two-level error system:
 
 | Error Code | NPS Status Code | Description |
 |------------|-----------------|-------------|
+| `NOP-EXECUTION-INDETERMINATE` | `NPS-SERVER-INTERNAL` | Execution outcome uncertain; not automatically retryable |
 | `NOP-TASK-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | `task_id` does not exist |
 | `NOP-TASK-TIMEOUT` | `NPS-SERVER-TIMEOUT` | Overall task execution timed out |
 | `NOP-TASK-DAG-INVALID` | `NPS-CLIENT-BAD-FRAME` | DAG structure is invalid (missing entry/exit node, field error, etc.) |

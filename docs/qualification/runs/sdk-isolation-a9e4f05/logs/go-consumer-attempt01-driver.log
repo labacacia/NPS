@@ -1,0 +1,2 @@
+# fixture.invalid/npsconsumer
+./main.go:8:23: invalid argument: offer.Features (value of type func() map[string][]alpha20.FeatureRevision) for built-in len

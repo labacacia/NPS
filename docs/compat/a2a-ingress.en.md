@@ -2,16 +2,11 @@ English | [中文版](./a2a-ingress.md)
 
 # A2A Ingress — Detailed Guide
 
-> **Historical guide.** The standalone ingress repository is archived. Current
-> bridge implementation authority is `LabAcacia.NPS.NWP.Bridge` in
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet); use its current
-> API and security guidance for new deployments.
-
 > `LabAcacia.A2aIngress` v1.0.0-alpha.16 — exposes a **single NWP Action / Complex /
 > Anchor Node** as a [**Google Agent-to-Agent (A2A) v0.2**](https://github.com/google/A2A)-compliant
 > agent. JSON-RPC 2.0 over HTTP POST, plus `GET /.well-known/agent.json`.
 
-Supplements [`compat/a2a-ingress/README.md`](https://github.com/labacacia/NPS-A2A-Ingress/blob/main/README.md)
+Supplements [`compat/a2a-ingress/README.md`](../../compat/a2a-ingress/README.md)
 with AgentCard composition rules, skill-selection algorithm, async task
 lifecycle mapping, multi-replica task-state storage, and A2A ↔ NWP state
 semantics.
@@ -476,5 +471,5 @@ route back to the upstream. UUIDv4 is a safe default.
 - NWP spec: [`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md) (Action Node §7,
   async §7.2, `system.task.*` §7.3)
 - A2A spec: https://github.com/google/A2A/blob/main/specification/
-- CHANGELOG: [`compat/a2a-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-A2A-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG: [`compat/a2a-ingress/CHANGELOG.md`](../../compat/a2a-ingress/CHANGELOG.md)
 - Standalone repo: [labacacia/NPS-A2A-Ingress](https://github.com/labacacia/NPS-A2A-Ingress)

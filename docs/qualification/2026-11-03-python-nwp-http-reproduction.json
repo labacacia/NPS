@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "tracking_issue": 156,
+  "classification": "reproduced compatibility failure, not qualification pass",
+  "method": "installed public wheel, actual official ASGI app through httpx.ASGITransport; separate synthetic binary-response MockTransport",
+  "os": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "httpx": "0.28.1",
+  "sdk_distribution_version": "1.0.0a20.dev8035537322332",
+  "sdk_module_sha256": {
+    "nps_sdk.nwp.client": "22a87dda629bff9aeb535ace31091cfed90f40ed518bdb05b3a2726e8069c7c6",
+    "nps_sdk.core.codec": "b54ffc0b8e6498e45f78eab51aadd4b927291506cf986b4541d45af92558975f",
+    "nps_sdk.nwp.action_node_server": "d29776066d0a7460bbd46347ba4bac0761ea867fa201f9401b3c0ee49c0ecfa2"
+  },
+  "probe_sha256": "89cff422585c7b89cc8a459c8e3538251c14cdfcd16705fe0b60c147a1bb72cb",
+  "official_app_results": [
+    {
+      "operation": "public NwpClient.invoke to official ActionNodeApp",
+      "encoding": "MSGPACK",
+      "observed_request": {
+        "content-type": "application/x-nps-frame",
+        "accept": "application/x-nps-frame"
+      },
+      "provider_invocations": 0,
+      "exception": "HTTPStatusError",
+      "http_status": 400
+    },
+    {
+      "operation": "public NwpClient.invoke to official ActionNodeApp",
+      "encoding": "JSON",
+      "observed_request": {
+        "content-type": "application/x-nps-frame",
+        "accept": "application/x-nps-frame"
+      },
+      "provider_invocations": 0,
+      "exception": "HTTPStatusError",
+      "http_status": 400
+    }
+  ],
+  "raw_json_control": {
+    "operation": "explicit raw JSON control; not NwpClient",
+    "http_status": 200,
+    "response_content_type": "application/nwp-capsule",
+    "provider_invocations": 1
+  },
+  "canonical_binary_response": {
+    "observed_request": {
+      "content_type": "application/x-nps-frame",
+      "accept": "application/x-nps-frame"
+    },
+    "response_body_sha256": "a4baf4517fe6c03b0f96cf5402a82f220abd6ecf200152bac2b7d529557ab239",
+    "exception": "UnicodeDecodeError",
+    "canonical_binary_capsule_decoded": false
+  },
+  "observed_blockers": [
+    "legacy request/Accept MIME",
+    "public client sends full NCP header+payload while official ActionNodeApp parses raw JSON",
+    "canonical binary capsule response routed to JSON decoder"
+  ],
+  "network_socket_test": false,
+  "sdk_modified": false,
+  "matrix_cells_passed": 0,
+  "model_calls": 0,
+  "note": "A MIME-only change cannot establish official-client/server interoperability. Freeze the supported HTTP body/response contract under129/130 before broad runtime qualification; no automatic mutation retry or silent format fallback.",
+  "sdk_source_revision": "074eeb59015ca5489d1262988844afb12bfa5969",
+  "wheel_sha256": "1f5516231063dfaa65e338d3ffc621cc55cb1ab8f426c126fc6220dc0451203e"
+}

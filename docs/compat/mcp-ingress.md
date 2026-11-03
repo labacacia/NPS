@@ -2,15 +2,11 @@
 
 # MCP Ingress 详解
 
-> **历史指南。** 独立 ingress 仓库已经归档。当前 bridge 实现权威为
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet) 中的
-> `LabAcacia.NPS.NWP.Bridge`；新部署应以其当前 API 与安全说明为准。
-
 > `LabAcacia.McpIngress` v1.0.0-alpha.16 — 把一个或多个 **NWP 节点** 暴露成一个
 > [**Model Context Protocol (MCP)**](https://modelcontextprotocol.io) 服务端。
 > 适配规范：MCP `2024-11-05`（JSON-RPC 2.0 over HTTP POST）。
 
-本文补充 [`compat/mcp-ingress/README.md`](https://github.com/labacacia/NPS-MCP-Ingress/blob/main/README.md) 未覆盖的细节：
+本文补充 [`compat/mcp-ingress/README.md`](../../compat/mcp-ingress/README.md) 未覆盖的细节：
 协议映射的语义、headers 透传、错误边界、部署关注点、实战接入示例。
 
 - 代码仓：`compat/mcp-ingress/`（monorepo）/ `labacacia/NPS-MCP-Ingress`（独立）
@@ -464,5 +460,5 @@ A: 目前无法。桥以自己的 `AgentNid` 调上游。如果业务需要区�
 
 - NWP 规范：[`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md) v0.5
 - MCP 规范：https://spec.modelcontextprotocol.io/2024-11-05/
-- CHANGELOG：[`compat/mcp-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-MCP-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG：[`compat/mcp-ingress/CHANGELOG.md`](../../compat/mcp-ingress/CHANGELOG.md)
 - 独立仓：[labacacia/NPS-MCP-Ingress](https://github.com/labacacia/NPS-MCP-Ingress)

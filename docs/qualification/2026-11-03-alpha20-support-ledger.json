@@ -1,0 +1,5351 @@
+{
+  "schema_version": 1,
+  "task": "D20-08",
+  "status": "COMPLETE",
+  "as_of": "2026-11-03",
+  "canonical_repository": "labacacia/NPS-Dev",
+  "released_suite": "1.0.0-alpha.19",
+  "candidate_published": false,
+  "feature_registry_version": "0.3",
+  "source_revisions": {
+    "shared_sdk_inputs": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+    "typescript_rust_portability": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+    "security": "92bf98e1e77283e91a8758bb04a6ed7c7d84a0e4",
+    "ndp_reference": "02443a3a4e6e096309b9c562de8ec1bc658b84b9"
+  },
+  "interpretation": "Per-surface evidence classes, not whole SDK/runtime/profile qualification. Public package coordinates or green regressions do not establish transport support. Unsupported means unsupported for the named new data-workflow surface, not for all baseline SDK protocols.",
+  "sdk_surfaces": [
+    {
+      "sdk": "dotnet",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "scoped-crypto-vector-tests",
+      "context_admission": "receiver-configured-reference-helper",
+      "durable_context_replay": "single-host-sqlite-reference",
+      "result_canonical_http": "client-and-server-reference",
+      "result_native": "unsupported",
+      "schema_batch_native": "dotnet-to-dotnet-opt-in-reference-only",
+      "nop_result_handoff": "four-local-workers-reference-only",
+      "ndp_result_routing": "volatile-two-node-reference-only",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    },
+    {
+      "sdk": "python",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "scoped-crypto-vector-tests",
+      "context_admission": "not-qualified",
+      "durable_context_replay": "not-qualified",
+      "result_canonical_http": "client-to-dotnet-reference-server",
+      "result_native": "unsupported",
+      "schema_batch_native": "unsupported",
+      "nop_result_handoff": "unsupported",
+      "ndp_result_routing": "unsupported",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    },
+    {
+      "sdk": "typescript",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "scoped-crypto-vector-tests",
+      "context_admission": "receiver-configured-reference-helper",
+      "durable_context_replay": "single-host-sqlite-reference",
+      "result_canonical_http": "unsupported",
+      "result_native": "unsupported",
+      "schema_batch_native": "unsupported",
+      "nop_result_handoff": "unsupported",
+      "ndp_result_routing": "unsupported",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    },
+    {
+      "sdk": "go",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "scoped-crypto-vector-tests",
+      "context_admission": "not-qualified",
+      "durable_context_replay": "not-qualified",
+      "result_canonical_http": "unsupported",
+      "result_native": "unsupported",
+      "schema_batch_native": "unsupported",
+      "nop_result_handoff": "unsupported",
+      "ndp_result_routing": "unsupported",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    },
+    {
+      "sdk": "java",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "not-qualified",
+      "context_admission": "not-qualified",
+      "durable_context_replay": "not-qualified",
+      "result_canonical_http": "unsupported",
+      "result_native": "unsupported",
+      "schema_batch_native": "unsupported",
+      "nop_result_handoff": "unsupported",
+      "ndp_result_routing": "unsupported",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    },
+    {
+      "sdk": "rust",
+      "feature_offer_and_required_header": "shared-parser-corpus-only",
+      "error_status": "shared-mapping-corpus-only",
+      "context_bytes": "not-qualified",
+      "context_admission": "not-qualified",
+      "durable_context_replay": "not-qualified",
+      "result_canonical_http": "unsupported",
+      "result_native": "unsupported",
+      "schema_batch_native": "unsupported",
+      "nop_result_handoff": "unsupported",
+      "ndp_result_routing": "unsupported",
+      "full_production_runtime_profile": "not-qualified",
+      "governed_challenge_profile": "not-qualified",
+      "default_feature_advertisement": false
+    }
+  ],
+  "compatibility": {
+    "design_source": "spec/conformance/alpha20/compatibility-matrix.json",
+    "design_sha256": "fa7dd12f3766e62de47e160d3bc68fe67f27f909752f788776d56f8ecfe32f1d",
+    "required_cells": 576,
+    "executed_cells": 0,
+    "passed_cells": 0,
+    "cells": [
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "dotnet",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "python",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "typescript",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "go",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "java",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "dotnet",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "python",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "typescript",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "go",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "java",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "native",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-01",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-02",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-03",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-04",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-05",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-06",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-07",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      },
+      {
+        "client": "rust",
+        "server": "rust",
+        "binding": "canonical-http",
+        "case": "CMP-08",
+        "execution": "not-executed",
+        "artifact": null,
+        "observed_handler_invocations": null
+      }
+    ],
+    "disposition": "historical full-production matrix deferred under133; no cell promoted"
+  },
+  "evidence_references": {
+    "design": "docs/plans/2026-10-19-alpha20-data-workflow-plan.md",
+    "nwp_nip": "demos/data-workflow/README.md",
+    "ncp": "docs/benchmarks",
+    "nop": "docs/benchmarks/runs/nop-handoff-kernel-7c4d890-attempt-03",
+    "ndp": "docs/qualification/2026-11-03-ndp-reference-tests.json",
+    "security": "docs/qualification/2026-11-03-java-ca-portable-probe.json",
+    "standalone_preregister": "docs/qualification/alpha20-sdk-isolation-plan-2026-11-03.md",
+    "standalone_results": "docs/qualification/runs/sdk-isolation-a9e4f05/results.json",
+    "current_pre_release_handoff": "docs/qualification/2026-11-03-alpha20-pre-release-handoff.json",
+    "existing_python_general_http_failure": "docs/qualification/2026-11-03-python-nwp-http-reproduction.json"
+  },
+  "no_waiver": true,
+  "publication_authorized": false,
+  "accepted_scope_decision": {
+    "path": "docs/adr/2026-11-03-alpha20-experimental-closeout.md",
+    "sha256": "8258296ad76c08aeb3de9b68bef8e0d3c83812869a83928432052af79ce23b43",
+    "accepted": true,
+    "authority": "2026-11-03 explicit user reply in Codex session",
+    "choice": "bounded experimentalalpha20;fullproduction later;CIlocal",
+    "github_actions": false,
+    "publication_authorized": false
+  },
+  "current_experimental_matrix": {
+    "path": "docs/qualification/alpha20-experimental-matrix.json",
+    "sha256": "d82667920d0591dfe1e30e29b7b8bb884ebdf91c30ce6b978d76329e7886a28f",
+    "required_configurations": 7,
+    "executed_configurations": 7,
+    "result": "passed",
+    "evidence": "docs/qualification/runs/experimental-closeout-0c4bfdf/local-ci.json",
+    "evidence_index": "docs/qualification/runs/experimental-closeout-0c4bfdf/index.json"
+  },
+  "ci_execution": {
+    "authority": "local",
+    "github_actions_required": false,
+    "github_secret_inventory_required": false
+  },
+  "completion_scope": "accepted bounded experimentalalpha20 only; originalwholeproduction/release/beta obligations not completed",
+  "current_local_source_revisions": {
+    "full_tests_audits_runtime": "0c4bfdf694e07ca0b60a9eb67cfd4a1e8a15e804",
+    "offline_only_driver_fix": "847087332a7872aaf22e6449cf38ee1298187e56"
+  }
+}

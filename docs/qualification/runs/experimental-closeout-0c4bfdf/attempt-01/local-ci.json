@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "execution": "local CI",
+  "source_revision": "0c4bfdf694e07ca0b60a9eb67cfd4a1e8a15e804",
+  "matrix_sha256": "d82667920d0591dfe1e30e29b7b8bb884ebdf91c30ce6b978d76329e7886a28f",
+  "source_object_validation": {
+    "tracked_files": 3538,
+    "initial_matrix_sha256": "d82667920d0591dfe1e30e29b7b8bb884ebdf91c30ce6b978d76329e7886a28f"
+  },
+  "source_unchanged": true,
+  "stages": [
+    {
+      "stage": "toolchains",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log": "toolchains.log",
+      "sha256": "35c52cb154c86aa4e5b4fdf72f89d2b3012173f83d81b18ed270ea6927917ab3",
+      "elapsed_seconds": 3.657
+    },
+    {
+      "stage": "standalone-inputs",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "standalone-inputs.log",
+      "sha256": "5753966c1c20267bdb6286dd0138f407a18a0b5a2d4500df19c4785b531f481d",
+      "elapsed_seconds": 16.866
+    },
+    {
+      "stage": "oracle-and-ledgers",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log": "oracle-and-ledgers.log",
+      "sha256": "ff5a01b2ca332f6d45ccff7ea32d047dfe814e5c7ca309ad62aed3b566d81457",
+      "elapsed_seconds": 6.387
+    },
+    {
+      "stage": "version-consistency",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "version-consistency.log",
+      "sha256": "758aa8873f2b2ef9a57eaa82bf4fd84249cfbfc768db60af1948fbb82c2b7bfd",
+      "elapsed_seconds": 0.252
+    },
+    {
+      "stage": "source-of-truth",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "source-of-truth.log",
+      "sha256": "976bb4facdc4aa80f95c9533ec6304d5d1a67d5b76e44599c27b2018a05d49fa",
+      "elapsed_seconds": 1.764
+    },
+    {
+      "stage": "dotnet",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "dotnet.log",
+      "sha256": "53a33f03c7805e88551341ac6294ec8f1c3d630eb11e1b5df3a0dd4292661a58",
+      "elapsed_seconds": 128.559
+    },
+    {
+      "stage": "python",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "python.log",
+      "sha256": "5bd157686ed6094f3e68068152b2de84172170459557c78823739569709482cf",
+      "elapsed_seconds": 52.674
+    },
+    {
+      "stage": "typescript",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "log": "typescript.log",
+      "sha256": "1f9a06073e58a4d5de06d6c45b6f72e9fbdaa21dfc654741856e0ea6371f4d49",
+      "elapsed_seconds": 35.587
+    },
+    {
+      "stage": "go",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "go.log",
+      "sha256": "c13afb65c3bcf2d332b7f8dd7d6febd775a790683d8dfd4b02c749abef546a1b",
+      "elapsed_seconds": 3.792
+    },
+    {
+      "stage": "rust",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "rust.log",
+      "sha256": "44c9acf089b32ec84afdccb52957aee5f277c840b6523c3d84e0bed694619022",
+      "elapsed_seconds": 43.596
+    },
+    {
+      "stage": "java",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "java.log",
+      "sha256": "b20cfa54c1b601d21df7b82a2ccf1bd61f38905a643a4743663919277fc657f7",
+      "elapsed_seconds": 55.567
+    },
+    {
+      "stage": "java-ca",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "log": "java-ca.log",
+      "sha256": "5eef44ae8b03a7ddd6c80777150e5409d07eaad8921ef51c401fc7a83287ea62",
+      "elapsed_seconds": 32.198
+    },
+    {
+      "stage": "workflow-and-history",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "log": "workflow-and-history.log",
+      "sha256": "e1be4eb49d2dfa6bae23b266a9b9da0cd5d06a2b15030f88ef0f62fced238c52",
+      "elapsed_seconds": 54.91
+    },
+    {
+      "stage": "npm-audit",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "log": "npm-audit.log",
+      "sha256": "92b666285a2a7e6ec017406cf99876ae7b895c726449e84844d94ef4012e9261",
+      "elapsed_seconds": 8.026
+    },
+    {
+      "stage": "go-audit",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "log": "go-audit.log",
+      "sha256": "08c4c2937dfb1dd5be1de960feb727b2be88d1cb770846402eef61d49d8c10aa",
+      "elapsed_seconds": 10.626
+    },
+    {
+      "stage": "rust-audit",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "log": "rust-audit.log",
+      "sha256": "b26599c9cf38a40b754822c28b150c62932bfafdf39d1338cbbcbcc0eaf23a58",
+      "elapsed_seconds": 4.361
+    },
+    {
+      "stage": "python-audit",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "log": "python-audit.log",
+      "sha256": "ea6e1e797cbcbdda8df85e280fce675bd657d69720247760b74e9c7fedfaf0c3",
+      "elapsed_seconds": 19.296
+    },
+    {
+      "stage": "java-audit",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "java-audit.log",
+      "sha256": "2b530604545f0740b9163c3e42fe52eff757fb4ea2c84496096bde82790cebae",
+      "elapsed_seconds": 18.054
+    },
+    {
+      "stage": "nuget-audit",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log": "nuget-audit.log",
+      "sha256": "97e60d51afc41254f6602077fb59588fbddd455fed5207d9ac48777c80d5fcfb",
+      "elapsed_seconds": 40.525
+    },
+    {
+      "stage": "demo-packages",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "demo-packages.log",
+      "sha256": "99bd2a9cd74a39bd77a6423453627285c3b502725c57252138c78dff87373e5e",
+      "elapsed_seconds": 15.208
+    },
+    {
+      "stage": "demo-mtls",
+      "passed": true,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log": "demo-mtls.log",
+      "sha256": "5c05ffceb306ae59ff722e60c79df17caac40a26a1a0e0b26ee3ca05c72ddd5c",
+      "elapsed_seconds": 29.212
+    },
+    {
+      "stage": "helper-package-evidence",
+      "passed": true,
+      "exit_codes": [
+        0
+      ],
+      "log": "helper-package-evidence.log",
+      "sha256": "c29eccc64c51a36afd5ce55e8918083dbe69e44fc2878fafa3335811c94f4c63",
+      "elapsed_seconds": 0.33
+    },
+    {
+      "stage": "sealed-measurements",
+      "passed": false,
+      "exit_codes": [
+        1
+      ],
+      "log": "sealed-measurements.log",
+      "sha256": "6db61337d9998f4e1c45484ebf6110fe2dccd7ab5fc8542e34fd7765d272abff",
+      "elapsed_seconds": 0.096
+    },
+    {
+      "stage": "full-regression-inventories",
+      "passed": true,
+      "expected": {
+        "dotnet": 1682,
+        "python": 1513,
+        "typescript": 1324,
+        "java": 744,
+        "rust": 765
+      }
+    }
+  ],
+  "runtime_configurations": [
+    {
+      "id": "E20-HTTP-DOTNET",
+      "binding": "canonical-http-result",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.LifecycleUsesCapsulesExactAggregatesSnapshotPagesAndOwnerRelease",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.other-profile=1\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: null, status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=01\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.other=1,nps.data_results=1\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1 \", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=2\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=65536\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1,nps.data_results=1\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1,nps.invocation_context=1\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.BoundsAndMediaTypesFailBeforeCaptureAndManifestDoesNotAdvertise",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.EgressDeniesMetadataBeforeCaptureAndRetainedRead",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.RecipientGrantIsResultFieldAndOperationBoundOnTheHttpRoute",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.LiveSourceRevocationBlocksRetainedOwnerAndRecipientHttpReads",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.SameKeyNeverBypassesStorePolicyExpiryOrConflicts",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F16\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F03\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F08\", outcome: \"PAGE\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F33\", outcome: \"CREATED\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F17\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F36\", outcome: \"RELEASED\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F39\", outcome: \"RELEASED\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F15\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F22\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F21\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F23\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F38\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F06\", outcome: \"UNAUTHENTICATED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F04\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F01\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F25\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F28\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F18\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F32\", outcome: \"CAPACITY\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F31\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F19\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F05\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F20\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F02\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F35\", outcome: \"AGGREGATE\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F10\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F26\", outcome: \"PAGE\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F30\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F07\", outcome: \"POLICY_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F13\", outcome: \"PAGE\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F14\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F27\", outcome: \"PAGE\", expectedHandlers: 1)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F12\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F37\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F11\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F09\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F24\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F29\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F34\", outcome: \"KEY_CONFLICT\", expectedHandlers: 0)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.RealGatewayUsesTwoAuthenticatedLegsAndFreshProjectionForEveryOperation",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientCancellationBeforeAdmissionHasZeroResultDispatch",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientInFlightCancellationDoesNotUndoAllocationAndSameKeyRecovers",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unavailable\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"key\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"revoked\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unmapped\")",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "E20-HTTP-PYTHON",
+      "binding": "canonical-http-result",
+      "result": "passed",
+      "observed": [
+        {
+          "scale": 100,
+          "actual_mtls": true
+        },
+        {
+          "scale": 1000,
+          "actual_mtls": true
+        },
+        {
+          "scale": 100000,
+          "actual_mtls": true
+        }
+      ]
+    },
+    {
+      "id": "E20-NCP-JSON",
+      "binding": "native-schema-batches-json",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 1000, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100000, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: False, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: True, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: False, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: True, tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"data\", expected: \"NCP-FRAME-FLAGS-INVALID\", tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"window\", expected: \"NCP-STREAM-WINDOW-OVERFLOW\", tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"sequence\", expected: \"NCP-STREAM-SEQ-GAP\", tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"epoch\", expected: \"NCP-STREAM-NOT-FOUND\", tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate(tier: Json)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "E20-NCP-MSGPACK",
+      "binding": "native-schema-batches-msgpack",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 1000, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100000, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: False, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: True, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: False, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: True, tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"window\", expected: \"NCP-STREAM-WINDOW-OVERFLOW\", tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"sequence\", expected: \"NCP-STREAM-SEQ-GAP\", tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"data\", expected: \"NCP-FRAME-FLAGS-INVALID\", tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"epoch\", expected: \"NCP-STREAM-NOT-FOUND\", tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate(tier: MsgPack)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "E20-NOP-LOCAL",
+      "binding": "local-NOP-with-HTTP-data-legs",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 100000)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 1000)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 100)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-grant\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"lost-query-response\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-worker\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"missing-grant\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"create-audit-loss\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"expired-input\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"hidden-field\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"contradictory-error\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"gap\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"stream\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unselected_legacy_contractless_wire_does_not_gain_a_null_runtime_member",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"eof\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Ignored_cancellation_and_late_effect_cannot_extend_deadline_or_replace_terminal",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"null-error\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"repeat\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Known_terminal_error_with_retryable_flag_does_not_reexecute_effect",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Precancel_and_unsupported_callback_are_zero_dispatch",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"task\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Journal_terminal_cas_rejects_wrong_owner_and_keeps_first_winner",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"empty-error\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"oversized\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"contradiction\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Precancelled_duplicates_preserve_pending_terminal_and_unknown_certainty",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"early-outcome\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"unknown-retryable\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Concurrent_finish_cancel_preserves_one_terminal_and_cancellation_never_throws",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Digest_conflict_does_not_mutate_original_and_caller_identity_is_independent",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"peer\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"subtask\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"sender\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Three_node_dag_maps_only_proven_outputs_and_duplicate_never_dispatches",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Positive_non_dispatch_is_only_retry_path_and_reuses_exact_operation_identity",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Reopen_missing_database_or_schema_fails_closed_without_silent_new_history",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Restart_preserves_unknown_without_replaying_and_live_second_host_is_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Concurrent_duplicate_returns_running_without_new_dispatch_or_terminal_claim",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Capacity_never_evicts_replay_history_and_expiry_hides_payload_despite_wall_rollback",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"invalid\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"missing\")",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "E20-NDP-DIFFERENT-ISSUER",
+      "binding": "volatile-discovery-and-canonical-HTTP",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: False)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"expiry\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.SequenceRollbackAndSameSequenceDigestChangeCannotReplaceRoute",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedHeartbeatAndWallClockRollbackCannotExtendLease",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.StrictSignatureAndHostAuthorityPrecedeAnyFenceMutation",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.SameIssuerAndEpochAtNewEndpointInvalidatesOldResultBinding",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"policy\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ColdRestartAndRegistryIdentityCannotReuseSavedBinding",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{\\\"frame\\\":\\\"0x30\\\",\\\"frame\\\":\\\"0x30\\\"}\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.EqualEpochSplitRequiresHigherAuthorizedEpochEvenAfterExpiry",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"key\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{}\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.CapacityRetainsExpiredTombstonesAndRejectsNewPublisher",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"draining\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"null\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedDrainingIsStickyUntilHigherSignedSequence",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"endpoint\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"[]\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"caps\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"offline\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"identity\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"expired\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"pin\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.InvalidHighEpochSignatureCannotBurnFloor",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.OversizedAndDuplicateSignedMembersAreRejected",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "E20-NDP-SAME-ISSUER-NEW-ENDPOINT",
+      "binding": "volatile-discovery-and-canonical-HTTP",
+      "result": "passed",
+      "observed": [
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: True)",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"expiry\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.SequenceRollbackAndSameSequenceDigestChangeCannotReplaceRoute",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedHeartbeatAndWallClockRollbackCannotExtendLease",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.StrictSignatureAndHostAuthorityPrecedeAnyFenceMutation",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.SameIssuerAndEpochAtNewEndpointInvalidatesOldResultBinding",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"policy\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ColdRestartAndRegistryIdentityCannotReuseSavedBinding",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{\\\"frame\\\":\\\"0x30\\\",\\\"frame\\\":\\\"0x30\\\"}\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.EqualEpochSplitRequiresHigherAuthorizedEpochEvenAfterExpiry",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"key\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{}\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.CapacityRetainsExpiredTombstonesAndRejectsNewPublisher",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"draining\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"null\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedDrainingIsStickyUntilHigherSignedSequence",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"endpoint\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"[]\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"caps\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"offline\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"identity\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"expired\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"pin\")",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.InvalidHighEpochSignatureCannotBurnFloor",
+          "outcome": "Passed"
+        },
+        {
+          "test_name": "NPS.Tests.Ndp.NdpResultDiscoveryTests.OversizedAndDuplicateSignedMembersAreRejected",
+          "outcome": "Passed"
+        }
+      ]
+    }
+  ],
+  "passed": false,
+  "github_actions_invoked": false,
+  "model_calls": 0,
+  "registry_uploads": 0,
+  "publication": false,
+  "release_ready": false,
+  "registry_publish_authority": "not exercised; separate134 prerequisite",
+  "historical_576_cells_promoted": 0
+}

@@ -2,15 +2,11 @@
 
 # A2A Ingress 详解
 
-> **历史指南。** 独立 ingress 仓库已经归档。当前 bridge 实现权威为
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet) 中的
-> `LabAcacia.NPS.NWP.Bridge`；新部署应以其当前 API 与安全说明为准。
-
 > `LabAcacia.A2aIngress` v1.0.0-alpha.16 — 把**单个 NWP Action / Complex /
 > Anchor Node** 暴露成一个符合 [**Google Agent-to-Agent (A2A) v0.2**](https://github.com/google/A2A)
 > 规范的 Agent。JSON-RPC 2.0 over HTTP POST，外加 `GET /.well-known/agent.json`。
 
-本文补充 [`compat/a2a-ingress/README.md`](https://github.com/labacacia/NPS-A2A-Ingress/blob/main/README.md) 未覆盖的细节：
+本文补充 [`compat/a2a-ingress/README.md`](../../compat/a2a-ingress/README.md) 未覆盖的细节：
 AgentCard 合成规则、skill 选择算法、异步任务生命周期映射、多副本部署下的 task
 状态存储、A2A ↔ NWP 状态语义差异。
 
@@ -459,5 +455,5 @@ A: 由 A2A **client** 生成。桥不生成也不校验格式——只要在内�
 - NWP 规范：[`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md)（Action Node §7，
   异步 §7.2，`system.task.*` §7.3）
 - A2A 规范：https://github.com/google/A2A/blob/main/specification/
-- CHANGELOG：[`compat/a2a-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-A2A-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG：[`compat/a2a-ingress/CHANGELOG.md`](../../compat/a2a-ingress/CHANGELOG.md)
 - 独立仓：[labacacia/NPS-A2A-Ingress](https://github.com/labacacia/NPS-A2A-Ingress)

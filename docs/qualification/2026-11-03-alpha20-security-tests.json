@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "task": "D20-08",
+  "increment": "dependency-security-correction",
+  "status": "IN_PROGRESS",
+  "as_of": "2026-11-03T07:34:17.098797+00:00",
+  "source_base_revision": "2023e0bc00608b932a5e22cd4fa1783b68cb7ca8",
+  "source_note": "These worktree recipes were executed before commit; clean-commit CI verification remains pending. No full runtime/six-SDK/compatibility qualification follows from dependency regressions.",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "0a46262ee343222f48df17f561161c1ba06a9ceca85d70387885a16709bb6a7c",
+    ".github/workflows/security.yml": "f2c3298c4eeab0aeb485ea8ea6cae621d4b70d6edab5efb9ae2a0631f83ba274",
+    "impl/dotnet/src/NPS.Core/NPS.Core.csproj": "b2212e2a7d30fd27a2dcde25165655ec86c16f8c744b6caede3d82bb6ba2a604",
+    "impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj": "d3dfb6d028675b006cfca8548b95e44d24b14292530c6e86ac2b98a7a61237ca",
+    "impl/dotnet/src/NPS.NWP/NPS.NWP.csproj": "635c6c529a27200de6c7159da07f37086e2fe4dd67e2a486628bf80e6fa1741f",
+    "impl/java/build.gradle.kts": "63d770b46cbc58263ecd18507752ed565611a5f52250bb7d12788d38b319a7c8",
+    "impl/java/gradle/wrapper/gradle-wrapper.properties": "2a1bd518b0500ce5789c43186c4500c1862347679846cd6a3236d234c0d3a375",
+    "impl/rust/Cargo.lock": "735171512a59167e6873888f0b8fdc995882a58a7bc8f89ae8b8494de081aa3a",
+    "impl/typescript/package-lock.json": "a1e19312c147a6e550529cf47e42f634e49ff5c84687d6e24846a54418d84d9c",
+    "impl/typescript/package.json": "322030b54bf8df84c03b96196292d2bd02d9cc99d1aaefd01712816280645b56",
+    "tools/daemons/nps-ledger/NpsLedger.csproj": "626a5a2c51723202e35640c78fac1beb8c3157923c018b91b7a71e0b8ee3409c",
+    "tools/daemons/nps-ledger/publish-overlay/NpsLedger.csproj": "e4417540188f0f1f1764564ce55a1dde1956ea9d578cccdf9a69fe7f8eece4dd",
+    "tools/daemons/nps-registry/NpsRegistry.csproj": "c70f5ba151466cbed8c199c20c2a4eee07fed9daa7f6255e782b09ab39b003f8",
+    "tools/daemons/nps-registry/publish-overlay/NpsRegistry.csproj": "c16ef4d0e5f5aeed673bd5e8967ff5c4bfa3e04b2c77433c44c5e04bc997002d",
+    "tools/daemons/nps-runner/NpsRunner.csproj": "1a3a63d7a14a9248c1bc4d5ee950cb7fbf682d02a84853e3f29aaa1000cee49c",
+    "tools/daemons/nps-runner/publish-overlay/NpsRunner.csproj": "1bbbfab7b2114dfaa454413ce2f686006331ff34a3b4991211fdd6a6f3d503bb",
+    "tools/daemons/npsd/Npsd.csproj": "b3ffaed69d8fa6ccbab9aef4fb836971dd123eb453608eebfac3ede46f0c6ce2",
+    "tools/daemons/npsd/publish-overlay/Npsd.csproj": "6dd4574c65c411db0812e548353f8bf10637e91b3bd9b9807b6210cd60e45084",
+    "tools/nip-ca-server/example/go/Dockerfile": "147f4d437812df34c3872aeeb3d4637a9a2e81d7ad9a6db14595ba0d9a8eae57",
+    "tools/nip-ca-server/example/java/build.gradle": "f621f2e4d015b97382b77088899c9722b61933539795995baf5601b8c3785fab",
+    "tools/nip-ca-server/example/java/src/main/java/com/labacacia/nipcaserver/CaService.java": "6fab272be4f4f15e8764eb9995862d90fdb2de19624a1bfa060d3d62ee4d702b",
+    "tools/nip-ca-server/example/java/src/main/java/com/labacacia/nipcaserver/DbService.java": "3642163e7a947bacf7f7cee917574be431f7dfa59ab91a0bf65934b5674a3976",
+    "tools/nip-ca-server/example/java/src/test/java/com/labacacia/nipcaserver/SecurityMigrationTests.java": "20efc9c408628197a1a06c67199f09250a4f2d629f6ddc030d0bcf59f7e6fcb5",
+    "tools/nip-ca-server/example/rust/Cargo.lock": "d4260b4e8e4b1fde872648b2374a70571213bdacd389ff388c1309d01fe848f4",
+    "tools/nip-ca-server/example/ts/package-lock.json": "5ad31101d812f9aecb498494d6b3a25ab9ba9b826759e1e1f8e15168d68c7755",
+    "tools/nip-ca-server/example/ts/package.json": "b2d240af4d9ccc62f9ed7bdb80f464b27c75571ba5fc077138713ffe82e4643d",
+    "tools/security/check-java-ca-jar.py": "6757e580b41132908899397ec7e03bd2d61e35488b35f75afd470f168bac0af6"
+  },
+  "baseline": {
+    "normal_ci": 41592588893,
+    "security_ci": 41592357004,
+    "security_failures": [
+      "npm",
+      "NuGet",
+      "Go reachability",
+      "Maven OSV",
+      "RustSec"
+    ],
+    "registry_authority": "SKIPPED; no release inventory waiver"
+  },
+  "tests": {
+    "dotnet": {
+      "passed": 1666,
+      "failed": 0,
+      "trx_sha256": "631ef3e5bfade770b6e1e66a09cb1773e3bebe1b76a84a847fcb8f02a31aed54"
+    },
+    "runner": {
+      "passed": 46,
+      "failed": 0
+    },
+    "typescript": {
+      "passed": 1324,
+      "failed": 0
+    },
+    "java_sdk": {
+      "passed": 744,
+      "failed": 0
+    },
+    "java_ca": {
+      "passed": 1,
+      "failed": 0,
+      "assertions": "actual HTTP/auth/nested-Unicode-integer/JDK signing/X509/SQLite/key-and-serial restart/0600",
+      "xml_sha256": "cd6a7ea41f1199ceb49100312bfb539ae4baefa0ca4197f0c7036f7206e48036"
+    },
+    "rust_sdk": {
+      "passed": 765,
+      "failed": 0
+    },
+    "rust_ca": "cargo check --locked PASS, two pre-existing compiler warnings retained",
+    "go_sdk": "go test ./... PASS",
+    "go_ca": "go test ./... PASS, packages contain no tests; compilation only",
+    "typescript_ca": "npm run build PASS"
+  },
+  "audits": {
+    "nuget_targets": [
+      {
+        "target": "impl/dotnet/NPS.sln",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 16
+      },
+      {
+        "target": "tools/daemons/nps-runner/NpsRunner.csproj",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 1
+      },
+      {
+        "target": "tools/daemons/npsd/Npsd.csproj",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 1
+      },
+      {
+        "target": "tools/daemons/nps-registry/NpsRegistry.csproj",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 1
+      },
+      {
+        "target": "tools/daemons/nps-ledger/NpsLedger.csproj",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 1
+      },
+      {
+        "target": "tools/nip-ca-server/NPS.NipCaServer.csproj",
+        "exit_code": 0,
+        "findings": [],
+        "problems": [],
+        "project_count": 1
+      }
+    ],
+    "maven": {
+      "ecosystem": "Maven",
+      "projects": [
+        {
+          "packages": 9,
+          "project": "impl/java",
+          "vulnerabilities": []
+        },
+        {
+          "packages": 47,
+          "project": "tools/nip-ca-server/example/java",
+          "vulnerabilities": []
+        }
+      ],
+      "vulnerability_count": 0
+    },
+    "npm": {
+      "sdk": {
+        "vulnerabilities": {
+          "info": 0,
+          "low": 0,
+          "moderate": 0,
+          "high": 0,
+          "critical": 0,
+          "total": 0
+        },
+        "report_sha256": "bb66b65baa05bc9a5d9a03a097d6e513b9aaf5ce601cee48c980919e35948539"
+      },
+      "ca-example": {
+        "vulnerabilities": {
+          "info": 0,
+          "low": 0,
+          "moderate": 0,
+          "high": 0,
+          "critical": 0,
+          "total": 0
+        },
+        "report_sha256": "fcd3162579a849122d167f1efa1bffa37f684ac602b9cdea7cfea44d269a60d2"
+      }
+    },
+    "rustsec": {
+      "sdk": {
+        "database": {
+          "advisory-count": 1402,
+          "last-commit": "263a4d951a0867d4bddc29dddd6d59427c78f9a7",
+          "last-updated": "2026-11-02T12:45:44+01:00"
+        },
+        "lockfile": {
+          "dependency-count": 247
+        },
+        "vulnerabilities": {
+          "found": false,
+          "count": 0,
+          "list": []
+        },
+        "warnings": {},
+        "report_sha256": "8eb546108907020160ab643e7821a96873bf62cf7df650dbedb9e44d6141e8a1"
+      },
+      "ca-example": {
+        "database": {
+          "advisory-count": 1402,
+          "last-commit": "263a4d951a0867d4bddc29dddd6d59427c78f9a7",
+          "last-updated": "2026-11-02T12:45:44+01:00"
+        },
+        "lockfile": {
+          "dependency-count": 167
+        },
+        "vulnerabilities": {
+          "found": false,
+          "count": 0,
+          "list": []
+        },
+        "warnings": {},
+        "report_sha256": "18d758276f231665bdc489065a00651dd42550e58fd5b45cc60acdd1c2a2be86"
+      }
+    },
+    "go": {
+      "sdk": {
+        "reachable_vulnerabilities": 0,
+        "vulnerable_imported_packages": 0,
+        "required_module_advisories_retained": 20,
+        "required_module_advisory_ids": [
+          "GO-2025-4116",
+          "GO-2025-4134",
+          "GO-2025-4135",
+          "GO-2026-5005",
+          "GO-2026-5006",
+          "GO-2026-5013",
+          "GO-2026-5014",
+          "GO-2026-5015",
+          "GO-2026-5016",
+          "GO-2026-5017",
+          "GO-2026-5018",
+          "GO-2026-5019",
+          "GO-2026-5020",
+          "GO-2026-5021",
+          "GO-2026-5023",
+          "GO-2026-5033",
+          "GO-2026-5932",
+          "GO-2026-6303",
+          "GO-2026-6354",
+          "GO-2026-6355"
+        ],
+        "report_sha256": "ab4616d795e0030e0a082f8ccedf33d26585c1b30f4527e9653a3d66848b3e79",
+        "toolchain": "go1.26.10",
+        "scanner": "govulncheck1.7.0"
+      },
+      "ca-example": {
+        "reachable_vulnerabilities": 0,
+        "vulnerable_imported_packages": 0,
+        "required_module_advisories_retained": 22,
+        "required_module_advisory_ids": [
+          "GO-2025-3487",
+          "GO-2025-4116",
+          "GO-2025-4134",
+          "GO-2025-4135",
+          "GO-2026-5005",
+          "GO-2026-5006",
+          "GO-2026-5013",
+          "GO-2026-5014",
+          "GO-2026-5015",
+          "GO-2026-5016",
+          "GO-2026-5017",
+          "GO-2026-5018",
+          "GO-2026-5019",
+          "GO-2026-5020",
+          "GO-2026-5021",
+          "GO-2026-5023",
+          "GO-2026-5024",
+          "GO-2026-5033",
+          "GO-2026-5932",
+          "GO-2026-6303",
+          "GO-2026-6354",
+          "GO-2026-6355"
+        ],
+        "report_sha256": "8234af7347e11bc993a51f00c3c268a5fe1eb77f7dce0f9cf7bdbfb3aca13b6e",
+        "toolchain": "go1.26.10",
+        "scanner": "govulncheck1.7.0"
+      }
+    }
+  },
+  "actual_packaged_jar": {
+    "kind": "actual-packaged-boot-jar-smoke",
+    "jar_sha256": "bb065e02a45e4c634214a9a47351d0e2a561a47012f46339530f9830ca597e0e",
+    "jdk": "openjdk version \"21.0.13\" 2026-10-20 LTS",
+    "health": 200,
+    "unauthenticated_registration": 401,
+    "discovery_issuer": "urn:nps:org:fixture:ca",
+    "embedded_schema_in_jar": true,
+    "key_mode_octal": "0o600",
+    "fixture_stopped": true,
+    "paid_provider_calls": 0,
+    "passed": true
+  },
+  "preserved_failures": [
+    "npm9 edgesOut resolver failed; task-local npm11 resolved and installed the graph",
+    "Boot4 initially lacked direct Jackson2 compilation dependency",
+    "Actual JavaCA startup exposed old unclosed WAL result set",
+    "Owned synthetic key envelope had mode000; corrected and verified same-state restart"
+  ],
+  "independent_review": "One bounded gpt-6.1-sol/high reviewer; read-only instruction, not a narrower enforced sandbox. Parent independently executed tests/audits/probe; findings fixed.",
+  "not_qualified": [
+    "registry credential/publish authority inventory",
+    "unexecuted 576 compatibility cells",
+    "other SDK/binding runtime profiles",
+    "all old A20/P20/adopter gates",
+    "production PKI/transport",
+    "beta/publication"
+  ],
+  "paid_provider_calls": 0
+}

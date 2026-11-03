@@ -1,0 +1,19 @@
+{"command": ["npx", "--yes", "npm@11.11.0", "audit", "--audit-level=low"], "cwd": "impl/typescript"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+found 0 vulnerabilities
+{"command": ["npx", "--yes", "npm@11.11.0", "ci", "--ignore-scripts"], "cwd": "tools/nip-ca-server/example/ts"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+
+added 111 packages, and audited 112 packages in 2s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+{"command": ["npx", "--yes", "npm@11.11.0", "audit", "--audit-level=low"], "cwd": "tools/nip-ca-server/example/ts"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+found 0 vulnerabilities

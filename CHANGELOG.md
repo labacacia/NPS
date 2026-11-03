@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 Until NPS reaches v1.0 stable, every repository in the suite — spec, SDKs (.NET / Python / TypeScript / Java / Rust / Go), CA Servers, and compat bridges — is synchronized to the same pre-release version tag.
 
+## [1.0.0-alpha.20] — Release candidate, unpublished
+
+- Bounded experimental result resources/authorization, repeated-schema batches, local task handoff and volatile node transfer. Language support differs; full six-SDK runtime parity is not qualified.
+- Preserve measured comparisons with equivalent HTTPgzip and ordinary tools; no universal token, fee or speed benefit is claimed.
+- Align candidate versions and local CI/package verification. Full production, beta and actual publication remain separate gates.
+
 ## [1.0.0-alpha.19] — 2026-09-05
 
 ### Fixed
@@ -551,7 +557,7 @@ Until NPS reaches v1.0 stable, every repository in the suite — spec, SDKs (.NE
 ### Spec
 
 - **New — `spec/services/NPS-Node-Profile.md` v0.1 Draft**: Node-side compliance specification (L1 Basic / L2 Interactive / L3 Autonomous), orthogonal to the service-side AaaS Profile. Introduces the `activation_mode` model (`ephemeral` / `resident` / `hybrid`) as the load-bearing axis for the three levels. L1 ships with 21 detailed requirement IDs (`N1-NCP-*` through `N1-OBS-*`); L2/L3 headline additions are listed, with detailed IDs tracked under NPS-Roadmap Phase 2/3.
-- **New — `spec/services/conformance/NPS-Node-L1.md` v0.1**: Language-agnostic test suite for NPS-Node Profile L1 — 21 test cases (`TC-N1-*`), paired-peer methodology, results manifest schema. Reference suite location tracked at `impl/dotnet/tests/NPS.Daemon.Conformance.Tests/`.
+- **New — `spec/services/conformance/NPS-Node-L1.md` v0.1**: Language-agnostic test suite for NPS-Node Profile L1 — 21 test cases (`TC-N1-*`), paired-peer methodology, results manifest schema. Reference suite location tracked at `impl/dotnet/tests/NPS.Daemon.Conformance.Tests/`. Historical note: the alpha.19 audit found 20 actual `TC-N1-*` headings; the original 21-case prose count was an editorial error.
 - **New — `spec/services/conformance/NPS-NODE-L1-CERTIFIED.md`**: Self-attestation template for implementations claiming L1 compliance. Contains implementation identity, peer used, run environment, per-case outcome checklist, results manifest, and Ed25519 attestation block.
 - **NPS-RFC-0001 — Accepted (pre-1.0 fast-track)**: Native-mode NCP connections now MUST begin with an 8-byte ASCII constant preamble `b"NPS/1.0\n"`. New §2.6.1 in `spec/NPS-1-NCP.md`. HTTP mode unaffected. Mismatched preamble triggers a silent close within 500 ms (no `ErrorFrame`, to avoid leaking framing details to scanners). 10-second timeout for short reads. New error code `NCP-PREAMBLE-INVALID` and new status code `NPS-PROTO-PREAMBLE-INVALID` (with new `PROTO` status category that also covers existing `NPS-PROTO-VERSION-INCOMPATIBLE`). Frame-type byte `0x4E` (ASCII `N`) reserved in `frame-registry.yaml` `reservations:` block — MUST NOT be assigned to any NCP frame.
 - **NPS-RFC-0003 — Accepted (pre-1.0 fast-track)**: Three-tier Agent identity assurance levels (`anonymous` / `attested` / `verified`) for anti-scraping and trust gating. New NPS-3 §5.1.1; `IdentFrame` gains optional `assurance_level` field (default `anonymous`, backward-compatible). NWM gains optional top-level `min_assurance_level` plus per-action override on individual `ActionSpec`s. New error codes `NIP-ASSURANCE-MISMATCH`, `NIP-ASSURANCE-UNKNOWN`, `NWP-AUTH-ASSURANCE-TOO-LOW`. The X.509 critical-extension flip (§4.2) is deferred and stays inert until NPS-RFC-0002 ships in alpha.4 — Phase 1 here is parsing only; existing verifiers see no change in default behavior.

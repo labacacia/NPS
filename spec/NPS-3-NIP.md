@@ -4,11 +4,11 @@ English | [中文版](./NPS-3-NIP.cn.md)
 
 **Spec Number**: NPS-3
 **Status**: Proposed
-**Version**: 0.15
-**Date**: 2026-08-31
+**Version**: 0.16
+**Date**: 2026-09-09
 **Port**: 17433 (default, shared) / 17435 (optional dedicated)
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12)
+**Depends-On**: NPS-1 (NCP v0.13)
 
 ---
 
@@ -266,6 +266,12 @@ Receivers MUST treat unknown `incident` values as opaque pass-through (forward c
 
 | Code | When |
 |------|------|
+| `NIP-CONTEXT-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid projection format, bounds or lifetime |
+| `NIP-CONTEXT-UNTRUSTED` | `NPS-AUTH-FORBIDDEN` | Untrusted issuer/key or invalid signature |
+| `NIP-CONTEXT-BINDING-MISMATCH` | `NPS-AUTH-FORBIDDEN` | Projection request/subject/audience or policy mismatch |
+| `NIP-CONTEXT-EXPIRED` | `NPS-AUTH-FORBIDDEN` | Projection validity window expired |
+| `NIP-CONTEXT-REPLAY` | `NPS-CLIENT-CONFLICT` | Valid projection was already admitted |
+| `NIP-CONTEXT-VERIFIER-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | Verification or durable replay infrastructure unavailable |
 | `NIP-REPUTATION-ENTRY-INVALID` (`NPS-CLIENT-BAD-FRAME`) | Entry signature fails verification or canonical form is malformed. |
 | `NIP-REPUTATION-LOG-UNREACHABLE` (`NPS-DOWNSTREAM-UNAVAILABLE`) | A log operator referenced by a Node's `reputation_policy` cannot be reached during admission evaluation. |
 | `NWP-AUTH-REPUTATION-BLOCKED` (`NPS-AUTH-FORBIDDEN`) | Reputation policy matched a `reject_on` rule on the requesting `subject_nid`. (Defined in NPS-2 §6 — Anchor / Memory / Action / Complex / Bridge Nodes that opt in.) |
@@ -739,6 +745,135 @@ code.
 
 ---
 
+### 7.8 Authenticated invocation projection (NIP v0.16)
+
+The following requirements define experimental `nps.invocation_context` revision 1.
+They do not change IdentFrame signatures or certificate formats.
+
+#### 7.8.1 In-memory context
+
+Admission produces two separate typed objects:
+
+- caller facts: request_id, traceparent, requested deadline, idempotency_key, bounded hints;
+- admitted authority: subject NID, verified assurance, capabilities, deployment scope, issuer and
+  transport/session provenance.
+
+A caller deadline may shorten but never extend the server limit. An idempotency key is not identity.
+Native authority comes from verified NIP session admission, never Hello.agent_id. Local-development
+authority requires an explicit server deployment mode unavailable to remote caller selection.
+Adapters cannot construct admitted authority by deserializing a request body.
+
+#### 7.8.2 Wire envelope and canonicalization
+
+Reserve feature ID `nps.invocation_context`, revision 1, experimental until vectors and release
+gates promote it. Both hops require feature support. HTTP header `X-NPS-Invocation-Context` carries
+unpadded base64url of UTF-8 JSON for exactly `{"payload":{...},"signature":"..."}`.
+Reject repeated headers, non-canonical base64url, duplicate keys, unknown fields, invalid Unicode,
+non-I-JSON numbers and decoded envelopes over 16 KiB (or a smaller local limit).
+
+The payload has exactly these fields:
+
+| Field | Type / limit |
+|---|---|
+| profile | literal nps.invocation_context |
+| revision | integer 1 |
+| issuer | admitted gateway NID, 1..512 UTF-8 bytes |
+| key_id | configured identifier matching `[A-Za-z0-9._:-]{1,128}` |
+| audience | exact logical receiving service ID, 1..512 UTF-8 bytes |
+| subject | original admitted subject NID, 1..512 UTF-8 bytes |
+| assurance | anonymous / attested / verified; receiver must permit this assertion |
+| capabilities | sorted unique strings, at most 64, each 1..128 UTF-8 bytes |
+| scope | sorted unique strings of deployment-registered scope identifiers, at most 64, each 1..256 UTF-8 bytes |
+| issued_at | integer Unix seconds |
+| expires_at | integer Unix seconds |
+| projection_id | 32 lowercase hex characters from 16 cryptographically random bytes |
+| request_digest | lowercase sha256: followed by 64 lowercase hex digits |
+
+Scope entries are opaque identifiers in a receiver-configured vocabulary, not policy expressions.
+No wildcards gain authority unless the receiver's product policy independently interprets them.
+All strings are compared exactly; no case folding or Unicode normalization is added implicitly.
+
+Signature input is UTF-8 bytes of `NPS-CONTEXT-PROJECTION/1`, one zero byte, then RFC 8785/JCS
+canonical payload bytes. Signature is a 64-byte Ed25519 signature encoded unpadded base64url.
+The unsigned outer envelope has no algorithm switch. Keys come only from the receiver's configured
+(issuer,key_id) mapping; never accept embedded keys. Existing IdentFrame canonicalization is unchanged.
+
+#### 7.8.3 Request digest
+
+The digest is SHA-256 over UTF-8 `NPS-INVOKE-REQUEST/1`, one zero byte and JCS of this exact object:
+
+```json
+{"protocol":"nwp","operation":"example.echo","target":"service:echo","idempotency_key":null,"required_features":[{"id":"nps.invocation_context","revision":1}],"body":{"encoding":"json","value":{"params":{"text":"hello"}}}}
+```
+
+protocol and operation are registry identifiers, target is the exact logical service/resource,
+idempotency_key is a string or null, required_features is sorted by ID with no duplicate IDs,
+and body has either `{"encoding":"json","value":<I-JSON value>}` or
+`{"encoding":"bytes","content_type":"<exact canonical media type>","sha256":"sha256:<hex>"}`.
+A byte profile must register its canonical content type; unregistered/ambiguous forms reject.
+Native/HTTP serialization mechanics are excluded; the resolved operation/target and parsed body
+must be identical at issuer and receiver. Include accepted semantic query parameters in value.
+Trace IDs and the projection envelope are excluded. Registered operation schemas must include
+every input that affects authority or side effects; hidden header-driven semantics are prohibited.
+
+A gateway that changes operation, target, body or required features must authenticate and create
+a fresh projection for the next hop; it cannot forward a signature for different semantics.
+
+#### 7.8.4 Time, peer binding and replay
+
+Require 0 < expires_at-issued_at <= 60 seconds and Unix integers in 0..9007199254740991.
+Clock skew allowance is at most 5 seconds. Reject issued_at > now+5 or now >= expires_at+5.
+Receivers may enforce shorter windows. On separately authenticated TLS/mTLS or equivalent
+deployment transport, bind the peer to its configured allowed issuer set. A valid signature alone
+is insufficient; public inputs are stripped before fresh projection and cannot select that set.
+
+Verify size/schema, channel issuer, configured key, signature, audience/subject bindings, time,
+request digest and local admission policy before deriving authority. Admitted capabilities/scope
+are constrained by receiver policy; a gateway cannot exceed its configured delegation ceiling.
+The principal from the original public connection is asserted by the trusted issuer, not assumed
+to equal the immediate gateway identity.
+
+Replay admission is an atomic insert-if-absent for (issuer,projection_id), retained at least until
+expires_at+5. The store must survive process restarts and be shared across replicas receiving the
+same audience. Missing/unavailable replay protection fails closed. An invalid request must not
+consume a replay ID; simultaneous valid duplicates admit at most one. A lost reply requires a fresh
+projection for retry while retaining logical operation identity. Replay protection does not replace
+durable operation deduplication, and inserting an ID does not prove an action executed.
+
+Rotate via configured key overlap, bounded by maximum lifetime plus skew. Remove revoked issuer keys
+immediately; do not accept a key merely because its projection was issued before revocation.
+Log bounded identifiers/error categories, never the projection header, signature or sensitive scope.
+
+#### 7.8.5 Deterministic bounds and carrier binding
+
+JSON revision and timestamp fields MUST use decimal-digit integer syntax, without
+fractions or exponents. They remain subject to the value ranges above.
+
+Capabilities and scope MUST be sorted by unsigned UTF-8 byte order, with exact
+duplicate rejection; this array ordering is separate from JCS object-key ordering.
+Issuer and subject MUST be valid NIDs under existing NIP syntax. Protocol is an ASCII
+registry identifier of 1..32 bytes; operation is 1..256 UTF-8 bytes; target is
+1..512 UTF-8 bytes; a non-null idempotency key is 1..128 UTF-8 bytes and must also
+satisfy its operation schema. Required feature pairs use NCP §2.6.3 types, are
+unique and sorted by ID, at most 32. The complete canonical request-digest object
+MUST NOT exceed 1048576 bytes; existing smaller request/frame limits still apply.
+
+NWP §9.7 defines HTTP and native carriers and the exact logical request construction.
+Both use the same envelope and signature algorithm. A projection is not a bearer
+credential, and MUST NOT be accepted without the independent authenticated-channel
+issuer binding. Public/untrusted inbound projection carriers MUST be removed before
+a gateway creates a fresh projection from locally admitted authority.
+
+The verifier MUST return NIP-CONTEXT-INVALID for schema/encoding/size/invalid-lifetime
+or future-issued errors; NIP-CONTEXT-UNTRUSTED for signature/key/issuer failures;
+NIP-CONTEXT-BINDING-MISMATCH for audience/subject/request bindings or delegation-policy
+mismatch; NIP-CONTEXT-EXPIRED for expiry; NIP-CONTEXT-REPLAY for a duplicate valid
+projection; and NIP-CONTEXT-VERIFIER-UNAVAILABLE for unavailable verification/replay
+infrastructure. None permits application dispatch. Failure details MUST be bounded
+and MUST NOT expose the envelope or sensitive scope.
+
+---
+
 ## 8. NIP CA Server OSS API
 
 | Method | Path | Auth | Description |
@@ -855,6 +990,7 @@ At every link in the delegation chain, scope MUST NOT exceed that of its parent.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.16 | 2026-09-09 | Alpha.20 experimental authenticated invocation projection: bounded JCS/Ed25519 envelope, complete request binding, trusted channel issuer, delegation ceilings and durable atomic replay admission. |
 | 0.15 | 2026-08-31 | Alpha.19 renewal/revocation hardening: inclusive standard/short-lived renewal windows, identity continuity, atomic/idempotent issuance, old-cert ticket bounds, explicit revocation freshness and stale fallback, fail-closed OCSP unknown, rollback-safe cache replacement, deterministic non-enforcing Phase-3 advisory output, and shared vectors. Corrects §8.1 CR-0005 RA status from stub to Implemented. Depends-On advances to NCP 0.12. |
 | 0.14 | 2026-08-12 | Added standard `llm:context` capability for the NWP §7.6 stateful LLM context lifecycle and admitted it into TrustFrame `trust_scope`. Completion mutations also require `llm:complete`; owner-authorized status/release remain available with `llm:context` alone. Context identifiers are locators, not bearer authorization. No new frame field or NIP error code. |
 | 0.13 | 2026-07-29 | Added §7.6 Portable CA and Verification Profile: deterministic verification/source order, `if_configured` and fail-closed `required` revocation modes, signed deterministic CRL semantics, full CA-store enumeration, and authenticated `GET /v1/certificates`. Added shared revocation-policy and signed-CRL vectors. No new frame field or error code. |

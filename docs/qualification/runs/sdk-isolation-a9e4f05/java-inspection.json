@@ -1,0 +1,27 @@
+{
+  "source_revision": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+  "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+  "artifacts": [
+    {
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e.jar",
+      "bytes": 833048,
+      "sha256": "9e5495b561e268ab8df784cee9bf72a64eb3b73d7ff6c2f9a37d98e72bbe326c",
+      "entries": 517
+    },
+    {
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e-sources.jar",
+      "bytes": 421584,
+      "sha256": "0b89e564645ed33da836ae18c3ddec17a256dd2ddc5545f80d84240e87f8f134",
+      "entries": 347
+    },
+    {
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e-javadoc.jar",
+      "bytes": 1830218,
+      "sha256": "3411ba94966f7ccf7e1be44557b50961f9bb1b7bd285361be39bed9e2debf58a",
+      "entries": 563
+    }
+  ],
+  "pom_sha256": "3b2763c7436a1b873bfeeec739103dc22870e6ff6188e079d0ac07f56608e4f6",
+  "signatures": "not-generated; unsigned local build only",
+  "publication": false
+}

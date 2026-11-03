@@ -1,0 +1,1618 @@
++ git init -q
++ git add config.json
++ git -c user.name=Codex -c user.email=codex@local commit -q -m initialize alpha19 local registry
++ cargo package -p nps-core --registry alpha19-local --allow-dirty
+   Packaging nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-core)
+    Updating crates.io index
+    Packaged 15 files, 102.8KiB (24.4KiB compressed)
+   Verifying nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-core)
+   Compiling version_check v0.9.5
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.229
+   Compiling generic-array v0.14.7
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling syn v3.0.9
+   Compiling zmij v1.0.23
+   Compiling serde v1.0.229
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling serde_json v1.0.154
+   Compiling digest v0.10.7
+   Compiling cfg-if v1.0.5
+   Compiling cpufeatures v0.2.17
+   Compiling itoa v1.0.18
+   Compiling rmp v0.8.15
+   Compiling memchr v2.8.3
+   Compiling sha2 v0.10.9
+   Compiling hex v0.4.3
+   Compiling serde_derive v1.0.229
+   Compiling rmp-serde v1.3.1
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-core-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.62s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-core-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-core
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-core 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-ncp --registry alpha19-local --allow-dirty
+   Packaging nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ncp)
+    Updating `alpha19-local` index
+    Updating crates.io index
+    Packaged 15 files, 113.7KiB (25.9KiB compressed)
+   Verifying nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ncp)
+ Downloading crates ...
+  Downloaded nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling libc v0.2.191
+   Compiling bytes v1.12.1
+   Compiling pin-project-lite v0.2.17
+   Compiling syn v3.0.9
+   Compiling mio v1.2.4
+   Compiling socket2 v0.6.5
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.2
+   Compiling tokio v1.54.1
+   Compiling serde v1.0.229
+   Compiling rmp-serde v1.3.1
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-ncp-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.09s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-ncp-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-ncp
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-ncp 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-nip --registry alpha19-local --allow-dirty
+   Packaging nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nip)
+    Updating crates.io index
+    Updating `alpha19-local` index
+    Packaged 44 files, 502.2KiB (107.2KiB compressed)
+   Verifying nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nip)
+   Compiling syn v3.0.9
+   Compiling getrandom v0.2.17
+   Compiling stable_deref_trait v1.2.1
+   Compiling subtle v2.6.1
+   Compiling syn v2.0.119
+   Compiling num-traits v0.2.19
+   Compiling rand_core v0.6.4
+   Compiling shlex v2.0.1
+   Compiling crypto-common v0.1.7
+   Compiling find-msvc-tools v0.1.15
+   Compiling cc v1.11.0
+   Compiling futures-core v0.3.34
+   Compiling zeroize v1.9.1
+   Compiling writeable v0.6.4
+   Compiling litemap v0.8.3
+   Compiling smallvec v1.16.4
+   Compiling ring v0.17.14
+   Compiling utf_types v1.0.0
+   Compiling utf8_iter v1.1.0
+   Compiling icu_properties_data v2.4.0
+   Compiling time-core v0.1.9
+   Compiling untrusted v0.9.0
+   Compiling num-conv v0.2.2
+   Compiling icu_normalizer_data v2.4.0
+   Compiling time-macros v0.2.32
+   Compiling synstructure v0.14.0
+   Compiling rustls-pki-types v1.15.1
+   Compiling http v1.5.0
+   Compiling percent-encoding v2.3.2
+   Compiling minimal-lexical v0.2.1
+   Compiling displaydoc v0.2.7
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling zerofrom v0.1.8
+   Compiling tokio-macros v2.7.2
+   Compiling yoke v0.8.4
+   Compiling deranged v0.5.9
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling tokio v1.54.1
+   Compiling thiserror v1.0.69
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.4.0
+   Compiling icu_locale_core v2.4.0
+   Compiling powerfmt v0.2.1
+   Compiling once_cell v1.21.4
+   Compiling time v0.3.55
+   Compiling http-body v1.1.0
+   Compiling nom v7.1.3
+   Compiling icu_provider v2.4.0
+   Compiling digest v0.10.7
+   Compiling thiserror-impl v1.0.69
+   Compiling synstructure v0.13.2
+   Compiling httparse v1.10.1
+   Compiling slab v0.4.12
+   Compiling futures-task v0.3.34
+   Compiling asn1-rs-derive v0.5.1
+   Compiling futures-util v0.3.34
+   Compiling icu_normalizer v2.4.0
+   Compiling rusticata-macros v4.1.0
+   Compiling icu_properties v2.4.0
+   Compiling serde_derive v1.0.229
+   Compiling asn1-rs-impl v0.2.0
+   Compiling try-lock v0.2.5
+   Compiling zerocopy v0.8.63
+   Compiling tower-service v0.3.3
+   Compiling rustls v0.23.46
+   Compiling semver v1.0.28
+   Compiling want v0.3.2
+   Compiling asn1-rs v0.6.2
+   Compiling rustc_version v0.4.1
+   Compiling idna_adapter v1.2.2
+   Compiling tracing-core v0.1.36
+   Compiling rustls-webpki v0.103.16
+   Compiling form_urlencoded v1.2.2
+   Compiling num-integer v0.1.47
+   Compiling serde v1.0.229
+   Compiling inout v0.1.4
+   Compiling oid-registry v0.7.1
+   Compiling atomic-waker v1.1.2
+   Compiling hyper v1.12.0
+   Compiling cipher v0.4.4
+   Compiling num-bigint v0.4.8
+   Compiling tracing v0.1.44
+   Compiling curve25519-dalek v4.1.3
+   Compiling idna v1.1.0
+   Compiling futures-channel v0.3.34
+   Compiling sync_wrapper v1.0.2
+   Compiling universal-hash v0.5.1
+   Compiling base64 v0.22.1
+   Compiling tower-layer v0.3.3
+   Compiling opaque-debug v0.3.1
+   Compiling ipnet v2.12.2
+   Compiling base64 v0.23.1
+   Compiling hyper-util v0.1.21
+   Compiling polyval v0.6.2
+   Compiling tower v0.5.3
+   Compiling der-parser v9.0.0
+   Compiling tokio-rustls v0.26.6
+   Compiling url v2.5.8
+   Compiling sha2 v0.10.9
+   Compiling webpki-roots v1.0.11
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling rmp v0.8.15
+   Compiling ppv-lite86 v0.2.21
+   Compiling thiserror v2.0.21
+   Compiling bitflags v2.13.2
+   Compiling log v0.4.35
+   Compiling data-encoding v2.11.1
+   Compiling lazy_static v1.5.1
+   Compiling signature v2.2.0
+   Compiling ryu v1.0.23
+   Compiling ed25519 v2.2.3
+   Compiling serde_urlencoded v0.7.1
+   Compiling rand_chacha v0.3.1
+   Compiling x509-parser v0.16.0
+   Compiling tower-http v0.6.11
+   Compiling rmp-serde v1.3.1
+   Compiling hyper-rustls v0.27.10
+   Compiling ghash v0.5.1
+   Compiling pem v3.0.6
+   Compiling ctr v0.9.2
+   Compiling aes v0.8.4
+   Compiling yasna v0.5.2
+   Compiling hmac v0.12.1
+   Compiling http-body-util v0.1.5
+   Compiling thiserror-impl v2.0.21
+   Compiling aead v0.5.2
+   Compiling httpdate v1.0.3
+   Compiling chunked_transfer v1.5.0
+   Compiling ascii v1.1.0
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling aes-gcm v0.10.3
+   Compiling tiny_http v0.12.0
+   Compiling reqwest v0.12.28
+   Compiling rcgen v0.13.2
+   Compiling pbkdf2 v0.12.2
+   Compiling ed25519-dalek v2.2.0
+   Compiling rand v0.8.8
+   Compiling nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nip-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 38.56s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nip-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-nip
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-nip 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-ndp --registry alpha19-local --allow-dirty
+   Packaging nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ndp)
+    Updating crates.io index
+    Updating `alpha19-local` index
+    Packaged 14 files, 148.9KiB (34.8KiB compressed)
+   Verifying nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ndp)
+ Downloading crates ...
+  Downloaded nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-ndp-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.82s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-ndp-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-ndp
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-ndp 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-nop --registry alpha19-local --allow-dirty
+   Packaging nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nop)
+    Updating crates.io index
+    Updating `alpha19-local` index
+    Packaged 26 files, 268.3KiB (57.4KiB compressed)
+   Verifying nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nop)
+   Compiling displaydoc v0.2.7
+   Compiling memchr v2.8.3
+   Compiling futures-sink v0.3.34
+   Compiling futures-macro v0.3.34
+   Compiling futures-channel v0.3.34
+   Compiling slab v0.4.12
+   Compiling futures-io v0.3.34
+   Compiling futures-task v0.3.34
+   Compiling tinystr v0.8.5
+   Compiling zerotrie v0.2.5
+   Compiling futures-util v0.3.34
+   Compiling icu_locale_core v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling getrandom v0.2.17
+   Compiling ring v0.17.14
+   Compiling digest v0.10.7
+   Compiling serde_json v1.0.154
+   Compiling icu_provider v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling rustls-webpki v0.103.16
+   Compiling tower v0.5.3
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling rustls v0.23.46
+   Compiling url v2.5.8
+   Compiling hyper-util v0.1.21
+   Compiling syn v2.0.119
+   Compiling tower-http v0.6.11
+   Compiling sha2 v0.10.9
+   Compiling rmp-serde v1.3.1
+   Compiling futures-executor v0.3.34
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling futures v0.3.34
+   Compiling hmac v0.12.1
+   Compiling tokio-rustls v0.26.6
+   Compiling hyper-rustls v0.27.10
+   Compiling reqwest v0.12.28
+   Compiling async-stream-impl v0.3.6
+   Compiling async-stream v0.3.6
+   Compiling nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nop-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 14.53s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nop-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-nop
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-nop 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-nwp --registry alpha19-local --allow-dirty
+   Packaging nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nwp)
+    Updating crates.io index
+    Updating `alpha19-local` index
+    Packaged 50 files, 740.0KiB (154.6KiB compressed)
+   Verifying nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nwp)
+ Downloading crates ...
+  Downloaded nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling syn v2.0.119
+   Compiling futures-sink v0.3.34
+   Compiling tokio v1.54.1
+   Compiling nom v7.1.3
+   Compiling futures-channel v0.3.34
+   Compiling futures-util v0.3.34
+   Compiling rusticata-macros v4.1.0
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling futures-executor v0.3.34
+   Compiling futures v0.3.34
+   Compiling synstructure v0.13.2
+   Compiling hyper v1.12.0
+   Compiling tokio-rustls v0.26.6
+   Compiling thiserror-impl v1.0.69
+   Compiling asn1-rs-derive v0.5.1
+   Compiling asn1-rs-impl v0.2.0
+   Compiling hyper-util v0.1.21
+   Compiling thiserror v1.0.69
+   Compiling asn1-rs v0.6.2
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling tower v0.5.3
+   Compiling tower-http v0.6.11
+   Compiling der-parser v9.0.0
+   Compiling oid-registry v0.7.1
+   Compiling hyper-rustls v0.27.10
+   Compiling curve25519-dalek v4.1.3
+   Compiling tokio-util v0.7.20
+   Compiling async-stream-impl v0.3.6
+   Compiling x509-parser v0.16.0
+   Compiling reqwest v0.12.28
+   Compiling async-stream v0.3.6
+   Compiling nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling ed25519-dalek v2.2.0
+   Compiling rcgen v0.13.2
+   Compiling nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nwp-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 19.67s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-nwp-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-nwp
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-nwp 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-conformance --registry alpha19-local --allow-dirty
+   Packaging nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-conformance)
+    Updating crates.io index
+    Packaged 6 files, 51.3KiB (12.3KiB compressed)
+   Verifying nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-conformance)
+   Compiling time v0.3.55
+   Compiling nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-conformance-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.01s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-conformance-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-conformance
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-conformance 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo package -p nps-sdk --registry alpha19-local --allow-dirty
+   Packaging nps-sdk v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-sdk)
+    Updating `alpha19-local` index
+    Updating crates.io index
+    Packaged 4 files, 57.4KiB (15.3KiB compressed)
+   Verifying nps-sdk v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-sdk)
+ Downloading crates ...
+  Downloaded nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+  Downloaded nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+  Downloaded nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+  Downloaded nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (registry `alpha19-local`)
+   Compiling nps-sdk v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-sdk-1.0.0-alpha.20.dev.a9e4f05eeb85)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.93s
++ cargo metadata --format-version 1 --no-deps --manifest-path /home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/target/package/nps-sdk-1.0.0-alpha.20.dev.a9e4f05eeb85/Cargo.toml
++ git add np/s-/nps-sdk
++ git -c user.name=Codex -c user.email=codex@local commit -q -m add nps-sdk 1.0.0-alpha.20.dev.a9e4f05eeb85
++ cargo test --workspace --all-features
+    Updating crates.io index
+    Updating `alpha19-local` index
+     Locking 219 packages to highest compatible versions
+      Adding aes-gcm v0.10.3 (available: v0.11.1)
+      Adding base64 v0.22.1 (available: v0.23.1)
+      Adding ed25519-dalek v2.2.0 (available: v3.0.0)
+      Adding generic-array v0.14.7 (available: v0.14.9)
+      Adding hmac v0.12.1 (available: v0.13.0)
+      Adding pbkdf2 v0.12.2 (available: v0.13.0)
+      Adding rand v0.8.8 (available: v0.10.3)
+      Adding rcgen v0.13.2 (available: v0.14.10)
+      Adding reqwest v0.12.28 (available: v0.13.5)
+      Adding sha2 v0.10.9 (available: v0.11.1)
+      Adding x509-parser v0.16.0 (available: v0.18.1)
+   Compiling nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-core)
+   Compiling bitflags v2.13.2
+   Compiling getrandom v0.4.3
+   Compiling rustix v1.1.6
+   Compiling tower-http v0.6.11
+   Compiling linux-raw-sys v0.12.1
+   Compiling fastrand v2.5.0
+   Compiling reqwest v0.12.28
+   Compiling nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-conformance)
+   Compiling nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nip)
+   Compiling nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ncp)
+   Compiling tempfile v3.27.0
+   Compiling nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nop)
+   Compiling nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nwp)
+   Compiling nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ndp)
+   Compiling nps-sdk v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-sdk)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 31.45s
+     Running unittests src/lib.rs (target/debug/deps/nps_conformance-9efa0379ed6d0d26)
+
+running 4 tests
+test tests::catalog_contains_expected_cases ... ok
+test tests::validator_accepts_complete_l1_manifest ... ok
+test tests::validator_requires_reason_for_aaas_should_exception ... ok
+test tests::validator_enforces_l2_all_or_nothing_families ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/alpha19_hardening.rs (target/debug/deps/alpha19_hardening-a5111806e0e24f2b)
+
+running 2 tests
+test boundary_branches_are_not_fixture_constants ... ok
+test executes_all_shared_vectors ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_core-f5f6d84a407768ff)
+
+running 33 tests
+test observability::tests::default_drain_timeout_is_30s ... ok
+test observability::tests::json_log_line_escapes_message ... ok
+test alpha20::tests::raw_regressions ... ok
+test observability::tests::json_log_line_has_runbook_fields ... ok
+test observability::tests::json_log_line_omits_empty_trace_id ... ok
+test observability::tests::log_level_names_match_dotnet ... ok
+test observability::tests::log_level_parse_accepts_dotnet_names ... ok
+test observability::tests::metrics_content_type_matches_dotnet ... ok
+test observability::tests::metrics_counter_no_labels_renders ... ok
+test observability::tests::metrics_counter_with_labels_renders_cells ... ok
+test observability::tests::metrics_gauge_renders ... ok
+test observability::tests::render_healthz_returns_ok_json ... ok
+test observability::tests::render_readyz_no_probes_is_ok ... ok
+test observability::tests::render_readyz_passes_when_all_ok ... ok
+test observability::tests::render_readyz_returns_first_probe_failure ... ok
+test observability::tests::resolve_log_level_falls_back_when_unset ... ok
+test observability::tests::shutdown_state_flips_on_mark ... ok
+test status_codes::tests::all_26_core_codes_have_http_mapping ... ok
+test status_codes::tests::auth_codes ... ok
+test status_codes::tests::client_errors_map_to_4xx ... ok
+test status_codes::tests::limit_codes ... ok
+test status_codes::tests::downstream_unavailable ... ok
+test status_codes::tests::proto_codes ... ok
+test status_codes::tests::server_errors_map_to_5xx ... ok
+test status_codes::tests::stream_codes ... ok
+test status_codes::tests::unknown_code_returns_none ... ok
+test status_codes::tests::success_codes_map_to_2xx ... ok
+test telemetry::tests::counter_accumulates_labelled_and_unlabelled ... ok
+test telemetry::tests::histogram_tracks_count_sum_min_max_mean ... ok
+test telemetry::tests::snapshot_reports_all_instruments_with_metadata ... ok
+test telemetry::tests::spans_recorded_on_drop_with_attributes ... ok
+test telemetry::tests::spans_are_noop_without_recorder ... ok
+test alpha20::tests::shared_feature_corpus ... ok
+
+test result: ok. 33 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/core_tests.rs (target/debug/deps/core_tests-4e70ecab5daa3b10)
+
+running 31 tests
+test anchor_cache_get_required_missing_returns_err ... ok
+test anchor_cache_invalidate_removes_entry ... ok
+test anchor_cache_compute_id_is_field_order_independent ... ok
+test anchor_cache_len_counts_active ... ok
+test anchor_cache_poison_different_schema_returns_err ... ok
+test anchor_cache_poison_same_schema_idempotent ... ok
+test anchor_cache_ttl_expiry ... ok
+test anchor_cache_set_get_roundtrip ... ok
+test codec_encode_decode_json ... ok
+test codec_decode_binary_vector_nan_returns_error ... ok
+test codec_encode_decode_binary_vector ... ok
+test codec_encode_decode_msgpack ... ok
+test codec_peek_header ... ok
+test codec_rejects_unregistered_frame_type ... ok
+test decode_json_invalid_returns_err ... ok
+test codec_rejects_oversized_payload ... ok
+test decode_msgpack_invalid_returns_err ... ok
+test encode_decode_json_roundtrip ... ok
+test encode_decode_msgpack_roundtrip ... ok
+test frame_header_default_roundtrip ... ok
+test frame_header_encoding_tier_binary_vector ... ok
+test frame_header_extended_roundtrip ... ok
+test frame_header_encoding_tier_json ... ok
+test frame_header_extended_too_short_returns_err ... ok
+test frame_header_too_short_returns_err ... ok
+test frame_type_as_u8_roundtrip ... ok
+test frame_type_from_u8_known ... ok
+test frame_type_from_u8_unknown ... ok
+test registry_default_has_ncp_frames ... ok
+test codec_binary_vector_conformance_fixture ... ok
+test registry_full_has_all_frames ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_ncp-067e51688fcd6fae)
+
+running 25 tests
+test encoding_policy::tests::encoding_tokens ... ok
+test encoding_policy::tests::ensure_allows_errors_on_denied ... ok
+test encoding_policy::tests::binary_vector_only_for_query ... ok
+test encoding_policy::tests::from_enabled_encodings_detects_extension ... ok
+test encoding_policy::tests::json_default_only ... ok
+test error_codes::tests::anchor_errors ... ok
+test error_codes::tests::constants_have_correct_prefix ... ok
+test error_codes::tests::encoding_and_enc_errors ... ok
+test error_codes::tests::frame_errors ... ok
+test error_codes::tests::stream_errors ... ok
+test error_codes::tests::nid_mismatch ... ok
+test error_codes::tests::unknown_falls_back_to_internal ... ok
+test failover::tests::a_resolution_failure_surfaces_as_resolve ... ok
+test error_codes::tests::version_and_preamble ... ok
+test error_codes::alpha20_status_tests::shared_alpha20_mappings ... ok
+test failover::tests::exhausted_attempts_rethrow_the_last_failure ... ok
+test failover::tests::max_attempts_must_be_at_least_one ... ok
+test failover::tests::nid_mismatch_matcher_uses_the_wire_constant ... ok
+test failover::tests::non_failover_errors_propagate_immediately ... ok
+test failover::tests::reresolves_and_reconnects_after_nid_mismatch ... ok
+test failover::tests::reresolves_after_socket_loss ... ok
+test failover::tests::resolve_runs_once_per_attempt_including_the_first ... ok
+test patch_format::tests::binary_bitset_requires_msgpack ... ok
+test patch_format::tests::constants_are_stable ... ok
+test patch_format::tests::known_detection ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/alpha17_handshake_profile.rs (target/debug/deps/alpha17_handshake_profile-6ef18a21e1ac152b)
+
+running 1 test
+test portable_native_server_handshake_vectors ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/native_transport_tests.rs (target/debug/deps/native_transport_tests-3bb72c57066bd9ed)
+
+running 11 tests
+test encoding_policy_allow_and_deny ... ok
+test ext_header_round_trip ... ok
+test handshake_unexpected_frame_code_matches_dotnet ... ok
+test encoding_negotiation_enables_binary_vector_extension ... ok
+test encoding_negotiation_prefers_msgpack ... ok
+test patch_format_constants_and_helpers ... ok
+test handshake_happy_path_json ... ok
+test invalid_preamble_is_rejected_by_server ... ok
+test unknown_first_frame_is_rejected_by_server ... ok
+test server_rejection_surfaces_error_code ... ok
+test live_session_frame_exchange ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ncp_tests.rs (target/debug/deps/ncp_tests-ca9e4f6745b79f12)
+
+running 4 tests
+test hello_frame_default_registry_registers_hello ... ok
+test hello_frame_type_is_0x06 ... ok
+test hello_frame_full_roundtrip_json ... ok
+test hello_frame_minimal_roundtrip_msgpack ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/preamble_tests.rs (target/debug/deps/preamble_tests-a20db81b5a04f158)
+
+running 10 tests
+test bytes_are_exactly_the_spec_constant ... ok
+test matches_returns_true_for_exact_preamble ... ok
+test matches_returns_false_on_short_reads ... ok
+test status_and_error_code_constants_match_spec ... ok
+test matches_returns_true_when_preamble_is_at_start_of_longer_buffer ... ok
+test validate_accepts_exact_preamble ... ok
+test validate_flags_future_major_distinctly ... ok
+test validate_rejects_garbage ... ok
+test validate_rejects_short_read ... ok
+test write_emits_exactly_the_constant_bytes ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_ndp-47a88bb5937c5b64)
+
+running 8 tests
+test error_codes::tests::announce_errors ... ok
+test error_codes::tests::cluster_split ... ok
+test error_codes::tests::graph_errors ... ok
+test error_codes::tests::constants_have_correct_prefix ... ok
+test error_codes::tests::issuer_and_federation ... ok
+test error_codes::tests::registry_unavailable ... ok
+test error_codes::tests::resolve_errors ... ok
+test error_codes::tests::unknown_falls_back_to_internal ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ndp_cluster_tests.rs (target/debug/deps/ndp_cluster_tests-97453cfd8b80fa96)
+
+running 19 tests
+test absent_epoch_is_treated_as_one ... ok
+test absent_cluster_epoch_round_trips_as_none_not_one ... ok
+test canonical_json_contains_bridge_inbound_protocols_when_set ... ok
+test bridge_inbound_protocols_round_trips ... ok
+test canonical_json_excludes_wire_only_and_null_fields ... ok
+test canonical_json_contains_cluster_epoch_when_set ... ok
+test canonical_json_omits_bridge_inbound_protocols_when_absent ... ok
+test canonical_json_omits_cluster_epoch_when_absent_and_is_byte_identical_to_pre_cr0009 ... ok
+test canonical_keys_are_sorted_ordinal_ascending ... ok
+test empty_cluster_anchor_argument_resolves_to_none ... ok
+test cluster_epoch_round_trips_through_to_dict_and_from_dict ... ok
+test members_of_another_cluster_do_not_participate ... ok
+test no_live_members_resolves_to_none ... ok
+test resolves_the_highest_epoch_active_anchor ... ok
+test role_is_not_filtered_any_live_member_participates ... ok
+test ttl_expired_member_is_excluded_from_the_election ... ok
+test ttl_zero_announce_evicts_and_changes_the_winner ... ok
+test two_members_both_omitting_epoch_split ... ok
+test split_brain_at_the_top_epoch_throws ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ndp_tests.rs (target/debug/deps/ndp_tests-b82c8898e446cd3b)
+
+running 43 tests
+test announce_frame_accepts_legacy_caps_alias ... ok
+test announce_and_get_by_nid ... ok
+test announce_activation_endpoint_is_address_object ... ok
+test announce_frame_codec_roundtrip ... ok
+test announce_from_dict_absent_heartbeat_defaults ... ok
+test announce_result_fail ... ok
+test announce_result_ok ... ok
+test announce_frame_roundtrip ... ok
+test announce_heartbeat_zero_canonicalizes_literally ... ok
+test different_authority ... ok
+test dns_txt_tests::test_dns_txt_default_ttl ... ok
+test dns_txt_tests::test_extract_host_from_target ... ok
+test dns_txt_tests::test_parse_default_port ... ok
+test dns_txt_tests::test_parse_missing_nid ... ok
+test dns_txt_tests::test_parse_missing_v ... ok
+test dns_txt_tests::test_parse_wrong_v ... ok
+test dns_txt_tests::test_parse_valid_record ... ok
+test announce_liveness_wire_only ... ok
+test dns_txt_tests::test_resolve_via_dns_dns_fallback ... ok
+test dns_txt_tests::test_resolve_via_dns_invalid_txt ... ok
+test exact_match ... ok
+test federation_forwarded_by_helpers ... ok
+test get_by_nid_returns_none_for_unknown ... ok
+test graph_frame_rejects_invalid_edges ... ok
+test graph_frame_rejects_too_large ... ok
+test graph_frame_roundtrip ... ok
+test invalid_nid ... ok
+test no_slash_in_target ... ok
+test dns_txt_tests::test_resolve_via_dns_registry_hit ... ok
+test non_nwp_target ... ok
+test remove_public_key_deregisters ... ok
+test rejects_wrong_signature_prefix ... ok
+test resolve_frame_roundtrip ... ok
+test resolve_frame_optional_fields_null ... ok
+test get_all_returns_active_entries ... ok
+test sibling_path ... ok
+test sub_path_match ... ok
+test resolve_returns_matching_entry ... ok
+test resolve_returns_none_for_non_match ... ok
+test ttl_expiry ... ok
+test validator_fails_when_no_key_registered ... ok
+test ttl_zero_deregisters ... ok
+test validates_correctly_signed_frame ... ok
+
+test result: ok. 43 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/registry_profile_tests.rs (target/debug/deps/registry_profile_tests-ccb0e7fb4bce8b02)
+
+running 2 tests
+test shared_registry_consistency_vectors_pass ... ok
+test shared_canonicalization_vectors_pass ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_nip-86ff9c7613ed0162)
+
+running 37 tests
+test ca::signer::tests::canonical_sorts_and_excludes ... ok
+test ca::sql_store::tests::get_by_nid_multiple_returns_latest ... ok
+test ca::signer::tests::pubkey_roundtrip_base64url ... ok
+test ca::sql_store::tests::get_by_nid_not_found_returns_none ... ok
+test ca::sql_store::tests::get_by_serial_not_found_returns_none ... ok
+test ca::sql_store::tests::get_by_parent_nid_filters ... ok
+test ca::sql_store::tests::get_by_serial_round_trips ... ok
+test ca::sql_store::tests::insert_sql_matches_dotnet_columns ... ok
+test ca::sql_store::tests::get_revoked_returns_only_revoked ... ok
+test ca::sql_store::tests::next_serial_increments ... ok
+test ca::sql_store::tests::migrate_emits_schema_ddl ... ok
+test ca::sql_store::tests::list_returns_all ... ok
+test ca::sql_store::tests::revoke_not_found_returns_false ... ok
+test ca::sql_store::tests::revoke_already_revoked_returns_false ... ok
+test ca::sql_store::tests::revoke_sets_fields ... ok
+test error_codes::tests::assurance_and_reputation_errors ... ok
+test ca::sql_store::tests::save_and_get_by_nid_round_trips ... ok
+test error_codes::alpha20_status_tests::shared_alpha20_mappings ... ok
+test error_codes::tests::ca_service_errors ... ok
+test error_codes::tests::cert_verification_errors ... ok
+test error_codes::tests::constants_have_correct_prefix ... ok
+test error_codes::tests::ocsp_errors ... ok
+test error_codes::tests::group_session_nid_errors ... ok
+test error_codes::tests::revoke_frame_errors ... ok
+test error_codes::tests::phase3_errors ... ok
+test error_codes::tests::trust_frame_errors ... ok
+test error_codes::tests::unknown_falls_back_to_internal ... ok
+test error_codes::tests::x509_acme_errors ... ok
+test phase3::tests::empty_utf8_sequence_parses_to_an_empty_list ... ok
+test phase3::tests::excess_is_ordinal_and_order_preserving ... ok
+test phase3::tests::malformed_utf8_sequence_parses_to_none_and_reads_as_empty ... ok
+test phase3::tests::ocsp_garbage_returns_none ... ok
+test phase3::tests::ocsp_next_update_is_recovered ... ok
+test phase3::tests::ocsp_without_next_update_returns_none ... ok
+test phase3::tests::ocsp_without_response_bytes_returns_none ... ok
+test phase3::tests::utf8_sequence_round_trips ... ok
+test ca::signer::tests::sign_and_verify_roundtrip ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/alpha17_portable_profiles.rs (target/debug/deps/alpha17_portable_profiles-4b95998726333e13)
+
+running 2 tests
+test portable_revocation_policy_vectors ... ok
+test portable_signed_crl_vectors ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/ca_client_tests.rs (target/debug/deps/ca_client_tests-3817e832a38b3b56)
+
+running 3 tests
+test register_agent_sends_typed_request_with_bearer ... ok
+test error_response_throws_typed_exception ... ok
+test certificate_inventory_get_sends_bearer ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ca_service_tests.rs (target/debug/deps/ca_service_tests-5518bca9cf385d0a)
+
+running 22 tests
+test duplicate_nid_rejected ... ok
+test issue_session_under_non_group_rejected ... ok
+test ra_allowlist_admits_and_denies ... ok
+test ra_bootstrap_token_tier ... ok
+test ra_pending_queue_tier ... ok
+test issue_session_clamps_and_enforces_subset ... ok
+test register_with_ra_pending_surfaces_error ... ok
+test register_x509_carries_cert_chain ... ok
+test renew_too_early_then_allowed ... ok
+test revoke_agent_then_verify_revoked ... ok
+test router_bootstrap_token_endpoint ... ok
+test revoke_group_cascades_to_sessions ... ok
+test router_discovery_and_ca_cert ... ok
+test router_operator_auth_gate ... ok
+test router_pending_queue_flow ... ok
+test register_then_verify_and_signature_valid ... ok
+test router_group_register_and_session_issue_via_jws ... ok
+test verify_missing_nid_not_found ... ok
+test group_jws_roundtrip_verify ... ok
+test verify_session_chain_rejects_revoked_parent_without_cascade ... ok
+test router_register_and_verify_and_crl ... ok
+test router_session_issue_bad_jws_signature ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/nip_acme_agent01_tests.rs (target/debug/deps/nip_acme_agent01_tests-361e195c5fc12422)
+
+running 2 tests
+test respond_agent01_tampered_signature_server_returns_challenge_failed ... ok
+test issue_agent_cert_round_trip_returns_valid_pem_chain ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+     Running tests/nip_phase3_tests.rs (target/debug/deps/nip_phase3_tests-36a0eabd7299e5ba)
+
+running 20 tests
+test capabilities_is_wire_only_and_not_in_the_signed_body ... ok
+test evaluation_order_is_roles_then_capabilities_then_staple ... ok
+test comparison_is_ordinal_not_case_insensitive ... ok
+test expired_staple_fails ... ok
+test malformed_staple_fails_closed ... ok
+test malformed_attribute_extension_reads_as_empty_so_any_claim_fails ... ok
+test missing_staple_fails ... ok
+test next_update_exactly_now_fails ... ok
+test no_extensions_means_attribute_checks_do_not_apply ... ok
+test null_node_roles_is_an_empty_set_and_always_a_subset ... ok
+test phase3_enforcement_defaults_to_false ... ok
+test present_but_empty_attestation_rejects_any_claim ... ok
+test subset_claims_with_fresh_staple_pass ... ok
+test unattested_capability_fails_with_capabilities_exceeded ... ok
+test unattested_role_fails_with_node_roles_mismatch ... ok
+test utf8_sequence_extension_parses ... ok
+test non_v2_frame_with_the_flag_on_never_reaches_the_enforcer ... ok
+test v1_only_verifier_ignores_cert_chain_even_with_the_flag_on ... ok
+test flag_off_means_a_failing_frame_still_verifies_advisory_only ... ok
+test flag_on_makes_the_same_frame_a_hard_failure ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/nip_tests.rs (target/debug/deps/nip_tests-ed77858d5b76fd95)
+
+running 17 tests
+test ident_frame_optional_fields_null ... ok
+test ident_frame_roundtrip ... ok
+test revoke_frame_rejects_invalid_parent_nid_shape ... ok
+test pub_key_string_format ... ok
+test revoke_frame_roundtrip ... ok
+test generate_creates_distinct_keys ... ok
+test revoke_frame_whole_nid_revocation_omits_serial ... ok
+test sign_is_canonical_key_order_independent ... ok
+test trust_frame_roundtrip ... ok
+test verify_returns_false_for_corrupted_base64 ... ok
+test sign_verify_roundtrip ... ok
+test verify_returns_false_for_wrong_prefix ... ok
+test verify_with_pub_key_str_bad_prefix ... ok
+test verify_returns_false_for_tampered_payload ... ok
+test verify_with_pub_key_str_correct ... ok
+test save_and_load_roundtrip ... ok
+test load_wrong_passphrase_returns_err ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 24.86s
+
+     Running tests/nip_verifier_tests.rs (target/debug/deps/nip_verifier_tests-a64d9d7105c5742a)
+
+running 26 tests
+test nwp_path_matching_rules ... ok
+test step1_expired_cert_rejected ... ok
+test step1_as_of_override_makes_valid_cert_expired ... ok
+test step2_issued_by_mismatch_rejected ... ok
+test step2_untrusted_issuer_rejected ... ok
+test all_steps_pass ... ok
+test step3_bad_signature_rejected ... ok
+test step4_ocsp_invalid_revokes ... ok
+test step4_local_crl_revokes ... ok
+test step4_ocsp_transport_failure_fail_closed ... ok
+test step4_ocsp_transport_failure_fail_open ... ok
+test step4_required_accepts_configured_empty_local_crl ... ok
+test step4_ocsp_valid_passes ... ok
+test step4_required_without_source_fails_closed ... ok
+test step4_revocation_callback_rejects ... ok
+test step4_store_revokes ... ok
+test trust_frame_expired ... ok
+test step4_unconfigured_passes_through ... ok
+test trust_frame_grantee_mismatch ... ok
+test trust_frame_missing_field_invalid ... ok
+test trust_frame_scope_exceeds_grantor ... ok
+test trust_frame_node_scope_violation ... ok
+test trust_frame_untrusted_grantor ... ok
+test trust_frame_valid ... ok
+test step5_missing_capability_rejected ... ok
+test step6_scope_violation_rejected ... ok
+
+test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/nip_x509_tests.rs (target/debug/deps/nip_x509_tests-37f4411258429b48)
+
+running 5 tests
+test register_x509_leaf_eku_stripped_rejects_eku_missing ... ok
+test register_x509_leaf_for_different_nid_rejects_subject_mismatch ... ok
+test v1_only_verifier_accepts_v2_frame_by_ignoring_chain ... ok
+test register_x509_round_trip_verifier_accepts ... ok
+test v2_verifier_rejects_v2_frame_when_trusted_roots_missing ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/reputation_tests.rs (target/debug/deps/reputation_tests-3b81b77f8c21034a)
+
+running 31 tests
+test entry_optional_fields_omitted_when_none ... ok
+test incident_type_other_serializes_as_other ... ok
+test entry_serializes_to_snake_case_keys ... ok
+test entry_full_roundtrip_preserves_all_fields ... ok
+test incident_type_unknown_wire_deserializes_as_other ... ok
+test incident_type_wire_roundtrip_cert_revoked ... ok
+test incident_type_wire_roundtrip_contract_dispute ... ok
+test incident_type_wire_roundtrip_impersonation_claim ... ok
+test incident_type_wire_roundtrip_payment_default ... ok
+test incident_type_wire_roundtrip_positive_attestation ... ok
+test incident_type_wire_roundtrip_rate_limit_violation ... ok
+test incident_type_wire_roundtrip_scraping_pattern ... ok
+test incident_type_wire_roundtrip_tos_violation ... ok
+test severity_ordering ... ok
+test severity_serde_info ... ok
+test severity_serde_critical ... ok
+test severity_serde_major ... ok
+test severity_serde_minor ... ok
+test severity_serde_moderate ... ok
+test severity_unknown_wire_is_error ... ok
+test verify_inclusion_false_on_tampered_entry ... ok
+test sign_is_deterministic ... ok
+test verify_inclusion_false_on_wrong_leaf_hash ... ok
+test verify_inclusion_false_on_wrong_root ... ok
+test verify_inclusion_false_on_corrupted_audit_path ... ok
+test verify_inclusion_single_leaf ... ok
+test verify_inclusion_two_leaf_tree ... ok
+test verify_inclusion_four_leaf_tree ... ok
+test sign_and_verify_roundtrip ... ok
+test verify_rejects_tampered_subject_nid ... ok
+test verify_rejects_wrong_key ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_nop-414d293b4f170917)
+
+running 23 tests
+test cluster_delegation::tests::cluster_target_resolves_to_active_anchor_and_caches ... ok
+test cluster_delegation::tests::cluster_keys_are_ordinal ... ok
+test cluster_delegation::tests::blank_arguments_are_rejected_by_on_anchor_failover ... ok
+test cluster_delegation::tests::failover_event_redirects_subsequent_delegations_to_the_successor ... ok
+test cluster_delegation::tests::first_observation_is_accepted_unconditionally ... ok
+test cluster_delegation::tests::invalidate_forces_a_fresh_lookup ... ok
+test cluster_delegation::tests::negative_results_are_not_cached ... ok
+test cluster_delegation::tests::stale_failover_event_is_ignored ... ok
+test cluster_delegation::tests::unresolvable_cluster_target_returns_none_rather_than_raising ... ok
+test cluster_delegation::tests::without_cluster_target_uses_agent_nid ... ok
+test error_codes::tests::constants_have_correct_prefix ... ok
+test error_codes::tests::delegate_errors ... ok
+test error_codes::alpha20_status_tests::shared_alpha20_mappings ... ok
+test error_codes::tests::resource_and_condition_errors ... ok
+test error_codes::tests::stream_errors ... ok
+test error_codes::tests::callback_hmac_missing_maps_to_unauthenticated ... ok
+test error_codes::tests::sync_errors ... ok
+test error_codes::tests::task_errors ... ok
+test error_codes::tests::unknown_falls_back_to_internal ... ok
+test cluster_delegation::tests::the_cache_is_safe_for_concurrent_readers_and_writers ... ok
+test telemetry::tests::instrument_names_match_dotnet ... ok
+test telemetry::tests::spans_recorded_via_source ... ok
+test telemetry::tests::instruments_accumulate ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/nop_tests.rs (target/debug/deps/nop_tests-fa92a22435ba0cc0)
+
+running 22 tests
+test delay_capped_at_max_ms ... ok
+test delegate_frame_decodes_legacy_wire_keys ... ok
+test align_stream_frame_null_error ... ok
+test align_stream_frame_with_error ... ok
+test delegate_frame_emits_spec_wire_keys ... ok
+test delegate_frame_optional_fields_null ... ok
+test exponential_doubles_each_attempt ... ok
+test fixed_delay_ignores_attempt ... ok
+test delegate_frame_roundtrip ... ok
+test linear_scales_with_attempt ... ok
+test nop_task_status_error_fields ... ok
+test nop_task_status_getters ... ok
+test nop_task_status_node_results ... ok
+test nop_task_status_terminal_states ... ok
+test nop_task_status_to_string ... ok
+test sync_frame_roundtrip ... ok
+test sync_frame_defaults ... ok
+test task_state_from_str_known ... ok
+test task_state_from_str_unknown ... ok
+test task_frame_optional_fields_null ... ok
+test task_frame_roundtrip ... ok
+test task_state_terminal_states ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/orchestrator_tests.rs (target/debug/deps/orchestrator_tests-c92ce9f8b2f3cc3f)
+
+running 56 tests
+test aggregate_empty_is_object ... ok
+test aggregate_fastest_k ... ok
+test aggregate_first ... ok
+test aggregate_all ... ok
+test aggregate_merge_non_object ... ok
+test callback_signature_absent_secret_none ... ok
+test aggregate_merge ... ok
+test callback_signature_wrong_key_length_none ... ok
+test callback_signature_matches_known_vector ... ok
+test callback_signature_valid_key ... ok
+test callback_url_http_rejected ... ok
+test callback_url_public_ip_ok ... ok
+test callback_url_https_public_ok ... ok
+test condition_boolean_logic ... ok
+test callback_url_private_ip_rejected ... ok
+test condition_null_and_literals ... ok
+test condition_numeric_comparisons ... ok
+test condition_string_comparisons ... ok
+test condition_syntax_error ... ok
+test aggregated_result_merges_end_nodes ... ok
+test condition_truthy_bare_value ... ok
+test dag_cycle_detected ... ok
+test condition_false_node_skipped ... ok
+test dag_edge_unknown_node ... ok
+test dag_empty_is_invalid ... ok
+test dag_no_start_node ... ok
+test dag_too_large ... ok
+test dag_duplicate_node_id ... ok
+test condition_true_node_executes ... ok
+test dag_valid_linear ... ok
+test duplicate_task_id_fails ... ok
+test get_status_returns_record ... ok
+test delegate_depth_exceeded_rejected ... ok
+test diamond_dag_both_branches ... ok
+test invalid_dag_cycle_returns_failed ... ok
+test get_status_unknown_is_none ... ok
+test mapper_build_params ... ok
+test mapper_depth_limit ... ok
+test mapper_missing_returns_none ... ok
+test mapper_must_start_with_dollar ... ok
+test linear_chain_all_complete ... ok
+test mapper_resolves_nested ... ok
+test mapper_whole_context ... ok
+test k_of_n_one_branch_fails_still_completes ... ok
+test k_of_n_too_many_failures_aborts ... ok
+test node_failure_task_fails ... ok
+test preflight_available_proceeds ... ok
+test node_failure_propagates_to_dependent ... ok
+test preflight_unavailable_fails ... ok
+test retry_on_allowlist_skips_non_listed ... ok
+test retry_succeeds_on_second_attempt ... ok
+test single_node_succeeds ... ok
+test timeout_fails_with_timeout_code ... ok
+test saga_best_effort_compensates_predecessor ... ok
+test sender_nid_mismatch_detected ... ok
+test saga_strict_missing_compensate_action_not_supported ... ok
+
+test result: ok. 56 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.02s
+
+     Running tests/portable_profile_tests.rs (target/debug/deps/portable_profile_tests-d3624527e588c897)
+
+running 2 tests
+test shared_runtime_security_vectors_pass ... ok
+test shared_orchestrator_transcripts_pass ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_nwp-a2ddb6fc9fc0999f)
+
+running 99 tests
+test anchor_fence::tests::absent_inbound_epoch_coerces_to_one ... ok
+test anchor_fence::tests::degraded_active_owner_rejects_writes_but_serves_reads ... ok
+test anchor_fence::tests::equal_or_lower_inbound_epoch_is_not_fenced ... ok
+test anchor_fence::tests::every_snapshot_response_carries_cluster_epoch ... ok
+test anchor_fence::tests::higher_inbound_epoch_fences_the_superseded_leader ... ok
+test anchor_fence::tests::quorum_lost_event_and_recovery ... ok
+test anchor_fence::tests::single_anchor_cluster_never_emits_ha_events ... ok
+test anchor_fence::tests::snapshot_omits_cluster_epoch_when_unset ... ok
+test anchor_fence::tests::take_ownership_after_observing_a_higher_epoch_must_exceed_it ... ok
+test anchor_fence::tests::take_ownership_requires_a_strictly_greater_epoch ... ok
+test anchor_fence::tests::reads_succeed_on_a_standby ... ok
+test bridge::tests::bridge_node_descriptor ... ok
+test bridge::tests::bridge_target_roundtrip ... ok
+test bridge::tests::constants ... ok
+test bridge_inbound::options::tests::empty_set_serves_nothing ... ok
+test bridge_inbound::options::tests::direction_hint_names_both_declared_arrays ... ok
+test bridge_inbound::options::tests::grpc_is_not_in_the_default_inbound_set ... ok
+test anchor_fence::tests::standby_rejects_topology_writes_with_not_leader ... ok
+test bridge_inbound::options::tests::membership_is_case_insensitive ... ok
+test bridge_inbound::tool_name::tests::encodes_the_reference_example ... ok
+test bridge_inbound::tool_name::tests::action_segment_folds_dots ... ok
+test bridge_inbound::tool_name::tests::sanitize_replaces_then_trims_underscores ... ok
+test bridge_inbound::tool_name::tests::encoding_is_lossy_which_is_why_there_is_no_decode ... ok
+test cgn::tests::budget_exceeded_error_fields ... ok
+test cgn::tests::chinese_six_bytes_is_two ... ok
+test cgn::tests::empty_bytes_is_zero ... ok
+test cgn::tests::empty_string_is_zero ... ok
+test cgn::tests::eight_bytes_is_two ... ok
+test cgn::tests::four_bytes_is_one ... ok
+test cgn::tests::json_positive ... ok
+test cgn::tests::token_budget_meta_defaults ... ok
+test cgn::tests::rows_sums ... ok
+test error_codes::tests::action_and_task_errors ... ok
+test error_codes::tests::auth_nid_errors ... ok
+test error_codes::tests::bridge_errors ... ok
+test error_codes::tests::budget_and_limit_errors ... ok
+test error_codes::alpha20_status_tests::shared_alpha20_mappings ... ok
+test cgn::tests::five_bytes_is_two ... ok
+test error_codes::tests::constants_have_correct_prefix ... ok
+test error_codes::tests::http_binding_errors ... ok
+test error_codes::tests::manifest_and_topology_errors ... ok
+test error_codes::tests::query_errors ... ok
+test error_codes::tests::removed_invented_statuses_are_never_produced ... ok
+test error_codes::tests::subscribe_errors ... ok
+test error_codes::tests::multi_anchor_ha_errors ... ok
+test error_codes::tests::reputation_errors ... ok
+test error_codes::tests::unknown_falls_back_to_internal ... ok
+test query::tests::and_joins_with_and ... ok
+test query::tests::between_wrong_length_errors ... ok
+test query::tests::between_produces_between_clause ... ok
+test query::tests::build_column_alias_applies_alias ... ok
+test query::tests::build_explicit_order_applies_it ... ok
+test query::tests::build_count_no_filter_no_where ... ok
+test query::tests::build_limit_clamped_to_max_limit ... ok
+test query::tests::build_no_fields_selects_all_schema_columns ... ok
+test query::tests::build_no_filter_no_where ... ok
+test query::tests::build_count_with_filter_appends_where ... ok
+test query::tests::build_pg_quotes_table_name ... ok
+test query::tests::build_no_order_defaults_to_primary_key ... ok
+test query::tests::build_pg_uses_limit_offset ... ok
+test query::tests::build_sqlserver_brackets_table_name ... ok
+test query::tests::build_sqlserver_uses_offset_fetch ... ok
+test query::tests::build_with_cursor_decodes_offset ... ok
+test query::tests::build_with_filter_appends_where ... ok
+test query::tests::build_unknown_field_errors ... ok
+test query::tests::build_unknown_order_field_errors ... ok
+test query::tests::build_zero_limit_uses_default ... ok
+test query::tests::comparison_ops_produce_correct_sql ... ok
+test query::tests::cursor_roundtrip ... ok
+test query::tests::contains_wraps_with_percent ... ok
+test query::tests::decode_cursor_garbage_returns_zero ... ok
+test query::tests::decode_cursor_null_or_empty_returns_zero ... ok
+test query::tests::encode_cursor_zero_or_negative_returns_none ... ok
+test query::tests::eq_postgresql_quotes_correctly ... ok
+test query::tests::in_empty_array_returns_false ... ok
+test query::tests::in_produces_in_clause ... ok
+test query::tests::eq_sqlserver_uses_brackets ... ok
+test query::tests::logical_op_non_array_errors ... ok
+test query::tests::multi_field_object_implicit_and ... ok
+test query::tests::ne_produces_not_equals ... ok
+test query::tests::nin_empty_array_returns_true ... ok
+test query::tests::nin_produces_not_in_clause ... ok
+test query::tests::json_null_filter_returns_empty ... ok
+test query::tests::unknown_field_errors_field_unknown ... ok
+test query::tests::null_filter_returns_empty ... ok
+test query::tests::unknown_logical_op_errors ... ok
+test query::tests::unknown_operator_errors ... ok
+test reputation::tests::rep_outcome_variants ... ok
+test query::tests::or_joins_with_or ... ok
+test reputation::tests::reputation_decision_accept ... ok
+test reputation::tests::default_policy ... ok
+test sql_provider::tests::count_uses_count_query ... ok
+test sql_provider::tests::query_generates_sql_and_maps_rows ... ok
+test sql_provider::tests::query_partial_page_no_next_cursor ... ok
+test sql_provider::tests::stream_advances_until_partial_page ... ok
+test telemetry::tests::counters_and_histogram_accumulate ... ok
+test telemetry::tests::instrument_names_match_dotnet ... ok
+test telemetry::tests::spans_recorded_via_source ... ok
+test telemetry::tests::meter_identity_matches ... ok
+
+test result: ok. 99 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/action_server_tests.rs (target/debug/deps/action_server_tests-811ae6307278391c)
+
+running 25 tests
+test async_on_sync_only_action_is_400 ... ok
+test actions_route_lists_registry ... ok
+test async_invoke_returns_202_task_handle ... ok
+test callback_http_scheme_rejected ... ok
+test callback_private_host_rejected ... ok
+test callback_public_https_accepted ... ok
+test get_on_invoke_is_405 ... ok
+test idempotency_conflict_on_param_change_is_409 ... ok
+test idempotent_replay_returns_cached_result ... ok
+test idempotent_async_rehit_returns_same_task ... ok
+test invalid_priority_is_400 ... ok
+test async_ack_is_immediate_and_task_cancel_is_owner_scoped ... ok
+test missing_action_id_is_400 ... ok
+test missing_agent_when_auth_required_is_401 ... ok
+test nwm_route_returns_manifest ... ok
+test reserved_action_registration_panics ... ok
+test provider_error_maps_to_status ... ok
+test sync_invoke_returns_capsule ... ok
+test task_status_unknown_task_is_404 ... ok
+test unknown_action_is_404 ... ok
+test timeout_is_clamped_to_spec_max ... ok
+test validate_callback_url_unit ... ok
+test unknown_path_is_404 ... ok
+test task_cancel_on_terminal_is_409 ... ok
+test task_status_returns_terminal_state ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/anchor_client_tests.rs (target/debug/deps/anchor_client_tests-ac97848243aa5587)
+
+running 25 tests
+test test_anchor_state_field_and_details ... ok
+test test_get_snapshot_http_error_plain_body ... ok
+test test_get_snapshot_empty_data_array ... ok
+test test_anchor_topology_error_protocol_attributes ... ok
+test test_get_snapshot_member_scope_with_target_nid ... ok
+test test_get_snapshot_multiple_members ... ok
+test test_get_snapshot_nps_error_json ... ok
+test test_member_left_payload_nid ... ok
+test test_get_snapshot_success ... ok
+test test_member_joined_payload_fields ... ok
+test test_get_snapshot_with_include_slice ... ok
+test test_member_updated_nid_and_changes ... ok
+test test_scope_constants ... ok
+test test_path_prefix_prepended ... ok
+test test_resync_required_reason ... ok
+test test_subscribe_non_2xx_returns_error ... ok
+test test_subscribe_mid_stream_error_envelope ... ok
+test test_subscribe_resync_required_terminates_stream ... ok
+test test_subscribe_only_ack_yields_no_events ... ok
+test test_subscribe_success_all_event_types ... ok
+test test_url_normalisation_trailing_slash ... ok
+test test_subscribe_with_filter ... ok
+test test_unknown_event_type_silently_skipped ... ok
+test test_subscribe_with_since_version ... ok
+test test_with_client_builder ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/anchor_failover_tests.rs (target/debug/deps/anchor_failover_tests-ddf27c1ec9d08650)
+
+running 9 tests
+test failover_event_carries_successor_epoch_reason ... ok
+test details_carry_exactly_the_specified_keys ... ok
+test failover_reason_defaults_to_planned ... ok
+test quorum_lost_event_carries_counts ... ok
+test anchor_state_events_round_trip_on_the_stream_envelope ... ok
+test single_anchor_snapshot_omits_cluster_epoch_and_reads_as_one ... ok
+test snapshot_response_carries_cluster_epoch ... ok
+test sub_type_tags_are_the_exact_wire_strings ... ok
+test unknown_anchor_state_sub_types_stay_decodable ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/anchor_server.rs (target/debug/deps/anchor_server-b6f0becf29d251bf)
+
+running 12 tests
+test capability_gate ... ok
+test invoke_errors ... ok
+test invoke_handler_error_envelope ... ok
+test invoke_sync_caps ... ok
+test auth_gate ... ok
+test manifest_and_splice ... ok
+test rate_limiter_rejects_invoke ... ok
+test reputation_ban_blocks_invoke ... ok
+test snapshot_wire_compat ... ok
+test unknown_subpath_is_404_before_auth ... ok
+test stream_ndjson ... ok
+test topology_errors ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bridge_error_map_tests.rs (target/debug/deps/bridge_error_map_tests-37e552db949e1c98)
+
+running 13 tests
+test from_grpc_status_matches_the_normative_table ... ok
+test auth_classes_are_not_collapsed ... ok
+test from_http_status_matches_the_normative_table ... ok
+test from_http_status_never_blanket_internals_a_client_error ... ok
+test from_json_rpc_matches_the_normative_table ... ok
+test grpc_does_not_collapse_401_403_or_every_5xx ... ok
+test must_be_protocol_error_covers_exactly_the_infrastructure_classes ... ok
+test not_found_is_the_only_param_sensitive_row ... ok
+test the_retired_code_is_never_produced ... ok
+test to_grpc_status_matches_the_normative_table ... ok
+test unknown_status_falls_back_to_internal_error ... ok
+test to_json_rpc_matches_the_normative_table ... ok
+test json_rpc_round_trip_is_stable_for_the_distinct_classes ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bridge_inbound_tests.rs (target/debug/deps/bridge_inbound_tests-46669163f4962fdf)
+
+running 48 tests
+test a2a_only_serves_tasks_send ... ok
+test a2a_domain_failure_is_a_failed_task_but_infra_failure_is_a_protocol_error ... ok
+test a2a_accepts_every_skill_metadata_key_and_the_raw_action_id ... ok
+test a2a_extracts_arguments_in_the_documented_order ... ok
+test a2a_rejects_an_unnamed_skill_when_several_are_exposed ... ok
+test a2a_requires_a_task_id ... ok
+test a2a_path_dispatches_to_the_a2a_server ... ok
+test a2a_resolves_the_sole_action_with_no_skill_named ... ok
+test a_dispatcher_that_blows_up_maps_to_dispatch_failed ... ok
+test absent_input_schema_advertises_the_open_object_schema ... ok
+test a_lying_content_length_cannot_bypass_the_cap ... ok
+test a_rejecting_verifier_is_401_and_an_accepting_one_dispatches ... ok
+test auth_can_be_disabled_for_a_trusted_deployment ... ok
+test body_over_the_limit_is_413_with_invalid_request ... ok
+test auth_is_required_by_default_and_fails_closed_without_a_verifier ... ok
+test bridge_in_02_grpc_unary_invoke_round_trip ... ok
+test bridge_in_03_agent_card_lists_qualified_skills ... ok
+test bridge_in_01_mcp_serves_the_full_required_method_set ... ok
+test bridge_in_04_bare_id_resolves_and_ambiguity_is_rejected ... ok
+test bridge_in_03_tasks_send_completes_and_returns_an_artifact ... ok
+test bridge_in_06_undeclared_protocol_is_refused_with_both_arrays_in_hint ... ok
+test bridge_in_05_unknown_action_and_timeout_map_to_distinct_codes ... ok
+test bridge_in_05_auth_failure_is_a_protocol_error_not_an_is_error_result ... ok
+test grpc_invoke_lifts_the_task_id_from_the_payload ... ok
+test domain_failures_stay_is_error_content ... ok
+test grpc_manifest_query_and_list_actions ... ok
+test grpc_refuses_when_grpc_is_undeclared ... ok
+test grpc_requires_an_action_id_and_resolves_backends_by_name ... ok
+test grpc_surfaces_the_exact_nps_fault_in_the_detail_string ... ok
+test malformed_json_body_is_a_json_rpc_invalid_params_error ... ok
+test mcp_initialize_always_advertises_tools_and_resources ... ok
+test mcp_is_refused_when_undeclared ... ok
+test mcp_lists_tools_and_dispatches_a_tool_call ... ok
+test mcp_resources_read_rejects_a_bad_or_unknown_uri ... ok
+test mcp_serves_resources_methods_even_with_no_memory_node ... ok
+test mcp_serves_resources_over_a_queryable_node ... ok
+test mcp_stdio_handles_line_delimited_json_rpc ... ok
+test mcp_unknown_method_is_method_not_found ... ok
+test mcp_tools_call_requires_a_name ... ok
+test mcp_still_resolves_unqualified_tool_names ... ok
+test mcp_unknown_tool_is_method_not_found_never_the_retired_code ... ok
+test missing_dispatcher_fails_loudly_with_a_registered_code ... ok
+test method_gating_and_agent_card_exposure ... ok
+test node_role_projection_rules ... ok
+test non_invokable_backend_exposes_no_actions_and_non_queryable_refuses_queries ... ok
+test missing_or_malformed_agent_nid_is_401 ... ok
+test the_sse_path_is_served_by_the_mcp_server ... ok
+test a_dispatch_timeout_is_504_with_upstream_error ... ok
+
+test result: ok. 48 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/complex_server_tests.rs (target/debug/deps/complex_server_tests-64ca1b11a05cdc6e)
+
+running 11 tests
+test graph_max_depth_over_absolute_cap_panics ... ok
+test depth_over_node_max_is_400 ... ok
+test cycle_detected_via_trace_header_is_422 ... ok
+test invoke_async_rejected ... ok
+test invoke_delegates_to_provider ... ok
+test no_fetcher_yields_child_error ... ok
+test non_integer_depth_is_400 ... ok
+test private_child_url_yields_child_error ... ok
+test validate_child_url_unit ... ok
+test query_local_only_without_depth ... ok
+test query_with_depth_expands_graph ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/llm_action_server_tests.rs (target/debug/deps/llm_action_server_tests-976260b7fd5ad223)
+
+running 15 tests
+test cached_replay_rechecks_authorization_before_returning_result ... ok
+test append_commits_delta_and_release_creates_tombstone ... ok
+test authorization_receives_exact_capabilities_and_fails_closed_when_missing ... ok
+test commit_reauthorization_failure_aborts_and_surfaces_auth_error ... ok
+test lifecycle_actions_require_authentication_and_owner ... ok
+test cancellation_aborts_before_provider_that_ignores_signal_returns ... ok
+test nwm_advertises_exact_actions_and_process_limits ... ok
+test malformed_stateful_requests_fail_before_provider_dispatch ... ok
+test async_completion_puts_receipt_only_in_terminal_task_result ... ok
+test provider_and_model_errors_abort_without_allocating_context ... ok
+test stateful_stream_commits_at_terminal_and_replays_under_a_fresh_id ... ok
+test response_idempotency_is_owner_scoped_and_does_not_recommit ... ok
+test stateful_stream_without_terminal_aborts_and_is_not_cached ... ok
+test synchronous_create_commits_and_status_recovers_it ... ok
+test reconnect_concurrent_append_and_process_restart_follow_contract ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/llm_context_store_tests.rs (target/debug/deps/llm_context_store_tests-43ce47af701c3033)
+
+running 21 tests
+test reservations_and_snapshots_are_defensive_copies ... ok
+test vector_001_stateless_compatibility ... ok
+test shared_fixture_has_exactly_the_implemented_vectors ... ok
+test vector_002_create_commits_at_terminal_success ... ok
+test vector_003_append_commits_one_version ... ok
+test vector_004_compare_and_swap_rejects_losers ... ok
+test vector_005_fork_snapshots_admission_version ... ok
+test vector_007_binding_mismatch_fails_closed ... ok
+test vector_006_reset_replaces_binding_and_transcript ... ok
+test vector_008_context_id_is_not_authorization ... ok
+test vector_009_abort_preserves_version_and_ttl ... ok
+test vector_010_lost_create_is_recovered_by_idempotency ... ok
+test vector_011_release_and_expiry_keep_tombstones ... ok
+test vector_012_usage_preserves_distinct_accounting ... ok
+test vector_013_manifest_operations_match_implementation ... ok
+test vector_014_process_restart_does_not_recreate_state ... ok
+test vector_015_completion_idempotency_does_not_recommit ... ok
+test vector_016_revocation_before_commit_aborts ... ok
+test vector_018_unsupported_operation_has_dedicated_error ... ok
+test vector_019_stateful_request_requires_idempotency ... ok
+test vector_017_context_limit_includes_live_and_pending ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/llm_context_tests.rs (target/debug/deps/llm_context_tests-be5fa280633d9966)
+
+running 3 tests
+test context_errors_use_the_shared_resource_limit_status ... ok
+test lifecycle_helpers_use_canonical_action_ids ... ok
+test stateful_completion_uses_canonical_wire_fields ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/memory_server_tests.rs (target/debug/deps/memory_server_tests-3e8e122c1935e5c6)
+
+running 13 tests
+test get_on_query_is_405 ... ok
+test missing_agent_when_auth_required_is_401 ... ok
+test nwm_advertises_query_and_stream ... ok
+test query_and_or_combination ... ok
+test query_eq_filter ... ok
+test query_gt_operator ... ok
+test query_limit_clamped_to_max ... ok
+test query_no_filter_returns_all ... ok
+test query_projection_selects_fields ... ok
+test schema_route_returns_anchor_header ... ok
+test query_unknown_field_is_400 ... ok
+test query_unsupported_operator_is_400 ... ok
+test stream_emits_ndjson_chunks ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/native_server_tests.rs (target/debug/deps/native_server_tests-59a72cb660125df0)
+
+running 4 tests
+test dispatch_wire_rejects_unnegotiated_binary_vector ... ok
+test dispatch_wire_accepts_action_id_shape ... ok
+test dispatch_wire_returns_caps_for_query ... ok
+test dispatch_wire_allows_negotiated_binary_vector_query ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/portable_profile_tests.rs (target/debug/deps/portable_profile_tests-3afdfe0cfa10706f)
+
+running 2 tests
+test bridge_lifecycle_vectors ... ok
+test portable_node_server_vectors ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/nps_sdk-4355ed983bf51a0b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests nps_conformance
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests nps_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests nps_ncp
+
+running 1 test
+test nps-ncp/src/failover.rs - failover (line 17) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+   Doc-tests nps_ndp
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests nps_nip
+
+running 1 test
+test nps-nip/src/ca/mod.rs - ca (line 11) - compile ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+   Doc-tests nps_nop
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests nps_nwp
+
+running 2 tests
+test nps-nwp/src/anchor_client.rs - anchor_client (line 8) - compile ... ok
+test nps-nwp/src/anchor_fence.rs - anchor_fence (line 17) ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+   Doc-tests nps_sdk
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
++ cargo clippy --workspace --all-targets --all-features -- -D warnings
+    Checking cfg-if v1.0.5
+    Checking libc v0.2.191
+    Checking memchr v2.8.3
+    Checking typenum v1.20.1
+    Checking subtle v2.6.1
+    Checking itoa v1.0.18
+    Checking pin-project-lite v0.2.17
+    Checking num-traits v0.2.19
+    Checking bytes v1.12.1
+    Checking generic-array v0.14.7
+    Checking serde_core v1.0.229
+    Checking cpufeatures v0.2.17
+    Checking zerofrom v0.1.8
+    Checking stable_deref_trait v1.2.1
+    Checking yoke v0.8.4
+    Checking getrandom v0.2.17
+    Checking rand_core v0.6.4
+    Checking mio v1.2.4
+    Checking block-buffer v0.10.4
+    Checking crypto-common v0.1.7
+    Checking socket2 v0.6.5
+    Checking digest v0.10.7
+    Checking zmij v1.0.23
+    Checking futures-core v0.3.34
+    Checking tokio v1.54.1
+    Checking zerovec v0.11.9
+    Checking sha2 v0.10.9
+    Checking rmp v0.8.15
+    Checking zeroize v1.9.1
+    Checking futures-sink v0.3.34
+    Checking tinystr v0.8.5
+    Checking litemap v0.8.3
+    Checking hex v0.4.3
+    Checking smallvec v1.16.4
+    Checking utf_types v1.0.0
+    Checking writeable v0.6.4
+    Checking icu_locale_core v2.4.0
+    Checking utf8_iter v1.1.0
+    Checking futures-channel v0.3.34
+    Checking serde v1.0.229
+    Checking serde_json v1.0.154
+    Checking rmp-serde v1.3.1
+    Checking potential_utf v0.1.6
+    Checking zerotrie v0.2.5
+    Checking untrusted v0.9.0
+    Checking futures-io v0.3.34
+    Checking once_cell v1.21.4
+    Checking slab v0.4.12
+    Checking futures-task v0.3.34
+    Checking icu_provider v2.4.0
+    Checking futures-util v0.3.34
+    Checking ring v0.17.14
+    Checking nps-core v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-core)
+    Checking icu_collections v2.4.0
+    Checking rustls-pki-types v1.15.1
+    Checking http v1.5.0
+    Checking percent-encoding v2.3.2
+    Checking icu_normalizer_data v2.4.0
+    Checking icu_properties_data v2.4.0
+   Compiling time-core v0.1.9
+   Compiling num-conv v0.2.2
+    Checking icu_properties v2.4.0
+   Compiling time-macros v0.2.32
+    Checking http-body v1.1.0
+    Checking icu_normalizer v2.4.0
+    Checking tower-service v0.3.3
+    Checking powerfmt v0.2.1
+    Checking deranged v0.5.9
+    Checking try-lock v0.2.5
+    Checking want v0.3.2
+    Checking httparse v1.10.1
+    Checking idna_adapter v1.2.2
+    Checking form_urlencoded v1.2.2
+    Checking rustls-webpki v0.103.16
+    Checking tracing-core v0.1.36
+    Checking bitflags v2.13.2
+    Checking atomic-waker v1.1.2
+    Checking tracing v0.1.44
+    Checking hyper v1.12.0
+    Checking rustls v0.23.46
+    Checking idna v1.1.0
+    Checking sync_wrapper v1.0.2
+    Checking time v0.3.55
+    Checking base64 v0.23.1
+    Checking tower-layer v0.3.3
+    Checking ipnet v2.12.2
+    Checking base64 v0.22.1
+    Checking hyper-util v0.1.21
+    Checking tower v0.5.3
+    Checking url v2.5.8
+    Checking webpki-roots v1.0.11
+    Checking minimal-lexical v0.2.1
+    Checking log v0.4.35
+    Checking ryu v1.0.23
+    Checking nom v7.1.3
+    Checking serde_urlencoded v0.7.1
+    Checking tower-http v0.6.11
+    Checking http-body-util v0.1.5
+    Checking tokio-util v0.7.20
+    Checking hmac v0.12.1
+    Checking thiserror v1.0.69
+    Checking inout v0.1.4
+    Checking num-integer v0.1.47
+    Checking cipher v0.4.4
+    Checking tokio-rustls v0.26.6
+    Checking zerocopy v0.8.63
+    Checking num-bigint v0.4.8
+    Checking hyper-rustls v0.27.10
+    Checking reqwest v0.12.28
+    Checking rusticata-macros v4.1.0
+    Checking asn1-rs v0.6.2
+    Checking universal-hash v0.5.1
+    Checking opaque-debug v0.3.1
+    Checking signature v2.2.0
+    Checking polyval v0.6.2
+    Checking lazy_static v1.5.1
+    Checking data-encoding v2.11.1
+    Checking ghash v0.5.1
+    Checking ed25519 v2.2.3
+    Checking curve25519-dalek v4.1.3
+    Checking ctr v0.9.2
+    Checking oid-registry v0.7.1
+    Checking der-parser v9.0.0
+    Checking aes v0.8.4
+    Checking x509-parser v0.16.0
+    Checking yasna v0.5.2
+    Checking pem v3.0.6
+    Checking aead v0.5.2
+    Checking chunked_transfer v1.5.0
+    Checking httpdate v1.0.3
+    Checking ascii v1.1.0
+    Checking thiserror v2.0.21
+    Checking aes-gcm v0.10.3
+    Checking tiny_http v0.12.0
+    Checking ed25519-dalek v2.2.0
+    Checking rcgen v0.13.2
+    Checking pbkdf2 v0.12.2
+    Checking futures-executor v0.3.34
+    Checking async-stream v0.3.6
+    Checking futures v0.3.34
+    Checking nps-ncp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ncp)
+    Checking linux-raw-sys v0.12.1
+    Checking getrandom v0.4.3
+    Checking fastrand v2.5.0
+    Checking rustix v1.1.6
+    Checking nps-nop v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nop)
+    Checking nps-conformance v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-conformance)
+    Checking ppv-lite86 v0.2.21
+    Checking rand_chacha v0.3.1
+    Checking rand v0.8.8
+    Checking tempfile v3.27.0
+    Checking nps-nip v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nip)
+    Checking nps-nwp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-nwp)
+    Checking nps-ndp v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-ndp)
+    Checking nps-sdk v1.0.0-alpha.20.dev.a9e4f05eeb85 (/home/olynn/.cache/nps-alpha20-rust-candidate-tmp/nps-alpha19-rust-family-hhv0zu_5/inputs/NPS-SDK-Rust/nps-sdk)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 30.84s
++ cargo --version
++ rustc --version
+Evidence written to /tmp/nps-a20-d08-rust-candidate-a9e4f05-attempt03.json

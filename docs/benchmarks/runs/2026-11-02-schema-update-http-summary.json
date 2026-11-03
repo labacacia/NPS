@@ -1,0 +1,4475 @@
+{
+  "kind": "deterministic-runtime-observed",
+  "revision": "1860c1968aab5c45f293d2f38a3f18362309d437",
+  "methodology": "D20-00-methodology-v1",
+  "measurement_boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+  "memory_attribution": "co-host whole-process observation/budget only; not per-protocol memory savings",
+  "scope": "post-transition immutable HTTP workflows; transition/probe/setup/cleanup excluded; no delta/stream/native NCP/provider claim",
+  "comparisons": [
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 9.3712,
+        "p95": 11.2667,
+        "minimum": 8.8093,
+        "maximum": 12.0404
+      },
+      "tls_stream_bytes": {
+        "median": 13522.0,
+        "p95": 13523,
+        "minimum": 13520,
+        "maximum": 13524
+      },
+      "rss_after_workflow_bytes": {
+        "median": 429010944.0,
+        "p95": 429010944,
+        "minimum": 428851200,
+        "maximum": 429023232
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.5129,
+        "p95": 72.2383,
+        "minimum": 67.9249,
+        "maximum": 73.751
+      },
+      "tls_stream_bytes": {
+        "median": 93925.0,
+        "p95": 93930,
+        "minimum": 93920,
+        "maximum": 93931
+      },
+      "rss_after_workflow_bytes": {
+        "median": 428519424.0,
+        "p95": 429400064,
+        "minimum": 428277760,
+        "maximum": 429481984
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 65.8764,
+        "p95": 71.2202,
+        "minimum": 64.4147,
+        "maximum": 72.6458
+      },
+      "tls_stream_bytes": {
+        "median": 88718.0,
+        "p95": 88721,
+        "minimum": 88713,
+        "maximum": 88722
+      },
+      "rss_after_workflow_bytes": {
+        "median": 431900672.0,
+        "p95": 433283072,
+        "minimum": 429703168,
+        "maximum": 433942528
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.4491499999999995,
+        "p95": 6.5317,
+        "minimum": 5.2277,
+        "maximum": 6.846
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 434020352.0,
+        "p95": 434028544,
+        "minimum": 434016256,
+        "maximum": 434028544
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 9.7582,
+        "p95": 10.8119,
+        "minimum": 9.6078,
+        "maximum": 11.0556
+      },
+      "tls_stream_bytes": {
+        "median": 11936.0,
+        "p95": 11940,
+        "minimum": 11927,
+        "maximum": 11941
+      },
+      "rss_after_workflow_bytes": {
+        "median": 434032640.0,
+        "p95": 434036736,
+        "minimum": 434032640,
+        "maximum": 434036736
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 72.6312,
+        "p95": 75.1102,
+        "minimum": 71.0449,
+        "maximum": 75.9969
+      },
+      "tls_stream_bytes": {
+        "median": 82140.5,
+        "p95": 82153,
+        "minimum": 82131,
+        "maximum": 82153
+      },
+      "rss_after_workflow_bytes": {
+        "median": 434200576.0,
+        "p95": 437866496,
+        "minimum": 434143232,
+        "maximum": 437866496
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.313,
+        "p95": 73.1103,
+        "minimum": 67.6982,
+        "maximum": 74.7505
+      },
+      "tls_stream_bytes": {
+        "median": 76934.0,
+        "p95": 76941,
+        "minimum": 76921,
+        "maximum": 76942
+      },
+      "rss_after_workflow_bytes": {
+        "median": 438042624.0,
+        "p95": 438054912,
+        "minimum": 434479104,
+        "maximum": 438054912
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.19725,
+        "p95": 7.4198,
+        "minimum": 5.8285,
+        "maximum": 7.4282
+      },
+      "tls_stream_bytes": {
+        "median": 6725.0,
+        "p95": 6731,
+        "minimum": 6716,
+        "maximum": 6732
+      },
+      "rss_after_workflow_bytes": {
+        "median": 434507776.0,
+        "p95": 434515968,
+        "minimum": 434507776,
+        "maximum": 434515968
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 8.9879,
+        "p95": 10.5157,
+        "minimum": 8.7341,
+        "maximum": 10.5378
+      },
+      "tls_stream_bytes": {
+        "median": 13525.0,
+        "p95": 13527,
+        "minimum": 13522,
+        "maximum": 13527
+      },
+      "rss_after_workflow_bytes": {
+        "median": 442429440.0,
+        "p95": 442646528,
+        "minimum": 442429440,
+        "maximum": 442646528
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.4303,
+        "p95": 73.6542,
+        "minimum": 67.7101,
+        "maximum": 74.7436
+      },
+      "tls_stream_bytes": {
+        "median": 93942.0,
+        "p95": 93947,
+        "minimum": 93936,
+        "maximum": 93948
+      },
+      "rss_after_workflow_bytes": {
+        "median": 441999360.0,
+        "p95": 444104704,
+        "minimum": 441946112,
+        "maximum": 444108800
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 66.2421,
+        "p95": 70.0873,
+        "minimum": 63.9704,
+        "maximum": 70.734
+      },
+      "tls_stream_bytes": {
+        "median": 88730.5,
+        "p95": 88735,
+        "minimum": 88727,
+        "maximum": 88736
+      },
+      "rss_after_workflow_bytes": {
+        "median": 443293696.0,
+        "p95": 446717952,
+        "minimum": 443150336,
+        "maximum": 446717952
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.45785,
+        "p95": 6.2808,
+        "minimum": 5.0633,
+        "maximum": 7.1196
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 449511424.0,
+        "p95": 449511424,
+        "minimum": 446722048,
+        "maximum": 449511424
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 9.82085,
+        "p95": 11.1731,
+        "minimum": 9.5156,
+        "maximum": 11.2288
+      },
+      "tls_stream_bytes": {
+        "median": 11938.0,
+        "p95": 11944,
+        "minimum": 11931,
+        "maximum": 11945
+      },
+      "rss_after_workflow_bytes": {
+        "median": 449511424.0,
+        "p95": 449511424,
+        "minimum": 449511424,
+        "maximum": 449511424
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 73.0504,
+        "p95": 76.6805,
+        "minimum": 71.4215,
+        "maximum": 78.2623
+      },
+      "tls_stream_bytes": {
+        "median": 82153.5,
+        "p95": 82162,
+        "minimum": 82141,
+        "maximum": 82165
+      },
+      "rss_after_workflow_bytes": {
+        "median": 447479808.0,
+        "p95": 447488000,
+        "minimum": 447422464,
+        "maximum": 447488000
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.0452,
+        "p95": 71.6062,
+        "minimum": 67.6149,
+        "maximum": 73.1189
+      },
+      "tls_stream_bytes": {
+        "median": 76943.5,
+        "p95": 76953,
+        "minimum": 76926,
+        "maximum": 76953
+      },
+      "rss_after_workflow_bytes": {
+        "median": 447668224.0,
+        "p95": 448229376,
+        "minimum": 447492096,
+        "maximum": 448323584
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.2269000000000005,
+        "p95": 7.8862,
+        "minimum": 5.8451,
+        "maximum": 8.3848
+      },
+      "tls_stream_bytes": {
+        "median": 6725.0,
+        "p95": 6729,
+        "minimum": 6721,
+        "maximum": 6732
+      },
+      "rss_after_workflow_bytes": {
+        "median": 451043328.0,
+        "p95": 451063808,
+        "minimum": 447614976,
+        "maximum": 451063808
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 9.251100000000001,
+        "p95": 11.0287,
+        "minimum": 8.7557,
+        "maximum": 11.7271
+      },
+      "tls_stream_bytes": {
+        "median": 13524.0,
+        "p95": 13525,
+        "minimum": 13523,
+        "maximum": 13525
+      },
+      "rss_after_workflow_bytes": {
+        "median": 461643776.0,
+        "p95": 461672448,
+        "minimum": 461582336,
+        "maximum": 461672448
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.7499,
+        "p95": 72.4941,
+        "minimum": 67.6505,
+        "maximum": 74.9671
+      },
+      "tls_stream_bytes": {
+        "median": 93941.0,
+        "p95": 93946,
+        "minimum": 93932,
+        "maximum": 93947
+      },
+      "rss_after_workflow_bytes": {
+        "median": 460865536.0,
+        "p95": 462430208,
+        "minimum": 460619776,
+        "maximum": 462430208
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 65.9145,
+        "p95": 68.7739,
+        "minimum": 64.3105,
+        "maximum": 71.9323
+      },
+      "tls_stream_bytes": {
+        "median": 88733.0,
+        "p95": 88736,
+        "minimum": 88726,
+        "maximum": 88736
+      },
+      "rss_after_workflow_bytes": {
+        "median": 461733888.0,
+        "p95": 462102528,
+        "minimum": 461553664,
+        "maximum": 462102528
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.33925,
+        "p95": 6.5017,
+        "minimum": 5.0439,
+        "maximum": 6.57
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 462835712.0,
+        "p95": 462835712,
+        "minimum": 462106624,
+        "maximum": 462835712
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 9.8066,
+        "p95": 11.7031,
+        "minimum": 9.5841,
+        "maximum": 12.5445
+      },
+      "tls_stream_bytes": {
+        "median": 11938.0,
+        "p95": 11943,
+        "minimum": 11930,
+        "maximum": 11945
+      },
+      "rss_after_workflow_bytes": {
+        "median": 462839808.0,
+        "p95": 462839808,
+        "minimum": 462835712,
+        "maximum": 462839808
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 73.3211,
+        "p95": 76.8645,
+        "minimum": 71.5801,
+        "maximum": 77.7302
+      },
+      "tls_stream_bytes": {
+        "median": 82154.5,
+        "p95": 82165,
+        "minimum": 82146,
+        "maximum": 82166
+      },
+      "rss_after_workflow_bytes": {
+        "median": 463110144.0,
+        "p95": 463888384,
+        "minimum": 462917632,
+        "maximum": 463888384
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.42185,
+        "p95": 72.3415,
+        "minimum": 67.8432,
+        "maximum": 72.6462
+      },
+      "tls_stream_bytes": {
+        "median": 76946.0,
+        "p95": 76953,
+        "minimum": 76936,
+        "maximum": 76955
+      },
+      "rss_after_workflow_bytes": {
+        "median": 464850944.0,
+        "p95": 464900096,
+        "minimum": 464269312,
+        "maximum": 465129472
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.319599999999999,
+        "p95": 8.009,
+        "minimum": 5.9913,
+        "maximum": 8.1842
+      },
+      "tls_stream_bytes": {
+        "median": 6728.0,
+        "p95": 6730,
+        "minimum": 6719,
+        "maximum": 6732
+      },
+      "rss_after_workflow_bytes": {
+        "median": 467652608.0,
+        "p95": 467652608,
+        "minimum": 465186816,
+        "maximum": 467652608
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 9.054649999999999,
+        "p95": 10.1566,
+        "minimum": 8.8653,
+        "maximum": 10.1647
+      },
+      "tls_stream_bytes": {
+        "median": 13526.0,
+        "p95": 13527,
+        "minimum": 13524,
+        "maximum": 13528
+      },
+      "rss_after_workflow_bytes": {
+        "median": 470614016.0,
+        "p95": 470618112,
+        "minimum": 470614016,
+        "maximum": 470618112
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.5149,
+        "p95": 73.0465,
+        "minimum": 68.18,
+        "maximum": 73.3194
+      },
+      "tls_stream_bytes": {
+        "median": 93922.0,
+        "p95": 93926,
+        "minimum": 93916,
+        "maximum": 93928
+      },
+      "rss_after_workflow_bytes": {
+        "median": 468877312.0,
+        "p95": 470691840,
+        "minimum": 468574208,
+        "maximum": 470691840
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 65.66165000000001,
+        "p95": 69.4492,
+        "minimum": 64.1163,
+        "maximum": 72.2813
+      },
+      "tls_stream_bytes": {
+        "median": 88710.0,
+        "p95": 88713,
+        "minimum": 88703,
+        "maximum": 88715
+      },
+      "rss_after_workflow_bytes": {
+        "median": 473145344.0,
+        "p95": 473145344,
+        "minimum": 472264704,
+        "maximum": 473239552
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.3899,
+        "p95": 6.6739,
+        "minimum": 5.1622,
+        "maximum": 6.746
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 473190400.0,
+        "p95": 473190400,
+        "minimum": 473182208,
+        "maximum": 473190400
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 9.83265,
+        "p95": 11.0009,
+        "minimum": 9.547,
+        "maximum": 11.0423
+      },
+      "tls_stream_bytes": {
+        "median": 11945.0,
+        "p95": 11951,
+        "minimum": 11935,
+        "maximum": 11955
+      },
+      "rss_after_workflow_bytes": {
+        "median": 473182208.0,
+        "p95": 473182208,
+        "minimum": 473182208,
+        "maximum": 473182208
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 73.49565,
+        "p95": 77.5933,
+        "minimum": 71.251,
+        "maximum": 78.6311
+      },
+      "tls_stream_bytes": {
+        "median": 82147.0,
+        "p95": 82156,
+        "minimum": 82132,
+        "maximum": 82158
+      },
+      "rss_after_workflow_bytes": {
+        "median": 473399296.0,
+        "p95": 473399296,
+        "minimum": 473387008,
+        "maximum": 473411584
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.65955,
+        "p95": 71.1739,
+        "minimum": 67.9589,
+        "maximum": 73.8443
+      },
+      "tls_stream_bytes": {
+        "median": 76933.0,
+        "p95": 76946,
+        "minimum": 76922,
+        "maximum": 76946
+      },
+      "rss_after_workflow_bytes": {
+        "median": 473653248.0,
+        "p95": 473853952,
+        "minimum": 473649152,
+        "maximum": 473923584
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.3823,
+        "p95": 7.8812,
+        "minimum": 6.0128,
+        "maximum": 8.9668
+      },
+      "tls_stream_bytes": {
+        "median": 6731.0,
+        "p95": 6735,
+        "minimum": 6725,
+        "maximum": 6736
+      },
+      "rss_after_workflow_bytes": {
+        "median": 474284032.0,
+        "p95": 474415104,
+        "minimum": 474284032,
+        "maximum": 474415104
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 9.127600000000001,
+        "p95": 10.1539,
+        "minimum": 8.8555,
+        "maximum": 10.3873
+      },
+      "tls_stream_bytes": {
+        "median": 13523.0,
+        "p95": 13524,
+        "minimum": 13521,
+        "maximum": 13525
+      },
+      "rss_after_workflow_bytes": {
+        "median": 410124288.0,
+        "p95": 410124288,
+        "minimum": 410116096,
+        "maximum": 410124288
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.1611,
+        "p95": 71.8249,
+        "minimum": 67.0606,
+        "maximum": 73.5974
+      },
+      "tls_stream_bytes": {
+        "median": 93925.5,
+        "p95": 93930,
+        "minimum": 93919,
+        "maximum": 93930
+      },
+      "rss_after_workflow_bytes": {
+        "median": 408276992.0,
+        "p95": 410271744,
+        "minimum": 408166400,
+        "maximum": 410279936
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 65.4044,
+        "p95": 67.3615,
+        "minimum": 64.0665,
+        "maximum": 68.9653
+      },
+      "tls_stream_bytes": {
+        "median": 88717.0,
+        "p95": 88721,
+        "minimum": 88712,
+        "maximum": 88721
+      },
+      "rss_after_workflow_bytes": {
+        "median": 412700672.0,
+        "p95": 412762112,
+        "minimum": 412323840,
+        "maximum": 412774400
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.414300000000001,
+        "p95": 6.472,
+        "minimum": 5.146,
+        "maximum": 6.7334
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 412766208.0,
+        "p95": 412766208,
+        "minimum": 412766208,
+        "maximum": 412770304
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 9.8457,
+        "p95": 11.2933,
+        "minimum": 9.6344,
+        "maximum": 11.8959
+      },
+      "tls_stream_bytes": {
+        "median": 11939.5,
+        "p95": 11946,
+        "minimum": 11933,
+        "maximum": 11947
+      },
+      "rss_after_workflow_bytes": {
+        "median": 412766208.0,
+        "p95": 412930048,
+        "minimum": 412766208,
+        "maximum": 412930048
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 72.77695,
+        "p95": 77.035,
+        "minimum": 70.8846,
+        "maximum": 84.3202
+      },
+      "tls_stream_bytes": {
+        "median": 82148.5,
+        "p95": 82162,
+        "minimum": 82132,
+        "maximum": 82167
+      },
+      "rss_after_workflow_bytes": {
+        "median": 413227008.0,
+        "p95": 413233152,
+        "minimum": 413216768,
+        "maximum": 413319168
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.26820000000001,
+        "p95": 71.216,
+        "minimum": 67.6418,
+        "maximum": 75.9005
+      },
+      "tls_stream_bytes": {
+        "median": 76938.0,
+        "p95": 76948,
+        "minimum": 76930,
+        "maximum": 76952
+      },
+      "rss_after_workflow_bytes": {
+        "median": 413208576.0,
+        "p95": 413229056,
+        "minimum": 413208576,
+        "maximum": 413229056
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.262449999999999,
+        "p95": 7.4969,
+        "minimum": 5.9744,
+        "maximum": 9.2303
+      },
+      "tls_stream_bytes": {
+        "median": 6733.5,
+        "p95": 6737,
+        "minimum": 6726,
+        "maximum": 6739
+      },
+      "rss_after_workflow_bytes": {
+        "median": 413212672.0,
+        "p95": 413216768,
+        "minimum": 413212672,
+        "maximum": 413306880
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 8.986799999999999,
+        "p95": 10.1618,
+        "minimum": 8.6286,
+        "maximum": 10.2319
+      },
+      "tls_stream_bytes": {
+        "median": 13524.0,
+        "p95": 13526,
+        "minimum": 13522,
+        "maximum": 13526
+      },
+      "rss_after_workflow_bytes": {
+        "median": 406974464.0,
+        "p95": 406974464,
+        "minimum": 406974464,
+        "maximum": 406974464
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 69.0372,
+        "p95": 73.7149,
+        "minimum": 67.2913,
+        "maximum": 75.4121
+      },
+      "tls_stream_bytes": {
+        "median": 93919.0,
+        "p95": 93923,
+        "minimum": 93914,
+        "maximum": 93924
+      },
+      "rss_after_workflow_bytes": {
+        "median": 407087104.0,
+        "p95": 407552000,
+        "minimum": 406986752,
+        "maximum": 407552000
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 65.6301,
+        "p95": 69.8635,
+        "minimum": 63.7428,
+        "maximum": 72.4327
+      },
+      "tls_stream_bytes": {
+        "median": 88709.0,
+        "p95": 88713,
+        "minimum": 88704,
+        "maximum": 88714
+      },
+      "rss_after_workflow_bytes": {
+        "median": 405358592.0,
+        "p95": 408338432,
+        "minimum": 404869120,
+        "maximum": 408338432
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 5.3637,
+        "p95": 6.4321,
+        "minimum": 5.2345,
+        "maximum": 7.0371
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 405860352.0,
+        "p95": 405860352,
+        "minimum": 405487616,
+        "maximum": 405860352
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 10.147300000000001,
+        "p95": 11.5484,
+        "minimum": 9.4931,
+        "maximum": 11.8821
+      },
+      "tls_stream_bytes": {
+        "median": 11941.0,
+        "p95": 11947,
+        "minimum": 11935,
+        "maximum": 11947
+      },
+      "rss_after_workflow_bytes": {
+        "median": 405860352.0,
+        "p95": 405860352,
+        "minimum": 405860352,
+        "maximum": 405860352
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 73.12705,
+        "p95": 78.0492,
+        "minimum": 71.0261,
+        "maximum": 79.3526
+      },
+      "tls_stream_bytes": {
+        "median": 82143.5,
+        "p95": 82151,
+        "minimum": 82127,
+        "maximum": 82157
+      },
+      "rss_after_workflow_bytes": {
+        "median": 406011904.0,
+        "p95": 406290432,
+        "minimum": 405278720,
+        "maximum": 406290432
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 69.0163,
+        "p95": 70.5697,
+        "minimum": 67.5089,
+        "maximum": 72.6409
+      },
+      "tls_stream_bytes": {
+        "median": 76929.5,
+        "p95": 76945,
+        "minimum": 76918,
+        "maximum": 76948
+      },
+      "rss_after_workflow_bytes": {
+        "median": 406630400.0,
+        "p95": 406884352,
+        "minimum": 406290432,
+        "maximum": 406884352
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 6.1258,
+        "p95": 7.4761,
+        "minimum": 5.945,
+        "maximum": 7.6435
+      },
+      "tls_stream_bytes": {
+        "median": 6732.0,
+        "p95": 6736,
+        "minimum": 6724,
+        "maximum": 6736
+      },
+      "rss_after_workflow_bytes": {
+        "median": 407187456.0,
+        "p95": 407187456,
+        "minimum": 406888448,
+        "maximum": 407187456
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2331,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 16.15455,
+        "p95": 18.4818,
+        "minimum": 14.8957,
+        "maximum": 19.981
+      },
+      "tls_stream_bytes": {
+        "median": 22257.0,
+        "p95": 22259,
+        "minimum": 22255,
+        "maximum": 22259
+      },
+      "rss_after_workflow_bytes": {
+        "median": 228716544.0,
+        "p95": 228814848,
+        "minimum": 227082240,
+        "maximum": 229015552
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 76.36525,
+        "p95": 85.4969,
+        "minimum": 74.9033,
+        "maximum": 86.8622
+      },
+      "tls_stream_bytes": {
+        "median": 111392.0,
+        "p95": 111396,
+        "minimum": 111388,
+        "maximum": 111396
+      },
+      "rss_after_workflow_bytes": {
+        "median": 228435968.0,
+        "p95": 231280640,
+        "minimum": 227610624,
+        "maximum": 231481344
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 72.857,
+        "p95": 76.1408,
+        "minimum": 71.0147,
+        "maximum": 76.758
+      },
+      "tls_stream_bytes": {
+        "median": 106181.0,
+        "p95": 106185,
+        "minimum": 106177,
+        "maximum": 106186
+      },
+      "rss_after_workflow_bytes": {
+        "median": 231993344.0,
+        "p95": 232079360,
+        "minimum": 231419904,
+        "maximum": 232095744
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.05375,
+        "p95": 12.5861,
+        "minimum": 11.0903,
+        "maximum": 13.1668
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 232708096.0,
+        "p95": 233177088,
+        "minimum": 232370176,
+        "maximum": 233177088
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 16.921799999999998,
+        "p95": 18.6985,
+        "minimum": 15.5739,
+        "maximum": 19.5364
+      },
+      "tls_stream_bytes": {
+        "median": 12773.5,
+        "p95": 12807,
+        "minimum": 12757,
+        "maximum": 12812
+      },
+      "rss_after_workflow_bytes": {
+        "median": 232370176.0,
+        "p95": 232370176,
+        "minimum": 232083456,
+        "maximum": 232370176
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 79.9593,
+        "p95": 81.8589,
+        "minimum": 78.0942,
+        "maximum": 88.8861
+      },
+      "tls_stream_bytes": {
+        "median": 83835.0,
+        "p95": 83880,
+        "minimum": 83806,
+        "maximum": 83958
+      },
+      "rss_after_workflow_bytes": {
+        "median": 232873984.0,
+        "p95": 233074688,
+        "minimum": 232083456,
+        "maximum": 233074688
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 76.24135,
+        "p95": 80.1272,
+        "minimum": 74.5502,
+        "maximum": 83.3276
+      },
+      "tls_stream_bytes": {
+        "median": 78611.0,
+        "p95": 78658,
+        "minimum": 78590,
+        "maximum": 78667
+      },
+      "rss_after_workflow_bytes": {
+        "median": 233345024.0,
+        "p95": 233349120,
+        "minimum": 233328640,
+        "maximum": 233349120
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 12.861450000000001,
+        "p95": 13.3656,
+        "minimum": 11.9533,
+        "maximum": 16.4823
+      },
+      "tls_stream_bytes": {
+        "median": 7569.0,
+        "p95": 7586,
+        "minimum": 7552,
+        "maximum": 7586
+      },
+      "rss_after_workflow_bytes": {
+        "median": 234016768.0,
+        "p95": 234024960,
+        "minimum": 227692544,
+        "maximum": 234024960
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 16.584049999999998,
+        "p95": 21.3337,
+        "minimum": 15.2784,
+        "maximum": 21.3622
+      },
+      "tls_stream_bytes": {
+        "median": 22254.0,
+        "p95": 22255,
+        "minimum": 22252,
+        "maximum": 22255
+      },
+      "rss_after_workflow_bytes": {
+        "median": 302723072.0,
+        "p95": 367525888,
+        "minimum": 272519168,
+        "maximum": 367550464
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 76.7501,
+        "p95": 79.827,
+        "minimum": 74.5834,
+        "maximum": 83.1488
+      },
+      "tls_stream_bytes": {
+        "median": 111374.5,
+        "p95": 111379,
+        "minimum": 111367,
+        "maximum": 111380
+      },
+      "rss_after_workflow_bytes": {
+        "median": 263024640.0,
+        "p95": 273068032,
+        "minimum": 262254592,
+        "maximum": 273293312
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 73.2755,
+        "p95": 75.7286,
+        "minimum": 71.352,
+        "maximum": 76.1977
+      },
+      "tls_stream_bytes": {
+        "median": 106167.0,
+        "p95": 106171,
+        "minimum": 106162,
+        "maximum": 106172
+      },
+      "rss_after_workflow_bytes": {
+        "median": 262717440.0,
+        "p95": 263004160,
+        "minimum": 262279168,
+        "maximum": 263282688
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.196200000000001,
+        "p95": 12.6109,
+        "minimum": 11.1691,
+        "maximum": 12.6238
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 249085952.0,
+        "p95": 249085952,
+        "minimum": 247353344,
+        "maximum": 249085952
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 17.15175,
+        "p95": 19.5169,
+        "minimum": 15.8627,
+        "maximum": 21.1513
+      },
+      "tls_stream_bytes": {
+        "median": 12799.5,
+        "p95": 12815,
+        "minimum": 12783,
+        "maximum": 12817
+      },
+      "rss_after_workflow_bytes": {
+        "median": 247369728.0,
+        "p95": 247377920,
+        "minimum": 247365632,
+        "maximum": 247377920
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 80.69805,
+        "p95": 90.5979,
+        "minimum": 78.8876,
+        "maximum": 98.3681
+      },
+      "tls_stream_bytes": {
+        "median": 83869.5,
+        "p95": 83911,
+        "minimum": 83839,
+        "maximum": 83920
+      },
+      "rss_after_workflow_bytes": {
+        "median": 248127488.0,
+        "p95": 248139776,
+        "minimum": 247369728,
+        "maximum": 248139776
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 76.84385,
+        "p95": 80.3484,
+        "minimum": 75.2423,
+        "maximum": 82.724
+      },
+      "tls_stream_bytes": {
+        "median": 78661.5,
+        "p95": 78692,
+        "minimum": 78633,
+        "maximum": 78701
+      },
+      "rss_after_workflow_bytes": {
+        "median": 247398400.0,
+        "p95": 249389056,
+        "minimum": 247394304,
+        "maximum": 249389056
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.20225,
+        "p95": 14.7641,
+        "minimum": 12.246,
+        "maximum": 14.9804
+      },
+      "tls_stream_bytes": {
+        "median": 7588.0,
+        "p95": 7608,
+        "minimum": 7571,
+        "maximum": 7609
+      },
+      "rss_after_workflow_bytes": {
+        "median": 247447552.0,
+        "p95": 247451648,
+        "minimum": 247443456,
+        "maximum": 247451648
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 16.2633,
+        "p95": 22.3759,
+        "minimum": 14.8615,
+        "maximum": 23.7874
+      },
+      "tls_stream_bytes": {
+        "median": 22256.0,
+        "p95": 22257,
+        "minimum": 22254,
+        "maximum": 22258
+      },
+      "rss_after_workflow_bytes": {
+        "median": 456380416.0,
+        "p95": 456380416,
+        "minimum": 454266880,
+        "maximum": 456380416
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 76.05565,
+        "p95": 79.7414,
+        "minimum": 74.3196,
+        "maximum": 80.3006
+      },
+      "tls_stream_bytes": {
+        "median": 111391.0,
+        "p95": 111396,
+        "minimum": 111384,
+        "maximum": 111398
+      },
+      "rss_after_workflow_bytes": {
+        "median": 457068544.0,
+        "p95": 457461760,
+        "minimum": 456380416,
+        "maximum": 457801728
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 72.71979999999999,
+        "p95": 76.9298,
+        "minimum": 71.4348,
+        "maximum": 86.5136
+      },
+      "tls_stream_bytes": {
+        "median": 106181.0,
+        "p95": 106184,
+        "minimum": 106176,
+        "maximum": 106184
+      },
+      "rss_after_workflow_bytes": {
+        "median": 456898560.0,
+        "p95": 459792384,
+        "minimum": 454012928,
+        "maximum": 459993088
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.05475,
+        "p95": 13.4343,
+        "minimum": 11.0664,
+        "maximum": 15.0841
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 456974336.0,
+        "p95": 456974336,
+        "minimum": 456077312,
+        "maximum": 456974336
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 16.832549999999998,
+        "p95": 17.3267,
+        "minimum": 15.8577,
+        "maximum": 18.1622
+      },
+      "tls_stream_bytes": {
+        "median": 12833.5,
+        "p95": 12858,
+        "minimum": 12823,
+        "maximum": 12860
+      },
+      "rss_after_workflow_bytes": {
+        "median": 450494464.0,
+        "p95": 456077312,
+        "minimum": 450494464,
+        "maximum": 456077312
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 79.76335,
+        "p95": 81.4605,
+        "minimum": 77.668,
+        "maximum": 81.9981
+      },
+      "tls_stream_bytes": {
+        "median": 83949.5,
+        "p95": 83980,
+        "minimum": 83927,
+        "maximum": 83999
+      },
+      "rss_after_workflow_bytes": {
+        "median": 451932160.0,
+        "p95": 451936256,
+        "minimum": 426967040,
+        "maximum": 451948544
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 75.8909,
+        "p95": 80.4125,
+        "minimum": 74.7721,
+        "maximum": 81.1272
+      },
+      "tls_stream_bytes": {
+        "median": 78748.0,
+        "p95": 78782,
+        "minimum": 78714,
+        "maximum": 78792
+      },
+      "rss_after_workflow_bytes": {
+        "median": 427139072.0,
+        "p95": 427237376,
+        "minimum": 426979328,
+        "maximum": 427237376
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.0738,
+        "p95": 15.1036,
+        "minimum": 12.1891,
+        "maximum": 15.3166
+      },
+      "tls_stream_bytes": {
+        "median": 7624.0,
+        "p95": 7638,
+        "minimum": 7606,
+        "maximum": 7645
+      },
+      "rss_after_workflow_bytes": {
+        "median": 418119680.0,
+        "p95": 429088768,
+        "minimum": 405049344,
+        "maximum": 429088768
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 16.783450000000002,
+        "p95": 17.9338,
+        "minimum": 15.6446,
+        "maximum": 18.6067
+      },
+      "tls_stream_bytes": {
+        "median": 22257.0,
+        "p95": 22258,
+        "minimum": 22255,
+        "maximum": 22259
+      },
+      "rss_after_workflow_bytes": {
+        "median": 481822720.0,
+        "p95": 484851712,
+        "minimum": 478113792,
+        "maximum": 485068800
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 77.2269,
+        "p95": 80.4622,
+        "minimum": 76.2697,
+        "maximum": 80.7487
+      },
+      "tls_stream_bytes": {
+        "median": 111420.0,
+        "p95": 111424,
+        "minimum": 111412,
+        "maximum": 111427
+      },
+      "rss_after_workflow_bytes": {
+        "median": 470685696.0,
+        "p95": 485986304,
+        "minimum": 462897152,
+        "maximum": 486203392
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 73.63605,
+        "p95": 77.4183,
+        "minimum": 72.3834,
+        "maximum": 78.2385
+      },
+      "tls_stream_bytes": {
+        "median": 106210.0,
+        "p95": 106214,
+        "minimum": 106204,
+        "maximum": 106216
+      },
+      "rss_after_workflow_bytes": {
+        "median": 477861888.0,
+        "p95": 480882688,
+        "minimum": 474603520,
+        "maximum": 481107968
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.668199999999999,
+        "p95": 13.8462,
+        "minimum": 11.6887,
+        "maximum": 14.207
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 484831232.0,
+        "p95": 484831232,
+        "minimum": 482041856,
+        "maximum": 484831232
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 17.471400000000003,
+        "p95": 17.9419,
+        "minimum": 16.2637,
+        "maximum": 19.6836
+      },
+      "tls_stream_bytes": {
+        "median": 12792.0,
+        "p95": 12807,
+        "minimum": 12775,
+        "maximum": 12815
+      },
+      "rss_after_workflow_bytes": {
+        "median": 484839424.0,
+        "p95": 484839424,
+        "minimum": 484839424,
+        "maximum": 484839424
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 80.59909999999999,
+        "p95": 85.2638,
+        "minimum": 79.3408,
+        "maximum": 85.695
+      },
+      "tls_stream_bytes": {
+        "median": 83891.0,
+        "p95": 83927,
+        "minimum": 83855,
+        "maximum": 83949
+      },
+      "rss_after_workflow_bytes": {
+        "median": 485081088.0,
+        "p95": 485081088,
+        "minimum": 484839424,
+        "maximum": 485085184
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 77.3951,
+        "p95": 83.8748,
+        "minimum": 76.021,
+        "maximum": 88.9747
+      },
+      "tls_stream_bytes": {
+        "median": 78662.5,
+        "p95": 78712,
+        "minimum": 78638,
+        "maximum": 78719
+      },
+      "rss_after_workflow_bytes": {
+        "median": 485101568.0,
+        "p95": 485101568,
+        "minimum": 485101568,
+        "maximum": 485101568
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.51525,
+        "p95": 14.6683,
+        "minimum": 12.3841,
+        "maximum": 15.0123
+      },
+      "tls_stream_bytes": {
+        "median": 7577.0,
+        "p95": 7592,
+        "minimum": 7556,
+        "maximum": 7602
+      },
+      "rss_after_workflow_bytes": {
+        "median": 485183488.0,
+        "p95": 485183488,
+        "minimum": 485183488,
+        "maximum": 485183488
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 17.3211,
+        "p95": 20.9717,
+        "minimum": 15.6606,
+        "maximum": 22.712
+      },
+      "tls_stream_bytes": {
+        "median": 22254.0,
+        "p95": 22256,
+        "minimum": 22252,
+        "maximum": 22256
+      },
+      "rss_after_workflow_bytes": {
+        "median": 437516288.0,
+        "p95": 437903360,
+        "minimum": 435838976,
+        "maximum": 437927936
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 76.74549999999999,
+        "p95": 80.3173,
+        "minimum": 75.5237,
+        "maximum": 82.1946
+      },
+      "tls_stream_bytes": {
+        "median": 111381.0,
+        "p95": 111386,
+        "minimum": 111376,
+        "maximum": 111389
+      },
+      "rss_after_workflow_bytes": {
+        "median": 437082112.0,
+        "p95": 437088256,
+        "minimum": 436092928,
+        "maximum": 437088256
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 72.91665,
+        "p95": 80.7801,
+        "minimum": 72.2239,
+        "maximum": 81.0996
+      },
+      "tls_stream_bytes": {
+        "median": 106175.0,
+        "p95": 106179,
+        "minimum": 106168,
+        "maximum": 106181
+      },
+      "rss_after_workflow_bytes": {
+        "median": 399458304.0,
+        "p95": 437137408,
+        "minimum": 399048704,
+        "maximum": 437137408
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.58945,
+        "p95": 13.4044,
+        "minimum": 11.5325,
+        "maximum": 16.3077
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 400068608.0,
+        "p95": 400068608,
+        "minimum": 399073280,
+        "maximum": 400068608
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 17.404600000000002,
+        "p95": 17.6409,
+        "minimum": 16.3622,
+        "maximum": 17.8673
+      },
+      "tls_stream_bytes": {
+        "median": 12811.0,
+        "p95": 12828,
+        "minimum": 12798,
+        "maximum": 12832
+      },
+      "rss_after_workflow_bytes": {
+        "median": 399093760.0,
+        "p95": 399093760,
+        "minimum": 399093760,
+        "maximum": 399093760
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 80.8447,
+        "p95": 86.3137,
+        "minimum": 79.6181,
+        "maximum": 86.9243
+      },
+      "tls_stream_bytes": {
+        "median": 83898.5,
+        "p95": 83932,
+        "minimum": 83872,
+        "maximum": 83943
+      },
+      "rss_after_workflow_bytes": {
+        "median": 399822848.0,
+        "p95": 400035840,
+        "minimum": 399093760,
+        "maximum": 400035840
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 77.28585000000001,
+        "p95": 83.4096,
+        "minimum": 75.8571,
+        "maximum": 84.3189
+      },
+      "tls_stream_bytes": {
+        "median": 78695.0,
+        "p95": 78727,
+        "minimum": 78669,
+        "maximum": 78729
+      },
+      "rss_after_workflow_bytes": {
+        "median": 400826368.0,
+        "p95": 400834560,
+        "minimum": 400822272,
+        "maximum": 400834560
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.796949999999999,
+        "p95": 14.8345,
+        "minimum": 12.6465,
+        "maximum": 15.3007
+      },
+      "tls_stream_bytes": {
+        "median": 7602.0,
+        "p95": 7618,
+        "minimum": 7593,
+        "maximum": 7630
+      },
+      "rss_after_workflow_bytes": {
+        "median": 400904192.0,
+        "p95": 400904192,
+        "minimum": 399175680,
+        "maximum": 400904192
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 16.73555,
+        "p95": 18.0774,
+        "minimum": 15.2544,
+        "maximum": 19.0345
+      },
+      "tls_stream_bytes": {
+        "median": 22255.0,
+        "p95": 22257,
+        "minimum": 22253,
+        "maximum": 22257
+      },
+      "rss_after_workflow_bytes": {
+        "median": 426676224.0,
+        "p95": 428318720,
+        "minimum": 424759296,
+        "maximum": 428736512
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 77.3111,
+        "p95": 81.2017,
+        "minimum": 76.2044,
+        "maximum": 91.0826
+      },
+      "tls_stream_bytes": {
+        "median": 111390.5,
+        "p95": 111396,
+        "minimum": 111384,
+        "maximum": 111396
+      },
+      "rss_after_workflow_bytes": {
+        "median": 431888384.0,
+        "p95": 433799168,
+        "minimum": 428433408,
+        "maximum": 433799168
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 73.46164999999999,
+        "p95": 75.143,
+        "minimum": 72.3161,
+        "maximum": 75.693
+      },
+      "tls_stream_bytes": {
+        "median": 106180.5,
+        "p95": 106185,
+        "minimum": 106176,
+        "maximum": 106187
+      },
+      "rss_after_workflow_bytes": {
+        "median": 433866752.0,
+        "p95": 434102272,
+        "minimum": 420089856,
+        "maximum": 434122752
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 12.7515,
+        "p95": 14.0384,
+        "minimum": 11.649,
+        "maximum": 14.2451
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 419475456.0,
+        "p95": 420093952,
+        "minimum": 419475456,
+        "maximum": 420093952
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 17.6004,
+        "p95": 22.0686,
+        "minimum": 16.348,
+        "maximum": 22.5519
+      },
+      "tls_stream_bytes": {
+        "median": 12833.0,
+        "p95": 12855,
+        "minimum": 12822,
+        "maximum": 12856
+      },
+      "rss_after_workflow_bytes": {
+        "median": 314957824.0,
+        "p95": 381374464,
+        "minimum": 253759488,
+        "maximum": 414900224
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 81.0432,
+        "p95": 85.7202,
+        "minimum": 79.7481,
+        "maximum": 86.4913
+      },
+      "tls_stream_bytes": {
+        "median": 83940.0,
+        "p95": 83982,
+        "minimum": 83915,
+        "maximum": 84013
+      },
+      "rss_after_workflow_bytes": {
+        "median": 224761856.0,
+        "p95": 257499136,
+        "minimum": 224215040,
+        "maximum": 257728512
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 76.94874999999999,
+        "p95": 79.2623,
+        "minimum": 75.2073,
+        "maximum": 80.669
+      },
+      "tls_stream_bytes": {
+        "median": 78729.0,
+        "p95": 78792,
+        "minimum": 78701,
+        "maximum": 78796
+      },
+      "rss_after_workflow_bytes": {
+        "median": 220483584.0,
+        "p95": 225763328,
+        "minimum": 219901952,
+        "maximum": 225763328
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.72505,
+        "p95": 15.6384,
+        "minimum": 12.8018,
+        "maximum": 16.0721
+      },
+      "tls_stream_bytes": {
+        "median": 7626.5,
+        "p95": 7640,
+        "minimum": 7611,
+        "maximum": 7647
+      },
+      "rss_after_workflow_bytes": {
+        "median": 225019904.0,
+        "p95": 225714176,
+        "minimum": 221589504,
+        "maximum": 225734656
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2349,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 353.62985000000003,
+        "p95": 541.6664,
+        "minimum": 332.3083,
+        "maximum": 584.8538
+      },
+      "tls_stream_bytes": {
+        "median": 22302.0,
+        "p95": 22304,
+        "minimum": 22300,
+        "maximum": 22304
+      },
+      "rss_after_workflow_bytes": {
+        "median": 421689344.0,
+        "p95": 445825024,
+        "minimum": 383229952,
+        "maximum": 446255104
+      },
+      "process_peak_rss_bytes": 450142208,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 415.67285000000004,
+        "p95": 449.4611,
+        "minimum": 397.7183,
+        "maximum": 455.9484
+      },
+      "tls_stream_bytes": {
+        "median": 111468.0,
+        "p95": 111472,
+        "minimum": 111462,
+        "maximum": 111474
+      },
+      "rss_after_workflow_bytes": {
+        "median": 442097664.0,
+        "p95": 451158016,
+        "minimum": 400007168,
+        "maximum": 452915200
+      },
+      "process_peak_rss_bytes": 457945088,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 411.57714999999996,
+        "p95": 433.0352,
+        "minimum": 393.7521,
+        "maximum": 443.1029
+      },
+      "tls_stream_bytes": {
+        "median": 106259.0,
+        "p95": 106263,
+        "minimum": 106252,
+        "maximum": 106264
+      },
+      "rss_after_workflow_bytes": {
+        "median": 388241408.0,
+        "p95": 443678720,
+        "minimum": 350953472,
+        "maximum": 454500352
+      },
+      "process_peak_rss_bytes": 463073280,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 339.7944,
+        "p95": 370.6035,
+        "minimum": 324.9574,
+        "maximum": 376.6635
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 403628032.0,
+        "p95": 455659520,
+        "minimum": 360288256,
+        "maximum": 458035200
+      },
+      "process_peak_rss_bytes": 476495872,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 340.9316,
+        "p95": 371.6596,
+        "minimum": 331.2223,
+        "maximum": 382.2676
+      },
+      "tls_stream_bytes": {
+        "median": 12788.0,
+        "p95": 12810,
+        "minimum": 12772,
+        "maximum": 12811
+      },
+      "rss_after_workflow_bytes": {
+        "median": 438941696.0,
+        "p95": 463851520,
+        "minimum": 401879040,
+        "maximum": 464424960
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 414.85195,
+        "p95": 437.4616,
+        "minimum": 398.9512,
+        "maximum": 437.8898
+      },
+      "tls_stream_bytes": {
+        "median": 83862.5,
+        "p95": 83899,
+        "minimum": 83832,
+        "maximum": 83903
+      },
+      "rss_after_workflow_bytes": {
+        "median": 411344896.0,
+        "p95": 456986624,
+        "minimum": 343846912,
+        "maximum": 461205504
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 409.86744999999996,
+        "p95": 435.9927,
+        "minimum": 399.0989,
+        "maximum": 436.6671
+      },
+      "tls_stream_bytes": {
+        "median": 78640.5,
+        "p95": 78679,
+        "minimum": 78610,
+        "maximum": 78691
+      },
+      "rss_after_workflow_bytes": {
+        "median": 420231168.0,
+        "p95": 461766656,
+        "minimum": 382070784,
+        "maximum": 462598144
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 340.24135,
+        "p95": 364.0043,
+        "minimum": 328.9825,
+        "maximum": 369.3709
+      },
+      "tls_stream_bytes": {
+        "median": 7583.5,
+        "p95": 7602,
+        "minimum": 7568,
+        "maximum": 7610
+      },
+      "rss_after_workflow_bytes": {
+        "median": 416372736.0,
+        "p95": 460091392,
+        "minimum": 376258560,
+        "maximum": 461021184
+      },
+      "process_peak_rss_bytes": 477659136,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 345.13710000000003,
+        "p95": 374.4222,
+        "minimum": 330.1559,
+        "maximum": 386.4388
+      },
+      "tls_stream_bytes": {
+        "median": 22303.0,
+        "p95": 22304,
+        "minimum": 22301,
+        "maximum": 22304
+      },
+      "rss_after_workflow_bytes": {
+        "median": 445224960.0,
+        "p95": 464384000,
+        "minimum": 414130176,
+        "maximum": 465031168
+      },
+      "process_peak_rss_bytes": 491016192,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 417.13575000000003,
+        "p95": 441.8009,
+        "minimum": 400.8407,
+        "maximum": 447.2339
+      },
+      "tls_stream_bytes": {
+        "median": 111484.0,
+        "p95": 111487,
+        "minimum": 111478,
+        "maximum": 111491
+      },
+      "rss_after_workflow_bytes": {
+        "median": 446486528.0,
+        "p95": 467521536,
+        "minimum": 359514112,
+        "maximum": 493031424
+      },
+      "process_peak_rss_bytes": 493031424,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 409.81025,
+        "p95": 427.6,
+        "minimum": 392.5942,
+        "maximum": 439.7015
+      },
+      "tls_stream_bytes": {
+        "median": 106273.0,
+        "p95": 106278,
+        "minimum": 106269,
+        "maximum": 106279
+      },
+      "rss_after_workflow_bytes": {
+        "median": 407152640.0,
+        "p95": 455606272,
+        "minimum": 331124736,
+        "maximum": 458702848
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 341.01375,
+        "p95": 363.7567,
+        "minimum": 328.7606,
+        "maximum": 366.7625
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 406798336.0,
+        "p95": 453685248,
+        "minimum": 345759744,
+        "maximum": 461488128
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 343.48685,
+        "p95": 359.5374,
+        "minimum": 331.8254,
+        "maximum": 386.3947
+      },
+      "tls_stream_bytes": {
+        "median": 12801.5,
+        "p95": 12819,
+        "minimum": 12784,
+        "maximum": 12825
+      },
+      "rss_after_workflow_bytes": {
+        "median": 407918592.0,
+        "p95": 462221312,
+        "minimum": 378560512,
+        "maximum": 462295040
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 412.4017,
+        "p95": 434.2256,
+        "minimum": 398.6094,
+        "maximum": 442.3116
+      },
+      "tls_stream_bytes": {
+        "median": 83894.5,
+        "p95": 83930,
+        "minimum": 83849,
+        "maximum": 83934
+      },
+      "rss_after_workflow_bytes": {
+        "median": 416897024.0,
+        "p95": 467505152,
+        "minimum": 349978624,
+        "maximum": 472776704
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 407.3696,
+        "p95": 431.7375,
+        "minimum": 394.6481,
+        "maximum": 435.9142
+      },
+      "tls_stream_bytes": {
+        "median": 78679.5,
+        "p95": 78709,
+        "minimum": 78651,
+        "maximum": 78714
+      },
+      "rss_after_workflow_bytes": {
+        "median": 402395136.0,
+        "p95": 467808256,
+        "minimum": 350105600,
+        "maximum": 473042944
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 340.37855,
+        "p95": 357.0024,
+        "minimum": 328.0254,
+        "maximum": 381.3687
+      },
+      "tls_stream_bytes": {
+        "median": 7589.0,
+        "p95": 7601,
+        "minimum": 7574,
+        "maximum": 7604
+      },
+      "rss_after_workflow_bytes": {
+        "median": 441956352.0,
+        "p95": 470417408,
+        "minimum": 414150656,
+        "maximum": 478326784
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 338.62365,
+        "p95": 372.0976,
+        "minimum": 328.0878,
+        "maximum": 381.6941
+      },
+      "tls_stream_bytes": {
+        "median": 22304.0,
+        "p95": 22306,
+        "minimum": 22302,
+        "maximum": 22306
+      },
+      "rss_after_workflow_bytes": {
+        "median": 467304448.0,
+        "p95": 477691904,
+        "minimum": 447463424,
+        "maximum": 481173504
+      },
+      "process_peak_rss_bytes": 499785728,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 403.75559999999996,
+        "p95": 434.1611,
+        "minimum": 391.9356,
+        "maximum": 436.7618
+      },
+      "tls_stream_bytes": {
+        "median": 111498.0,
+        "p95": 111503,
+        "minimum": 111492,
+        "maximum": 111505
+      },
+      "rss_after_workflow_bytes": {
+        "median": 463165440.0,
+        "p95": 474324992,
+        "minimum": 447471616,
+        "maximum": 474394624
+      },
+      "process_peak_rss_bytes": 499785728,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 399.86564999999996,
+        "p95": 432.9729,
+        "minimum": 389.9148,
+        "maximum": 465.7339
+      },
+      "tls_stream_bytes": {
+        "median": 106287.0,
+        "p95": 106292,
+        "minimum": 106282,
+        "maximum": 106294
+      },
+      "rss_after_workflow_bytes": {
+        "median": 448610304.0,
+        "p95": 474652672,
+        "minimum": 390291456,
+        "maximum": 481972224
+      },
+      "process_peak_rss_bytes": 499785728,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 340.6882,
+        "p95": 366.7181,
+        "minimum": 328.7887,
+        "maximum": 383.6885
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 436572160.0,
+        "p95": 474124288,
+        "minimum": 359591936,
+        "maximum": 475058176
+      },
+      "process_peak_rss_bytes": 499785728,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 342.61955,
+        "p95": 357.0716,
+        "minimum": 332.4723,
+        "maximum": 372.1137
+      },
+      "tls_stream_bytes": {
+        "median": 12800.5,
+        "p95": 12818,
+        "minimum": 12787,
+        "maximum": 12824
+      },
+      "rss_after_workflow_bytes": {
+        "median": 400623616.0,
+        "p95": 468000768,
+        "minimum": 358494208,
+        "maximum": 471457792
+      },
+      "process_peak_rss_bytes": 499785728,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 414.0863,
+        "p95": 433.7224,
+        "minimum": 401.759,
+        "maximum": 463.0193
+      },
+      "tls_stream_bytes": {
+        "median": 83894.0,
+        "p95": 83920,
+        "minimum": 83867,
+        "maximum": 83946
+      },
+      "rss_after_workflow_bytes": {
+        "median": 432236544.0,
+        "p95": 476205056,
+        "minimum": 364171264,
+        "maximum": 481800192
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 410.7587,
+        "p95": 433.7578,
+        "minimum": 395.3352,
+        "maximum": 436.4419
+      },
+      "tls_stream_bytes": {
+        "median": 78684.5,
+        "p95": 78712,
+        "minimum": 78647,
+        "maximum": 78719
+      },
+      "rss_after_workflow_bytes": {
+        "median": 444694528.0,
+        "p95": 486625280,
+        "minimum": 364515328,
+        "maximum": 487706624
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 340.83485,
+        "p95": 355.2105,
+        "minimum": 327.9094,
+        "maximum": 355.4015
+      },
+      "tls_stream_bytes": {
+        "median": 7587.0,
+        "p95": 7608,
+        "minimum": 7572,
+        "maximum": 7614
+      },
+      "rss_after_workflow_bytes": {
+        "median": 416866304.0,
+        "p95": 482115584,
+        "minimum": 364691456,
+        "maximum": 487571456
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "none",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 376.98305000000005,
+        "p95": 407.6256,
+        "minimum": 359.6879,
+        "maximum": 410.6776
+      },
+      "tls_stream_bytes": {
+        "median": 22303.0,
+        "p95": 22304,
+        "minimum": 22301,
+        "maximum": 22305
+      },
+      "rss_after_workflow_bytes": {
+        "median": 444076032.0,
+        "p95": 455278592,
+        "minimum": 429883392,
+        "maximum": 465162240
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 447.30415,
+        "p95": 470.5265,
+        "minimum": 425.8337,
+        "maximum": 476.7724
+      },
+      "tls_stream_bytes": {
+        "median": 111478.0,
+        "p95": 111482,
+        "minimum": 111471,
+        "maximum": 111484
+      },
+      "rss_after_workflow_bytes": {
+        "median": 451747840.0,
+        "p95": 458506240,
+        "minimum": 445087744,
+        "maximum": 458719232
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 446.32455,
+        "p95": 476.8492,
+        "minimum": 422.4355,
+        "maximum": 493.3671
+      },
+      "tls_stream_bytes": {
+        "median": 106265.0,
+        "p95": 106269,
+        "minimum": 106259,
+        "maximum": 106270
+      },
+      "rss_after_workflow_bytes": {
+        "median": 456521728.0,
+        "p95": 480178176,
+        "minimum": 395915264,
+        "maximum": 480227328
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 377.47495000000004,
+        "p95": 388.2119,
+        "minimum": 359.0077,
+        "maximum": 392.79
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 367040512.0,
+        "p95": 411185152,
+        "minimum": 350638080,
+        "maximum": 413749248
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 378.70304999999996,
+        "p95": 390.5928,
+        "minimum": 363.9441,
+        "maximum": 402.7783
+      },
+      "tls_stream_bytes": {
+        "median": 12799.5,
+        "p95": 12819,
+        "minimum": 12788,
+        "maximum": 12822
+      },
+      "rss_after_workflow_bytes": {
+        "median": 405291008.0,
+        "p95": 481259520,
+        "minimum": 363122688,
+        "maximum": 484577280
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 445.24834999999996,
+        "p95": 473.7985,
+        "minimum": 431.115,
+        "maximum": 479.037
+      },
+      "tls_stream_bytes": {
+        "median": 83858.5,
+        "p95": 83906,
+        "minimum": 83840,
+        "maximum": 83922
+      },
+      "rss_after_workflow_bytes": {
+        "median": 425340928.0,
+        "p95": 471166976,
+        "minimum": 353259520,
+        "maximum": 471244800
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 441.39165,
+        "p95": 462.6457,
+        "minimum": 424.6089,
+        "maximum": 469.5325
+      },
+      "tls_stream_bytes": {
+        "median": 78650.0,
+        "p95": 78703,
+        "minimum": 78611,
+        "maximum": 78711
+      },
+      "rss_after_workflow_bytes": {
+        "median": 392636416.0,
+        "p95": 460840960,
+        "minimum": 354197504,
+        "maximum": 471969792
+      },
+      "process_peak_rss_bytes": 508055552,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 370.38649999999996,
+        "p95": 409.2427,
+        "minimum": 355.828,
+        "maximum": 415.6938
+      },
+      "tls_stream_bytes": {
+        "median": 7585.0,
+        "p95": 7597,
+        "minimum": 7572,
+        "maximum": 7609
+      },
+      "rss_after_workflow_bytes": {
+        "median": 448131072.0,
+        "p95": 477159424,
+        "minimum": 375820288,
+        "maximum": 483700736
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 378.7693,
+        "p95": 421.8919,
+        "minimum": 362.6668,
+        "maximum": 428.54
+      },
+      "tls_stream_bytes": {
+        "median": 22302.0,
+        "p95": 22304,
+        "minimum": 22300,
+        "maximum": 22304
+      },
+      "rss_after_workflow_bytes": {
+        "median": 459145216.0,
+        "p95": 490930176,
+        "minimum": 430129152,
+        "maximum": 496877568
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 443.602,
+        "p95": 479.0015,
+        "minimum": 426.2181,
+        "maximum": 483.7376
+      },
+      "tls_stream_bytes": {
+        "median": 111489.0,
+        "p95": 111494,
+        "minimum": 111486,
+        "maximum": 111495
+      },
+      "rss_after_workflow_bytes": {
+        "median": 466481152.0,
+        "p95": 476041216,
+        "minimum": 455983104,
+        "maximum": 476041216
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 443.6714,
+        "p95": 460.8848,
+        "minimum": 420.8904,
+        "maximum": 478.7085
+      },
+      "tls_stream_bytes": {
+        "median": 106280.0,
+        "p95": 106285,
+        "minimum": 106274,
+        "maximum": 106285
+      },
+      "rss_after_workflow_bytes": {
+        "median": 417560576.0,
+        "p95": 470380544,
+        "minimum": 384270336,
+        "maximum": 480256000
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 375.52554999999995,
+        "p95": 387.2031,
+        "minimum": 361.972,
+        "maximum": 388.6902
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 394426368.0,
+        "p95": 417247232,
+        "minimum": 384278528,
+        "maximum": 417247232
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 374.48315,
+        "p95": 389.1981,
+        "minimum": 363.5375,
+        "maximum": 390.1374
+      },
+      "tls_stream_bytes": {
+        "median": 12800.5,
+        "p95": 12826,
+        "minimum": 12786,
+        "maximum": 12829
+      },
+      "rss_after_workflow_bytes": {
+        "median": 393480192.0,
+        "p95": 418955264,
+        "minimum": 365613056,
+        "maximum": 418955264
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 448.67445,
+        "p95": 470.3043,
+        "minimum": 428.9861,
+        "maximum": 475.0446
+      },
+      "tls_stream_bytes": {
+        "median": 83875.5,
+        "p95": 83912,
+        "minimum": 83851,
+        "maximum": 83912
+      },
+      "rss_after_workflow_bytes": {
+        "median": 437137408.0,
+        "p95": 467996672,
+        "minimum": 352583680,
+        "maximum": 473055232
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 440.09799999999996,
+        "p95": 460.5301,
+        "minimum": 426.8889,
+        "maximum": 490.4059
+      },
+      "tls_stream_bytes": {
+        "median": 78678.5,
+        "p95": 78710,
+        "minimum": 78649,
+        "maximum": 78726
+      },
+      "rss_after_workflow_bytes": {
+        "median": 399280128.0,
+        "p95": 464834560,
+        "minimum": 370647040,
+        "maximum": 467673088
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 368.03544999999997,
+        "p95": 384.8125,
+        "minimum": 359.5086,
+        "maximum": 389.598
+      },
+      "tls_stream_bytes": {
+        "median": 7586.5,
+        "p95": 7606,
+        "minimum": 7576,
+        "maximum": 7611
+      },
+      "rss_after_workflow_bytes": {
+        "median": 405295104.0,
+        "p95": 460419072,
+        "minimum": 351526912,
+        "maximum": 463278080
+      },
+      "process_peak_rss_bytes": 510824448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.01
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 377.68960000000004,
+        "p95": 414.4266,
+        "minimum": 360.4483,
+        "maximum": 418.1623
+      },
+      "tls_stream_bytes": {
+        "median": 22303.0,
+        "p95": 22305,
+        "minimum": 22301,
+        "maximum": 22305
+      },
+      "rss_after_workflow_bytes": {
+        "median": 451637248.0,
+        "p95": 483647488,
+        "minimum": 416407552,
+        "maximum": 489394176
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 438.14485,
+        "p95": 485.4649,
+        "minimum": 427.3782,
+        "maximum": 488.3202
+      },
+      "tls_stream_bytes": {
+        "median": 111470.0,
+        "p95": 111474,
+        "minimum": 111465,
+        "maximum": 111478
+      },
+      "rss_after_workflow_bytes": {
+        "median": 453574656.0,
+        "p95": 463044608,
+        "minimum": 416628736,
+        "maximum": 483880960
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 437.50485000000003,
+        "p95": 470.9272,
+        "minimum": 423.0827,
+        "maximum": 493.8478
+      },
+      "tls_stream_bytes": {
+        "median": 106259.5,
+        "p95": 106265,
+        "minimum": 106254,
+        "maximum": 106265
+      },
+      "rss_after_workflow_bytes": {
+        "median": 409370624.0,
+        "p95": 455122944,
+        "minimum": 379740160,
+        "maximum": 455385088
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 370.62895000000003,
+        "p95": 386.7787,
+        "minimum": 357.2148,
+        "maximum": 387.3166
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 401246208.0,
+        "p95": 419065856,
+        "minimum": 376729600,
+        "maximum": 419086336
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 375.94534999999996,
+        "p95": 396.9789,
+        "minimum": 364.1382,
+        "maximum": 407.7481
+      },
+      "tls_stream_bytes": {
+        "median": 12797.5,
+        "p95": 12820,
+        "minimum": 12781,
+        "maximum": 12825
+      },
+      "rss_after_workflow_bytes": {
+        "median": 399450112.0,
+        "p95": 474267648,
+        "minimum": 328519680,
+        "maximum": 474955776
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 446.24805000000003,
+        "p95": 463.1257,
+        "minimum": 435.6358,
+        "maximum": 465.5845
+      },
+      "tls_stream_bytes": {
+        "median": 83871.5,
+        "p95": 83912,
+        "minimum": 83838,
+        "maximum": 83916
+      },
+      "rss_after_workflow_bytes": {
+        "median": 393621504.0,
+        "p95": 477372416,
+        "minimum": 356147200,
+        "maximum": 480043008
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 442.504,
+        "p95": 462.7123,
+        "minimum": 429.5477,
+        "maximum": 464.6436
+      },
+      "tls_stream_bytes": {
+        "median": 78652.0,
+        "p95": 78690,
+        "minimum": 78626,
+        "maximum": 78695
+      },
+      "rss_after_workflow_bytes": {
+        "median": 389763072.0,
+        "p95": 471969792,
+        "minimum": 356786176,
+        "maximum": 474648576
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 370.7184,
+        "p95": 385.3284,
+        "minimum": 357.2879,
+        "maximum": 407.2637
+      },
+      "tls_stream_bytes": {
+        "median": 7593.5,
+        "p95": 7611,
+        "minimum": 7579,
+        "maximum": 7612
+      },
+      "rss_after_workflow_bytes": {
+        "median": 430776320.0,
+        "p95": 480858112,
+        "minimum": 382726144,
+        "maximum": 480858112
+      },
+      "process_peak_rss_bytes": 496197632,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2385,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match",
+      "schema_churn": "add-nullable-field",
+      "updated_row_fraction": 0.1
+    }
+  ],
+  "methodology_extension": "schema-update-method-2026-11-02"
+}

@@ -1,0 +1,27 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/java/gradlew", "test", "bootJar", "--rerun-tasks", "--no-daemon"], "cwd": "tools/nip-ca-server/example/java"}
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :processResources
+> Task :processTestResources NO-SOURCE
+> Task :java:compileJava
+> Task :java:processResources NO-SOURCE
+> Task :java:classes
+> Task :java:jar
+
+> Task :compileJava
+Note: /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/nip-ca-server/example/java/src/main/java/com/labacacia/nipcaserver/CaController.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :classes
+> Task :resolveMainClassName
+> Task :bootJar
+> Task :compileTestJava
+> Task :testClasses
+> Task :test
+
+[Incubating] Problems report is available at: file:///home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/nip-ca-server/example/java/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 26s
+8 actionable tasks: 8 executed
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/security/check-java-ca-jar.py", "--java", "/home/olynn/.gradle/jdks/eclipse_adoptium-21-amd64-linux.2/bin/java", "--jar", "tools/nip-ca-server/example/java/build/libs", "--output", "/home/olynn/ai-workspaces/labacacia-nps/.artifacts/alpha20/experimental-local-ci-20261103-01/java-ca-probe"], "cwd": "."}
+{"kind": "actual-packaged-boot-jar-smoke", "jar_sha256": "7bb27bb80641d12410880f9b54f6ff88915accc7b0aa0ea848ac244d25a748f9", "jdk": "openjdk version \"21.0.13\" 2026-10-20 LTS", "health": 200, "unauthenticated_registration": 401, "discovery_issuer": "urn:nps:org:fixture:ca", "embedded_schema_in_jar": true, "key_mode_octal": "0o600", "fixture_stopped": true, "paid_provider_calls": 0, "passed": true}
