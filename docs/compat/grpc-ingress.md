@@ -2,15 +2,11 @@
 
 # gRPC Ingress 详解
 
-> **历史指南。** 独立 ingress 仓库已经归档。当前 bridge 实现权威为
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet) 中的
-> `LabAcacia.NPS.NWP.Bridge`；新部署应以其当前 API 与安全说明为准。
-
 > `LabAcacia.GrpcIngress` v1.0.0-alpha.16 — 把一个或多个 **NWP 节点** 暴露成
 > 一个 **gRPC 服务**。proto 包 `labacacia.grpc_bridge.v1`，服务名 `NwpBridge`，
 > 4 个 unary RPC。
 
-本文补充 [`compat/grpc-ingress/README.md`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/README.md) 未覆盖的细节：
+本文补充 [`compat/grpc-ingress/README.md`](../../compat/grpc-ingress/README.md) 未覆盖的细节：
 为什么是"bytes 透传"而非强类型 proto、错误映射的语义边界、多语言 client 用法、
 如何在本服务之上叠一层强类型 proto。
 
@@ -613,7 +609,7 @@ A: 仅当 `http_status == 202` **且** body 是合法 JSON 且顶层有 `task_id
 ## 14. 参考
 
 - NWP 规范：[`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md) v0.5
-- proto 定义：[`compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto)
+- proto 定义：[`compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto`](../../compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto)
 - gRPC .NET 文档：https://learn.microsoft.com/aspnet/core/grpc/
-- CHANGELOG：[`compat/grpc-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG：[`compat/grpc-ingress/CHANGELOG.md`](../../compat/grpc-ingress/CHANGELOG.md)
 - 独立仓：[labacacia/NPS-gRPC-Ingress](https://github.com/labacacia/NPS-gRPC-Ingress)

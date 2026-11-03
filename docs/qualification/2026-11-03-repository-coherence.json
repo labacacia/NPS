@@ -1,0 +1,301 @@
+{
+  "as_of": "2026-11-03T08:57:01.441786+00:00",
+  "operation": "fetch --prune --tags only; no worktree pull/reset/projection",
+  "repositories": [
+    {
+      "repository": "NIP-CA-Server",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "83c78a61835df1965e513aa382af11ba766849d2",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "0c44800019935b2d2fff5898f6a5336fa3cd1568",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-A2A-Ingress",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "bbafaecdc4274fc0c8ddbbb1d455337df457e266",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Cloud-CA",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "579902c118f20c7551b8ecfae2bd1d54f2048938",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Console",
+      "role": "independent-lifecycle",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "93376c893feb8e7c4213840de0ca2934fd6b941a",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Daemons",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "c4a368d71d48da6a799ca9af7063e4a5e29d6623",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Dev",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "b2d89f7b4c693bcfe46b32506eca98bcfe13638a",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 8,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Examples",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "e4a1bc344183a7fd264b95369d9e23de5cb1f046",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Ledger",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "8db76b394eee03be813c9792a2fef8ed76cb9706",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-MCP-Ingress",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "9fa53c73c711fd8e69d7a299b50e48222fdb8a9f",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Model-Runtime",
+      "role": "independent-lifecycle",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "c95a86cd14eb6ff146a889b30ac03777628a5e70",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Paper",
+      "role": "independent-lifecycle",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "cce0ba2b95b63cdaa0cffc8d248ed40153847fbc",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-Release-Wiki",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "11d44e906b7ecd78e0dfadff4fd4e210d69d47a8",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-DotNet",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "2d8a83e43465f0c84c183b176ae7b68a885aceb6",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-Go",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "dde7003ecae44eb265009919f472b25d3934b93e",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-Java",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "0e4d488809b55b0a0c7de5c394b4b6fe9714642b",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-Python",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "8858db5a4dc3e4f3f28d8889291f223f09a83961",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-Rust",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "efba7e1e90ddc09cb535b2bf4782fde5ad76460a",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-SDK-TypeScript",
+      "role": "suite-authoring-or-projection",
+      "release_gate_member": true,
+      "fetch_exit_code": 0,
+      "head": "bf9473c47ee45211f214eef394b3616ba7129fc5",
+      "branch": "chore/review-first-normalization",
+      "upstream": "origin/chore/review-first-normalization",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    },
+    {
+      "repository": "NPS-gRPC-Ingress",
+      "role": "archived-or-reference",
+      "release_gate_member": false,
+      "fetch_exit_code": 0,
+      "head": "45bc0f475606450b880f20bee816400023db180f",
+      "branch": "main",
+      "upstream": "origin/main",
+      "dirty_count": 0,
+      "ahead_behind": [
+        0,
+        0
+      ]
+    }
+  ],
+  "selected_authoring_worktree": {
+    "repository": "NPS-Dev active authoring worktree",
+    "role": "selected-authoring-input",
+    "release_gate_member": true,
+    "fetch_exit_code": 0,
+    "head": "3b83f9d6e311726ddd23e889a47a866e772f3696",
+    "branch": "feat/alpha20-suite-qualification-ledger",
+    "upstream": "origin/feat/alpha20-suite-qualification-ledger",
+    "dirty_count": 0,
+    "ahead_behind": [
+      0,
+      0
+    ]
+  },
+  "note": "Original NPS-Dev checkout currently has8 external/user working-tree entries (earlier capture had5); untouched and not selected input. Selected authoring worktree uses its own clean committed branch. Topic-branch upstream coherence is distinct from origin/main divergence."
+}

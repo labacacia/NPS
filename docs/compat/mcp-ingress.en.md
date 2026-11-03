@@ -2,16 +2,11 @@ English | [中文版](./mcp-ingress.md)
 
 # MCP Ingress — Detailed Guide
 
-> **Historical guide.** The standalone ingress repository is archived. Current
-> bridge implementation authority is `LabAcacia.NPS.NWP.Bridge` in
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet); use its current
-> API and security guidance for new deployments.
-
 > `LabAcacia.McpIngress` v1.0.0-alpha.16 — exposes one or more **NWP nodes** as a
 > single [**Model Context Protocol (MCP)**](https://modelcontextprotocol.io) server.
 > Target spec: MCP `2024-11-05` (JSON-RPC 2.0 over HTTP POST).
 
-This doc supplements [`compat/mcp-ingress/README.md`](https://github.com/labacacia/NPS-MCP-Ingress/blob/main/README.md)
+This doc supplements [`compat/mcp-ingress/README.md`](../../compat/mcp-ingress/README.md)
 with details the README doesn't cover: protocol-mapping semantics, header
 forwarding, error boundaries, deployment concerns, and real-world integration
 examples.
@@ -479,5 +474,5 @@ Node needs the original caller's identity, have clients declare `actor_nid` in
 
 - NWP spec: [`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md) v0.5
 - MCP spec: https://spec.modelcontextprotocol.io/2024-11-05/
-- CHANGELOG: [`compat/mcp-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-MCP-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG: [`compat/mcp-ingress/CHANGELOG.md`](../../compat/mcp-ingress/CHANGELOG.md)
 - Standalone repo: [labacacia/NPS-MCP-Ingress](https://github.com/labacacia/NPS-MCP-Ingress)

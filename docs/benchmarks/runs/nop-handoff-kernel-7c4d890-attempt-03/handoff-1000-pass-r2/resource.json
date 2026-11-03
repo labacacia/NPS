@@ -1,0 +1,56 @@
+{
+  "case_id": "handoff-1000-pass-r2",
+  "rows": 1000,
+  "fault": null,
+  "process_id": 3397183,
+  "guard": {
+    "accounting": "linux-controller-mm-and-exact-wait4-peak-v1",
+    "input_units": "Linux KiB",
+    "root_pid": 3396759,
+    "fixture_pid": 3397183,
+    "waited_pid": 3397183,
+    "wait_status": 0,
+    "wait_returncode": 0,
+    "wait4_complete": true,
+    "controller_peak_source": "proc-self-status-VmHWM-current-program-image",
+    "controller_image_scope": "from controller program entry; no exec or clear_refs reset during capture",
+    "controller_rusage_lifetime_peak_kib": 24912,
+    "controller_peak_rss_kib": 25188,
+    "fixture_peak_rss_kib": 114228,
+    "kernel_peak_sum_bytes": 142761984,
+    "controller_baseline_subtracted": false,
+    "observed_controller_hwm_bytes": 25792512,
+    "observed_fixture_hwm_bytes": 117420032,
+    "conservative_pair_peak_bound_bytes": 143212544,
+    "sampled_pair_peak_rss_bytes": 143212544,
+    "procfs_diagnostic_complete": false,
+    "diagnostic_errors": [
+      "fixture:KeyError"
+    ],
+    "scope_checks": 157,
+    "poll_count": 157,
+    "process_ids": [
+      3396759,
+      3397183
+    ],
+    "elapsed_seconds": 1.8001688639633358,
+    "violations": [],
+    "passed": true,
+    "specification": {
+      "processor_count": 4,
+      "gc_heap_hard_limit": "0x14000000",
+      "rss_limit_bytes": 536870912,
+      "max_workflow_seconds": 120,
+      "rss_sample_interval_seconds": 0.01,
+      "rss_scope": "trusted frozen two-process reference: controller plus one direct fixture; roles/servers in-process; not an arbitrary descendant tree"
+    }
+  },
+  "fixture_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "error_type": null,
+  "exit_code": 0
+}

@@ -1,0 +1,14 @@
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.20.dev.a9e4f05eeb85 prepack
+> npm run build && node scripts/verify-pack.mjs
+
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.20.dev.a9e4f05eeb85 build
+> tsc
+
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.

@@ -1,0 +1,45 @@
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	﻿2026-11-03T08:36:36.0670032Z ##[group]Run python -m unittest discover -s tools/release/tests
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0670405Z [36;1mpython -m unittest discover -s tools/release/tests[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0670949Z [36;1mpython tools/conformance/check-data-workflow-contract.py[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0671360Z [36;1mpython -m unittest discover -s tools/conformance/tests -p 'test_data_workflow_contract.py'[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0671711Z [36;1mpython tools/conformance/check-schema-batch-vectors.py[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0672044Z [36;1mpython -m unittest discover -s tools/conformance/tests -p 'test_schema_batch_vectors.py'[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0672421Z [36;1mpython -m unittest discover -s tools/benchmarks/tests -p 'test_data_workflow*.py'[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0672778Z [36;1mpython -m unittest discover -s tools/benchmarks/tests -p 'test_ncp_transfer*.py'[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0673278Z [36;1mpython -m unittest discover -s tools/benchmarks/tests -p 'test_nop_handoff*.py'[0m
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0699265Z shell: /usr/bin/bash -e {0}
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0699485Z env:
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0699676Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0699962Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0700246Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0700505Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0700942Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0701202Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.0701427Z ##[endgroup]
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1787415Z E
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1787838Z ======================================================================
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1788324Z ERROR: test_sdk_projections (unittest.loader._FailedTest.test_sdk_projections)
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1788838Z ----------------------------------------------------------------------
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1789289Z ImportError: Failed to import test module: test_sdk_projections
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1789697Z Traceback (most recent call last):
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1796882Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1797563Z     module = self._get_module_from_name(name)
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1797897Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1798488Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1798997Z     __import__(name)
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1799479Z   File "/home/runner/work/NPS-Dev/NPS-Dev/tools/release/tests/test_sdk_projections.py", line 25, in <module>
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1800113Z     drift = load("source_truth", ROOT / "tools/scripts/check-source-of-truth.py")
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1800586Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1801288Z   File "/home/runner/work/NPS-Dev/NPS-Dev/tools/release/tests/test_sdk_projections.py", line 20, in load
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1801808Z     spec.loader.exec_module(module)
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1802328Z   File "/home/runner/work/NPS-Dev/NPS-Dev/tools/scripts/check-source-of-truth.py", line 107, in <module>
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1802815Z     import yaml  # PyYAML
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1803059Z     ^^^^^^^^^^^
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1803329Z ModuleNotFoundError: No module named 'yaml'
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1803534Z 
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1803545Z 
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1803735Z ----------------------------------------------------------------------
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1804090Z Ran 1 test in 0.000s
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1804242Z 
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1804342Z FAILED (errors=1)
+Alpha20 feature fixture oracle	Data workflow design contract and evidence integrity	2026-11-03T08:36:36.1894618Z ##[error]Process completed with exit code 1.

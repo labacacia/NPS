@@ -1,0 +1,36 @@
+{
+  "method_id": "D20-06-reference-handoff-v1",
+  "kind": "functional and resource qualification; no efficiency comparison or provider billing",
+  "positive_rows": [
+    100,
+    1000,
+    100000
+  ],
+  "positive_repeats": 3,
+  "fault_rows": 100,
+  "fault_repeats": 1,
+  "faults": [
+    "missing-grant",
+    "revoked-grant",
+    "hidden-field",
+    "revoked-worker",
+    "expired-input",
+    "lost-query-response",
+    "create-audit-loss"
+  ],
+  "condition_count": 16,
+  "processor_count": 4,
+  "gc_available_memory_bytes": 335544320,
+  "rss_limit_bytes": 536870912,
+  "max_case_seconds": 120,
+  "rss_sample_interval_seconds": 0.01,
+  "resource_scope": "actual controller and all live descendants; concurrent RSS and conservative live VmHWM sum",
+  "execution_mode": "direct_asserted_fixture; fresh process per condition; no VSTest parent",
+  "wire_scope": "both public-client/gateway and gateway/receiver TCP stream bytes including HTTP/TLS, excluding TCP/IP packet overhead",
+  "nop_payload_scope": "actual serialized Delegate/AlignStream JSON, locally dispatched; not remote NOP wire qualification",
+  "model_visible_bytes": 0,
+  "model_scope": "deterministic plan; no model requests or new provider usage/cost observations",
+  "success": "exact frozen source-oracle groups, five actual rows, authenticated grants, two owner releases; duplicate has zero new dispatch",
+  "failures": "seven asserted negative scenarios; lost query terminal and actual post-create audit503 remain indeterminate with no downstream retry; unresolved allocation keys are retained for a separate owner decision and never automatically replayed during cleanup",
+  "claims": "bounded reference semantics and measured transfer costs only; no NPS superiority, production-runtime/native/six-SDK or release qualification"
+}

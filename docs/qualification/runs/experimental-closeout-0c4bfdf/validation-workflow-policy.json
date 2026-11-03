@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-03T22:03:20.334380+10:30",
+  "user_instruction": "暂时不用Github Actions，CI跑本地",
+  "validation_workflows": [
+    {
+      "id": 259480166,
+      "name": "CI",
+      "path": ".github/workflows/ci.yml",
+      "state": "disabled_manually"
+    },
+    {
+      "id": 350748927,
+      "name": "Security Gates",
+      "path": ".github/workflows/security.yml",
+      "state": "disabled_manually"
+    },
+    {
+      "id": 270337846,
+      "name": "Source-of-Truth Drift Check",
+      "path": ".github/workflows/source-of-truth.yml",
+      "state": "disabled_manually"
+    },
+    {
+      "id": 274026047,
+      "name": "Spec Version Consistency",
+      "path": ".github/workflows/version-consistency.yml",
+      "state": "disabled_manually"
+    },
+    {
+      "id": 269856643,
+      "name": "Suite Version Sync",
+      "path": ".github/workflows/version-sync.yml",
+      "state": "disabled_manually"
+    }
+  ],
+  "actions_invoked": false,
+  "publication_workflows_invoked": false
+}

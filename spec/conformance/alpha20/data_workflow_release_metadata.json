@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "suite-release-metadata-succession",
+  "date": "2026-11-03",
+  "decision": "docs/adr/2026-11-03-alpha20-release-metadata.md",
+  "path": "spec/version-matrix.yaml",
+  "from": "1.0.0-alpha.19",
+  "to": "1.0.0-alpha.20",
+  "predecessor_sha256": "eb11ceae7cd0c871a61a4d98568d8d7cda297ecbfd12e8450fa2ae2e85be923e",
+  "successor_sha256": "9d88db35003c8c12034f3cba11fc613fca25b2422238c2b53b925f5cd2f28ffb"
+}

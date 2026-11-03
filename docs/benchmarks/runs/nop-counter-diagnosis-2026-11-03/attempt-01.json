@@ -1,0 +1,42 @@
+{
+  "kind": "procfs exit-race diagnosis only, not qualification",
+  "source_sha256": "82fd75f2326a2af5fa03a739aeb44562e4d3cc0fdf482a445f028f59a65527fb",
+  "children": 500,
+  "faults": [
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process",
+      "count": 25
+    },
+    {
+      "type": "KeyError",
+      "detail": "'VmRSS'",
+      "count": 33
+    },
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process: '/proc/3287557/task/3287557/children'",
+      "count": 1
+    },
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process: '/proc/3287573/status'",
+      "count": 1
+    },
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process: '/proc/3287662/status'",
+      "count": 1
+    },
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process: '/proc/3287689/status'",
+      "count": 1
+    },
+    {
+      "type": "ProcessLookupError",
+      "detail": "[Errno 3] No such process: '/proc/3287734/task/3287734/children'",
+      "count": 1
+    }
+  ]
+}

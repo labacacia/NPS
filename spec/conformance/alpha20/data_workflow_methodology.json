@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "id": "D20-00-methodology-v1",
+  "status": "preregistered-design-not-executed",
+  "seed": 20261102,
+  "scenario": "refund-growth",
+  "row_counts": [
+    100,
+    1000,
+    100000
+  ],
+  "columns": [
+    "id",
+    "period",
+    "reason",
+    "refunded",
+    "amount_minor"
+  ],
+  "types": [
+    "string",
+    "string",
+    "string",
+    "bool",
+    "int64"
+  ],
+  "periods": [
+    "baseline",
+    "current"
+  ],
+  "reasons": [
+    "delivery",
+    "quality",
+    "duplicate",
+    "other"
+  ],
+  "row_rule": "For row i: id=order:{i:06d}; period=baseline if i%100<50 else current; reason=reasons[i%4]; refunded=(i%100<10) or (period=current and reason=delivery and i%100<80); amount_minor=1000+(i%100)*37.",
+  "anomaly_rule": {
+    "minimum_orders_per_period": 10,
+    "increase_percentage_points": 10,
+    "minimum_current_refunds": 3,
+    "comparison": "current_refunds/current_orders - baseline_refunds/baseline_orders >= 1/10 (exact rational)"
+  },
+  "evidence": {
+    "max_reason_groups": 4,
+    "max_source_rows_per_group": 5,
+    "max_total_source_rows": 20,
+    "max_model_visible_bytes": 32768,
+    "citation_fields": [
+      "result_ref",
+      "snapshot_id",
+      "record_id"
+    ]
+  },
+  "arms": [
+    "A-full-json",
+    "B-schema-and-rows",
+    "C-http-runtime",
+    "D-nps-runtime"
+  ],
+  "transport_repeats": 30,
+  "transport_warmups": 3,
+  "model_repeats": 5,
+  "changes": {
+    "schema_churn": [
+      "none",
+      "add-nullable-field"
+    ],
+    "updated_row_fraction": [
+      0,
+      0.01,
+      0.1
+    ]
+  },
+  "caches": [
+    "cold",
+    "warm-if-provider-observable"
+  ],
+  "model_config": {
+    "model_id": null,
+    "provider": null,
+    "temperature": 0,
+    "max_output_tokens": 2048,
+    "credentials_recorded": false,
+    "run_requires": [
+      "explicit model_id",
+      "provider",
+      "spend cap",
+      "usage accounting mapping"
+    ]
+  },
+  "acceptance": {
+    "integer_aggregates": "exact",
+    "rates": "rational oracle; rounding presentation-only",
+    "citation_accuracy": 1,
+    "anomaly_precision": 1,
+    "anomaly_recall": 1,
+    "unsupported_prompt": "context-limit-not-truncated",
+    "max_attempt_seconds": 120,
+    "max_runtime_rss_bytes": 536870912,
+    "model_usage": "all turns; missing classes unknown",
+    "cost_claims": "dated provider prices and full observed usage required",
+    "ncp_extra_value": "report paired C vs D correctness-equal median/p95 wire/latency/memory; any regression or no improvement requires recorded scope decision"
+  },
+  "evidence_classes": [
+    "design-oracle",
+    "deterministic-runtime",
+    "provider-observed"
+  ],
+  "provider_results": [],
+  "ncp_runtime_results": [],
+  "reference_answers": {
+    "100": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 13,
+            "refunds": 3,
+            "refund_amount_minor": 3444
+          },
+          "current": {
+            "orders": 12,
+            "refunds": 7,
+            "refund_amount_minor": 23576
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 13,
+            "refunds": 3,
+            "refund_amount_minor": 3555
+          },
+          "current": {
+            "orders": 12,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 12,
+            "refunds": 2,
+            "refund_amount_minor": 2296
+          },
+          "current": {
+            "orders": 13,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 12,
+            "refunds": 2,
+            "refund_amount_minor": 2370
+          },
+          "current": {
+            "orders": 13,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    },
+    "1000": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 130,
+            "refunds": 30,
+            "refund_amount_minor": 34440
+          },
+          "current": {
+            "orders": 120,
+            "refunds": 70,
+            "refund_amount_minor": 235760
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 130,
+            "refunds": 30,
+            "refund_amount_minor": 35550
+          },
+          "current": {
+            "orders": 120,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 120,
+            "refunds": 20,
+            "refund_amount_minor": 22960
+          },
+          "current": {
+            "orders": 130,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 120,
+            "refunds": 20,
+            "refund_amount_minor": 23700
+          },
+          "current": {
+            "orders": 130,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    },
+    "100000": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 13000,
+            "refunds": 3000,
+            "refund_amount_minor": 3444000
+          },
+          "current": {
+            "orders": 12000,
+            "refunds": 7000,
+            "refund_amount_minor": 23576000
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 13000,
+            "refunds": 3000,
+            "refund_amount_minor": 3555000
+          },
+          "current": {
+            "orders": 12000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 12000,
+            "refunds": 2000,
+            "refund_amount_minor": 2296000
+          },
+          "current": {
+            "orders": 13000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 12000,
+            "refunds": 2000,
+            "refund_amount_minor": 2370000
+          },
+          "current": {
+            "orders": 13000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    }
+  }
+}

@@ -8,6 +8,12 @@
 
 在 NPS 达到 v1.0 稳定版之前，套件内所有仓库 —— 规范、各 SDK（.NET / Python / TypeScript / Java / Rust / Go）、CA Server、兼容 Bridge —— 同步使用同一个预发布版本号。
 
+## [1.0.0-alpha.20] — 发布候选，尚未发布
+
+- 有边界实验：结果资源/授权、重复schema批次、本地任务交接和易失节点转移；各语言支持范围不同，未承诺六SDK完整运行时一致性。
+- 保留与等价HTTPgzip及普通工具的真实测量；不宣称固定token、费用或速度收益。
+- 候选使用统一版本、本地CI与独立包验证；完整生产能力、beta和实际发布保持后续门槛。
+
 ## [1.0.0-alpha.19] —— 2026-09-05
 
 ### 修复
@@ -194,20 +200,25 @@
 ### SDK —— 六种官方语言功能对等
 
 - 将 Anchor Node server、CGN meter、Bridge types 与 reputation-policy evaluator
-  从 .NET 移植到 Python / TypeScript / Go / Java / Rust；补齐
-  `NWP-CGN-LIMIT-EXCEEDED` 与三个 `NWP-REPUTATION-*` 错误码。
+  从 .NET 移植到 Python / TypeScript / Go / Java / Rust，使五种非 .NET SDK
+  从 client-only 晋级 client + server；补齐 `NWP-CGN-LIMIT-EXCEEDED` 与三个
+  `NWP-REPUTATION-*` 错误码。
 
 ### 规范
 
-- **NCP v0.8 / NPS-RFC-0006**：Draft → Proposed；ALPN `nps/1.0`、TLS、mTLS 与 `NCP-NID-MISMATCH`。
-- **NWP v0.14**：Bridge Node §16 与 `bridge_target` 向量。
-- **NIP v0.10**：1–24h 可续期 edge mTLS 证书 profile。
-- **NDP v0.9**：`health` / `last_seen` 与 `NDP-RESOLVE-STALE`。
-- **NOP v0.7 / NPS-CR-0007**：`NOP-CLAIM-CONFLICT`、`NOP-RUNTIME-IDLE-TIMEOUT`、`NOP-RUNTIME-MAX-RUNTIME`、`NOP-SPAWN-SPEC-INVALID` 与 `TC-N3-*`。
+- **NCP v0.8 / NPS-RFC-0006**：Draft → Proposed；统一 ALPN `nps/1.0`、TLS
+  包裹、mTLS 与 `NCP-NID-MISMATCH` session-NID 绑定。
+- **NWP v0.14**：新增 Bridge Node §16 MUST/SHOULD 与 `bridge_target` 向量。
+- **NIP v0.10**：新增 1–24h 可续期 edge mTLS 证书 profile。
+- **NDP v0.9**：新增 `health` / `last_seen`；过期解析返回 `NDP-RESOLVE-STALE`。
+- **NOP v0.7 / NPS-CR-0007**：task claim lease、`NOP-CLAIM-CONFLICT`、
+  `NOP-RUNTIME-IDLE-TIMEOUT`、`NOP-RUNTIME-MAX-RUNTIME`、
+  `NOP-SPAWN-SPEC-INVALID` 与 `TC-N3-*`。
 
 ### Daemon（L2/L3）
 
-- `nps-runner` 接入 NPS-CR-0007；`nps-ingress` 接入 NPS-RFC-0006 TLS 1.3/mTLS 与 `NCP-NID-MISMATCH`。
+- `nps-runner` 接入 NPS-CR-0007 lease/dedup；`nps-ingress` 接入
+  NPS-RFC-0006 TLS 1.3/mTLS 与 `NCP-NID-MISMATCH`，分别通过 8/5 项单测。
 
 ---
 
@@ -215,24 +226,31 @@
 
 ### 规范
 
-- **NCP v0.7**：`NCP-STREAM-LIMIT-EXCEEDED` 与 `NCP-REKEY-REQUIRED`。
+- **NCP v0.7**：`max_concurrent_streams`、`NCP-STREAM-LIMIT-EXCEEDED`、QUIC
+  stream mapping、`NCP-REKEY-REQUIRED`。
 - **NWP v0.13 / CR-0006**：SubscribeFrame、`trust_anchors` 与 `bridge_target`。
-- **NIP v0.9**：PEN 65715.2.2/65715.2.3 与 `NIP-OCSP-STAPLE-EXPIRED`。
-- **NDP v0.8**：`NDP-GRAPH-INVALID`、`NDP-GRAPH-TOO-LARGE` 与 `NDP-FEDERATION-LOOP`。
-- **NOP v0.6**：`NOP-STREAM-NAK`、`weighted_first_k`、`merge_all` 与 `NOP-CALLBACK-HMAC-MISSING`。
+- **NIP v0.9**：`ocsp_staple`、PEN 65715.2.2/65715.2.3 与
+  `NIP-OCSP-STAPLE-EXPIRED`。
+- **NDP v0.8**：GraphFrame、`NDP-GRAPH-INVALID`、`NDP-GRAPH-TOO-LARGE`、
+  federation 与 `NDP-FEDERATION-LOOP`。
+- **NOP v0.6**：ACK/NAK、`NOP-STREAM-NAK`、`weighted_first_k`、`merge_all`、
+  cross-cluster delegate、HMAC 与 `NOP-CALLBACK-HMAC-MISSING`。
 - **CR-0006** 已 Accepted；**RFC-0006** 为 Draft。
 
 ### SDK
 
-- 六个 SDK 同步交付上述 NOP、NIP、NDP、NWP 类型与 wire 语义。
+- 六个 SDK 同步交付上述 NOP、NIP、NDP、NWP 类型、wire 语义与 NWM 发布面。
 
 ### .NET SDK
 
-- 同步 TrustAnchors、SubscribeFrame、OCSP staple、OID、AlignStream、GraphFrame 与 aggregate strategy。
+- `AnchorNodeOptions.TrustAnchors`、CR-0006 `SubscribeFrame` rewrite、
+  `IdentFrame.OcspStaple`、`IdNpsCapabilities`、AlignStream Ack/Nak、
+  `TargetClusterAnchor`、GraphFrame types 与 `WeightedFirstK` / `MergeAll`。
 
 ### Daemon
 
-- `nps-ledger` federation push、nps-probe v0.2、nps-orchestrator alpha.11 与 NPS-NWP-Manager v0.1。
+- `nps-ledger` 增加 federation push 与 `X-NPS-Forwarded-By` 三跳检测；
+  nps-probe v0.2、nps-orchestrator alpha.11、NPS-NWP-Manager v0.1 同步落地。
 
 ---
 
@@ -240,15 +258,17 @@
 
 ### 规范
 
-- **NPS-CR-0005** 定义三级 RA 与 `db/003_ra_model.sql`。
+- **NPS-CR-0005** 定义 allowlist、bootstrap-token 与 pending-queue 三级 RA，
+  并增加 `db/003_ra_model.sql`。
 
 ### SDK
 
-- 六 SDK 同步 NOP saga、NDP security profile、`IdentReputationPolicyHint` 与 `IdentMetadata`。
+- 六 SDK 同步 NOP saga compensation、NDP security profile、
+  `IdentReputationPolicyHint` 与 `IdentMetadata`。
 
 ### .NET SDK
 
-- `NPS.NIP` 实现 RA enrollment、store 与管理端点。
+- `NPS.NIP` 实现 RA 三级 enrollment、store 接口与管理端点。
 
 ---
 
@@ -256,7 +276,8 @@
 
 ### SDK
 
-- 六 SDK 补齐 RFC-0004 `ReputationLogClient`、RFC 9162 proof、Anchor client 测试与 RFC-0003 assurance。
+- 六 SDK 补齐 RFC-0004 `ReputationLogClient`、RFC 9162 inclusion proof、
+  `AnchorNodeClient` 测试与 RFC-0003 assurance level/metadata。
 
 ---
 
@@ -268,9 +289,10 @@
 
 ### .NET SDK
 
-- `ReputationPolicyEvaluator`、`NWP-REPUTATION-THROTTLED`、`NWP-REPUTATION-REJECTED`、
-  `NWP-REPUTATION-BANNED`、`X-NWP-Reputation-Status`、`X-NWP-Ban-Expires`、
-  `cgn_limit` 与 SubscribeFrame（0x12）进入 .NET SDK。
+- `ReputationPolicyEvaluator`、`NWP-REPUTATION-THROTTLED`、
+  `NWP-REPUTATION-REJECTED`、`NWP-REPUTATION-BANNED`、
+  `X-NWP-Reputation-Status`、`X-NWP-Ban-Expires`、`cgn_limit` 与早期
+  SubscribeFrame（0x12）进入 .NET SDK。
 
 ---
 
@@ -336,12 +358,13 @@
 
 ### NIP CA Server
 
-- `/v1/orchestrators/groups/...` 注册、吊销、session 签发与审计端点上线。
+- `/v1/orchestrators/groups/...` 注册、吊销、session 签发与审计端点上线；
+  `/.well-known/nps-ca` 发布 `orchestrator-group` capability。
 
 ### 测试
 
 - `NPS.Tests.Nip.OrchestratorGroupSessionTests` 增加 16 项 xUnit case，覆盖
-  NPS-CR-0003 验收及有效期、scope、JWS、审计边界。
+  NPS-CR-0003 的五项验收场景及有效期、scope、JWS、审计边界。
 
 ### 实现
 
@@ -519,7 +542,7 @@
 ### 规范（Spec）
 
 - **新增 — `spec/services/NPS-Node-Profile.md` v0.1 Draft**：节点侧合规规范（L1 Basic / L2 Interactive / L3 Autonomous），与服务侧 AaaS Profile 正交。引入 `activation_mode` 模型（`ephemeral` / `resident` / `hybrid`）作为三级的承载主轴。L1 附带 21 条详细 req ID（`N1-NCP-*` 到 `N1-OBS-*`）；L2/L3 仅列 headline additions，详细 ID 在 NPS-Roadmap Phase 2/3 跟踪。
-- **新增 — `spec/services/conformance/NPS-Node-L1.md` v0.1**：语言无关的 L1 合规测试套件 —— 21 个测试用例（`TC-N1-*`）、paired-peer 方法论、结果 manifest schema。参考套件位置：`impl/dotnet/tests/NPS.Daemon.Conformance.Tests/`。
+- **新增 — `spec/services/conformance/NPS-Node-L1.md` v0.1**：语言无关的 L1 合规测试套件 —— 21 个测试用例（`TC-N1-*`）、paired-peer 方法论、结果 manifest schema。参考套件位置：`impl/dotnet/tests/NPS.Daemon.Conformance.Tests/`。历史勘误：alpha.19 审计确认实际有 20 个 `TC-N1-*` 标题；原始“21 个”正文计数属于编辑错误。
 - **新增 — `spec/services/conformance/NPS-NODE-L1-CERTIFIED.md`**：实现方 L1 合规自声明模板。包含实现身份、所用 peer、运行环境、逐用例结果 checklist、结果 manifest、Ed25519 声明块。
 - **NPS-RFC-0001 —— Accepted（1.0 之前快速通道）**：原生模式 NCP 连接现在 MUST 以 8 字节 ASCII 常量前导 `b"NPS/1.0\n"` 起头。新增 `spec/NPS-1-NCP.md` §2.6.1。HTTP 模式不受影响。前导不匹配时服务端 500 ms 内静默关闭（不发 `ErrorFrame`，避免向扫描器泄露帧细节）。短读 10 秒超时。新增错误码 `NCP-PREAMBLE-INVALID` 与状态码 `NPS-PROTO-PREAMBLE-INVALID`（同时引入新的 `PROTO` 状态分类，覆盖既有的 `NPS-PROTO-VERSION-INCOMPATIBLE`）。在 `frame-registry.yaml` 新增 `reservations:` 段，把帧类型字节 `0x4E`（ASCII `N`）保留 —— MUST NOT 分配给任何 NCP 帧。
 - **NPS-RFC-0003 —— Accepted（1.0 之前快速通道）**：Agent 身份三级保证等级（`anonymous` / `attested` / `verified`），用于反爬与信任分流。新增 NPS-3 §5.1.1；`IdentFrame` 增加可选 `assurance_level` 字段（默认 `anonymous`，向后兼容）。NWM 增加可选顶层 `min_assurance_level` 与 ActionSpec 上的 per-action 覆盖。新增错误码 `NIP-ASSURANCE-MISMATCH`、`NIP-ASSURANCE-UNKNOWN`、`NWP-AUTH-ASSURANCE-TOO-LOW`。X.509 critical extension 翻转（§4.2）需等 NPS-RFC-0002 在 alpha.4 落地后再启用 —— 这里 Phase 1 仅 parse；现有 verifier 默认行为不变。

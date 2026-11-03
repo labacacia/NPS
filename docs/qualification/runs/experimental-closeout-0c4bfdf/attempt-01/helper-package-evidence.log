@@ -1,0 +1,43 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/conformance/check-alpha20-package-evidence.py"], "cwd": "."}
+{
+  "result": "passed",
+  "evidence_class": "retained actual consumer runs with exact current payload-source equivalence",
+  "packet_sha256": "8a00f3aa9a3c91e316bdb6b20ebfc88aa8e00050c4809bf532b99098349bbe36",
+  "validated_log_count": 35,
+  "applicability": {
+    "dotnet": {
+      "historical_package_source": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "file_count": 279,
+      "source_inventory_sha256": "b3ec908b4a9ffbb2b9ac80a367fc7ac2c8eeb5d6d58c4c00f48f92d839e0aa65"
+    },
+    "python": {
+      "historical_package_source": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "file_count": 126,
+      "source_inventory_sha256": "55b2f7cd33bf6fdd94a948400a62a38191a0450299c046b7ed01a8e8e464721e"
+    },
+    "typescript": {
+      "historical_package_source": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+      "file_count": 165,
+      "source_inventory_sha256": "ca6d91a37d539fd8ca0a4689e6a0fc2c0861509f78f21efc96bd3666d6673d12"
+    },
+    "go": {
+      "historical_package_source": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "file_count": 177,
+      "source_inventory_sha256": "3c3bc1d01a0a7ba56053836315e28d9b0c3d997c44ef12d06cfe48183ec3e70b"
+    },
+    "java": {
+      "historical_package_source": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "file_count": 380,
+      "source_inventory_sha256": "17840606bff8e0d64bf4dc33f2782a9ff35e77896edcf930ddfe7d585d64d655"
+    },
+    "rust": {
+      "historical_package_source": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+      "file_count": 160,
+      "source_inventory_sha256": "292d8219b56cdaf1ff92f9a37b0b7d7ab70c04589e46ef202da207bf940eec6c"
+    }
+  },
+  "historical_archive_metadata_only": true,
+  "note": "Deleted historical archive bytes are not claimed rehashed today; producer SHA records/logs and current source applicability verified. Signing/SourceLink/final release packaging remain134.",
+  "runtime_pair_cells_added": 0,
+  "publication": false
+}

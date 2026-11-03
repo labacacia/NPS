@@ -1,0 +1,102 @@
+[
+  {
+    "attempt": 1,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "not independently captured in this initial attempt; not backfilled",
+    "observed_case_records": 65,
+    "runtime_replays_passed": 64,
+    "failed_cases": [
+      {
+        "case_id": "d05-tool-v1:100000:2:1:cold-requested:ordinary",
+        "failure_type": "ResultHttpError",
+        "http_status": null,
+        "error_code": null
+      }
+    ],
+    "full80runtime_and_resource_pass": false,
+    "actual_process_tree_peak_rss_bytes": 514342912,
+    "conservative_live_high_water_sum_bytes": 514940928
+  },
+  {
+    "attempt": 2,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "captured source/assembly hashes and own source recipes",
+    "observed_case_records": 64,
+    "runtime_replays_passed": 63,
+    "failed_cases": [
+      {
+        "case_id": "d05-tool-v1:100000:2:0:warm-requested:nps",
+        "failure_type": "ResultHttpError",
+        "http_status": 500,
+        "error_code": "NWP-NODE-UNAVAILABLE"
+      }
+    ],
+    "full80runtime_and_resource_pass": false,
+    "actual_process_tree_peak_rss_bytes": 478662656,
+    "conservative_live_high_water_sum_bytes": 478662656
+  },
+  {
+    "attempt": 3,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "captured source/assembly hashes and own source recipes",
+    "observed_case_records": 65,
+    "runtime_replays_passed": 64,
+    "failed_cases": [
+      {
+        "case_id": "d05-tool-v1:100000:2:1:cold-requested:ordinary",
+        "failure_type": "ResultHttpError",
+        "http_status": 500,
+        "error_code": null
+      }
+    ],
+    "full80runtime_and_resource_pass": false,
+    "actual_process_tree_peak_rss_bytes": 481136640,
+    "conservative_live_high_water_sum_bytes": 482562048
+  },
+  {
+    "attempt": 4,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "captured source/assembly hashes and own source recipes",
+    "observed_case_records": 62,
+    "runtime_replays_passed": 61,
+    "failed_cases": [
+      {
+        "case_id": "d05-tool-v1:100000:2:0:cold-requested:nps",
+        "failure_type": "ResultHttpError",
+        "http_status": 503,
+        "error_code": "NWP-NODE-UNAVAILABLE"
+      }
+    ],
+    "full80runtime_and_resource_pass": false,
+    "actual_process_tree_peak_rss_bytes": 516579328,
+    "conservative_live_high_water_sum_bytes": 516579328
+  },
+  {
+    "attempt": 5,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "captured source/assembly hashes and own source recipes",
+    "observed_case_records": 80,
+    "runtime_replays_passed": 80,
+    "failed_cases": [],
+    "full80runtime_and_resource_pass": true,
+    "actual_process_tree_peak_rss_bytes": 506023936,
+    "conservative_live_high_water_sum_bytes": 514056192
+  },
+  {
+    "attempt": 6,
+    "paid_calls": 0,
+    "kind": "actual SDK/mTLS recorded-operation replay; original model outcomes are not rescored",
+    "source_binding": "captured source/assembly hashes and own source recipes",
+    "observed_case_records": 80,
+    "runtime_replays_passed": 80,
+    "failed_cases": [],
+    "full80runtime_and_resource_pass": true,
+    "actual_process_tree_peak_rss_bytes": 498892800,
+    "conservative_live_high_water_sum_bytes": 499281920
+  }
+]

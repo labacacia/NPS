@@ -8,6 +8,10 @@ Licensed under the Apache License, Version 2.0
 
 # NPS-RFC-0006：NCP 原生模式传输绑定
 
+> 2026-09-09 澄清：保留历史 Accepted 状态。冲突的旧成帧、early-data、rekey
+> 和准入文本不得覆盖现行 NCP。实现前请阅读[传输规则对齐](../transport-reconciliation.cn.md)
+> 的 TRN-01..13。本说明不代表 SDK 已通过资格验证。
+
 **RFC 编号**: NPS-RFC-0006
 **状态**: Accepted
 **版本**: 0.2

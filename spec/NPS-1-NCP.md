@@ -4,8 +4,8 @@ English | [中文版](./NPS-1-NCP.cn.md)
 
 **Spec Number**: NPS-1  
 **Status**: Proposed  
-**Version**: 0.12
-**Date**: 2026-08-31
+**Version**: 0.13
+**Date**: 2026-09-09
 **Port**: 17433 (default, shared across the protocol suite)  
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD  
 
@@ -196,6 +196,8 @@ Hex: `4E 50 53 2F 31 2E 30 0A`. The preamble is **not** a frame — it has no he
 
 | Code | When |
 |------|------|
+| `NCP-FEATURE-NEGOTIATION-INVALID` | `NPS-CLIENT-BAD-FRAME` | Invalid feature negotiation metadata or selection |
+| `NCP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | Required native feature has no eligible common revision |
 | `NCP-PREAMBLE-INVALID` (`NPS-PROTO-PREAMBLE-INVALID`) | First 8 bytes do not match the constant; close silent within 500 ms. |
 | (timeout) | Fewer than 8 bytes within 10 s; close silent. No code emitted on the wire. |
 
@@ -283,6 +285,67 @@ backward-compatible:
 | `payload` | object | no | Implementation-defined metadata |
 
 This profile adds no frame type or error code.
+
+---
+
+### 2.6.3 Feature revision negotiation (NCP v0.13)
+
+This optional alpha.20 profile reuses Hello and handshake Caps; it assigns no frame type.
+Unchanged base behavior and existing compatibility floors remain available when unused.
+The design record is [CR-0012](cr/NPS-CR-0012-feature-negotiation.md).
+
+**NCP-FTR-01 — bounded types.** Hello MAY carry `feature_negotiation: 1`,
+`feature_offer` and `required_features`. Offers without version 1 are invalid.
+An offer is at most 32 objects of shape
+`{"id":"example.echo","revisions":[{"revision":1,"lifecycle":"stable"}]}`.
+IDs MUST match ASCII `^[a-z][a-z0-9]*([.][a-z][a-z0-9_-]*)+$` and be at most
+96 bytes; `nps.` is reserved for published NPS profiles. Each ID has 1..16 ascending,
+unique uint16 revisions (1..65535). Lifecycle is exactly experimental, stable or
+deprecated, per revision. Required IDs are a unique array of at most 32 offered IDs.
+Missing optional arrays mean empty. Unknown members in feature structures, duplicate
+JSON keys/IDs/revisions, boolean/fractional revisions and unsupported versions MUST
+be rejected with `NCP-FEATURE-NEGOTIATION-INVALID`.
+
+JSON integer fields MUST use decimal-digit syntax without a fraction or exponent.
+
+The [feature registry](feature-registry.json) owns reserved IDs/revisions and their
+dependencies. Required dependency revisions must be offered and selected explicitly;
+no implementation may add an unoffered revision. A selected dependency conflict is
+NCP-FEATURE-NEGOTIATION-INVALID. Registry presence is not proof of SDK support.
+
+**NCP-FTR-02 — payload bound.** A feature-bearing Hello or handshake Caps MUST have
+a complete encoded payload of at most 16384 bytes, also subject to the existing
+frame/admission limit (the smaller wins). This includes base fields, not just feature
+values, so receivers never need a reserialization-dependent byte count. Existing
+frame-size errors may take precedence before feature parsing. Base-only handshakes
+retain existing limits. The standalone JSON block corpus tests the parser boundary;
+full frame fixtures must additionally account for base fields.
+
+**NCP-FTR-03 — selection.** A version-1 server MUST validate before selecting the
+highest common locally eligible revision per shared ID. Unknown optional IDs are
+omitted. Experimental revisions require explicit opt-in on both peers; deprecated
+revisions require local policy permission. A remote lifecycle label MUST NOT relax
+local policy. Required IDs absent from the offer are invalid; required IDs without
+an eligible common revision fail with `NCP-FEATURE-REQUIRED-UNSUPPORTED`.
+Cross-feature constraints MUST be checked on the selected combination; reject an
+invalid combination instead of silently changing deterministic selection.
+
+**NCP-FTR-04 — acknowledgment.** Handshake Caps MUST return
+`feature_negotiation: 1` and `selected_features`, an explicit array (possibly empty)
+of at most 32 `{"id":"example.echo","revision":1}` objects. Clients MUST reject
+duplicate, unoffered, policy-ineligible or invalid selections before application
+writes. Missing required IDs fail with `NCP-FEATURE-REQUIRED-UNSUPPORTED`.
+An old Caps without acknowledgment means an empty selection: close without dispatch
+if anything is required, otherwise base-only behavior MAY continue.
+
+**NCP-FTR-05 — lifetime and authority.** Selection belongs only to the admitted
+session. Reconnect/failover MUST repeat selection and identity admission. Application
+Caps MUST NOT renegotiate an active session. Withdrawal requires stop-admission,
+drain/close and fresh negotiation. Each operation MUST verify its exact required
+revisions before writing. Feature support grants no subject, capabilities, scope or
+assurance. A rejected extension handshake MAY fall back only on a fresh connection,
+when local policy permits and no required feature or application request is carried
+forward. A dispatched operation MUST NOT be replayed as a handshake fallback.
 
 ---
 
@@ -382,7 +445,7 @@ Schema-anchor frame, **published by a Node**, used to establish a global Schema 
 **anchor_id computation rules**
 
 1. Serialize `schema` to canonical JSON per **RFC 8785 (JSON Canonicalization Scheme, JCS)**.
-   - JCS guarantees Unicode normalization, object-key ordering by UTF-16, and no extra whitespace.
+   - JCS preserves Unicode string data without normalization, sorts object keys by UTF-16, and emits no extra whitespace ([RFC 8785 §3.1](https://www.rfc-editor.org/rfc/rfc8785.html#section-3.1)).
    - Implementations MUST use a standard JCS library (do not implement your own) to keep .NET / Python / TS SDKs consistent.
 2. Compute the SHA-256 digest of the JCS output as UTF-8 bytes.
 3. Format as `sha256:{lowercase hex}`.
@@ -534,24 +597,30 @@ cache-usage object when the underlying runtime can report one.
 
 **Connection-negotiation CapsFrame**
 
-During native-mode connection setup, the Node returns its negotiated capabilities via CapsFrame:
+Native handshake uses the dedicated top-level payload of §2.6.2, identified by
+binary-header type 0x04, not the application anchor_ref/count/data schema below.
+Feature negotiation fields MUST NOT be nested under data. This example negotiates
+the extension; base-only handshakes omit the feature fields.
 
 ```json
 {
-  "frame": "0x04",
-  "anchor_ref": "nps:system:caps",
-  "count": 1,
-  "data": [{
-    "nps_version": "0.4",
-    "session_version": "0.4",
-    "max_frame_payload": 65535,
-    "negotiated_encoding": "msgpack",
-    "enabled_encodings": ["msgpack", "binary_vector.v1"],
-    "supported_protocols": ["ncp", "nwp", "nip"],
-    "ext_support": true,
-    "max_concurrent_streams": 32,
-    "e2e_enc_algorithms": ["aes-256-gcm", "chacha20-poly1305"]
-  }]
+  "node_id": "urn:nps:agent:example.test:server",
+  "caps": [
+    "ncp"
+  ],
+  "session_version": "0.13",
+  "negotiated_encoding": "json",
+  "enabled_encodings": [
+    "json"
+  ],
+  "supported_protocols": [
+    "ncp"
+  ],
+  "max_frame_payload": 65535,
+  "ext_support": false,
+  "max_concurrent_streams": 32,
+  "feature_negotiation": 1,
+  "selected_features": []
 }
 ```
 
@@ -937,6 +1006,137 @@ The following requirement IDs freeze the portable runtime behavior used by
 
 ---
 
+### 7.8 Production runtime profile (NCP v0.13)
+
+When experimental `nps.production_runtime` revision 1 is selected, the following
+requirements apply. Unselected base behavior is unchanged; no new frame or heartbeat
+mechanism is allocated.
+
+#### 7.8.1 Public responsibilities
+
+Six SDKs expose equivalent capabilities with language-idiomatic types:
+
+| Component | Contract |
+|---|---|
+| SessionFactory | Connect, negotiate, admit identity; return immutable peer/feature/security binding |
+| SessionPool | Acquire by full security key with bounded pending queue; release only healthy sessions |
+| InvocationDispatcher | Register correlation before write, send typed frames, dispatch exactly one local terminal result |
+| RetryDecision | Pure decision from dispatch certainty, operation contract, deadline and remaining budget |
+| DrainController | Stop admission, bounded wait/cancel, close with unresolved-operation evidence |
+
+No caller receives a generic setter for admitted authority. Low-level stream APIs may remain,
+but bypassing the managed dispatcher forfeits this profile's guarantees and must be explicit.
+
+#### 7.8.2 States and outcomes
+
+Session states: connecting -> negotiating -> admitting -> active -> draining -> closed.
+Any establishment failure closes its resources; closed sessions cannot return to a pool.
+Reconnect produces a new session and fresh NIP admission, not authorization resumption.
+
+Invocation states: queued -> writing -> awaiting -> completed, with rejected-before-dispatch,
+cancelled-before-dispatch, expired-before-dispatch or indeterminate terminal alternatives.
+A transport failure during/after the first write attempt is indeterminate unless positive server
+evidence proves no dispatch. Bytes written locally or received by TCP do not prove execution.
+A valid correlated remote terminal result establishes a known remote outcome. Repeated identical
+terminal results are ignored; conflicting terminal results close the session and report a protocol
+fault without invoking the application completion callback again.
+
+Maintain a bounded terminal-correlation tombstone set for the remaining session lifetime. When
+its configured capacity is reached, drain/reconnect rather than evicting and risking ID reuse.
+No correlation ID may be reused within a session. Unknown correlation IDs close the session.
+Draining preserves tombstones until close. A late terminal after local cancellation may update
+diagnostic evidence but cannot reverse the already-delivered local terminal outcome.
+
+#### 7.8.3 Resource limits
+
+Default local operational limits (applications may configure other finite positive values):
+
+- connect 5 s; handshake 5 s; admission 5 s;
+- total request deadline 30 s including queue/write/wait and retries;
+- drain 30 s; pool acquisition uses the request's remaining deadline;
+- at most 8 pooled sessions per complete pool key, 64 total sessions and 256 pending acquisitions;
+- at most 32 queued frames and 1 MiB queued payload bytes per session; whichever limit is hit first;
+- terminal tombstone limit 4096 per session.
+
+Negotiated payload/concurrency ceilings always bound local settings. Keepalive/idle rules remain
+NCP §7.6/7.7; this profile adds no conflicting heartbeat negotiation. All waits/callbacks honor
+remaining deadlines. Queue saturation rejects before dispatch, without hidden unbounded buffers.
+For streaming, stop accepting new frames before local buffers overflow and use the protocol's
+existing flow control. A peer exceeding the negotiated window fails the session.
+
+The pool key includes endpoint identity, admitted subject, credential generation, assurance/scope
+policy fingerprint, selected features and encoding/security profile. Different tenants or delegated
+scopes cannot share a session merely because host/port matches. Credential revocation or rotation
+invalidates affected pool entries. Bound the total number of keys by the global session/queue limits.
+
+#### 7.8.4 Retry decision
+
+| Evidence | Automatic retry |
+|---|---|
+| Before any write attempt, no dispatch | Allowed within total deadline and attempt budget |
+| Explicit authenticated remote rejection proving no dispatch | Allowed only if operation/profile allows retry and rejection is transient |
+| Unknown outcome for read-only operation declared replay-safe | Allowed only under that operation's freshness/cost semantics |
+| Unknown outcome for mutation without durable deduplication proof | Never |
+| Unknown outcome with server-declared durable idempotency contract | Only same principal/operation key/digest within server retention and permitted target scope |
+| Known remote terminal result | Do not replay automatically |
+
+Default attempt budget is 2 total attempts, not 2 retries. Default delay is uniformly sampled
+between zero and min(1000 ms, 100 ms * 2^(retry_index-1)); delay consumes the original deadline.
+An injected random/clock interface makes tests deterministic. A retry requiring sleep beyond the
+remaining deadline terminates. Server retry hints may lengthen delay only within remaining budget.
+Reconnect success never proves an earlier operation unexecuted. Failover retries require the same
+durable deduplication scope at the new owner; otherwise return indeterminate.
+
+#### 7.8.5 Cancellation and drain
+
+Cancellation before first write prevents dispatch. During/after writing it stops local waiting and
+propagates only the cancellation mechanism defined by the negotiated operation/NOP profile.
+No invented cancellation frame is allocated here. Without remote rollback/terminal evidence the
+outcome remains indeterminate; cancellation does not claim that side effects were undone.
+
+Drain rejects new acquisitions/operations, waits for admitted work within the drain deadline,
+requests supported cancellation, then closes and reports unresolved mutations as indeterminate.
+A receiver must not advertise draining as proof that previously written operations were unexecuted.
+One local completion per invocation applies to timeout/cancel/close races.
+
+#### 7.8.6 Failover and observability
+
+On connection loss, re-resolve active Anchor, honor monotonic cluster_epoch fencing and then
+negotiate/admit anew. Clear route/capability caches that belong to the old peer. Do not use a stale
+owner or transport resumption ticket as authorization. Never replay an uncertain mutation across
+owners without shared durable operation evidence.
+
+Emit connection/negotiation/queue/attempt/retry/reconnect/cancel/drain/failover counters and durations,
+outcome certainty and bounded request/correlation identifiers. Do not use subject/scope/operation
+keys as unbounded metric labels or log credentials, projections or request bodies.
+
+#### 7.8.7 Error proposals
+
+Runtime API errors are typed outcomes, not automatically new wire error assignments:
+queue-full, deadline-before-dispatch, cancelled-before-dispatch, indeterminate,
+correlation-conflict and session-closed. Map existing protocol errors without erasing their
+original code. Wire additions, if necessary for a specific operation, require its own registry entry.
+
+Operation cancellation bindings are NWP §7.3 and NOP §3.6/§5.2. No operation may
+be marked safe for automatic replay without an explicit durable retention period,
+principal/key/digest binding and cross-owner scope guarantee. Product state names or
+a successful connection do not establish these guarantees.
+
+---
+
+### 7.9 Experimental schema-batch candidate
+
+The optional [schema-batch revision 1](profiles/schema-batches.md), recorded by
+[CR-0017](cr/NPS-CR-0017-schema-batches.md), defines explicit ordered rows, complete
+stream baselines and epoch/schema/base-bound diffs over existing frames. Exact
+`nps.schema_batches=1` selection and local experimental opt-in are required; a suite
+version, anchor or feature registry entry is not admission or source authority.
+Unselected operations retain their base behavior. The current .NET reference is
+limited to its explicitly qualified mutual TLS subset. Candidate registration does
+not establish six-SDK, NWP live-result-stream or efficiency/billing qualification.
+
+---
+
 ## 8. Encoding Tiers
 
 All frame types support the following encoding tiers, selected via the T0/T1 bits of Flags:
@@ -1004,6 +1204,7 @@ For NCP v0.9, the standard binding is NWP `QueryFrame.vector_search.vector`. The
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.13 | 2026-09-09 | Alpha.20 optional feature revision negotiation: bounded types and complete handshake payloads, deterministic selection, required-feature pre-dispatch rejection and session scope; no new frames or base compatibility-floor change. Also defines bounded production runtime, retry/drain certainty, and corrects JCS Unicode and handshake Caps examples. |
 | 0.12 | 2026-08-31 | Alpha.19 connection hardening profile: deterministic effective keepalive interval and receive/idle clocks, single timeout-close transition, payload-free Nop enforcement, replay-safe rejection of QUIC/TLS 0-RTT NPS frames, identity-preserving QUIC migration, and carrier/application backpressure composition. Adds shared runtime hardening vectors and `NCP-EARLY-DATA-REJECTED`. |
 | 0.11 | 2026-07-29 | Added §2.6.2 Native Server Interoperability Profile: authentication-before-preamble ordering, separate bounded preamble/Hello reads, allocation-safe Hello limits, silent pre-admission failure behavior, deterministic version/encoding/protocol/limit negotiation, portable handshake Caps fields, and shared `native_server_handshake_vectors.json`. Additive; no new frame type or error code. |
 | 0.10 | 2026-07-05 | Native-mode transport adopted as normative (NPS-RFC-0006 **Accepted**). New native-mode **session continuity across Anchor failover** (NPS-CR-0009): on connection loss / `NCP-NID-MISMATCH` after a multi-Anchor ownership transfer, the client re-resolves via NDP §9 (highest `cluster_epoch`) or the NWP `anchor_failover` `successor_nid` and re-establishes the session. No new frames or error codes (`NCP-NID-MISMATCH` reused). |

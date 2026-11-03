@@ -1,0 +1,27 @@
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 test
+> vitest run
+
+
+ RUN  v4.1.12 /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/typescript
+
+(node:4178556) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4178568) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4178569) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4178590) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4178682) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4179682) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4179688) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  66 passed (66)
+      Tests  1324 passed (1324)
+   Start at  08:34:27
+   Duration  25.23s (transform 5.25s, setup 0ms, import 14.39s, tests 15.12s, environment 36ms)
+

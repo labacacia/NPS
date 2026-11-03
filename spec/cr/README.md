@@ -49,6 +49,12 @@ late in 0.x is still pending when v1.0 is cut).
 
 | CR | Title | Target | Status |
 |---|---|---|---|
+| [NPS-CR-0017](./NPS-CR-0017-schema-batches.md) | Bounded schema batches and diff recovery | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0016](./NPS-CR-0016-data-results.md) | Version-bound data result resources | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0015](./NPS-CR-0015-governed-challenge.md) | Governed action challenge | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0014](./NPS-CR-0014-production-runtime.md) | Bounded production runtime | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0013](./NPS-CR-0013-invocation-context.md) | Authenticated invocation context | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0012](./NPS-CR-0012-feature-negotiation.md) | Feature revision negotiation in native handshake and HTTP admission | v1.0.0-alpha.20 | Draft |
 | [NPS-CR-0001](./NPS-CR-0001-anchor-bridge-split.md) | Split Gateway Node into Anchor Node + Bridge Node | v1.0-alpha.3 | Implemented (2026-04-26) |
 | [NPS-CR-0002](./NPS-CR-0002-anchor-topology-queries.md) | Standard topology query types for Anchor Node (`topology.snapshot` / `topology.stream`) | v1.0-alpha.4 | Implemented (2026-04-27) |
 | [NPS-CR-0003](./NPS-CR-0003-orchestrator-group-session-nids.md) | Orchestrator group NIDs and short-lived session NIDs | v1.0-alpha.6 | Implemented (2026-05-28) |
@@ -62,6 +68,9 @@ late in 0.x is still pending when v1.0 is cut).
 | [NPS-CR-0011](./NPS-CR-0011-stateful-llm-context.md) | Stateful LLM context and delta completion — owner-bound opaque contexts, CAS versions, atomic commit, lifecycle actions, discovery, and measurable reuse | v1.0.0-alpha.18 | Implemented |
 
 ## Authoring a new CR
+
+Latest draft: [NPS-CR-0012: Feature Revision Negotiation](./NPS-CR-0012-feature-negotiation.md)
+— target v1.0.0-alpha.20; Draft; discussion NPS-Dev #124.
 
 1. Pick the next available `NNNN` from the index above.
 2. Copy the structure of an existing CR (e.g. CR-0001) — there is no

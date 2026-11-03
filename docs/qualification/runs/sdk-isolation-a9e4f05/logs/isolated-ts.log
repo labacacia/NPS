@@ -1,0 +1,80 @@
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 test
+> vitest run
+
+
+ RUN  v4.1.12 /tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript
+
+(node:4185584) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4188746) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/dist/alpha20/sqlite-projection-replay-store.js' imported from /tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/tests/fixtures/alpha20-replay-worker.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:731:20)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:708:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:310:38)
+    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:664:36)
+    at TracingChannel.tracePromise (node:diagnostics_channel:350:14)
+    at ModuleLoader.import (node:internal/modules/esm/loader:663:21)
+    at defaultImportModuleDynamicallyForModule (node:internal/modules/esm/utils:222:31) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/dist/alpha20/sqlite-projection-replay-store.js'
+}
+
+Node.js v22.22.1
+node:internal/modules/esm/resolve:275
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/dist/alpha20/sqlite-projection-replay-store.js' imported from /tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/tests/fixtures/alpha20-replay-worker.mjs
+    at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:985:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:731:20)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:708:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:310:38)
+    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:664:36)
+    at TracingChannel.tracePromise (node:diagnostics_channel:350:14)
+    at ModuleLoader.import (node:internal/modules/esm/loader:663:21)
+    at defaultImportModuleDynamicallyForModule (node:internal/modules/esm/utils:222:31) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///tmp/nps-alpha20-sdk-isolation-20261103-01/NPS-SDK-TypeScript/dist/alpha20/sqlite-projection-replay-store.js'
+}
+
+Node.js v22.22.1
+ ❯ tests/alpha20-sqlite-replay.test.ts (9 tests | 2 failed) 2380ms
+   × two real processes sharing one file cannot both claim the same ID 1358ms
+   × committed claim survives abrupt process termination without graceful close 449ms
+(node:4189384) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4190005) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/alpha20-sqlite-replay.test.ts > two real processes sharing one file cannot both claim the same ID
+ FAIL  tests/alpha20-sqlite-replay.test.ts > committed claim survives abrupt process termination without graceful close
+Error: child exited before message
+ ❯ ChildProcess.exited tests/alpha20-sqlite-replay.test.ts:31:46
+     29|     const received = (value: unknown) => { cleanup(); resolve(value); …
+     30|     const failed = (error: Error) => { cleanup(); reject(error); };
+     31|     const exited = () => { cleanup(); reject(new Error('child exited b…
+       |                                              ^
+     32|     function cleanup() { clearTimeout(timeout); child.off('message', r…
+     33|     child.once('message', received); child.once('error', failed); chil…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+ Test Files  1 failed | 65 passed (66)
+      Tests  2 failed | 1322 passed (1324)
+   Start at  08:36:57
+   Duration  75.97s (transform 12.23s, setup 0ms, import 38.58s, tests 43.69s, environment 121ms)
+

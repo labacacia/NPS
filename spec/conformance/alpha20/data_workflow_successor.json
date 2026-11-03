@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "additive-schema-batch-registration",
+  "date": "2026-11-02",
+  "decision": "docs/adr/2026-11-02-additive-schema-batch-registration.md",
+  "predecessor_manifest_sha256": "24ee510e3dd951b415d54ec0ea26e730d1ea2a2573ab2278110d06b0897ca3e7",
+  "replacements": [
+    {
+      "path": "spec/feature-registry.json",
+      "predecessor_path": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+      "predecessor_sha256": "be598bf69354df16f8f18c90ec9fbb1946263ec31430d8b6859d08537596be0d",
+      "successor_sha256": "2e0abe60230c27c0cad88a036695af9dc675effa5185c880d3be22db5a11d3ea"
+    },
+    {
+      "path": "spec/version-matrix.yaml",
+      "predecessor_path": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+      "predecessor_sha256": "1dd4f3f71b5f7fd5d8ce9a381e35be2abc3eaeed06b993b74b358765a73c7864",
+      "successor_sha256": "eb11ceae7cd0c871a61a4d98568d8d7cda297ecbfd12e8450fa2ae2e85be923e"
+    }
+  ]
+}

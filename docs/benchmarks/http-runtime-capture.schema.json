@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NPS D20-01 Release HTTP runtime observations",
+  "description": "Structural schema for one recorded C/D observation, including unsuccessful RSS-budget observations. It does not establish capture authenticity, correct oracle/policy execution, matrix completeness or qualification; the runtime drivers validate those separately.",
+  "type": "object",
+  "required": ["arm", "rows", "fixture_sha256", "answer", "model_visible_utf8", "cache_state", "compression", "source", "wire_bytes", "wire_bytes_per_workflow", "observed_gzip_responses_per_workflow", "latency_ms", "rss_bytes_after_workflow", "process_peak_rss_bytes", "rss_budget_passed", "provider_usage", "repeats", "warmups", "build_configuration", "model_egress_policy"],
+  "properties": {
+    "arm": {"enum": ["C-http-runtime", "D-nps-runtime"]},
+    "rows": {"enum": [100, 1000, 100000]},
+    "fixture_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "answer": {"type": "object", "required": ["groups", "anomaly_reasons"], "properties": {"groups": {"type": "object"}, "anomaly_reasons": {"type": "array", "items": {"type": "string"}}}},
+    "model_visible_utf8": {"type": "string", "description": "Exact UTF-8 model-bound text, capped at 32768 bytes by the runtime validator, not by JSON Schema character length."},
+    "cache_state": {"enum": ["cold", "warm"]},
+    "compression": {"enum": ["identity", "gzip-response"]},
+    "source": {
+      "type": "object",
+      "required": ["revision", "binding", "boundary", "request_id", "environment"],
+      "properties": {
+        "revision": {"$ref": "#/$defs/provenance"}, "binding": {"$ref": "#/$defs/provenance"},
+        "boundary": {"$ref": "#/$defs/provenance"}, "request_id": {"$ref": "#/$defs/provenance"},
+        "environment": {"$ref": "#/$defs/provenance"}
+      }
+    },
+    "wire_bytes": {"type": "integer", "minimum": 1},
+    "wire_bytes_per_workflow": {"$ref": "#/$defs/positiveSamples"},
+    "latency_ms": {"type": "array", "minItems": 30, "maxItems": 30, "items": {"type": "number", "minimum": 0, "maximum": 120000}},
+    "process_cpu_ms_per_workflow": {"type": "array", "minItems": 30, "maxItems": 30, "items": {"type": "number", "minimum": 0}, "description": "Optional only for historical records. New CPU experiment drivers require all 30 observed finite values. Zero is allowed at operating-system clock resolution; absence is unknown, never zero."},
+    "cpu_measurement_boundary": {"const": "co-host process CPU delta brackets workflow including cold frontend shutdown and counter-read overhead; no protocol attribution"},
+    "observed_gzip_responses_per_workflow": {"type": "array", "minItems": 30, "maxItems": 30, "items": {"type": "integer", "minimum": 0}},
+    "rss_bytes_after_workflow": {"$ref": "#/$defs/positiveSamples"},
+    "process_peak_rss_bytes": {"type": "integer", "minimum": 1},
+    "rss_budget_passed": {"type": "boolean", "description": "Must equal peak <= 536870912. False observations are retained as failures."},
+    "provider_usage": {"type": "null", "description": "This runtime experiment makes zero provider calls. Separate provider ledgers retain observed/unknown usage."},
+    "repeats": {"const": 30}, "warmups": {"const": 3}, "build_configuration": {"const": "Release"},
+    "model_egress_policy": {"const": "operator-enabled preregistered synthetic evidence only; both paths enforce store ToModel checks"},
+    "schema_churn": {"enum": ["none", "add-nullable-field"]},
+    "updated_row_fraction": {"enum": [0, 0.01, 0.1]},
+    "source_transition": {
+      "type": ["object", "null"],
+      "description": "Non-null in the schema/update extension; independent validation enforces relative schema/snapshot changes and actual probe assertions.",
+      "required": ["old_schema_ref", "new_schema_ref", "old_snapshot_id", "new_snapshot_id", "updated_rows", "old_page_unchanged", "old_cursor_continued", "cross_result_cursor_rejected", "mutation_rule", "timing_scope"],
+      "properties": {
+        "old_schema_ref": {"$ref": "#/$defs/schemaRef"}, "new_schema_ref": {"$ref": "#/$defs/schemaRef"},
+        "old_snapshot_id": {"$ref": "#/$defs/snapshot"}, "new_snapshot_id": {"$ref": "#/$defs/snapshot"},
+        "updated_rows": {"type": "integer", "minimum": 0},
+        "old_page_unchanged": {"type": "boolean"}, "old_cursor_continued": {"type": "boolean"},
+        "cross_result_cursor_rejected": {"type": "boolean"},
+        "mutation_rule": {"type": "string"}, "timing_scope": {"type": "string"}
+      }
+    }
+  },
+  "dependentRequired": {"process_cpu_ms_per_workflow": ["cpu_measurement_boundary"], "cpu_measurement_boundary": ["process_cpu_ms_per_workflow"]},
+  "$defs": {
+    "provenance": {"type": "string", "minLength": 1, "maxLength": 512},
+    "schemaRef": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "snapshot": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "positiveSamples": {"type": "array", "minItems": 30, "maxItems": 30, "items": {"type": "integer", "minimum": 1}}
+  }
+}

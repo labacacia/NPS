@@ -1,0 +1,34 @@
+{
+  "case_id": "handoff-100-expired-input-r0",
+  "rows": 100,
+  "fault": "expired-input",
+  "process_id": 3279950,
+  "guard": {
+    "specification": {
+      "processor_count": 4,
+      "gc_heap_hard_limit": "0x14000000",
+      "rss_limit_bytes": 536870912,
+      "max_workflow_seconds": 120,
+      "rss_sample_interval_seconds": 0.01,
+      "rss_scope": "actual controller and all live descendants; concurrent RSS and conservative live VmHWM sum"
+    },
+    "sampled_process_tree_peak_rss_bytes": 143695872,
+    "live_process_high_water_sum_guard_bytes": 143695872,
+    "poll_count": 528,
+    "process_ids": [
+      3278224,
+      3279950
+    ],
+    "elapsed_seconds": 5.17786807694938,
+    "violations": [],
+    "passed": true
+  },
+  "fixture_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "error_type": null,
+  "exit_code": 0
+}

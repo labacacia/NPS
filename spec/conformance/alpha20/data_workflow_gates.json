@@ -1,0 +1,803 @@
+{
+  "schema_version": 1,
+  "epic": 163,
+  "active_task": "D20-00",
+  "status": "IN_PROGRESS",
+  "as_of": "2026-11-02",
+  "source": {
+    "repository": "innolotus/ChangeControl",
+    "revision": "e7e6189f41a118e900f3bc3380a256bb4fc468b9",
+    "path": "EPICS/EPIC-007-nps-alpha20-production-contract-beta-readiness/docs",
+    "repository_main": "8e275265df762cd8260bd93acd623791dfc82454",
+    "plan_commit": "979e0df970dcdfbd7cf61d2a47ce28190acffa4a"
+  },
+  "release_baseline": "1.0.0-alpha.19",
+  "candidate_versions": {
+    "NCP": "0.13",
+    "NWP": "0.23",
+    "NIP": "0.16",
+    "NDP": "0.14",
+    "NOP": "0.11",
+    "frame_registry": "0.15"
+  },
+  "old_gates": [
+    {
+      "id": "A20-G01",
+      "name": "Frozen adopter/path/owner inventory",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 132,
+      "data_tasks": [
+        "D20-00",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G02",
+      "name": "Accepted protocol design and EN/CN parity",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 129,
+      "data_tasks": [
+        "D20-00",
+        "D20-02",
+        "D20-03",
+        "D20-04"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G03",
+      "name": "Frozen versions and compatibility",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 129,
+      "data_tasks": [
+        "D20-00",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G04",
+      "name": "Frozen shared vectors",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 129,
+      "data_tasks": [
+        "D20-00",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G05",
+      "name": "Six-SDK behavioral parity",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 130,
+      "data_tasks": [
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G06",
+      "name": "Truthful infrastructure manifests",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 131,
+      "data_tasks": [
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G07",
+      "name": "Eight-adopter convergence or approved exclusion",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 132,
+      "data_tasks": [
+        "D20-00",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G08",
+      "name": "Canonical adapter boundaries",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 132,
+      "data_tasks": [
+        "D20-00",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G09",
+      "name": "Cross-product qualification",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 133,
+      "data_tasks": [
+        "D20-05",
+        "D20-06",
+        "D20-07",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G10",
+      "name": "Security/privacy review",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 133,
+      "data_tasks": [
+        "D20-03",
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G11",
+      "name": "Reproducible candidate",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 134,
+      "data_tasks": [
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    },
+    {
+      "id": "A20-G12",
+      "name": "Explicit publication approval and ledger",
+      "disposition": "retained",
+      "status": "IN_PROGRESS",
+      "tracking_issue": 134,
+      "data_tasks": [
+        "D20-08"
+      ],
+      "owner_role": "NPS maintainers and original gate authority",
+      "replacement_evidence": null
+    }
+  ],
+  "beta_gates": [
+    {
+      "id": "BETA-G01",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G02",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G03",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G04",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G05",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G06",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G07",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G08",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G09",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G10",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G11",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    },
+    {
+      "id": "BETA-G12",
+      "disposition": "retained-separate-beta-workstream",
+      "local_completion_verified": false,
+      "tracking_issue": 134
+    }
+  ],
+  "old_tasks": [
+    {
+      "id": "P20-001",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-002",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-003",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-004",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-005",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-006",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-007",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-008",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-009",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "review original inventory and ownership records"
+    },
+    {
+      "id": "P20-101",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-102",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-103",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-104",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-105",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-106",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-107",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-108",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-109",
+      "disposition": "retained",
+      "upstream_checked": true,
+      "local_completion_verified": false,
+      "tracking_issue": 129,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "accepted EN/CN contract and exact shared bytes; no runtime claim"
+    },
+    {
+      "id": "P20-201",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-202",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-203",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-204",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-205",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-206",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-207",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-208",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 130,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed SDK public API and fault evidence"
+    },
+    {
+      "id": "P20-301",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-302",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-303",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-304",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-305",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-306",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 131,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed daemon/bridge manifest"
+    },
+    {
+      "id": "P20-401",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-402",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-403",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-404",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-405",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-406",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-407",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-408",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-409",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 132,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "existing adopter owner disposition and migration evidence"
+    },
+    {
+      "id": "P20-501",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-502",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-503",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-504",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-505",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-506",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-507",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-508",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-509",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 133,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "executed qualification or actual 21-day interval where required"
+    },
+    {
+      "id": "P20-601",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-602",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-603",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-604",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-605",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-606",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    },
+    {
+      "id": "P20-607",
+      "disposition": "retained",
+      "upstream_checked": false,
+      "local_completion_verified": false,
+      "tracking_issue": 134,
+      "owner_role": "existing-ChangeControl-owner",
+      "evidence_required": "dry-run/security ledger and explicit publication/promotion decision"
+    }
+  ],
+  "historical_thresholds": [
+    {
+      "id": "legacy-cgn-30",
+      "requirement": "at least 30% CGN savings",
+      "source": "docs/publishing/README.md",
+      "disposition": "retained-until-authority-reconciles",
+      "evidence_class": "byte-estimate-not-provider-billing"
+    },
+    {
+      "id": "legacy-wire-50",
+      "requirement": "at least 50% wire compression",
+      "source": "docs/publishing/README.md",
+      "disposition": "retained-until-authority-reconciles",
+      "evidence_class": "wire-bytes-with-defined-baseline"
+    }
+  ],
+  "observed_blockers": [
+    {
+      "id": "D00-BASE-SECURITY",
+      "scope": "integration",
+      "state": "observed",
+      "evidence": "PR #173 Security Gates run 39277136184",
+      "note": "NuGet/npm/Go/Maven/RustSec failures; no waiver or diagnosis inferred."
+    },
+    {
+      "id": "P20-108",
+      "scope": "prior-contract-freeze",
+      "state": "unverified",
+      "evidence": "spec/conformance/alpha20/README.md",
+      "note": "Data corpus does not complete the earlier shared runtime/challenge/fault corpus."
+    }
+  ],
+  "no_waiver": true
+}

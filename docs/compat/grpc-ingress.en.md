@@ -2,16 +2,11 @@ English | [中文版](./grpc-ingress.md)
 
 # gRPC Ingress Deep Dive
 
-> **Historical guide.** The standalone ingress repository is archived. Current
-> bridge implementation authority is `LabAcacia.NPS.NWP.Bridge` in
-> [NPS-SDK-DotNet](https://github.com/labacacia/NPS-SDK-DotNet); use its current
-> API and security guidance for new deployments.
-
 > `LabAcacia.GrpcIngress` v1.0.0-alpha.16 — exposes one or more **NWP nodes**
 > as a single **gRPC service**. Proto package `labacacia.grpc_bridge.v1`,
 > service name `NwpBridge`, 4 unary RPCs.
 
-This document fills in what [`compat/grpc-ingress/README.md`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/README.md)
+This document fills in what [`compat/grpc-ingress/README.md`](../../compat/grpc-ingress/README.md)
 does not cover: why "bytes passthrough" instead of strong-typed proto,
 the semantic boundary of error mapping, multi-language client usage, and
 how to layer strong-typed proto on top of this service.
@@ -634,7 +629,7 @@ top-level `task_id` field. Empty string otherwise.
 ## 14. References
 
 - NWP spec: [`spec/NPS-2-NWP.md`](../../spec/NPS-2-NWP.md) v0.5
-- proto definition: [`compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto)
+- proto definition: [`compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto`](../../compat/grpc-ingress/src/LabAcacia.GrpcIngress/Protos/nwp_ingress.proto)
 - gRPC .NET docs: https://learn.microsoft.com/aspnet/core/grpc/
-- CHANGELOG: [`compat/grpc-ingress/CHANGELOG.md`](https://github.com/labacacia/NPS-gRPC-Ingress/blob/main/CHANGELOG.md)
+- CHANGELOG: [`compat/grpc-ingress/CHANGELOG.md`](../../compat/grpc-ingress/CHANGELOG.md)
 - Standalone repo: [labacacia/NPS-gRPC-Ingress](https://github.com/labacacia/NPS-gRPC-Ingress)

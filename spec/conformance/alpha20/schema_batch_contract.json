@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "nps.schema_batches",
+  "revision": 1,
+  "lifecycle": "experimental",
+  "default_enabled": false,
+  "kind": "candidate-contract-not-sdk-or-efficiency-evidence",
+  "messagepack_field_names": "canonical_snake_case",
+  "frames": {
+    "anchor": 1,
+    "diff": 2,
+    "stream": 3,
+    "caps": 4
+  },
+  "reference_limits": {
+    "max_payload_bytes": 65536,
+    "max_rows": 100000,
+    "max_retained_bytes": 33554432,
+    "max_rows_per_chunk": 512,
+    "max_fields": 64,
+    "max_field_name_utf8_bytes": 64,
+    "max_patch_operations": 256,
+    "max_credit": 8,
+    "max_schema_ttl_seconds": 900
+  },
+  "row_types": [
+    "string",
+    "bool",
+    "int32",
+    "uint64"
+  ],
+  "uint64_cell_maximum": 9007199254740991,
+  "baseline": {
+    "epoch": "stream_id",
+    "version": 0,
+    "publish_only_at_final": true,
+    "schema_order_significant": true,
+    "unary_caps_is_versioned": false
+  },
+  "diff": {
+    "epoch": "entity_id",
+    "schema": "anchor_ref",
+    "base": "base_seq",
+    "format": "json_patch",
+    "default_only_when_omitted": true,
+    "operations": [
+      "replace"
+    ],
+    "atomic": true,
+    "explicit_null_is_present": true,
+    "missing_value_is_invalid": true
+  },
+  "identity": {
+    "wire_ids_are_authority": false,
+    "fixture_selection_is_admission": false,
+    "reference_carrier": "host-verified-mutual-tls"
+  },
+  "recovery": {
+    "fault_is_terminal": true,
+    "reconnect_inherits_base": false,
+    "complete_authorized_baseline_required": true
+  },
+  "model_token_or_billing_saving_claimed": false
+}

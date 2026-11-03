@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "evidence_class": "design-oracle",
+  "artifacts": [
+    {
+      "path": "spec/conformance/alpha20/data_result_contract.json",
+      "sha256": "e9483dce3c551ee693d6dcd18ec1cbaa130a84e95a022d4629bbefe6f4b65197"
+    },
+    {
+      "path": "spec/conformance/alpha20/data_result_vectors.json",
+      "sha256": "21a146914584b4c4b9d5ae62dbb234091279512a434bcb6cd9e9f4956355bd37"
+    },
+    {
+      "path": "spec/conformance/alpha20/data_workflow_gates.json",
+      "sha256": "d8fab0eaa6a7242c422d3e94e15c8298422ed67f3784003622afeceb3ae88d63"
+    },
+    {
+      "path": "spec/conformance/alpha20/data_workflow_methodology.json",
+      "sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c"
+    },
+    {
+      "path": "spec/profiles/data-results.md",
+      "sha256": "c24b936ec1fcdddf9fcef783eeb83f030b45942ad7e794d555e1fcb53f0daa9e"
+    },
+    {
+      "path": "spec/profiles/data-results.cn.md",
+      "sha256": "3a436a8ba6cc539db3a27a0e4c52c019bc1e570eb20ecea4b9007e3cdba5842a"
+    },
+    {
+      "path": "spec/feature-registry.json",
+      "sha256": "be598bf69354df16f8f18c90ec9fbb1946263ec31430d8b6859d08537596be0d"
+    },
+    {
+      "path": "spec/version-matrix.yaml",
+      "sha256": "1dd4f3f71b5f7fd5d8ce9a381e35be2abc3eaeed06b993b74b358765a73c7864"
+    },
+    {
+      "path": "spec/error-codes.md",
+      "sha256": "efbedbc9315cda3cb95c4d5779ade4ceee13d8934d363baede96b9e303665691"
+    },
+    {
+      "path": "spec/error-codes.cn.md",
+      "sha256": "3df417c1a1d57ce7068254cab845f4b53cc85a0c2718da091d414cab01a45e93"
+    },
+    {
+      "path": "spec/status-codes.md",
+      "sha256": "059d9f6152e316166162d306e3e50e7fe496129ed98611278fce8313dbdd3271"
+    },
+    {
+      "path": "spec/status-codes.cn.md",
+      "sha256": "7346570fba1b3842e03e68d88a51cba09701215c3bcb8371e8929bbc3ee08515"
+    }
+  ]
+}

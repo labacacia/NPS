@@ -4,11 +4,11 @@
 
 **Spec Number**: NPS-4
 **Status**: Proposed
-**Version**: 0.13
-**Date**: 2026-08-31
+**Version**: 0.14
+**Date**: 2026-09-09
 **Port**: 17433（默认，共用）/ 17436（可选独立）
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12)、NPS-3 (NIP v0.15)
+**Depends-On**: NPS-1 (NCP v0.13)、NPS-3 (NIP v0.16)
 
 ---
 
@@ -411,10 +411,39 @@ Registry MUST NOT 声明其无法满足相应运营方信任要求的 profile。
 
 ---
 
+### 7.9 生产运行时发现绑定（NDP v0.14）
+
+以下要求适用于使用 nps.production_runtime revision 1 的客户端，
+复用既有发现字段，不把 Announce 能力声明变成授权捷径。
+
+1. **NDP-P20-01 — 新鲜度。** 选择新目标前，验证解析记录的 timestamp/last_seen/ttl
+   及既有签名、profile、fence 规则。过期或 health=draining 的记录不得接收新的
+   profile 操作。正面 health 报告不证明身份或特性支持。
+2. **NDP-P20-02 — Owner fence。** cluster_anchor 解析到唯一最高存活 cluster_epoch
+   owner。同 epoch 分裂、可信解析不可用或 fence 回退按既有 NDP 错误安全拒绝。
+   不得为方便而回退缓存的旧 owner。
+3. **NDP-P20-03 — 新绑定。** Endpoint/owner/epoch 改变时，使旧 peer 的路由、
+   特性缓存及相关连接池会话失效。新连接重新 NCP 协商和 NIP 准入。
+   Announce capabilities、Graph 成员关系或 TLS 恢复都不能授予旧选择。
+4. **NDP-P20-04 — HTTP 证据。** 依赖特性的 HTTP 派发前，获取端点的认证 NWM
+   并执行 NWP §9.6 全后端路由保证。发现缓存只是线索，不是授权；
+   key 包含解析 peer 身份/epoch、路由及 manifest version，不能延长新鲜度，
+   也不能替代当前 handler 准入。
+5. **NDP-P20-05 — 资格记录。** 运行时证据记录 registry 身份、解析 NID、endpoint、
+   cluster_epoch、graph_seq、新鲜度截止时间、manifest version 和所选特性 revision，
+   不记录凭据或敏感 scope。此为本地/资格记录，不新增签名 Announce 字段。
+   故障转移仅在 NCP §7.8 明确的共享持久去重契约下允许重试不确定 mutation；
+   路由成功绝不证明前次未执行。
+
+---
+
+参考实现说明：显式选择的[易失结果路由组件](../impl/dotnet/src/NPS.NDP/Discovery/README.cn.md)及[静态/双节点夹具](../docs/samples/ndp-result-routing.cn.md)仅验证所声明的 HTTP 参考路径，不代表完整生产运行时或持久注册表 Profile 已通过。
+
 ## 8. 变更历史
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| 0.14 | 2026-09-09 | Alpha.20 生产运行时发现绑定：排除过期/draining 目标、owner fence、换节点重新准入、HTTP 路由保证与有界资格记录，不新增 Announce 字段。 |
 | 0.13 | 2026-08-31 | alpha.19 持久恢复 Profile：原子持久 sequence/epoch fence、有序 restart recovery、保留同 epoch 脑裂、状态损坏/不可用时 fail closed、显式 volatile/durable 能力真实性、联邦 provenance，以及共享 restart/partition transcript。|
 | 0.12 | 2026-07-29 | 定义 Registry Conformance profile：additive 的 `graph_seq` wire 字段及其兼容行为；确定性的签名体 canonicalization；有序的 签名/profile/重放/冲突/陈旧 准入流程；完全重复与 advisory liveness 刷新的语义区分；条目过期/下线后仍保留序列栅栏；最高 epoch 的集群解析与脑裂行为；按方向区分且已排序的 Bridge 能力发现；以及跨语言共享的 canonicalization / Registry 测试向量。|
 | 0.11 | 2026-07-12 | **NPS-CR-0010 Bridge Node 是双向的**：AnnounceFrame (0x30) 新增可选 `bridge_inbound_protocols`（string 数组，取值域同 `bridge_protocols`）—— 该节点**入向服务**（外部 → NPS）的外部协议集。`bridge_protocols` 保持其原有含义不变（**出向**桥接的协议集）。缺省/为空 ⇒ 不暴露入向面，即 alpha.16 之前的纯出向 Bridge Node。声明 `"bridge"` 的节点 MUST 保证两个数组至少一个非空。Additive / 向后兼容；无新增 NDP 错误码。|
