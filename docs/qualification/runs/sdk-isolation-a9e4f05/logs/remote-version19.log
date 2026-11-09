@@ -1,0 +1,30 @@
+Checking suite version: 1.0.0-alpha.19
+Repos to check: 10
+
+  ✅ labacacia/NPS: 1.0.0-alpha.19
+  ✅ labacacia/NPS-Dev: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-DotNet: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-Python: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-TypeScript: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-Java: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-Rust: 1.0.0-alpha.19
+  ✅ labacacia/NPS-SDK-Go: 1.0.0-alpha.19
+  ✅ labacacia/NIP-CA-Server: 1.0.0-alpha.19
+  ✅ labacacia/NPS-Daemons: 1.0.0-alpha.19
+
+## NPS Suite Version Sync — `1.0.0-alpha.19`
+
+| Repo | Kind | Expected | Declared | Match |
+|------|------|----------|----------|-------|
+| `labacacia/NPS` | changelog | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-Dev` | changelog | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-DotNet` | dotnet-csproj | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-Python` | pyproject | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-TypeScript` | npm-package | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-Java` | gradle-properties | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-Rust` | cargo-toml | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-SDK-Go` | changelog | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NIP-CA-Server` | dotnet-csproj | required | `1.0.0-alpha.19` | ✅ |
+| `labacacia/NPS-Daemons` | changelog | required | `1.0.0-alpha.19` | ✅ |
+
+### ✅ All required repos are in sync.

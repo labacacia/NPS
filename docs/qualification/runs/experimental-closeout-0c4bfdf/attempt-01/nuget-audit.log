@@ -1,0 +1,123 @@
+{"command": ["dotnet", "list", "impl/dotnet/NPS.sln", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.Core/NPS.Core.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NWP/NPS.NWP.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/tests/NPS.Tests/NPS.Tests.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NOP/NPS.NOP.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NDP/NPS.NDP.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/NPS.Benchmarks.TokenSavings.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/NPS.Benchmarks.WireSize.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/benchmarks/NPS.Benchmarks.NipCert/NPS.Benchmarks.NipCert.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj"
+    },
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj"
+    }
+  ]
+}
+{"command": ["dotnet", "list", "tools/daemons/nps-runner/NpsRunner.csproj", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/daemons/nps-runner/NpsRunner.csproj"
+    }
+  ]
+}
+{"command": ["dotnet", "list", "tools/daemons/npsd/Npsd.csproj", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/daemons/npsd/Npsd.csproj"
+    }
+  ]
+}
+{"command": ["dotnet", "list", "tools/daemons/nps-registry/NpsRegistry.csproj", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/daemons/nps-registry/NpsRegistry.csproj"
+    }
+  ]
+}
+{"command": ["dotnet", "list", "tools/daemons/nps-ledger/NpsLedger.csproj", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/daemons/nps-ledger/NpsLedger.csproj"
+    }
+  ]
+}
+{"command": ["dotnet", "list", "tools/nip-ca-server/NPS.NipCaServer.csproj", "package", "--vulnerable", "--include-transitive", "--format", "json", "--source", "https://api.nuget.org/v3/index.json"], "cwd": "."}
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/tools/nip-ca-server/NPS.NipCaServer.csproj"
+    }
+  ]
+}

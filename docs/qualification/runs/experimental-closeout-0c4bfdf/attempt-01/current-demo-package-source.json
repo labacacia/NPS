@@ -1,0 +1,18 @@
+{
+  "kind": "unpublished local D20-05 development artifacts; not alpha.19 release or registry publication",
+  "source_revision": "0c4bfdf694e07ca0b60a9eb67cfd4a1e8a15e804",
+  "nuget_version": "1.0.0-alpha.20.dev.h0c4bfdf694e0",
+  "python_version": "1.0.0a20.dev13520522876128",
+  "python_source_drift_checked": true,
+  "artifacts": {
+    "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.h0c4bfdf694e0.nupkg": "ceec69b28dbe3246ff9ab7a635663a2402b4eec2651090a23fbaa8158e4667dd",
+    "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.h0c4bfdf694e0.nupkg": "dd7163224432c8aabb8a71a12b64b5b4cb6d4bae1358e0458ad8654598d26126",
+    "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.h0c4bfdf694e0.nupkg": "81861b6a1f03866c0d8dc79373ac5caaf4fc489c426917a1d42ebdf8b38ff83a",
+    "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.h0c4bfdf694e0.snupkg": "875f82531dfbf13865f0cc98e547a9c031a3fc847484880d44dda8df0ac1fbad",
+    "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.h0c4bfdf694e0.nupkg": "87595b9b62197a8378d8e0bdef4f0940f7a7ffd7b2ad8303c23cb6becbef8fb4",
+    "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.h0c4bfdf694e0.snupkg": "572743012ae7b76651d0236c42107e9ee543031f0e3fcf77f18f6d1828690a8a",
+    "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.h0c4bfdf694e0.snupkg": "1b9cd5e1774ae300686708e043d5b7a926f0fdb4f3b626106ccaa5888379e458",
+    "nps_lib-1.0.0a20.dev13520522876128-py3-none-any.whl": "30259dfb3b9cf4a74f6db39515a1f227d3828777a4db08a8c0603d9753d867e5",
+    "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.h0c4bfdf694e0.snupkg": "8e93d8906d026e43ec1c320b6d633117c49182c984af486e371cc1dbbb5d2d91"
+  }
+}

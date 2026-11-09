@@ -4,11 +4,11 @@
 
 **Spec Number**: NPS-5
 **Status**: Proposed
-**Version**: 0.10
-**Date**: 2026-08-31
+**Version**: 0.11
+**Date**: 2026-09-09
 **Port**: 17433（默认，共用）/ 17437（可选独立）
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12)、NPS-2 (NWP v0.22)、NPS-3 (NIP v0.15)、NPS-4 (NDP v0.13)
+**Depends-On**: NPS-1 (NCP v0.13)、NPS-2 (NWP v0.23)、NPS-3 (NIP v0.16)、NPS-4 (NDP v0.14)
 **Supersedes**: NCP AlignFrame (0x05)
 
 > 本文档为 NOP 详细规范。套件总览见 [NPS-0-Overview.cn.md](NPS-0-Overview.cn.md)。
@@ -518,6 +518,40 @@ epoch 最高的存活 Anchor。下发之前 MUST 拒绝脑裂（split brain）�
 
 ---
 
+### 3.6 生产运行时结果绑定（NOP v0.11）
+
+选择 nps.production_runtime revision 1 后，本节细化重试、取消与终态证据；
+未选择时保持基础 profile 行为。
+
+1. **NOP-P20-01 — 独立预算。** 既有 max_retries 计编排额外尝试，
+   NCP runtime attempts 包含首次尝试。两种预算及原任务剩余期限同时约束，
+   嵌套重试层不得隐式放大次数。Worker retryable 或超时不证明未派发；
+   每次重试还须通过 NCP §7.8 确定性/幂等门槛。
+2. **NOP-P20-02 — 取消确定性。** 断开/取消要求协作停止，不能回滚已提交或外部效果。
+   §5.2 的 stop 要求是尽可能停止后续工作，不是假承诺回滚。
+   没有权威终态证据时暴露 indeterminate，不宣称 mutation 未执行。
+   取消、超时和迟到结果仍按 §3.5.6 只提交一个本地终态。
+3. **NOP-P20-03 — 终态线证据。** 本协商 profile 的 final AlignStream 必须包含
+   顶层 execution_outcome，只能为 not_dispatched、known_terminal、indeterminate；
+   非 final 帧禁止此字段。Indeterminate 必须携带
+   error.code=NOP-EXECUTION-INDETERMINATE 且 error.retryable=false。
+   缺失、非法或矛盾证据是协议故障，不证明可安全重放。未收到远端终帧时，
+   本地运行时自行记录 indeterminate。
+4. **NOP-P20-04 — 父任务与 callback。** 保留既有父任务 FAILED/CANCELLED/COMPLETED
+   枚举。本 profile 的结果/callback 对象另含 execution_outcome；
+   任一已开始 mutation 未决即为 indeterminate。全部未派发则为 not_dispatched，
+   否则全部结果已知时为 known_terminal。只提交一个终态记录和一个 callback intent；
+   传递重试不能启动 worker、补偿或新终态决策。迟到结果仅作审计证据，
+   不是第二次 callback 决策。
+5. **NOP-P20-05 — 持久重放声明。** 既有 replay cache/tombstone 不证明持久操作去重。
+   声明该契约须具备跨重启/副本的原子 principal/key/digest 记录、明确保留期与
+   owner 范围，且承诺到期前不驱逐。容量不能保全承诺时拒绝准入。
+   缺少证明时不得重放未知 mutation，包括 Anchor 故障转移后。
+6. **NOP-P20-06 — 补偿。** 前驱效果未知时不得盲补偿，也不得计为完成输入。
+   补偿本身受确定性、身份、期限及幂等规则约束。任务失败或取消不意味着外部效果全撤销。
+
+---
+
 ## 4. 资源预检（Pre-flight）
 
 当 TaskFrame `preflight: true` 时，Orchestrator 在正式执行 DAG 前，向各 Worker Agent 发送轻量级探针，确认资源可用性。
@@ -669,6 +703,7 @@ Orchestrator                              Worker B（数据）  Worker C（推�
 
 | 错误码 | NPS 状态码 | 描述 |
 |--------|-----------|------|
+| `NOP-EXECUTION-INDETERMINATE` | `NPS-SERVER-INTERNAL` | 执行结果不确定，不可自动重试 |
 | `NOP-TASK-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | task_id 不存在 |
 | `NOP-TASK-TIMEOUT` | `NPS-SERVER-TIMEOUT` | 整体任务超时 |
 | `NOP-TASK-DAG-INVALID` | `NPS-CLIENT-BAD-FRAME` | DAG 格式不合法（缺少起点/终点、字段错误等）|
@@ -800,6 +835,7 @@ Orchestrator MUST 验证接收到的 TaskFrame 来自可信 NID（通过 NIP 证
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| 0.11 | 2026-09-09 | Alpha.20 生产运行时结果绑定：独立重试预算、取消确定性、AlignStream/callback execution_outcome、持久重放声明和保守补偿；新增 NOP-EXECUTION-INDETERMINATE。 |
 | 0.10 | 2026-08-31 | alpha.19 有界 replay/retention Profile：caller-bound replay key 与 digest、重复/冲突行为、monotonic result TTL、有界 replay tombstone 与安全 eviction、唯一 terminal winner，以及确定性的 `weighted_first_k` / `merge_all` / 部分输入语义。新增三个错误码与共享 transcript；Depends-On 推进到 alpha.19 NCP/NWP/NIP/NDP 基线。|
 | 0.9 | 2026-07-29 | **Alpha.17 可移植 Orchestrator profile**：确定性的 DAG 预检与合规性调度；condition / input_mapping 单次求值规则；重试、超时、取消、K-of-N 与聚合顺序；逆拓扑的 saga 上报；fail-closed 的 callback DNS/SSRF 与 HMAC 校验；每次尝试都重新解析 Anchor；严格的「存活 + 同属主」租约续约与规范 dedup key。新增共享的编排与运行时/安全 transcript；在六个 SDK 与 runner 关卡通过后，将 NPS-CR-0007 提升为 Implemented。 |
 | 0.8 | 2026-07-05 | 多 Anchor 高可用交互（NPS-CR-0009）：`DelegateFrame.target_cluster_anchor` MUST 解析到目标集群当前活跃的 Anchor（`cluster_epoch` 最高者，NDP §9）；发生 `anchor_failover` 时，在途委托 MUST 在重试前重新解析到 `successor_nid`。租约续约语义正式化（§8）：一次续约延长 `lease_expiry`，MUST 匹配 `runner_nid`；若租约已过期并被回收，则以 `NOP-CLAIM-CONFLICT` 拒绝。无新增错误码。 |

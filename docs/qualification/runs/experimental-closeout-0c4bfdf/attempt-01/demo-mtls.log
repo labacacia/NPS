@@ -1,0 +1,28 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-m", "pip", "install", "--no-deps", "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/packages/0c4bfdf694e0/nps_lib-1.0.0a20.dev13520522876128-py3-none-any.whl"], "cwd": "."}
+Processing ./demos/data-workflow/.demo-output/packages/0c4bfdf694e0/nps_lib-1.0.0a20.dev13520522876128-py3-none-any.whl
+Installing collected packages: nps-lib
+  Attempting uninstall: nps-lib
+    Found existing installation: nps-lib 1.0.0a20.dev8035537322332
+    Uninstalling nps-lib-1.0.0a20.dev8035537322332:
+      Successfully uninstalled nps-lib-1.0.0a20.dev8035537322332
+Successfully installed nps-lib-1.0.0a20.dev13520522876128
+{"command": ["dotnet", "restore", "server/NPS.Demo.DataWorkflow.csproj", "--source", "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/packages/0c4bfdf694e0", "--source", "https://api.nuget.org/v3/index.json", "-p:NpsDemoSdkVersion=1.0.0-alpha.20.dev.h0c4bfdf694e0"], "cwd": "demos/data-workflow"}
+  Determining projects to restore...
+  Restored /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/server/NPS.Demo.DataWorkflow.csproj (in 543 ms).
+{"command": ["dotnet", "build", "server/NPS.Demo.DataWorkflow.csproj", "-c", "Release", "--no-restore", "-p:NpsDemoSdkVersion=1.0.0-alpha.20.dev.h0c4bfdf694e0"], "cwd": "demos/data-workflow"}
+  NPS.Demo.DataWorkflow -> /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/server/bin/Release/net10.0/NPS.Demo.DataWorkflow.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.93
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "check.py", "--packages", "/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/packages/0c4bfdf694e0"], "cwd": "demos/data-workflow"}
+100: ordinary/NPS exact workflow, authenticated boundaries, snapshot update and bounded tools PASS
+1000: ordinary/NPS exact workflow, authenticated boundaries, snapshot update and bounded tools PASS
+100000: ordinary/NPS exact workflow, authenticated boundaries, snapshot update and bounded tools PASS
+/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/check-b_e0owbm/receipt.json
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-m", "pytest", "tests", "-q", "-o", "asyncio_default_fixture_loop_scope=function"], "cwd": "demos/data-workflow"}
+........................................................................ [ 76%]
+......................                                                   [100%]
+94 passed in 9.18s

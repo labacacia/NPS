@@ -1,3 +1,5 @@
+# Candidate template authored in NPS-Dev; materialized NPS/version.yaml remains the suite oracle.
+# Unpublished candidate: released_at stays null until the actual release decision.
 # NPS Suite Version Manifest
 #
 # ── AUTHORITATIVE ORACLE ─────────────────────────────────────────────────────
@@ -24,8 +26,10 @@
 
 # Only organization-owned release projections belong in this manifest.
 # Independent products and external consumers follow their own lifecycle.
-suite_version: "1.0.0-alpha.19"
-released_at: "2026-09-05"
+suite_version: "1.0.0-alpha.20"
+released_at: null
+release_status: candidate
+candidate_prepared_at: "2026-11-03"
 
 repos:
   # ── Spec & dev ────────────────────────────────────────────────────────────

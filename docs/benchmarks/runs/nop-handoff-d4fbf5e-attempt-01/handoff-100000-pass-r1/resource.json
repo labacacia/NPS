@@ -1,0 +1,34 @@
+{
+  "case_id": "handoff-100000-pass-r1",
+  "rows": 100000,
+  "fault": null,
+  "process_id": 3278822,
+  "guard": {
+    "specification": {
+      "processor_count": 4,
+      "gc_heap_hard_limit": "0x14000000",
+      "rss_limit_bytes": 536870912,
+      "max_workflow_seconds": 120,
+      "rss_sample_interval_seconds": 0.01,
+      "rss_scope": "actual controller and all live descendants; concurrent RSS and conservative live VmHWM sum"
+    },
+    "sampled_process_tree_peak_rss_bytes": 271364096,
+    "live_process_high_water_sum_guard_bytes": 271364096,
+    "poll_count": 414,
+    "process_ids": [
+      3278224,
+      3278822
+    ],
+    "elapsed_seconds": 3.623617400007788,
+    "violations": [],
+    "passed": true
+  },
+  "fixture_cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "error_type": null,
+  "exit_code": 0
+}

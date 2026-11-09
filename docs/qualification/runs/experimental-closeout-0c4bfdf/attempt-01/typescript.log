@@ -1,0 +1,58 @@
+{"command": ["npx", "--yes", "npm@11.11.0", "ci", "--ignore-scripts"], "cwd": "impl/typescript"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 70 packages, and audited 71 packages in 2s
+
+19 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+{"command": ["npx", "--yes", "npm@11.11.0", "test", "--", "--reporter=json", "--outputFile=/home/olynn/ai-workspaces/labacacia-nps/.artifacts/alpha20/experimental-local-ci-20261103-01/typescript.json"], "cwd": "impl/typescript"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 pretest
+> npm run build
+
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 build
+> tsc
+
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 test
+> vitest run --reporter=json --outputFile=/home/olynn/ai-workspaces/labacacia-nps/.artifacts/alpha20/experimental-local-ci-20261103-01/typescript.json
+
+(node:389449) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:389922) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:389984) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:389983) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:390004) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:390047) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:390158) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+JSON report written to /home/olynn/ai-workspaces/labacacia-nps/.artifacts/alpha20/experimental-local-ci-20261103-01/typescript.json
+{"command": ["npx", "--yes", "npm@11.11.0", "run", "prepack"], "cwd": "impl/typescript"}
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 prepack
+> npm run build && node scripts/verify-pack.mjs
+
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 build
+> tsc
+
+npm warn Unknown env config "metrics-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "globalignorefile". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm pack verification passed (24 export targets, 649 files).

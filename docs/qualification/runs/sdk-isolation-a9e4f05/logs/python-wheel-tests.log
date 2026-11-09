@@ -1,0 +1,185 @@
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 80%]
+........................................................................ [ 85%]
+........................................................................ [ 90%]
+........................................................................ [ 95%]
+........................................................................ [ 99%]
+./usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd645e3b50>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd64cafb50>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd64caf2e0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd64cafe20>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd634bcc70>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd634bc8b0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd634bc9a0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd634bcd60>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.14/ast.py:46: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7acd634bcf40>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+                                                                        [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.4-final-0 ________________
+
+Name                                                                                                                              Stmts   Miss  Cover
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/__init__.py                          6      2    67%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/alpha20/__init__.py                  0      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/alpha20/feature_wire_parser.py      96      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/conformance.py                     103     18    83%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/__init__.py                    10      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/cache.py                       52      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/codec.py                      208     22    89%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/exceptions.py                  12      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/frames.py                      88      2    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/patch_format.py                14      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/registry.py                    38      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/status_codes.py                30      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/core/telemetry.py                  142      1    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/daemon/__init__.py                   5      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/daemon/health.py                    40      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/daemon/logging.py                   40      1    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/daemon/metrics.py                  100      2    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/daemon/shutdown.py                  44      2    95%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/__init__.py                     14      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/client.py                       48      4    92%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/encoding_policy.py              40      1    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/error_codes.py                  24      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/failover.py                     39      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/frames.py                      222      4    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/handshake_profile.py            81      6    93%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/preamble.py                     33      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/runtime_hardening.py            40      4    90%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/server.py                      116     20    83%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/server_options.py               16      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ncp/session.py                      59      5    92%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/__init__.py                     12      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/cluster.py                      28      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/dns_txt.py                      45     13    71%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/error_codes.py                  26      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/federation.py                   16      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/frames.py                      186      1    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/recovery_policy.py              30      1    97%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/registry.py                     86      7    92%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/registry_profile.py            169     10    94%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/security.py                      4      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/ndp/validator.py                    41      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/__init__.py                     14      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/__init__.py                 5      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/client.py                 110      5    95%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/jws.py                     87      7    92%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/messages.py               141      2    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/server.py                 358     67    81%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/acme/wire.py                     5      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/alpha19_policy.py               63      4    94%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/assurance_level.py              31      8    74%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/__init__.py                  10      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/errors.py                    32      1    97%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/group_jws.py                 49      2    96%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/lineage.py                    2      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/options.py                   30      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/ra.py                       182      4    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/router.py                   427     60    86%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/service.py                  255     17    93%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/sql_store.py                104      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca/store.py                     69      1    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/ca_client.py                   205     26    87%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/cert_format.py                   2      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/error_codes.py                  56      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/frames.py                      184      4    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/identity.py                    103      2    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/phase3.py                      168      6    96%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/reputation.py                  234     54    77%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/revocation_policy.py            42      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/trust_validator.py              43      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/verifier.py                    196      9    95%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/x509/__init__.py                 4      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/x509/builder.py                 23      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/x509/oids.py                    12      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nip/x509/verifier.py               124     21    83%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/__init__.py                     20      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/aggregator.py                   27      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/client.py                       82      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/cluster_delegation.py           51      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/condition.py                   222     11    95%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/constants.py                    10      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/error_codes.py                  38      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/frames.py                      140      3    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/input_mapper.py                 43      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/instrumentation.py              15      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/models.py                      141      2    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/orchestrator.py                394     29    93%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/portable_profile.py            287     27    91%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/replay_policy.py                47      2    96%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/results.py                      40      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/store.py                        64      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/validation.py                   97      2    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nop/worker.py                       16      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/__init__.py                     19      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/action_node_server.py          528     41    92%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/alpha19_policy.py              105     19    82%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/anchor_client.py               203      9    96%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/anchor_server.py               607     80    87%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/bridge.py                       32      1    97%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/cgn.py                          33      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/client.py                       60      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/complex_node_server.py         297     43    86%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/context_store.py               361     21    94%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/error_codes.py                  84      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/frames.py                      223     25    89%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/http_headers.py                 22      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/__init__.py              8      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/a2a_server.py          119      2    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/backend.py             178      1    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/error_map.py            59      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/grpc_service.py         91      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/jsonrpc.py              42      1    98%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/mcp_server.py          145      2    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/inbound/options.py              47      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/instrumentation.py              14      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/llm.py                         170      2    99%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/llm_action_server.py           284     62    78%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/memory_node_providers.py        40      0   100%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/memory_node_server.py          271     81    70%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/memory_node_sql.py             209      9    96%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/native_server.py               112     26    77%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/portable_profile.py            136      7    95%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/reputation.py                  152     26    83%
+/tmp/nps-alpha20-sdk-packages-20261103/python-consumer-venv/lib/python3.14/site-packages/nps_sdk/nwp/results.py                     312     22    93%
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                             12470    982    92%
+Required test coverage of 90% reached. Total coverage: 92.13%
+1513 passed in 62.65s (0:01:02)

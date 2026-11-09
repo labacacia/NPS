@@ -1,0 +1,408 @@
+﻿2026-11-03T08:55:50.0441223Z Current runner version: '2.338.2'
+2026-11-03T08:55:50.0476909Z ##[group]Runner Image Provisioner
+2026-11-03T08:55:50.0478502Z Hosted Compute Agent
+2026-11-03T08:55:50.0479582Z Version: 20261021.618
+2026-11-03T08:55:50.0480683Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-03T08:55:50.0482106Z Build Date: 2026-10-21T00:45:21Z
+2026-11-03T08:55:50.0483391Z Worker ID: {8bce9a1e-7867-4d2b-82c4-bf8cd7d9fbe1}
+2026-11-03T08:55:50.0485119Z Region: northcentralus
+2026-11-03T08:55:50.0486215Z Cloud: Azure
+2026-11-03T08:55:50.0487219Z ##[endgroup]
+2026-11-03T08:55:50.0489681Z ##[group]Operating System
+2026-11-03T08:55:50.0490789Z Ubuntu
+2026-11-03T08:55:50.0491829Z 26.04.1
+2026-11-03T08:55:50.0492723Z LTS
+2026-11-03T08:55:50.0493877Z ##[endgroup]
+2026-11-03T08:55:50.0494944Z ##[group]Runner Image
+2026-11-03T08:55:50.0495984Z Image: ubuntu-26.04
+2026-11-03T08:55:50.0497097Z Version: 20261025.179.1
+2026-11-03T08:55:50.0499400Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-03T08:55:50.0502330Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+2026-11-03T08:55:50.0504457Z ##[endgroup]
+2026-11-03T08:55:50.0506623Z ##[group]GITHUB_TOKEN Permissions
+2026-11-03T08:55:50.0509552Z Contents: read
+2026-11-03T08:55:50.0510598Z Metadata: read
+2026-11-03T08:55:50.0511477Z ##[endgroup]
+2026-11-03T08:55:50.0515397Z Secret source: Actions
+2026-11-03T08:55:50.0517488Z Cache mode: write
+2026-11-03T08:55:50.0519169Z Prepare workflow directory
+2026-11-03T08:55:50.1027613Z Prepare all required actions
+2026-11-03T08:55:50.1102750Z Getting action download info
+2026-11-03T08:55:50.3295677Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-03T08:55:50.4634617Z Download action repository 'actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68' (SHA:a98b56852c35b8e3190ac28c8c2271da59106c68)
+2026-11-03T08:55:50.7340165Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-11-03T08:55:50.9580875Z Complete job name: Bounded data workflow (no model calls)
+2026-11-03T08:55:51.0484206Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-03T08:55:51.0485350Z with:
+2026-11-03T08:55:51.0485820Z   repository: labacacia/NPS-Dev
+2026-11-03T08:55:51.0489710Z   token: ***
+2026-11-03T08:55:51.0490153Z   ssh-strict: true
+2026-11-03T08:55:51.0490597Z   ssh-user: git
+2026-11-03T08:55:51.0491052Z   persist-credentials: true
+2026-11-03T08:55:51.0491568Z   clean: true
+2026-11-03T08:55:51.0492027Z   sparse-checkout-cone-mode: true
+2026-11-03T08:55:51.0492555Z   fetch-depth: 1
+2026-11-03T08:55:51.0493002Z   fetch-tags: false
+2026-11-03T08:55:51.0493668Z   show-progress: true
+2026-11-03T08:55:51.0494155Z   lfs: false
+2026-11-03T08:55:51.0494587Z   submodules: false
+2026-11-03T08:55:51.0495049Z   set-safe-directory: true
+2026-11-03T08:55:51.0495589Z   allow-unsafe-pr-checkout: false
+2026-11-03T08:55:51.0496386Z ##[endgroup]
+2026-11-03T08:55:51.3800843Z Syncing repository: labacacia/NPS-Dev
+2026-11-03T08:55:51.3808313Z ##[group]Getting Git version info
+2026-11-03T08:55:51.3810427Z Working directory is '/home/runner/work/NPS-Dev/NPS-Dev'
+2026-11-03T08:55:51.3816656Z [command]/usr/bin/git version
+2026-11-03T08:55:51.3915676Z git version 2.56.0
+2026-11-03T08:55:51.3941190Z ##[endgroup]
+2026-11-03T08:55:51.3951376Z Temporarily overriding HOME='/home/runner/work/_temp/25d74b86-0872-4ce1-91f5-0e990eeeeed3' before making global git config changes
+2026-11-03T08:55:51.3954998Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T08:55:51.3957354Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/NPS-Dev/NPS-Dev
+2026-11-03T08:55:51.4075780Z Deleting the contents of '/home/runner/work/NPS-Dev/NPS-Dev'
+2026-11-03T08:55:51.4087299Z ##[group]Determining repository object format
+2026-11-03T08:55:51.4090079Z ##[endgroup]
+2026-11-03T08:55:51.4091755Z ##[group]Initializing the repository
+2026-11-03T08:55:51.4094741Z [command]/usr/bin/git init /home/runner/work/NPS-Dev/NPS-Dev
+2026-11-03T08:55:51.4286279Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-03T08:55:51.4288951Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-03T08:55:51.4290943Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-03T08:55:51.4312812Z hint: call:
+2026-11-03T08:55:51.4314242Z hint:
+2026-11-03T08:55:51.4316017Z hint: 	git config --global init.defaultBranch <name>
+2026-11-03T08:55:51.4317522Z hint:
+2026-11-03T08:55:51.4318879Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-03T08:55:51.4320794Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-03T08:55:51.4322395Z hint:
+2026-11-03T08:55:51.4323328Z hint: 	git branch -m <name>
+2026-11-03T08:55:51.4324831Z hint:
+2026-11-03T08:55:51.4348998Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-03T08:55:51.4351518Z Initialized empty Git repository in /home/runner/work/NPS-Dev/NPS-Dev/.git/
+2026-11-03T08:55:51.4357218Z [command]/usr/bin/git remote add origin https://github.com/labacacia/NPS-Dev
+2026-11-03T08:55:51.4386492Z ##[endgroup]
+2026-11-03T08:55:51.4388305Z ##[group]Disabling automatic garbage collection
+2026-11-03T08:55:51.4398022Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-03T08:55:51.4466650Z ##[endgroup]
+2026-11-03T08:55:51.4468776Z ##[group]Setting up auth
+2026-11-03T08:55:51.4491940Z Removing SSH command configuration
+2026-11-03T08:55:51.4509900Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T08:55:51.4519672Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-03T08:55:51.5171072Z Removing HTTP extra header
+2026-11-03T08:55:51.5178505Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T08:55:51.5218235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-03T08:55:51.5528815Z Removing includeIf entries pointing to credentials config files
+2026-11-03T08:55:51.5531016Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T08:55:51.5562163Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-03T08:55:51.5858239Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-03T08:55:51.5901750Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git.path /home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:55:51.5938585Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:55:51.5978521Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:55:51.6015643Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:55:51.6051589Z ##[endgroup]
+2026-11-03T08:55:51.6054126Z ##[group]Fetching the repository
+2026-11-03T08:55:51.6060054Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3b83f9d6e311726ddd23e889a47a866e772f3696:refs/remotes/origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.1536705Z From https://github.com/labacacia/NPS-Dev
+2026-11-03T08:55:53.1537679Z  * [new ref]         3b83f9d6e311726ddd23e889a47a866e772f3696 -> origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.1542046Z [command]/usr/bin/git branch --list --remote origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.1576447Z   origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.1586915Z [command]/usr/bin/git rev-parse refs/remotes/origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.1617520Z 3b83f9d6e311726ddd23e889a47a866e772f3696
+2026-11-03T08:55:53.1621559Z ##[endgroup]
+2026-11-03T08:55:53.1622861Z ##[group]Determining the checkout info
+2026-11-03T08:55:53.1624431Z ##[endgroup]
+2026-11-03T08:55:53.1628297Z [command]/usr/bin/git sparse-checkout disable
+2026-11-03T08:55:53.1690351Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-03T08:55:53.1727539Z ##[group]Checking out the ref
+2026-11-03T08:55:53.1732502Z [command]/usr/bin/git checkout --progress --force -B feat/alpha20-suite-qualification-ledger refs/remotes/origin/feat/alpha20-suite-qualification-ledger
+2026-11-03T08:55:53.4502078Z Switched to a new branch 'feat/alpha20-suite-qualification-ledger'
+2026-11-03T08:55:53.4516359Z branch 'feat/alpha20-suite-qualification-ledger' set up to track 'origin/feat/alpha20-suite-qualification-ledger'.
+2026-11-03T08:55:53.4564589Z ##[endgroup]
+2026-11-03T08:55:53.4654307Z [command]/usr/bin/git log -1 --format=%H
+2026-11-03T08:55:53.4678670Z 3b83f9d6e311726ddd23e889a47a866e772f3696
+2026-11-03T08:55:53.5040539Z ##[group]Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+2026-11-03T08:55:53.5041359Z with:
+2026-11-03T08:55:53.5041780Z   dotnet-version: 10.0.x
+2026-11-03T08:55:53.5042198Z   cache: false
+2026-11-03T08:55:53.5042538Z ##[endgroup]
+2026-11-03T08:55:53.6596415Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --runtime dotnet --channel LTS
+2026-11-03T08:55:54.0449300Z dotnet-install: .NET Core Runtime with version '10.0.14' is already installed.
+2026-11-03T08:55:54.0478991Z [command]/home/runner/work/_actions/actions/setup-dotnet/a98b56852c35b8e3190ac28c8c2271da59106c68/externals/install-dotnet.sh --skip-non-versioned-files --channel 10.0
+2026-11-03T08:55:54.2544977Z dotnet-install: .NET Core SDK with version '10.0.403' is already installed.
+2026-11-03T08:55:54.2820016Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-11-03T08:55:54.2820440Z with:
+2026-11-03T08:55:54.2820666Z   python-version: 3.12
+2026-11-03T08:55:54.2820914Z   check-latest: false
+2026-11-03T08:55:54.2823928Z   token: ***
+2026-11-03T08:55:54.2824169Z   update-environment: true
+2026-11-03T08:55:54.2824428Z   allow-prereleases: false
+2026-11-03T08:55:54.2824657Z   freethreaded: false
+2026-11-03T08:55:54.2824882Z env:
+2026-11-03T08:55:54.2825077Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-03T08:55:54.2825316Z ##[endgroup]
+2026-11-03T08:55:54.4131743Z ##[group]Installed versions
+2026-11-03T08:55:54.4248971Z Successfully set up CPython (3.12.15)
+2026-11-03T08:55:54.4250041Z ##[endgroup]
+2026-11-03T08:55:54.4447219Z ##[group]Run dotnet restore impl/dotnet/NPS.sln
+2026-11-03T08:55:54.4447946Z [36;1mdotnet restore impl/dotnet/NPS.sln[0m
+2026-11-03T08:55:54.4510728Z shell: /usr/bin/bash -e {0}
+2026-11-03T08:55:54.4511168Z env:
+2026-11-03T08:55:54.4511500Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-03T08:55:54.4512045Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:55:54.4512794Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-03T08:55:54.4513807Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:55:54.4514465Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:55:54.4515066Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:55:54.4516145Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-03T08:55:54.4516705Z ##[endgroup]
+2026-11-03T08:55:56.5095153Z   Determining projects to restore...
+2026-11-03T08:56:00.6285137Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/tools/daemons/nps-registry/NpsRegistry.csproj (in 2.81 sec).
+2026-11-03T08:56:00.6324693Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/tools/daemons/nps-ledger/NpsLedger.csproj (in 2.81 sec).
+2026-11-03T08:56:07.5150313Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP/NPS.NWP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:07.5155411Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/tests/NPS.Tests/NPS.Tests.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:07.5988725Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP/NPS.NWP.csproj (in 6.93 sec).
+2026-11-03T08:56:07.6120305Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/tests/NPS.Tests/NPS.Tests.csproj (in 6.94 sec).
+2026-11-03T08:56:07.6196216Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:07.6311636Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj (in 9 ms).
+2026-11-03T08:56:07.9976512Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NOP/NPS.NOP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.0305093Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NOP/NPS.NOP.csproj (in 392 ms).
+2026-11-03T08:56:08.0356162Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.0414590Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj (in 4 ms).
+2026-11-03T08:56:08.0486489Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.0545091Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj (in 6 ms).
+2026-11-03T08:56:08.0784944Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/tools/daemons/npsd/Npsd.csproj (in 12 ms).
+2026-11-03T08:56:08.0866463Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.0924805Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj (in 6 ms).
+2026-11-03T08:56:08.0966151Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NDP/NPS.NDP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.1044449Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NDP/NPS.NDP.csproj (in 6 ms).
+2026-11-03T08:56:08.1076778Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.1124753Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj (in 2 ms).
+2026-11-03T08:56:08.1166372Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.1204794Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj (in 5 ms).
+2026-11-03T08:56:08.1226368Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.1256445Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj (in 2 ms).
+2026-11-03T08:56:08.1336323Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.1434880Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj (in 8 ms).
+2026-11-03T08:56:08.2527281Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/NPS.Benchmarks.WireSize.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.2639560Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.WireSize/NPS.Benchmarks.WireSize.csproj (in 112 ms).
+2026-11-03T08:56:08.2667504Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.2717753Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/NPS.Benchmarks.TokenSavings.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.2811072Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.TokenSavings/NPS.Benchmarks.TokenSavings.csproj (in 9 ms).
+2026-11-03T08:56:08.2843668Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj (in 674 ms).
+2026-11-03T08:56:08.2856306Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.NipCert/NPS.Benchmarks.NipCert.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json. [/home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/NPS.sln]
+2026-11-03T08:56:08.2905067Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/benchmarks/NPS.Benchmarks.NipCert/NPS.Benchmarks.NipCert.csproj (in 5 ms).
+2026-11-03T08:56:08.3516101Z ##[group]Run python -m venv .demo-output/venv
+2026-11-03T08:56:08.3516508Z [36;1mpython -m venv .demo-output/venv[0m
+2026-11-03T08:56:08.3516900Z [36;1m.demo-output/venv/bin/python -m pip install --upgrade pip[0m
+2026-11-03T08:56:08.3517316Z [36;1m.demo-output/venv/bin/python build-packages.py[0m
+2026-11-03T08:56:08.3549955Z shell: /usr/bin/bash -e {0}
+2026-11-03T08:56:08.3550219Z env:
+2026-11-03T08:56:08.3550431Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-03T08:56:08.3550770Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:08.3551235Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-03T08:56:08.3551670Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:08.3552060Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:08.3552483Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:08.3552926Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-03T08:56:08.3553258Z ##[endgroup]
+2026-11-03T08:56:11.6104288Z Requirement already satisfied: pip in ./.demo-output/venv/lib/python3.12/site-packages (25.0.1)
+2026-11-03T08:56:11.6607596Z Collecting pip
+2026-11-03T08:56:11.6853838Z   Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+2026-11-03T08:56:11.6931332Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-03T08:56:11.7176321Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 104.8 MB/s eta 0:00:00
+2026-11-03T08:56:11.7337841Z Installing collected packages: pip
+2026-11-03T08:56:11.7339553Z   Attempting uninstall: pip
+2026-11-03T08:56:11.7361163Z     Found existing installation: pip 25.0.1
+2026-11-03T08:56:11.7735408Z     Uninstalling pip-25.0.1:
+2026-11-03T08:56:11.7792563Z       Successfully uninstalled pip-25.0.1
+2026-11-03T08:56:12.8075063Z Successfully installed pip-26.3
+2026-11-03T08:56:14.0266991Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:19.8141490Z   NPS.Core -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/bin/Release/net10.0/NPS.Core.dll
+2026-11-03T08:56:20.0047412Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:20.5255901Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.Core.1.0.0-alpha.20.dev.h3b83f9d6e311.nupkg'.
+2026-11-03T08:56:20.5355523Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.Core.1.0.0-alpha.20.dev.h3b83f9d6e311.snupkg'.
+2026-11-03T08:56:21.9100789Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP/NPS.NWP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:22.1066403Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:22.3925966Z   NPS.Core -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/bin/Release/net10.0/NPS.Core.dll
+2026-11-03T08:56:26.1444917Z   NPS.NWP -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP/bin/Release/net10.0/NPS.NWP.dll
+2026-11-03T08:56:26.2792919Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NWP/NPS.NWP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:26.8637325Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.h3b83f9d6e311.nupkg'.
+2026-11-03T08:56:26.8735789Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.h3b83f9d6e311.snupkg'.
+2026-11-03T08:56:28.2806493Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:28.4796965Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:28.7456132Z   NPS.Core -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/bin/Release/net10.0/NPS.Core.dll
+2026-11-03T08:56:31.8389111Z   NPS.NIP -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/bin/Release/net10.0/NPS.NIP.dll
+2026-11-03T08:56:31.9718369Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:32.5485990Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.h3b83f9d6e311.nupkg'.
+2026-11-03T08:56:32.5585208Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.h3b83f9d6e311.snupkg'.
+2026-11-03T08:56:33.9188004Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:34.3123313Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/NPS.NIP.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:34.3361013Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/NPS.Core.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:34.8836815Z   NPS.Core -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.Core/bin/Release/net10.0/NPS.Core.dll
+2026-11-03T08:56:35.6596136Z   NPS.NIP -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP/bin/Release/net10.0/NPS.NIP.dll
+2026-11-03T08:56:37.1005625Z   NPS.NIP.Storage.Sqlite -> /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Sqlite/bin/Release/net10.0/NPS.NIP.Storage.Sqlite.dll
+2026-11-03T08:56:37.2527077Z /home/runner/work/NPS-Dev/NPS-Dev/impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj : warning NU1900: Error occurred while getting package vulnerability data: Unable to load the service index for source https://nexus.ds01.lablotus.com/repository/innolotus/index.json.
+2026-11-03T08:56:37.9515121Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.h3b83f9d6e311.nupkg'.
+2026-11-03T08:56:37.9534479Z   Successfully created package '/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.h3b83f9d6e311.snupkg'.
+2026-11-03T08:56:38.7415275Z Processing ./demos/data-workflow/.demo-output/package-source/3b83f9d6e311/python
+2026-11-03T08:56:38.7472012Z   Installing build dependencies: started
+2026-11-03T08:56:40.6958993Z   Installing build dependencies: finished with status 'done'
+2026-11-03T08:56:40.6960734Z   Getting requirements to build wheel: started
+2026-11-03T08:56:41.0614964Z   Getting requirements to build wheel: finished with status 'done'
+2026-11-03T08:56:41.0634336Z   Preparing metadata (pyproject.toml): started
+2026-11-03T08:56:41.5865182Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-11-03T08:56:41.5914386Z Building wheels for collected packages: nps-lib
+2026-11-03T08:56:41.5924382Z   Building wheel for nps-lib (pyproject.toml): started
+2026-11-03T08:56:41.6445051Z   Building wheel for nps-lib (pyproject.toml): finished with status 'done'
+2026-11-03T08:56:41.6475337Z   Created wheel for nps-lib: filename=nps_lib-1.0.0a20.dev65438018364177-py3-none-any.whl size=305950 sha256=3634048ae054fef0ec6fdfcd67f08e8206d3b19551bdd056a1f75da04615c163
+2026-11-03T08:56:41.6477538Z   Stored in directory: /tmp/pip-ephem-wheel-cache-s9g9dm5t/wheels/bc/30/ab/88f80721cce4f99df1380384264ae9a6cd895b5e2f7c45164d
+2026-11-03T08:56:41.6524240Z Successfully built nps-lib
+2026-11-03T08:56:41.7735064Z /home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/.demo-output/packages/3b83f9d6e311/source.json
+2026-11-03T08:56:41.7883105Z ##[group]Run NPS_DEMO_PACKAGES=".demo-output/packages/$(git rev-parse --short=12 HEAD)"
+2026-11-03T08:56:41.7884673Z [36;1mNPS_DEMO_PACKAGES=".demo-output/packages/$(git rev-parse --short=12 HEAD)"[0m
+2026-11-03T08:56:41.7885937Z [36;1m.demo-output/venv/bin/python -m pip install "$NPS_DEMO_PACKAGES"/nps_lib-*.whl pytest pytest-asyncio[0m
+2026-11-03T08:56:41.7887619Z [36;1mNPS_DEMO_VERSION=$(.demo-output/venv/bin/python -c 'import json,sys; print(json.load(open(sys.argv[1]))["nuget_version"])' "$NPS_DEMO_PACKAGES/source.json")[0m
+2026-11-03T08:56:41.7889794Z [36;1mdotnet restore server/NPS.Demo.DataWorkflow.csproj --source "$NPS_DEMO_PACKAGES" --source https://api.nuget.org/v3/index.json -p:NpsDemoSdkVersion="$NPS_DEMO_VERSION"[0m
+2026-11-03T08:56:41.7891753Z [36;1mdotnet build server/NPS.Demo.DataWorkflow.csproj -c Release --no-restore -p:NpsDemoSdkVersion="$NPS_DEMO_VERSION"[0m
+2026-11-03T08:56:41.7940268Z shell: /usr/bin/bash -e {0}
+2026-11-03T08:56:41.7940717Z env:
+2026-11-03T08:56:41.7941106Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-03T08:56:41.7941657Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:41.7942419Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-03T08:56:41.7943200Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:41.7944167Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:41.7944889Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:41.7945631Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-03T08:56:41.7946255Z ##[endgroup]
+2026-11-03T08:56:42.3985136Z Processing ./.demo-output/packages/3b83f9d6e311/nps_lib-1.0.0a20.dev65438018364177-py3-none-any.whl
+2026-11-03T08:56:42.5494604Z Collecting pytest
+2026-11-03T08:56:42.5827790Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-03T08:56:42.6179397Z Collecting pytest-asyncio
+2026-11-03T08:56:42.6235092Z   Downloading pytest_asyncio-1.4.1.post1-py3-none-any.whl.metadata (4.4 kB)
+2026-11-03T08:56:43.0443161Z Collecting cryptography>=43.0.0 (from nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.0499694Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+2026-11-03T08:56:43.0762777Z Collecting httpx>=0.27.0 (from nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.0814450Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-11-03T08:56:43.2498446Z Collecting msgpack>=1.0.8 (from nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.2550715Z   Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+2026-11-03T08:56:43.2711598Z Collecting iniconfig>=2 (from pytest)
+2026-11-03T08:56:43.2764975Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-03T08:56:43.2964796Z Collecting packaging>=24 (from pytest)
+2026-11-03T08:56:43.2984609Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-03T08:56:43.3073019Z Collecting pluggy<2,>=1.6 (from pytest)
+2026-11-03T08:56:43.3104400Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-03T08:56:43.3350842Z Collecting pygments>=2.15 (from pytest)
+2026-11-03T08:56:43.3404623Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-03T08:56:43.3664469Z Collecting typing-extensions>=4.12 (from pytest-asyncio)
+2026-11-03T08:56:43.3715636Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-03T08:56:43.5924969Z Collecting cffi>=2.0.0 (from cryptography>=43.0.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.5965296Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-11-03T08:56:43.6131917Z Collecting pycparser (from cffi>=2.0.0->cryptography>=43.0.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.6184541Z   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+2026-11-03T08:56:43.6505445Z Collecting anyio (from httpx>=0.27.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.6544540Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+2026-11-03T08:56:43.6841952Z Collecting certifi (from httpx>=0.27.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.6894517Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-03T08:56:43.7109356Z Collecting httpcore==1.* (from httpx>=0.27.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.7162323Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-11-03T08:56:43.7404643Z Collecting idna (from httpx>=0.27.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.7451245Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-03T08:56:43.7624333Z Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.27.0->nps-lib==1.0.0a20.dev65438018364177)
+2026-11-03T08:56:43.7664399Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-03T08:56:43.7846046Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-03T08:56:43.7939534Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-03T08:56:43.7974596Z Downloading pytest_asyncio-1.4.1.post1-py3-none-any.whl (17 kB)
+2026-11-03T08:56:43.8040643Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-11-03T08:56:43.8315620Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 246.0 MB/s  0:00:00
+2026-11-03T08:56:43.8364991Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+2026-11-03T08:56:43.8431479Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-11-03T08:56:43.8525663Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-11-03T08:56:43.8604392Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-03T08:56:43.8720172Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-03T08:56:43.8788707Z Downloading msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (475 kB)
+2026-11-03T08:56:43.8844571Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-03T08:56:43.8884327Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-03T08:56:43.8993983Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 156.7 MB/s  0:00:00
+2026-11-03T08:56:43.9034785Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-03T08:56:43.9114524Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+2026-11-03T08:56:43.9184528Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-11-03T08:56:43.9254598Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-03T08:56:43.9331077Z Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+2026-11-03T08:56:44.0791515Z Installing collected packages: typing-extensions, pygments, pycparser, pluggy, packaging, msgpack, iniconfig, idna, h11, certifi, pytest, httpcore, cffi, anyio, pytest-asyncio, httpx, cryptography, nps-lib
+2026-11-03T08:56:47.5134113Z 
+2026-11-03T08:56:47.5176650Z Successfully installed anyio-4.16.0 certifi-2026.10.23 cffi-2.1.1 cryptography-50.0.2 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 msgpack-1.2.4 nps-lib-1.0.0a20.dev65438018364177 packaging-26.3 pluggy-1.7.0 pycparser-3.12 pygments-2.21.0 pytest-9.2.0 pytest-asyncio-1.4.1.post1 typing-extensions-4.16.0
+2026-11-03T08:56:48.9848996Z   Determining projects to restore...
+2026-11-03T08:56:50.0022417Z   Restored /home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/server/NPS.Demo.DataWorkflow.csproj (in 582 ms).
+2026-11-03T08:56:52.7014260Z   NPS.Demo.DataWorkflow -> /home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/server/bin/Release/net10.0/NPS.Demo.DataWorkflow.dll
+2026-11-03T08:56:52.7390309Z 
+2026-11-03T08:56:52.7391269Z Build succeeded.
+2026-11-03T08:56:52.7392079Z     0 Warning(s)
+2026-11-03T08:56:52.7392729Z     0 Error(s)
+2026-11-03T08:56:52.7393241Z 
+2026-11-03T08:56:52.7394365Z Time Elapsed 00:00:02.14
+2026-11-03T08:56:52.7826540Z ##[group]Run NPS_DEMO_PACKAGES=".demo-output/packages/$(git rev-parse --short=12 HEAD)"
+2026-11-03T08:56:52.7827728Z [36;1mNPS_DEMO_PACKAGES=".demo-output/packages/$(git rev-parse --short=12 HEAD)"[0m
+2026-11-03T08:56:52.7828816Z [36;1m.demo-output/venv/bin/python check.py --packages "$NPS_DEMO_PACKAGES"[0m
+2026-11-03T08:56:52.7829975Z [36;1m.demo-output/venv/bin/python -m pytest tests -q -o asyncio_default_fixture_loop_scope=function[0m
+2026-11-03T08:56:52.7830963Z [36;1m.demo-output/venv/bin/python live-run.py[0m
+2026-11-03T08:56:52.7908564Z shell: /usr/bin/bash -e {0}
+2026-11-03T08:56:52.7909000Z env:
+2026-11-03T08:56:52.7909340Z   DOTNET_ROOT: /usr/share/dotnet
+2026-11-03T08:56:52.7909904Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:52.7910686Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-03T08:56:52.7911489Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:52.7912271Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:52.7912998Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-03T08:56:52.7915838Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-03T08:56:52.7916493Z ##[endgroup]
+2026-11-03T08:56:55.9778061Z 100: ordinary/NPS exact workflow, authenticated boundaries, snapshot update and bounded tools PASS
+2026-11-03T08:56:58.5745292Z 1000: ordinary/NPS exact workflow, authenticated boundaries, snapshot update and bounded tools PASS
+2026-11-03T08:56:59.6166024Z Traceback (most recent call last):
+2026-11-03T08:56:59.6175495Z   File "/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/check.py", line 191, in <module>
+2026-11-03T08:56:59.6176802Z     main()
+2026-11-03T08:56:59.6177813Z   File "/home/runner/work/NPS-Dev/NPS-Dev/demos/data-workflow/check.py", line 170, in main
+2026-11-03T08:56:59.6179159Z     results.append(asyncio.run(check(json.loads(connection.read_text()))))
+2026-11-03T08:56:59.6180226Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-03T08:56:59.6181434Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
+2026-11-03T08:56:59.6219620Z     return _default_decoder.decode(s)
+2026-11-03T08:56:59.6220849Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-03T08:56:59.6234721Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
+2026-11-03T08:56:59.6244356Z     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+2026-11-03T08:56:59.6264205Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-03T08:56:59.6284844Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+2026-11-03T08:56:59.6304486Z     raise JSONDecodeError("Expecting value", s, err.value) from None
+2026-11-03T08:56:59.6305731Z json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-11-03T08:56:59.6777962Z ##[error]Process completed with exit code 1.
+2026-11-03T08:56:59.6983795Z Post job cleanup.
+2026-11-03T08:56:59.8582332Z [command]/usr/bin/git version
+2026-11-03T08:56:59.8793206Z git version 2.56.0
+2026-11-03T08:56:59.8984813Z Temporarily overriding HOME='/home/runner/work/_temp/84772a2c-74e7-42f7-b7a5-e13b787a5e07' before making global git config changes
+2026-11-03T08:56:59.9004591Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T08:56:59.9064474Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/NPS-Dev/NPS-Dev
+2026-11-03T08:56:59.9222359Z Removing SSH command configuration
+2026-11-03T08:56:59.9244370Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T08:56:59.9336560Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-03T08:57:00.0257579Z Removing HTTP extra header
+2026-11-03T08:57:00.0288732Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T08:57:00.0455740Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-03T08:57:00.1012989Z Removing includeIf entries pointing to credentials config files
+2026-11-03T08:57:00.1014640Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T08:57:00.1054510Z includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git.path
+2026-11-03T08:57:00.1064750Z includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git/worktrees/*.path
+2026-11-03T08:57:00.1068098Z includeif.gitdir:/github/workspace/.git.path
+2026-11-03T08:57:00.1071222Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-03T08:57:00.1089558Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git.path
+2026-11-03T08:57:00.1130154Z /home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:57:00.1148309Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-294c948b\-374e\-45cf\-aa8c\-3362d2920588\.config
+2026-11-03T08:57:00.1244780Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git/worktrees/*.path
+2026-11-03T08:57:00.1264518Z /home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:57:00.1291334Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/NPS-Dev/NPS-Dev/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-294c948b\-374e\-45cf\-aa8c\-3362d2920588\.config
+2026-11-03T08:57:00.1337583Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-03T08:57:00.1374550Z /github/runner_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:57:00.1415840Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-294c948b\-374e\-45cf\-aa8c\-3362d2920588\.config
+2026-11-03T08:57:00.1457193Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-03T08:57:00.1475965Z /github/runner_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config
+2026-11-03T08:57:00.1519434Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-294c948b\-374e\-45cf\-aa8c\-3362d2920588\.config
+2026-11-03T08:57:00.1552044Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-03T08:57:00.1998002Z Removing credentials config '/home/runner/work/_temp/git-credentials-294c948b-374e-45cf-aa8c-3362d2920588.config'
+2026-11-03T08:57:00.2256873Z Cleaning up orphan processes
+2026-11-03T08:57:00.2702817Z Terminate orphan process: pid (2355) (dotnet)
+2026-11-03T08:57:00.2741799Z Terminate orphan process: pid (2483) (VBCSCompiler)

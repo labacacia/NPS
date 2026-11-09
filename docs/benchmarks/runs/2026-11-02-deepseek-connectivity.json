@@ -1,0 +1,68 @@
+{
+  "kind": "connectivity-probe-not-benchmark",
+  "time_utc": "2026-11-02T13:23:38.069661+00:00",
+  "budget_usd": 10,
+  "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "pricing_basis": "conservative-peak-cache-miss-input-0.30-output-1.20-USD-per-million",
+  "requests": [
+    {
+      "requested_model": "deepseek-flash",
+      "reservation_usd": 0.003,
+      "automatic_retries": 0,
+      "http_status": 200,
+      "returned_model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 1,
+        "total_tokens": 9,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 8
+      },
+      "response_id": "02394513-4429-459d-ba84-3ceb9bc8e6e6",
+      "usage_cost_upper_bound_usd": 0.0000036,
+      "elapsed_ms": 928.321
+    },
+    {
+      "requested_model": "deepseek-v4-flash",
+      "reservation_usd": 0.003,
+      "automatic_retries": 0,
+      "http_status": 200,
+      "returned_model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 1,
+        "total_tokens": 9,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 8
+      },
+      "response_id": "98cec3b1-ede9-4ba7-8d04-024b9fd67e75",
+      "usage_cost_upper_bound_usd": 0.0000036,
+      "elapsed_ms": 1114.492
+    }
+  ],
+  "selected_model": "deepseek-flash",
+  "user_authorization": "2026-11-02: $10 cap; try deepseek-flash and deepseek-v4-flash",
+  "config": {
+    "provider": "DeepSeek",
+    "model": "deepseek-flash",
+    "temperature": 0,
+    "max_output_tokens": 2048,
+    "thinking": "disabled",
+    "usage_mapping": {
+      "input_tokens": "usage.prompt_tokens",
+      "output_tokens": "usage.completion_tokens",
+      "cache_read_input_tokens": "usage.prompt_cache_hit_tokens",
+      "reasoning_tokens": "usage.completion_tokens_details.reasoning_tokens, unknown when absent",
+      "cache_creation_input_tokens": null
+    },
+    "probe_usage_cost_upper_bound_usd": 0.0000072,
+    "budget_remaining_lower_bound_usd": 9.9999928
+  },
+  "official_model_routing_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+}

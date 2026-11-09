@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scope": "17 alpha20 error/status/HTTP mappings only; status never grants permission to retry",
+  "cases": [
+    {
+      "code": "NCP-FEATURE-NEGOTIATION-INVALID",
+      "status": "NPS-CLIENT-BAD-FRAME",
+      "http": 400
+    },
+    {
+      "code": "NCP-FEATURE-REQUIRED-UNSUPPORTED",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NWP-CHALLENGE-INVALID",
+      "status": "NPS-CLIENT-BAD-FRAME",
+      "http": 400
+    },
+    {
+      "code": "NWP-CHALLENGE-NOT-FOUND",
+      "status": "NPS-CLIENT-NOT-FOUND",
+      "http": 404
+    },
+    {
+      "code": "NWP-CHALLENGE-BINDING-CONFLICT",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NWP-CHALLENGE-NOT-APPROVED",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NWP-CHALLENGE-EXPIRED",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NWP-CHALLENGE-STATE-UNAVAILABLE",
+      "status": "NPS-SERVER-UNAVAILABLE",
+      "http": 503
+    },
+    {
+      "code": "NOP-EXECUTION-INDETERMINATE",
+      "status": "NPS-SERVER-INTERNAL",
+      "http": 500
+    },
+    {
+      "code": "NWP-FEATURE-REQUIREMENTS-INVALID",
+      "status": "NPS-CLIENT-BAD-FRAME",
+      "http": 400
+    },
+    {
+      "code": "NWP-FEATURE-REQUIRED-UNSUPPORTED",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NIP-CONTEXT-INVALID",
+      "status": "NPS-CLIENT-BAD-FRAME",
+      "http": 400
+    },
+    {
+      "code": "NIP-CONTEXT-UNTRUSTED",
+      "status": "NPS-AUTH-FORBIDDEN",
+      "http": 403
+    },
+    {
+      "code": "NIP-CONTEXT-BINDING-MISMATCH",
+      "status": "NPS-AUTH-FORBIDDEN",
+      "http": 403
+    },
+    {
+      "code": "NIP-CONTEXT-EXPIRED",
+      "status": "NPS-AUTH-FORBIDDEN",
+      "http": 403
+    },
+    {
+      "code": "NIP-CONTEXT-REPLAY",
+      "status": "NPS-CLIENT-CONFLICT",
+      "http": 409
+    },
+    {
+      "code": "NIP-CONTEXT-VERIFIER-UNAVAILABLE",
+      "status": "NPS-SERVER-UNAVAILABLE",
+      "http": 503
+    }
+  ]
+}

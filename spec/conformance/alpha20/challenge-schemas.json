@@ -1,0 +1,85 @@
+{
+  "profile": "nps.governed_challenge",
+  "revision": 1,
+  "status": "candidate-schema-not-runtime-qualified",
+  "schemas": [
+    {
+      "name": "challenge_record",
+      "schema": {
+        "fields": [
+          {
+            "name": "challenge_id",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "state",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "action_id",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "audience",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "request_digest",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "expires_at",
+            "type": "uint64",
+            "nullable": false
+          },
+          {
+            "name": "methods",
+            "type": "array",
+            "nullable": false
+          },
+          {
+            "name": "operation_id",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "retained_until",
+            "type": "uint64",
+            "nullable": true
+          },
+          {
+            "name": "result",
+            "type": "object",
+            "nullable": true
+          },
+          {
+            "name": "error",
+            "type": "object",
+            "nullable": true
+          }
+        ]
+      },
+      "canonical_jcs": "{\"fields\":[{\"name\":\"challenge_id\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"state\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"action_id\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"audience\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"request_digest\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"expires_at\",\"nullable\":false,\"type\":\"uint64\"},{\"name\":\"methods\",\"nullable\":false,\"type\":\"array\"},{\"name\":\"operation_id\",\"nullable\":false,\"type\":\"string\"},{\"name\":\"retained_until\",\"nullable\":true,\"type\":\"uint64\"},{\"name\":\"result\",\"nullable\":true,\"type\":\"object\"},{\"name\":\"error\",\"nullable\":true,\"type\":\"object\"}]}",
+      "anchor_id": "sha256:cb7811ae62656a78da0ce7793f86a988509b1e58bb23fb4c8cbb7c44d83b4e41"
+    },
+    {
+      "name": "challenge_handle_params",
+      "schema": {
+        "fields": [
+          {
+            "name": "challenge_id",
+            "type": "string",
+            "nullable": false
+          }
+        ]
+      },
+      "canonical_jcs": "{\"fields\":[{\"name\":\"challenge_id\",\"nullable\":false,\"type\":\"string\"}]}",
+      "anchor_id": "sha256:046bee6b52a13531c1bdc7aa1a6fa35de6c436e2b1ae3ee5267570df59e35d9c"
+    }
+  ]
+}

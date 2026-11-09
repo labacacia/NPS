@@ -2,6 +2,9 @@
 
 # NPS 传输绑定规范（Transport Profile）
 
+> 历史草案，不是当前合规目标。请参阅[传输规则对齐](./transport-reconciliation.cn.md)
+> 中的冲突台账和现行 NCP 依据。下文原稿仅作历史保留。
+
 **标题**: NPS Transport Profile  
 **版本**: 0.1  
 **状态**: Draft  

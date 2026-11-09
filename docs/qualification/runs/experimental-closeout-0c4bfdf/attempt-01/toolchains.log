@@ -1,0 +1,93 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-c", "import sys,platform; print(sys.version); print(platform.platform()); print('optimize=',sys.flags.optimize); sys.exit(1 if sys.flags.optimize else 0)"], "cwd": "."}
+3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]
+Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+optimize= 0
+{"command": ["/tmp/nps-alpha20-sdk-packages-20261103/python-build-venv/bin/python", "--version"], "cwd": "."}
+Python 3.14.4
+{"command": ["/tmp/nps-alpha20-sdk-packages-20261103/python-build-venv/bin/python", "-m", "pip_audit", "--version"], "cwd": "."}
+pip-audit 2.10.1
+{"command": ["dotnet", "--info"], "cwd": "."}
+.NET SDK:
+ Version:           10.0.114
+ Commit:            0427b9abbe
+ Workload version:  10.0.100-manifests.a00bebb6
+ MSBuild version:   18.0.36+0427b9abb
+
+Runtime Environment:
+ OS Name:     ubuntu
+ OS Version:  26.04
+ OS Platform: Linux
+ RID:         ubuntu.26.04-x64
+ Base Path:   /usr/lib/dotnet/sdk/10.0.114/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.14
+  Architecture: x64
+  Commit:       0427b9abbe
+
+.NET SDKs installed:
+  10.0.114 [/usr/lib/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 10.0.14 [/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 10.0.14 [/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_BUNDLE_EXTRACT_BASE_DIR           [/home/olynn/.cache/dotnet_bundle_extract]
+  DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE [false]
+  DOTNET_USE_POLLING_FILE_WATCHER          [1]
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/.artifacts/toolchains/go1.26.10/go/bin/go", "version"], "cwd": "."}
+go version go1.26.10 linux/amd64
+{"command": ["cargo", "--version"], "cwd": "."}
+cargo 1.99.1 (5f94df478 2026-08-27)
+{"command": ["rustc", "--version"], "cwd": "."}
+rustc 1.99.1 (58cf8f9c3 2026-10-13)
+{"command": ["cargo", "clippy", "--version"], "cwd": "."}
+clippy 0.1.99 (58cf8f9c35 2026-10-13)
+{"command": ["cargo", "audit", "--version"], "cwd": "."}
+cargo-audit-audit 0.22.2
+{"command": ["node", "--version"], "cwd": "."}
+v22.22.1
+{"command": ["npx", "--yes", "npm@11.11.0", "--version"], "cwd": "."}
+11.11.0
+{"command": ["/home/olynn/.cache/androidsync/jdk/bin/java", "-version"], "cwd": "."}
+openjdk version "17.0.14" 2025-01-21 LTS
+OpenJDK Runtime Environment Microsoft-10800290 (build 17.0.14+7-LTS)
+OpenJDK 64-Bit Server VM Microsoft-10800290 (build 17.0.14+7-LTS, mixed mode, sharing)
+{"command": ["/home/olynn/.gradle/jdks/eclipse_adoptium-21-amd64-linux.2/bin/java", "-version"], "cwd": "."}
+openjdk version "21.0.13" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-21.0.13+9 (build 21.0.13+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.13+9 (build 21.0.13+9-LTS, mixed mode, sharing)
+{"command": ["./gradlew", "--version"], "cwd": "impl/java"}
+
+------------------------------------------------------------
+Gradle 8.14.3
+------------------------------------------------------------
+
+Build time:    2025-07-04 13:15:44 UTC
+Revision:      e5ee1df3d88b8ca3a8074787a94f373e3090e1db
+
+Kotlin:        2.0.21
+Groovy:        3.0.24
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  17.0.14 (Microsoft 17.0.14+7-LTS)
+Daemon JVM:    /home/olynn/.cache/androidsync/jdk (no JDK specified, using current Java home)
+OS:            Linux 7.0.0-38-generic amd64
+

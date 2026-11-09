@@ -1,0 +1,600 @@
+Suite version: 1.0.0-alpha.19
+Repo root:     /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow
+Ext root:      /home/olynn/ai-workspaces/labacacia-nps/repos
+
+  [A] ✅  tools/daemons/npsd/Npsd.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/daemons/nps-runner/NpsRunner.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/daemons/nps-ingress/NpsIngress.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/daemons/nps-registry/NpsRegistry.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/daemons/nps-cloud-ca/NpsCloudCa.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/daemons/nps-ledger/NpsLedger.csproj: both='1.0.0-alpha.19'
+  [A] ✅  tools/nip-ca-server/NPS.NipCaServer.csproj: both='1.0.0-alpha.19'
+  [B] ✅  impl/typescript/package.json: ok='1.0.0-alpha.19'
+  [B] ✅  impl/python/pyproject.toml: ok='1.0.0-alpha.19'
+  [B] ✅  impl/rust/Cargo.toml: ok='1.0.0-alpha.19'
+  [B] ✅  impl/java/build.gradle.kts: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.Core/NPS.Core.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NWP/NPS.NWP.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NIP/NPS.NIP.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NDP/NPS.NDP.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.NOP/NPS.NOP.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj: ok='1.0.0-alpha.19'
+  [B] ✅  impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj: ok='1.0.0-alpha.19'
+  [C] ✅  tools/daemons/bundle-overlay/docker-compose.yml: all 4 tag(s) = '1.0.0-alpha.19'
+  [D] ✅  tools/daemons/npsd/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/nps-runner/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/nps-ingress/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/nps-registry/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/nps-cloud-ca/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/nps-ledger/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/daemons/bundle-overlay/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  tools/nip-ca-server/CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [D] ✅  CHANGELOG.md: ## [1.0.0-alpha.19] entry found
+  [H] ✅  /home/olynn/ai-workspaces/labacacia-nps/repos/NPS/version.yaml: suite_version='1.0.0-alpha.19' is not a sub-patch alpha label
+  [K] ✅  impl/dotnet/Directory.Build.props: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.Core/NPS.Core.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NWP/NPS.NWP.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NIP/NPS.NIP.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NDP/NPS.NDP.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.NOP/NPS.NOP.csproj: no active alpha sub-version labels
+  [K] ✅  impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj: no active alpha sub-version labels
+  [K] ✅  impl/typescript/package.json: no active alpha sub-version labels
+  [K] ✅  impl/typescript/package-lock.json: no active alpha sub-version labels
+  [K] ✅  impl/python/pyproject.toml: no active alpha sub-version labels
+  [K] ✅  impl/java/build.gradle.kts: no active alpha sub-version labels
+  [K] ✅  impl/rust/Cargo.toml: no active alpha sub-version labels
+  [K] ✅  impl/rust/Cargo.lock: no active alpha sub-version labels
+  [K] ✅  impl/go/VERSION: no active alpha sub-version labels
+  [K] ✅  impl/go/core/version.go: no active alpha sub-version labels
+  [K] ✅  tools/daemons/npsd/Npsd.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/npsd/publish-overlay/Npsd.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-runner/NpsRunner.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-runner/publish-overlay/NpsRunner.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ingress/NpsIngress.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ingress/publish-overlay/NpsIngress.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-registry/NpsRegistry.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-registry/publish-overlay/NpsRegistry.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-cloud-ca/NpsCloudCa.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-cloud-ca/publish-overlay/NpsCloudCa.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ledger/NpsLedger.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ledger/publish-overlay/NpsLedger.csproj: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/NPS.NipCaServer.csproj: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/publish-overlay/NPS.NipCaServer.csproj: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-registry/Program.cs: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ledger/Program.cs: no active alpha sub-version labels
+  [K] ✅  tools/daemons/bundle-overlay/docker-compose.yml: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/example/rust/Cargo.toml: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/example/rust/Cargo.lock: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/example/ts/package.json: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/example/ts/package-lock.json: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/example/java/build.gradle: no active alpha sub-version labels
+  [K] ✅  CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/npsd/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/npsd/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-runner/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-runner/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ingress/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ingress/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-registry/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-registry/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-cloud-ca/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-cloud-ca/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ledger/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/nps-ledger/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/bundle-overlay/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/daemons/bundle-overlay/CHANGELOG.cn.md: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/CHANGELOG.md: no active alpha sub-version labels
+  [K] ✅  tools/nip-ca-server/CHANGELOG.cn.md: no active alpha sub-version labels
+  [L] ✅  spec/version-matrix.yaml: suite_version='1.0.0-alpha.19' matches Release oracle
+
+  [E] ✅  No stale banners detected.
+
+  [I/J] ⚠️  Tree drift detected — I (spec): 60, J (SDK): 292
+      ⚠️  [I] spec ↔ NPS/spec: NPS-0-Overview.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-0-Overview.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-1-NCP.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-1-NCP.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-2-NWP.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-2-NWP.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-3-NIP.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-3-NIP.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-4-NDP.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-4-NDP.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-5-NOP.cn.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: NPS-5-NOP.md — differs
+      ⚠️  [I] spec ↔ NPS/spec: alpha20-lifecycle.cn.md — only in source
+      ⚠️  [I] spec ↔ NPS/spec: alpha20-lifecycle.md — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/README.md — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/challenge-schemas.json — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/compatibility-matrix.json — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/context_crypto_vectors.json — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/data_result_contract.json — only in source
+      ⚠️  [I] spec ↔ NPS/spec: conformance/alpha20/data_result_vectors.json — only in source
+      … 332 more entries (see report)
+
+  [G] ⚠️  Local-vs-origin divergence (9 repo(s)):
+      ⚠️  NPS (main): G1 ahead 1
+      ⚠️  NPS-Daemons (main): G1 ahead 1
+      ⚠️  NIP-CA-Server (main): G1 ahead 1
+      ⚠️  NPS-sdk-go (main): G1 ahead 1
+      ⚠️  NPS-sdk-rust (main): G1 ahead 1
+      ⚠️  NPS-sdk-py (main): G1 ahead 1
+      ⚠️  NPS-sdk-ts (main): G1 ahead 1
+      ⚠️  NPS-sdk-java (main): G1 ahead 1
+      ⚠️  NPS-sdk-dotnet (main): G1 ahead 1
+
+## NPS Source-of-Truth Drift Check — `1.0.0-alpha.19`
+
+| # | Assertion | File | Result |
+|---|-----------|------|--------|
+| 1 | A | `tools/daemons/npsd/Npsd.csproj` | ✅ both='1.0.0-alpha.19' |
+| 2 | A | `tools/daemons/nps-runner/NpsRunner.csproj` | ✅ both='1.0.0-alpha.19' |
+| 3 | A | `tools/daemons/nps-ingress/NpsIngress.csproj` | ✅ both='1.0.0-alpha.19' |
+| 4 | A | `tools/daemons/nps-registry/NpsRegistry.csproj` | ✅ both='1.0.0-alpha.19' |
+| 5 | A | `tools/daemons/nps-cloud-ca/NpsCloudCa.csproj` | ✅ both='1.0.0-alpha.19' |
+| 6 | A | `tools/daemons/nps-ledger/NpsLedger.csproj` | ✅ both='1.0.0-alpha.19' |
+| 7 | A | `tools/nip-ca-server/NPS.NipCaServer.csproj` | ✅ both='1.0.0-alpha.19' |
+| 8 | B | `impl/typescript/package.json` | ✅ ok='1.0.0-alpha.19' |
+| 9 | B | `impl/python/pyproject.toml` | ✅ ok='1.0.0-alpha.19' |
+| 10 | B | `impl/rust/Cargo.toml` | ✅ ok='1.0.0-alpha.19' |
+| 11 | B | `impl/java/build.gradle.kts` | ✅ ok='1.0.0-alpha.19' |
+| 12 | B | `impl/dotnet/src/NPS.Core/NPS.Core.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 13 | B | `impl/dotnet/src/NPS.NWP/NPS.NWP.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 14 | B | `impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 15 | B | `impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 16 | B | `impl/dotnet/src/NPS.NIP/NPS.NIP.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 17 | B | `impl/dotnet/src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 18 | B | `impl/dotnet/src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 19 | B | `impl/dotnet/src/NPS.NDP/NPS.NDP.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 20 | B | `impl/dotnet/src/NPS.NOP/NPS.NOP.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 21 | B | `impl/dotnet/src/NPS.Conformance/NPS.Conformance.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 22 | B | `impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj` | ✅ ok='1.0.0-alpha.19' |
+| 23 | C | `tools/daemons/bundle-overlay/docker-compose.yml` | ✅ all 4 tag(s) = '1.0.0-alpha.19' |
+| 24 | D | `tools/daemons/npsd/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 25 | D | `tools/daemons/nps-runner/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 26 | D | `tools/daemons/nps-ingress/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 27 | D | `tools/daemons/nps-registry/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 28 | D | `tools/daemons/nps-cloud-ca/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 29 | D | `tools/daemons/nps-ledger/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 30 | D | `tools/daemons/bundle-overlay/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 31 | D | `tools/nip-ca-server/CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 32 | D | `CHANGELOG.md` | ✅ ## [1.0.0-alpha.19] entry found |
+| 33 | H | `/home/olynn/ai-workspaces/labacacia-nps/repos/NPS/version.yaml` | ✅ suite_version='1.0.0-alpha.19' is not a sub-patch alpha label |
+| 34 | K | `impl/dotnet/Directory.Build.props` | ✅ no active alpha sub-version labels |
+| 35 | K | `impl/dotnet/src/NPS.Core/NPS.Core.csproj` | ✅ no active alpha sub-version labels |
+| 36 | K | `impl/dotnet/src/NPS.NWP/NPS.NWP.csproj` | ✅ no active alpha sub-version labels |
+| 37 | K | `impl/dotnet/src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj` | ✅ no active alpha sub-version labels |
+| 38 | K | `impl/dotnet/src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj` | ✅ no active alpha sub-version labels |
+| 39 | K | `impl/dotnet/src/NPS.NIP/NPS.NIP.csproj` | ✅ no active alpha sub-version labels |
+| 40 | K | `impl/dotnet/src/NPS.NDP/NPS.NDP.csproj` | ✅ no active alpha sub-version labels |
+| 41 | K | `impl/dotnet/src/NPS.NOP/NPS.NOP.csproj` | ✅ no active alpha sub-version labels |
+| 42 | K | `impl/dotnet/src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj` | ✅ no active alpha sub-version labels |
+| 43 | K | `impl/typescript/package.json` | ✅ no active alpha sub-version labels |
+| 44 | K | `impl/typescript/package-lock.json` | ✅ no active alpha sub-version labels |
+| 45 | K | `impl/python/pyproject.toml` | ✅ no active alpha sub-version labels |
+| 46 | K | `impl/java/build.gradle.kts` | ✅ no active alpha sub-version labels |
+| 47 | K | `impl/rust/Cargo.toml` | ✅ no active alpha sub-version labels |
+| 48 | K | `impl/rust/Cargo.lock` | ✅ no active alpha sub-version labels |
+| 49 | K | `impl/go/VERSION` | ✅ no active alpha sub-version labels |
+| 50 | K | `impl/go/core/version.go` | ✅ no active alpha sub-version labels |
+| 51 | K | `tools/daemons/npsd/Npsd.csproj` | ✅ no active alpha sub-version labels |
+| 52 | K | `tools/daemons/npsd/publish-overlay/Npsd.csproj` | ✅ no active alpha sub-version labels |
+| 53 | K | `tools/daemons/nps-runner/NpsRunner.csproj` | ✅ no active alpha sub-version labels |
+| 54 | K | `tools/daemons/nps-runner/publish-overlay/NpsRunner.csproj` | ✅ no active alpha sub-version labels |
+| 55 | K | `tools/daemons/nps-ingress/NpsIngress.csproj` | ✅ no active alpha sub-version labels |
+| 56 | K | `tools/daemons/nps-ingress/publish-overlay/NpsIngress.csproj` | ✅ no active alpha sub-version labels |
+| 57 | K | `tools/daemons/nps-registry/NpsRegistry.csproj` | ✅ no active alpha sub-version labels |
+| 58 | K | `tools/daemons/nps-registry/publish-overlay/NpsRegistry.csproj` | ✅ no active alpha sub-version labels |
+| 59 | K | `tools/daemons/nps-cloud-ca/NpsCloudCa.csproj` | ✅ no active alpha sub-version labels |
+| 60 | K | `tools/daemons/nps-cloud-ca/publish-overlay/NpsCloudCa.csproj` | ✅ no active alpha sub-version labels |
+| 61 | K | `tools/daemons/nps-ledger/NpsLedger.csproj` | ✅ no active alpha sub-version labels |
+| 62 | K | `tools/daemons/nps-ledger/publish-overlay/NpsLedger.csproj` | ✅ no active alpha sub-version labels |
+| 63 | K | `tools/nip-ca-server/NPS.NipCaServer.csproj` | ✅ no active alpha sub-version labels |
+| 64 | K | `tools/nip-ca-server/publish-overlay/NPS.NipCaServer.csproj` | ✅ no active alpha sub-version labels |
+| 65 | K | `tools/daemons/nps-registry/Program.cs` | ✅ no active alpha sub-version labels |
+| 66 | K | `tools/daemons/nps-ledger/Program.cs` | ✅ no active alpha sub-version labels |
+| 67 | K | `tools/daemons/bundle-overlay/docker-compose.yml` | ✅ no active alpha sub-version labels |
+| 68 | K | `tools/nip-ca-server/example/rust/Cargo.toml` | ✅ no active alpha sub-version labels |
+| 69 | K | `tools/nip-ca-server/example/rust/Cargo.lock` | ✅ no active alpha sub-version labels |
+| 70 | K | `tools/nip-ca-server/example/ts/package.json` | ✅ no active alpha sub-version labels |
+| 71 | K | `tools/nip-ca-server/example/ts/package-lock.json` | ✅ no active alpha sub-version labels |
+| 72 | K | `tools/nip-ca-server/example/java/build.gradle` | ✅ no active alpha sub-version labels |
+| 73 | K | `CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 74 | K | `CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 75 | K | `tools/daemons/npsd/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 76 | K | `tools/daemons/npsd/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 77 | K | `tools/daemons/nps-runner/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 78 | K | `tools/daemons/nps-runner/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 79 | K | `tools/daemons/nps-ingress/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 80 | K | `tools/daemons/nps-ingress/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 81 | K | `tools/daemons/nps-registry/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 82 | K | `tools/daemons/nps-registry/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 83 | K | `tools/daemons/nps-cloud-ca/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 84 | K | `tools/daemons/nps-cloud-ca/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 85 | K | `tools/daemons/nps-ledger/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 86 | K | `tools/daemons/nps-ledger/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 87 | K | `tools/daemons/bundle-overlay/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 88 | K | `tools/daemons/bundle-overlay/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 89 | K | `tools/nip-ca-server/CHANGELOG.md` | ✅ no active alpha sub-version labels |
+| 90 | K | `tools/nip-ca-server/CHANGELOG.cn.md` | ✅ no active alpha sub-version labels |
+| 91 | L | `spec/version-matrix.yaml` | ✅ suite_version='1.0.0-alpha.19' matches Release oracle |
+
+### ✅ All source-of-truth checks passed (A–D, H, K, L).
+
+## Banner drift warnings (Assertion E)
+
+✅ No stale banners detected.
+
+## Tree drift warnings (Assertions I & J)
+
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-0-Overview.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-0-Overview.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-1-NCP.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-1-NCP.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-2-NWP.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-2-NWP.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-3-NIP.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-3-NIP.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-4-NDP.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-4-NDP.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-5-NOP.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `NPS-5-NOP.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `alpha20-lifecycle.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `alpha20-lifecycle.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/README.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/challenge-schemas.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_result_contract.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_result_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/error_status_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `conformance/alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0012-feature-negotiation.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0012-feature-negotiation.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0013-invocation-context.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0013-invocation-context.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0014-production-runtime.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0014-production-runtime.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0015-governed-challenge.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0015-governed-challenge.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0016-data-results.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/NPS-CR-0017-schema-batches.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/README.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `cr/README.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `error-codes.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `error-codes.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `feature-registry.json` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `profiles/data-results.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `profiles/data-results.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `profiles/schema-batches.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `profiles/schema-batches.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `rfcs/NPS-RFC-0006-ncp-native-transport.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `rfcs/NPS-RFC-0006-ncp-native-transport.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `status-codes.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `status-codes.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `transport-profile.cn.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `transport-profile.md` — differs
+- ⚠️  [I] `spec ↔ NPS/spec` `transport-reconciliation.cn.md` — only in source
+- ⚠️  [I] `spec ↔ NPS/spec` `transport-reconciliation.md` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Conformance/NPS.Conformance.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Alpha20/Alpha20ErrorStatus.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Alpha20/FeatureWireParser.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Anchoring/AnchorIdComputer.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Codecs/NpsFrameCodec.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Codecs/Tier2MsgPackCodec.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Exceptions/NpsExceptions.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Frames/FrameFlags.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Frames/Ncp/NcpFrames.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/NPS.Core.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpCanonicalWire.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpHandshakeProfile.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpNativeClient.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpNativeClientOptions.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpSchemaBatchNegotiation.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpServer.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpServerConnection.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/NcpSession.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchDiffWireFields.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchFrameCodec.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchReceiver.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchStreamPublisher.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchStreamReader.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchStreamTransport.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchValues.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Ncp/SchemaBatchWireGuard.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/NcpErrorCodes.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Core/Serialization/JcsString.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.Daemon.Observability/NPS.Daemon.Observability.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NDP/Discovery/NdpResultDiscovery.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NDP/Discovery/NdpRouteAuthority.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NDP/NPS.NDP.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP.Storage.Postgres/NPS.NIP.Storage.Postgres.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP.Storage.Sqlite/NPS.NIP.Storage.Sqlite.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP.Storage.Sqlite/Storage/SqliteNipProjectionReplayStore.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/Ca/NipCaService.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/Invocation/NipInvocationJson.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/Invocation/NipInvocationVerifier.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/Invocation/NipResultHttpBinding.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/Invocation/NipResultHttpProjector.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NIP/NPS.NIP.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Frames/NopFrames.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/NPS.NOP.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/NopErrorCodes.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Orchestration/NopOrchestrator.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Orchestration/NopOrchestratorOptions.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Orchestration/NopTaskResult.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Runtime/NopRuntimeBinding.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Runtime/NopRuntimeExecutor.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NOP/Runtime/NopTaskIdentity.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP.Anchor/NPS.NWP.Anchor.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP.Bridge/NPS.NWP.Bridge.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/ActionNode/ActionNodeManifestSource.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/ActionNode/ActionNodeMiddleware.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/ActionNode/ActionNodeOptions.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/ActionNode/IActionNodeProvider.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Frames/NwpFrames.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Http/NwpHttpHeaders.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/NPS.NWP.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Native/NwpNativeNodeServer.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Nwm/NeuralWebManifest.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Results/ResultActionProvider.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Results/ResultHttpClient.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Results/ResultResourceModels.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Results/ResultResourcePolicy.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `src/NPS.NWP/Results/ResultResourceStore.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/Alpha20ErrorStatusTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/FeatureWireParserTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/NipInvocationJsonTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/NipInvocationVerifierTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/NipProjectionReplayStoreTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Alpha20/NipResultHttpProjectorTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/NPS.Tests.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/NcpHandshakeHeaderBoundsTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/NcpSchemaBatchSessionTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchCaptureProgram.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchPortableVectorTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchReceiverTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchRepresentationTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchSchemaHashTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchStreamTransferTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchTransferExchange.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchTransferMeasurementTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchTransferSource.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ncp/SchemaBatchTransferTraffic.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ndp/NdpResultDiscoveryTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Ndp/NdpRouteTestPublisher.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nop/NopRuntimeExecutorTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/NdpResultRoutingTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/NopHandoffCapture.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/NopResultHandoffTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/NwpNativeNodeServerTests.cs` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultActionHttpTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultClientCancellationTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultDelegationRevocationTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultFrozenInvariantHttpTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultInvocationGatewayTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultInvocationTlsTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultNativeAdmissionTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultOracleWorkflowTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultResourcePolicyTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultResourceStoreTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultRuntimeComparisonTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultRuntimeComparisonTransport.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultRuntimeDiagnostics.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultRuntimeFixtureHash.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultSchemaUpdateComparisonTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `tests/NPS.Tests/Nwp/ResultTenantBoundaryTests.cs` — only in source
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `samples/NPS.Samples.NopDag/NPS.Samples.NopDag.csproj` — differs
+- ⚠️  [J] `impl/dotnet ↔ NPS-SDK-DotNet` `samples/NPS.Samples.NopDag/Orchestration/SqliteNopRuntimeJournal.cs` — only in source
+- ⚠️  [J] `LICENSE ↔ NPS-SDK-DotNet` `` — differs
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-DotNet` `alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/alpha20/__init__.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/alpha20/feature_wire_parser.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/ncp/error_codes.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nip/error_codes.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nop/error_codes.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nwp/RESULTS.cn.md` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nwp/RESULTS.md` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nwp/__init__.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nwp/error_codes.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `nps_sdk/nwp/results.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/conformance_fixtures.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_alpha19_hardening.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_alpha20_context_crypto_vectors.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_alpha20_error_status.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_alpha20_feature_wire_parser.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_error_status_codes.py` — differs
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `tests/test_nwp_result_client.py` — only in source
+- ⚠️  [J] `impl/python ↔ NPS-SDK-Python` `pyproject.toml` — differs
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Python` `alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20/context-admission.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20/context-bytes.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20/feature-wire-parser.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20/sqlite-projection-replay-store.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/alpha20/strict-json.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/ncp/ncp-error-codes.ts` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/nip/error-codes.ts` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/nop/nop-error-codes.ts` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `src/nwp/nwp-error-codes.ts` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/alpha20-context-admission.test.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/alpha20-context-bytes.test.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/alpha20-error-status.test.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/alpha20-feature-wire-parser.test.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/alpha20-sqlite-replay.test.ts` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `tests/fixtures/alpha20-replay-worker.mjs` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `scripts/verify-pack.mjs` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `package.json` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `package-lock.json` — differs
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `ALPHA20.md` — only in source
+- ⚠️  [J] `impl/typescript ↔ NPS-SDK-TypeScript` `ALPHA20.cn.md` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-TypeScript` `alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha19/policy.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha19/policy_test.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha20/context_crypto_vectors_test.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha20/error_status_test.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha20/feature_wire_parser.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `alpha20/feature_wire_parser_test.go` — only in source
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `conformance/conformance.go` — differs
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `conformance/conformance_test.go` — differs
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `ncp/error_codes.go` — differs
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `nip/error_codes.go` — differs
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `nop/error_codes.go` — differs
+- ⚠️  [J] `impl/go ↔ NPS-SDK-Go` `nwp/error_codes.go` — differs
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Go` `alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/main/java/com/labacacia/nps/alpha20/FeatureWireParser.java` — only in source
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/main/java/com/labacacia/nps/ncp/NcpErrorCodes.java` — differs
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/main/java/com/labacacia/nps/nip/NipErrorCodes.java` — differs
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/main/java/com/labacacia/nps/nop/NopErrorCodes.java` — differs
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/main/java/com/labacacia/nps/nwp/NwpErrorCodes.java` — differs
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/test/java/com/labacacia/nps/alpha20/ErrorStatusTest.java` — only in source
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `src/test/java/com/labacacia/nps/alpha20/FeatureWireParserTest.java` — only in source
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `build.gradle.kts` — differs
+- ⚠️  [J] `impl/java ↔ NPS-SDK-Java` `gradle/wrapper/gradle-wrapper.properties` — differs
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Java` `alpha20/schema_batch_vectors.json` — only in source
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-core/src/alpha20.rs` — only in source
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-core/src/lib.rs` — differs
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-ncp/src/error_codes.rs` — differs
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-nwp/src/error_codes.rs` — differs
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-nip/src/error_codes.rs` — differs
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `nps-nop/src/error_codes.rs` — differs
+- ⚠️  [J] `impl/rust ↔ NPS-SDK-Rust` `Cargo.lock` — differs
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/challenge-schemas.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/compatibility-matrix.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/context_crypto_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_result_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_result_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_freeze_v1/feature-registry.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_freeze_v1/version-matrix.yaml` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_gates.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_methodology.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/data_workflow_successor.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/error_status_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/feature_handshake_boundary_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/feature_negotiation_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/schema_batch_contract.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/schema_batch_hash_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/schema_batch_hash_vectors.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/schema_batch_manifest.json` — only in source
+- ⚠️  [J] `spec/conformance ↔ NPS-SDK-Rust` `alpha20/schema_batch_vectors.json` — only in source
+
+## Local-vs-origin coherence (Assertion G)
+
+- ⚠️  `NPS` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-Daemons` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NIP-CA-Server` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-go` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-rust` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-py` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-ts` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-java` (main): G1 ahead by 1 commit(s) (orphan)
+- ⚠️  `NPS-sdk-dotnet` (main): G1 ahead by 1 commit(s) (orphan)

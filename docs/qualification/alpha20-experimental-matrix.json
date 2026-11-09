@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-local-execution",
+  "task": "D20-08",
+  "decision": "docs/adr/2026-11-03-alpha20-experimental-closeout.md",
+  "decision_sha256": "8258296ad76c08aeb3de9b68bef8e0d3c83812869a83928432052af79ce23b43",
+  "authorization": "2026-11-03 user accepted bounded experimentalalpha20 andlocalCI",
+  "cases": [
+    {
+      "id": "E20-HTTP-DOTNET",
+      "client": "dotnet",
+      "server": "dotnet-reference",
+      "binding": "canonical-http-result",
+      "evidence_kind": "actual-HTTP-and-mTLS-tests",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.LifecycleUsesCapsulesExactAggregatesSnapshotPagesAndOwnerRelease",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.LifecycleUsesCapsulesExactAggregatesSnapshotPagesAndOwnerRelease"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls",
+          "minimum_passed": 9,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=01\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1 \", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1,nps.data_results=1\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=1,nps.invocation_context=1\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=2\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.data_results=65536\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.other-profile=1\", status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: \"nps.other=1,nps.data_results=1\", status: 400, error: \"NWP-FEATURE-REQUIREMENTS-INVALID\")",
+            "NPS.Tests.Nwp.ResultActionHttpTests.InvalidOrUnsupportedAdmissionHasZeroCaptureAndVerifierCalls(features: null, status: 409, error: \"NWP-FEATURE-REQUIRED-UNSUPPORTED\")"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.BoundsAndMediaTypesFailBeforeCaptureAndManifestDoesNotAdvertise",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.BoundsAndMediaTypesFailBeforeCaptureAndManifestDoesNotAdvertise"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.EgressDeniesMetadataBeforeCaptureAndRetainedRead",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.EgressDeniesMetadataBeforeCaptureAndRetainedRead"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.RecipientGrantIsResultFieldAndOperationBoundOnTheHttpRoute",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.RecipientGrantIsResultFieldAndOperationBoundOnTheHttpRoute"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.LiveSourceRevocationBlocksRetainedOwnerAndRecipientHttpReads",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.LiveSourceRevocationBlocksRetainedOwnerAndRecipientHttpReads"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.SameKeyNeverBypassesStorePolicyExpiryOrConflicts",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.SameKeyNeverBypassesStorePolicyExpiryOrConflicts"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp",
+          "minimum_passed": 39,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F01\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F02\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F03\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F04\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F05\", outcome: \"FEATURE_UNSUPPORTED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F06\", outcome: \"UNAUTHENTICATED\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F07\", outcome: \"POLICY_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F08\", outcome: \"PAGE\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F09\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F10\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F11\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F12\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F13\", outcome: \"PAGE\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F14\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F15\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F16\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F17\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F18\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F19\", outcome: \"SNAPSHOT_MISMATCH\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F20\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F21\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F22\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F23\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F24\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F25\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F26\", outcome: \"PAGE\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F27\", outcome: \"PAGE\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F28\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F29\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F30\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F31\", outcome: \"INVALID_PARAMS\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F32\", outcome: \"CAPACITY\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F33\", outcome: \"CREATED\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F34\", outcome: \"KEY_CONFLICT\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F35\", outcome: \"AGGREGATE\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F36\", outcome: \"RELEASED\", expectedHandlers: 1)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F37\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F38\", outcome: \"RESULT_UNAVAILABLE\", expectedHandlers: 0)",
+            "NPS.Tests.Nwp.ResultActionHttpTests.FrozenSemanticInvariantExecutesThroughHttp(id: \"DR-F39\", outcome: \"RELEASED\", expectedHandlers: 1)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.RealGatewayUsesTwoAuthenticatedLegsAndFreshProjectionForEveryOperation",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.RealGatewayUsesTwoAuthenticatedLegsAndFreshProjectionForEveryOperation"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientCancellationBeforeAdmissionHasZeroResultDispatch",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientCancellationBeforeAdmissionHasZeroResultDispatch"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientInFlightCancellationDoesNotUndoAllocationAndSameKeyRecovers",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicClientInFlightCancellationDoesNotUndoAllocationAndSameKeyRecovers"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost",
+          "minimum_passed": 4,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"key\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"revoked\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unavailable\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.PublicGatewayRejectsUntrustedOrWithdrawnAuthorityBeforeReceiverPost(failure: \"unmapped\")"
+          ]
+        }
+      ],
+      "expected": "Exact lifecycle, retained snapshot/owner/grant/egress checks; current TLS/NIP admission and zero-dispatch denials; honest cancellation/retry outcomes."
+    },
+    {
+      "id": "E20-HTTP-PYTHON",
+      "client": "python-public-ResultHttpClient",
+      "server": "dotnet-reference",
+      "binding": "canonical-http-result",
+      "evidence_kind": "actual-packaged-mTLS-demo",
+      "rows": [
+        100,
+        1000,
+        100000
+      ],
+      "expected": "Both ordinary/NPS exact frozen answer; source updates preserve old snapshot; forbidden ownership/authority/egress checks; bounded tools and cleanup."
+    },
+    {
+      "id": "E20-NCP-JSON",
+      "client": "dotnet",
+      "server": "dotnet-reference",
+      "binding": "native-schema-batches-json",
+      "evidence_kind": "real-pinned-mutual-TLS-session",
+      "native_handshake_fixture_version": "0.11; schema_batches rev1 selected explicitly; no full NCP0.13 profile claim",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale",
+          "minimum_passed": 3,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100, tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 1000, tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100000, tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema",
+          "minimum_passed": 2,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: False, tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: True, tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk",
+          "minimum_passed": 2,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: False, tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: True, tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication",
+          "minimum_passed": 4,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"data\", expected: \"NCP-FRAME-FLAGS-INVALID\", tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"epoch\", expected: \"NCP-STREAM-NOT-FOUND\", tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"sequence\", expected: \"NCP-STREAM-SEQ-GAP\", tier: Json)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"window\", expected: \"NCP-STREAM-WINDOW-OVERFLOW\", tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate",
+          "minimum_passed": 1,
+          "display_contains": "tier: Json",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate(tier: Json)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding"
+          ]
+        }
+      ],
+      "expected": "Exact100/1000/100000-row baseline and update; bounded credit/data; cancellation/revocation/credit faults; reconnect recaptures without inherited base; opt-in/authority reject before capture."
+    },
+    {
+      "id": "E20-NCP-MSGPACK",
+      "client": "dotnet",
+      "server": "dotnet-reference",
+      "binding": "native-schema-batches-msgpack",
+      "evidence_kind": "real-pinned-mutual-TLS-session",
+      "native_handshake_fixture_version": "0.11; schema_batches rev1 selected explicitly; no full NCP0.13 profile claim",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale",
+          "minimum_passed": 3,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100, tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 1000, tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.BoundedTransferMatchesSourceOracleAtEveryDeclaredScale(count: 100000, tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PublisherAndReaderCarryAnExactBaseUpdateWithoutChangingPriorSnapshot(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema",
+          "minimum_passed": 2,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: False, tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SourceDenialOrPreCancellationNeverCapturesOrWritesSchema(canceled: True, tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk",
+          "minimum_passed": 2,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: False, tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RevocationOrCancellationWhileAwaitingCreditCannotPublishAnotherChunk(canceled: True, tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication",
+          "minimum_passed": 4,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"data\", expected: \"NCP-FRAME-FLAGS-INVALID\", tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"epoch\", expected: \"NCP-STREAM-NOT-FOUND\", tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"sequence\", expected: \"NCP-STREAM-SEQ-GAP\", tier: MsgPack)",
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.SpoofedReverseCreditFailsBeforeFurtherPublication(fault: \"window\", expected: \"NCP-STREAM-WINDOW-OVERFLOW\", tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ZeroCreditPausesUntilAnExplicitPositiveWindowAndThenCompletes(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ReplayedCreditCannotGrantAnotherWindow(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.MissingCreditHasABoundedWaitAndCannotPublishATerminalSnapshot(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.OversizedSourceRowFailsWithoutSendingAPartialOrTruncatedChunk(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ConsumerRevocationBeforeReadClosesWithoutExposingRows(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.PartialEofThenFreshSessionRecoversTheWholeSourceWithoutInheritingABase(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate",
+          "minimum_passed": 1,
+          "display_contains": "tier: MsgPack",
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.InvalidLocalDiffBaseClosesWithoutSendingAnUnprovenUpdate(tier: MsgPack)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.RequiredDisabledFeatureRejectsBeforeApplicationDispatch"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Ncp.NcpSchemaBatchSessionTests.ExplicitFeatureOptInCannotAdmitAPlaintextReferenceBinding"
+          ]
+        }
+      ],
+      "expected": "Exact100/1000/100000-row baseline and update; bounded credit/data; cancellation/revocation/credit faults; reconnect recaptures without inherited base; opt-in/authority reject before capture."
+    },
+    {
+      "id": "E20-NOP-LOCAL",
+      "client": "four-dotnet-local-worker-roles",
+      "server": "dotnet-result-reference",
+      "binding": "local-NOP-with-HTTP-data-legs",
+      "evidence_kind": "actual-local-task-runtime-and-mTLS-data",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext",
+          "minimum_passed": 3,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 100)",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 1000)",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopWorkersExchangeAuthorizedReferencesWithoutBulkModelContext(scale: 100000)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport",
+          "minimum_passed": 7,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"create-audit-loss\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"expired-input\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"hidden-field\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"lost-query-response\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"missing-grant\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-grant\")",
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NopHandoffRejectsUnprovenOrUnauthorizedInputAndDoesNotRunReport(fault: \"revoked-worker\")"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nop.NopRuntimeExecutorTests.",
+          "minimum_passed": 31,
+          "expected_test_names": [
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Capacity_never_evicts_replay_history_and_expiry_hides_payload_despite_wall_rollback",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Concurrent_duplicate_returns_running_without_new_dispatch_or_terminal_claim",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Concurrent_finish_cancel_preserves_one_terminal_and_cancellation_never_throws",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Digest_conflict_does_not_mutate_original_and_caller_identity_is_independent",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Ignored_cancellation_and_late_effect_cannot_extend_deadline_or_replace_terminal",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Journal_terminal_cas_rejects_wrong_owner_and_keeps_first_winner",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Known_terminal_error_with_retryable_flag_does_not_reexecute_effect",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Positive_non_dispatch_is_only_retry_path_and_reuses_exact_operation_identity",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Precancel_and_unsupported_callback_are_zero_dispatch",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Precancelled_duplicates_preserve_pending_terminal_and_unknown_certainty",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Reopen_missing_database_or_schema_fails_closed_without_silent_new_history",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Restart_preserves_unknown_without_replaying_and_live_second_host_is_rejected",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Three_node_dag_maps_only_proven_outputs_and_duplicate_never_dispatches",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"contradiction\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"contradictory-error\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"early-outcome\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"empty-error\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"eof\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"gap\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"invalid\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"missing\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"null-error\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"oversized\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"peer\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"repeat\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"sender\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"stream\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"subtask\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"task\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unproven_terminal_is_indeterminate_without_retry_or_downstream(fault: \"unknown-retryable\")",
+            "NPS.Tests.Nop.NopRuntimeExecutorTests.Unselected_legacy_contractless_wire_does_not_gain_a_null_runtime_member"
+          ]
+        }
+      ],
+      "expected": "Authorized bounded reference handoff; seven frozen faults, honest indeterminate outcomes, journal duplicate/cancel/restart without unsafe replay. Remote NOP transport unsupported."
+    },
+    {
+      "id": "E20-NDP-DIFFERENT-ISSUER",
+      "client": "dotnet",
+      "server": "two-dotnet-result-reference-nodes",
+      "binding": "volatile-discovery-and-canonical-HTTP",
+      "evidence_kind": "two-actual-HTTPS-NIP-nodes-and-host-authority",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult",
+          "minimum_passed": 1,
+          "display_contains": "sameIssuer: False",
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: False)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ndp.NdpResultDiscoveryTests.",
+          "minimum_passed": 24,
+          "expected_test_names": [
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.CapacityRetainsExpiredTombstonesAndRejectsNewPublisher",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"endpoint\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"expiry\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"key\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"pin\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"policy\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ColdRestartAndRegistryIdentityCannotReuseSavedBinding",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.EqualEpochSplitRequiresHigherAuthorizedEpochEvenAfterExpiry",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"caps\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"draining\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"expired\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"identity\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"offline\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.InvalidHighEpochSignatureCannotBurnFloor",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"[]\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"null\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{\\\"frame\\\":\\\"0x30\\\",\\\"frame\\\":\\\"0x30\\\"}\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{}\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.OversizedAndDuplicateSignedMembersAreRejected",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.SameIssuerAndEpochAtNewEndpointInvalidatesOldResultBinding",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.SequenceRollbackAndSameSequenceDigestChangeCannotReplaceRoute",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.StrictSignatureAndHostAuthorityPrecedeAnyFenceMutation",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedDrainingIsStickyUntilHigherSignedSequence",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedHeartbeatAndWallClockRollbackCannotExtendLease"
+          ]
+        }
+      ],
+      "expected": "Fresh endpoint TLS/currentNIP/NWM and host authority, sequence/epoch/freshness fences, saved binding rejects before successor dispatch, lost state stays unavailable with no auto replay; static path remains runnable."
+    },
+    {
+      "id": "E20-NDP-SAME-ISSUER-NEW-ENDPOINT",
+      "client": "dotnet",
+      "server": "two-dotnet-result-reference-nodes",
+      "binding": "volatile-discovery-and-canonical-HTTP",
+      "evidence_kind": "two-actual-HTTPS-NIP-nodes-and-host-authority",
+      "required_tests": [
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult",
+          "minimum_passed": 1,
+          "display_contains": "sameIssuer: True",
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpTwoNodeTransferRequiresFreshAdmissionAndCannotMigrateOldResult(sameIssuer: True)"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpCoarseCapabilityCannotBypassWithdrawnNwmOrCurrentNip"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying",
+          "minimum_passed": 1,
+          "expected_test_names": [
+            "NPS.Tests.Nwp.ResultInvocationTlsTests.NdpIssuerLostStateIsUnavailableWithoutRecreatingOrReplaying"
+          ]
+        },
+        {
+          "test_prefix": "NPS.Tests.Ndp.NdpResultDiscoveryTests.",
+          "minimum_passed": 24,
+          "expected_test_names": [
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.CapacityRetainsExpiredTombstonesAndRejectsNewPublisher",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"endpoint\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"expiry\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"key\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"pin\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ChangedCurrentAuthorityRequiresNewSignedAdmission(field: \"policy\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.ColdRestartAndRegistryIdentityCannotReuseSavedBinding",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.EqualEpochSplitRequiresHigherAuthorizedEpochEvenAfterExpiry",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"caps\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"draining\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"expired\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"identity\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.HighestOwnerFailureNeverFallsBack(failure: \"offline\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.InvalidHighEpochSignatureCannotBurnFloor",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"[]\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"null\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{\\\"frame\\\":\\\"0x30\\\",\\\"frame\\\":\\\"0x30\\\"}\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.MalformedAnnouncementsFailClosed(json: \"{}\")",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.OversizedAndDuplicateSignedMembersAreRejected",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.SameIssuerAndEpochAtNewEndpointInvalidatesOldResultBinding",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.SequenceRollbackAndSameSequenceDigestChangeCannotReplaceRoute",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.StrictSignatureAndHostAuthorityPrecedeAnyFenceMutation",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedDrainingIsStickyUntilHigherSignedSequence",
+            "NPS.Tests.Ndp.NdpResultDiscoveryTests.UnsignedHeartbeatAndWallClockRollbackCannotExtendLease"
+          ]
+        }
+      ],
+      "expected": "Fresh endpoint TLS/currentNIP/NWM and host authority, sequence/epoch/freshness fences, saved binding rejects before successor dispatch, lost state stays unavailable with no auto replay; static path remains runnable."
+    }
+  ],
+  "required_configurations": 7,
+  "helper_package_gate": {
+    "sdks": [
+      "dotnet",
+      "python",
+      "typescript",
+      "go",
+      "java",
+      "rust"
+    ],
+    "evidence_class": "parser/error/helper/regression/package-consumer; not runtime pair cells",
+    "source_packet": "docs/qualification/runs/sdk-isolation-a9e4f05/results.json",
+    "applicability_paths": {
+      "dotnet": [
+        "impl/dotnet/src",
+        "impl/dotnet/Directory.Build.props",
+        "impl/dotnet/nuget.config"
+      ],
+      "python": [
+        "impl/python/nps_sdk",
+        "impl/python/pyproject.toml"
+      ],
+      "typescript": [
+        "impl/typescript/src",
+        "impl/typescript/package.json",
+        "impl/typescript/package-lock.json",
+        "impl/typescript/tsconfig.json",
+        "impl/typescript/scripts"
+      ],
+      "go": [
+        "impl/go/alpha19",
+        "impl/go/alpha20",
+        "impl/go/conformance",
+        "impl/go/core",
+        "impl/go/daemon",
+        "impl/go/internal",
+        "impl/go/ncp",
+        "impl/go/ndp",
+        "impl/go/nip",
+        "impl/go/nop",
+        "impl/go/nwp",
+        "impl/go/telemetry",
+        "impl/go/go.mod",
+        "impl/go/go.sum",
+        "impl/go/VERSION"
+      ],
+      "java": [
+        "impl/java/src",
+        "impl/java/build.gradle.kts",
+        "impl/java/settings.gradle.kts",
+        "impl/java/gradle",
+        "impl/java/gradlew",
+        "impl/java/gradlew.bat"
+      ],
+      "rust": [
+        "impl/rust/nps-core",
+        "impl/rust/nps-ncp",
+        "impl/rust/nps-nip",
+        "impl/rust/nps-ndp",
+        "impl/rust/nps-nop",
+        "impl/rust/nps-nwp",
+        "impl/rust/nps-conformance",
+        "impl/rust/nps-sdk",
+        "impl/rust/Cargo.toml",
+        "impl/rust/Cargo.lock"
+      ]
+    },
+    "interpretation": "Retained actual package-consumer runs are applicable only when every current production/module/build/lock input in these paths equals the recorded source. Test-only .NET changes and editorial docs are outside payload equivalence; current demo separately builds a fresh wheel/fourNuGet snapshot. Archive hashes are historical producer records, not claims that deleted temporary archives were rehashed today."
+  },
+  "fixture_sha256": {
+    "spec/conformance/alpha20/feature_negotiation_vectors.json": "54a6912b0a3c2e850864176dc2e4c9b001f4d90f7a5a440bf7837606fb0c709e",
+    "spec/conformance/alpha20/error_status_vectors.json": "2429bff23e59f78296589990db0929b39521fd2e2ff738689edb66faea2649be",
+    "spec/conformance/alpha20/schema_batch_vectors.json": "6653d0a101b92537244b2f3e48ff8d7ea9fa14861413d638575213a63b06877b",
+    "spec/conformance/alpha20/data_workflow_methodology.json": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c",
+    "spec/conformance/alpha20/data_workflow_gates.json": "d8fab0eaa6a7242c422d3e94e15c8298422ed67f3784003622afeceb3ae88d63",
+    "demos/data-workflow/oracle.json": "f8d18ad06554c843acdb9d8b6b8aa60c6b2ed1c054072df6c75dd22aee6b22bb"
+  },
+  "historical_matrix": {
+    "path": "spec/conformance/alpha20/compatibility-matrix.json",
+    "cells": 576,
+    "disposition": "deferred-full-production-under133",
+    "execution": "all-not-executed; no promotion"
+  },
+  "measurement_packets": {
+    "NCP": "docs/benchmarks/runs/ncp-transfer-42a0b05",
+    "model": "demos/data-workflow/evidence/live-tool-agent-bounded-v2-126c5df",
+    "NOP": "docs/benchmarks/runs/nop-handoff-kernel-7c4d890-attempt-03"
+  },
+  "remote_actions": false,
+  "model_calls": false,
+  "publication_authorized": false,
+  "test_inventory_basis": {
+    "kind": "preregistered identities, no passing outcomes imported",
+    "baseline_source_revision": "02443a3a4e6e096309b9c562de8ec1bc658b84b9",
+    "baseline_trx_sha256": "dbc443858c46ae97c967fc6cdce384874ebf5814bfe0b93d682fe08aefead004",
+    "expansion": "Eleven existing realTLSstream fault/recovery recipes expanded overJson/MsgPack before current execution; all unchanged existing NOP/NDP/context recipe identities required exactly."
+  },
+  "regression_expected_counts": {
+    "dotnet": 1682,
+    "python": 1513,
+    "typescript": 1324,
+    "java": 744,
+    "rust": 765
+  }
+}

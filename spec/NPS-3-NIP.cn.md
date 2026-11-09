@@ -4,11 +4,11 @@
 
 **Spec Number**: NPS-3
 **Status**: Proposed
-**Version**: 0.15
-**Date**: 2026-08-31
+**Version**: 0.16
+**Date**: 2026-09-09
 **Port**: 17433（默认，共用）/ 17435（可选独立）
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12)
+**Depends-On**: NPS-1 (NCP v0.13)
 
 ---
 
@@ -266,6 +266,12 @@ NPS 为 Agent 身份定义三个**保证等级**，参考 NIST SP 800-63 IAL 与
 
 | 错误码 | 触发条件 |
 |--------|---------|
+| `NIP-CONTEXT-INVALID` | `NPS-CLIENT-BAD-FRAME` | 投影格式、边界或生命周期无效 |
+| `NIP-CONTEXT-UNTRUSTED` | `NPS-AUTH-FORBIDDEN` | 不可信 issuer/key 或无效签名 |
+| `NIP-CONTEXT-BINDING-MISMATCH` | `NPS-AUTH-FORBIDDEN` | 投影请求、主体、audience 或策略不匹配 |
+| `NIP-CONTEXT-EXPIRED` | `NPS-AUTH-FORBIDDEN` | 投影有效窗口已过期 |
+| `NIP-CONTEXT-REPLAY` | `NPS-CLIENT-CONFLICT` | 有效投影已被准入 |
+| `NIP-CONTEXT-VERIFIER-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | 验证或持久化重放基础设施不可用 |
 | `NIP-REPUTATION-ENTRY-INVALID`（`NPS-CLIENT-BAD-FRAME`）| 条目签名校验失败或规范化形式不合法。|
 | `NIP-REPUTATION-LOG-UNREACHABLE`（`NPS-DOWNSTREAM-UNAVAILABLE`）| 准入评估时无法到达 Node `reputation_policy` 引用的某个日志运营方。|
 | `NWP-AUTH-REPUTATION-BLOCKED`（`NPS-AUTH-FORBIDDEN`）| 声誉策略命中了对发起方 `subject_nid` 的 `reject_on` 规则。（定义在 NPS-2 §6 —— Anchor / Memory / Action / Complex / Bridge Node 选择启用。）|
@@ -710,6 +716,107 @@ wire 格式的前提下,收口了 Phase 1–2 遗留的自声明缺口(§5.1、N
 
 ---
 
+### 7.8 认证调用投影（NIP v0.16）
+
+以下要求定义 experimental 的 `nps.invocation_context` revision 1，
+不改变 IdentFrame 签名或证书格式。
+
+#### 7.8.1 内存对象
+
+分离调用方事实（request_id、traceparent、期望 deadline、idempotency_key、有界 hints）
+和准入权限（subject NID、验证后的 assurance、capabilities、部署 scope、issuer、
+session/transport 来源）。调用方只能缩短服务端期限。幂等 key 不是身份。
+Native 权限来自 NIP session 准入，不来自 Hello.agent_id。本地开发权限必须由服务端
+显式部署模式启用，远程请求不能选择。不能把请求反序列化为已准入权限。
+
+#### 7.8.2 编码与字段
+
+保留 feature ID `nps.invocation_context` revision 1；完成向量和发布门槛前为 experimental。
+两跳均要求支持。单个 `X-NPS-Invocation-Context` header 是 UTF-8 JSON
+`{"payload":{...},"signature":"..."}` 的无填充 base64url。
+
+拒绝重复 header/key、非规范 base64url、未知字段、无效 Unicode、非 I-JSON 数值；
+解码后最多 16 KiB 或更小本地上限。payload 仅包含以下字段：
+
+| 字段 | 类型和约束 |
+|---|---|
+| profile | 固定 nps.invocation_context |
+| revision | 整数 1 |
+| issuer | 准入网关 NID，1..512 UTF-8 字节 |
+| key_id | 配置 key 标识，匹配 `[A-Za-z0-9._:-]{1,128}` |
+| audience | 精确逻辑接收服务 ID，1..512 UTF-8 字节 |
+| subject | 原始主体 NID，1..512 UTF-8 字节 |
+| assurance | anonymous / attested / verified，受接收方许可约束 |
+| capabilities | 排序去重，最多 64 项，每项 1..128 UTF-8 字节 |
+| scope | 部署注册的 opaque scope ID，排序去重，最多 64 项，每项 1..256 UTF-8 字节 |
+| issued_at / expires_at | Unix 秒整数 |
+| projection_id | 16 个密码学随机字节的 32 位小写 hex |
+| request_digest | sha256: 加 64 位小写 hex |
+
+scope 不是策略表达式；通配符不自动授予权限。字符串精确比较，不暗中大小写折叠或
+Unicode normalization。签名输入为 UTF-8 `NPS-CONTEXT-PROJECTION/1`、一个零字节、
+RFC 8785/JCS payload。签名是 64 字节 Ed25519 的无填充 base64url。
+不允许从输入选择算法或嵌入 key；只使用配置中的 (issuer,key_id)。不改变 IdentFrame。
+
+#### 7.8.3 请求摘要
+
+SHA-256 输入为 UTF-8 `NPS-INVOKE-REQUEST/1`、一个零字节、以下精确对象的 JCS：
+protocol、operation、target、idempotency_key、required_features、body。
+protocol/operation 使用注册标识；target 为解析后的精确逻辑服务/资源；
+idempotency_key 为字符串或 null；required_features 按 ID 排序且无重复。
+
+JSON body 为 `{"encoding":"json","value":<I-JSON>}`；
+二进制为 `{"encoding":"bytes","content_type":"<注册的规范媒体类型>","sha256":"sha256:<hex>"}`。
+未注册/歧义媒体类型拒绝。影响操作语义的 query 参数必须纳入 value；排除 trace 和
+投影本身。注册的操作 schema 必须包含影响权限/副作用的全部输入，不得暗用 header。
+完整 JSON 示例见英文 §7.8.3。签发方与接收方必须解析出相同操作、目标、body。
+网关改变任何语义字段或 required_features 时必须重新认证并签发下一跳投影。
+
+#### 7.8.4 时间、对端与重放
+
+时间整数范围为 0..9007199254740991；0 < expires_at-issued_at <= 60 秒。
+最大时钟容差 5 秒；issued_at > now+5 或 now >= expires_at+5 时拒绝。
+本地可收紧。通过独立认证的 TLS/mTLS 或等价传输，将对端绑定到配置的 issuer 集合；
+签名本身不足以准入。公网投影输入先移除，调用方不能选择可信 issuer 集合。
+
+派发前按尺寸/schema、channel issuer、配置 key、签名、audience/subject 绑定、时间、
+request digest 和本地准入策略验证。接收方委托上限约束 scope/capabilities。
+subject 是可信 issuer 声明的原始主体，不需要等于紧邻网关身份。
+
+重放存储对 (issuer,projection_id) 原子 insert-if-absent，至少保留到 expires_at+5。
+同 audience 的副本共享且进程重启后仍有效；不可用时安全拒绝。无效请求不能消耗 ID；
+并发有效重复最多准入一个。丢失响应后重试使用新 projection_id 和相同操作幂等身份。
+重放检测不代替持久化操作去重，插入 ID 不证明业务已执行。
+
+key 轮换通过配置重叠窗口，按最大有效期加容差约束。撤销立即生效，不接受“撤销前签发”
+作为豁免。日志只记有界标识/错误，不记录 header、签名或敏感 scope。
+
+#### 7.8.5 确定性边界与载体绑定
+
+JSON revision 和时间戳字段必须使用十进制整数数字语法，不含小数或指数，
+并遵守前述取值范围。
+
+Capabilities 和 scope 必须按无符号 UTF-8 字节顺序排序，精确拒绝重复；
+此数组排序不同于 JCS 对象 key 排序。Issuer 和 subject 必须满足既有 NIP 的
+NID 语法。Protocol 是 1..32 字节的 ASCII 注册标识，operation 为 1..256
+UTF-8 字节，target 为 1..512 UTF-8 字节；非 null 幂等 key 为 1..128 UTF-8
+字节，且须满足其操作 schema。必需特性对遵循 NCP §2.6.3 类型，按 ID 排序、
+唯一且最多 32 项。完整规范化请求摘要对象不得超过 1048576 字节；
+现有更小请求/帧上限仍适用。
+
+NWP §9.7 定义 HTTP/原生载体及精确逻辑请求构造。两者使用相同 envelope 和
+签名算法。投影不是 bearer 凭据，缺少独立认证通道的 issuer 绑定时不得接受。
+公网或不可信入站投影载体必须先移除，网关再从本地已准入权限生成新投影。
+
+验证器对 schema/编码/尺寸/非法生命周期/未来签发返回 NIP-CONTEXT-INVALID；
+签名/key/issuer 错误返回 NIP-CONTEXT-UNTRUSTED；
+audience/subject/请求绑定或委托策略不匹配返回 NIP-CONTEXT-BINDING-MISMATCH；
+过期返回 NIP-CONTEXT-EXPIRED；有效投影重复返回 NIP-CONTEXT-REPLAY；
+验证或重放基础设施不可用返回 NIP-CONTEXT-VERIFIER-UNAVAILABLE。
+这些结果都禁止业务派发。错误详情必须有界，不得暴露 envelope 或敏感 scope。
+
+---
+
 ## 8. NIP CA Server OSS API
 
 | 方法 | 路径 | 认证 | 描述 |
@@ -832,6 +939,7 @@ OCSP 响应时间 SHOULD 归一化（固定延迟至 200ms），防止通过响�
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| 0.16 | 2026-09-09 | Alpha.20 experimental 认证调用投影：有界 JCS/Ed25519 envelope、完整请求绑定、可信通道 issuer、委托上限及持久化原子重放准入。 |
 | 0.15 | 2026-08-31 | alpha.19 续期/吊销加固：包含边界的标准/短时续期窗口、身份连续性、原子且幂等的颁发、旧证书 ticket bound、显式吊销 freshness 与 stale fallback、OCSP unknown fail closed、防回滚 cache replacement、确定性且不强制执行的 Phase-3 advisory 输出，以及共享向量。将 §8.1 CR-0005 RA 状态从 stub 订正为 Implemented；Depends-On 推进至 NCP 0.12。|
 | 0.14 | 2026-08-12 | 新增标准 `llm:context` capability，用于 NWP §7.6 有状态 LLM context 生命周期，并允许 TrustFrame `trust_scope` 覆盖它。Completion mutation 还要求 `llm:complete`；owner 授权的 status/release 只需 `llm:context`。Context ID 只是 locator，不是 bearer authorization。不新增 frame 字段或 NIP 错误码。 |
 | 0.13 | 2026-07-29 | 新增 §7.6 **可移植 CA 与验证 Profile**：确定性的验证顺序与吊销源顺序、`if_configured` 与 fail-closed 的 `required` 两种吊销模式、带签名的确定性 CRL 语义、CA store 全量枚举，以及需鉴权的 `GET /v1/certificates`。新增共享的吊销策略与签名 CRL 测试向量。无新增 frame 字段或错误码。|

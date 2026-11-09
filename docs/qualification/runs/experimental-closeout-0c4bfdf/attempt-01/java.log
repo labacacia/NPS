@@ -1,0 +1,1510 @@
+{"command": ["./gradlew", "test", "jar", "sourcesJar", "javadocJar", "--rerun-tasks", "--no-daemon"], "cwd": "impl/java"}
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :jar
+> Task :javadoc
+> Task :javadocJar
+> Task :sourcesJar
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+Alpha17PortableProfilesTest > ncpNativeServerHandshakeVectors() PASSED
+
+Alpha17PortableProfilesTest > nwpBridgeLifecycleVectors() PASSED
+
+Alpha17PortableProfilesTest > nipSignedCrlVectors() PASSED
+
+Alpha17PortableProfilesTest > nipRevocationPolicyVectors() PASSED
+
+Alpha17PortableProfilesTest > nwpPortableNodeServerVectors() PASSED
+
+Alpha19HardeningTest > executesAllSharedVectors() PASSED
+
+Alpha19HardeningTest > boundaryBranchesAreNotFixtureConstants() PASSED
+
+ErrorStatusTest > sharedMappings() PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-001-common PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-002-optional PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-003-required PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-bool PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-fraction PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-zero PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-overflow PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-string PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-duplicate-id PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-duplicate-revision PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-duplicate-key PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-unsorted PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-extra-field PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-invalid-id PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-missing-version PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-bool-version PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-unknown-version PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-007-no-opt-in PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-007-client-only PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-007-server-only PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-007-both PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-015-forged-stable PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-016-not-offered PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-33-ids PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-17-revisions PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-oversize PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-boundary-bytes PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-006-max-revision PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-013-empty PASSED
+
+FeatureWireParserTest > sharedFixtures() > HTTP-valid PASSED
+
+FeatureWireParserTest > sharedFixtures() > HTTP-absent PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-empty PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-duplicate-instance PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-leading-zero PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-whitespace PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-zero PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-overflow PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-duplicate-id PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-unsorted PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-unicode PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-trailing-comma PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-33-pairs PASSED
+
+FeatureWireParserTest > sharedFixtures() > FTR-012-http-oversize PASSED
+
+FeatureWireParserTest > sharedFixtures() > HTTP-max-revision PASSED
+
+FeatureWireParserTest > rawRegressions() PASSED
+
+FeatureWireParserTest > immutable() PASSED
+
+NpsConformanceTest > validatorAcceptsCompleteL1Manifest() PASSED
+
+NpsConformanceTest > validatorRequiresReasonForAaaSShouldException() PASSED
+
+NpsConformanceTest > catalogContainsExpectedCases() PASSED
+
+NpsConformanceTest > validatorRejectsMissingCase() PASSED
+
+NpsConformanceTest > validatorEnforcesL2AllOrNothingFamilies() PASSED
+
+AnchorFrameCacheTest > getRequiredThrowsWhenMissing() PASSED
+
+AnchorFrameCacheTest > anchorNotFoundErrorCarriesId() PASSED
+
+AnchorFrameCacheTest > computeAnchorIdMatchesDotnetGoldenVector() PASSED
+
+AnchorFrameCacheTest > poisonDetectionRaisesError() PASSED
+
+AnchorFrameCacheTest > getRequiredReturnsFrame() PASSED
+
+AnchorFrameCacheTest > invalidateRemovesEntry() PASSED
+
+AnchorFrameCacheTest > anchorPoisonErrorCarriesId() PASSED
+
+AnchorFrameCacheTest > sizeEvictsExpiredEntries() PASSED
+
+AnchorFrameCacheTest > computeAnchorIdIsFieldOrderSensitive() PASSED
+
+AnchorFrameCacheTest > setAndGetRoundtrip() PASSED
+
+AnchorFrameCacheTest > computeAnchorIdIsDeterministic() PASSED
+
+AnchorFrameCacheTest > getReturnsNullAfterTtlExpiry() PASSED
+
+AnchorFrameCacheTest > idempotentSetWithSameSchema() PASSED
+
+FrameHeaderTest > roundTripsExtendedHeader() PASSED
+
+FrameHeaderTest > encodingTierDetectedCorrectly() PASSED
+
+FrameHeaderTest > throwsForBufferTooSmall() PASSED
+
+FrameHeaderTest > parsesDefaultHeader() PASSED
+
+FrameHeaderTest > binaryVectorTierDetectedCorrectly() PASSED
+
+FrameHeaderTest > roundTripsDefaultHeader() PASSED
+
+FrameHeaderTest > throwsForExtHeaderWithShortBuffer() PASSED
+
+FrameHeaderTest > parsesExtendedHeader() PASSED
+
+FrameHeaderTest > unknownFrameTypeThrows() PASSED
+
+NpsFrameCodecTest > encodesDecodesStreamFrameFinal() PASSED
+
+NpsFrameCodecTest > encodesDecodesAnchorFrameJson() PASSED
+
+NpsFrameCodecTest > helloFramePreferredTierIsJson() PASSED
+
+NpsFrameCodecTest > encodesDecodesErrorFrame() PASSED
+
+NpsFrameCodecTest > peekHeaderDecodesOnlyHeader() PASSED
+
+NpsFrameCodecTest > binaryVectorConformanceFixture() PASSED
+
+NpsFrameCodecTest > throwsWhenPayloadExceedsMaxPayload() PASSED
+
+NpsFrameCodecTest > encodesDecodesDiffFrame() PASSED
+
+NpsFrameCodecTest > encodesDecodesAnchorFrameMsgPack() PASSED
+
+NpsFrameCodecTest > encodesDecodesStreamFrameNonFinal() PASSED
+
+NpsFrameCodecTest > encodesDecodesHelloFrameMinimalMsgPack() PASSED
+
+NpsFrameCodecTest > registryThrowsForUnknownType() PASSED
+
+NpsFrameCodecTest > setsExtFlagWhenPayloadExceeds64KiB() PASSED
+
+NpsFrameCodecTest > encodesDecodesCapsFrame() PASSED
+
+NpsFrameCodecTest > helloFrameTypeCodeIs06() PASSED
+
+NpsFrameCodecTest > encodesDecodesHelloFrameFull() PASSED
+
+NpsFrameCodecTest > encodesDecodesQueryFrameBinaryVector() PASSED
+
+NpsStatusCodesTest > ndpErrorCodesMapCoversAllCodes() PASSED
+
+NpsStatusCodesTest > nipKeyMappingsCorrect() PASSED
+
+NpsStatusCodesTest > toHttpStatusReturnsExpectedValues() PASSED
+
+NpsStatusCodesTest > httpStatusMapContainsAll26SpecCodes() PASSED
+
+NpsStatusCodesTest > keyConstantsHaveExpectedWireValues() PASSED
+
+NpsStatusCodesTest > nopKeyMappingsCorrect() PASSED
+
+NpsStatusCodesTest > ndpKeyMappingsCorrect() PASSED
+
+NpsStatusCodesTest > ncpErrorCodesMapCoversAll17Codes() PASSED
+
+NpsStatusCodesTest > nopErrorCodesMapCoversAllCodes() PASSED
+
+NpsStatusCodesTest > ncpKeyMappingsCorrect() PASSED
+
+NpsStatusCodesTest > nipErrorCodesMapContainsNewCodes() PASSED
+
+NpsStatusCodesTest > nwpKeyMappingsCorrect() PASSED
+
+NpsStatusCodesTest > toHttpStatusReturnsFallback500ForUnknownCode() PASSED
+
+NpsStatusCodesTest > nwpErrorCodesMapCoversAll47Codes() PASSED
+
+ObservabilityTest > healthzIsOk() PASSED
+
+ObservabilityTest > jsonLogExceptionField() PASSED
+
+ObservabilityTest > healthzReportsDrainingWhenStopping() PASSED
+
+ObservabilityTest > jsonLogRespectsMinLevelAndEscaping() PASSED
+
+ObservabilityTest > metricsEndpointOverHttp() PASSED
+
+ObservabilityTest > readyzOkWithNoProbes() PASSED
+
+ObservabilityTest > defaultDrainTimeoutIs30s() PASSED
+
+ObservabilityTest > metricsBearerTokenOverHttp() PASSED
+
+ObservabilityTest > readyzFailsOnFirstFailingProbe() PASSED
+
+ObservabilityTest > metricsPrometheusFormat() PASSED
+
+ObservabilityTest > logLevelResolvesFromEnvFallback() PASSED
+
+ObservabilityTest > jsonLogEmitsExpectedFields() PASSED
+
+ObservabilityTest > metricsBearerTokenGateHidesWhenRequiredButUnset() PASSED
+
+ObservabilityTest > shutdownFlipsGateAndRunsDrainTasks() PASSED
+
+ObservabilityTest > gaugeIncDec() PASSED
+
+ObservabilityTest > readyzProbeExceptionBecomesReason() PASSED
+
+ObservabilityTest > shutdownIsIdempotent() PASSED
+
+NcpFailoverConnectorTest > constructorValidation() PASSED
+
+NcpFailoverConnectorTest > reresolvesAfterSocketLoss() PASSED
+
+NcpFailoverConnectorTest > reresolvesAndReconnectsAfterNidMismatch() PASSED
+
+NcpFailoverConnectorTest > exhaustedAttemptsRethrowTheLastFailure() PASSED
+
+NcpFailoverConnectorTest > aResolverFailurePropagatesUnwrapped() PASSED
+
+NcpFailoverConnectorTest > nonFailoverErrorsPropagateImmediately() PASSED
+
+NcpFailoverConnectorTest > nidMismatchCodeIsRegistered() PASSED
+
+NcpFailoverConnectorTest > theFirstAttemptAlsoResolves() PASSED
+
+NcpNativeTransportTest > patchFormatConstantsAndHelpers() PASSED
+
+NcpNativeTransportTest > encodingPolicyAllowsAndDenies() PASSED
+
+NcpNativeTransportTest > serverRejectionThrowsHandshakeException() PASSED
+
+NcpNativeTransportTest > invalidPreambleRejectedByServer() PASSED
+
+NcpNativeTransportTest > liveSessionFrameExchange() PASSED
+
+NcpNativeTransportTest > negotiatesJsonWhenMsgpackNotOffered() PASSED
+
+NcpNativeTransportTest > handshakeHappyPath() PASSED
+
+NcpNativeTransportTest > encodingPolicyFromEnabledEncodings() PASSED
+
+NcpNativeTransportTest > negotiatesBinaryVectorExtension() PASSED
+
+NcpNativeTransportTest > extHeaderRoundTrip() PASSED
+
+NcpPreambleTest > matches_returns_true_when_preamble_is_at_start_of_longer_buffer() PASSED
+
+NcpPreambleTest > matches_returns_false_on_short_reads(int) > [1] 0 PASSED
+
+NcpPreambleTest > matches_returns_false_on_short_reads(int) > [2] 1 PASSED
+
+NcpPreambleTest > matches_returns_false_on_short_reads(int) > [3] 7 PASSED
+
+NcpPreambleTest > matches_returns_true_for_exact_preamble() PASSED
+
+NcpPreambleTest > bytes_are_exactly_the_spec_constant() PASSED
+
+NcpPreambleTest > tryValidate_rejects_short_read_with_reason() PASSED
+
+NcpPreambleTest > getBytes_returns_a_copy_not_a_shared_buffer() PASSED
+
+NcpPreambleTest > validate_throws_with_codes_exposed() PASSED
+
+NcpPreambleTest > tryValidate_flags_future_major_distinctly() PASSED
+
+NcpPreambleTest > tryValidate_accepts_exact_preamble() PASSED
+
+NcpPreambleTest > status_and_error_code_constants_match_spec() PASSED
+
+NcpPreambleTest > tryValidate_rejects_garbage() PASSED
+
+NcpPreambleTest > write_emits_exactly_the_constant_bytes() PASSED
+
+AnnounceBridgeInboundProtocolsTest > roundTripsOnTheWire() PASSED
+
+AnnounceBridgeInboundProtocolsTest > isInsideTheSignedCanonicalForm() PASSED
+
+AnnounceBridgeInboundProtocolsTest > bothCr0009AndCr0010FieldsCoexistInTheSignedBody() PASSED
+
+AnnounceBridgeInboundProtocolsTest > anEmptyDeclaredSetIsDistinctFromAbsent() PASSED
+
+AnnounceBridgeInboundProtocolsTest > isOmittedEntirelyWhenUnsetAndCanonicalisesIdenticallyToPreCr0010() PASSED
+
+NdpClusterResolutionTest > clusterSplitMapsToClientConflict() PASSED
+
+NdpClusterResolutionTest > splitBrainAtTheTopEpochThrows() PASSED
+
+NdpClusterResolutionTest > canonicalJsonContainsClusterEpochWhenSet() PASSED
+
+NdpClusterResolutionTest > blankClusterAnchorIsRejected() PASSED
+
+NdpClusterResolutionTest > membersOfAnotherClusterDoNotParticipate() PASSED
+
+NdpClusterResolutionTest > clusterEpochRoundTripsThroughFromDict() PASSED
+
+NdpClusterResolutionTest > ttlExpiredMemberIsExcludedFromTheElection() PASSED
+
+NdpClusterResolutionTest > absentEpochIsTreatedAsOne() PASSED
+
+NdpClusterResolutionTest > resolvesTheHighestEpochActiveAnchor() PASSED
+
+NdpClusterResolutionTest > noLiveMembersResolvesToNull() PASSED
+
+NdpClusterResolutionTest > twoMembersBothOmittingEpochSplit() PASSED
+
+NdpClusterResolutionTest > canonicalJsonStillExcludesTheWireOnlyKeys() PASSED
+
+NdpClusterResolutionTest > canonicalJsonOmitsClusterEpochWhenNullAndIsByteIdenticalToPreCr0009() PASSED
+
+NdpClusterResolutionTest > ttlZeroAnnounceEvictsAndChangesTheWinner() PASSED
+
+NdpRegistryConformanceTest > sharedRegistryConsistencyVectorsPass() PASSED
+
+NdpRegistryConformanceTest > sharedCanonicalizationVectorsPass() PASSED
+
+NdpTest > federationForwardedByHelpers() PASSED
+
+NdpTest > getByNidReturnsNullForUnknown() PASSED
+
+NdpTest > invalidNid() PASSED
+
+NdpTest > graphFrameRejectsTooLarge() PASSED
+
+NdpTest > announceFrameCodecRoundtrip() PASSED
+
+NdpTest > validatesCorrectlySignedFrame() PASSED
+
+NdpTest > announceOptionalFieldsRoundtrip() PASSED
+
+NdpTest > parseNpsTxtRecord_wrongV_returnsNull() PASSED
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+> Task :test
+
+NdpTest > resolveViaDns_usesRegistryFirst() PASSED
+
+NdpTest > parseNpsTxtRecord_validFullRecord() PASSED
+
+NdpTest > resolveReturnsMatchingEntry() PASSED
+
+NdpTest > resultFail() PASSED
+
+NdpTest > parseNpsTxtRecord_defaultPort() PASSED
+
+NdpTest > announceLivenessWireOnly() PASSED
+
+NdpTest > resultOk() PASSED
+
+NdpTest > graphFrameRejectsInvalidEdges() PASSED
+
+NdpTest > ttlZeroDeregisters() PASSED
+
+NdpTest > nonNwpTarget() PASSED
+
+NdpTest > parseNpsTxtRecord_missingV_returnsNull() PASSED
+
+NdpTest > extractHost_validUrl() PASSED
+
+NdpTest > ttlExpiry() PASSED
+
+NdpTest > siblingPath() PASSED
+
+NdpTest > resolveReturnsNullForNonMatch() PASSED
+
+NdpTest > graphFrameRoundtrip() PASSED
+
+NdpTest > resolveFrameRoundtrip() PASSED
+
+NdpTest > removePublicKeyDeregisters() PASSED
+
+NdpTest > resolveFrameOptionalFieldsNull() PASSED
+
+NdpTest > rejectsWrongSignaturePrefix() PASSED
+
+NdpTest > getAllReturnsActiveEntries() PASSED
+
+NdpTest > parseNpsTxtRecord_missingNid_returnsNull() PASSED
+
+NdpTest > differentAuthority() PASSED
+
+NdpTest > subPathMatch() PASSED
+
+NdpTest > announceFrameRoundtrip() PASSED
+
+NdpTest > announceAndGetByNid() PASSED
+
+NdpTest > validatorFailsWhenNoKeyRegistered() PASSED
+
+NdpTest > noSlashInTarget() PASSED
+
+NdpTest > extractHost_invalidUrl_returnsNull() PASSED
+
+NdpTest > resolveViaDns_invalidTxt_returnsNull() PASSED
+
+NdpTest > exactMatch() PASSED
+
+NdpTest > resolveViaDns_fallbackToDns() PASSED
+
+AcmeAgent01Tests > respondAgent01_TamperedSignature_ServerReturnsChallengeFailed() PASSED
+
+AcmeAgent01Tests > issueAgentCert_RoundTrip_ReturnsValidPemChain() PASSED
+
+NipCaClientTest > errorResponseThrowsTypedException() PASSED
+
+NipCaClientTest > registerAgentSendsTypedRequestWithBearer() PASSED
+
+NipCaClientTest > getCertificatesSendsBearerAndDecodesInventory() PASSED
+
+NipIdentVerifierFlowTests > nwpPathMatches_rules() PASSED
+
+NipIdentVerifierFlowTests > step4_ocspHttpErrorFailsClosed() PASSED
+
+NipIdentVerifierFlowTests > allStepsPass() PASSED
+
+NipIdentVerifierFlowTests > step4_ocspTransportFailOpen() PASSED
+
+NipIdentVerifierFlowTests > step6_scopeViolation() PASSED
+
+NipIdentVerifierFlowTests > step4_ocspRevoked() PASSED
+
+NipIdentVerifierFlowTests > step4_revocationCallbackNullContinues() PASSED
+
+NipIdentVerifierFlowTests > step4_revocationCallbackRejects() PASSED
+
+NipIdentVerifierFlowTests > step4_localCrl() PASSED
+
+NipIdentVerifierFlowTests > step4_revocationStoreRejects() PASSED
+
+NipIdentVerifierFlowTests > step1_expired() PASSED
+
+NipIdentVerifierFlowTests > step2_untrustedIssuer() PASSED
+
+NipIdentVerifierFlowTests > step4_ocspTransportFailClosed() PASSED
+
+NipIdentVerifierFlowTests > step4_ocspValid() PASSED
+
+NipIdentVerifierFlowTests > step5_missingCapability() PASSED
+
+NipIdentVerifierFlowTests > step3_badSignature() PASSED
+
+NipIdentVerifierFlowTests > step4_unconfiguredPassThrough() PASSED
+
+NipIdentVerifierFlowTests > step1_asOfClockOverride() PASSED
+
+NipIdentVerifierFlowTests > step4_revocationStoreUnknownSerialPasses() PASSED
+
+NipIdentityTest > verifyReturnsFalseForTamperedPayload() PASSED
+
+NipIdentityTest > revokeFrameRejectsInvalidParentNidShape() PASSED
+
+NipIdentityTest > revokeFrameRoundtrip() PASSED
+
+NipIdentityTest > identFrameRoundtrip() PASSED
+
+NipIdentityTest > trustFrameRoundtrip() PASSED
+
+NipIdentityTest > generateCreatesDistinctKeys() PASSED
+
+NipIdentityTest > verifyReturnsFalseForWrongPrefix() PASSED
+
+NipIdentityTest > saveAndLoadRoundtrip(Path) PASSED
+
+NipIdentityTest > verifyReturnsFalseForCorruptedBase64() PASSED
+
+NipIdentityTest > revokeFrameWholeNidOmitSerial() PASSED
+
+NipIdentityTest > signIsCanonicalKeyOrderIndependent() PASSED
+
+NipIdentityTest > signVerifyRoundtrip() PASSED
+
+NipIdentityTest > pubKeyStringFormat() PASSED
+
+NipIdentityTest > loadWithWrongPassphraseThrows(Path) PASSED
+
+NipPhase3EnforcerTest > malformedExtensionIsTreatedAsEmptySoAnyClaimFails() PASSED
+
+NipPhase3EnforcerTest > tryGetOcspNextUpdateIsDirectlyUsable() PASSED
+
+NipPhase3EnforcerTest > nullNodeRolesIsTheEmptySetAndAlwaysASubset() PASSED
+
+NipPhase3EnforcerTest > evaluationOrderIsRolesThenCapabilitiesThenStaple() PASSED
+
+NipPhase3EnforcerTest > unattestedRoleFailsWithNodeRolesMismatch() PASSED
+
+NipPhase3EnforcerTest > capabilitiesExceededMapsToAuthForbidden() PASSED
+
+NipPhase3EnforcerTest > unattestedCapabilityFailsWithCapabilitiesExceeded() PASSED
+
+NipPhase3EnforcerTest > noExtensionsMeansAttributeChecksDoNotApply() PASSED
+
+NipPhase3EnforcerTest > expiredStapleFails() PASSED
+
+NipPhase3EnforcerTest > utf8SequenceExtensionParses() PASSED
+
+NipPhase3EnforcerTest > capabilitiesRoundTripOnTheWireButStayOutOfTheSignedPayload() PASSED
+
+NipPhase3EnforcerTest > malformedStapleFailsClosed() PASSED
+
+NipPhase3EnforcerTest > argumentNullValidation() PASSED
+
+NipPhase3EnforcerTest > nextUpdateExactlyNowFails() PASSED
+
+NipPhase3EnforcerTest > missingStapleFails() PASSED
+
+NipPhase3EnforcerTest > subsetClaimsWithFreshStaplePass() PASSED
+
+NipPhase3EnforcerTest > comparisonIsOrdinalNotCaseInsensitive() PASSED
+
+NipPhase3EnforcerTest > phase3EnforcementDefaultsToFalse() PASSED
+
+NipX509Tests > v1OnlyVerifier_AcceptsV2FrameByIgnoringCertChain() PASSED
+
+NipX509Tests > registerX509_LeafForDifferentNid_VerifierRejectsSubjectMismatch() PASSED
+
+NipX509Tests > phase3EnforcementOn_MalformedLeafReportsCertFormatInvalid() PASSED
+
+NipX509Tests > v2Verifier_RejectsV2FrameWhenTrustedRootsMissing() PASSED
+
+NipX509Tests > registerX509_LeafEkuStripped_VerifierRejectsCertEkuMissing() PASSED
+
+NipX509Tests > phase3EnforcementOff_FailingFrameStillVerifies() PASSED
+
+NipX509Tests > phase3EnforcementOn_MissingStapleRejectsAtStep3() PASSED
+
+NipX509Tests > phase3EnforcementOn_NonV2FrameIsUntouched() PASSED
+
+NipX509Tests > registerX509_RoundTrip_VerifierAccepts() PASSED
+
+TrustFrameValidatorTests > missingFields() PASSED
+
+TrustFrameValidatorTests > expired() PASSED
+
+TrustFrameValidatorTests > untrustedGrantor() PASSED
+
+TrustFrameValidatorTests > validFrame() PASSED
+
+TrustFrameValidatorTests > scopeExceedsGrantor() PASSED
+
+TrustFrameValidatorTests > nodeScopeViolation() PASSED
+
+TrustFrameValidatorTests > granteeMismatch() PASSED
+
+NipCaServiceTest > registerThenVerify() PASSED
+
+NipCaServiceTest > raPendingQueueTier() PASSED
+
+NipCaServiceTest > renewalTooEarly() PASSED
+
+NipCaServiceTest > issueSessionUnderNonGroupRejected() PASSED
+
+NipCaServiceTest > duplicateNidRejected() PASSED
+
+NipCaServiceTest > verifyUnknownNidFails() PASSED
+
+NipCaServiceTest > revokeThenVerifyRevoked() PASSED
+
+NipCaServiceTest > sessionCapabilitySubsetEnforced() PASSED
+
+NipCaServiceTest > raBootstrapTokenTier() PASSED
+
+NipCaServiceTest > sessionValidityClamped() PASSED
+
+NipCaServiceTest > groupRegisterAndIssueSessionWithCascadeRevoke() PASSED
+
+NipCaServiceTest > renewalWithinWindow() PASSED
+
+NipCaServiceTest > raAllowlistTier() PASSED
+
+NipGroupJwsTest > rejectsTamperedSignature() PASSED
+
+NipGroupJwsTest > verifiesGoodJws() PASSED
+
+NipGroupJwsTest > rejectsWrongPurpose() PASSED
+
+JdbcNipCaStoreTest > migrationRunsAllDdlOnOpen() PASSED
+
+JdbcNipCaStoreTest > saveThenGetRoundTrip() PASSED
+
+JdbcNipCaStoreTest > revokeMarksRecordAndSurfacesInCrl() PASSED
+
+JdbcNipCaStoreTest > insertSqlShapeMatchesReference() PASSED
+
+JdbcNipCaStoreTest > getByParentNid() PASSED
+
+JdbcNipCaStoreTest > nextSerialFormatMatchesDotNet() PASSED
+
+NipCaRouterTest > operatorAuthEnforced() PASSED
+
+NipCaRouterTest > registerVerifyRenewFlowFailsRenewTooEarly() PASSED
+
+NipCaRouterTest > issueSessionViaGroupJws() PASSED
+
+NipCaRouterTest > wellKnownAndCaCert() PASSED
+
+NipCaRouterTest > badPubKeyRejected() PASSED
+
+NipCaRouterTest > revokeThenVerifyRevoked() PASSED
+
+NipCaRouterTest > unknownRouteIs404() PASSED
+
+NipCaRouterTest > raBootstrapTokenEndpointFlow() PASSED
+
+NipCaRouterTest > invalidRevocationReason() PASSED
+
+NipCaRouterTest > duplicateRegisterConflict() PASSED
+
+NipCaRouterTest > groupRegisterIssueSessionAndCrl() PASSED
+
+NipCaRouterTest > certificateInventoryRequiresOperatorToken() PASSED
+
+NipCaRouterTest > raPendingQueueEndpointFlow() PASSED
+
+ReputationLogTest > toMap_emitsSnakeCaseKeys() PASSED
+
+ReputationLogTest > severity_minor_roundTrip() PASSED
+
+ReputationLogTest > incidentType_certRevoked_roundTrip() PASSED
+
+ReputationLogTest > incidentType_paymentDefault_roundTrip() PASSED
+
+ReputationLogTest > incidentType_positiveAttestation_roundTrip() PASSED
+
+ReputationLogTest > verifyInclusion_returnsFalseOnTamperedEntry() PASSED
+
+ReputationLogTest > severity_moderate_roundTrip() PASSED
+
+ReputationLogTest > toMap_omitsNullFields() PASSED
+
+ReputationLogTest > incidentType_contractDispute_roundTrip() PASSED
+
+ReputationLogTest > severity_info_roundTrip() PASSED
+
+ReputationLogTest > severity_major_roundTrip() PASSED
+
+ReputationLogTest > severity_levelsAreOrdered() PASSED
+
+ReputationLogTest > incidentType_impersonationClaim_roundTrip() PASSED
+
+ReputationLogTest > verifyInclusion_returnsFalseOnWrongLeafHash() PASSED
+
+ReputationLogTest > verifyEntry_returnsFalseAfterTamperingSubjectNid() PASSED
+
+ReputationLogTest > verifyInclusion_singleLeaf() PASSED
+
+ReputationLogTest > severity_critical_roundTrip() PASSED
+
+ReputationLogTest > fromMap_toMap_roundTrip() PASSED
+
+ReputationLogTest > verifyInclusion_fourLeafTree() PASSED
+
+ReputationLogTest > severity_unknownWire_throwsIllegalArgumentException() PASSED
+
+ReputationLogTest > verifyInclusion_twoLeafTree() PASSED
+
+ReputationLogTest > incidentType_scrapingPattern_roundTrip() PASSED
+
+ReputationLogTest > verifyInclusion_returnsFalseOnCorruptedAuditPath() PASSED
+
+ReputationLogTest > fromMap_unknownIncidentWire_resolvesToOther() PASSED
+
+ReputationLogTest > verifyInclusion_returnsFalseOnWrongRoot() PASSED
+
+ReputationLogTest > incidentType_rateLimitViolation_roundTrip() PASSED
+
+ReputationLogTest > incidentType_tosViolation_roundTrip() PASSED
+
+ReputationLogTest > verifyEntry_returnsFalseForWrongPublicKey() PASSED
+
+ReputationLogTest > incidentType_unknownWire_returnsOther() PASSED
+
+ReputationLogTest > signEntry_verifyEntry_validSignature() PASSED
+
+ClusterDelegationResolverTest > negativeLookupResultsAreNotCached() PASSED
+
+ClusterDelegationResolverTest > argumentValidation() PASSED
+
+ClusterDelegationResolverTest > failoverEventRedirectsSubsequentDelegationsToSuccessor() PASSED
+
+ClusterDelegationResolverTest > clusterTargetResolvesToActiveAnchorAndCaches() PASSED
+
+ClusterDelegationResolverTest > withoutClusterTargetUsesAgentNid() PASSED
+
+ClusterDelegationResolverTest > targetClusterAnchorIsOmittedWhenUnsetRatherThanEmittedAsNull() PASSED
+
+ClusterDelegationResolverTest > staleFailoverEventIsIgnoredAndEqualCountsAsStale() PASSED
+
+ClusterDelegationResolverTest > firstObservationOfAClusterIsAcceptedUnconditionally() PASSED
+
+ClusterDelegationResolverTest > unresolvableReturnsNullRatherThanThrowing() PASSED
+
+ClusterDelegationResolverTest > invalidateForcesAFreshLookup() PASSED
+
+ClusterDelegationResolverTest > claimConflictCodeIsRegistered() PASSED
+
+ClusterDelegationResolverTest > concurrentFailoversAreSerialisedAndMonotonic() PASSED
+
+NopPortableProfileTest > sharedRuntimeSecurityVectorsPass() PASSED
+
+NopPortableProfileTest > sharedOrchestratorTranscriptsPass() PASSED
+
+NopTest > syncFrameDefaults() PASSED
+
+NopTest > delegateFrameEmitsSpecWireKeys() PASSED
+
+NopTest > taskFrameRoundtrip() PASSED
+
+NopTest > nopTaskStatusTerminalStates() PASSED
+
+NopTest > delegateFrameDecodesLegacyWireKeys() PASSED
+
+NopTest > exponentialDoublesEachAttempt() PASSED
+
+NopTest > nopTaskStatusNodeResults() PASSED
+
+NopTest > delegateFrameRoundtrip() PASSED
+
+NopTest > taskFrameOptionalFieldsNull() PASSED
+
+NopTest > fixedDelayIgnoresAttempt() PASSED
+
+NopTest > nopTaskStatusErrorFields() PASSED
+
+NopTest > taskStateFromValue() PASSED
+
+NopTest > alignStreamFrameWithError() PASSED
+
+NopTest > alignStreamFrameNullError() PASSED
+
+NopTest > nopTaskStatusGetters() PASSED
+
+NopTest > syncFrameRoundtrip() PASSED
+
+NopTest > delegateFrameOptionals() PASSED
+
+NopTest > nopTaskStatusToString() PASSED
+
+NopTest > linearScalesWithAttempt() PASSED
+
+NopTest > delayIsCappedAtMaxMs() PASSED
+
+NopCallbackTests > callback_deliveredToEphemeralServer() PASSED
+
+NopCallbackTests > signature_null_whenSecretNotBase64Url32() PASSED
+
+NopCallbackTests > callback_fires_withValidSignature() PASSED
+
+NopCallbackTests > execute_noCallback_completes() PASSED
+
+NopOrchestratorTests > diamond_allComplete() PASSED
+
+NopOrchestratorTests > finalErrorFrame_propagatesFailure() PASSED
+
+NopOrchestratorTests > reject_delegateDepthTooDeep() PASSED
+
+NopOrchestratorTests > saga_strict_missingCompensateAction_notSupported() PASSED
+
+NopOrchestratorTests > retry_retryOnFilter_nonMatching_noRetry() PASSED
+
+NopOrchestratorTests > kOfN_enoughSucceed_completes() PASSED
+
+NopOrchestratorTests > senderNidMismatch_fails() PASSED
+
+NopOrchestratorTests > linear_allComplete() PASSED
+
+NopOrchestratorTests > retry_transientFailure_thenSucceeds() PASSED
+
+NopOrchestratorTests > reject_duplicateTask() PASSED
+
+NopOrchestratorTests > preflight_unavailable_failsResourceInsufficient() PASSED
+
+NopOrchestratorTests > kOfN_notEnough_fails() PASSED
+
+NopOrchestratorTests > saga_bestEffort_compensatesCompletedPredecessor() PASSED
+
+NopOrchestratorTests > condition_false_skipsNode() PASSED
+
+NopOrchestratorTests > inputMapping_passesUpstreamData() PASSED
+
+NopOrchestratorTests > reject_invalidCallbackUrl() PASSED
+
+NopUnitTests > validate_empty_fails() PASSED
+
+NopUnitTests > map_noPrefix_throws() PASSED
+
+NopUnitTests > agg_merge_lastWriteWins() PASSED
+
+NopUnitTests > cond_unknownToken_throws() PASSED
+
+NopUnitTests > cb_privateIp192_rejected() PASSED
+
+NopUnitTests > validate_duplicateId_fails() PASSED
+
+NopUnitTests > map_dollarOnly_fullContext() PASSED
+
+NopUnitTests > cond_or_oneTrue() PASSED
+
+NopUnitTests > buildParams_stringPath_resolves() PASSED
+
+NopUnitTests > cond_strEq_true() PASSED
+
+NopUnitTests > validate_conditionTooLong_fails() PASSED
+
+NopUnitTests > validate_singleNode_ok() PASSED
+
+NopUnitTests > agg_unknownStrategy_fallsBackToMerge() PASSED
+
+NopUnitTests > buildParams_null_emptyObject() PASSED
+
+NopUnitTests > map_nested_value() PASSED
+
+NopUnitTests > cond_trueLiteral() PASSED
+
+NopUnitTests > cb_empty_rejected() PASSED
+
+NopUnitTests > agg_endNodes_onlyEnds() PASSED
+
+NopUnitTests > map_depthExceeded_throws() PASSED
+
+NopUnitTests > buildParams_arrayPaths_list() PASSED
+
+NopUnitTests > cb_ipv6Loopback_rejected() PASSED
+
+NopUnitTests > cond_strEq_false() PASSED
+
+NopUnitTests > agg_merge_combines() PASSED
+
+NopUnitTests > validate_cycle_fails() PASSED
+
+NopUnitTests > cond_falseLiteral() PASSED
+
+NopUnitTests > agg_first() PASSED
+
+NopUnitTests > map_missingNode_null() PASSED
+
+NopUnitTests > agg_all_array() PASSED
+
+NopUnitTests > map_topLevel_full() PASSED
+
+NopUnitTests > cb_localhost_rejected() PASSED
+
+NopUnitTests > cond_gt_true() PASSED
+
+NopUnitTests > cb_http_rejected() PASSED
+
+NopUnitTests > cond_lt_true() PASSED
+
+NopUnitTests > cb_https_ok() PASSED
+
+NopUnitTests > cond_nullEq_missing() PASSED
+
+NopUnitTests > cb_loopbackIp_rejected() PASSED
+
+NopUnitTests > cond_grouping() PASSED
+
+NopUnitTests > cond_nullNeq_exists() PASSED
+
+NopUnitTests > validate_edgeUnknownNode_fails() PASSED
+
+NopUnitTests > agg_merge_nonObjectWrapped() PASSED
+
+NopUnitTests > cond_gte_exact() PASSED
+
+NopUnitTests > cond_and_oneFalse() PASSED
+
+NopUnitTests > cond_empty_true() PASSED
+
+NopUnitTests > cond_and_bothTrue() PASSED
+
+NopUnitTests > cb_publicIp_ok() PASSED
+
+NopUnitTests > cond_neq_true() PASSED
+
+NopUnitTests > agg_merge_empty_object() PASSED
+
+NopUnitTests > cond_not_negates() PASSED
+
+NopUnitTests > agg_fastestK_zero_takesAll() PASSED
+
+NopUnitTests > map_missingField_null() PASSED
+
+NopUnitTests > validate_tooLarge_fails() PASSED
+
+NopUnitTests > cond_gt_false() PASSED
+
+NopUnitTests > validate_linear_topoOrder() PASSED
+
+NopUnitTests > map_empty_throws() PASSED
+
+NopUnitTests > cb_privateIp172_rejected() PASSED
+
+NopUnitTests > agg_fastestK_takesMin() PASSED
+
+NopUnitTests > cb_privateIp10_rejected() PASSED
+
+NopUnitTests > agg_endNodes_empty_object() PASSED
+
+NopUnitTests > cond_lte_true() PASSED
+
+ActionNodeServerTest > reservedActionRegistrationRejected() PASSED
+
+ActionNodeServerTest > syncInvokeReturnsCaps() PASSED
+
+ActionNodeServerTest > asyncIdempotencyReHitReturnsSameTask() PASSED
+
+ActionNodeServerTest > taskCancelPendingThenConflictOnReCancel() PASSED
+
+ActionNodeServerTest > missingAgentIs401WhenAuthRequired() PASSED
+
+ActionNodeServerTest > asyncCannotRunOnSyncOnlyAction() PASSED
+
+ActionNodeServerTest > callbackSsrfRejected() PASSED
+
+ActionNodeServerTest > syncTimeoutReturns504() PASSED
+
+ActionNodeServerTest > taskAccessIsOwnerScopedAndCancelSignalsProvider() PASSED
+
+ActionNodeServerTest > idempotencyConflictOnDifferentParams() PASSED
+
+ActionNodeServerTest > unknownActionIs404() PASSED
+
+ActionNodeServerTest > idempotencyReHitReturnsCachedResult() PASSED
+
+ActionNodeServerTest > callbackHttpSchemeRejected() PASSED
+
+ActionNodeServerTest > taskStatusUnknownIs404() PASSED
+
+ActionNodeServerTest > idempotencyIsCallerScopedAndReplayIsReauthorized() PASSED
+
+ActionNodeServerTest > asyncInvokeThenTaskStatus() PASSED
+
+ActionNodeServerTest > nwmManifestServed() PASSED
+
+AnchorNodeClientTest > subscribe_resyncRequired_terminatesIteration() PASSED
+
+AnchorNodeClientTest > topologyStreamException_wrapsAnchorTopologyException() PASSED
+
+AnchorNodeClientTest > getSnapshot_plainErrorBody_throwsAnchorTopologyException() PASSED
+
+AnchorNodeClientTest > memberUpdated_nidAndChangesDeserialised() PASSED
+
+AnchorNodeClientTest > pathPrefix_trailingSlashStripped() PASSED
+
+AnchorNodeClientTest > subscribe_allEventTypes_allYielded() PASSED
+
+AnchorNodeClientTest > subscribe_unknownEventType_silentlySkipped() PASSED
+
+AnchorNodeClientTest > subscribe_nonTwoXx_throwsAnchorTopologyException() PASSED
+
+AnchorNodeClientTest > anchorTopologyException_attributesAccessible() PASSED
+
+AnchorNodeClientTest > memberLeft_nidDeserialised() PASSED
+
+AnchorNodeClientTest > getSnapshot_success_returnsSnapshotFields() PASSED
+
+AnchorNodeClientTest > getSnapshot_defaultScope_wireBodyContainsCluster() PASSED
+
+AnchorNodeClientTest > subscribe_wireBodyContainsTypeAndAction() PASSED
+
+AnchorNodeClientTest > getSnapshot_memberScope_wireSendsTargetNid() PASSED
+
+AnchorNodeClientTest > subscribe_withSinceVersion_sinceVersionInWireBody() PASSED
+
+AnchorNodeClientTest > getSnapshot_missingDataKey_throwsIOException() PASSED
+
+AnchorNodeClientTest > urlNormalisation_trailingSlashStripped() PASSED
+
+AnchorNodeClientTest > resyncRequired_reasonAndVersionZero() PASSED
+
+AnchorNodeClientTest > memberJoined_fieldsDeserialised() PASSED
+
+AnchorNodeClientTest > subscribe_withFilter_filterInWireBody() PASSED
+
+AnchorNodeClientTest > getSnapshot_emptyDataArray_throwsIOException() PASSED
+
+AnchorNodeClientTest > subscribe_midStreamError_throwsTopologyStreamException() PASSED
+
+AnchorNodeClientTest > anchorState_fieldAndDetailsDeserialised() PASSED
+
+AnchorNodeClientTest > getSnapshot_npsErrorJson_throwsAnchorTopologyExceptionWithFields() PASSED
+
+AnchorNodeClientTest > pathPrefix_prependedToBothEndpoints() PASSED
+
+AnchorNodeServerTest > invokeTimeoutReturns504() PASSED
+
+AnchorNodeServerTest > handlerErrorEnvelope() PASSED
+
+AnchorNodeServerTest > cgnLimitPreCheck() PASSED
+
+AnchorNodeServerTest > noTopologyService() PASSED
+
+AnchorNodeServerTest > capabilityGate() PASSED
+
+AnchorNodeServerTest > manifestAndSplice() PASSED
+
+AnchorNodeServerTest > unknownAction() PASSED
+
+AnchorNodeServerTest > noHandler() PASSED
+
+AnchorNodeServerTest > unknownPathIs404BeforeAuth() PASSED
+
+AnchorNodeServerTest > streamViaClient() PASSED
+
+AnchorNodeServerTest > topologyErrors() PASSED
+
+AnchorNodeServerTest > authGate() PASSED
+
+AnchorNodeServerTest > reputationBanBlocksInvoke() PASSED
+
+AnchorNodeServerTest > syncInvoke() PASSED
+
+AnchorNodeServerTest > snapshotViaClient() PASSED
+
+BridgeErrorMapTest > authClassesAreNotCollapsed() PASSED
+
+BridgeErrorMapTest > fromGrpcStatusRows() PASSED
+
+BridgeErrorMapTest > serverClassesAreNotAllCollapsedOntoUnavailable() PASSED
+
+BridgeErrorMapTest > mustBeProtocolErrorSet() PASSED
+
+BridgeErrorMapTest > fromHttpStatusRows() PASSED
+
+BridgeErrorMapTest > npsStatusToGrpcRows() PASSED
+
+BridgeErrorMapTest > notFoundIsTheOnlyParamSensitiveRow() PASSED
+
+BridgeErrorMapTest > bridgeErrorCodesMapOntoRealNpsStatuses() PASSED
+
+BridgeErrorMapTest > npsStatusToJsonRpcRows() PASSED
+
+BridgeErrorMapTest > reservedJsonRpcCodeIsNeverProduced() PASSED
+
+BridgeErrorMapTest > fromJsonRpcRows() PASSED
+
+BridgeInboundTest > authFailureIsAProtocolErrorNotAnIsErrorResult() PASSED
+
+BridgeInboundTest > grpcInboundRequiresAnActionId() PASSED
+
+BridgeInboundTest > mcpInitializeAlwaysAdvertisesBothCapabilities() PASSED
+
+BridgeInboundTest > directionGatingIsCaseInsensitiveAndGrpcIsNotInTheDefaultSet() PASSED
+
+BridgeInboundTest > grpcInboundSurfacesTheExactNpsFaultNotOnlyTheCoarseClass() PASSED
+
+BridgeInboundTest > mcpStillResolvesUnqualifiedToolNames() PASSED
+
+BridgeInboundTest > a2aRejectsAnUnnamedSkillWhenMoreThanOneActionExists() PASSED
+
+BridgeInboundTest > nodeRoleParsingAndDerivedFlags() PASSED
+
+BridgeInboundTest > mcpInboundServesTheFullRequiredMethodSet() PASSED
+
+BridgeInboundTest > unknownResourceHostIsInvalidParamsNotMethodNotFound() PASSED
+
+BridgeInboundTest > a2aAgentCardListsFrontedActionsAsQualifiedSkills() PASSED
+
+BridgeInboundTest > a2aRequestAgainstAnMcpOnlyBridgeIsRefusedWithBothDeclaredArraysInTheHint() PASSED
+
+BridgeInboundTest > grpcInboundRoundTripsAnInvoke() PASSED
+
+BridgeInboundTest > queryOnANonQueryableNodeIsToolNotFound() PASSED
+
+BridgeInboundTest > mcpRequestAgainstAnA2aOnlyBridgeIsRefused() PASSED
+
+BridgeInboundTest > aThrowingDispatcherBecomesDispatchFailed() PASSED
+
+BridgeInboundTest > mcpServesResourcesMethodsEvenWithNoMemoryNode() PASSED
+
+BridgeInboundTest > mcpStdioHandlesLineDelimitedJsonRpc() PASSED
+
+BridgeInboundTest > missingDispatcherFailsLoudlyWithARegisteredCode() PASSED
+
+BridgeInboundTest > a2aServesOnlyTasksSend() PASSED
+
+BridgeInboundTest > a2aMustNotDowngradeAnInfrastructureFailureToATask() PASSED
+
+BridgeInboundTest > mcpServesResourcesOverAQueryableNode() PASSED
+
+BridgeInboundTest > toolNameEncodingIsLossyAndDeliberatelyHasNoDecode() PASSED
+
+BridgeInboundTest > backendsAreMaterialisedForDeclaredActionsEvenWithoutADispatcher() PASSED
+
+BridgeInboundTest > a2aTasksSendDispatchesTheActionAndReturnsAnArtifact() PASSED
+
+BridgeInboundTest > nonNwpResourceUriIsInvalidParams() PASSED
+
+BridgeInboundTest > domainFailureStaysAnIsErrorResult() PASSED
+
+BridgeInboundTest > a2aResolvesTheSoleActionWhenNoSkillIsNamed() PASSED
+
+BridgeInboundTest > bareActionIdResolvesWhileAmbiguityIsRejectedNamingBothCandidates() PASSED
+
+BridgeInboundTest > a2aAgentCardNullsAuthenticationWhenAuthIsOff() PASSED
+
+BridgeInboundTest > grpcInboundRefusesUntilGrpcIsDeclared() PASSED
+
+BridgeInboundTest > hostingDefaultsAreFailClosed() PASSED
+
+BridgeInboundTest > grpcInboundNotFoundForAnUnknownUpstream() PASSED
+
+BridgeInboundTest > agentNidSyntacticValidation() PASSED
+
+BridgeInboundTest > a2aDomainFailureTerminatesTheTaskAsFailedWithTheCodePreserved() PASSED
+
+BridgeInboundTest > unknownToolIsMethodNotFoundAndNeverTheRetired32002() PASSED
+
+BridgeInboundTest > grpcInboundResolvesTheSoleBackendWhenUpstreamIsEmpty() PASSED
+
+BridgeInboundTest > grpcQueryTreatsAnEmptyBodyAsAnEmptyObject() PASSED
+
+BridgeInboundTest > mcpListsQualifiedToolNamesAndDispatchesToolCall() PASSED
+
+BridgeInboundTest > upstreamsWithoutAnHttpClientAreRejected() PASSED
+
+BridgeInboundTest > missingToolNameIsInvalidParams() PASSED
+
+BridgeInboundTest > a2aRequiresATaskId() PASSED
+
+BridgeInboundTest > unsupportedMcpMethodIsMethodNotFound() PASSED
+
+BridgeInboundTest > inProcessBackendManifestAndActionGating() PASSED
+
+BridgeServerHandlerTest > bodyOverTheLimitIs413() PASSED
+
+BridgeServerHandlerTest > missingVerifierDeniesEveryRequest() PASSED
+
+BridgeServerHandlerTest > agentCardIsServedOnTheWellKnownPath() PASSED
+
+BridgeServerHandlerTest > syntacticallyInvalidNidIs401() PASSED
+
+BridgeServerHandlerTest > sseAliasRoutesToTheSameMcpServer() PASSED
+
+BridgeServerHandlerTest > nonPostOnMcpIs405AndNonGetOnTheAgentCardIs405() PASSED
+
+BridgeServerHandlerTest > authCanBeDisabled() PASSED
+
+BridgeServerHandlerTest > missingAgentHeaderIs401WithAJsonRpcErrorBody() PASSED
+
+BridgeServerHandlerTest > malformedBodyIsAParseError() PASSED
+
+BridgeServerHandlerTest > verifierRejectionIs401() PASSED
+
+BridgeServerHandlerTest > mcpPostDispatchesThroughTheHostingLayer() PASSED
+
+BridgeServerHandlerTest > dispatchTimeoutIs504WithUpstreamError() PASSED
+
+BridgeServerHandlerTest > aZeroLimitDisablesTheBodyCap() PASSED
+
+BridgeServerHandlerTest > unknownPathIs404() PASSED
+
+BridgeTest > bridgeTargetSerializationRoundTrip() PASSED
+
+BridgeTest > bridgeProtocolConstants() PASSED
+
+BridgeTest > bridgeTargetWithExtrasSerializationRoundTrip() PASSED
+
+BridgeTest > bridgeTargetWithoutExtras() PASSED
+
+BridgeTest > bridgeNodeDescriptorFields() PASSED
+
+BridgeTest > bridgeTargetWithExtras() PASSED
+
+BridgeTest > bridgeNodeMetadata() PASSED
+
+CgnHelperTest > emptyStringReturnsZero() PASSED
+
+CgnHelperTest > estimateBytesEmptyArrayReturnsZero() PASSED
+
+CgnHelperTest > nullStringReturnsZero() PASSED
+
+CgnHelperTest > tokenBudgetMetaNullProfileDefaultsToCgnV1() PASSED
+
+CgnHelperTest > estimateBytesNullReturnsZero() PASSED
+
+CgnHelperTest > tokenBudgetMetaCustomProfile() PASSED
+
+CgnHelperTest > tokenBudgetMetaDefaultProfile() PASSED
+
+CgnHelperTest > fourBytesReturnsOne() PASSED
+
+CgnHelperTest > chineseCharactersReturnTwo() PASSED
+
+CgnHelperTest > estimateJsonOnMapReturnsPositive() PASSED
+
+CgnHelperTest > budgetExceededErrorFields() PASSED
+
+CgnHelperTest > fiveBytesReturnsTwo() PASSED
+
+ComplexNodeServerTest > localQueryNoDepth() PASSED
+
+ComplexNodeServerTest > cycleDetectedWhenSelfInTrace() PASSED
+
+ComplexNodeServerTest > invokeAsyncRejected() PASSED
+
+ComplexNodeServerTest > depthNonNumericIs400() PASSED
+
+ComplexNodeServerTest > childSsrfProducesChildError() PASSED
+
+ComplexNodeServerTest > graphExpandsChildAtDepth() PASSED
+
+ComplexNodeServerTest > graphMaxDepthOverAbsoluteCapRejectedAtConstruction() PASSED
+
+ComplexNodeServerTest > depthOverNodeMaxIs400() PASSED
+
+ComplexNodeServerTest > invokeSyncAction() PASSED
+
+LlmContextContractTest > lifecycleHelpersUseCanonicalActionIds() PASSED
+
+LlmContextContractTest > statefulCompletionUsesCanonicalWireFields() PASSED
+
+LlmContextContractTest > contextErrorsUseTheSharedResourceLimitStatus() PASSED
+
+LlmContextStoreConformanceTest > reservationAndSnapshotDefensivelyCopyLists() PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.001 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.002 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.003 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.004 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.005 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.006 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.007 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.008 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.009 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.010 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.011 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.012 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.013 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.014 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.015 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.016 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.017 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.018 PASSED
+
+LlmContextStoreConformanceTest > sharedVectors() > nwp.llm-context.019 PASSED
+
+MemoryNodeServerTest > queryReturnsAllRows() PASSED
+
+MemoryNodeServerTest > budgetTrimsRows() PASSED
+
+MemoryNodeServerTest > queryComparisonOperator() PASSED
+
+MemoryNodeServerTest > queryLimitAndCursor() PASSED
+
+MemoryNodeServerTest > missingAgentIs401WhenAuthRequired() PASSED
+
+MemoryNodeServerTest > queryEqualityFilter() PASSED
+
+MemoryNodeServerTest > queryUnknownFieldIs400() PASSED
+
+MemoryNodeServerTest > getOnQueryIs405() PASSED
+
+MemoryNodeServerTest > schemaAndManifestServed() PASSED
+
+NwpAnchorFailoverTest > subTypeTagConstantsLiveOnTheEventType() PASSED
+
+NwpAnchorFailoverTest > standbyRejectsTopologyWritesWithNotLeader() PASSED
+
+NwpAnchorFailoverTest > failoverReasonDefaultsToPlanned() PASSED
+
+NwpAnchorFailoverTest > quorumLostActiveOwnerAlsoRejectsWrites() PASSED
+
+NwpAnchorFailoverTest > anchorHaErrorCodesMapToClientConflict() PASSED
+
+NwpAnchorFailoverTest > failoverEventCarriesSuccessorEpochReason() PASSED
+
+NwpAnchorFailoverTest > everySnapshotResponseCarriesClusterEpoch() PASSED
+
+NwpAnchorFailoverTest > quorumLostEventCarriesCounts() PASSED
+
+NwpAnchorFailoverTest > typedDetailsAccessorsRoundTrip() PASSED
+
+NwpAnchorFailoverTest > snapshotClusterEpochUsesTheExplicitWireKeyAndIsOmittedWhenNull() PASSED
+
+NwpAnchorFailoverTest > takingOwnershipRequiresAStrictlyGreaterEpoch() PASSED
+
+NwpAnchorFailoverTest > failoverEnvelopeSerialisesAsAnchorState() PASSED
+
+NwpAnchorFailoverTest > readsSucceedOnAStandby() PASSED
+
+NwpAnchorFailoverTest > fencedLeaderRejectsAHigherEpochInboundFrame() PASSED
+
+NwpAnchorFailoverTest > equalOrLowerInboundEpochIsAcceptedNotFenced() PASSED
+
+NwpAnchorFailoverTest > ownershipMustExceedEveryEpochEverObserved() PASSED
+
+NwpNativeNodeServerTest > dispatchWireRejectsUnnegotiatedBinaryVector() PASSED
+
+NwpNativeNodeServerTest > dispatchWireAllowsNegotiatedBinaryVectorQuery() PASSED
+
+NwpNativeNodeServerTest > dispatchWireWrapsActionResult() PASSED
+
+NwpNativeNodeServerTest > dispatchWireReturnsCapsForQuery() PASSED
+
+NwpNativeNodeServerTest > actionFrameAcceptsLegacyActionKey() PASSED
+
+ReputationPolicyTest > reputationDecisionIsAcceptedFalseForReject() PASSED
+
+ReputationPolicyTest > reputationDecisionCarriesMatchedRuleAndErrorCode() PASSED
+
+ReputationPolicyTest > jacksonRoundTripReputationPolicy() PASSED
+
+ReputationPolicyTest > reputationPolicyRuleNullIncidentDefaultsStar() PASSED
+
+ReputationPolicyTest > reputationDecisionIsAcceptedFalseForBan() PASSED
+
+ReputationPolicyTest > reputationDecisionIsAcceptedFalseForThrottle() PASSED
+
+ReputationPolicyTest > reputationPolicyRuleDefaults() PASSED
+
+ReputationPolicyTest > reputationDecisionIsAcceptedTrueForAccept() PASSED
+
+ReputationPolicyTest > defaultPolicyHasExpectedDefaults() PASSED
+
+ReputationPolicyTest > repOutcomeVariantsAreDistinct() PASSED
+
+ReputationPolicyTest > reputationPolicyRuleCountClampedToOne() PASSED
+
+StatefulLlmActionProviderTest > cancellationAbortsReservationEvenWhenProviderIgnoresInterruption() PASSED
+
+StatefulLlmActionProviderTest > enforcesCommitAuthorizationCallerIsolationAndReplayAuthorization() PASSED
+
+StatefulLlmActionProviderTest > advertisesExactProfileAndRunsLifecycle() PASSED
+
+StatefulLlmActionProviderTest > rejectsMalformedPayloadAndAbortsProviderAndModelErrors() PASSED
+
+StatefulLlmActionProviderTest > asyncReceiptAppearsOnlyInTerminalTaskResult() PASSED
+
+StatefulLlmActionProviderTest > passesExactAuthorizationCapabilitiesAndFailsClosedWithoutAuthorizer() PASSED
+
+StatefulLlmActionProviderTest > reconnectConcurrentAppendAndProcessRestartFollowContract() PASSED
+
+StatefulLlmActionProviderTest > streamingCommitAndReplayUseTerminalReceiptAndFreshStreamId() PASSED
+
+StatefulLlmActionProviderTest > streamingAbnormalEndAbortsAndEmitsTerminalError() PASSED
+
+SubscribeFrameTest > fromDictWithRequiredFieldOnly() PASSED
+
+SubscribeFrameTest > toDictOmitsNullFields() PASSED
+
+SubscribeFrameTest > jacksonOmitsNullsInOutput() PASSED
+
+SubscribeFrameTest > toDictIncludesAllPresentFields() PASSED
+
+SubscribeFrameTest > jacksonRoundTrip() PASSED
+
+SubscribeFrameTest > constructWithSubscriptionIdOnly() PASSED
+
+SubscribeFrameTest > fromDictRoundTrip() PASSED
+
+JdbcMemoryNodeProviderTest > positionalRewriteExpandsInList() PASSED
+
+JdbcMemoryNodeProviderTest > partialPageHasNoNextCursor() PASSED
+
+JdbcMemoryNodeProviderTest > positionalRewriteScalarParams() PASSED
+
+JdbcMemoryNodeProviderTest > countDelegatesToScalar() PASSED
+
+JdbcMemoryNodeProviderTest > queryReturnsRowsAndGeneratesExpectedSql() PASSED
+
+NwpFilterTranslatorTest > emptyInIsAlwaysFalse_emptyNinAlwaysTrue() PASSED
+
+NwpFilterTranslatorTest > allComparisonOps() PASSED
+
+NwpFilterTranslatorTest > multipleFieldsAndedTogether() PASSED
+
+NwpFilterTranslatorTest > inAndNin() PASSED
+
+NwpFilterTranslatorTest > sqlServerQuoting() PASSED
+
+NwpFilterTranslatorTest > between() PASSED
+
+NwpFilterTranslatorTest > eq() PASSED
+
+NwpFilterTranslatorTest > columnAliasResolution() PASSED
+
+NwpFilterTranslatorTest > orCombinator() PASSED
+
+NwpFilterTranslatorTest > containsWrapsWithPercents() PASSED
+
+NwpFilterTranslatorTest > nullFilterIsEmpty() PASSED
+
+NwpFilterTranslatorTest > betweenWrongArityThrows() PASSED
+
+NwpFilterTranslatorTest > unknownFieldThrowsWithCode() PASSED
+
+NwpFilterTranslatorTest > unknownOperatorThrows() PASSED
+
+NwpFilterTranslatorTest > logicalOperatorRequiresArray() PASSED
+
+SqlQueryBuilderTest > buildCount() PASSED
+
+SqlQueryBuilderTest > projectionAndWhereAndOrder() PASSED
+
+SqlQueryBuilderTest > limitClampedToMax() PASSED
+
+SqlQueryBuilderTest > selectAllFieldsDefaultsWithPkOrderAndPgPagination() PASSED
+
+SqlQueryBuilderTest > sqlServerUsesOffsetFetch() PASSED
+
+SqlQueryBuilderTest > cursorDecodesToOffset() PASSED
+
+SqlQueryBuilderTest > cursorRoundTrip() PASSED
+
+InstrumentationWiringTest > nwpDispatchIncrementsFramesAndRecordsSpan() PASSED
+
+InstrumentationWiringTest > nopTelemetryDelegatesToInstruments() PASSED
+
+InstrumentationWiringTest > nwpDispatchErrorIncrementsErrorCounter() PASSED
+
+TelemetryTest > closeIsIdempotent() PASSED
+
+TelemetryTest > histogramEmptyMeanIsNaN() PASSED
+
+TelemetryTest > spanRecordsIntoTracer() PASSED
+
+TelemetryTest > spanErrorStatus() PASSED
+
+TelemetryTest > counterAccumulates() PASSED
+
+TelemetryTest > histogramStats() PASSED
+
+TelemetryTest > nwpInstrumentationNamesMatchDotNet() PASSED
+
+TelemetryTest > nopInstrumentationNamesMatchDotNet() PASSED
+
+BUILD SUCCESSFUL in 55s
+8 actionable tasks: 8 executed

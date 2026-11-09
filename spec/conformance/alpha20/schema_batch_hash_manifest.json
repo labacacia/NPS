@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "schema-jcs-supplement-freeze",
+  "parent_wire_manifest_sha256": "caff52e1430d8b58314cb2a11ea0f9eaecd0f03c96e69b57552665ef854a09ba",
+  "artifacts": [
+    {
+      "path": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+      "sha256": "98dd09e5c538e7c179f21bb715d934af6b302621b667f86382488d03abd46db6"
+    }
+  ]
+}

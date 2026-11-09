@@ -1,0 +1,9 @@
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 prepack
+> npm run build && node scripts/verify-pack.mjs
+
+
+> @labacacia/nps-sdk@1.0.0-alpha.19 build
+> tsc
+
+npm pack verification passed (24 export targets, 651 files).

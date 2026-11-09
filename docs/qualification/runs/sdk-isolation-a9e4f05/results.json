@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "task": "D20-08",
+  "kind": "standalone-sdk-and-unpublished-package-qualification",
+  "sources": {
+    "original_inputs": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+    "corrected_typescript_and_rust": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7"
+  },
+  "standalone_suites": {
+    "dotnet": {
+      "passed": 1538,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "SDK-only; existing HasNpsDaemonSources=false excludes128 authoring daemon tests; source92bf full suite1666 passed separately",
+      "warnings": "SourceLink unavailable in non-Git isolated copies"
+    },
+    "python": {
+      "passed": 1513,
+      "failed": 0,
+      "coverage_percent": 92.13,
+      "coverage_floor_percent": 90
+    },
+    "typescript": {
+      "passed": 1324,
+      "failed": 0,
+      "source": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7"
+    },
+    "go": {
+      "result": "passed",
+      "test_packages": 11,
+      "no_test_packages": "reported explicitly by Go; not counted as passes"
+    },
+    "java": {
+      "passed": 744,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "rust": {
+      "passed": 765,
+      "failed": 0,
+      "ignored": 0,
+      "test_groups": 50,
+      "all_features": true,
+      "locked": true
+    }
+  },
+  "package_consumers": {
+    "npm": {
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "public_entrypoints": 12,
+      "parser_cases": 44,
+      "sqlite_reopen_duplicate": true,
+      "result": "passed"
+    },
+    "python": {
+      "version": "1.0.0a20.dev0+2d16f7d7f87e",
+      "wheel_and_sdist_built": true,
+      "twine_check": "passed",
+      "installed_wheel_tests": 1513,
+      "installed_wheel_coverage_percent": 92.13,
+      "source_package_present_in_consumer_root": false,
+      "result": "passed"
+    },
+    "nuget": {
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "packages": 11,
+      "symbols": 11,
+      "exact_internal_versions": "verified",
+      "repository_commit": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "consumer_package_references": 11,
+      "public_parser_valid_and_duplicate_cases": "passed",
+      "sourcelink": "unresolved: isolated non-Git trees generated empty source-link warnings",
+      "restore_audit_warnings": "Nexus advisory index unreachable in pack; not a clean advisory run",
+      "result": "local-build-consumer-passed-release-readiness-unresolved"
+    },
+    "maven": {
+      "version": "1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "jar_sources_javadoc_pom": "built-and-inspected",
+      "actual_jar_parser_cases": 44,
+      "signatures": "not-generated; unsigned local candidate",
+      "result": "local-build-consumer-passed-signing-authority-unresolved"
+    },
+    "go": {
+      "version": "v1.0.0-alpha.20.dev.2d16f7d7f87e",
+      "method": "local file module proxy zip, go mod download, standalone go run",
+      "source_revision": "2d16f7d7f87e6185d7c82b25f93db98ee4d6a86d",
+      "checksum_scope": "GONOSUMDB only unpublished NPS module; dependencies retain normal checksum verification",
+      "public_parser_valid_and_duplicate_cases": "passed",
+      "result": "passed"
+    },
+    "rust": {
+      "result": "passed",
+      "candidate": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "source_commit": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+      "package_count": 8,
+      "ordered_package_unpack_compile": "passed",
+      "workspace_test_all_features": "passed",
+      "clippy_all_targets_all_features_deny_warnings": "passed",
+      "network_writes": 0,
+      "registry_uploads": 0,
+      "attempt01": "disk quota failure preserved",
+      "attempt02": "missing clippy component failure preserved",
+      "attempt03": "passed with installed task-local clippy and disk-backed TMPDIR"
+    }
+  },
+  "preserved_failures": [
+    {
+      "source": "2d16f7d",
+      "typescript": "1322 passed,2 failed: process workers import dist before build; corrected by pretest build"
+    },
+    {
+      "source": "2d16f7d",
+      "rust": "four remaining error-status include_str paths require private monorepo; corrected with nearest conformance lookup"
+    },
+    {
+      "source": "2d16f7d",
+      "ci": 41604533496,
+      "jobs_passed": 9,
+      "job_failed": "feature oracle imports source checker but PyYAML not installed; explicit pinned install added"
+    },
+    {
+      "python_build": "host Python lacks ensurepip; bootstrap isolated builder pip through existing trusted pip; isolated sdist-to-wheel build then passed"
+    },
+    {
+      "go_consumer_driver": "used Features field rather than public Features() method; driver corrected without changing SDK"
+    }
+  ],
+  "publication": false,
+  "registry_uploads": 0,
+  "release_clones_modified": false,
+  "paid_model_calls": 0,
+  "runtime_compatibility_cells_added": 0,
+  "no_waiver": true,
+  "logs": [
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/source-python.log",
+      "sha256": "24d3dff346630de1bee45cd4219489ed270df765e254d5fe6d0fe586054c2cd8",
+      "bytes": 20406
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/source-ts.log",
+      "sha256": "4a61432669b1f6f17ea78cb721662aad2a0bf331f798082900de9047dd815f59",
+      "bytes": 1541
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-dotnet.log",
+      "sha256": "b4ef1cb51656c84bfd148cd0fd395c6c20e3eb9aa49d20924aad03a7b6d76d9f",
+      "bytes": 20779
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-python.log",
+      "sha256": "7dac150bcf0ae1041503b1ebadb665ba3620ac652635e63fa386315f26b0615a",
+      "bytes": 18992
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-go.log",
+      "sha256": "3e70c4334c8ecdb83e780ceb32c98a4342e7c60a3e7e003201bb30702189ddbc",
+      "bytes": 767
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-java.log",
+      "sha256": "7d3ebb03517653d017fa8f191dfbd564890f0b3151a0aba875c2431d4a0df014",
+      "bytes": 47315
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-rust.log",
+      "sha256": "cea487c3a4f49b794ac898b3a17c7783dc7e35dde31105ebcfb5717d5980ff08",
+      "bytes": 7720
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-rust02.log",
+      "sha256": "46d0279484ee5171a3d70f58e7cb37c2f80836b82ebe14afa79c18495118046c",
+      "bytes": 53170
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-ts.log",
+      "sha256": "505a9d0ecee073a6316ac0544f1e8a9f84f508c2589620cca635fd09cbeb9ce4",
+      "bytes": 4745
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-ts02.log",
+      "sha256": "99a808eae4ba2f8ebb7ed8c2f9a9a5a7862eb8760a5e686337a12ae9e55122d2",
+      "bytes": 1609
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/isolated-ts02-pack.log",
+      "sha256": "6d9565c3d2679c56476f904915a9ee3f1c2769b41c55c6eb1bc1b2f9f2dd01cb",
+      "bytes": 205
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-build-attempt01-ensurepip.log",
+      "sha256": "e5e11789aef9313d5614d4f022e40b14abde15a78d39873f13625496aad7e351",
+      "bytes": 450
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-build02.log",
+      "sha256": "d946e53c571d3c2d0edd29b4eff6c5204cfdc4c49831f7fdd1a3e2e891383a5b",
+      "bytes": 603
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-twine02.log",
+      "sha256": "dc9d5ac6bb957d934e87025395e7218465c35b7510eeec84d4b9887f2b196b0d",
+      "bytes": 234
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-wheel-import.log",
+      "sha256": "d0011a17097c7b84ce0db34bcb01576eff1060aa93625abbcb3cf2b9e989b584",
+      "bytes": 27
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-wheel-tests.log",
+      "sha256": "59c0d39611bf74ab69c6188145b789670a708905cf8da53e1f797158ac9a2379",
+      "bytes": 23887
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/npm-consumer.log",
+      "sha256": "0b2a3dc399793827066a9a7b45826b558c3e3686338dd11969b6e2c3937f48f8",
+      "bytes": 169
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/java-consumer.log",
+      "sha256": "5dc24d693c929bb97ef4ea2e0552579202eacbad31877aecebface2b1a526bab",
+      "bytes": 61
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/go-consumer-attempt01-driver.log",
+      "sha256": "d9ef9bdf63ca0976b1735669c46f9a59f79084a5b3c567a0b734914f0153a05d",
+      "bytes": 156
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/go-consumer02.log",
+      "sha256": "2142851b674539c631ea33e551b2de2468ed88de28b1eb5d3c8f9c39a354004f",
+      "bytes": 75
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/nuget-consumer.log",
+      "sha256": "64cb8a90be3cb85f83afcb42925b099a5907a7094d0ef57567f119781e2c40be",
+      "bytes": 70
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/rust-candidate-a9e4f05.log",
+      "sha256": "745b7f5c025f3f145925f3f4dd35abcbea86d9d1e952f263537b4204234d8283",
+      "bytes": 21667
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/rust-candidate-a9e4f05-attempt02.log",
+      "sha256": "845a2892548607b28c754b3baedb1f6ab2863b345f09af83932096032f497146",
+      "bytes": 72795
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/ci-2d16-failed.log",
+      "sha256": "fd6f78b86ca98d37b2ef923a9e042a60fb0aef805da102605c6c42d69c1a71ef",
+      "bytes": 7675
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/current-source-drift.log",
+      "sha256": "4f75cd41aabc91c128d9a1a5dc9e5ec1083fe7a0be420968983984e594f0dd4a",
+      "bytes": 55776
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/nuget-pack.log",
+      "sha256": "0eee9e90722ee102f921493b597bfef405bf822f21bc93e7baf5f952a2171519",
+      "bytes": 45071
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/nuget-consumer-restore.log",
+      "sha256": "78bbb42f390c583adcefa5d7a378df41daff2c12bae50cc68ed49e0b93a4998a",
+      "bytes": 133
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/npm-pack.log",
+      "sha256": "b4cff8e30f5c2591f81460b1c2909aac3fb5827f927ef75dab57103678f278a5",
+      "bytes": 1114
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/python-wheel-install.log",
+      "sha256": "dda4ec860dcf21403b1fd1eac04229a4ab2d3588b484da931b1b98d693ddb76f",
+      "bytes": 5874
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/rust-candidate-a9e4f05-attempt03.log",
+      "sha256": "32e036ad9eead7d75d6df9574eaa6859f6fa8e91a77339d3d7a8b6d5a6deaebc",
+      "bytes": 77174
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/remote-version19.log",
+      "sha256": "30cc5c2f15952ff6555773884406d05f98705b6ac11b7efe710a467d50ad21cb",
+      "bytes": 1468
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/ci-3b83-demo.log",
+      "sha256": "cb496488b999ad7cb9b96a349318e5e240371a890a554cf69c8afa9678b0f685",
+      "bytes": 46359
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/demo-readyfile-current-build.log",
+      "sha256": "9b58a8cade0085ae79a41c6cb0746428e7050721e684950356e6704f6286c24f",
+      "bytes": 252
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/demo-readyfile-network.log",
+      "sha256": "e3f4ab993409e9a5982524cd4b48c2488c6cf829f944592391a7023a96ae3a73",
+      "bytes": 438
+    },
+    {
+      "path": "docs/qualification/runs/sdk-isolation-a9e4f05/logs/protocol-version-consistency.log",
+      "sha256": "ac408cf4ffb3a32e8958a890285d32e195cb8a77aefaec84010adfd46d617199",
+      "bytes": 320
+    }
+  ],
+  "artifacts": [
+    {
+      "family": "python-dist",
+      "name": "nps_lib-1.0.0a20.dev0+2d16f7d7f87e-py3-none-any.whl",
+      "sha256": "259f28c17b8eee57b9674a7f7969572b163586a7315b1b3930c529f0f440207f",
+      "bytes": 310021
+    },
+    {
+      "family": "python-dist",
+      "name": "nps_lib-1.0.0a20.dev0+2d16f7d7f87e.tar.gz",
+      "sha256": "77e0fa65e526f7a50657e67be6c687e14a9cb076e1647eceb46e7576ff93987b",
+      "bytes": 471777
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Conformance.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "ffb08a07c41f80a8b874f3f15e5d5cdec087bed61dc4c464adccb81c17ca0938",
+      "bytes": 21128
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Conformance.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "1227169f126689028f2ef1c50d44f1a3cc527ce3b9ccee13ec1f33a3ebeaef2a",
+      "bytes": 9955
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "c9a45bba49a8a2fc1cab754257aeefb168d9b644e09118549cbb595706afe50a",
+      "bytes": 148867
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Core.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "1235a65fc0637848c431ffab3c9d027d0fd1214a1aec2c4fa0b22eeec7899461",
+      "bytes": 99386
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Daemon.Observability.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "52bdaba293df16dd74a78398fba56b9955023218566ee01fb0064d7683d4d811",
+      "bytes": 27831
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.Daemon.Observability.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "bec4698b39a2fb4418f96800a50c2780327014f79bb837ae79a437053b0636d5",
+      "bytes": 16100
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NDP.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "e1b8ef3d39f241dcff0e61443e0c90c490ea4485fac1ac759938c36bb04bd784",
+      "bytes": 78524
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NDP.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "ffddf5e4d3f711a133ebb4b7a8effeb0583b58e18fe00ff773e5cc94b7742fa5",
+      "bytes": 65094
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "971c7a4f6f24d8213d4ff3516be839044424d265922797ebb3f8c56274c5502d",
+      "bytes": 210556
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "13f23f1365eae3579dbd1ea972f9a14e3b494c019627ae50f7652f5ab367050f",
+      "bytes": 80858
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.Storage.Postgres.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "ffd6fc4796960418438ab002a2cc6f4ef8d7a6163d846622ec254a22fe3db82c",
+      "bytes": 33300
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.Storage.Postgres.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "ce9021a09e8390ffc6af30ad8607fea1ae016fcb06dabf6e68c4937a54d52b9b",
+      "bytes": 17401
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "aebb1639945d1cbe156420746437b2c311a85d4017571453bdaa4990e99333f9",
+      "bytes": 38565
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NIP.Storage.Sqlite.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "dee5398a8df210dcd2935934b5b7969a087cc0951878b3f5f335462a1c5c7527",
+      "bytes": 18358
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NOP.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "11a8e7662519296b5ad5b62c58221c2202251e492ade492a55c051a90bd3c170",
+      "bytes": 96513
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NOP.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "89827425f6e886acbd668997461eafa8494e1524c7c1b7fed3f540152ef2b59c",
+      "bytes": 29802
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "bd358835ca6702380e5527dfd3d0e51c0c9bfca1d7a48215e1b92a4e1c3e3ab6",
+      "bytes": 217798
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "20d1adb7c80f47d3d5819f0b09285d2704a9393a21c4ff4f17c9e626ef1983c8",
+      "bytes": 84359
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.Anchor.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "24c83fb0023bf71d2e132b28c797f18baeb1cbda6daf46058dc05cb56f63fe87",
+      "bytes": 79436
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.Anchor.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "3cbb3b0da6ccf5ab870fcdfeae517bea39e947127d7c7835ab6f3887f4b254cf",
+      "bytes": 24958
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.Bridge.1.0.0-alpha.20.dev.2d16f7d7f87e.nupkg",
+      "sha256": "b1380c1ece5483966e8e2ed4d88e573692d74d7c87e4e1efb39e0d5278816d30",
+      "bytes": 115337
+    },
+    {
+      "family": "nuget",
+      "name": "LabAcacia.NPS.NWP.Bridge.1.0.0-alpha.20.dev.2d16f7d7f87e.snupkg",
+      "sha256": "377fbf5dd1fc4e5ed894ebaa773964caf2081135fb70f82f9474fbc9f59cfa00",
+      "bytes": 33650
+    },
+    {
+      "family": "maven",
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e-javadoc.jar",
+      "sha256": "3411ba94966f7ccf7e1be44557b50961f9bb1b7bd285361be39bed9e2debf58a",
+      "bytes": 1830218
+    },
+    {
+      "family": "maven",
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e-sources.jar",
+      "sha256": "0b89e564645ed33da836ae18c3ddec17a256dd2ddc5545f80d84240e87f8f134",
+      "bytes": 421584
+    },
+    {
+      "family": "maven",
+      "name": "nps-java-1.0.0-alpha.20.dev.2d16f7d7f87e.jar",
+      "sha256": "9e5495b561e268ab8df784cee9bf72a64eb3b73d7ff6c2f9a37d98e72bbe326c",
+      "bytes": 833048
+    },
+    {
+      "family": "npm",
+      "name": "labacacia-nps-sdk-1.0.0-alpha.20.dev.a9e4f05eeb85.tgz",
+      "sha256": "670c59126ca926dba4636efd1ef6bb2f752c939d3c2bac1b237756022c70712b",
+      "bytes": 481801
+    }
+  ],
+  "toolchains": {
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "node": "22.22.1",
+    "npm_mutation": "11.11.0",
+    "python": "3.14.4",
+    "go": "1.26.10",
+    "gradle": "8.14.3",
+    "java_compiler_and_tests": "21.0.13",
+    "gradle_launcher": "17.0.14",
+    "dotnet": "10.0.114"
+  },
+  "demo_readyfile_correction": {
+    "source_revision": "074eeb59015ca5489d1262988844afb12bfa5969",
+    "failed_ci": 41606940397,
+    "failed_job": 125819008393,
+    "failure": "reader observed empty connection.json during producer write at100000rows",
+    "correction": "serialize into CreateNew pending file, close then same-directory atomic rename; final name is readiness signal",
+    "local_actual_mtls_rows": [
+      100,
+      1000,
+      100000
+    ],
+    "local_actual_mtls_result": "passed",
+    "source_bound_sdk_packages": "074eeb59015c",
+    "corrected_ci": 41607553047,
+    "corrected_ci_status": "passed-all10jobs",
+    "security_run": 41607560304,
+    "security_scanner_result": "passed;registryauthority skipped",
+    "model_calls": 0,
+    "local_receipt_sha256": "6b36a0229ebdd2a2b3e8dca4d13a29d6808cbb8bf2ef40eda05a31722c1bbe54",
+    "corrected_ci_url": "https://github.com/labacacia/NPS-Dev/actions/runs/41607553047"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "source_path": "spec/conformance/alpha20/data_workflow_methodology.json",
+  "source_sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c",
+  "reference_answers": {
+    "100": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 13,
+            "refunds": 3,
+            "refund_amount_minor": 3444
+          },
+          "current": {
+            "orders": 12,
+            "refunds": 7,
+            "refund_amount_minor": 23576
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 13,
+            "refunds": 3,
+            "refund_amount_minor": 3555
+          },
+          "current": {
+            "orders": 12,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 12,
+            "refunds": 2,
+            "refund_amount_minor": 2296
+          },
+          "current": {
+            "orders": 13,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 12,
+            "refunds": 2,
+            "refund_amount_minor": 2370
+          },
+          "current": {
+            "orders": 13,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    },
+    "1000": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 130,
+            "refunds": 30,
+            "refund_amount_minor": 34440
+          },
+          "current": {
+            "orders": 120,
+            "refunds": 70,
+            "refund_amount_minor": 235760
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 130,
+            "refunds": 30,
+            "refund_amount_minor": 35550
+          },
+          "current": {
+            "orders": 120,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 120,
+            "refunds": 20,
+            "refund_amount_minor": 22960
+          },
+          "current": {
+            "orders": 130,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 120,
+            "refunds": 20,
+            "refund_amount_minor": 23700
+          },
+          "current": {
+            "orders": 130,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    },
+    "100000": {
+      "groups": {
+        "delivery": {
+          "baseline": {
+            "orders": 13000,
+            "refunds": 3000,
+            "refund_amount_minor": 3444000
+          },
+          "current": {
+            "orders": 12000,
+            "refunds": 7000,
+            "refund_amount_minor": 23576000
+          },
+          "sample_current_refund_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        "quality": {
+          "baseline": {
+            "orders": 13000,
+            "refunds": 3000,
+            "refund_amount_minor": 3555000
+          },
+          "current": {
+            "orders": 12000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "duplicate": {
+          "baseline": {
+            "orders": 12000,
+            "refunds": 2000,
+            "refund_amount_minor": 2296000
+          },
+          "current": {
+            "orders": 13000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        },
+        "other": {
+          "baseline": {
+            "orders": 12000,
+            "refunds": 2000,
+            "refund_amount_minor": 2370000
+          },
+          "current": {
+            "orders": 13000,
+            "refunds": 0,
+            "refund_amount_minor": 0
+          },
+          "sample_current_refund_ids": []
+        }
+      },
+      "anomaly_reasons": [
+        "delivery"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/security/audit-gradle-osv.py", "impl/java", "tools/nip-ca-server/example/java"], "cwd": "."}
+{
+  "ecosystem": "Maven",
+  "projects": [
+    {
+      "packages": 9,
+      "project": "impl/java",
+      "vulnerabilities": []
+    },
+    {
+      "packages": 47,
+      "project": "tools/nip-ca-server/example/java",
+      "vulnerabilities": []
+    }
+  ],
+  "vulnerability_count": 0
+}

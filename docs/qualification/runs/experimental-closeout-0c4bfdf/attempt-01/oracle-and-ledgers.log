@@ -1,0 +1,23 @@
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/conformance/check-alpha20-feature-vectors.py"], "cwd": "."}
+PASS 50 feature fixtures, 5 registered profiles, 2 frozen schema hashes, 17 bilingual error mappings (not SDK/runtime qualification)
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/conformance/check-data-workflow-contract.py"], "cwd": "."}
+PASS 39 portable scenarios, 12 retained alpha gates, 57 prior tasks, EN/CN requirements and frozen bytes (design oracle; no SDK/runtime/provider qualification)
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/conformance/check-schema-batch-vectors.py"], "cwd": "."}
+PASS 106 fixed JSON/MessagePack cases, 10 linked schema JCS cases and frozen artifacts (not runtime/SDK qualification)
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "tools/conformance/check-alpha20-integration-ledgers.py"], "cwd": "."}
+PASS accepted experimental scope: 7 reference configurations; 6 helper SDKs; historical576/12+57/beta12 preserved with explicit dispositions; local CI only, no publication
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-m", "unittest", "discover", "-s", "tools/conformance/tests", "-q"], "cwd": "."}
+----------------------------------------------------------------------
+Ran 46 tests in 0.261s
+
+OK
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-m", "unittest", "discover", "-s", "tools/release/tests", "-q"], "cwd": "."}
+----------------------------------------------------------------------
+Ran 24 tests in 0.769s
+
+OK
+{"command": ["/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/bin/python", "-m", "unittest", "discover", "-s", "tools/benchmarks/tests", "-q"], "cwd": "."}
+----------------------------------------------------------------------
+Ran 75 tests in 4.693s
+
+OK

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "version": "0.2",
+  "suite_target": "1.0.0-alpha.20",
+  "status": "candidate-contract-not-implementation-evidence",
+  "negotiation_version": 1,
+  "namespace": "nps.",
+  "features": [
+    {
+      "id": "nps.data_results",
+      "revisions": [
+        {
+          "revision": 1,
+          "lifecycle": "experimental",
+          "requires": [],
+          "conditional_requires": [
+            {
+              "condition": "projection_present",
+              "id": "nps.invocation_context",
+              "revision": 1
+            }
+          ],
+          "spec": ["profiles/data-results.md"]
+        }
+      ]
+    },
+    {
+      "id": "nps.invocation_context",
+      "revisions": [
+        {
+          "revision": 1,
+          "lifecycle": "experimental",
+          "requires": [],
+          "spec": [
+            "NPS-3-NIP.md#78-authenticated-invocation-projection-nip-v016",
+            "NPS-2-NWP.md#97-invocation-context-carrier-and-request-binding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nps.production_runtime",
+      "revisions": [
+        {
+          "revision": 1,
+          "lifecycle": "experimental",
+          "requires": [],
+          "spec": [
+            "NPS-1-NCP.md#78-production-runtime-profile-ncp-v013",
+            "NPS-4-NDP.md#79-production-runtime-discovery-binding-ndp-v014",
+            "NPS-5-NOP.md#36-production-runtime-outcome-binding-nop-v011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nps.governed_challenge",
+      "revisions": [
+        {
+          "revision": 1,
+          "lifecycle": "experimental",
+          "requires": [
+            {
+              "id": "nps.production_runtime",
+              "revision": 1
+            }
+          ],
+          "conditional_requires": [
+            {
+              "condition": "projection_present",
+              "id": "nps.invocation_context",
+              "revision": 1
+            }
+          ],
+          "spec": [
+            "NPS-2-NWP.md#77-governed-action-challenge-nwp-v023"
+          ]
+        }
+      ]
+    }
+  ]
+}

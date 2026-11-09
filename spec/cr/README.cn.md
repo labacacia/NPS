@@ -45,6 +45,12 @@
 
 | CR | 标题 | 目标版本 | 状态 |
 |---|---|---|---|
+| [NPS-CR-0017](./NPS-CR-0017-schema-batches.md) | 有界schema批次及差量恢复 | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0016](./NPS-CR-0016-data-results.md) | 版本绑定的数据结果资源 | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0015](./NPS-CR-0015-governed-challenge.cn.md) | 受治理操作 challenge | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0014](./NPS-CR-0014-production-runtime.cn.md) | 有界生产运行时 | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0013](./NPS-CR-0013-invocation-context.cn.md) | 认证调用上下文 | v1.0.0-alpha.20 | Draft |
+| [NPS-CR-0012](./NPS-CR-0012-feature-negotiation.cn.md) | Native 握手与 HTTP 准入的 feature revision 协商 | v1.0.0-alpha.20 | Draft |
 | [NPS-CR-0001](./NPS-CR-0001-anchor-bridge-split.md) | 把 Gateway Node 拆为 Anchor Node + Bridge Node | v1.0-alpha.3 | Implemented（2026-04-26）|
 | [NPS-CR-0002](./NPS-CR-0002-anchor-topology-queries.md) | Anchor Node 标准拓扑查询类型（`topology.snapshot` / `topology.stream`） | v1.0-alpha.4 | Implemented（2026-04-27）|
 | [NPS-CR-0003](./NPS-CR-0003-orchestrator-group-session-nids.md) | 编排器 group NID 与短期 session NID | v1.0-alpha.6 | Implemented（2026-05-28）|
@@ -58,6 +64,9 @@
 | [NPS-CR-0011](./NPS-CR-0011-stateful-llm-context.cn.md) | 有状态 LLM context 与增量 completion —— owner-bound 不透明 context、CAS 版本、原子提交、生命周期 action、发现与可测复用 | v1.0.0-alpha.18 | Implemented |
 
 ## 起草新 CR 的方法
+
+最新草案：[NPS-CR-0012：Feature Revision 协商](./NPS-CR-0012-feature-negotiation.cn.md)
+—— 目标 v1.0.0-alpha.20；Draft；讨论 NPS-Dev #124。
 
 1. 从上面的索引选下一个可用 `NNNN` 编号。
 2. 照已有 CR（比如 CR-0001）的结构起草 —— 不存在正式模板文件，结构

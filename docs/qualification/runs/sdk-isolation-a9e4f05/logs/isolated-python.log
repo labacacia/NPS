@@ -1,0 +1,214 @@
+/home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 80%]
+........................................................................ [ 85%]
+........................................................................ [ 90%]
+........................................................................ [ 95%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+=============================== warnings summary ===============================
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223f010>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223f3d0>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223d8a0>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223f970>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223c040>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223d6c0>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223e110>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223f5b0>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_nop.py::TestTaskContext::test_empty_roundtrip
+  /home/olynn/ai-workspaces/labacacia-nps/worktrees/nps-alpha20-data-workflow/demos/data-workflow/.demo-output/venv/lib/python3.14/site-packages/_pytest/nodes.py:308: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x77840223e5c0>
+    def iter_parents(self) -> Iterator[Node]:
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.4-final-0 ________________
+
+Name                                     Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------
+nps_sdk/__init__.py                          6      2    67%   10-11
+nps_sdk/alpha20/__init__.py                  0      0   100%
+nps_sdk/alpha20/feature_wire_parser.py      96      0   100%
+nps_sdk/conformance.py                     103     18    83%   33-36, 46-49, 92, 103, 111, 128, 130, 133, 135, 150, 153, 164
+nps_sdk/core/__init__.py                    10      0   100%
+nps_sdk/core/cache.py                       52      0   100%
+nps_sdk/core/codec.py                      208     22    89%   134, 140, 163-166, 178-179, 186, 192, 200, 208, 213, 226, 238, 242, 247, 250, 269, 273, 276, 386
+nps_sdk/core/exceptions.py                  12      0   100%
+nps_sdk/core/frames.py                      88      2    98%   171, 208
+nps_sdk/core/patch_format.py                14      0   100%
+nps_sdk/core/registry.py                    38      0   100%
+nps_sdk/core/status_codes.py                30      0   100%
+nps_sdk/core/telemetry.py                  142      1    99%   72
+nps_sdk/daemon/__init__.py                   5      0   100%
+nps_sdk/daemon/health.py                    40      0   100%
+nps_sdk/daemon/logging.py                   40      1    98%   62
+nps_sdk/daemon/metrics.py                  100      2    98%   28, 34
+nps_sdk/daemon/shutdown.py                  44      2    95%   88-90
+nps_sdk/ncp/__init__.py                     14      0   100%
+nps_sdk/ncp/client.py                       48      4    92%   93, 111-113
+nps_sdk/ncp/encoding_policy.py              40      1    98%   72
+nps_sdk/ncp/error_codes.py                  24      0   100%
+nps_sdk/ncp/failover.py                     39      0   100%
+nps_sdk/ncp/frames.py                      222      4    98%   125, 381, 403, 405
+nps_sdk/ncp/handshake_profile.py            81      6    93%   60, 96-97, 99, 127, 153
+nps_sdk/ncp/preamble.py                     33      0   100%
+nps_sdk/ncp/runtime_hardening.py            40      4    90%   37, 42, 49, 55
+nps_sdk/ncp/server.py                      116     20    83%   67-72, 109-110, 133, 148-149, 172-173, 218, 223-231, 234-235, 238
+nps_sdk/ncp/server_options.py               16      0   100%
+nps_sdk/ncp/session.py                      59      5    92%   110, 115-116, 119, 122
+nps_sdk/ndp/__init__.py                     12      0   100%
+nps_sdk/ndp/cluster.py                      28      0   100%
+nps_sdk/ndp/dns_txt.py                      45     13    71%   46, 89-90, 141-154
+nps_sdk/ndp/error_codes.py                  26      0   100%
+nps_sdk/ndp/federation.py                   16      0   100%
+nps_sdk/ndp/frames.py                      186      1    99%   311
+nps_sdk/ndp/recovery_policy.py              30      1    97%   38
+nps_sdk/ndp/registry.py                     86      7    92%   73, 81, 127, 132, 136-137, 203
+nps_sdk/ndp/registry_profile.py            169     10    94%   88, 123, 140, 152, 159, 199, 213, 296, 300-301
+nps_sdk/ndp/security.py                      4      0   100%
+nps_sdk/ndp/validator.py                    41      0   100%
+nps_sdk/nip/__init__.py                     14      0   100%
+nps_sdk/nip/acme/__init__.py                 5      0   100%
+nps_sdk/nip/acme/client.py                 110      5    95%   60, 77, 127, 151, 190
+nps_sdk/nip/acme/jws.py                     87      7    92%   103, 109-111, 143-144, 150
+nps_sdk/nip/acme/messages.py               141      2    99%   46, 55
+nps_sdk/nip/acme/server.py                 358     67    81%   110, 140, 177-180, 186-187, 196-198, 219, 221-223, 225-226, 229-231, 251-252, 254-256, 262-264, 266-267, 311, 313, 318, 335, 338-339, 342, 347, 352-356, 385, 387, 392, 394-396, 401-402, 409-412, 437-440, 453, 455, 460, 471-484, 499-502
+nps_sdk/nip/acme/wire.py                     5      0   100%
+nps_sdk/nip/alpha19_policy.py               63      4    94%   26, 29, 49, 57
+nps_sdk/nip/assurance_level.py              31      8    74%   33, 41-46, 53
+nps_sdk/nip/ca/__init__.py                  10      0   100%
+nps_sdk/nip/ca/errors.py                    32      1    97%   27
+nps_sdk/nip/ca/group_jws.py                 49      2    96%   81-82
+nps_sdk/nip/ca/lineage.py                    2      0   100%
+nps_sdk/nip/ca/options.py                   30      0   100%
+nps_sdk/nip/ca/ra.py                       182      4    98%   172, 190, 195, 328
+nps_sdk/nip/ca/router.py                   427     60    86%   102, 110-111, 328-329, 332-333, 336-337, 350-352, 361-362, 365-366, 387-389, 403-404, 423-428, 446-451, 465-466, 469-470, 490-492, 499-500, 512-513, 525-527, 536-537, 561-562, 582-583, 611-612, 638-640, 647-648, 666, 731, 733, 747, 761, 774
+nps_sdk/nip/ca/service.py                  255     17    93%   92, 178, 201, 285, 359, 499, 505, 522, 549, 556, 566-567, 644, 675, 718, 723-724
+nps_sdk/nip/ca/sql_store.py                104      0   100%
+nps_sdk/nip/ca/store.py                     69      1    99%   89
+nps_sdk/nip/ca_client.py                   205     26    87%   33, 42-45, 219, 242, 283, 309-310, 317-318, 325-326, 330, 333-334, 356-362, 365, 368, 371-372, 399, 403-404
+nps_sdk/nip/cert_format.py                   2      0   100%
+nps_sdk/nip/error_codes.py                  56      0   100%
+nps_sdk/nip/frames.py                      184      4    98%   49, 53, 121, 216
+nps_sdk/nip/identity.py                    103      2    98%   191, 251
+nps_sdk/nip/phase3.py                      168      6    96%   66, 106, 108, 123-124, 270
+nps_sdk/nip/reputation.py                  234     54    77%   46, 122, 236, 246, 266, 276, 302-304, 362, 364, 395-397, 400-402, 405-407, 418-419, 435-441, 445-446, 450-451, 455-456, 490-491, 496-501, 509-511, 518-520, 524-541
+nps_sdk/nip/revocation_policy.py            42      0   100%
+nps_sdk/nip/trust_validator.py              43      0   100%
+nps_sdk/nip/verifier.py                    196      9    95%   242, 298-299, 303, 315-316, 330, 425, 434
+nps_sdk/nip/x509/__init__.py                 4      0   100%
+nps_sdk/nip/x509/builder.py                 23      0   100%
+nps_sdk/nip/x509/oids.py                    12      0   100%
+nps_sdk/nip/x509/verifier.py               124     21    83%   59, 86, 105, 110, 123-124, 128, 140-142, 145, 149, 154-155, 158, 168, 181, 186-190, 197
+nps_sdk/nop/__init__.py                     20      0   100%
+nps_sdk/nop/aggregator.py                   27      0   100%
+nps_sdk/nop/client.py                       82      0   100%
+nps_sdk/nop/cluster_delegation.py           51      0   100%
+nps_sdk/nop/condition.py                   222     11    95%   220, 222, 241, 244-246, 269, 281-283, 314-315
+nps_sdk/nop/constants.py                    10      0   100%
+nps_sdk/nop/error_codes.py                  38      0   100%
+nps_sdk/nop/frames.py                      140      3    98%   69, 73, 75
+nps_sdk/nop/input_mapper.py                 43      0   100%
+nps_sdk/nop/instrumentation.py              15      0   100%
+nps_sdk/nop/models.py                      141      2    99%   230, 232
+nps_sdk/nop/orchestrator.py                394     29    93%   141-143, 236, 287, 308-314, 319, 325, 430, 492-498, 608-609, 698, 726-727, 733-734, 766, 804, 808, 816-819, 838
+nps_sdk/nop/portable_profile.py            287     27    91%   47, 88-92, 115, 117-121, 220, 238, 282, 287, 322, 326, 365-366, 382-383, 410-411, 439, 460, 492
+nps_sdk/nop/replay_policy.py                47      2    96%   36, 58
+nps_sdk/nop/results.py                      40      0   100%
+nps_sdk/nop/store.py                        64      0   100%
+nps_sdk/nop/validation.py                   97      2    98%   106, 192
+nps_sdk/nop/worker.py                       16      0   100%
+nps_sdk/nwp/__init__.py                     19      0   100%
+nps_sdk/nwp/action_node_server.py          528     41    92%   236, 253, 319-322, 327-330, 356, 368, 401, 441, 444-446, 539-543, 598-601, 630, 634-639, 681-683, 686-688, 710, 718, 742, 773, 784, 788, 792, 803, 809
+nps_sdk/nwp/alpha19_policy.py              105     19    82%   22, 34, 43, 46, 55, 62, 65, 80-81, 89-90, 103-104, 109, 117-121
+nps_sdk/nwp/anchor_client.py               203      9    96%   282-283, 401-402, 410, 438-440, 446
+nps_sdk/nwp/anchor_server.py               607     80    87%   424, 426, 430, 432, 434, 436, 448, 455-463, 471, 473, 482, 514, 551, 555-557, 590-591, 595-596, 599, 609-612, 657, 660-663, 666-672, 675-678, 716-717, 765-769, 777-781, 833-835, 859-860, 873, 917, 956, 963-964, 968-970, 1009, 1015, 1017, 1019, 1048, 1054, 1068, 1083, 1090, 1109, 1133, 1137, 1145-1153, 1161
+nps_sdk/nwp/bridge.py                       32      1    97%   40
+nps_sdk/nwp/cgn.py                          33      0   100%
+nps_sdk/nwp/client.py                       60      0   100%
+nps_sdk/nwp/complex_node_server.py         297     43    86%   141, 157, 208, 219-221, 224-227, 236, 239-240, 244-245, 273-276, 294, 329, 335-336, 348-349, 353-354, 358, 366-369, 389-392, 403-414, 439, 445, 458, 475, 489
+nps_sdk/nwp/context_store.py               361     21    94%   90, 94, 360, 377, 421, 441-442, 490, 497, 500, 503, 508, 517, 520, 571, 599, 602, 615, 648-649, 658
+nps_sdk/nwp/error_codes.py                  84      0   100%
+nps_sdk/nwp/frames.py                      223     25    89%   95, 114-121, 125-128, 146-151, 164-169, 317, 367, 371
+nps_sdk/nwp/http_headers.py                 22      0   100%
+nps_sdk/nwp/inbound/__init__.py              8      0   100%
+nps_sdk/nwp/inbound/a2a_server.py          119      2    98%   210, 259
+nps_sdk/nwp/inbound/backend.py             178      1    99%   288
+nps_sdk/nwp/inbound/error_map.py            59      0   100%
+nps_sdk/nwp/inbound/grpc_service.py         91      0   100%
+nps_sdk/nwp/inbound/jsonrpc.py              42      1    98%   51
+nps_sdk/nwp/inbound/mcp_server.py          145      2    99%   126-127
+nps_sdk/nwp/inbound/options.py              47      0   100%
+nps_sdk/nwp/instrumentation.py              14      0   100%
+nps_sdk/nwp/llm.py                         170      2    99%   219, 324
+nps_sdk/nwp/llm_action_server.py           284     62    78%   94, 96, 159, 167, 171-172, 193, 203, 207, 209, 213, 250-252, 256-257, 273-274, 277-279, 296-297, 301-303, 312-313, 333-334, 345, 353, 373-382, 384, 396-405, 416-419, 461-462, 470-471, 483, 532, 539-540, 545, 572
+nps_sdk/nwp/memory_node_providers.py        40      0   100%
+nps_sdk/nwp/memory_node_server.py          271     81    70%   125-144, 155-176, 194-196, 201-204, 211-212, 300, 303, 307-338, 361, 365-369, 405-406, 410-411, 482-483
+nps_sdk/nwp/memory_node_sql.py             209      9    96%   109, 120, 131, 133, 139, 141, 166, 182, 232
+nps_sdk/nwp/native_server.py               112     26    77%   70-71, 91, 100-101, 107-110, 114, 117-119, 121, 127, 133, 135, 183, 188, 194-199, 203
+nps_sdk/nwp/portable_profile.py            136      7    95%   72, 90, 113, 134, 300, 302, 349
+nps_sdk/nwp/reputation.py                  152     26    83%   65-66, 71-72, 154-164, 199, 210-215, 217, 219, 231, 237
+nps_sdk/nwp/results.py                     312     22    93%   85-86, 121, 154, 163, 181, 201, 236, 239, 247, 267, 273, 285, 294, 296, 298, 302, 309, 316, 322, 356, 385
+----------------------------------------------------------------------
+TOTAL                                    12470    982    92%
+Required test coverage of 90% reached. Total coverage: 92.13%
+1513 passed, 9 warnings in 145.88s (0:02:25)

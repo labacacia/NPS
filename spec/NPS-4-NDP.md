@@ -4,11 +4,11 @@ English | [中文版](./NPS-4-NDP.cn.md)
 
 **Spec Number**: NPS-4
 **Status**: Proposed
-**Version**: 0.13
-**Date**: 2026-08-31
+**Version**: 0.14
+**Date**: 2026-09-09
 **Port**: 17433 (default, shared) / 17436 (optional dedicated)
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12), NPS-3 (NIP v0.15)
+**Depends-On**: NPS-1 (NCP v0.13), NPS-3 (NIP v0.16)
 
 ---
 
@@ -441,10 +441,44 @@ transcripts live in
 
 ---
 
+### 7.9 Production runtime discovery binding (NDP v0.14)
+
+These requirements apply to clients using nps.production_runtime revision 1.
+They reuse existing discovery fields and add no AnnounceFrame capability-as-authority shortcut.
+
+1. **NDP-P20-01 — freshness.** Before selecting a new target, validate the resolved
+   entry's timestamp/last_seen/ttl and existing signature/profile/fence requirements.
+   Expired entries and health=draining MUST NOT receive new profile operations.
+   A positive health report is not proof of authentication or feature support.
+2. **NDP-P20-02 — owner fence.** Resolve cluster_anchor to the unique highest live
+   cluster_epoch owner. Equal-epoch split, unavailable trusted resolution or a
+   regressed fence fails closed under existing NDP errors. A cached lower owner
+   MUST NOT be used as a convenience fallback.
+3. **NDP-P20-03 — new binding.** An endpoint/owner/epoch change invalidates old-peer
+   route and feature cache entries and affected pooled sessions. New connections
+   perform NCP negotiation and NIP admission again. Neither Announce capabilities,
+   Graph membership nor TLS resumption grants the new peer an old selection.
+4. **NDP-P20-04 — HTTP evidence.** Fetch the endpoint's authenticated NWM and enforce
+   NWP §9.6's all-backend route guarantee before feature-dependent HTTP dispatch.
+   Discovery caches are hints, not authorization. Their keys include resolved peer
+   identity/epoch, route and manifest version; cached support never extends freshness
+   or substitutes for current handler admission.
+5. **NDP-P20-05 — qualification record.** Runtime evidence records registry identity,
+   resolved NID, endpoint, cluster_epoch, graph_seq, freshness deadline, manifest
+   version and the selected feature revisions, omitting credentials and sensitive
+   scope. This is a local/qualification record, not a new signed Announce field.
+   Failover only permits an uncertain mutation retry under NCP §7.8's explicit shared
+   durable deduplication contract; routing success alone never proves non-execution.
+
+---
+
+Reference implementation note: the opt-in [volatile result-route component](../impl/dotnet/src/NPS.NDP/Discovery/README.md) and [static/two-node fixture](../docs/samples/ndp-result-routing.md) qualify only their declared HTTP reference path. They do not satisfy the full production-runtime or durable-registry profile.
+
 ## 8. Change Log
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.14 | 2026-09-09 | Alpha.20 production discovery binding: exclude stale/draining targets, owner fences, fresh admission on peer changes, HTTP route guarantees and bounded qualification records; no new Announce fields. |
 | 0.13 | 2026-08-31 | Alpha.19 persistent recovery profile: atomic durable sequence/epoch fences, ordered restart recovery, equal-epoch split preservation, fail-closed corrupt/unavailable state handling, explicit volatile/durable capability truth, federation provenance, and shared restart/partition transcripts. |
 | 0.12 | 2026-07-29 | Defines the Registry Conformance profile: additive `graph_seq` wire field and compatibility behavior; deterministic signed-body canonicalization; ordered signature/profile/replay/conflict/staleness admission; exact duplicate versus advisory liveness refresh semantics; retained sequence fences after expiry/offline; highest-epoch cluster resolution and split-brain behavior; direction-specific, sorted Bridge capability discovery; and shared cross-language canonicalization/registry vectors. |
 | 0.11 | 2026-07-12 | **NPS-CR-0010 Bridge Node is bidirectional**: AnnounceFrame (0x30) gains optional `bridge_inbound_protocols` (array of strings, same value domain as `bridge_protocols`) — the external protocols the node **serves inbound** (external → NPS). `bridge_protocols` keeps its exact prior meaning (protocols bridged **outbound**). Absent/empty `bridge_inbound_protocols` ⇒ no inbound surface, i.e. exactly a pre-alpha.16 outbound-only Bridge Node. A node declaring `"bridge"` MUST have at least one of the two arrays non-empty. Additive / backward-compatible; no new NDP error codes. |

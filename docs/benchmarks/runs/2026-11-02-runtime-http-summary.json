@@ -1,0 +1,706 @@
+{
+  "kind": "deterministic-runtime-observed",
+  "revision": "a4d80af288a153e656d5e652351e800b2567291b",
+  "methodology": "D20-00-methodology-v1",
+  "measurement_boundary": "TCP-stream bytes including TLS records and HTTP/1.1 framing; frontend plus gateway egress; excludes TCP/IP packets; setup/cleanup separate",
+  "memory_attribution": "co-host whole-process observation/budget only; not per-protocol memory savings",
+  "scope": "one-shot immutable source; schema-churn/update matrix remains separate; no native NCP/Arrow/Flight/Protobuf claim",
+  "comparisons": [
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 17.755200000000002,
+        "p95": 27.2987,
+        "minimum": 15.4026,
+        "maximum": 30.2246
+      },
+      "tls_stream_bytes": {
+        "median": 13523.0,
+        "p95": 13525,
+        "minimum": 13521,
+        "maximum": 13525
+      },
+      "rss_after_workflow_bytes": {
+        "median": 155527168.0,
+        "p95": 156971008,
+        "minimum": 151240704,
+        "maximum": 157032448
+      },
+      "process_peak_rss_bytes": 157032448,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 109.31535,
+        "p95": 117.5052,
+        "minimum": 105.4283,
+        "maximum": 124.862
+      },
+      "tls_stream_bytes": {
+        "median": 92959.0,
+        "p95": 92964,
+        "minimum": 92956,
+        "maximum": 92968
+      },
+      "rss_after_workflow_bytes": {
+        "median": 164487168.0,
+        "p95": 167337984,
+        "minimum": 162205696,
+        "maximum": 167358464
+      },
+      "process_peak_rss_bytes": 166756352,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 99.49685,
+        "p95": 106.2291,
+        "minimum": 95.5146,
+        "maximum": 111.8681
+      },
+      "tls_stream_bytes": {
+        "median": 87751.0,
+        "p95": 87756,
+        "minimum": 87747,
+        "maximum": 87757
+      },
+      "rss_after_workflow_bytes": {
+        "median": 174118912.0,
+        "p95": 176173056,
+        "minimum": 169828352,
+        "maximum": 176377856
+      },
+      "process_peak_rss_bytes": 176381952,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 11.7242,
+        "p95": 12.8819,
+        "minimum": 10.3819,
+        "maximum": 12.9866
+      },
+      "tls_stream_bytes": {
+        "median": 8314.0,
+        "p95": 8314,
+        "minimum": 8314,
+        "maximum": 8314
+      },
+      "rss_after_workflow_bytes": {
+        "median": 176459776.0,
+        "p95": 176762880,
+        "minimum": 176402432,
+        "maximum": 177065984
+      },
+      "process_peak_rss_bytes": 177070080,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 16.826749999999997,
+        "p95": 18.2209,
+        "minimum": 15.4766,
+        "maximum": 18.4151
+      },
+      "tls_stream_bytes": {
+        "median": 11935.0,
+        "p95": 11941,
+        "minimum": 11927,
+        "maximum": 11941
+      },
+      "rss_after_workflow_bytes": {
+        "median": 177905664.0,
+        "p95": 178257920,
+        "minimum": 177586176,
+        "maximum": 178278400
+      },
+      "process_peak_rss_bytes": 178286592,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 87.65265,
+        "p95": 100.8646,
+        "minimum": 82.9042,
+        "maximum": 106.0871
+      },
+      "tls_stream_bytes": {
+        "median": 81172.0,
+        "p95": 81182,
+        "minimum": 81164,
+        "maximum": 81186
+      },
+      "rss_after_workflow_bytes": {
+        "median": 178796544.0,
+        "p95": 179781632,
+        "minimum": 175861760,
+        "maximum": 179884032
+      },
+      "process_peak_rss_bytes": 179884032,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 80.5097,
+        "p95": 83.2844,
+        "minimum": 75.3269,
+        "maximum": 83.4718
+      },
+      "tls_stream_bytes": {
+        "median": 75959.5,
+        "p95": 75969,
+        "minimum": 75945,
+        "maximum": 75970
+      },
+      "rss_after_workflow_bytes": {
+        "median": 182734848.0,
+        "p95": 183558144,
+        "minimum": 180879360,
+        "maximum": 183631872
+      },
+      "process_peak_rss_bytes": 183328768,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 7.88155,
+        "p95": 10.4515,
+        "minimum": 7.0936,
+        "maximum": 10.4692
+      },
+      "tls_stream_bytes": {
+        "median": 6724.0,
+        "p95": 6728,
+        "minimum": 6716,
+        "maximum": 6728
+      },
+      "rss_after_workflow_bytes": {
+        "median": 183322624.0,
+        "p95": 183398400,
+        "minimum": 183037952,
+        "maximum": 183402496
+      },
+      "process_peak_rss_bytes": 183402496,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2271,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 20.72285,
+        "p95": 23.6875,
+        "minimum": 19.1896,
+        "maximum": 69.6307
+      },
+      "tls_stream_bytes": {
+        "median": 22256.0,
+        "p95": 22258,
+        "minimum": 22255,
+        "maximum": 22258
+      },
+      "rss_after_workflow_bytes": {
+        "median": 193544192.0,
+        "p95": 194793472,
+        "minimum": 189648896,
+        "maximum": 194899968
+      },
+      "process_peak_rss_bytes": 194584576,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 82.6445,
+        "p95": 85.317,
+        "minimum": 78.225,
+        "maximum": 85.3774
+      },
+      "tls_stream_bytes": {
+        "median": 110409.5,
+        "p95": 110414,
+        "minimum": 110405,
+        "maximum": 110414
+      },
+      "rss_after_workflow_bytes": {
+        "median": 196124672.0,
+        "p95": 199073792,
+        "minimum": 194797568,
+        "maximum": 199143424
+      },
+      "process_peak_rss_bytes": 199143424,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 74.2581,
+        "p95": 81.2109,
+        "minimum": 70.3312,
+        "maximum": 81.9713
+      },
+      "tls_stream_bytes": {
+        "median": 105200.0,
+        "p95": 105205,
+        "minimum": 105196,
+        "maximum": 105206
+      },
+      "rss_after_workflow_bytes": {
+        "median": 200796160.0,
+        "p95": 202477568,
+        "minimum": 199294976,
+        "maximum": 202575872
+      },
+      "process_peak_rss_bytes": 202575872,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 13.33095,
+        "p95": 14.7732,
+        "minimum": 12.7344,
+        "maximum": 15.085
+      },
+      "tls_stream_bytes": {
+        "median": 17046.0,
+        "p95": 17046,
+        "minimum": 17046,
+        "maximum": 17046
+      },
+      "rss_after_workflow_bytes": {
+        "median": 204435456.0,
+        "p95": 205746176,
+        "minimum": 202977280,
+        "maximum": 205844480
+      },
+      "process_peak_rss_bytes": 205844480,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 18.3955,
+        "p95": 20.1384,
+        "minimum": 16.809,
+        "maximum": 22.2201
+      },
+      "tls_stream_bytes": {
+        "median": 12769.0,
+        "p95": 12785,
+        "minimum": 12753,
+        "maximum": 12796
+      },
+      "rss_after_workflow_bytes": {
+        "median": 207857664.0,
+        "p95": 207990784,
+        "minimum": 206233600,
+        "maximum": 207990784
+      },
+      "process_peak_rss_bytes": 207544320,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 78.50710000000001,
+        "p95": 82.4944,
+        "minimum": 76.3583,
+        "maximum": 83.443
+      },
+      "tls_stream_bytes": {
+        "median": 82835.0,
+        "p95": 82867,
+        "minimum": 82808,
+        "maximum": 82867
+      },
+      "rss_after_workflow_bytes": {
+        "median": 207458304.0,
+        "p95": 207486976,
+        "minimum": 205627392,
+        "maximum": 207486976
+      },
+      "process_peak_rss_bytes": 207544320,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 75.06545,
+        "p95": 82.561,
+        "minimum": 73.4596,
+        "maximum": 107.3564
+      },
+      "tls_stream_bytes": {
+        "median": 77622.0,
+        "p95": 77647,
+        "minimum": 77590,
+        "maximum": 77650
+      },
+      "rss_after_workflow_bytes": {
+        "median": 205578240.0,
+        "p95": 206630912,
+        "minimum": 205168640,
+        "maximum": 206630912
+      },
+      "process_peak_rss_bytes": 207544320,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 1000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 13.99445,
+        "p95": 16.2378,
+        "minimum": 13.5298,
+        "maximum": 16.9369
+      },
+      "tls_stream_bytes": {
+        "median": 7562.0,
+        "p95": 7575,
+        "minimum": 7547,
+        "maximum": 7576
+      },
+      "rss_after_workflow_bytes": {
+        "median": 205451264.0,
+        "p95": 205819904,
+        "minimum": 205451264,
+        "maximum": 205828096
+      },
+      "process_peak_rss_bytes": 207544320,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2289,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 433.80674999999997,
+        "p95": 457.9587,
+        "minimum": 418.856,
+        "maximum": 476.6788
+      },
+      "tls_stream_bytes": {
+        "median": 22301.0,
+        "p95": 22303,
+        "minimum": 22299,
+        "maximum": 22303
+      },
+      "rss_after_workflow_bytes": {
+        "median": 452368384.0,
+        "p95": 482603008,
+        "minimum": 398577664,
+        "maximum": 482803712
+      },
+      "process_peak_rss_bytes": 482275328,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 503.47645,
+        "p95": 524.1155,
+        "minimum": 479.9193,
+        "maximum": 536.2127
+      },
+      "tls_stream_bytes": {
+        "median": 110508.0,
+        "p95": 110514,
+        "minimum": 110502,
+        "maximum": 110516
+      },
+      "rss_after_workflow_bytes": {
+        "median": 452321280.0,
+        "p95": 486637568,
+        "minimum": 429527040,
+        "maximum": 489598976
+      },
+      "process_peak_rss_bytes": 490237952,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 494.47215,
+        "p95": 505.1659,
+        "minimum": 481.0531,
+        "maximum": 514.4833
+      },
+      "tls_stream_bytes": {
+        "median": 105300.0,
+        "p95": 105303,
+        "minimum": 105294,
+        "maximum": 105303
+      },
+      "rss_after_workflow_bytes": {
+        "median": 457115648.0,
+        "p95": 489938944,
+        "minimum": 432852992,
+        "maximum": 490364928
+      },
+      "process_peak_rss_bytes": 490237952,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "identity",
+      "latency_ms": {
+        "median": 423.71925,
+        "p95": 440.7536,
+        "minimum": 413.7906,
+        "maximum": 490.99
+      },
+      "tls_stream_bytes": {
+        "median": 17092.0,
+        "p95": 17092,
+        "minimum": 17092,
+        "maximum": 17092
+      },
+      "rss_after_workflow_bytes": {
+        "median": 461760512.0,
+        "p95": 490287104,
+        "minimum": 433229824,
+        "maximum": 490291200
+      },
+      "process_peak_rss_bytes": 490287104,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 433.25685,
+        "p95": 445.04,
+        "minimum": 420.4968,
+        "maximum": 455.1869
+      },
+      "tls_stream_bytes": {
+        "median": 12784.0,
+        "p95": 12804,
+        "minimum": 12770,
+        "maximum": 12817
+      },
+      "rss_after_workflow_bytes": {
+        "median": 456187904.0,
+        "p95": 491409408,
+        "minimum": 422981632,
+        "maximum": 491438080
+      },
+      "process_peak_rss_bytes": 490954752,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "cold",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 502.32225,
+        "p95": 517.4042,
+        "minimum": 478.1517,
+        "maximum": 546.7383
+      },
+      "tls_stream_bytes": {
+        "median": 82878.5,
+        "p95": 82912,
+        "minimum": 82835,
+        "maximum": 82916
+      },
+      "rss_after_workflow_bytes": {
+        "median": 457199616.0,
+        "p95": 491560960,
+        "minimum": 422772736,
+        "maximum": 491716608
+      },
+      "process_peak_rss_bytes": 491343872,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "D-nps-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 499.3181,
+        "p95": 513.0039,
+        "minimum": 483.326,
+        "maximum": 514.9051
+      },
+      "tls_stream_bytes": {
+        "median": 77679.0,
+        "p95": 77721,
+        "minimum": 77626,
+        "maximum": 77722
+      },
+      "rss_after_workflow_bytes": {
+        "median": 457330688.0,
+        "p95": 485867520,
+        "minimum": 428707840,
+        "maximum": 486039552
+      },
+      "process_peak_rss_bytes": 491343872,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    },
+    {
+      "rows": 100000,
+      "arm": "C-http-runtime",
+      "cache_state": "warm",
+      "compression": "gzip-response",
+      "latency_ms": {
+        "median": 421.76,
+        "p95": 447.5123,
+        "minimum": 416.2351,
+        "maximum": 462.2846
+      },
+      "tls_stream_bytes": {
+        "median": 7578.5,
+        "p95": 7602,
+        "minimum": 7560,
+        "maximum": 7607
+      },
+      "rss_after_workflow_bytes": {
+        "median": 457590784.0,
+        "p95": 486121472,
+        "minimum": 438820864,
+        "maximum": 486121472
+      },
+      "process_peak_rss_bytes": 491343872,
+      "rss_budget_passed": true,
+      "model_visible_bytes": 2325,
+      "provider_usage": null,
+      "correctness": "exact-oracle-match"
+    }
+  ]
+}

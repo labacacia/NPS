@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "kind": "schema-jcs-supplement-not-sdk-parity",
+  "parent_wire_manifest_sha256": "caff52e1430d8b58314cb2a11ea0f9eaecd0f03c96e69b57552665ef854a09ba",
+  "cases": [
+    {
+      "id": "SB-H01",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a226964222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:8f9cc28a458665d0e3d0f6d7626a6027fdb45801209420efd02ea0b66b055725"
+    },
+    {
+      "id": "SB-H02",
+      "schema": {
+        "fields": [
+          {
+            "name": "订单",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a22e8aea2e58d95222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:08f3f8427ad05de97118799178b889c8b0ba6df462e6763553a1105dc6b8d99d"
+    },
+    {
+      "id": "SB-H03",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "nullable": false,
+            "type": "uint64",
+            "semantic": "entity.标签😀"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a226964222c226e756c6c61626c65223a66616c73652c2273656d616e746963223a22656e746974792ee6a087e7adbef09f9880222c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:caf552fabdfbf2b9af15739ece7f49938a58baf4c0d383e7103d3d9dad4830a5"
+    },
+    {
+      "id": "SB-H04",
+      "schema": {
+        "fields": [
+          {
+            "name": "id<&>+",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a2269643c263e2b222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:5600c3812c2c45bc7a7db85e1334412dcd01ecaac6e6d5e6aa91cd261363149d"
+    },
+    {
+      "id": "SB-H05",
+      "schema": {
+        "fields": [
+          {
+            "name": "id  ",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a226964e280a8e280a9222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:c4cbb6e8c56282a55158ab9428b1310316406b2b1f4b9ceba20d37807ee82676"
+    },
+    {
+      "id": "SB-H06",
+      "schema": {
+        "fields": [
+          {
+            "name": "id\t\n\b\f\r\"\\",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a2269645c745c6e5c625c665c725c225c5c222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:07f94081ed3b729393d58a3dc7bb17f1217356e83c57e95b0df93e91c271ec49"
+    },
+    {
+      "id": "SB-H07",
+      "schema": {
+        "fields": [
+          {
+            "name": "é",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a22c3a9222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:d723d942b79ab8201e3a4e4c10ec9919b3148edaac23f5b47f4018155a1779ca"
+    },
+    {
+      "id": "SB-H08",
+      "schema": {
+        "fields": [
+          {
+            "name": "é",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a2265cc81222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:6181cdea1634f4cbdb6d5c456a76cb2b9d44e4337848f593dbc71944efee07d8"
+    },
+    {
+      "id": "SB-H09",
+      "schema": {
+        "fields": [
+          {
+            "name": "字段😀",
+            "nullable": false,
+            "type": "uint64"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a22e5ad97e6aeb5f09f9880222c226e756c6c61626c65223a66616c73652c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:a251b7b4d642d8868926629b03f56b09765b3aeb96b30f09f168d15f58516960"
+    },
+    {
+      "id": "SB-H10",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "nullable": false,
+            "type": "uint64",
+            "semantic": "entity.标签 😀"
+          }
+        ]
+      },
+      "canonical_utf8_hex": "7b226669656c6473223a5b7b226e616d65223a226964222c226e756c6c61626c65223a66616c73652c2273656d616e746963223a22656e746974792ee6a087e7adbee280a8f09f9880222c2274797065223a2275696e743634227d5d7d",
+      "anchor_id": "sha256:7313852471d222247ab06df0d97e8e861bd94e20d88aee5e14dee8ac5f631860"
+    }
+  ]
+}

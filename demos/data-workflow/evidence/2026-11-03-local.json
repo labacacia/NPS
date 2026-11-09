@@ -1,0 +1,553 @@
+{
+  "kind": "deterministic actual loopback HTTPS/mTLS qualification; no model requests",
+  "oracle_sha256": "f8d18ad06554c843acdb9d8b6b8aa60c6b2ed1c054072df6c75dd22aee6b22bb",
+  "sdk_source_revision": "109ea55e11609645aa8524b36e0c33f55e5733fa",
+  "nuget_sdk_dependencies": [
+    "LabAcacia.NPS.Core/1.0.0-alpha.20.dev.1",
+    "LabAcacia.NPS.NIP.Storage.Sqlite/1.0.0-alpha.20.dev.1",
+    "LabAcacia.NPS.NIP/1.0.0-alpha.20.dev.1",
+    "LabAcacia.NPS.NWP/1.0.0-alpha.20.dev.1"
+  ],
+  "sdk_manifest_sha256": "5c8cf53ad22c31e0cc0828d3aebf39e63393b4f6efe941ef52d1e9b98ee0b8c0",
+  "python": "3.14.4",
+  "python_sdk_version": "1.0.0a20.dev1",
+  "assembly_sha256": "e083790a3896009c1ceda50793c7af24b53b475b291697ecbd30f8a2eb6c205f",
+  "source_files": [
+    {
+      "path": "build-packages.py",
+      "sha256": "c51106aaa067c3bb02c70e84b29f062564a6f296a57a89e803adb3edec18e1cc"
+    },
+    {
+      "path": "check.py",
+      "sha256": "1b78e429df17dd9b516e39445c847c97942c1f7391454cb9bb5de53afea5fc6c"
+    },
+    {
+      "path": "server/DemoAuthority.cs",
+      "sha256": "14bd1090c92ced582884e72072d3b4ace6ca7df5db192f04dd7aac71c7bf3bcb"
+    },
+    {
+      "path": "server/DemoHost.cs",
+      "sha256": "cc3f9cc18c3745df4791d6f4045f9992d474739357cd0f2b0c8293babcb40c50"
+    },
+    {
+      "path": "server/NPS.Demo.DataWorkflow.csproj",
+      "sha256": "88edf21b29307285fa99e8e4f61f80027037e10f79a9cbd9d35cfca5d408ebb4"
+    },
+    {
+      "path": "server/OrderSource.cs",
+      "sha256": "1e4f8f11b49e962f3e18d2bb65d5f6e331762923cee1199834c941618d6edc8c"
+    },
+    {
+      "path": "server/Program.cs",
+      "sha256": "7ebb0fb378e120d04c3c25886031b17d78e49179337e92778aa54b1141698393"
+    },
+    {
+      "path": "tests/test_workflow.py",
+      "sha256": "6296dd6da69342e4c08e5849e37b79fc9faef89880ea90649105dfb9c1716095"
+    },
+    {
+      "path": "workflow.py",
+      "sha256": "5f462731a605c33b77f0833cda8392fd1777999a4402c6e177ccdb06b1329b96"
+    }
+  ],
+  "results": [
+    {
+      "rows": 100,
+      "arms": [
+        {
+          "arm": "ordinary",
+          "rows": 100,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 13,
+                  "refunds": 3,
+                  "refund_amount_minor": 3444
+                },
+                "current": {
+                  "orders": 12,
+                  "refunds": 7,
+                  "refund_amount_minor": 23576
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 13,
+                  "refunds": 3,
+                  "refund_amount_minor": 3555
+                },
+                "current": {
+                  "orders": 12,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 12,
+                  "refunds": 2,
+                  "refund_amount_minor": 2296
+                },
+                "current": {
+                  "orders": 13,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 12,
+                  "refunds": 2,
+                  "refund_amount_minor": 2370
+                },
+                "current": {
+                  "orders": 13,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        {
+          "arm": "nps",
+          "rows": 100,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 13,
+                  "refunds": 3,
+                  "refund_amount_minor": 3444
+                },
+                "current": {
+                  "orders": 12,
+                  "refunds": 7,
+                  "refund_amount_minor": 23576
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 13,
+                  "refunds": 3,
+                  "refund_amount_minor": 3555
+                },
+                "current": {
+                  "orders": 12,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 12,
+                  "refunds": 2,
+                  "refund_amount_minor": 2296
+                },
+                "current": {
+                  "orders": 13,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 12,
+                  "refunds": 2,
+                  "refund_amount_minor": 2370
+                },
+                "current": {
+                  "orders": 13,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        }
+      ],
+      "updates": [
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 100,
+          "old_unchanged": true
+        },
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 100,
+          "old_unchanged": true
+        }
+      ],
+      "tool_calls": 6,
+      "inspected_rows": 5,
+      "inspected_output_bytes": 6608,
+      "cleanup": {
+        "released": [
+          "r1",
+          "r2",
+          "r3"
+        ],
+        "failed": [],
+        "unknown_creates": [],
+        "retention": "process/TTL; cancellation or a failed cleanup does not prove rollback"
+      }
+    },
+    {
+      "rows": 1000,
+      "arms": [
+        {
+          "arm": "ordinary",
+          "rows": 1000,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 130,
+                  "refunds": 30,
+                  "refund_amount_minor": 34440
+                },
+                "current": {
+                  "orders": 120,
+                  "refunds": 70,
+                  "refund_amount_minor": 235760
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 130,
+                  "refunds": 30,
+                  "refund_amount_minor": 35550
+                },
+                "current": {
+                  "orders": 120,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 120,
+                  "refunds": 20,
+                  "refund_amount_minor": 22960
+                },
+                "current": {
+                  "orders": 130,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 120,
+                  "refunds": 20,
+                  "refund_amount_minor": 23700
+                },
+                "current": {
+                  "orders": 130,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        {
+          "arm": "nps",
+          "rows": 1000,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 130,
+                  "refunds": 30,
+                  "refund_amount_minor": 34440
+                },
+                "current": {
+                  "orders": 120,
+                  "refunds": 70,
+                  "refund_amount_minor": 235760
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 130,
+                  "refunds": 30,
+                  "refund_amount_minor": 35550
+                },
+                "current": {
+                  "orders": 120,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 120,
+                  "refunds": 20,
+                  "refund_amount_minor": 22960
+                },
+                "current": {
+                  "orders": 130,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 120,
+                  "refunds": 20,
+                  "refund_amount_minor": 23700
+                },
+                "current": {
+                  "orders": 130,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        }
+      ],
+      "updates": [
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 1000,
+          "old_unchanged": true
+        },
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 1000,
+          "old_unchanged": true
+        }
+      ],
+      "tool_calls": 6,
+      "inspected_rows": 5,
+      "inspected_output_bytes": 6650,
+      "cleanup": {
+        "released": [
+          "r1",
+          "r2",
+          "r3"
+        ],
+        "failed": [],
+        "unknown_creates": [],
+        "retention": "process/TTL; cancellation or a failed cleanup does not prove rollback"
+      }
+    },
+    {
+      "rows": 100000,
+      "arms": [
+        {
+          "arm": "ordinary",
+          "rows": 100000,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 13000,
+                  "refunds": 3000,
+                  "refund_amount_minor": 3444000
+                },
+                "current": {
+                  "orders": 12000,
+                  "refunds": 7000,
+                  "refund_amount_minor": 23576000
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 13000,
+                  "refunds": 3000,
+                  "refund_amount_minor": 3555000
+                },
+                "current": {
+                  "orders": 12000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 12000,
+                  "refunds": 2000,
+                  "refund_amount_minor": 2296000
+                },
+                "current": {
+                  "orders": 13000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 12000,
+                  "refunds": 2000,
+                  "refund_amount_minor": 2370000
+                },
+                "current": {
+                  "orders": 13000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        },
+        {
+          "arm": "nps",
+          "rows": 100000,
+          "schema_ref": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "exact_answer": {
+            "groups": {
+              "delivery": {
+                "baseline": {
+                  "orders": 13000,
+                  "refunds": 3000,
+                  "refund_amount_minor": 3444000
+                },
+                "current": {
+                  "orders": 12000,
+                  "refunds": 7000,
+                  "refund_amount_minor": 23576000
+                }
+              },
+              "quality": {
+                "baseline": {
+                  "orders": 13000,
+                  "refunds": 3000,
+                  "refund_amount_minor": 3555000
+                },
+                "current": {
+                  "orders": 12000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "duplicate": {
+                "baseline": {
+                  "orders": 12000,
+                  "refunds": 2000,
+                  "refund_amount_minor": 2296000
+                },
+                "current": {
+                  "orders": 13000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              },
+              "other": {
+                "baseline": {
+                  "orders": 12000,
+                  "refunds": 2000,
+                  "refund_amount_minor": 2370000
+                },
+                "current": {
+                  "orders": 13000,
+                  "refunds": 0,
+                  "refund_amount_minor": 0
+                }
+              }
+            },
+            "anomaly_reasons": [
+              "delivery"
+            ]
+          },
+          "inspected_ids": [
+            "order:000052",
+            "order:000056",
+            "order:000060",
+            "order:000064",
+            "order:000068"
+          ]
+        }
+      ],
+      "updates": [
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 100000,
+          "old_unchanged": true
+        },
+        {
+          "old_schema": "sha256:b3a0e669aaac9e7bb21cc9b7e7c78b31507e7c78ab87e918e84bc79f03aabdc9",
+          "new_schema": "sha256:7046697a25a6eb079c4fc18293c943ee5d8682e3db256e1763b82f2d0a54b6a3",
+          "amount_delta": 100000,
+          "old_unchanged": true
+        }
+      ],
+      "tool_calls": 6,
+      "inspected_rows": 5,
+      "inspected_output_bytes": 6734,
+      "cleanup": {
+        "released": [
+          "r1",
+          "r2",
+          "r3"
+        ],
+        "failed": [],
+        "unknown_creates": [],
+        "retention": "process/TTL; cancellation or a failed cleanup does not prove rollback"
+      }
+    }
+  ]
+}

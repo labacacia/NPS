@@ -1,0 +1,2724 @@
+{
+  "schema_version": 1,
+  "source_revision": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+  "ownership_map_sha256": "8b05109c55b91fbf26728c10e4bc48f259e52389dbe454520073b598ef2d0cf0",
+  "method": "committed SDK-owned inputs into isolated copies",
+  "projections": [
+    {
+      "id": "typescript",
+      "repository": "labacacia/NPS-SDK-TypeScript",
+      "directory": "NPS-SDK-TypeScript",
+      "file_count": 309,
+      "tree_sha256": "6b4e53230a040291a06c575e7be6d19f500ef06c76a8d44e906e312059f97bd7",
+      "files": [
+        {
+          "source": "impl/typescript/ALPHA20.cn.md",
+          "target": "ALPHA20.cn.md",
+          "sha256": "38424ecf70e5b83b85b402e965ccd389d26789ba15a47a79a708929952c2a367"
+        },
+        {
+          "source": "impl/typescript/ALPHA20.md",
+          "target": "ALPHA20.md",
+          "sha256": "cb2730315d6b1444dfdaf5cea758cfcfe630552e9a1a6fff5479f8bc488d9fad"
+        },
+        {
+          "source": "impl/typescript/CHANGELOG.cn.md",
+          "target": "CHANGELOG.cn.md",
+          "sha256": "0e87c7db22683e428fd5a5dbfe2d9c4708df3a3ee1517d2d9c342744fd327550"
+        },
+        {
+          "source": "impl/typescript/CHANGELOG.md",
+          "target": "CHANGELOG.md",
+          "sha256": "332f339d3eed1f0fe0b8350f167e539dd0e3abcc19df05cb67042353e777094a"
+        },
+        {
+          "source": "LICENSE",
+          "target": "LICENSE",
+          "sha256": "1fca136d219d6cbc3fccc60fab14d6fdc49e4af9e94fd001bb860e82b423d819"
+        },
+        {
+          "source": "NOTICE",
+          "target": "NOTICE",
+          "sha256": "ce72dd233db1eb0e369dcba2b764dcca3f9f72f65683cb7f49c3eeccf5f9d48f"
+        },
+        {
+          "source": "impl/typescript/README.cn.md",
+          "target": "README.cn.md",
+          "sha256": "171b603e162a57fd566b99a15ab13016587638c1bbba67524bdced280f1d6ed4"
+        },
+        {
+          "source": "impl/typescript/README.md",
+          "target": "README.md",
+          "sha256": "9c50f91566dbf4f9a529e525e395a3c8d8f84277d11c07c971e7c86868e244c3"
+        },
+        {
+          "source": "impl/typescript/package-lock.json",
+          "target": "package-lock.json",
+          "sha256": "a1e19312c147a6e550529cf47e42f634e49ff5c84687d6e24846a54418d84d9c"
+        },
+        {
+          "source": "impl/typescript/package.json",
+          "target": "package.json",
+          "sha256": "9ac1f00109c586b17fd559d69e902b923aa5aac23e0f45cec111aa3ff4d20549"
+        },
+        {
+          "source": "impl/typescript/scripts/verify-pack.mjs",
+          "target": "scripts/verify-pack.mjs",
+          "sha256": "7d8ad68d0b35b408d97e038fd4b0b12b24fa5cd35969ed1573699724342a0f6e"
+        },
+        {
+          "source": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.cn.md",
+          "target": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.cn.md",
+          "sha256": "693a69d06b35e1534e7013cc3cc8a67569f2fb1fdc5fffcac1e41462f344557c"
+        },
+        {
+          "source": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.md",
+          "target": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.md",
+          "sha256": "8b227aef3f0783ca70ef0b58ac15ae72596092d708c52f52a325c3aea058be93"
+        },
+        {
+          "source": "spec/conformance/README.md",
+          "target": "spec/conformance/README.md",
+          "sha256": "7bec45e605434012196463772b7435804199083f158193a591f29bec3113e694"
+        },
+        {
+          "source": "spec/conformance/aaas-l2-requirement-disposition.json",
+          "target": "spec/conformance/aaas-l2-requirement-disposition.json",
+          "sha256": "0770d957903a7b2752b5605cea20f585d8e2fcdcd1aa0a2d8d3a88de664ec564"
+        },
+        {
+          "source": "spec/conformance/alpha19-bilingual-parity.json",
+          "target": "spec/conformance/alpha19-bilingual-parity.json",
+          "sha256": "a732ef7bb8ef4a6936ac7c2681fc321d3c091aca84a09abcb1b4bfa71b7e43bc"
+        },
+        {
+          "source": "spec/conformance/alpha19-package-dry-run.json",
+          "target": "spec/conformance/alpha19-package-dry-run.json",
+          "sha256": "fe1fcbb4aaf6c803bdb7a264c42bf6afeb6666194f204288b2c632f4dcf3fed1"
+        },
+        {
+          "source": "spec/conformance/alpha19-release-materialization.json",
+          "target": "spec/conformance/alpha19-release-materialization.json",
+          "sha256": "4cd057a8fbe7be00f9bea17de3b0c18c042a2db08cfe14b4d9cd23f0297bc55f"
+        },
+        {
+          "source": "spec/conformance/alpha19-resilience-validation.json",
+          "target": "spec/conformance/alpha19-resilience-validation.json",
+          "sha256": "21473064d631d400567daebc308b9c2882db703781714737cb7283b0a7b00571"
+        },
+        {
+          "source": "spec/conformance/alpha19-roadmap-history-reconciliation.json",
+          "target": "spec/conformance/alpha19-roadmap-history-reconciliation.json",
+          "sha256": "ec7fd4367ada6f7fce669b2944ce91a9c8f87e801f1242b09fb26d994d8f1bf9"
+        },
+        {
+          "source": "spec/conformance/alpha19-sdk-source-materialization.json",
+          "target": "spec/conformance/alpha19-sdk-source-materialization.json",
+          "sha256": "9cbb3ed87970a4eb62e0073b86426302b421da4c3a4e384f3feb654432f384ea"
+        },
+        {
+          "source": "spec/conformance/alpha19-security-validation.json",
+          "target": "spec/conformance/alpha19-security-validation.json",
+          "sha256": "56a6ba8b8366099d81d762da3830f3bd2bbe9748d5bb1ea0e3a719d9707909c3"
+        },
+        {
+          "source": "spec/conformance/alpha19-six-sdk-validation.json",
+          "target": "spec/conformance/alpha19-six-sdk-validation.json",
+          "sha256": "a0cdf0cb8d3422825dadef253f85c03b9e352779a810aca0b6055b3bb643a09d"
+        },
+        {
+          "source": "spec/conformance/alpha19-status-reconciliation.json",
+          "target": "spec/conformance/alpha19-status-reconciliation.json",
+          "sha256": "09976bfa860d3ec1a68c257b0f0f2b576f716ff67c82a366326780ee3dea2f9d"
+        },
+        {
+          "source": "spec/conformance/alpha20/README.md",
+          "target": "spec/conformance/alpha20/README.md",
+          "sha256": "7edbd75998624441fc4d6de20d7486323ec2d10590ef41146f01aa2953bb0deb"
+        },
+        {
+          "source": "spec/conformance/alpha20/challenge-schemas.json",
+          "target": "spec/conformance/alpha20/challenge-schemas.json",
+          "sha256": "bce183b6c6086224a0a73289cbff81e22e8864ea8fcfd9ac02276e626d203b1d"
+        },
+        {
+          "source": "spec/conformance/alpha20/compatibility-matrix.json",
+          "target": "spec/conformance/alpha20/compatibility-matrix.json",
+          "sha256": "fa7dd12f3766e62de47e160d3bc68fe67f27f909752f788776d56f8ecfe32f1d"
+        },
+        {
+          "source": "spec/conformance/alpha20/context_crypto_vectors.json",
+          "target": "spec/conformance/alpha20/context_crypto_vectors.json",
+          "sha256": "91bd0e3a86a66aa922ef39050d2d9c8f30264ece2c47b133f7e142d007d28a56"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_result_contract.json",
+          "target": "spec/conformance/alpha20/data_result_contract.json",
+          "sha256": "e9483dce3c551ee693d6dcd18ec1cbaa130a84e95a022d4629bbefe6f4b65197"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_result_vectors.json",
+          "target": "spec/conformance/alpha20/data_result_vectors.json",
+          "sha256": "21a146914584b4c4b9d5ae62dbb234091279512a434bcb6cd9e9f4956355bd37"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+          "target": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+          "sha256": "be598bf69354df16f8f18c90ec9fbb1946263ec31430d8b6859d08537596be0d"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+          "target": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+          "sha256": "1dd4f3f71b5f7fd5d8ce9a381e35be2abc3eaeed06b993b74b358765a73c7864"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_gates.json",
+          "target": "spec/conformance/alpha20/data_workflow_gates.json",
+          "sha256": "d8fab0eaa6a7242c422d3e94e15c8298422ed67f3784003622afeceb3ae88d63"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_manifest.json",
+          "target": "spec/conformance/alpha20/data_workflow_manifest.json",
+          "sha256": "24ee510e3dd951b415d54ec0ea26e730d1ea2a2573ab2278110d06b0897ca3e7"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_methodology.json",
+          "target": "spec/conformance/alpha20/data_workflow_methodology.json",
+          "sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_successor.json",
+          "target": "spec/conformance/alpha20/data_workflow_successor.json",
+          "sha256": "6f320b33748ccead631f9b03f1761c400aa6d9bfa11aa40fdb48cf5d95e10281"
+        },
+        {
+          "source": "spec/conformance/alpha20/error_status_vectors.json",
+          "target": "spec/conformance/alpha20/error_status_vectors.json",
+          "sha256": "2429bff23e59f78296589990db0929b39521fd2e2ff738689edb66faea2649be"
+        },
+        {
+          "source": "spec/conformance/alpha20/feature_handshake_boundary_vectors.json",
+          "target": "spec/conformance/alpha20/feature_handshake_boundary_vectors.json",
+          "sha256": "091b72a427f6d16c052807a723a44ffd6984830b62cd6b7c862e368719da109b"
+        },
+        {
+          "source": "spec/conformance/alpha20/feature_negotiation_vectors.json",
+          "target": "spec/conformance/alpha20/feature_negotiation_vectors.json",
+          "sha256": "54a6912b0a3c2e850864176dc2e4c9b001f4d90f7a5a440bf7837606fb0c709e"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_contract.json",
+          "target": "spec/conformance/alpha20/schema_batch_contract.json",
+          "sha256": "13001bfa948ba9e370315a43e79ad02a0d625b749b0cc4e1d173411c16ea5561"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_hash_manifest.json",
+          "target": "spec/conformance/alpha20/schema_batch_hash_manifest.json",
+          "sha256": "4605ca1ec762717d88bfbfba08a6b71f60147a4f8b6d4fca1a68e92badaaca3d"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+          "target": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+          "sha256": "98dd09e5c538e7c179f21bb715d934af6b302621b667f86382488d03abd46db6"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_manifest.json",
+          "target": "spec/conformance/alpha20/schema_batch_manifest.json",
+          "sha256": "caff52e1430d8b58314cb2a11ea0f9eaecd0f03c96e69b57552665ef854a09ba"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_vectors.json",
+          "target": "spec/conformance/alpha20/schema_batch_vectors.json",
+          "sha256": "6653d0a101b92537244b2f3e48ff8d7ea9fa14861413d638575213a63b06877b"
+        },
+        {
+          "source": "spec/conformance/ncp/anchor_id_vectors.json",
+          "target": "spec/conformance/ncp/anchor_id_vectors.json",
+          "sha256": "258ec9a093df6a9860483445dd7157255c42bfc8d548ef847d741c354b912717"
+        },
+        {
+          "source": "spec/conformance/ncp/binary_vector_payload_vectors.json",
+          "target": "spec/conformance/ncp/binary_vector_payload_vectors.json",
+          "sha256": "169aff370962a43b18e8255aafbba02e657242acb84fd15336984b2fe1933c64"
+        },
+        {
+          "source": "spec/conformance/ncp/encoding_policy_vectors.json",
+          "target": "spec/conformance/ncp/encoding_policy_vectors.json",
+          "sha256": "3e8a237337defafaa8e4d14969a0f567d0fc9f4c75b324708ff8c1aea67e42cd"
+        },
+        {
+          "source": "spec/conformance/ncp/frame_header_vectors.json",
+          "target": "spec/conformance/ncp/frame_header_vectors.json",
+          "sha256": "c93bafd4a93ad1bcd86cff697fd7a99090ac358c0463ec7f6476ba924033498c"
+        },
+        {
+          "source": "spec/conformance/ncp/hello_caps_vectors.json",
+          "target": "spec/conformance/ncp/hello_caps_vectors.json",
+          "sha256": "8057656f414ad424cd97328ea6d69257a2eb68563f580125b7e025042f988728"
+        },
+        {
+          "source": "spec/conformance/ncp/native_server_handshake_vectors.json",
+          "target": "spec/conformance/ncp/native_server_handshake_vectors.json",
+          "sha256": "907756e4b3ebdc26849126d55c39b6b5367fb507197935a948311b206f38bea6"
+        },
+        {
+          "source": "spec/conformance/ncp/runtime_hardening_vectors.json",
+          "target": "spec/conformance/ncp/runtime_hardening_vectors.json",
+          "sha256": "60ccaba8e67ee118a346bafc60ad2803785093b69b826954c7e613e59f9e7ae6"
+        },
+        {
+          "source": "spec/conformance/ndp/announce_canonicalization_vectors.json",
+          "target": "spec/conformance/ndp/announce_canonicalization_vectors.json",
+          "sha256": "374d95acc9c3149a2b3ff95c1a60665eba0d56cecc61995d51e47626b0d0d92a"
+        },
+        {
+          "source": "spec/conformance/ndp/recovery_fence_vectors.json",
+          "target": "spec/conformance/ndp/recovery_fence_vectors.json",
+          "sha256": "dd5c40739a4639b4602b4ca27679147f421fa2b863eba95d2bd619f3d71adc88"
+        },
+        {
+          "source": "spec/conformance/ndp/registry_consistency_vectors.json",
+          "target": "spec/conformance/ndp/registry_consistency_vectors.json",
+          "sha256": "ffdb39b7f296966dabd3320a55b1b92c03cca640f4503b67ecbc57694196a8a4"
+        },
+        {
+          "source": "spec/conformance/nip/ident_signature_vectors.json",
+          "target": "spec/conformance/nip/ident_signature_vectors.json",
+          "sha256": "ba10b4d6d6194f9c78ec961a0c12b5a2a149ed5d82d00ea006e8226880f49da6"
+        },
+        {
+          "source": "spec/conformance/nip/renewal_revocation_vectors.json",
+          "target": "spec/conformance/nip/renewal_revocation_vectors.json",
+          "sha256": "77ae99704a0c7a0db1db886f5c540a7068b1cf1665612efa871f0015c6d6eb33"
+        },
+        {
+          "source": "spec/conformance/nip/revocation_policy_vectors.json",
+          "target": "spec/conformance/nip/revocation_policy_vectors.json",
+          "sha256": "f04b83d61924b68cc009e25b847cf8b74d188555aef28cc2fd050ffec238fd1f"
+        },
+        {
+          "source": "spec/conformance/nip/revoke_frame_vectors.json",
+          "target": "spec/conformance/nip/revoke_frame_vectors.json",
+          "sha256": "2ebe1c3eca4dce8674919a69342d2f5740a79fe1ff9318b77276dc32bf9ce9f1"
+        },
+        {
+          "source": "spec/conformance/nip/scope_matching_vectors.json",
+          "target": "spec/conformance/nip/scope_matching_vectors.json",
+          "sha256": "bde48ae16419b8601fd1db54706b823f674a5ac65f6b6b4598dd48c56851261e"
+        },
+        {
+          "source": "spec/conformance/nip/signed_crl_vectors.json",
+          "target": "spec/conformance/nip/signed_crl_vectors.json",
+          "sha256": "586f55be3ceecd38e21926c97e23cbd6ed0294e290c08dbf03558a6d80865e02"
+        },
+        {
+          "source": "spec/conformance/nip/trust_frame_vectors.json",
+          "target": "spec/conformance/nip/trust_frame_vectors.json",
+          "sha256": "3ddc77357a002bd3c756d48ede09f03ce3d862336e4c302463cc4a1b3c25e13b"
+        },
+        {
+          "source": "spec/conformance/node-profile-case-inventory.json",
+          "target": "spec/conformance/node-profile-case-inventory.json",
+          "sha256": "080f5a8ba824c9d414c87903a03c23e8fbce6dd5b29f74e6465fd56bc6cc5f6d"
+        },
+        {
+          "source": "spec/conformance/node-profile-implementation-manifests.json",
+          "target": "spec/conformance/node-profile-implementation-manifests.json",
+          "sha256": "0ce8a5dcfcf1ce8c05de6e6fa626f33d0d75a3b4d1376b419224ac417d87b1b0"
+        },
+        {
+          "source": "spec/conformance/nop/dag_validation_vectors.json",
+          "target": "spec/conformance/nop/dag_validation_vectors.json",
+          "sha256": "6ef94f468bae4e4480980b5e04ae2292d3d195a72593b188a6ff41aa2235dd1c"
+        },
+        {
+          "source": "spec/conformance/nop/orchestrator_transcripts.json",
+          "target": "spec/conformance/nop/orchestrator_transcripts.json",
+          "sha256": "ed061cabe2517c05f82a1c6ff5220bd1c95f548289a3415c0154cf3f41d6eaef"
+        },
+        {
+          "source": "spec/conformance/nop/replay_retention_vectors.json",
+          "target": "spec/conformance/nop/replay_retention_vectors.json",
+          "sha256": "df0b26bd5814d3ff12db7ead0fd6407969a7285e6321b9aaf7f8ef9ad052d98e"
+        },
+        {
+          "source": "spec/conformance/nop/runtime_security_vectors.json",
+          "target": "spec/conformance/nop/runtime_security_vectors.json",
+          "sha256": "9faf720b330684017ec2427b55d543e05df5381b1f3d042e5e786d5a11aff0d1"
+        },
+        {
+          "source": "spec/conformance/nwp/action_frame_vectors.json",
+          "target": "spec/conformance/nwp/action_frame_vectors.json",
+          "sha256": "647ab1e51eee3286efae6feef8fffa6aa80c7bd3fb7db2878226f89411b5ad0f"
+        },
+        {
+          "source": "spec/conformance/nwp/alpha19_hardening_vectors.json",
+          "target": "spec/conformance/nwp/alpha19_hardening_vectors.json",
+          "sha256": "16ac07778952350f184a638aab8f65a5280390003b6676c78a92b6bffe36db10"
+        },
+        {
+          "source": "spec/conformance/nwp/bridge_lifecycle_vectors.json",
+          "target": "spec/conformance/nwp/bridge_lifecycle_vectors.json",
+          "sha256": "7f04db7d334fa5a298c3f26453ac5b94253dff9e1b0e70b3c52673abdb84fb38"
+        },
+        {
+          "source": "spec/conformance/nwp/filter_dsl_vectors.json",
+          "target": "spec/conformance/nwp/filter_dsl_vectors.json",
+          "sha256": "f2f9a5d0fa75b9917bb8c337be38208d7567561a65aa9734acf14e19201060ca"
+        },
+        {
+          "source": "spec/conformance/nwp/llm_context_vectors.json",
+          "target": "spec/conformance/nwp/llm_context_vectors.json",
+          "sha256": "22a9ca4075e310cf875c5d0fdf816b74bdbe41ae6297bf4280e801034cfb9c0b"
+        },
+        {
+          "source": "spec/conformance/nwp/portable_node_server_vectors.json",
+          "target": "spec/conformance/nwp/portable_node_server_vectors.json",
+          "sha256": "626c1b578b259c28eeaaf2eda2b136b89b8fd482496ccb3508e253b05f61621d"
+        },
+        {
+          "source": "spec/conformance/nwp/query_frame_aggregation_vectors.json",
+          "target": "spec/conformance/nwp/query_frame_aggregation_vectors.json",
+          "sha256": "574f40caba244cd49fa10702b32bf799701de289db88eccc446fc3cff6806d6a"
+        },
+        {
+          "source": "spec/conformance/nwp/subscribe_frame_vectors.json",
+          "target": "spec/conformance/nwp/subscribe_frame_vectors.json",
+          "sha256": "44ed4acad677939ed2732b30f5eb2dbb0a413a41c31bc170709d8ce58f6b8867"
+        },
+        {
+          "source": "impl/typescript/src/alpha19.ts",
+          "target": "src/alpha19.ts",
+          "sha256": "81fd8505e78f83f0554cd837d377acbf9038bce85a2aa89db1a1f69cf07b7e69"
+        },
+        {
+          "source": "impl/typescript/src/alpha20/context-admission.ts",
+          "target": "src/alpha20/context-admission.ts",
+          "sha256": "611a3cc19680dfe7757b0ab4d24456921bfe8d69a2eca7553961024470c542ee"
+        },
+        {
+          "source": "impl/typescript/src/alpha20/context-bytes.ts",
+          "target": "src/alpha20/context-bytes.ts",
+          "sha256": "3c0a215c9954efbf97dcb91ff89a2f3abbcd9abb7757ee33a7946ce1ed67d7d7"
+        },
+        {
+          "source": "impl/typescript/src/alpha20/feature-wire-parser.ts",
+          "target": "src/alpha20/feature-wire-parser.ts",
+          "sha256": "b78a3fbf32616e9921e8c721e46610169e85b2080b5e677e0ce738487546e765"
+        },
+        {
+          "source": "impl/typescript/src/alpha20/sqlite-projection-replay-store.ts",
+          "target": "src/alpha20/sqlite-projection-replay-store.ts",
+          "sha256": "e30132a13d2ad1f79ebf3911fcf98c31ea2d5b162d099f6be0b01ff59fd786ad"
+        },
+        {
+          "source": "impl/typescript/src/alpha20/strict-json.ts",
+          "target": "src/alpha20/strict-json.ts",
+          "sha256": "0fec2c37cb861b76dde811eee88c9c34c6455ab17d5353b6b936f2604dd1b51c"
+        },
+        {
+          "source": "impl/typescript/src/alpha20.ts",
+          "target": "src/alpha20.ts",
+          "sha256": "7c3637050d93265d99e8c237990b88df5ec64b8e860458296f36022b9d8d868e"
+        },
+        {
+          "source": "impl/typescript/src/conformance.ts",
+          "target": "src/conformance.ts",
+          "sha256": "96729af5e52d9a99e5d684a4f6406d5cb1c61ef0c5f3ab8c1901d525b8374796"
+        },
+        {
+          "source": "impl/typescript/src/core/anchor-cache.ts",
+          "target": "src/core/anchor-cache.ts",
+          "sha256": "f8b05ddaff081bfd93c5ced5555edf5608015fe50e816f1b147ef86702e56b1f"
+        },
+        {
+          "source": "impl/typescript/src/core/cache.ts",
+          "target": "src/core/cache.ts",
+          "sha256": "bea00590462582e29433c49b96651cff9e159b526e338b9a5b67005d434f1986"
+        },
+        {
+          "source": "impl/typescript/src/core/canonical-json.ts",
+          "target": "src/core/canonical-json.ts",
+          "sha256": "05d67270be4e071f214b57f8f1f92de79e25b044cdd8bdc68377ae26b8f41b24"
+        },
+        {
+          "source": "impl/typescript/src/core/codec.ts",
+          "target": "src/core/codec.ts",
+          "sha256": "4509ad08392bbec57095a826806b3a07e804cdf87b967b04710162fb71c67694"
+        },
+        {
+          "source": "impl/typescript/src/core/codecs/index.ts",
+          "target": "src/core/codecs/index.ts",
+          "sha256": "d0ce4ac6e341e63939a5cb16352e58b1c19e18681bd1af6d61cd746276a650b5"
+        },
+        {
+          "source": "impl/typescript/src/core/codecs/ncp-codec.ts",
+          "target": "src/core/codecs/ncp-codec.ts",
+          "sha256": "7f332b37c3b999f3b39c1e667be5e028be314e35e913363563cf6df244022f65"
+        },
+        {
+          "source": "impl/typescript/src/core/codecs/tier1-json-codec.ts",
+          "target": "src/core/codecs/tier1-json-codec.ts",
+          "sha256": "d9f804043ae1004fdcb5e08118bd06aaae85a060e94da76eb232a715d7e5ac6c"
+        },
+        {
+          "source": "impl/typescript/src/core/codecs/tier2-msgpack-codec.ts",
+          "target": "src/core/codecs/tier2-msgpack-codec.ts",
+          "sha256": "874fecc9c4f06f74f4721f7478da8f95e789664ce5e31cb50e235bf766e52eb1"
+        },
+        {
+          "source": "impl/typescript/src/core/codecs/tier3-binary-vector-codec.ts",
+          "target": "src/core/codecs/tier3-binary-vector-codec.ts",
+          "sha256": "c963f6886868f74acf0b1ae0dfae9c18b494145d3bee1192c6324d66498b34f5"
+        },
+        {
+          "source": "impl/typescript/src/core/crypto-provider.ts",
+          "target": "src/core/crypto-provider.ts",
+          "sha256": "c9137d23432e9fe1745c0b27aa5564c436d63d43a751d3e034a3dc18ac90f7a1"
+        },
+        {
+          "source": "impl/typescript/src/core/exceptions.ts",
+          "target": "src/core/exceptions.ts",
+          "sha256": "05be42ae1063319366ba9229698a6da07fcde47d29114bda39dc7653650883ed"
+        },
+        {
+          "source": "impl/typescript/src/core/frame-header.ts",
+          "target": "src/core/frame-header.ts",
+          "sha256": "b7198ec4797060c2064d002226f1e8215cabaca5e26f503a59c6bc22d4535987"
+        },
+        {
+          "source": "impl/typescript/src/core/frame-registry.ts",
+          "target": "src/core/frame-registry.ts",
+          "sha256": "b9b5f27f76c7cd0bd66fc5988a07c446e626a9d988e9d203f4bb49a50284c0b2"
+        },
+        {
+          "source": "impl/typescript/src/core/frames.ts",
+          "target": "src/core/frames.ts",
+          "sha256": "ce0d964c3cc49c47bd1216cb93824cef2468c11d6d6f07f557c72567218b85b2"
+        },
+        {
+          "source": "impl/typescript/src/core/index.ts",
+          "target": "src/core/index.ts",
+          "sha256": "6a72f8bbd568a7cc3af324a4dfa4a8094d457cb9ca5ab37325b7240daa0827fb"
+        },
+        {
+          "source": "impl/typescript/src/core/registry.ts",
+          "target": "src/core/registry.ts",
+          "sha256": "a5d1b4a7ac2d578eea5dcfb2c8d795ba55873b128604b3dabe0e0b26002195f3"
+        },
+        {
+          "source": "impl/typescript/src/core/status-codes.ts",
+          "target": "src/core/status-codes.ts",
+          "sha256": "8d6819d00b8bf2d3c93a48035bd7781e40267dcb0ee077e6835fa4c8335c4475"
+        },
+        {
+          "source": "impl/typescript/src/core/telemetry.ts",
+          "target": "src/core/telemetry.ts",
+          "sha256": "61f78d8337e5fd94115b0868548a9f2b84c994adc5f052cab2429e75a5ca9771"
+        },
+        {
+          "source": "impl/typescript/src/daemon/index.ts",
+          "target": "src/daemon/index.ts",
+          "sha256": "74e28e8ab2422ff4471271c2744c9776c6ce806a906b3841562ded7ce74f42a4"
+        },
+        {
+          "source": "impl/typescript/src/daemon/observability/health.ts",
+          "target": "src/daemon/observability/health.ts",
+          "sha256": "98f272639702950f932e4a251964c9e648cf3b09f26b4aa66e75d5ba6e12e4dc"
+        },
+        {
+          "source": "impl/typescript/src/daemon/observability/index.ts",
+          "target": "src/daemon/observability/index.ts",
+          "sha256": "7c866785dbe9a184004ba57b3a92e137d34d7234fc7a454181d855bc2ff696ca"
+        },
+        {
+          "source": "impl/typescript/src/daemon/observability/logging.ts",
+          "target": "src/daemon/observability/logging.ts",
+          "sha256": "8277f62f56f14d09022689eb6616bb41d134aa85b06fc55f88c53bf9607040e7"
+        },
+        {
+          "source": "impl/typescript/src/daemon/observability/metrics.ts",
+          "target": "src/daemon/observability/metrics.ts",
+          "sha256": "496de1226ced0cc147b2668cb216707de51471befe7341fea77cd6f7f2bfacc4"
+        },
+        {
+          "source": "impl/typescript/src/daemon/observability/shutdown.ts",
+          "target": "src/daemon/observability/shutdown.ts",
+          "sha256": "e1bed1fc335dbf1ae32bb231750937e4ed38fe45c0f4ef7491811e51c43056f7"
+        },
+        {
+          "source": "impl/typescript/src/index.ts",
+          "target": "src/index.ts",
+          "sha256": "d28c6e76b5353b3eb74d32c3283fdc125a93b95bc030a875f5e4743381a50eca"
+        },
+        {
+          "source": "impl/typescript/src/ncp/encoding-policy.ts",
+          "target": "src/ncp/encoding-policy.ts",
+          "sha256": "dcedf4ad577721e0d2e463257766214d48ec2be54e2f53750fadffa11dd1b332"
+        },
+        {
+          "source": "impl/typescript/src/ncp/failover-connector.ts",
+          "target": "src/ncp/failover-connector.ts",
+          "sha256": "05dcb3488afff30c0ce4b33062c34d324aa83b8115bbf9c4f383ce60d72a39f0"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/anchor-frame.ts",
+          "target": "src/ncp/frames/anchor-frame.ts",
+          "sha256": "20a7567f385a1aed3a3adc8287914a2b26d62c2ff9b992dcc410241aa61c45c7"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/caps-frame.ts",
+          "target": "src/ncp/frames/caps-frame.ts",
+          "sha256": "3376cb084e14f448091805615251d3de2759b9ac9b2ff6140cbe6ca5c7cafffc"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/diff-frame.ts",
+          "target": "src/ncp/frames/diff-frame.ts",
+          "sha256": "841332e4f9b04560801fd6ee89a55f52db82c8929efac96ecd449359a9d51e76"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/error-frame.ts",
+          "target": "src/ncp/frames/error-frame.ts",
+          "sha256": "742bdf5737a6bb1f086718d0a2d70b7301040213d56be50c7eb6addb3021be6b"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/hello-frame.ts",
+          "target": "src/ncp/frames/hello-frame.ts",
+          "sha256": "b4c1feb0834f0deeee7ebedd64eb3632db0d25275bbb70457529392466691b8c"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames/stream-frame.ts",
+          "target": "src/ncp/frames/stream-frame.ts",
+          "sha256": "9ce0b21199e48ec4b8638b83db448c2354cbaf85475d9bc5780355938aac6472"
+        },
+        {
+          "source": "impl/typescript/src/ncp/frames.ts",
+          "target": "src/ncp/frames.ts",
+          "sha256": "ffe2e880944a59a7ad19dacaffe5c153e3fa5348485c1dd9a8403173fda4bb92"
+        },
+        {
+          "source": "impl/typescript/src/ncp/handshake-profile.ts",
+          "target": "src/ncp/handshake-profile.ts",
+          "sha256": "ad7306f44c1d0251697f20c08fdabff7b9c44894f80a2465e0682dad9ee06946"
+        },
+        {
+          "source": "impl/typescript/src/ncp/handshake.ts",
+          "target": "src/ncp/handshake.ts",
+          "sha256": "d5a52a0b520e7d3e3c540606725879de44df7ec9e4edad6d9ee3e0ca1ce5f9a5"
+        },
+        {
+          "source": "impl/typescript/src/ncp/index.ts",
+          "target": "src/ncp/index.ts",
+          "sha256": "167363d365f44f4fcc1888bdcd1ce0a701c6ab2a228ca412654ac8016f2b0f98"
+        },
+        {
+          "source": "impl/typescript/src/ncp/native-client.ts",
+          "target": "src/ncp/native-client.ts",
+          "sha256": "6dd96f2df5f8336d579d7b4aba63eece826b20044f8b532f62c271e90079b02c"
+        },
+        {
+          "source": "impl/typescript/src/ncp/ncp-error-codes.ts",
+          "target": "src/ncp/ncp-error-codes.ts",
+          "sha256": "f6ab7c326ad59fbc525988f135a071752a2270b34ff36b933a981b7cbd59b944"
+        },
+        {
+          "source": "impl/typescript/src/ncp/ncp-patch-format.ts",
+          "target": "src/ncp/ncp-patch-format.ts",
+          "sha256": "38bfd8368ff640135b5d40e070a79afb197bfe947090a61c1eb1cb946ff38424"
+        },
+        {
+          "source": "impl/typescript/src/ncp/preamble.ts",
+          "target": "src/ncp/preamble.ts",
+          "sha256": "6509b47996adbdcc93812fa8f5031de9c2f5fa30b0fa7abaa280fd28d180034a"
+        },
+        {
+          "source": "impl/typescript/src/ncp/registry.ts",
+          "target": "src/ncp/registry.ts",
+          "sha256": "dddcf0e790577a04d58b8c0266506ba2791fdf493661d7f25e023728ea8ac039"
+        },
+        {
+          "source": "impl/typescript/src/ncp/server-connection.ts",
+          "target": "src/ncp/server-connection.ts",
+          "sha256": "ed1b762ba05979512676c49058c8c525e658315a552dc18c0724c358f81b92bc"
+        },
+        {
+          "source": "impl/typescript/src/ncp/server-options.ts",
+          "target": "src/ncp/server-options.ts",
+          "sha256": "3f79ce83773d252e31895efc391bd4ea46b7d52be93eb82cb79aa66cb8d6afb7"
+        },
+        {
+          "source": "impl/typescript/src/ncp/server.ts",
+          "target": "src/ncp/server.ts",
+          "sha256": "eb97d7d45b20b2752baf987b5d33900e29ba27eb15ef1ccac70d344c85b18803"
+        },
+        {
+          "source": "impl/typescript/src/ncp/session.ts",
+          "target": "src/ncp/session.ts",
+          "sha256": "76cb4f6205d6aef20e93be74594e5d2e67bf48e1eb0a7ee2a169b314bf763c53"
+        },
+        {
+          "source": "impl/typescript/src/ncp/socket-frame-reader.ts",
+          "target": "src/ncp/socket-frame-reader.ts",
+          "sha256": "cb9b09e0521bd2d15be3cdf30b731bee69166798d488f2df8412fd73854878bd"
+        },
+        {
+          "source": "impl/typescript/src/ncp/stream-manager.ts",
+          "target": "src/ncp/stream-manager.ts",
+          "sha256": "6d55fb441bfbd55dd70bfaa26814f0daa295973ba10d8411d4448cc758ee6d12"
+        },
+        {
+          "source": "impl/typescript/src/ndp/cluster.ts",
+          "target": "src/ndp/cluster.ts",
+          "sha256": "4a39c6c1b3fb40e2b05085130ed42009657bdeeb8a6494760a7aee7269563fa5"
+        },
+        {
+          "source": "impl/typescript/src/ndp/dns-txt.ts",
+          "target": "src/ndp/dns-txt.ts",
+          "sha256": "75a8d08e03d4337b456031b63f713c8a66337328569385a89b58ccbe8fffe8e3"
+        },
+        {
+          "source": "impl/typescript/src/ndp/federation.ts",
+          "target": "src/ndp/federation.ts",
+          "sha256": "436bebf2cf621e1b9e7ad24ca11926a9ef210cc6d9c8e4288a605d518ca05e04"
+        },
+        {
+          "source": "impl/typescript/src/ndp/frames.ts",
+          "target": "src/ndp/frames.ts",
+          "sha256": "a7b4fe2d27ed4a7dd598da36cf8b18a9300d7e81bc90352d34bc954cb7abc3e1"
+        },
+        {
+          "source": "impl/typescript/src/ndp/index.ts",
+          "target": "src/ndp/index.ts",
+          "sha256": "7c145a19125d5b454c39b4b0d899e90ca537970d57f5d3a03498b5c471007576"
+        },
+        {
+          "source": "impl/typescript/src/ndp/ndp-error-codes.ts",
+          "target": "src/ndp/ndp-error-codes.ts",
+          "sha256": "f1c9056572f4159e3cee97b683a2ca93a4a41e50939e9cd28f0f12c2b0ec440b"
+        },
+        {
+          "source": "impl/typescript/src/ndp/ndp-registry.ts",
+          "target": "src/ndp/ndp-registry.ts",
+          "sha256": "4f27921178ade1bc1b7550ad992700f8c97dd86004c42627059a9a12532b1a3d"
+        },
+        {
+          "source": "impl/typescript/src/ndp/registry-profile.ts",
+          "target": "src/ndp/registry-profile.ts",
+          "sha256": "e7fc02d684948f5094a8504fbea58b567783365282d05b68156cb6fa3eb8431b"
+        },
+        {
+          "source": "impl/typescript/src/ndp/registry.ts",
+          "target": "src/ndp/registry.ts",
+          "sha256": "a92ae1970f885fd306c2e1c92d7bb7fafd34fa7548efb69eaad4151557147d75"
+        },
+        {
+          "source": "impl/typescript/src/ndp/security.ts",
+          "target": "src/ndp/security.ts",
+          "sha256": "34b6e910517c5cb1ae7e59d66fc9b5cbabe76ac981e5b05c9023f92e9562e97e"
+        },
+        {
+          "source": "impl/typescript/src/ndp/validator.ts",
+          "target": "src/ndp/validator.ts",
+          "sha256": "9cbef73635229ea29f5f2a97aa0a9972f54e59a0649807d5426cb93823335964"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/client.ts",
+          "target": "src/nip/acme/client.ts",
+          "sha256": "2ffa7559c2973ed4390636ef1d7d0d7e0fcbf5222f1e61a5f5f64475d1ca79f3"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/index.ts",
+          "target": "src/nip/acme/index.ts",
+          "sha256": "a8b42aab9ecf0bd4a6490ce1e25b4c7e34f3e7d0c3111b08a6483f6f746a9ee2"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/jws.ts",
+          "target": "src/nip/acme/jws.ts",
+          "sha256": "863bc25418eae8e2605c91b269eb97c06b3a334a1f8e4a8c556cc88d20ef074d"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/messages.ts",
+          "target": "src/nip/acme/messages.ts",
+          "sha256": "135766bd127818c5524061e87ec1ceded6e995a98e2e091b0ba7e313d0802feb"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/server.ts",
+          "target": "src/nip/acme/server.ts",
+          "sha256": "91ceeda53b647685b1c4ff2f0295cf2ec1842529ae18a9ac53c48228c0644279"
+        },
+        {
+          "source": "impl/typescript/src/nip/acme/wire.ts",
+          "target": "src/nip/acme/wire.ts",
+          "sha256": "ac798cc647f8f1b3b67e251f56071adf36d5fde277737381aa619847aa6d55b7"
+        },
+        {
+          "source": "impl/typescript/src/nip/assurance-level.ts",
+          "target": "src/nip/assurance-level.ts",
+          "sha256": "abd94aba3f6696d7dfa6120e28384486a474200803f221a77d926017b6d6e8b1"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/errors.ts",
+          "target": "src/nip/ca/errors.ts",
+          "sha256": "58dfb05d20f650a9472b90236b89618887248a136e1d115d5885cb3057cb7126"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/group-jws.ts",
+          "target": "src/nip/ca/group-jws.ts",
+          "sha256": "8c4a66fd14013f6fe46178f56a7a39c8c0b104074d8b882fc20c2fdb7baee284"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/index.ts",
+          "target": "src/nip/ca/index.ts",
+          "sha256": "68fdd6aa109da1a9dc072254351f3ad24e718708d7c59e9e42bf2b2ce1a36a5d"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/options.ts",
+          "target": "src/nip/ca/options.ts",
+          "sha256": "10b648eec620aadd9b62a9e3575e8af67ea86bcb39a3ff3b64433478976f1b94"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/ra/policy.ts",
+          "target": "src/nip/ca/ra/policy.ts",
+          "sha256": "2474cb95e0f07df89df6dd9de252d9f43707364bcbaf2ca9821fd2224694e0a0"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/router.ts",
+          "target": "src/nip/ca/router.ts",
+          "sha256": "7215dfd9a1a82ab803f9f2cb95b94c93092ee2d3ad93ee60d48bdf6035b95bd2"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/service.ts",
+          "target": "src/nip/ca/service.ts",
+          "sha256": "19a7a425c94874fb578d195670391baa8ffd591112c109be3ece71e615a8ea96"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/signer.ts",
+          "target": "src/nip/ca/signer.ts",
+          "sha256": "4229d8c69aac1c5bcd97d1f2edad3242863803633e326355180571366b93c138"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/sqlite-store.ts",
+          "target": "src/nip/ca/sqlite-store.ts",
+          "sha256": "6b2d0430ea935283875a26ca26cc7573737ececa8a8030e4db93dea40b1e1a83"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca/store.ts",
+          "target": "src/nip/ca/store.ts",
+          "sha256": "c14be17e900d161031c86638a9a8184eb51b73c8f179f78155027f8c6b4c39b3"
+        },
+        {
+          "source": "impl/typescript/src/nip/ca-client.ts",
+          "target": "src/nip/ca-client.ts",
+          "sha256": "3b141a05d7711b9ef6bcf653b8c0c073ec446cbac14c847940df0f236b3a47c9"
+        },
+        {
+          "source": "impl/typescript/src/nip/cert-format.ts",
+          "target": "src/nip/cert-format.ts",
+          "sha256": "2364a957f95b85f9ee2a92e5bd572fe7c5e57790e5b8d92accb1a04d36039076"
+        },
+        {
+          "source": "impl/typescript/src/nip/error-codes.ts",
+          "target": "src/nip/error-codes.ts",
+          "sha256": "80fe13f4860c4489fc325192c5d877dac72e43ec2c694bf0f7e7a73cfe905765"
+        },
+        {
+          "source": "impl/typescript/src/nip/frames.ts",
+          "target": "src/nip/frames.ts",
+          "sha256": "ebbb074ad6ce9abdf2b207ad243c5ef68c0d47b78f93d606ce84c3c70218803f"
+        },
+        {
+          "source": "impl/typescript/src/nip/identity.ts",
+          "target": "src/nip/identity.ts",
+          "sha256": "9345a779c872bddc497a9bbbf15cb7750c382e1fd4995d3e5a92ac95e38b23a4"
+        },
+        {
+          "source": "impl/typescript/src/nip/index.ts",
+          "target": "src/nip/index.ts",
+          "sha256": "2522622b346248ea3e3ea5bb9a8a6620b2b5ebca086c92275d871761ab1fda80"
+        },
+        {
+          "source": "impl/typescript/src/nip/phase3-enforcer.ts",
+          "target": "src/nip/phase3-enforcer.ts",
+          "sha256": "ec0b209ad02d8701e06cc593ca23be3db74e68c8d073a5c20cdbaac8493268e1"
+        },
+        {
+          "source": "impl/typescript/src/nip/registry.ts",
+          "target": "src/nip/registry.ts",
+          "sha256": "519a73afb57fb9ebf7b776bf8d25f737a188888e82f4f01481e30bd01f486bfb"
+        },
+        {
+          "source": "impl/typescript/src/nip/reputation-client.ts",
+          "target": "src/nip/reputation-client.ts",
+          "sha256": "718a61eee748dd0a508c659e0e9182382419b2269d603f3fca55fee6866861e5"
+        },
+        {
+          "source": "impl/typescript/src/nip/revocation-policy.ts",
+          "target": "src/nip/revocation-policy.ts",
+          "sha256": "7468d39d7d6294229c0f90732a9de7429cb2719419e01c2e88d6c890acd377d8"
+        },
+        {
+          "source": "impl/typescript/src/nip/trust-frame-validator.ts",
+          "target": "src/nip/trust-frame-validator.ts",
+          "sha256": "97438f93abf31149c87affaf96fa80da232d6b6f512ac796c833a3ad7597784b"
+        },
+        {
+          "source": "impl/typescript/src/nip/verifier.ts",
+          "target": "src/nip/verifier.ts",
+          "sha256": "be7ad3fdca47dab596ed73d64304153fbd6aa3bdac5f6acd7e5b4b0b352f3b40"
+        },
+        {
+          "source": "impl/typescript/src/nip/x509/builder.ts",
+          "target": "src/nip/x509/builder.ts",
+          "sha256": "cc9bd7b365395f904c8f96fa56bda0569565cddecefe75861dca211e620377a2"
+        },
+        {
+          "source": "impl/typescript/src/nip/x509/der.ts",
+          "target": "src/nip/x509/der.ts",
+          "sha256": "e9214f704d70e8e13f38d0fde6e0c2da476e1bff3a3ab39c9de1352e6f8030be"
+        },
+        {
+          "source": "impl/typescript/src/nip/x509/index.ts",
+          "target": "src/nip/x509/index.ts",
+          "sha256": "6d443460efadbc1217b67079d648fb4ab2f20b0f364bdbc82e2f85ea5732b687"
+        },
+        {
+          "source": "impl/typescript/src/nip/x509/oids.ts",
+          "target": "src/nip/x509/oids.ts",
+          "sha256": "d9a310ba7da4653fe4cf36711b829f436f9c6b7c4b809e0233b725f5245cf489"
+        },
+        {
+          "source": "impl/typescript/src/nip/x509/verifier.ts",
+          "target": "src/nip/x509/verifier.ts",
+          "sha256": "3260fbce99ccc5b21ce7ff1f43f45a6e2b1f592524d265df08233434f1ec87a7"
+        },
+        {
+          "source": "impl/typescript/src/nop/callback-validator.ts",
+          "target": "src/nop/callback-validator.ts",
+          "sha256": "7142e0f7eb93b3ebfe8207fbeee282b9b35df36e561ea75f08263acdda2db579"
+        },
+        {
+          "source": "impl/typescript/src/nop/client.ts",
+          "target": "src/nop/client.ts",
+          "sha256": "3710b69fb6002a9d3eba78b5de5a14d35edec52007bba1fe1d27cf013544868d"
+        },
+        {
+          "source": "impl/typescript/src/nop/cluster-delegation.ts",
+          "target": "src/nop/cluster-delegation.ts",
+          "sha256": "0be6c218d7ff74a2a6c3bc12ab3c2f5e38175e13ea1015f099a94efaa455e684"
+        },
+        {
+          "source": "impl/typescript/src/nop/condition-evaluator.ts",
+          "target": "src/nop/condition-evaluator.ts",
+          "sha256": "7823ad42ca70084556617c5d264feef647becf4f1b21549913967bc5079dc858"
+        },
+        {
+          "source": "impl/typescript/src/nop/constants.ts",
+          "target": "src/nop/constants.ts",
+          "sha256": "559184ba3ea188155ad72b4ffe0f03b9ad5c81ea66acdf5570d7758892167967"
+        },
+        {
+          "source": "impl/typescript/src/nop/dag-validator.ts",
+          "target": "src/nop/dag-validator.ts",
+          "sha256": "2ec962ea808ab2061a3998691721340e5e731db44900bd6d9c7a59a1e4180e47"
+        },
+        {
+          "source": "impl/typescript/src/nop/frames.ts",
+          "target": "src/nop/frames.ts",
+          "sha256": "7fe6f3ff71fb12eeaadb813960c478ca7463fb16a59a4a03f0374b9a19c99e44"
+        },
+        {
+          "source": "impl/typescript/src/nop/index.ts",
+          "target": "src/nop/index.ts",
+          "sha256": "05513a50a94fb89db57d4e5ec8d87adcf2677093585ec4ad9d6707a728ec2b55"
+        },
+        {
+          "source": "impl/typescript/src/nop/input-mapper.ts",
+          "target": "src/nop/input-mapper.ts",
+          "sha256": "6953621eab830fbe827d77d15c515f2ee0c3144a80dd3981ba78f947daa1b29c"
+        },
+        {
+          "source": "impl/typescript/src/nop/models.ts",
+          "target": "src/nop/models.ts",
+          "sha256": "b9760b9688ee16d8279e6aead42d8308e482e4f4dd7096ea079c91b854136324"
+        },
+        {
+          "source": "impl/typescript/src/nop/nop-error-codes.ts",
+          "target": "src/nop/nop-error-codes.ts",
+          "sha256": "7a6eab34969cfa6c1486ac84b6fabc79a63d0c5287f015cad42ed6d52ec4a485"
+        },
+        {
+          "source": "impl/typescript/src/nop/nop-types.ts",
+          "target": "src/nop/nop-types.ts",
+          "sha256": "087bdb16416dd584bc4deba4f5ad74b7803c0ea39eb4f04de096816504213114"
+        },
+        {
+          "source": "impl/typescript/src/nop/orchestrator.ts",
+          "target": "src/nop/orchestrator.ts",
+          "sha256": "0dd33341ac2f7fc7a57600470dfed0ae17b0a49f8c3790ceb82d2e89a075a85f"
+        },
+        {
+          "source": "impl/typescript/src/nop/portable-profile.ts",
+          "target": "src/nop/portable-profile.ts",
+          "sha256": "c3bc7cd8fbc18da1ed7d6a60f778622d1b8b5f45c42ad9078be414683f2906ef"
+        },
+        {
+          "source": "impl/typescript/src/nop/registry.ts",
+          "target": "src/nop/registry.ts",
+          "sha256": "4a61175279f583a8b94213df4aea44db960132a39a5fd723be33f9ab15a44154"
+        },
+        {
+          "source": "impl/typescript/src/nop/result-aggregator.ts",
+          "target": "src/nop/result-aggregator.ts",
+          "sha256": "a4ddc3d54d3bd0fd476988dccf8e6d2ff2c65f6ded71ac97bc141980d546783a"
+        },
+        {
+          "source": "impl/typescript/src/nop/telemetry.ts",
+          "target": "src/nop/telemetry.ts",
+          "sha256": "86db6963da46f6a684ea0ad34378233820c378ea78eed43f12f3526cdedd3b9d"
+        },
+        {
+          "source": "impl/typescript/src/nop/worker-client.ts",
+          "target": "src/nop/worker-client.ts",
+          "sha256": "012c09572fa19fe546737c9a0ae8e293e1d30ffdab953e382a28822d56472547"
+        },
+        {
+          "source": "impl/typescript/src/nwp/action-server.ts",
+          "target": "src/nwp/action-server.ts",
+          "sha256": "eeac917f035038570293c805b8aa65a69544d9c5216768ce7c4faa14a1f01a22"
+        },
+        {
+          "source": "impl/typescript/src/nwp/action-task-store.ts",
+          "target": "src/nwp/action-task-store.ts",
+          "sha256": "c7bc1eb58730348ac78f5d22055abb34e2f985adc1b42ae366b868ff5f54bb59"
+        },
+        {
+          "source": "impl/typescript/src/nwp/anchor-client.ts",
+          "target": "src/nwp/anchor-client.ts",
+          "sha256": "4fd60cc54e6080dd67802c9bb82f703dc16aa634d4e97883a0ba98969888b09c"
+        },
+        {
+          "source": "impl/typescript/src/nwp/anchor-epoch.ts",
+          "target": "src/nwp/anchor-epoch.ts",
+          "sha256": "e30256321fe8f66ce53aa879609173ae60d42a0a78404cc751838ee711012ec8"
+        },
+        {
+          "source": "impl/typescript/src/nwp/anchor-server.ts",
+          "target": "src/nwp/anchor-server.ts",
+          "sha256": "8b7352236ce0ca7150887e43d6a1ad0338a3a331ffe71c2c51b2db78f051b68b"
+        },
+        {
+          "source": "impl/typescript/src/nwp/bridge.ts",
+          "target": "src/nwp/bridge.ts",
+          "sha256": "81abe3f003f622623edc39c506bc7a6d3fa6be9fcd9bfe9f08a58fa108add8b7"
+        },
+        {
+          "source": "impl/typescript/src/nwp/callback-validator.ts",
+          "target": "src/nwp/callback-validator.ts",
+          "sha256": "c7cd8a8dc679ebe3627813facdac8a9193359b043c996f4c781f3f45f9f1563d"
+        },
+        {
+          "source": "impl/typescript/src/nwp/cgn.ts",
+          "target": "src/nwp/cgn.ts",
+          "sha256": "3eb70e6cd08bdbf0d211395b683dbf9e3548d0b13b44420bb9c4a33ec33c0aa3"
+        },
+        {
+          "source": "impl/typescript/src/nwp/client.ts",
+          "target": "src/nwp/client.ts",
+          "sha256": "87647a2bc000d1ef1a9442baa89e7442d4d4c89a984e018392748c4c80bb042a"
+        },
+        {
+          "source": "impl/typescript/src/nwp/complex-server.ts",
+          "target": "src/nwp/complex-server.ts",
+          "sha256": "31f3cd1ed18375427ed02eae16f2d3a3cc9d21e270e10566d8bff1dc5bbc602d"
+        },
+        {
+          "source": "impl/typescript/src/nwp/context-store.ts",
+          "target": "src/nwp/context-store.ts",
+          "sha256": "1a4d1ee9e8f4e1f0082487f5ee4097c3e591f3630b1843d2907dad9e0a1a6b24"
+        },
+        {
+          "source": "impl/typescript/src/nwp/frames.ts",
+          "target": "src/nwp/frames.ts",
+          "sha256": "bbb468391f75a1287670d96066a5951ddc94496a6adfa1639c2ce53d2ffd9cd4"
+        },
+        {
+          "source": "impl/typescript/src/nwp/http-headers.ts",
+          "target": "src/nwp/http-headers.ts",
+          "sha256": "a72be512a60a7b1d1b6eab88067339b34790fa6e83ff3f136fbbf5ec4a869725"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/a2a.ts",
+          "target": "src/nwp/inbound/a2a.ts",
+          "sha256": "8903993cf46018038ed74a42245c68dd6f620fa481a036d084ead1d646637380"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/backend.ts",
+          "target": "src/nwp/inbound/backend.ts",
+          "sha256": "a4b16d3de144e1de038f5b3c7d44754bb61cac957dc7e25c895ae623ce8150fa"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/error-map.ts",
+          "target": "src/nwp/inbound/error-map.ts",
+          "sha256": "2c08b8e96a9cd084457579078192f4744be79692df10abc53acf587f1191a5a2"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/grpc.ts",
+          "target": "src/nwp/inbound/grpc.ts",
+          "sha256": "5e4203db7f41a5059997cd9931f9a0018917bb954c8df9491ea4e3604eb3930d"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/host.ts",
+          "target": "src/nwp/inbound/host.ts",
+          "sha256": "96e4b32cc66d61bc2380002beb109c4fc36a9bbf6b764ab89cc6f4cf370bba8d"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/index.ts",
+          "target": "src/nwp/inbound/index.ts",
+          "sha256": "b61d5e96120e17d7e7d6f2b700e6b7d4cf90cb9091170935d7d3e6120ca45965"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/json-rpc.ts",
+          "target": "src/nwp/inbound/json-rpc.ts",
+          "sha256": "76c3839f72634e440270a2ada6061b822bce922567d52cbdf558c4269bce9ea5"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/mcp.ts",
+          "target": "src/nwp/inbound/mcp.ts",
+          "sha256": "41501a7293ca290f7dfe973b3477522f3cf49d107f83480a0560d5554e2ce1d1"
+        },
+        {
+          "source": "impl/typescript/src/nwp/inbound/options.ts",
+          "target": "src/nwp/inbound/options.ts",
+          "sha256": "aea989fc503ad01bb75601d36fae3875d42b09c35fad666eb343f04d970e1433"
+        },
+        {
+          "source": "impl/typescript/src/nwp/index.ts",
+          "target": "src/nwp/index.ts",
+          "sha256": "8bc164c0eb288e3ab1c5836d00f93dbd4f3eb15cdca4855288656336ce294439"
+        },
+        {
+          "source": "impl/typescript/src/nwp/llm-action-server.ts",
+          "target": "src/nwp/llm-action-server.ts",
+          "sha256": "20db04794d80e04d86c27b17b9e7f1570053a9c0dc214b712a6a7571c20e78f6"
+        },
+        {
+          "source": "impl/typescript/src/nwp/llm.ts",
+          "target": "src/nwp/llm.ts",
+          "sha256": "8057d73c998f086fb77d7d13367992bcd9f15d9f78882e23d57024547c03feb8"
+        },
+        {
+          "source": "impl/typescript/src/nwp/manifest.ts",
+          "target": "src/nwp/manifest.ts",
+          "sha256": "5ee338ac324b950ee952a4af812d3f5de963bffbd58dae5a2ee19d7fbf9c244b"
+        },
+        {
+          "source": "impl/typescript/src/nwp/memory-node-server.ts",
+          "target": "src/nwp/memory-node-server.ts",
+          "sha256": "5a42605c92dc68fc792086650e176ce5cd338dae01921d2fdddba75595969c81"
+        },
+        {
+          "source": "impl/typescript/src/nwp/memory-server.ts",
+          "target": "src/nwp/memory-server.ts",
+          "sha256": "013d8fc44ba286029fade5fae35c22b4d158021a232353f6146c696f1be8e091"
+        },
+        {
+          "source": "impl/typescript/src/nwp/native-server.ts",
+          "target": "src/nwp/native-server.ts",
+          "sha256": "7c545d6351b4186f42cf5d6fb2fb556050295594ba4ee76a294da978825e5b0e"
+        },
+        {
+          "source": "impl/typescript/src/nwp/nwp-error-codes.ts",
+          "target": "src/nwp/nwp-error-codes.ts",
+          "sha256": "d0affd9e9a75595887a396756f7bf5636d04ae1d4dbc86ae05f5443921f9b5bc"
+        },
+        {
+          "source": "impl/typescript/src/nwp/portable-profile.ts",
+          "target": "src/nwp/portable-profile.ts",
+          "sha256": "5c6bb2896b385afdb13faf8cff816153d034270b5d6468715c9991ef85ea21d8"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/filter-translator.ts",
+          "target": "src/nwp/query/filter-translator.ts",
+          "sha256": "8945f1a506d161b9dd4b621b45bb58dd4ca3df84f74c1ad18d1d66c1013f59c8"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/index.ts",
+          "target": "src/nwp/query/index.ts",
+          "sha256": "db07c3671d69001d525512088f4cfee0c7f69bf33982a07268e98a65ea3a0770"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/sql-executor.ts",
+          "target": "src/nwp/query/sql-executor.ts",
+          "sha256": "af017d321c731d9ffe55d632ceb054583d5132115a7051cb94f0de44a17d312e"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/sql-memory-node-provider.ts",
+          "target": "src/nwp/query/sql-memory-node-provider.ts",
+          "sha256": "d8a4480a1e35a01c25223864923605ea88c47e8d96300514abeb15aecce210f8"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/sql-query-builder.ts",
+          "target": "src/nwp/query/sql-query-builder.ts",
+          "sha256": "39263f84465371e1e66d86783d60b43ba5db1099f865288b81558863bba96c30"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/sql-schema.ts",
+          "target": "src/nwp/query/sql-schema.ts",
+          "sha256": "72b6c656365989595b4538052dd60fbf5d3f28dd1770a8aa6fe5b65e1de03097"
+        },
+        {
+          "source": "impl/typescript/src/nwp/query/sqlite-executor.ts",
+          "target": "src/nwp/query/sqlite-executor.ts",
+          "sha256": "d72e4e873357a0a9f180b7ef9e1e8ffd1347ee64a17167378890b6c8d7dabbd3"
+        },
+        {
+          "source": "impl/typescript/src/nwp/registry.ts",
+          "target": "src/nwp/registry.ts",
+          "sha256": "fb5a68382428bf74a96c44fd02fb4d7e7fb9da89f7d31a618ab0182bb476a308"
+        },
+        {
+          "source": "impl/typescript/src/nwp/reputation.ts",
+          "target": "src/nwp/reputation.ts",
+          "sha256": "92550b8d84f42ed6e54ab14068be565575d7d6d88ee882198e9b8e6e14163070"
+        },
+        {
+          "source": "impl/typescript/src/nwp/telemetry.ts",
+          "target": "src/nwp/telemetry.ts",
+          "sha256": "fbd8c1d758710021c5b9b0ad1dfca0efb3495ae2f97f060de861fb917a5dba93"
+        },
+        {
+          "source": "impl/typescript/src/setup.ts",
+          "target": "src/setup.ts",
+          "sha256": "166d4ab3fb15561e09cd9f6e59a77a781405502067e8ee2a9c694d572c6e7e83"
+        },
+        {
+          "source": "impl/typescript/tests/_rfc0002-keys.ts",
+          "target": "tests/_rfc0002-keys.ts",
+          "sha256": "4ace21a4198ab24a98c716156abac6f3fea8244e3fae245b3186485aa83a0971"
+        },
+        {
+          "source": "impl/typescript/tests/alpha17-portable-profiles.test.ts",
+          "target": "tests/alpha17-portable-profiles.test.ts",
+          "sha256": "494c0b0183d15a273e58d867b0f7467443f24fb7008c418f6f196a0bad22ab16"
+        },
+        {
+          "source": "impl/typescript/tests/alpha19-hardening.test.ts",
+          "target": "tests/alpha19-hardening.test.ts",
+          "sha256": "a9d247d900cbc6024e649a4f403c0caa6fcd116d887a0988abf3e3370a40c297"
+        },
+        {
+          "source": "impl/typescript/tests/alpha20-context-admission.test.ts",
+          "target": "tests/alpha20-context-admission.test.ts",
+          "sha256": "8eac6dd904cec1f9b409b3d43b9d6741dfa4ea0a28af493c2fe00a4c52f0a97b"
+        },
+        {
+          "source": "impl/typescript/tests/alpha20-context-bytes.test.ts",
+          "target": "tests/alpha20-context-bytes.test.ts",
+          "sha256": "03d1b48b9986abb83af3fe0f4eb27bebe74e431ed2f196a11a3ee37b5e4a9845"
+        },
+        {
+          "source": "impl/typescript/tests/alpha20-error-status.test.ts",
+          "target": "tests/alpha20-error-status.test.ts",
+          "sha256": "0a5295febe573944431103051d1d24f7e3e099a64cf522f2fef59f21b447a401"
+        },
+        {
+          "source": "impl/typescript/tests/alpha20-feature-wire-parser.test.ts",
+          "target": "tests/alpha20-feature-wire-parser.test.ts",
+          "sha256": "b12e39d21c218758d0a6f11ec1dc55402eeff72381b3c0d1218c6ab51445e86e"
+        },
+        {
+          "source": "impl/typescript/tests/alpha20-sqlite-replay.test.ts",
+          "target": "tests/alpha20-sqlite-replay.test.ts",
+          "sha256": "00fac1678b891affba341a3a4f48ed4cb6a03fc857625c977ab2a5a526f7e292"
+        },
+        {
+          "source": "impl/typescript/tests/bridge.test.ts",
+          "target": "tests/bridge.test.ts",
+          "sha256": "731d70a16667420381207ac76789f4e64e1c0d12be6017445e34c39bf2a34777"
+        },
+        {
+          "source": "impl/typescript/tests/cgn.test.ts",
+          "target": "tests/cgn.test.ts",
+          "sha256": "16d784e277586560a3d515d2c5f9b65a28a4cb4fc3bdd821bbacb1980ab381d4"
+        },
+        {
+          "source": "impl/typescript/tests/conformance-fixtures.ts",
+          "target": "tests/conformance-fixtures.ts",
+          "sha256": "6429bbe20598892c1af19bd3fe4f50b7162b2e32a03f79fd3ca4b3ba6c342d7b"
+        },
+        {
+          "source": "impl/typescript/tests/conformance.test.ts",
+          "target": "tests/conformance.test.ts",
+          "sha256": "9e554ea9cb38867e3206e748939405e7f62c2c2016cc3c5c78891220cedbb111"
+        },
+        {
+          "source": "impl/typescript/tests/core/anchor-cache.test.ts",
+          "target": "tests/core/anchor-cache.test.ts",
+          "sha256": "d392d463484a4427a32d90e1b27dbef68042448c1f9627d7f25c56eeb26786ca"
+        },
+        {
+          "source": "impl/typescript/tests/core/codec.test.ts",
+          "target": "tests/core/codec.test.ts",
+          "sha256": "e2b34bb650ef7caf316e652d7961f4fec1176c989d6aa43c467dd3eee7964f3f"
+        },
+        {
+          "source": "impl/typescript/tests/core/frame-registry.test.ts",
+          "target": "tests/core/frame-registry.test.ts",
+          "sha256": "faff58be23a0865a326418ffbdc620ebcf98bc6da89ea58fbe9f65f44fde48e5"
+        },
+        {
+          "source": "impl/typescript/tests/core/telemetry.test.ts",
+          "target": "tests/core/telemetry.test.ts",
+          "sha256": "7e80ab9b3ea98f130f029ef8a605b1a914dc7f176b3b3b489aeba44f35ad3d5d"
+        },
+        {
+          "source": "impl/typescript/tests/core.test.ts",
+          "target": "tests/core.test.ts",
+          "sha256": "9f86eaf6a63d79e86a08d352d0a25f7a41498ea9d04df8b7d3a9a4d5054f16b9"
+        },
+        {
+          "source": "impl/typescript/tests/daemon/observability.test.ts",
+          "target": "tests/daemon/observability.test.ts",
+          "sha256": "72fe2fdeaa890f759feca268d75136efcc3c7fa3c22413b72d3b6810354c0580"
+        },
+        {
+          "source": "impl/typescript/tests/error-status-codes.test.ts",
+          "target": "tests/error-status-codes.test.ts",
+          "sha256": "1a0b27822e6fb86b44b53a92ff98b96a6b9c98f88814aa8e44242f4b29555ac0"
+        },
+        {
+          "source": "impl/typescript/tests/fixtures/alpha20-replay-worker.mjs",
+          "target": "tests/fixtures/alpha20-replay-worker.mjs",
+          "sha256": "b5aa592cbe21be5230d3cbf8fa79108bc8a2b798011a395f1a283e731800bfae"
+        },
+        {
+          "source": "impl/typescript/tests/fixtures/conformance/ncp/binary_vector_payload_vectors.json",
+          "target": "tests/fixtures/conformance/ncp/binary_vector_payload_vectors.json",
+          "sha256": "169aff370962a43b18e8255aafbba02e657242acb84fd15336984b2fe1933c64"
+        },
+        {
+          "source": "impl/typescript/tests/llm-action-server.test.ts",
+          "target": "tests/llm-action-server.test.ts",
+          "sha256": "17b7f3156e58ee6bc2ead2b48dfe82bed61c193b47c1f6a3f274391d20528905"
+        },
+        {
+          "source": "impl/typescript/tests/llm-context-store.test.ts",
+          "target": "tests/llm-context-store.test.ts",
+          "sha256": "e8b077cf112e1b44554ad3110f17cc68b5eae7f68c0d783e02177db026c34596"
+        },
+        {
+          "source": "impl/typescript/tests/llm-context.test.ts",
+          "target": "tests/llm-context.test.ts",
+          "sha256": "5b28bac27308bf36b0f169100896df0d7256a284936ab4d3b5e05d52ede7f9b3"
+        },
+        {
+          "source": "impl/typescript/tests/memory-node-server.test.ts",
+          "target": "tests/memory-node-server.test.ts",
+          "sha256": "223346b288580b0a6588473407dca306464f127139466a1adb8ce4017424d1ce"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/diff-binary-bitset.test.ts",
+          "target": "tests/ncp/diff-binary-bitset.test.ts",
+          "sha256": "a2bf1c24508f6716b744a5167ed8858305995cbb0261bf8ea8486af75514e713"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/e2e-enc-reject.test.ts",
+          "target": "tests/ncp/e2e-enc-reject.test.ts",
+          "sha256": "bafee45e381fec1f4343a0103264bee036916f97c77fc35c626effe5e7c6655b"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/err-error-frame.test.ts",
+          "target": "tests/ncp/err-error-frame.test.ts",
+          "sha256": "e6a1cb735812ad94996a3866a7a809544ab3bb2fca3efbbd686357919bfe60f8"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/frames.test.ts",
+          "target": "tests/ncp/frames.test.ts",
+          "sha256": "f1a1015d36c267d465d75e43472b058f35947974876bc342e3e52b7b4e75f3a5"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/framing.test.ts",
+          "target": "tests/ncp/framing.test.ts",
+          "sha256": "3a09a4f13442379cfd4d5f676959beddcdc70c4e9fe8c39595c9f1dc5fd5f075"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/hello-frame.test.ts",
+          "target": "tests/ncp/hello-frame.test.ts",
+          "sha256": "c8d1742dac8b614e251d58d63c6f96ecd3fb15228eb2461bac381049cd1f8826"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/inline-anchor.test.ts",
+          "target": "tests/ncp/inline-anchor.test.ts",
+          "sha256": "5013e91fc1eb7ca307e70d070b6f4c57d24c0014c93d3edd56e968c723dafbfd"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/native-transport.test.ts",
+          "target": "tests/ncp/native-transport.test.ts",
+          "sha256": "2f691b0cb56ff8b99301442111d7db8bc8b1bbc198fcbebb841265ed16b38fa0"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/preamble.test.ts",
+          "target": "tests/ncp/preamble.test.ts",
+          "sha256": "d3201d8e1e847797592c1411ddc2fe6d14c7b463b1831a3dd1ae73f4e0b9990d"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/security.test.ts",
+          "target": "tests/ncp/security.test.ts",
+          "sha256": "feb848b5a967132dde22342fde3ba0388f8b9d9869ce25272f3f0a28adde7981"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/stream-window.test.ts",
+          "target": "tests/ncp/stream-window.test.ts",
+          "sha256": "ff240434c7c87eb575492b5927e3aaec43ef8a25d21ea07d0092ad93f0b04ea7"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/stream.test.ts",
+          "target": "tests/ncp/stream.test.ts",
+          "sha256": "09a4cc07ede8cc54e34b833c72eed103981221db0c1e6ef142c8fcfcbe27e10c"
+        },
+        {
+          "source": "impl/typescript/tests/ncp/version-negotiation.test.ts",
+          "target": "tests/ncp/version-negotiation.test.ts",
+          "sha256": "5ec6137cebf22c4bc01807cbc94d63d1d04829b5732d92278b5779c01fc7c2a2"
+        },
+        {
+          "source": "impl/typescript/tests/ncp-failover-connector.test.ts",
+          "target": "tests/ncp-failover-connector.test.ts",
+          "sha256": "605110cd10f4fc811d76719e56f9fb835c42c0247eddfe835843cd4777b92e97"
+        },
+        {
+          "source": "impl/typescript/tests/ndp-cluster.test.ts",
+          "target": "tests/ndp-cluster.test.ts",
+          "sha256": "aa859d0d0dc6836d42dc2b68df5ae68640366e9ac149059d1471b04c0bd47ebe"
+        },
+        {
+          "source": "impl/typescript/tests/ndp-registry-conformance.test.ts",
+          "target": "tests/ndp-registry-conformance.test.ts",
+          "sha256": "cd004f880e56b4c9cc16a6e5f99e340987456e13b9c4d4c655907cf81bba937d"
+        },
+        {
+          "source": "impl/typescript/tests/ndp.test.ts",
+          "target": "tests/ndp.test.ts",
+          "sha256": "597a0e19c685654f3a5195622c552286e3c0ce76197326f2aa88b8f4b76cf5e1"
+        },
+        {
+          "source": "impl/typescript/tests/nip/sqlite-ca-store.test.ts",
+          "target": "tests/nip/sqlite-ca-store.test.ts",
+          "sha256": "7932ff220cadc590d7eb570e9527b6de392fbc1493e01783bf57d552b1610bc8"
+        },
+        {
+          "source": "impl/typescript/tests/nip-acme-agent01.test.ts",
+          "target": "tests/nip-acme-agent01.test.ts",
+          "sha256": "1104380f8864262f6087948d35e5921cd59283bc2d5a88f372725cde0706ce85"
+        },
+        {
+          "source": "impl/typescript/tests/nip-ca-client.test.ts",
+          "target": "tests/nip-ca-client.test.ts",
+          "sha256": "be8be7577f530705b79321d88c50e73fdb2b57361720f56a2f10ee05e0bcf226"
+        },
+        {
+          "source": "impl/typescript/tests/nip-ca-service.test.ts",
+          "target": "tests/nip-ca-service.test.ts",
+          "sha256": "f0a93086285a39c679b9d4ebfecc2a4e4d5933748275668a7fbec359dd53b9de"
+        },
+        {
+          "source": "impl/typescript/tests/nip-phase3.test.ts",
+          "target": "tests/nip-phase3.test.ts",
+          "sha256": "8f4c0b5a02027218ed4dbd78a2f8a7341d9d1721e0887be33d8d8b8d61e5898a"
+        },
+        {
+          "source": "impl/typescript/tests/nip-reputation.test.ts",
+          "target": "tests/nip-reputation.test.ts",
+          "sha256": "e5d1f005627165e3845327d024bbc0cf96732c3f15fb65a89e3b3a8cb06c4055"
+        },
+        {
+          "source": "impl/typescript/tests/nip-verifier.test.ts",
+          "target": "tests/nip-verifier.test.ts",
+          "sha256": "3662ff180423e9bd257f8bbefbe251cac79c3679084403fd377f7a42aed20f5c"
+        },
+        {
+          "source": "impl/typescript/tests/nip-x509.test.ts",
+          "target": "tests/nip-x509.test.ts",
+          "sha256": "c2c5445ba9408d3605b0e901c4133533e2086ac5bb52b774b3e8703e1aa631d5"
+        },
+        {
+          "source": "impl/typescript/tests/nip.test.ts",
+          "target": "tests/nip.test.ts",
+          "sha256": "97c3bff753d344095856a5856e7248e6ce0e5c79dacfc1e7c6b72c67c36b7647"
+        },
+        {
+          "source": "impl/typescript/tests/nop-cluster-delegation.test.ts",
+          "target": "tests/nop-cluster-delegation.test.ts",
+          "sha256": "d0dd26fff1d290c5c5ea515308de547706d9d2fc402e0de76b288063f1888bfe"
+        },
+        {
+          "source": "impl/typescript/tests/nop-engine.test.ts",
+          "target": "tests/nop-engine.test.ts",
+          "sha256": "e6ec8c87866c540ec5d52c631b490bd86b7eb74d8720607784dd8e0ead901e7a"
+        },
+        {
+          "source": "impl/typescript/tests/nop-orchestrator.test.ts",
+          "target": "tests/nop-orchestrator.test.ts",
+          "sha256": "b6f6bf4103bd013aaf9837a2bc8ed4f18324bcce907e7ba3fd000200433ac2e0"
+        },
+        {
+          "source": "impl/typescript/tests/nop-portable-profile.test.ts",
+          "target": "tests/nop-portable-profile.test.ts",
+          "sha256": "0fadffaaaeda3ebe6e8e98f6afd3b421befc4a790bfcd13d6c44d78a75cdf0fd"
+        },
+        {
+          "source": "impl/typescript/tests/nop.test.ts",
+          "target": "tests/nop.test.ts",
+          "sha256": "913e2d18e4af344944e4a1df9fd00d0830905eb3adf4ef2a4422bb01bb2b901b"
+        },
+        {
+          "source": "impl/typescript/tests/nwp/anchor-client.test.ts",
+          "target": "tests/nwp/anchor-client.test.ts",
+          "sha256": "0c23748ab4d0cfbddc59185c80fac3e4db9302951271f1d9d6fc80c99f848114"
+        },
+        {
+          "source": "impl/typescript/tests/nwp/filter-sql.test.ts",
+          "target": "tests/nwp/filter-sql.test.ts",
+          "sha256": "0c4c98505eea96eac77ff8a678bfc2e8034babf88d2fcf758d95a6c8b69eef9a"
+        },
+        {
+          "source": "impl/typescript/tests/nwp/sql-provider.test.ts",
+          "target": "tests/nwp/sql-provider.test.ts",
+          "sha256": "80ab2ce2261727e4dae72e855907efae02dad6df8c8c2c6a32ef052f76e1a6d1"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-action-server.test.ts",
+          "target": "tests/nwp-action-server.test.ts",
+          "sha256": "c9d74a342edb18ba5085928f88fef318045beecdfdf6a5b1a1448b46bacd205e"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-anchor-failover.test.ts",
+          "target": "tests/nwp-anchor-failover.test.ts",
+          "sha256": "63c820d9f5b9d8dd2cb3a655dce446cff255150a8eb51aaf5a9d697726f809d2"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-anchor-server.test.ts",
+          "target": "tests/nwp-anchor-server.test.ts",
+          "sha256": "a577a15b030a259e79bfa07438109ce3be5f31c7560aaf6b1b8aba221dce21e6"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-bridge-inbound.test.ts",
+          "target": "tests/nwp-bridge-inbound.test.ts",
+          "sha256": "29f6e5eaf7b3d9ae43c4592490f7002a524bbfc427fbea76d5af1d0d04ad4567"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-complex-server.test.ts",
+          "target": "tests/nwp-complex-server.test.ts",
+          "sha256": "56513410ea437a360d9069dc7d2921c8594ce411d1e8cb8a90ca5dab10e91406"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-memory-server.test.ts",
+          "target": "tests/nwp-memory-server.test.ts",
+          "sha256": "46dac3e119e23b65e1582e1ce7baa09f0fa45b8d5cafda3142865db0d769a931"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-native-server.test.ts",
+          "target": "tests/nwp-native-server.test.ts",
+          "sha256": "811ac24c8703aabe0691357e4e0f4be5df13ade1eff8eafcb1730e69f00619cb"
+        },
+        {
+          "source": "impl/typescript/tests/nwp-portable-profile.test.ts",
+          "target": "tests/nwp-portable-profile.test.ts",
+          "sha256": "986011b4d77457a410e10eea936fb6d9f7903a944651d2be54ef77fd6ae0cb1c"
+        },
+        {
+          "source": "impl/typescript/tests/nwp.test.ts",
+          "target": "tests/nwp.test.ts",
+          "sha256": "a0a1eb02048d838394d350d329bc9cd4f2032411ea31ab9a0fb68e191c5dd508"
+        },
+        {
+          "source": "impl/typescript/tests/reputation-policy.test.ts",
+          "target": "tests/reputation-policy.test.ts",
+          "sha256": "d27202a4e38fa4d387c00295649185301d05029df4cc763ea7bd10f2c6acc067"
+        },
+        {
+          "source": "impl/typescript/tests/version.test.ts",
+          "target": "tests/version.test.ts",
+          "sha256": "01cd7acae9e3b6bcd29008600a89c8ef122f820c118bca5ada13af6efd6e9604"
+        },
+        {
+          "source": "impl/typescript/tsconfig.json",
+          "target": "tsconfig.json",
+          "sha256": "b907addae8842b7053975cb46cc45c7f1c7f9932473c35c49d88cb1dc3b43cc2"
+        },
+        {
+          "source": "impl/typescript/tsup.config.ts",
+          "target": "tsup.config.ts",
+          "sha256": "c349a423f906a6b73115e69c6a9bfc2864f833912dff418770a3f8f19c0c104c"
+        },
+        {
+          "source": "impl/typescript/vitest.config.ts",
+          "target": "vitest.config.ts",
+          "sha256": "88b6f8e47be448f1c62b937f6beb9a69be2cff1cb57e2d58da64253b7badbd43"
+        }
+      ]
+    },
+    {
+      "id": "rust",
+      "repository": "labacacia/NPS-SDK-Rust",
+      "directory": "NPS-SDK-Rust",
+      "file_count": 230,
+      "tree_sha256": "ee59b3e309b5f3f895c266965c130930c163c6a4573840490f718c8cb433ac4b",
+      "files": [
+        {
+          "source": "impl/rust/CHANGELOG.cn.md",
+          "target": "CHANGELOG.cn.md",
+          "sha256": "e0e6aeee353c1318fe9aaabb530b5c66f5ad8f454235867942e0ee31858fe993"
+        },
+        {
+          "source": "impl/rust/CHANGELOG.md",
+          "target": "CHANGELOG.md",
+          "sha256": "74009daa2852de4ab237aa52149da943267749da071f8f43988de34c2703e443"
+        },
+        {
+          "source": "impl/rust/Cargo.lock",
+          "target": "Cargo.lock",
+          "sha256": "735171512a59167e6873888f0b8fdc995882a58a7bc8f89ae8b8494de081aa3a"
+        },
+        {
+          "source": "impl/rust/Cargo.toml",
+          "target": "Cargo.toml",
+          "sha256": "f07b1669b0d4a4dd0d01fdcd47c798b27d8fe9511590b3d0d8a77e6774af88ae"
+        },
+        {
+          "source": "LICENSE",
+          "target": "LICENSE",
+          "sha256": "1fca136d219d6cbc3fccc60fab14d6fdc49e4af9e94fd001bb860e82b423d819"
+        },
+        {
+          "source": "NOTICE",
+          "target": "NOTICE",
+          "sha256": "ce72dd233db1eb0e369dcba2b764dcca3f9f72f65683cb7f49c3eeccf5f9d48f"
+        },
+        {
+          "source": "impl/rust/README.cn.md",
+          "target": "README.cn.md",
+          "sha256": "88b028b526ece186ddb0d2da031f09cb8ec83378c84f4bc8d5c97ae4f89d0025"
+        },
+        {
+          "source": "impl/rust/README.md",
+          "target": "README.md",
+          "sha256": "a9a95451c5899675b9d5f75caf309a80abb3ab7211f35b2a89ff8a645c986270"
+        },
+        {
+          "source": "impl/rust/nps-conformance/Cargo.toml",
+          "target": "nps-conformance/Cargo.toml",
+          "sha256": "43e0d707d304dc2bb1eeb66bf1a6760bd4792ea5d22b212aec5e15d3b8700939"
+        },
+        {
+          "source": "impl/rust/nps-conformance/src/alpha19.rs",
+          "target": "nps-conformance/src/alpha19.rs",
+          "sha256": "be7fb8eb956a17a2cf535a616a24e0528c1ae5f8951a2f9df331b9eaa5982174"
+        },
+        {
+          "source": "impl/rust/nps-conformance/src/lib.rs",
+          "target": "nps-conformance/src/lib.rs",
+          "sha256": "132e32cf9430b1edfc903ad507b2612b6b60fc157a3b610881796b83d2af13c1"
+        },
+        {
+          "source": "impl/rust/nps-conformance/tests/alpha19_hardening.rs",
+          "target": "nps-conformance/tests/alpha19_hardening.rs",
+          "sha256": "1acb131b9ac30dee4f357dd862bc9d8a283115d0352d8bf32b8c40ee67a192a8"
+        },
+        {
+          "source": "impl/rust/nps-core/Cargo.toml",
+          "target": "nps-core/Cargo.toml",
+          "sha256": "0c3d9ad35ff73e74d4c074425f22e02e9fc376023b3a5741844e92cf745dfd48"
+        },
+        {
+          "source": "impl/rust/nps-core/src/alpha20.rs",
+          "target": "nps-core/src/alpha20.rs",
+          "sha256": "0b0c9700b79c0ae289d964c92d16d413a4393f1160da9ad9c33b4487ef87f80b"
+        },
+        {
+          "source": "impl/rust/nps-core/src/cache.rs",
+          "target": "nps-core/src/cache.rs",
+          "sha256": "c40aca7d06b2d1ca063286c36cf620d29ad3e399779186932d7ddd1bb9e32527"
+        },
+        {
+          "source": "impl/rust/nps-core/src/codec.rs",
+          "target": "nps-core/src/codec.rs",
+          "sha256": "b731f00cc09ac33379f4ba1cd24eaa63df7bdc991f5f6745419f040078553e81"
+        },
+        {
+          "source": "impl/rust/nps-core/src/error.rs",
+          "target": "nps-core/src/error.rs",
+          "sha256": "6d4a214ee798e8a17f5ec148071deff9e4ede45e2eebe65b70aca28094f827ba"
+        },
+        {
+          "source": "impl/rust/nps-core/src/frames.rs",
+          "target": "nps-core/src/frames.rs",
+          "sha256": "b3bd659db0c7abc694ce986e5cd1dfd09f95a31d87bf7e11423b67aa0933f604"
+        },
+        {
+          "source": "impl/rust/nps-core/src/lib.rs",
+          "target": "nps-core/src/lib.rs",
+          "sha256": "ce104f83870953d7758562b0a3d482cde59b70de316ec5931cc7188cd2468e29"
+        },
+        {
+          "source": "impl/rust/nps-core/src/observability.rs",
+          "target": "nps-core/src/observability.rs",
+          "sha256": "99281ab3afa1f5555c1601ee99d34f296e38f313a8853d37b9652105a2b6accd"
+        },
+        {
+          "source": "impl/rust/nps-core/src/registry.rs",
+          "target": "nps-core/src/registry.rs",
+          "sha256": "cf077ca9e604a2c545b649c6e3f99314591cedea6cb1671c2d1202e34bd25940"
+        },
+        {
+          "source": "impl/rust/nps-core/src/status_codes.rs",
+          "target": "nps-core/src/status_codes.rs",
+          "sha256": "6bb42ab772b005fbc89124f8e87f52c5a44783e0a856cbbbd4c53c4654ab90f2"
+        },
+        {
+          "source": "impl/rust/nps-core/src/telemetry.rs",
+          "target": "nps-core/src/telemetry.rs",
+          "sha256": "c90667886994739941839b522a14e4e097c1551b4f1571cadee7e6e125aafc74"
+        },
+        {
+          "source": "impl/rust/nps-core/tests/core_tests.rs",
+          "target": "nps-core/tests/core_tests.rs",
+          "sha256": "b44b0fae60cc6676a5ffe045fa55e4394ec6d97fdd78cc56cd032e10eaa9615e"
+        },
+        {
+          "source": "impl/rust/nps-core/tests/fixtures/conformance/ncp/binary_vector_payload_vectors.json",
+          "target": "nps-core/tests/fixtures/conformance/ncp/binary_vector_payload_vectors.json",
+          "sha256": "169aff370962a43b18e8255aafbba02e657242acb84fd15336984b2fe1933c64"
+        },
+        {
+          "source": "impl/rust/nps-ncp/Cargo.toml",
+          "target": "nps-ncp/Cargo.toml",
+          "sha256": "8646e59a22bc9cf31adc8c6d281833c3eef67841f413111e0f4b4e0ff8a3da64"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/encoding_policy.rs",
+          "target": "nps-ncp/src/encoding_policy.rs",
+          "sha256": "e72e9a36a21c086e8e01b87ed3d3853c35af3918d8862545cb7f474522e0ff4b"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/error_codes.rs",
+          "target": "nps-ncp/src/error_codes.rs",
+          "sha256": "553fef822e271f091c96d6f79d305526ad084589a9d479e4878d89a75d6086ee"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/failover.rs",
+          "target": "nps-ncp/src/failover.rs",
+          "sha256": "b0901468ba35d648b73088a5db64ea85fab4fe1f44c35024d775da026628c862"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/handshake_profile.rs",
+          "target": "nps-ncp/src/handshake_profile.rs",
+          "sha256": "0e65c03c036de9cdfdc9923951497e73c723fc0b13dd3e185ee8503a2bba028f"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/lib.rs",
+          "target": "nps-ncp/src/lib.rs",
+          "sha256": "600d4b0f196ca845044680576571e36ca059ec92de7bf4c8bec8dab67ca0e30e"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/patch_format.rs",
+          "target": "nps-ncp/src/patch_format.rs",
+          "sha256": "e146c1dce8798a06d05910257c2041a2016d887201cbe9817914ce76c0c2725d"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/preamble.rs",
+          "target": "nps-ncp/src/preamble.rs",
+          "sha256": "90cb37daa2326fd92d343871edef61a850ab34b788c579eef605c42910c09ed9"
+        },
+        {
+          "source": "impl/rust/nps-ncp/src/transport.rs",
+          "target": "nps-ncp/src/transport.rs",
+          "sha256": "d09fc79c93e18973cbda31e8a07a08ef264f26eec7cf9e62e397931765fd4982"
+        },
+        {
+          "source": "impl/rust/nps-ncp/tests/alpha17_handshake_profile.rs",
+          "target": "nps-ncp/tests/alpha17_handshake_profile.rs",
+          "sha256": "fa13065b2a36c8c9278df85a00f4f13dbec346ef635a252343790ace29628384"
+        },
+        {
+          "source": "impl/rust/nps-ncp/tests/native_transport_tests.rs",
+          "target": "nps-ncp/tests/native_transport_tests.rs",
+          "sha256": "04e6787b2322d58725c08ff35e283392e7fe50b2a651c53c15b53eb73e96d88f"
+        },
+        {
+          "source": "impl/rust/nps-ncp/tests/ncp_tests.rs",
+          "target": "nps-ncp/tests/ncp_tests.rs",
+          "sha256": "5ade7d6e6b0065205b474d944a7b544ace11c11dfa2ca9fe8558d0d00e628e84"
+        },
+        {
+          "source": "impl/rust/nps-ncp/tests/preamble_tests.rs",
+          "target": "nps-ncp/tests/preamble_tests.rs",
+          "sha256": "c76bdb2576f4c666a48f4f675df2c82fd8bcc12130f7b93825e4f14a126cd8a1"
+        },
+        {
+          "source": "impl/rust/nps-ndp/Cargo.toml",
+          "target": "nps-ndp/Cargo.toml",
+          "sha256": "d2ab9722ab454d014631d554802d08eef7e286684cc8403e3517b54632453562"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/dns_txt.rs",
+          "target": "nps-ndp/src/dns_txt.rs",
+          "sha256": "7079b2cdf4ddd49c9740403b50060c8f02f30d43cb587fd4d95c34f8d53940b4"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/error_codes.rs",
+          "target": "nps-ndp/src/error_codes.rs",
+          "sha256": "eeb7c07be3fa2484015440ffeda40067628bc269e71716c12e61d0f681ee5051"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/federation.rs",
+          "target": "nps-ndp/src/federation.rs",
+          "sha256": "a447826b0577fd746105239a3ec31aa29c337e6928beaf733c5b5de72d63e81c"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/frames.rs",
+          "target": "nps-ndp/src/frames.rs",
+          "sha256": "604557f8cef8d6d3be3cd59ec815a29d2fa72f7d23dd3b353a3ec3104edc1e87"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/lib.rs",
+          "target": "nps-ndp/src/lib.rs",
+          "sha256": "e8e444b516f9d0f8202b9f7e7158078cefee8386fa7ceb2f0feb95a7c6be2ed3"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/registry.rs",
+          "target": "nps-ndp/src/registry.rs",
+          "sha256": "d61ad47daa31a993c668b644cb59c73ea5eaeea3f750e4ae3d37232d478058cc"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/registry_profile.rs",
+          "target": "nps-ndp/src/registry_profile.rs",
+          "sha256": "645ef63dab5cea11c10a67b7aa3b8b4727fa20bf9b5e175eee44b222721fe4bf"
+        },
+        {
+          "source": "impl/rust/nps-ndp/src/validator.rs",
+          "target": "nps-ndp/src/validator.rs",
+          "sha256": "07f0b43c8af75473084bb43ad66dff697e318f26495349d7903b1f6cdfd12390"
+        },
+        {
+          "source": "impl/rust/nps-ndp/tests/ndp_cluster_tests.rs",
+          "target": "nps-ndp/tests/ndp_cluster_tests.rs",
+          "sha256": "c3f26d4a9014d32b3dd31c187c13e2d0b6342bbd536d0e1c7904b03fa0678557"
+        },
+        {
+          "source": "impl/rust/nps-ndp/tests/ndp_tests.rs",
+          "target": "nps-ndp/tests/ndp_tests.rs",
+          "sha256": "c4e3919c0dcbc8c80e0332ffa0cb302345956f0c968c96b4ec33eaca4df8da96"
+        },
+        {
+          "source": "impl/rust/nps-ndp/tests/registry_profile_tests.rs",
+          "target": "nps-ndp/tests/registry_profile_tests.rs",
+          "sha256": "e7e019951ae88355ad06e3b1927e47a03e8406af41b7943eaa6c7c941fde7352"
+        },
+        {
+          "source": "impl/rust/nps-nip/Cargo.toml",
+          "target": "nps-nip/Cargo.toml",
+          "sha256": "4fc94ba8c0b0d7f4892ec4c94a82e47573b187f63cf2d216c3ef5269960c60b1"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/client.rs",
+          "target": "nps-nip/src/acme/client.rs",
+          "sha256": "0811e383a3339c66707003fbe5dd5b9875145d100441d721f112ed6563c5c4c8"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/jws.rs",
+          "target": "nps-nip/src/acme/jws.rs",
+          "sha256": "808fdefa5e4fd1c06fad8eea3221df5c357a0bb7feddedbd6b017f2e222a0c3c"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/messages.rs",
+          "target": "nps-nip/src/acme/messages.rs",
+          "sha256": "dc673663cd8a98e507439b3c78c5911cdea464a7d4526b3fc4085cd38e34cac1"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/mod.rs",
+          "target": "nps-nip/src/acme/mod.rs",
+          "sha256": "5fb7cb8c3f77848c8e78326fe3c338f1dcfc57ef3d29a184c6c4155ee114dd39"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/server.rs",
+          "target": "nps-nip/src/acme/server.rs",
+          "sha256": "15a9041e786af6540a46abb53de1656f43f79f9391076df7be554e467c5e08b7"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/acme/wire.rs",
+          "target": "nps-nip/src/acme/wire.rs",
+          "sha256": "97840db1d0c41c6516fc6be7a4fea4cdca1b9fb1e919ad3dcb965a1abb417bc6"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/assurance_level.rs",
+          "target": "nps-nip/src/assurance_level.rs",
+          "sha256": "d88c79925ec1ddf0341fb833fd3b777de10c74f5df532276f1983b3cee445edf"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/error.rs",
+          "target": "nps-nip/src/ca/error.rs",
+          "sha256": "8c63f594a9253e2859df1511d8474d0e901cb12f961effcdb45c9992d735f193"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/group_jws.rs",
+          "target": "nps-nip/src/ca/group_jws.rs",
+          "sha256": "9f9611db8e90dab2731435c10edaf403115cfc52f5d0a6131fae19a89b6a04e9"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/mod.rs",
+          "target": "nps-nip/src/ca/mod.rs",
+          "sha256": "fc990219510c32875d91d44b1757e6b8892d02fe8897ab233e479e4f412597bc"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/options.rs",
+          "target": "nps-nip/src/ca/options.rs",
+          "sha256": "b18c5471742573c5f1e828f95f2af54c0785a9cc5a5e861a5c7899fb43b2a3d8"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/ra.rs",
+          "target": "nps-nip/src/ca/ra.rs",
+          "sha256": "ed3b4d34e8544e7abeba6cae30931f50bd286539e569b277e1d9b0d575ef3a3f"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/router.rs",
+          "target": "nps-nip/src/ca/router.rs",
+          "sha256": "1e0b3141e71791066ef94fbf92ae582a055d489daa54fe9b0fb45692f4fbdf02"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/service.rs",
+          "target": "nps-nip/src/ca/service.rs",
+          "sha256": "61665dd68bee1d84341cf8a739c8b007a18c5811a61873a394da0e39348c068a"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/signer.rs",
+          "target": "nps-nip/src/ca/signer.rs",
+          "sha256": "b10b260d1a179f5a7ab184f45db1b4c50482d54e4858089f1fd2f25e0fb74e47"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/sql_store.rs",
+          "target": "nps-nip/src/ca/sql_store.rs",
+          "sha256": "5f4089241d8619ff0c5f81dde302f10d9eca15df18fb00ec128924439e180e49"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca/store.rs",
+          "target": "nps-nip/src/ca/store.rs",
+          "sha256": "801df9af49efe7289dd197f63dee1ccef58aa13439b4ad5852fdafd043f89597"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/ca_client.rs",
+          "target": "nps-nip/src/ca_client.rs",
+          "sha256": "023132a655eb553dde4b981bb1d21294021eb772447f2199344d2471614cd515"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/cert_format.rs",
+          "target": "nps-nip/src/cert_format.rs",
+          "sha256": "3765b1a70404ca0afbbe5209ebeb425360ca71da6b3396e62cf096d2f7768c96"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/error_codes.rs",
+          "target": "nps-nip/src/error_codes.rs",
+          "sha256": "b2002bcfc57ce8320c628df21acf12d69f6298cc40631c0d57eaa69400997bc9"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/frames.rs",
+          "target": "nps-nip/src/frames.rs",
+          "sha256": "d8924e92402fa738a5205f722454e7021389777510e37ca18d1be5165f820da6"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/identity.rs",
+          "target": "nps-nip/src/identity.rs",
+          "sha256": "0a3869b865a0d0854f3b91f09fdde709cee1e854915fa933db9e127139f6364a"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/lib.rs",
+          "target": "nps-nip/src/lib.rs",
+          "sha256": "d48860c799f43064907ba4adaea0f9d1862934f7843e6d29bbc93f05e0390429"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/phase3.rs",
+          "target": "nps-nip/src/phase3.rs",
+          "sha256": "ec60992f9497d7c6eaca527f68a4c31ed277a0cb4ffbd0a5fd4cc7a34c7060ba"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/reputation.rs",
+          "target": "nps-nip/src/reputation.rs",
+          "sha256": "f211c3ba0f40ca617db60f6c877d3109ae66ecea74888f698208570c74359682"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/revocation_policy.rs",
+          "target": "nps-nip/src/revocation_policy.rs",
+          "sha256": "44c4c77cbfc95bdfacea263fc593e25c46968fd3d7d616cedf0908d8acb70ede"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/trust_validator.rs",
+          "target": "nps-nip/src/trust_validator.rs",
+          "sha256": "6b744131d2e73e239724ad0c60dfc917cbb568606190b4e4dc84f085eebde3ed"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/verifier.rs",
+          "target": "nps-nip/src/verifier.rs",
+          "sha256": "faa8cf3051f7185e786a2c1c4679eff57108020d5dd40f42ef32f86b4e8bdafb"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/x509/builder.rs",
+          "target": "nps-nip/src/x509/builder.rs",
+          "sha256": "ca15cde344b1c7fdfeb11621f507fca4f877d8eb00f5cb99ea160b8305799b2a"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/x509/mod.rs",
+          "target": "nps-nip/src/x509/mod.rs",
+          "sha256": "c77595b7385559ab4561fa53a096619dc406d7708ef14e64bd69cb0a7ee0f99f"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/x509/oids.rs",
+          "target": "nps-nip/src/x509/oids.rs",
+          "sha256": "845c0f1e0ecbf7621020e4faf4aa832df695b69e3b1119d1976490bfb6345aaf"
+        },
+        {
+          "source": "impl/rust/nps-nip/src/x509/verifier.rs",
+          "target": "nps-nip/src/x509/verifier.rs",
+          "sha256": "c99d2ce1845fc67cf86a95add6b7e874d8bacfe61cda6505d75b814a131a9e3f"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/alpha17_portable_profiles.rs",
+          "target": "nps-nip/tests/alpha17_portable_profiles.rs",
+          "sha256": "451f796249a8631e89069247f87c0f10d297f07ce7bde86c24750ed970b42a76"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/ca_client_tests.rs",
+          "target": "nps-nip/tests/ca_client_tests.rs",
+          "sha256": "cb4fb53aa4f486937ad0d691fd54c2ee68ec4e18c68276cf98ed883f365c9c05"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/ca_service_tests.rs",
+          "target": "nps-nip/tests/ca_service_tests.rs",
+          "sha256": "12cd3c98ebd871fb0283cb7cc66918f645c28e662f4ced7299910b77f88ac0ac"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/nip_acme_agent01_tests.rs",
+          "target": "nps-nip/tests/nip_acme_agent01_tests.rs",
+          "sha256": "84119cfa109a3e1ef42ff9d5d20adf6f00ba5a83c25d2135f89b9a7c99b2bcc6"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/nip_phase3_tests.rs",
+          "target": "nps-nip/tests/nip_phase3_tests.rs",
+          "sha256": "758522b53576991557e4bc113b1336322b9a541399eb481a1b4303ed360b7739"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/nip_tests.rs",
+          "target": "nps-nip/tests/nip_tests.rs",
+          "sha256": "b0306000795c739f1814786224cd94e383c51f4382cb1cc8a1703399ebfd3d20"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/nip_verifier_tests.rs",
+          "target": "nps-nip/tests/nip_verifier_tests.rs",
+          "sha256": "c2eb64d13e980371932a8339f6c04619526aebbfb0fd487aeb7cf209dc5ba56c"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/nip_x509_tests.rs",
+          "target": "nps-nip/tests/nip_x509_tests.rs",
+          "sha256": "eab6620199a49e3108bde9824e24aa3625701a666ba81d3c3f30645aeaf62825"
+        },
+        {
+          "source": "impl/rust/nps-nip/tests/reputation_tests.rs",
+          "target": "nps-nip/tests/reputation_tests.rs",
+          "sha256": "3a477e33f91149e5ca21e5a1e879869dee1e7cec2d979acc8217a471a2753926"
+        },
+        {
+          "source": "impl/rust/nps-nop/Cargo.toml",
+          "target": "nps-nop/Cargo.toml",
+          "sha256": "fc405a06474dd57f9904abdb917efdd4cfc169675e64e2ab8e961aecc3be7cfe"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/aggregator.rs",
+          "target": "nps-nop/src/aggregator.rs",
+          "sha256": "6cf52c66e186025ed4a084010655b12ced9b66f616bdb28c19289b80252add2d"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/callback.rs",
+          "target": "nps-nop/src/callback.rs",
+          "sha256": "03aea19399e7441387f7643a8f25b82266b69604bc6401afca166f2109fd328e"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/client.rs",
+          "target": "nps-nop/src/client.rs",
+          "sha256": "cbfce9eabe7897dae77d3421990c0c47d981a595262c92b203fa508dbf7dcdbe"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/cluster_delegation.rs",
+          "target": "nps-nop/src/cluster_delegation.rs",
+          "sha256": "c5be377cbe5b1856f39da9b1d92eb6b4f9dace6dd90f3fcf34c47d7209558210"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/condition.rs",
+          "target": "nps-nop/src/condition.rs",
+          "sha256": "794b92a8e168dc9ede8776d8a45b90661afab1e661ae59fd993167d2d5a9bdcf"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/constants.rs",
+          "target": "nps-nop/src/constants.rs",
+          "sha256": "d8876f90ef7a269f2fb6b29f7922e1c160f707afa59c727e195b2473f3c5482c"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/error_codes.rs",
+          "target": "nps-nop/src/error_codes.rs",
+          "sha256": "5f2ed80bd736b43beb2f17acbb75da54986cc292e74bd9c3b07e7fa4886474f6"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/frames.rs",
+          "target": "nps-nop/src/frames.rs",
+          "sha256": "efadb04f0581a199884ca98facbe5c4ef6e4e1ad832728e5ed3c0c64c2fbbad1"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/input_mapper.rs",
+          "target": "nps-nop/src/input_mapper.rs",
+          "sha256": "3abd7fbb742f3a2fd91fcc517353a871375d7e019144aa23e6ef4eb99b189d62"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/lib.rs",
+          "target": "nps-nop/src/lib.rs",
+          "sha256": "ae85410e16a5d3e3a590e7bda7e15ea7680904a97b999b9c781bc89cdabf2fc4"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/models.rs",
+          "target": "nps-nop/src/models.rs",
+          "sha256": "a48d7739c95d278ed2b68b961a18f0376d84fc2e3fe2d619c4948078f6d40287"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/options.rs",
+          "target": "nps-nop/src/options.rs",
+          "sha256": "208c51a6b2648715d966cd7a7c7087515075d2cce8957abc525347bc56abc96b"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/orch_models.rs",
+          "target": "nps-nop/src/orch_models.rs",
+          "sha256": "0b9a0131cbfa247e3bda520aec75fd6565299a44fc2c6860782fef6c3edb934d"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/orchestrator.rs",
+          "target": "nps-nop/src/orchestrator.rs",
+          "sha256": "0cfa9591519bb117c5c170d51aeccac7fa5a8df419c21275f20403e5099fb166"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/portable_profile.rs",
+          "target": "nps-nop/src/portable_profile.rs",
+          "sha256": "1b10d183164fc4216cb6087d91b543499c58c8fd41e259be5c2cb3bb138c3fc9"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/result.rs",
+          "target": "nps-nop/src/result.rs",
+          "sha256": "280ca2aa9e38be3b13eb6b8ac79de38a66aff703979390075e031c7bb3b876da"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/store.rs",
+          "target": "nps-nop/src/store.rs",
+          "sha256": "ad2c8e2e3c3485a1986e0e81cbe6a2a1b8450daa17b372aaf0cc01c32ab5b918"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/telemetry.rs",
+          "target": "nps-nop/src/telemetry.rs",
+          "sha256": "e760b25ff4b11febf5efc9517c54a32ccd2f25850bb0cc4c3973ff324b2ac8c5"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/validation.rs",
+          "target": "nps-nop/src/validation.rs",
+          "sha256": "0c96f21cfb7da3b277a4a0f1ecb508f7fcb53a9ff1c605b9c78035027ba5c5e5"
+        },
+        {
+          "source": "impl/rust/nps-nop/src/worker.rs",
+          "target": "nps-nop/src/worker.rs",
+          "sha256": "bd03613598408be1c2b37845c9056625100803441f7df6076a4f29ecb74aba68"
+        },
+        {
+          "source": "impl/rust/nps-nop/tests/nop_tests.rs",
+          "target": "nps-nop/tests/nop_tests.rs",
+          "sha256": "4683904fb26f8fa081dae35e5d27a8805cccd394d781419bc97ad6fcb3b1bbdc"
+        },
+        {
+          "source": "impl/rust/nps-nop/tests/orchestrator_tests.rs",
+          "target": "nps-nop/tests/orchestrator_tests.rs",
+          "sha256": "917b7223b1a662f6e58ee2336075bb4e939f3e0d78d6a00011f6ee8c58bd2f96"
+        },
+        {
+          "source": "impl/rust/nps-nop/tests/portable_profile_tests.rs",
+          "target": "nps-nop/tests/portable_profile_tests.rs",
+          "sha256": "dfa4f376be3a17e82c561e2d11e0b06f4409dab01bab8ae66237dce9b6ee05b5"
+        },
+        {
+          "source": "impl/rust/nps-nwp/Cargo.toml",
+          "target": "nps-nwp/Cargo.toml",
+          "sha256": "842cd815110e748d9a98ee8a9aa5cf637ce7442a70489e69ee6dc7521bfef855"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/action_server.rs",
+          "target": "nps-nwp/src/action_server.rs",
+          "sha256": "21e5b515883ad9566eed036a3dba122900462ae4c4f1ff371cdacfac470f3ce6"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/anchor_client.rs",
+          "target": "nps-nwp/src/anchor_client.rs",
+          "sha256": "26091e72b179d133ddfa95efe5d08f771a2b7b1001ccfbec4f391970fcd563d0"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/anchor_fence.rs",
+          "target": "nps-nwp/src/anchor_fence.rs",
+          "sha256": "9f7d970d0021d9dd8b5554ad666129cf31da29450f38e4ffc66d8109c9cd016d"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/anchor_server.rs",
+          "target": "nps-nwp/src/anchor_server.rs",
+          "sha256": "0288806103b999cf82df3723d8cebdb9c9370f7ac4c4c0d993e508f515a02a28"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge.rs",
+          "target": "nps-nwp/src/bridge.rs",
+          "sha256": "994385a18a19a453e2f8af6e947430ccfe87421f29df98afd2a45052d5ccdcad"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/a2a.rs",
+          "target": "nps-nwp/src/bridge_inbound/a2a.rs",
+          "sha256": "29b039fc4494bc806e6e92dd7c1d79b2cac70e912817697f76844ab92b290dd6"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/backend.rs",
+          "target": "nps-nwp/src/bridge_inbound/backend.rs",
+          "sha256": "18c070fd0f31b735be88c921b1da9c7d9c0adf10729d007643a2b2639562acf3"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/error_map.rs",
+          "target": "nps-nwp/src/bridge_inbound/error_map.rs",
+          "sha256": "dcae539f0b3a761891a516a791959e53517c3f39387f8777b1c95ca740eca82e"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/grpc.rs",
+          "target": "nps-nwp/src/bridge_inbound/grpc.rs",
+          "sha256": "7c4092b353b841e4e585c670aca64ad3134052fac216046ecdfb9f3edbee5bfc"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/jsonrpc.rs",
+          "target": "nps-nwp/src/bridge_inbound/jsonrpc.rs",
+          "sha256": "86e5a753bbf03b112ad5fb076537dc393e2f8d810a1112980b5a621d3ad5207a"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/mcp.rs",
+          "target": "nps-nwp/src/bridge_inbound/mcp.rs",
+          "sha256": "90cc8b01678280485aa62ea4b14804701379d664180216ca6d693084208023e5"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/mod.rs",
+          "target": "nps-nwp/src/bridge_inbound/mod.rs",
+          "sha256": "16364419dc3c0a23b22f3fbc9c77ab721f67cd3514f55ffdf9093ffd369557a8"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/options.rs",
+          "target": "nps-nwp/src/bridge_inbound/options.rs",
+          "sha256": "0d3c677ab00d50d11be19d41dd231f851ef667287e7e769cac7389fa55e243fa"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/server.rs",
+          "target": "nps-nwp/src/bridge_inbound/server.rs",
+          "sha256": "674dda50f913de231db686b43f9934ec6375bdec5065cbbd8f6090e71fc33eb0"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/bridge_inbound/tool_name.rs",
+          "target": "nps-nwp/src/bridge_inbound/tool_name.rs",
+          "sha256": "e5a05e0f9655014a85a4b3c8fe3ea82b349a87396b27c55ecb13827fadd6e973"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/cgn.rs",
+          "target": "nps-nwp/src/cgn.rs",
+          "sha256": "158fc0e617e8217c1bc430b30940e7736ac1201815f1f5c3243300b28f49e355"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/client.rs",
+          "target": "nps-nwp/src/client.rs",
+          "sha256": "4713eeb5f0bfa1e462922d250b0d1fe2507043bb5990f3a649e830478715b3fc"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/complex_server.rs",
+          "target": "nps-nwp/src/complex_server.rs",
+          "sha256": "bd8bfb47416db9bba73477c9a48ef27525c31dcb45c6e7fa61713b95d4c047f3"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/context_store.rs",
+          "target": "nps-nwp/src/context_store.rs",
+          "sha256": "df70ad6d7226218f404303b957642e745eb781907e0d737653756ccb2716b89d"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/error_codes.rs",
+          "target": "nps-nwp/src/error_codes.rs",
+          "sha256": "ae336db7c1030dab8b375b2c1df3775e66f270ed4bb4b5212d59eeb4311feb3d"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/frames.rs",
+          "target": "nps-nwp/src/frames.rs",
+          "sha256": "d6728df685a3c590c951250a1ddeda5e39c1b1b4a88e4f482612778db8df4e14"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/http_headers.rs",
+          "target": "nps-nwp/src/http_headers.rs",
+          "sha256": "d9e05a367cbbadea48f56bbca7259ea991546bd0ff429c8f95eb2885ef044c66"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/lib.rs",
+          "target": "nps-nwp/src/lib.rs",
+          "sha256": "f6d62958b799a92c03935208a39cd0d21cb868f26fa9d63c3857d04ba9c16e00"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/llm.rs",
+          "target": "nps-nwp/src/llm.rs",
+          "sha256": "60dcd9f058753a4d1617b252a4b4552728b9e3fe811721aaac0e592207c58aa5"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/llm_action_server.rs",
+          "target": "nps-nwp/src/llm_action_server.rs",
+          "sha256": "37b75a0576ae2ae59956238cc7a45f3ec10fe1efb6559bfad46011c9c3658136"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/memory_server.rs",
+          "target": "nps-nwp/src/memory_server.rs",
+          "sha256": "ea37f55b8466ccbc2acd557d6afee032e5b71dea18228f4864b4d0a2ca6aeb77"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/native_server.rs",
+          "target": "nps-nwp/src/native_server.rs",
+          "sha256": "2d73846c0779a85aa55c38739c51a2332b00db33f14a91bfbb119c80a1669311"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/node_http.rs",
+          "target": "nps-nwp/src/node_http.rs",
+          "sha256": "977f95199493a20ec1e09863b4dfa9dddeb794a34e5d662ae42a5de5e98fca88"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/portable_profile.rs",
+          "target": "nps-nwp/src/portable_profile.rs",
+          "sha256": "8315193e3e18031c2c58591bb1c0699c29f8a901e7061f3db1ff801e1fbfab4c"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/query.rs",
+          "target": "nps-nwp/src/query.rs",
+          "sha256": "ea258add5c3a54802ff9f9f261a84560c2d6e599a7fbbc4358fb3750efc83ee2"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/reputation.rs",
+          "target": "nps-nwp/src/reputation.rs",
+          "sha256": "c5f1baab01f13490155af17061ee5bc4091cd72a92d9b52703e61f64206509db"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/reputation_policy.rs",
+          "target": "nps-nwp/src/reputation_policy.rs",
+          "sha256": "fb225aab8819c3345d2139a865dab0575895b2ab713ec7ea7036507774f7c274"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/sql_provider.rs",
+          "target": "nps-nwp/src/sql_provider.rs",
+          "sha256": "12b115af5df223d87a3ec55742838edf23633c31b364afe1ac6a33d94e4cab08"
+        },
+        {
+          "source": "impl/rust/nps-nwp/src/telemetry.rs",
+          "target": "nps-nwp/src/telemetry.rs",
+          "sha256": "3d31485e79c87086abbfb9890998293df72456b362bd079d73a9d8a07eeda114"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/action_server_tests.rs",
+          "target": "nps-nwp/tests/action_server_tests.rs",
+          "sha256": "508660095ad6f4f59454e04b5b734729f864a696fb229c9cfff1a314f930fcb3"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/anchor_client_tests.rs",
+          "target": "nps-nwp/tests/anchor_client_tests.rs",
+          "sha256": "d3313af84259a7e2ac828f2a41ccc068eb378be402fa1d980aec688d46a87b49"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/anchor_failover_tests.rs",
+          "target": "nps-nwp/tests/anchor_failover_tests.rs",
+          "sha256": "64e9d39d3a7b9a6b024735be12c96f51818c56c13559b5ba1c43ba9fbd160361"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/anchor_server.rs",
+          "target": "nps-nwp/tests/anchor_server.rs",
+          "sha256": "bedba14c48206ea6e36efcf7dce102fa1226332080b5d239ef20f239ad12072e"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/bridge_error_map_tests.rs",
+          "target": "nps-nwp/tests/bridge_error_map_tests.rs",
+          "sha256": "aa7c366d21aefea9ba9ef2394d75d9b1ba676f109e975a1f87fc0a356154e2e3"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/bridge_inbound_tests.rs",
+          "target": "nps-nwp/tests/bridge_inbound_tests.rs",
+          "sha256": "d1924f4f3d3026288822a0fbd7dbe6c768dcc09467211efbd3c20ea7a691c378"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/complex_server_tests.rs",
+          "target": "nps-nwp/tests/complex_server_tests.rs",
+          "sha256": "82f380998dc4f4ee0869bc66b61ce589289aef9b38fce0c123b865f7ed9783a3"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/llm_action_server_tests.rs",
+          "target": "nps-nwp/tests/llm_action_server_tests.rs",
+          "sha256": "b4d42bd904e51fc2795ef44eebbbde888c2f2ff27e2e293f710d4391e19db403"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/llm_context_store_tests.rs",
+          "target": "nps-nwp/tests/llm_context_store_tests.rs",
+          "sha256": "f410e5f9da147f74faa18508e61c94d6f843a87cbdab35fff7a10ed8cc2823e9"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/llm_context_tests.rs",
+          "target": "nps-nwp/tests/llm_context_tests.rs",
+          "sha256": "59be43995a74d1b0db32fab2d4905f6d5e84f0b72c53afd49bdc29f4caf0dd19"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/memory_server_tests.rs",
+          "target": "nps-nwp/tests/memory_server_tests.rs",
+          "sha256": "b775a7c88511771783b61dccf95fdb1da5d6944df0ba580737c96fccbc5d16ff"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/native_server_tests.rs",
+          "target": "nps-nwp/tests/native_server_tests.rs",
+          "sha256": "1d671f06407e3f33cba55ac1b787765c2f922b56b7162fd4a63f13aa42b120d1"
+        },
+        {
+          "source": "impl/rust/nps-nwp/tests/portable_profile_tests.rs",
+          "target": "nps-nwp/tests/portable_profile_tests.rs",
+          "sha256": "62c80649aac7002070d4ce7353d05c7913d2b7e6034194af4783ae3fec7f0e6f"
+        },
+        {
+          "source": "impl/rust/nps-sdk/Cargo.toml",
+          "target": "nps-sdk/Cargo.toml",
+          "sha256": "4ab298f221e93238bdc023735037a65c41c9e79aa3d825939d98901852732e1b"
+        },
+        {
+          "source": "impl/rust/nps-sdk/src/lib.rs",
+          "target": "nps-sdk/src/lib.rs",
+          "sha256": "3765924c0a96e12842b5fa678af199c3d952856c686bdc6c153e2c5b2407fb03"
+        },
+        {
+          "source": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.cn.md",
+          "target": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.cn.md",
+          "sha256": "693a69d06b35e1534e7013cc3cc8a67569f2fb1fdc5fffcac1e41462f344557c"
+        },
+        {
+          "source": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.md",
+          "target": "spec/conformance/NODE-PROFILE-CASE-INVENTORY.md",
+          "sha256": "8b227aef3f0783ca70ef0b58ac15ae72596092d708c52f52a325c3aea058be93"
+        },
+        {
+          "source": "spec/conformance/README.md",
+          "target": "spec/conformance/README.md",
+          "sha256": "7bec45e605434012196463772b7435804199083f158193a591f29bec3113e694"
+        },
+        {
+          "source": "spec/conformance/aaas-l2-requirement-disposition.json",
+          "target": "spec/conformance/aaas-l2-requirement-disposition.json",
+          "sha256": "0770d957903a7b2752b5605cea20f585d8e2fcdcd1aa0a2d8d3a88de664ec564"
+        },
+        {
+          "source": "spec/conformance/alpha19-bilingual-parity.json",
+          "target": "spec/conformance/alpha19-bilingual-parity.json",
+          "sha256": "a732ef7bb8ef4a6936ac7c2681fc321d3c091aca84a09abcb1b4bfa71b7e43bc"
+        },
+        {
+          "source": "spec/conformance/alpha19-package-dry-run.json",
+          "target": "spec/conformance/alpha19-package-dry-run.json",
+          "sha256": "fe1fcbb4aaf6c803bdb7a264c42bf6afeb6666194f204288b2c632f4dcf3fed1"
+        },
+        {
+          "source": "spec/conformance/alpha19-release-materialization.json",
+          "target": "spec/conformance/alpha19-release-materialization.json",
+          "sha256": "4cd057a8fbe7be00f9bea17de3b0c18c042a2db08cfe14b4d9cd23f0297bc55f"
+        },
+        {
+          "source": "spec/conformance/alpha19-resilience-validation.json",
+          "target": "spec/conformance/alpha19-resilience-validation.json",
+          "sha256": "21473064d631d400567daebc308b9c2882db703781714737cb7283b0a7b00571"
+        },
+        {
+          "source": "spec/conformance/alpha19-roadmap-history-reconciliation.json",
+          "target": "spec/conformance/alpha19-roadmap-history-reconciliation.json",
+          "sha256": "ec7fd4367ada6f7fce669b2944ce91a9c8f87e801f1242b09fb26d994d8f1bf9"
+        },
+        {
+          "source": "spec/conformance/alpha19-sdk-source-materialization.json",
+          "target": "spec/conformance/alpha19-sdk-source-materialization.json",
+          "sha256": "9cbb3ed87970a4eb62e0073b86426302b421da4c3a4e384f3feb654432f384ea"
+        },
+        {
+          "source": "spec/conformance/alpha19-security-validation.json",
+          "target": "spec/conformance/alpha19-security-validation.json",
+          "sha256": "56a6ba8b8366099d81d762da3830f3bd2bbe9748d5bb1ea0e3a719d9707909c3"
+        },
+        {
+          "source": "spec/conformance/alpha19-six-sdk-validation.json",
+          "target": "spec/conformance/alpha19-six-sdk-validation.json",
+          "sha256": "a0cdf0cb8d3422825dadef253f85c03b9e352779a810aca0b6055b3bb643a09d"
+        },
+        {
+          "source": "spec/conformance/alpha19-status-reconciliation.json",
+          "target": "spec/conformance/alpha19-status-reconciliation.json",
+          "sha256": "09976bfa860d3ec1a68c257b0f0f2b576f716ff67c82a366326780ee3dea2f9d"
+        },
+        {
+          "source": "spec/conformance/alpha20/README.md",
+          "target": "spec/conformance/alpha20/README.md",
+          "sha256": "7edbd75998624441fc4d6de20d7486323ec2d10590ef41146f01aa2953bb0deb"
+        },
+        {
+          "source": "spec/conformance/alpha20/challenge-schemas.json",
+          "target": "spec/conformance/alpha20/challenge-schemas.json",
+          "sha256": "bce183b6c6086224a0a73289cbff81e22e8864ea8fcfd9ac02276e626d203b1d"
+        },
+        {
+          "source": "spec/conformance/alpha20/compatibility-matrix.json",
+          "target": "spec/conformance/alpha20/compatibility-matrix.json",
+          "sha256": "fa7dd12f3766e62de47e160d3bc68fe67f27f909752f788776d56f8ecfe32f1d"
+        },
+        {
+          "source": "spec/conformance/alpha20/context_crypto_vectors.json",
+          "target": "spec/conformance/alpha20/context_crypto_vectors.json",
+          "sha256": "91bd0e3a86a66aa922ef39050d2d9c8f30264ece2c47b133f7e142d007d28a56"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_result_contract.json",
+          "target": "spec/conformance/alpha20/data_result_contract.json",
+          "sha256": "e9483dce3c551ee693d6dcd18ec1cbaa130a84e95a022d4629bbefe6f4b65197"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_result_vectors.json",
+          "target": "spec/conformance/alpha20/data_result_vectors.json",
+          "sha256": "21a146914584b4c4b9d5ae62dbb234091279512a434bcb6cd9e9f4956355bd37"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+          "target": "spec/conformance/alpha20/data_workflow_freeze_v1/feature-registry.json",
+          "sha256": "be598bf69354df16f8f18c90ec9fbb1946263ec31430d8b6859d08537596be0d"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+          "target": "spec/conformance/alpha20/data_workflow_freeze_v1/version-matrix.yaml",
+          "sha256": "1dd4f3f71b5f7fd5d8ce9a381e35be2abc3eaeed06b993b74b358765a73c7864"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_gates.json",
+          "target": "spec/conformance/alpha20/data_workflow_gates.json",
+          "sha256": "d8fab0eaa6a7242c422d3e94e15c8298422ed67f3784003622afeceb3ae88d63"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_manifest.json",
+          "target": "spec/conformance/alpha20/data_workflow_manifest.json",
+          "sha256": "24ee510e3dd951b415d54ec0ea26e730d1ea2a2573ab2278110d06b0897ca3e7"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_methodology.json",
+          "target": "spec/conformance/alpha20/data_workflow_methodology.json",
+          "sha256": "7222aabd197e96ebe52ec5d6cb5cfad8c2d4e81d25ac239abf24951fd3aab26c"
+        },
+        {
+          "source": "spec/conformance/alpha20/data_workflow_successor.json",
+          "target": "spec/conformance/alpha20/data_workflow_successor.json",
+          "sha256": "6f320b33748ccead631f9b03f1761c400aa6d9bfa11aa40fdb48cf5d95e10281"
+        },
+        {
+          "source": "spec/conformance/alpha20/error_status_vectors.json",
+          "target": "spec/conformance/alpha20/error_status_vectors.json",
+          "sha256": "2429bff23e59f78296589990db0929b39521fd2e2ff738689edb66faea2649be"
+        },
+        {
+          "source": "spec/conformance/alpha20/feature_handshake_boundary_vectors.json",
+          "target": "spec/conformance/alpha20/feature_handshake_boundary_vectors.json",
+          "sha256": "091b72a427f6d16c052807a723a44ffd6984830b62cd6b7c862e368719da109b"
+        },
+        {
+          "source": "spec/conformance/alpha20/feature_negotiation_vectors.json",
+          "target": "spec/conformance/alpha20/feature_negotiation_vectors.json",
+          "sha256": "54a6912b0a3c2e850864176dc2e4c9b001f4d90f7a5a440bf7837606fb0c709e"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_contract.json",
+          "target": "spec/conformance/alpha20/schema_batch_contract.json",
+          "sha256": "13001bfa948ba9e370315a43e79ad02a0d625b749b0cc4e1d173411c16ea5561"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_hash_manifest.json",
+          "target": "spec/conformance/alpha20/schema_batch_hash_manifest.json",
+          "sha256": "4605ca1ec762717d88bfbfba08a6b71f60147a4f8b6d4fca1a68e92badaaca3d"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+          "target": "spec/conformance/alpha20/schema_batch_hash_vectors.json",
+          "sha256": "98dd09e5c538e7c179f21bb715d934af6b302621b667f86382488d03abd46db6"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_manifest.json",
+          "target": "spec/conformance/alpha20/schema_batch_manifest.json",
+          "sha256": "caff52e1430d8b58314cb2a11ea0f9eaecd0f03c96e69b57552665ef854a09ba"
+        },
+        {
+          "source": "spec/conformance/alpha20/schema_batch_vectors.json",
+          "target": "spec/conformance/alpha20/schema_batch_vectors.json",
+          "sha256": "6653d0a101b92537244b2f3e48ff8d7ea9fa14861413d638575213a63b06877b"
+        },
+        {
+          "source": "spec/conformance/ncp/anchor_id_vectors.json",
+          "target": "spec/conformance/ncp/anchor_id_vectors.json",
+          "sha256": "258ec9a093df6a9860483445dd7157255c42bfc8d548ef847d741c354b912717"
+        },
+        {
+          "source": "spec/conformance/ncp/binary_vector_payload_vectors.json",
+          "target": "spec/conformance/ncp/binary_vector_payload_vectors.json",
+          "sha256": "169aff370962a43b18e8255aafbba02e657242acb84fd15336984b2fe1933c64"
+        },
+        {
+          "source": "spec/conformance/ncp/encoding_policy_vectors.json",
+          "target": "spec/conformance/ncp/encoding_policy_vectors.json",
+          "sha256": "3e8a237337defafaa8e4d14969a0f567d0fc9f4c75b324708ff8c1aea67e42cd"
+        },
+        {
+          "source": "spec/conformance/ncp/frame_header_vectors.json",
+          "target": "spec/conformance/ncp/frame_header_vectors.json",
+          "sha256": "c93bafd4a93ad1bcd86cff697fd7a99090ac358c0463ec7f6476ba924033498c"
+        },
+        {
+          "source": "spec/conformance/ncp/hello_caps_vectors.json",
+          "target": "spec/conformance/ncp/hello_caps_vectors.json",
+          "sha256": "8057656f414ad424cd97328ea6d69257a2eb68563f580125b7e025042f988728"
+        },
+        {
+          "source": "spec/conformance/ncp/native_server_handshake_vectors.json",
+          "target": "spec/conformance/ncp/native_server_handshake_vectors.json",
+          "sha256": "907756e4b3ebdc26849126d55c39b6b5367fb507197935a948311b206f38bea6"
+        },
+        {
+          "source": "spec/conformance/ncp/runtime_hardening_vectors.json",
+          "target": "spec/conformance/ncp/runtime_hardening_vectors.json",
+          "sha256": "60ccaba8e67ee118a346bafc60ad2803785093b69b826954c7e613e59f9e7ae6"
+        },
+        {
+          "source": "spec/conformance/ndp/announce_canonicalization_vectors.json",
+          "target": "spec/conformance/ndp/announce_canonicalization_vectors.json",
+          "sha256": "374d95acc9c3149a2b3ff95c1a60665eba0d56cecc61995d51e47626b0d0d92a"
+        },
+        {
+          "source": "spec/conformance/ndp/recovery_fence_vectors.json",
+          "target": "spec/conformance/ndp/recovery_fence_vectors.json",
+          "sha256": "dd5c40739a4639b4602b4ca27679147f421fa2b863eba95d2bd619f3d71adc88"
+        },
+        {
+          "source": "spec/conformance/ndp/registry_consistency_vectors.json",
+          "target": "spec/conformance/ndp/registry_consistency_vectors.json",
+          "sha256": "ffdb39b7f296966dabd3320a55b1b92c03cca640f4503b67ecbc57694196a8a4"
+        },
+        {
+          "source": "spec/conformance/nip/ident_signature_vectors.json",
+          "target": "spec/conformance/nip/ident_signature_vectors.json",
+          "sha256": "ba10b4d6d6194f9c78ec961a0c12b5a2a149ed5d82d00ea006e8226880f49da6"
+        },
+        {
+          "source": "spec/conformance/nip/renewal_revocation_vectors.json",
+          "target": "spec/conformance/nip/renewal_revocation_vectors.json",
+          "sha256": "77ae99704a0c7a0db1db886f5c540a7068b1cf1665612efa871f0015c6d6eb33"
+        },
+        {
+          "source": "spec/conformance/nip/revocation_policy_vectors.json",
+          "target": "spec/conformance/nip/revocation_policy_vectors.json",
+          "sha256": "f04b83d61924b68cc009e25b847cf8b74d188555aef28cc2fd050ffec238fd1f"
+        },
+        {
+          "source": "spec/conformance/nip/revoke_frame_vectors.json",
+          "target": "spec/conformance/nip/revoke_frame_vectors.json",
+          "sha256": "2ebe1c3eca4dce8674919a69342d2f5740a79fe1ff9318b77276dc32bf9ce9f1"
+        },
+        {
+          "source": "spec/conformance/nip/scope_matching_vectors.json",
+          "target": "spec/conformance/nip/scope_matching_vectors.json",
+          "sha256": "bde48ae16419b8601fd1db54706b823f674a5ac65f6b6b4598dd48c56851261e"
+        },
+        {
+          "source": "spec/conformance/nip/signed_crl_vectors.json",
+          "target": "spec/conformance/nip/signed_crl_vectors.json",
+          "sha256": "586f55be3ceecd38e21926c97e23cbd6ed0294e290c08dbf03558a6d80865e02"
+        },
+        {
+          "source": "spec/conformance/nip/trust_frame_vectors.json",
+          "target": "spec/conformance/nip/trust_frame_vectors.json",
+          "sha256": "3ddc77357a002bd3c756d48ede09f03ce3d862336e4c302463cc4a1b3c25e13b"
+        },
+        {
+          "source": "spec/conformance/node-profile-case-inventory.json",
+          "target": "spec/conformance/node-profile-case-inventory.json",
+          "sha256": "080f5a8ba824c9d414c87903a03c23e8fbce6dd5b29f74e6465fd56bc6cc5f6d"
+        },
+        {
+          "source": "spec/conformance/node-profile-implementation-manifests.json",
+          "target": "spec/conformance/node-profile-implementation-manifests.json",
+          "sha256": "0ce8a5dcfcf1ce8c05de6e6fa626f33d0d75a3b4d1376b419224ac417d87b1b0"
+        },
+        {
+          "source": "spec/conformance/nop/dag_validation_vectors.json",
+          "target": "spec/conformance/nop/dag_validation_vectors.json",
+          "sha256": "6ef94f468bae4e4480980b5e04ae2292d3d195a72593b188a6ff41aa2235dd1c"
+        },
+        {
+          "source": "spec/conformance/nop/orchestrator_transcripts.json",
+          "target": "spec/conformance/nop/orchestrator_transcripts.json",
+          "sha256": "ed061cabe2517c05f82a1c6ff5220bd1c95f548289a3415c0154cf3f41d6eaef"
+        },
+        {
+          "source": "spec/conformance/nop/replay_retention_vectors.json",
+          "target": "spec/conformance/nop/replay_retention_vectors.json",
+          "sha256": "df0b26bd5814d3ff12db7ead0fd6407969a7285e6321b9aaf7f8ef9ad052d98e"
+        },
+        {
+          "source": "spec/conformance/nop/runtime_security_vectors.json",
+          "target": "spec/conformance/nop/runtime_security_vectors.json",
+          "sha256": "9faf720b330684017ec2427b55d543e05df5381b1f3d042e5e786d5a11aff0d1"
+        },
+        {
+          "source": "spec/conformance/nwp/action_frame_vectors.json",
+          "target": "spec/conformance/nwp/action_frame_vectors.json",
+          "sha256": "647ab1e51eee3286efae6feef8fffa6aa80c7bd3fb7db2878226f89411b5ad0f"
+        },
+        {
+          "source": "spec/conformance/nwp/alpha19_hardening_vectors.json",
+          "target": "spec/conformance/nwp/alpha19_hardening_vectors.json",
+          "sha256": "16ac07778952350f184a638aab8f65a5280390003b6676c78a92b6bffe36db10"
+        },
+        {
+          "source": "spec/conformance/nwp/bridge_lifecycle_vectors.json",
+          "target": "spec/conformance/nwp/bridge_lifecycle_vectors.json",
+          "sha256": "7f04db7d334fa5a298c3f26453ac5b94253dff9e1b0e70b3c52673abdb84fb38"
+        },
+        {
+          "source": "spec/conformance/nwp/filter_dsl_vectors.json",
+          "target": "spec/conformance/nwp/filter_dsl_vectors.json",
+          "sha256": "f2f9a5d0fa75b9917bb8c337be38208d7567561a65aa9734acf14e19201060ca"
+        },
+        {
+          "source": "spec/conformance/nwp/llm_context_vectors.json",
+          "target": "spec/conformance/nwp/llm_context_vectors.json",
+          "sha256": "22a9ca4075e310cf875c5d0fdf816b74bdbe41ae6297bf4280e801034cfb9c0b"
+        },
+        {
+          "source": "spec/conformance/nwp/portable_node_server_vectors.json",
+          "target": "spec/conformance/nwp/portable_node_server_vectors.json",
+          "sha256": "626c1b578b259c28eeaaf2eda2b136b89b8fd482496ccb3508e253b05f61621d"
+        },
+        {
+          "source": "spec/conformance/nwp/query_frame_aggregation_vectors.json",
+          "target": "spec/conformance/nwp/query_frame_aggregation_vectors.json",
+          "sha256": "574f40caba244cd49fa10702b32bf799701de289db88eccc446fc3cff6806d6a"
+        },
+        {
+          "source": "spec/conformance/nwp/subscribe_frame_vectors.json",
+          "target": "spec/conformance/nwp/subscribe_frame_vectors.json",
+          "sha256": "44ed4acad677939ed2732b30f5eb2dbb0a413a41c31bc170709d8ce58f6b8867"
+        }
+      ]
+    }
+  ],
+  "source_and_distribution_clones_modified": false,
+  "remote_writes": 0,
+  "publication": false
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "procfs exit-race diagnosis only, not qualification",
+  "source_sha256": "699c314e6975a807a7e5033b214dbb85fbc6377155309228b2ccab9a83b72fff",
+  "children": 500,
+  "faults": {
+    "KeyError": 108
+  }
+}

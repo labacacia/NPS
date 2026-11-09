@@ -4,11 +4,11 @@
 
 **Spec Number**: NPS-2
 **Status**: Proposed
-**Version**: 0.22
-**Date**: 2026-08-31
+**Version**: 0.23
+**Date**: 2026-09-09
 **Port**: 17433（默认，共用）/ 17434（可选独立）
 **Authors**: Ori Lynn / INNO LOTUS PTY LTD
-**Depends-On**: NPS-1 (NCP v0.12)、NPS-3 (NIP v0.15)、NPS-4 (NDP v0.13)
+**Depends-On**: NPS-1 (NCP v0.13)、NPS-3 (NIP v0.16)、NPS-4 (NDP v0.14)
 
 > 本文档为 NWP 详细规范。套件总览见 [NPS-0-Overview.cn.md](NPS-0-Overview.cn.md)。
 
@@ -1046,6 +1046,14 @@ expiry tombstone 的 mutation 返回 `NWP-LLM-CONTEXT-EXPIRED`；移除 tombston
 
 | 错误 | NPS status | 含义 |
 |------|------------|------|
+| `NWP-CHALLENGE-INVALID` | `NPS-CLIENT-BAD-FRAME` | Challenge 输入无效 |
+| `NWP-CHALLENGE-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | 未知或无权访问的 challenge handle |
+| `NWP-CHALLENGE-BINDING-CONFLICT` | `NPS-CLIENT-CONFLICT` | 同操作 key 对应不同摘要 |
+| `NWP-CHALLENGE-NOT-APPROVED` | `NPS-CLIENT-CONFLICT` | Challenge 未批准执行 |
+| `NWP-CHALLENGE-EXPIRED` | `NPS-CLIENT-CONFLICT` | Challenge 在执行 claim 前过期 |
+| `NWP-CHALLENGE-STATE-UNAVAILABLE` | `NPS-SERVER-UNAVAILABLE` | 持久 challenge 状态不可用 |
+| `NWP-FEATURE-REQUIREMENTS-INVALID` | `NPS-CLIENT-BAD-FRAME` | HTTP 必需特性头无效或重复 |
+| `NWP-FEATURE-REQUIRED-UNSUPPORTED` | `NPS-CLIENT-CONFLICT` | 派发前无法满足精确必需特性 |
 | `NWP-LLM-CONTEXT-NOT-FOUND` | `NPS-CLIENT-NOT-FOUND` | 未知/released context，或 idempotency lookup 已过期。 |
 | `NWP-LLM-CONTEXT-EXPIRED` | `NPS-CLIENT-GONE` | Idle-expiry tombstone 仍存在。 |
 | `NWP-LLM-CONTEXT-VERSION-CONFLICT` | `NPS-CLIENT-CONFLICT` | 版本陈旧或存在并发 mutation reservation。 |
@@ -1063,6 +1071,126 @@ expiry tombstone 的 mutation 返回 `NWP-LLM-CONTEXT-EXPIRED`；移除 tombston
 benchmark 必须在 stateless 与 strict-native stateful 模式下比较同一组多轮
 role/tool 语义。第二轮 stateful MUST 只发送 delta，并同时证明更低的
 `wire_input_bytes` 与 runtime 实测 `evaluated_tokens`。MUST 禁用协议 fallback。
+
+---
+
+### 7.7 受治理操作 Challenge（NWP v0.23）
+
+以下规则定义 experimental 的 `nps.governed_challenge` revision 1，
+依赖 `nps.production_runtime` revision 1。使用投影时另要求 context revision 1。
+这些 profile 不替代产品审批策略，不新增帧类型。
+
+#### 7.7.1 初始操作和绑定
+
+要求认证主体、逻辑 audience/target、action ID 和 1..128 UTF-8 字节非空幂等 key。
+使用现有 ActionFrame。先验证参数和授权，缺 key 则不创建状态或副作用。
+
+绑定 authority、subject、action、audience、冻结的已接受参数、操作 key、expiry、
+选定 feature revisions。摘要遵循 NIP §7.8 / NWP §9.7，即使 native 无 projection header 也一样。
+Handle/proof 不纳入原始业务摘要，冻结参数不可变。
+
+持久操作 key 是 (authority,subject,audience,action,idempotency_key)。
+同 key 同摘要返回原 pending/terminal 操作；同 key 不同摘要冲突，不新建 challenge。
+每次调用（包括取结果）重新授权。返回 handle 前，操作记录和 challenge 原子持久化。
+
+#### 7.7.2 响应
+
+标准 Caps.data 承载已注册 Anchor schema 的 profile record，不能用任意 JSON 替代 Caps。
+HTTP pending 可返回 202；native 使用相同 record：
+
+| 字段 | 规则 |
+|---|---|
+| challenge_id | 32 随机字节的无填充 base64url |
+| state | pending / approved / executing / completed / denied / expired / superseded / indeterminate |
+| action_id | 原操作 ID |
+| audience | 原逻辑目标 |
+| request_digest | sha256: 加 64 小写 hex |
+| expires_at | Unix 秒整数，限制执行准入 |
+| methods | 最多 8 个唯一产品方法 ID，每项最多 64 ASCII 字节 |
+| operation_id | opaque 服务端 ID，最多 128 字节 |
+| result | 仅 completed 时携带原 action 完整 typed Caps 值 |
+| error | 有界操作/profile 错误，不含审批凭据 |
+
+主体/authority 绑定存服务端，不泄漏私有策略。默认 TTL 300 秒，上限 900，服务端时钟
+权威。终态后结果/去重至少保留 86400 秒并公布实际窗口；窗口外不自动重试。
+
+#### 7.7.3 协议动作
+
+注册 nwp.challenge.status、nwp.challenge.resume、nwp.challenge.cancel，
+使用现有 action discovery、ActionFrame、Caps。Params 仅含 challenge_id，
+服务端读取冻结原操作。不传 OTP、审批 token、密码。要求原 subject/audience 和产品许可。
+
+status 无副作用；resume 仅 approved 时，在重查当前 grant/revocation/scope、摘要、
+expiry 后原子 claim approved -> executing。重复 resume 返回同一状态/结果，不重复执行。
+cancel 原子地将 pending/approved -> denied；executing 后只报告现状，不声称回滚。
+未知或错误 subject handle 返回同样的 not-found，知道 handle 不足以读取/审批/执行。
+
+产品认证审批流程负责 pending -> approved/denied，不能改参数/绑定。
+Superseded 结束旧 challenge；不同参数用新逻辑操作/key。
+省略本 profile 不能绕过产品对受治理操作的审批要求。
+
+#### 7.7.4 状态和执行所有权
+
+合法转移：pending -> approved/denied/expired/superseded；
+approved -> executing/denied/expired/superseded；executing -> completed/indeterminate。
+Completed 可保存已知成功或失败。审批本身不执行；expiry 限制 claim，不回滚 executing。
+终态不可变，只有可信 reconciliation 可依据持久证据将 indeterminate -> completed，
+不能自动重复 mutation。
+
+Claim 与操作记录原子提交。副作用同库则与结果一并事务提交；外部系统则使用相同操作
+身份的幂等 sink，否则崩溃后维持 indeterminate。一次 claim 不证明一次外部 effect。
+并发、重启和 Anchor failover 共享操作存储/fencing；状态不可用则安全拒绝。
+
+#### 7.7.5 错误和限制
+
+| 错误 | 状态 | HTTP |
+|---|---|---|
+| NWP-CHALLENGE-INVALID | NPS-CLIENT-BAD-FRAME | 400 |
+| NWP-CHALLENGE-NOT-FOUND | NPS-CLIENT-NOT-FOUND | 404 |
+| NWP-CHALLENGE-BINDING-CONFLICT | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-NOT-APPROVED | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-EXPIRED | NPS-CLIENT-CONFLICT | 409 |
+| NWP-CHALLENGE-STATE-UNAVAILABLE | NPS-SERVER-UNAVAILABLE | 503 |
+
+默认每 subject 最多 16、全局 4096 个 pending/approved。容量拒绝先于状态/副作用分配。
+Status/resume/cancel 使用节点 rate policy。日志不得包含审批 proof、投影或业务参数。
+
+#### 7.7.6 Schema、保留期与响应边界
+
+Authority 指接收方配置的逻辑操作所有者命名空间，在副本和网关路由间保持稳定，
+不是紧邻投影 issuer/key。切换入口网关不得创建第二个去重命名空间。
+原摘要只排除 profile 生成的 challenge 元数据；名为 challenge_id 等的业务 params
+仍属于签名正文，不能按字段名任意剔除。
+
+管理动作必须拒绝 callback_url 和 async=true。其 timeout/priority 只控制管理请求，
+不得替换冻结原操作字段；管理幂等 key 不得替换已存原操作 key。
+服务端 now >= expires_at 时必须拒绝执行 claim；初始过期时间必须晚于创建时间，
+且不超过创建后 900 秒。
+
+ActionFrame 既有 UUID-v4 幂等 key 约束仍适用；1..128 字节上限不放宽该规则。
+服务通过 NWM `profiles.governed_challenge = {"revision":1,"retention_seconds":86400}`
+声明持久保留期，retention_seconds 为至少 86400 的 uint32；变更时更新 manifest version。
+本地有限存储无法保留已有承诺时必须拒绝新操作，不得提前驱逐记录。
+
+固定 Anchor 定义见 [challenge-schemas.json](conformance/alpha20/challenge-schemas.json)。
+三个管理动作的 params schema 仅含 challenge_id；响应为 count=1 的标准 Caps，
+其 data[0] 为完整 challenge record。result 和 error 不适用时显式为 null；
+result 非 null 时是原操作的标准 Caps 对象，不是任意替代 envelope。
+completed 的已知成功必须有 result 且 error=null；已知失败必须有 error 且 result=null。
+其他状态 result 必须为 null；既有帧/响应上限仍适用。
+
+Record 另有 `retained_until`（Unix 秒 uint64，可空）：终态必须填写，
+且至少为终态提交时间加所承诺保留期；其他状态为 null。可信 reconciliation
+不得缩短已承诺期限。所有时间值不超过 9007199254740991。
+Methods ID 匹配 `[a-z][a-z0-9_.:-]{0,63}`；operation_id 为 1..128 UTF-8 字节。
+Action/audience/digest 采用 §9.7 和 NIP §7.8 的边界。
+
+初始治理调用只创建/返回待审批或已审批记录，不执行原 mutation。
+status 返回当前记录；resume 在 pending/denied/superseded 返回 NOT-APPROVED，
+expired 返回 EXPIRED；executing/completed/indeterminate 返回原状态/结果。
+这些拒绝使用本节对应 NWP-CHALLENGE-* 错误。未知或错误主体仍统一 NOT-FOUND。
+HTTP pending/approved/executing 使用 202，其余记录使用 200；错误使用错误表映射。
+副作用确定性取自 state/result/error，不得仅按 HTTP 成功状态推断。
 
 ---
 
@@ -1173,6 +1301,97 @@ HTTP overlay 实现 MUST 在请求体被接受为 NWP frame 之前，对传输�
 | 已声明但未实现 | NWM 在 discovery 中声明了某 capability 或 profile，但节点当前无法服务 | `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED` | `NPS-SERVER-UNSUPPORTED` |
 
 `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED` 与 `NWP-QUERY-VECTOR-UNSUPPORTED` 等能力专用 unsupported 错误不同：manifest 如实声明不支持该能力时使用专用错误；只有在 rollout 窗口、后端被禁用或 discovery 状态不一致，导致“已声明但无法服务”时，才使用 `NWP-CAPABILITY-ADVERTISED-UNIMPLEMENTED`。
+
+---
+
+### 9.6 依赖特性的 HTTP 准入（NWP v0.23）
+
+特性 ID、revision 描述符及生命周期策略遵循 NCP §2.6.3。
+feature-registry.json 中的必需依赖也必须显式列入请求的精确特性对集合；
+依赖缺失或不兼容时，在派发前以 NWP-FEATURE-REQUIRED-UNSUPPORTED 拒绝。
+以下要求按需启用，但理解 profile 的入口对基础操作中的畸形特性头也必须拒绝。
+
+**NWP-FTR-01 — 声明。** NWM 可提供
+`profiles.feature_negotiation = {"version":1,"feature_offer":[...]}`。
+该 profile 原始 JSON 值不得超过 16384 UTF-8 字节，同时受现有 manifest 上限约束。
+Offer 改变时必须更新 manifest version。声明覆盖服务入口，更窄的 action 支持
+必须在副作用前重新验证。发现不是准入或授权。
+
+**NWP-FTR-02 — 精确 Header。** 依赖特性的请求必须携带单个 ASCII
+`X-NPS-Required-Features`：按 ID 升序排列的逗号分隔 `id=revision`，
+不得含空白、重复或前导零，最多 32 对、4096 字节。
+必须在框架合并前拒绝重复 header 实例。每个 revision 对该操作都是精确且必需的。
+语法无效映射到 `NWP-FEATURE-REQUIREMENTS-INVALID` / HTTP 400。
+
+**NWP-FTR-03 — 派发门槛。** 入口必须在调用处理器前检查当前启用 revision、
+依赖、具体操作支持及认证准入策略。不支持或已撤销时，以
+`NWP-FEATURE-REQUIRED-UNSUPPORTED` / HTTP 409 拒绝，处理器调用数为零。
+特性声明不得扩大已准入权限。网关每跳重新验证；原生和 HTTP 的选择互相独立。
+上下文投影的请求摘要必须绑定精确必需特性集合。
+
+**NWP-FTR-04 — 路由保证。** 客户端发送依赖特性的操作前，必须从实际服务该操作
+的认证路由取得明确的 version-1 声明。路由必须对每个可能后端强制准入，
+或在转发前拒绝；混合新旧路由在能保证此前不得声明支持。
+无法确认保证时，客户端必须本地失败，不得重定向/降级到未验证路由。
+旧服务忽略 header 不是安全回退，事后响应检查不能阻止副作用。
+
+**NWP-FTR-05 — 响应。** 成功响应必须在 `X-NPS-Selected-Features` 中回显
+精确接受集合；失败响应不得声明选择成功。成功回显缺失、畸形或不匹配，是操作结果
+不确定的客户端协议错误，绝不构成重试 mutation 的许可。
+未使用 profile 的调用省略必需项头并保持基础行为。
+
+---
+
+### 9.7 调用上下文载体与请求绑定
+
+**NWP-CTX-01 — 原生载体。** QueryFrame、ActionFrame、SubscribeFrame 可携带
+`invocation_context`，其值为包含 NIP §7.8 JSON envelope 的无填充 base64url
+字符串，并携带 `required_features` 精确特性对数组，形如
+`{"id":"nps.invocation_context","revision":1}`。此请求数组不同于 Hello 的
+必需 ID 数组。特性对必须唯一、按 ID 排序且最多 32 项，每对都必须已在准入会话
+的选择集合中。投影必须要求 context revision 1。理解特性的接收方必须在派发前
+拒绝未协商要求；客户端不得向旧会话发送此类请求。本绑定不向其他帧添加投影载体。
+
+**NWP-CTX-02 — HTTP 载体。** 使用单个 `X-NPS-Invocation-Context` 及 §9.6
+的精确 `X-NPS-Required-Features` 集合，包含 context revision 1。
+投影 HTTP 请求正文不得再携带原生专用 `invocation_context` 和
+`required_features` 字段；多载体属于无效。网关须显式转换，不同时保留两种载体。
+编码上下文字符串最多 21846 ASCII 字节，解码 envelope 最多 16384 字节；
+非规范 base64url 和重复实例无效。
+
+**NWP-CTX-03 — 逻辑请求。** 本绑定的摘要 `protocol` 固定为 `nwp`；
+ActionFrame 的 `operation` 为精确 `action_id`，QueryFrame 为
+`nwp.query`，SubscribeFrame 为 `nwp.subscribe`。
+`target` 是由认证路由确定且与接收方配置核对的精确逻辑服务/资源 ID，
+不得复制未经验证的调用方权限 header。
+`idempotency_key` 是实际请求字段或 null，仍受其 schema 约束。
+`required_features` 是适用载体中请求的精确特性对集合。
+
+**NWP-CTX-04 — 完整语义正文。** 对 JSON 兼容请求，`body.value` 为已解析
+NWP 请求对象，移除 `frame`、`request_id`、`invocation_context`、
+`required_features`；仅对 ActionFrame 再移除已绑定到外层对象的
+`action_id` 和 `idempotency_key`。
+保留全部其他字段，包括存在的 params、filters、query type、callback_url、
+priority、async、timeout、订阅选项。保留字段是否存在的差异；
+摘要验证前不插入默认值、不归一化值。HTTP path/query/header 语义必须先按注册
+绑定映射为逻辑请求；未被绑定表示的 header 不得影响权限或副作用。
+非 I-JSON 值必须使用注册的 byte-body profile，否则拒绝，不自行发明跨语言转换。
+排除的是传输 trace 关联与投影，不是业务输入。交给 handler 的必须是验证过的 I-JSON
+值，不得再按更高精度重解析原始数字文本。数值语义为有限 IEEE-754 binary64；
+超出 ±9007199254740991 的整数或需要高精度 decimal 的 schema 必须使用声明的
+字符串/字节表示。不得签名舍入值，却让 handler 执行另一个高精度值。
+排除的关联字段不得驱动授权、
+操作选择、业务去重或业务决策；仍允许协议关联回显。
+
+**NWP-CTX-05 — 权限与派发。** 必须先完成 NIP §7.8 验证及原子重放准入，
+且插入重放记录前完成无业务副作用的操作 schema/绑定验证；无效操作输入不得消耗
+projection ID。验证及重放准入完成后，
+才能调用操作处理器、操作驱动的 callback、外部 probe 或产生业务副作用。
+验证/重放存储本身属于准入工作，不是业务派发。
+公网/不可信投影载体在入口移除，使用本地已准入权限生成新投影。
+紧邻网关身份和原始 subject 必须区分。调用方不能靠填字段选择可信 issuer
+策略、本地开发模式、capabilities 或 scope。所有服务路由落实强制验证前不得
+声明投影/特性支持。换跳或修改请求后重新投影，不代表允许重试不确定 mutation。
 
 ---
 
@@ -1779,6 +1998,7 @@ native 模式下，不受支持的已解码 frame type MUST 产生 `NPS-CLIENT-B
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| 0.23 | 2026-09-09 | Alpha.20 feature-dependent HTTP 准入：NWM 声明、精确必需特性头、全后端路由保证、零派发拒绝及成功回显；未使用时保持基础行为。 另定义上下文载体/完整请求绑定，以及治理 challenge 状态、固定 Anchor、管理动作与持久保留。 |
 | 0.22 | 2026-08-31 | alpha.19 NWM/订阅加固：确定性的 stability/SLA/billing 归一化与 action fallback；声明式可续订 subscription policy；带 principal binding、lease clamp、显式 deadline、不可复活 expiry 的 open/renew/close operation，以及共享合规向量。新增两个订阅错误码；Depends-On 推进至 NCP 0.12、NIP 0.15、NDP 0.13。|
 | 0.21 | 2026-08-12 | **NPS-CR-0011 有状态 LLM context/增量 completion**：NWM LLM profile 0.2 显式广告 context operation/persistence/limit；`llm.complete` 新增可选的 owner-bound 不透明 context request 与终结 receipt；新增 status/release 生命周期 action、CAS 版本、binding 校验、原子 cancel/stream commit、重启/幂等语义、实测 `wire_input_bytes`、七个确定性错误与共享合规向量。Stateless completion 保持兼容，stateful 请求绝不静默降级。Depends-On NIP 推进到 v0.14，以使用 `llm:context`。不新增 frame type。 |
 | 0.20 | 2026-07-29 | 新增 §16.5 可移植 Node/Bridge 服务端 profile 与跨语言共享向量。标准化 HTTP/native admission、角色分发、alpha.17 兼容窗口内的规范/旧 MIME 处理、有限 body 上限、取消、关联标识传播、Bridge dispatcher/SSRF/deadline preflight、异步 task mode 与终态 telemetry outcome。新增 `NWP-HTTP-BODY-TOO-LARGE` → `NPS-LIMIT-PAYLOAD`；不增加 frame type。Depends-On 推进到 NCP v0.11 与 NIP v0.13。 |

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <NpsDemoSdkVersion>1.0.0-alpha.20.dev.1</NpsDemoSdkVersion>
+    <RootNamespace>NPS.Demo.DataWorkflow</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="LabAcacia.NPS.Core" Version="$(NpsDemoSdkVersion)" />
+    <PackageReference Include="LabAcacia.NPS.NWP" Version="$(NpsDemoSdkVersion)" />
+    <PackageReference Include="LabAcacia.NPS.NIP" Version="$(NpsDemoSdkVersion)" />
+    <PackageReference Include="LabAcacia.NPS.NIP.Storage.Sqlite" Version="$(NpsDemoSdkVersion)" />
+  </ItemGroup>
+</Project>

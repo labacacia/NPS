@@ -1,0 +1,11 @@
+{
+  "kind": "diagnostic recipes and results only; not resource qualification",
+  "files": {
+    "attempt-01.json": "ec666afab64c5b148a7466b3f0f7d46f8c425612d355f1634c2f281ed2e7718e",
+    "attempt-02.json": "4986be54e2277a3d95f9d1f9661bcb402bc47aa4394209178a9cbfb1a1fa4a4a",
+    "attempt-03.json": "c2de2f1a0e7cb914f8ea1312b6513705533b2399d1d20fd6526d9b9a2789a271",
+    "resource-profile-01.py": "82fd75f2326a2af5fa03a739aeb44562e4d3cc0fdf482a445f028f59a65527fb",
+    "resource-profile-02.py": "699c314e6975a807a7e5033b214dbb85fbc6377155309228b2ccab9a83b72fff",
+    "resource-profile-03.py": "eccc904a299cf3b1ce90780c5291bc7270e8c3c99318ee03f101eef8427d8d4d"
+  }
+}

@@ -1,0 +1,13 @@
+diff --git a/tools/ci/local-alpha20.py b/tools/ci/local-alpha20.py
+index 12ec73d..e615bb1 100644
+--- a/tools/ci/local-alpha20.py
++++ b/tools/ci/local-alpha20.py
+@@ -268,7 +268,7 @@ def main() -> int:
+             demo_receipt = json.loads(candidates[0].read_text())
+             (output / "demo-receipt.json").write_text(json.dumps(demo_receipt, indent=2) + "\n")
+     stage("helper-package-evidence", [([python, "tools/conformance/check-alpha20-package-evidence.py"], ".")])
+-    stage("sealed-measurements", [([python, "tools/benchmarks/ncp-transfer-runtime.py", "--verify-packet", "docs/benchmarks/runs/ncp-transfer-42a0b05"], "."),
++    stage("sealed-measurements", [([python, "tools/benchmarks/ncp-transfer-runtime.py", "--verify-packet", "docs/benchmarks/runs/2026-11-02-ncp-transfer-qualified.json"], "."),
+         ([python, "demos/data-workflow/summarize.py", "--packet", "demos/data-workflow/evidence/live-tool-agent-bounded-v2-126c5df"], "."),
+         ([python, "tools/benchmarks/nop-result-handoff.py", "--packet", "docs/benchmarks/runs/nop-handoff-kernel-7c4d890-attempt-03"], ".")])
+     try:

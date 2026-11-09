@@ -1,0 +1,30 @@
+{
+  "kind": "D20-05 deterministic reference increment; no live model calls",
+  "checks": {
+    "tool_guards": 22,
+    "scales": [
+      100,
+      1000,
+      100000
+    ],
+    "arms": [
+      "ordinary",
+      "nps"
+    ],
+    "independent_directory": true
+  },
+  "files": [
+    {
+      "path": "2026-11-03-local.json",
+      "sha256": "5799dbcea8a08aadc5d8bd00ca58a5994713dccb27815e00969b2e7751186f77"
+    },
+    {
+      "path": "2026-11-03-standalone.json",
+      "sha256": "cb87aa76bd90b61d31ac5f85b036f606ced89ac9be1fee29b699a180938d7686"
+    },
+    {
+      "path": "sdk-source-109ea55.json",
+      "sha256": "5c8cf53ad22c31e0cc0828d3aebf39e63393b4f6efe941ef52d1e9b98ee0b8c0"
+    }
+  ]
+}

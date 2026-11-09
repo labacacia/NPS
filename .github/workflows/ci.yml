@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Validate release manifest
+        run: python -c "import pathlib,yaml; p=pathlib.Path('version.yaml'); d=yaml.safe_load(p.read_text()); assert isinstance(d,dict) and d, 'version.yaml must contain a mapping'"
+      - name: Reject stale release repository links
+        run: "! grep -R --line-number --fixed-strings 'github.com/labacacia/NPS-Release' README*.md docs"

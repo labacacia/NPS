@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "candidate": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+  "source_commit": "a9e4f05eeb85c3d5e37a85e28975aa1a23a464b7",
+  "source_projection_sha256": "ee59b3e309b5f3f895c266965c130930c163c6a4573840490f718c8cb433ac4b",
+  "ownership_map_sha256": "8b05109c55b91fbf26728c10e4bc48f259e52389dbe454520073b598ef2d0cf0",
+  "executed_at": "2026-11-03",
+  "method": "ephemeral_alternative_registry_ordered_package_verification",
+  "publish_order": [
+    "nps-core",
+    "nps-ncp",
+    "nps-nip",
+    "nps-ndp",
+    "nps-nop",
+    "nps-nwp",
+    "nps-conformance",
+    "nps-sdk"
+  ],
+  "package_count": 8,
+  "contains_nps_conformance": true,
+  "archive_bytes": 442306,
+  "packages": [
+    {
+      "name": "nps-core",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-core-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 24982,
+      "files": 15,
+      "sha256": "ca6150bb917eb538eddb0dedf2c603db006f4f39834779e9caa30b5c28c61228",
+      "internal_dependencies": [],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-ncp",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-ncp-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 26564,
+      "files": 15,
+      "sha256": "0db090d08aa54721da9f051290c349366d16e2c9222fc89fa7a6d727bc0f8f3b",
+      "internal_dependencies": [
+        "nps-core"
+      ],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-nip",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-nip-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 109756,
+      "files": 44,
+      "sha256": "208a812dbb405ceaeb56f16ac322dcba5049cab94e60d8a918598adf76c2fed7",
+      "internal_dependencies": [
+        "nps-core"
+      ],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-ndp",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-ndp-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 35613,
+      "files": 14,
+      "sha256": "e0e69a5985c1d2acc1f821def9287fba6f251e9305b5437bdc76dced13793220",
+      "internal_dependencies": [
+        "nps-core",
+        "nps-nip"
+      ],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-nop",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-nop-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 58788,
+      "files": 26,
+      "sha256": "1b0b7caa8fd6c1afa70bcbb333e6d120422f9414e9a7966e4bfa7836f4e38b11",
+      "internal_dependencies": [
+        "nps-core"
+      ],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-nwp",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-nwp-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 158337,
+      "files": 50,
+      "sha256": "2f040a84e2c48fde44e4cf41333149c7066f2baa3f4469e49a1832c96db25119",
+      "internal_dependencies": [
+        "nps-core",
+        "nps-ncp",
+        "nps-nip"
+      ],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-conformance",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-conformance-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 12563,
+      "files": 6,
+      "sha256": "68abd6df421cc39048f04944fd589c4f24338ab02d814bdb4153f260446c5bd5",
+      "internal_dependencies": [],
+      "cargo_package_verification": "passed"
+    },
+    {
+      "name": "nps-sdk",
+      "version": "1.0.0-alpha.20.dev.a9e4f05eeb85",
+      "archive": "nps-sdk-1.0.0-alpha.20.dev.a9e4f05eeb85.crate",
+      "bytes": 15703,
+      "files": 4,
+      "sha256": "811e95a7305fccfff008d5b1277e47301afd9129f6e77f900d2ff0599f5b1a69",
+      "internal_dependencies": [
+        "nps-conformance",
+        "nps-core",
+        "nps-ncp",
+        "nps-ndp",
+        "nps-nip",
+        "nps-nop",
+        "nps-nwp"
+      ],
+      "cargo_package_verification": "passed"
+    }
+  ],
+  "workspace_test_all_features": "passed",
+  "workspace_clippy_all_targets_all_features_deny_warnings": "passed",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "network_writes": 0,
+  "registry_uploads": 0,
+  "result": "passed"
+}
