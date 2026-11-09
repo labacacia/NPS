@@ -27,8 +27,8 @@
 # Only organization-owned release projections belong in this manifest.
 # Independent products and external consumers follow their own lifecycle.
 suite_version: "1.0.0-alpha.20"
-released_at: null
-release_status: candidate
+released_at: "2026-11-10"
+release_status: released
 candidate_prepared_at: "2026-11-03"
 
 repos:
