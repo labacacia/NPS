@@ -1,83 +1,47 @@
+English | [中文](roadmap.cn.md)
+
 # Roadmap
 
-> English | [中文版](roadmap.cn.md)
+The latest published suite is **1.0.0-alpha.20**, released 2026-11-10. This roadmap distinguishes delivered work, remaining engineering work and release decisions.
 
-NPS is on a four-phase path from draft specification to formal standard. The latest suite release is **v1.0.0-alpha.18**, published 2026-08-15. It delivers the NPS-CR-0011 / NWP 0.21 stateful LLM context contract across all six SDKs — owner-bound context ids, `create` / `append` / `fork` / `reset` / `status` / `release`, compare-and-swap versions, atomic cancellation, NWM 0.2 discovery, and NIP 0.14 `llm:context` authorization — plus official NWP LLM usage telemetry with unary `request_id` correlation and the new `NPS-LIMIT-RESOURCE` code. The specification tree now carries the reviewed, unreleased alpha.19 debt-closure candidate; installable artifacts remain alpha.18.
+## Delivered milestones
 
----
+| Milestone | Result |
+| --- | --- |
+| Protocol foundation | Five versioned protocols with shared frame, error and status registries |
+| SDK ecosystem | .NET, Python, TypeScript, Java, Rust and Go packages published at alpha.20 |
+| Reference services | Four public daemons and the separately deployed NIP CA, with locally verified container builds |
+| Alpha.20 data-workflow experiment | Bounded result resources and authorization, repeated-schema batches, local task handoff and volatile node transfer |
+| Alpha.20 publication | Verified registry artifacts, GitHub/Gitee releases and the suite version manifest |
 
-## Version convention
+Read the [alpha.20 release](https://github.com/labacacia/NPS/releases/tag/v1.0.0-alpha.20), [SDK guide](sdks.md), [support ledger](qualification/alpha20-support-2026-11-03.md) and [experimental acceptance evidence](plans/2026-11-03-alpha20-experimental-ac-evidence.md) for the delivered scope.
 
-| Tag           | Meaning                                  |
-|---------------|------------------------------------------|
-| `v0.x-draft`  | internal draft; breaking changes allowed |
-| `v0.x-alpha`  | public preview; API not stable           |
-| `v0.x-beta`   | feature-complete; external testing       |
-| `v1.0`        | spec frozen; production-ready            |
+## Engineering follow-up
 
----
+| Area | Remaining work |
+| --- | --- |
+| General NWP HTTP clients | Canonical MIME negotiation and capsule decoding in Python, a supported .NET public HTTP path and preservation of protocol error details |
+| Six-SDK data workflows | Qualify the additional operations, transports and language combinations beyond the accepted reference configurations |
+| Production runtime | Complete the production negotiation, invocation-context, bounded runtime and governed-action contracts and qualify their implementations |
+| Orchestration and discovery | Qualify remote task handoff, durable discovery/state recovery and multi-node failure behavior |
+| Adopter integration | Assign product-specific ownership and run the required integration and migration qualification |
 
-## Phase 0 — Spec Unification (2026 Q2) — ✅ done
+The [accepted scope decision](adr/2026-11-03-alpha20-experimental-closeout.md) and [original gate dispositions](qualification/2026-11-03-alpha20-gate-reconciliation.json) retain the outstanding production obligations. Work is ordered from normative contracts through SDKs and services to adoption and qualification.
 
-Established the full NPS spec skeleton across all five protocols (NCP / NWP / NIP / NDP / NOP), unified the frame namespace, published the AaaS and Node conformance profiles, and released public repositories.
+## Beta decision
 
----
+Beta readiness requires a review of the published alpha.20 against the beta gates, followed by an explicit decision on beta.1, another alpha or a longer observation period. A beta release date has not been set.
 
-## Phase 1 — Core Implementation (2026 Q3) — ✅ shipped
+The applicable gate review remains a follow-up to the delivered experiment. Release numbering alone does not establish completion of the production matrix.
 
-All five protocols production-ready in six reference SDKs (.NET / Python / TypeScript / Java / Rust / Go), with NIP CA Server reference deployments in all six languages. Key milestones:
+## Design exploration
 
-- NPS-RFC-0001 (NCP connection preamble), NPS-RFC-0003 (agent identity assurance levels), NPS-CR-0001 (Anchor/Bridge Node split), NPS-CR-0002 (Anchor topology queries) — all shipped
-- NPS-RFC-0002 (X.509 NID + ACME) prototype across all six SDKs; typed remote CA clients delivered in alpha.14
-- NPS-RFC-0004 (CT-style NID reputation ledger) Phase 1+2+3: SQLite + Merkle tree + STH + inclusion proofs + STH gossip federation
-- `npsd` L1 daemon with sub-NID issuance and per-NID inbox queues
-- Token-savings: **45.0 %** CGN reduction vs REST · Wire-size: **63.6 %** reduction vs JSON
+The result-resource contract leaves durable storage, multi-host migration and recursive delegation for later design. Schema-batch adoption in result streams and subscriptions also needs its own policy, binding and value assessment.
 
----
+See [CR-0016](../spec/cr/NPS-CR-0016-data-results.md) and [CR-0017](../spec/cr/NPS-CR-0017-schema-batches.md) for these boundaries. The existing HTTP gzip and ordinary-tool measurements remain part of the evidence used to choose future work.
 
-## Phase 2 — Ecosystem Expansion (2026 Q4) — 🚧 in progress
+## Project boundaries
 
-Adapters to MCP, A2A, and gRPC ecosystems; Tier-2 MsgPack production hardening; reference tooling.
+NPS-Dev owns authoring and release tooling. NPS, six SDKs, NPS-Daemons and NIP-CA-Server form the suite release projections. Model-Runtime, Console and Paper have independent lifecycles under the [repository topology decision](adr/2026-10-14-repository-topology.md).
 
-- ✅ MCP, A2A, and gRPC ingress adapters packaged and published to Nexus at v1.0.0-alpha.16
-- ✅ Tier-2 MsgPack and token-savings benchmarks published
-- ✅ NOP orchestrator executes multi-node DAGs; Claude Desktop integration via `mcp-ingress` verified
-- ✅ `NDP.ResolveFrame` DNS TXT resolution (`nwp://` → physical endpoint) — all six SDKs
-- ✅ Native-mode NWP serving helpers and TC-N1/TC-N2 conformance helpers delivered for SDK alpha.16
-- ⬜ **NPS Studio** (visual frame debugger) + **NPS Probe** (conformance CLI)
-
----
-
-## Phase 3 — Ecosystem Validation (2027 Q1–Q2)
-
-Real-world deployments, NPS Cloud CA v1.0, and the beginnings of de-facto standard status.
-
-- ⬜ NPS Cloud CA v1.0 — multi-region HA, real-time OCSP
-- ⬜ LangChain / AutoGen / CrewAI integration packages
-- ⬜ FinTech and connected-vehicle PoCs
-- ⬜ NIP CA Server OSS v1.0 (PostgreSQL + Web Admin UI)
-- ⬜ Public token-savings benchmark report
-- ⬜ GitHub stars ≥ 500
-
----
-
-## Phase 4 — Standardization (2027 Q3 onward)
-
-Formal W3C / IETF standardization and NPS 1.0 spec freeze.
-
-- ⬜ W3C WebAI Community Group proposal
-- ⬜ IETF Internet-Draft (NCP + NWP core)
-- ⬜ NPS 1.0 spec freeze
-- ⬜ ISO/IEC JTC 1 evaluation
-
----
-
-## Next
-
-- [Overview](overview.md) — what NPS is
-- [Protocols](protocols.md) — the five layers
-- [SDKs](sdks.md) — pick a language
-
----
-
-📖 For tutorials, references, and operator guides, see the [NPS handbook](https://github.com/labacacia/NPS/blob/main/docs/handbook/Home.md).
+[Project home](../README.md) · [SDKs](sdks.md) · [Release history](../CHANGELOG.md)
